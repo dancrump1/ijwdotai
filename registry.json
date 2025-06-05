@@ -1,0 +1,43 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "acme",
+	"homepage": "https://acme.com",
+	"items": [
+		{
+			"name": "3dcard",
+			"type": "registry:component",
+			"title": "3d Card",
+			"description": "A hover card",
+			"files": [
+				{
+					"path": "registry/examples/3dcardexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/3dCard.tsx",
+					"type": "registry:ui",
+					"target": "components/3dCard.tsx"
+				}
+			]
+		},
+		{
+			"name": "3dnav",
+			"type": "registry:component",
+			"title": "3d Nav",
+			"description": "3d nav",
+			"files": [
+				{
+					"path": "registry/examples/3dnavbarexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/3dNavBar.tsx",
+					"type": "registry:ui",
+					"target": "components/3dNavBar.tsx"
+				}
+			]
+		}
+	]
+}

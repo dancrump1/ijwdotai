@@ -3142,7 +3142,7 @@ export default function Home() {
 								>
 									<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
 										<TextRoll className="text-4xl text-black dark:text-white">
-											TechBits
+											Components
 										</TextRoll>{" "}
 									</div>{" "}
 								</Component>
@@ -3391,7 +3391,7 @@ export default function Home() {
 								>
 									<div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
 										<h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
-											Techbits
+											Components
 										</h1>
 										<div className="w-[40rem] h-40 relative">
 											{/* Gradients */}
@@ -6521,7 +6521,7 @@ export default function Home() {
 										by="character"
 										duration={1}
 									>
-										TechBits
+										Components
 									</TextAnimate>
 								</Component>
 								{/* TODO: Why does this grow in height to 3.68xe^10px???? */}
@@ -6641,7 +6641,7 @@ export default function Home() {
 									selectedFilters={selectedFilters}
 									title="Text Hover"
 								>
-									<TextHoverEffect text={"TechBits"} />
+									<TextHoverEffect text={"Components"} />
 								</Component>
 
 								<Component
@@ -8401,8 +8401,8 @@ export default function Home() {
 								>
 									<div className="h-[40rem] w-full flex items-center justify-center ">
 										<PinContainer
-											title="/techbits"
-											href="https://techbits.techdiff.io"
+											title="/components"
+											href="https://components.drivedev.net"
 										>
 											<div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
 												<h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">

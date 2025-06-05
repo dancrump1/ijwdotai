@@ -30,6 +30,7 @@ import {
 	PopoverTrigger,
 } from "@/components/ui/popover";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
 	Tooltip,
 	TooltipContent,
@@ -2010,31 +2011,29 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
-						<label>
-							{basic ? "OSS Library (Will lag)" : "Radix Primatives"}
-						</label>
-						<input
-							type="checkbox"
-							id="oss-libs"
-							title="oss libs"
-							className="w-[25px]"
-							checked={basic}
-							onChange={() => setBasic(!basic)}
-						/>
-					</div>
-					<div className={"border-l-2 border-white h-[50px]"}></div>
-					<div className="flex flex-col">
 						<label>Components per page</label>
 
-						<input
-							type="number"
-							title="grid view"
-							defaultValue={1}
-							min={1}
-							max={4}
-							className="w-[25px]"
-							onChange={(e) => setGridView(e.target.value)}
-						/>
+						<ToggleGroup
+							className="inline-flex space-x-px rounded"
+							type="single"
+							defaultValue="1"
+							aria-label="Components per row"
+							onClick={(e) => setGridView(e.target.textContent)}
+						>
+							<ToggleGroupItem value="1" aria-label="1">
+								1
+							</ToggleGroupItem>
+
+							<ToggleGroupItem value="2" aria-label="2">
+								2
+							</ToggleGroupItem>
+							<ToggleGroupItem value="3" aria-label="3">
+								3
+							</ToggleGroupItem>
+							<ToggleGroupItem value="4" aria-label="4">
+								4
+							</ToggleGroupItem>
+						</ToggleGroup>
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
@@ -2045,6 +2044,24 @@ export default function Home() {
 							)}
 							onValueChange={setSelectedFilters}
 						/>
+					</div>
+					<div className={"border-l-2 border-white h-[50px]"}></div>
+					<div className="flex flex-col">
+						<ToggleGroup
+							className="inline-flex space-x-px rounded"
+							type="single"
+							defaultValue="left"
+							aria-label="component complexity"
+							onClick={() => setBasic(!basic)}
+						>
+							<ToggleGroupItem value="left" aria-label="Simple">
+								Simple
+							</ToggleGroupItem>
+
+							<ToggleGroupItem value="right" aria-label="Complex">
+								Complex (will lag on click)
+							</ToggleGroupItem>
+						</ToggleGroup>
 					</div>
 				</div>
 			</header>

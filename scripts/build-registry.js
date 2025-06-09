@@ -1,157 +1,184 @@
 const fs = require("fs");
 const path = require("path");
 
+/* ──────────────────────────────
+   🔧  CONFIG
+   ────────────────────────────── */
 const registryDir = path.resolve(__dirname, "../registry");
 const openSourceDir = path.join(registryDir, "open-source");
 const examplesDir = path.join(registryDir, "examples");
+
 const outputFile = path.join(registryDir, "registry.json");
 const missingOutputFile = path.join(registryDir, "missing-components.json");
+const incompleteExFile = path.join(registryDir, "incomplete-examples.json");
 
 const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
 const homepage = "https://acme.com";
 const name = "acme";
 
-const incompleteExamples = [];
-
-const registryMap = new Map(); // Track all added components
-
-function titleCase(str) {
-	return str
-		.replace(/([A-Z])/g, " $1")
-		.replace(/^./, (char) => char.toUpperCase())
-		.replace(/[-_]/g, " ")
-		.trim();
-}
-
-function extractRelativeImports(content) {
-	const importRegex = /import\s+.*?['"](\.\/[^'"]+)['"]/g;
-	const matches = [];
-	let match;
-	while ((match = importRegex.exec(content)) !== null) {
-		matches.push(match[1]);
-	}
-	return matches;
-}
+/* project-specific path aliases */
 const aliasMap = {
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
 	"@/lib": path.join(process.cwd(), "lib"),
+	"@/registry/open-source": path.join(
+		process.cwd(),
+		"registry",
+		"open-source"
+	),
 };
 
-function resolveImportPath(baseFilePath, importPath) {
-	// Relative path
-	if (importPath.startsWith(".") || importPath.startsWith("..")) {
-		const fullPath = path.resolve(path.dirname(baseFilePath), importPath);
-		if (fs.existsSync(`${fullPath}.tsx`)) return `${fullPath}.tsx`;
-		if (fs.existsSync(`${fullPath}/index.tsx`))
-			return `${fullPath}/index.tsx`;
+/* ──────────────────────────────
+   📦  STATE
+   ────────────────────────────── */
+const missingComponents = [];
+const incompleteExamples = [];
+
+/* ──────────────────────────────
+   🛠 HELPERS
+   ────────────────────────────── */
+const titleCase = (s) =>
+	s
+		.replace(/[-_]/g, " ")
+		.replace(/([A-Z])/g, " $1")
+		.replace(/\s+/g, " ")
+		.replace(/^./, (c) => c.toUpperCase())
+		.trim();
+
+const extractImports = (code) => {
+	const rx = /import\s+.*?['"]([^'"]+)['"]/g;
+	const out = [];
+	for (let m; (m = rx.exec(code)); ) {
+		const p = m[1];
+		if (p.startsWith(".") || p.startsWith("@/")) out.push(p);
+	}
+	return out;
+};
+
+const resolveImportPath = (from, imp) => {
+	if (imp.startsWith(".")) {
+		const base = path.resolve(path.dirname(from), imp);
+		if (fs.existsSync(base + ".tsx")) return base + ".tsx";
+		if (fs.existsSync(base + ".ts")) return base + ".ts";
+		if (fs.existsSync(base + "/index.tsx")) return base + "/index.tsx";
+		if (fs.existsSync(base + "/index.ts")) return base + "/index.ts";
 	}
 
-	// Aliased path
 	for (const alias in aliasMap) {
-		if (importPath.startsWith(alias)) {
-			const relativeSubPath = importPath
-				.replace(alias, "")
-				.replace(/^\/+/, "");
-			const fullPath = path.join(aliasMap[alias], relativeSubPath);
-			if (fs.existsSync(`${fullPath}.tsx`)) return `${fullPath}.tsx`;
-			if (fs.existsSync(`${fullPath}/index.tsx`))
-				return `${fullPath}/index.tsx`;
+		if (imp.startsWith(alias)) {
+			const sub = imp.replace(alias, "").replace(/^\/+/, "");
+			const base = path.join(aliasMap[alias], sub);
+			if (fs.existsSync(base + ".tsx")) return base + ".tsx";
+			if (fs.existsSync(base + ".ts")) return base + ".ts";
+			if (fs.existsSync(base + "/index.tsx")) return base + "/index.tsx";
+			if (fs.existsSync(base + "/index.ts")) return base + "/index.ts";
 		}
 	}
 
-	return null; // Unresolvable (probably an external library)
+	return null;
+};
+
+/* ──────────────────────────────
+   🔁 Recursive File Scanner
+   ────────────────────────────── */
+function scanFileRecursively(absPath, seen = new Set()) {
+	if (seen.has(absPath)) return [];
+
+	if (!fs.existsSync(absPath)) {
+		missingComponents.push({ path: absPath, reason: "file missing" });
+		return [];
+	}
+
+	seen.add(absPath);
+
+	const relPath = path.relative(registryDir, absPath).replace(/\\/g, "/");
+	const target = relPath.startsWith("registry")
+		? `components/${path.basename(absPath)}`
+		: relPath.replace(/^.*?components\//, "components/");
+
+	const fileObj = {
+		path: relPath,
+		type: "registry:ui",
+		target,
+	};
+
+	const code = fs.readFileSync(absPath, "utf-8");
+	const imports = extractImports(code);
+
+	const children = imports.flatMap((imp) => {
+		const resolved = resolveImportPath(absPath, imp);
+		return resolved
+			? scanFileRecursively(resolved, seen)
+			: (() => {
+					missingComponents.push({
+						importedBy: path.relative(process.cwd(), absPath),
+						importPath: imp,
+						reason: "Import not resolvable",
+					});
+					return [];
+				})();
+	});
+
+	return [fileObj, ...children];
 }
 
-function addComponent(componentPath, examplePathMaybe = null) {
-	const file = path.basename(componentPath);
-	const componentName = path.basename(file, ".tsx");
-	if (registryMap.has(componentName)) return;
+/* ──────────────────────────────
+   🧱 Build Registry Item
+   ────────────────────────────── */
+function buildRegistryItem(componentFile) {
+	const absPath = path.join(openSourceDir, componentFile);
+	const componentName = path.basename(componentFile, ".tsx");
+	const seenFiles = new Set();
 
-	const exampleFilename = `${componentName.toLowerCase()}example.tsx`;
-	const examplePath = path.join(examplesDir, exampleFilename);
-	const exampleExists = fs.existsSync(examplePathMaybe || examplePath);
+	const files = scanFileRecursively(absPath, seenFiles);
 
-	if (!fs.existsSync(componentPath)) return;
-
-	if (exampleExists) {
-		const content = fs.readFileSync(examplePathMaybe || examplePath, "utf-8");
-
-		if (/coming soon/i.test(content)) {
-			incompleteExamples.push({
-				name: componentName,
-				examplePath: `registry/examples/${exampleFilename}`,
-				reason: "Placeholder content detected",
-			});
+	// Ensure uniqueness per registry item
+	const uniqueFiles = [];
+	const added = new Set();
+	for (const f of files) {
+		if (!added.has(f.path)) {
+			added.add(f.path);
+			uniqueFiles.push(f);
 		}
 	}
 
-	registryMap.set(componentName, true);
+	// Handle example if exists
+	const exampleName = `${componentName.toLowerCase()}example.tsx`;
+	const examplePath = path.join(examplesDir, exampleName);
 
-	const relativeComponentPath = path
-		.relative(registryDir, componentPath)
-		.replace(/\\/g, "/");
+	if (fs.existsSync(examplePath)) {
+		const relExamplePath = `registry/examples/${exampleName}`;
+		const content = fs.readFileSync(examplePath, "utf-8");
+		if (/coming\s+soon/i.test(content)) {
+			incompleteExamples.push({
+				name: componentName,
+				examplePath: relExamplePath,
+				reason: "Placeholder content",
+			});
+		}
+		uniqueFiles.unshift({
+			path: relExamplePath,
+			type: "registry:page",
+			target: "~/example.tsx",
+		});
+	}
 
-	const item = {
+	return {
 		name: componentName.toLowerCase(),
 		type: "registry:component",
 		title: titleCase(componentName),
 		description: titleCase(componentName),
-		files: [
-			...(exampleExists
-				? [
-						{
-							path: `registry/examples/${exampleFilename}`,
-							type: "registry:page",
-							target: "~/example.tsx",
-						},
-					]
-				: []),
-			{
-				path: "registry/" + relativeComponentPath,
-				type: "registry:ui",
-				target: `components/${file}`,
-			},
-		],
+		files: uniqueFiles,
 	};
-
-	return item;
 }
 
+/* ──────────────────────────────
+   🏗️ Build Full Registry
+   ────────────────────────────── */
 function buildRegistry() {
-	const files = fs
+	const componentFiles = fs
 		.readdirSync(openSourceDir)
 		.filter((f) => f.endsWith(".tsx"));
-
-	const items = [];
-	const missingComponents = [];
-
-	for (const file of files) {
-		const componentPath = path.join(openSourceDir, file);
-		const content = fs.readFileSync(componentPath, "utf-8");
-
-		const baseItem = addComponent(componentPath);
-		if (!baseItem) {
-			missingComponents.push({ name: file, missing: { component: true } });
-			continue;
-		}
-		items.push(baseItem);
-
-		// Parse and include dependencies
-		const relImports = extractRelativeImports(content);
-		for (const relImport of relImports) {
-			const importedPath = resolveImportPath(componentPath, relImport);
-			if (importedPath) {
-				const depItem = addComponent(importedPath);
-				if (depItem) items.push(depItem);
-				else {
-					missingComponents.push({
-						name: relImport,
-						missing: { component: true },
-					});
-				}
-			}
-		}
-	}
+	const items = componentFiles.map(buildRegistryItem);
 
 	const registry = {
 		$schema: schemaUrl,
@@ -166,21 +193,19 @@ function buildRegistry() {
 		JSON.stringify(missingComponents, null, 2)
 	);
 	fs.writeFileSync(
-		path.join(registryDir, "incomplete-examples.json"),
+		incompleteExFile,
 		JSON.stringify(incompleteExamples, null, 2)
 	);
 
-	console.log(`✅ registry.json created with ${items.length} components.`);
-	if (missingComponents.length > 0) {
+	console.log(`✅ registry.json written – ${items.length} components.`);
+	if (missingComponents.length)
 		console.log(
-			`⚠️ ${missingComponents.length} components skipped. See missing-components.json`
+			`⚠️  ${missingComponents.length} missing/unresolvable items – see missing-components.json`
 		);
-	}
-	if (incompleteExamples.length > 0) {
+	if (incompleteExamples.length)
 		console.log(
-			`📝 ${incompleteExamples.length} components have placeholder examples. See incomplete-examples.json`
+			`📝 ${incompleteExamples.length} placeholder examples – see incomplete-examples.json`
 		);
-	}
 }
 
 buildRegistry();

@@ -9590,24 +9590,27 @@ export default function Home() {
 						</Component> */}
 
 								{/* TODO: Fix Lanyard */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
-							gridView={gridView}
-							setComponentCount={setComponentCount}
-							tags={[
-								filterOptions.find(
-									(filter) => filter.label.toLowerCase() === "card"
-								),
-							]}
-							selectedFilters={selectedFilters}
-							title="lanyard"
-						>
-							<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-								<Lanyard
-									position={[0, 0, 20]}
-									gravity={[0, -40, 0]}
-								/>{" "}
-							</div>{" "}
-						</Component> */}
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "card"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="lanyard"
+								>
+									<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+										<Lanyard
+											position={[0, 0, 20]}
+											gravity={[0, -40, 0]}
+										/>{" "}
+									</div>{" "}
+								</Component>
 
 								{/* TODO: Fix SVG path */}
 								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}

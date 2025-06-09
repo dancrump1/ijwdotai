@@ -92,7 +92,7 @@ function addComponent(componentPath, examplePathMaybe = null) {
 		.replace(/\\/g, "/");
 
 	const item = {
-		name: componentName,
+		name: componentName.toLowerCase(),
 		type: "registry:component",
 		title: titleCase(componentName),
 		description: titleCase(componentName),

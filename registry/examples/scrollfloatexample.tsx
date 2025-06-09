@@ -2,10 +2,12 @@
 
 import React from "react";
 
+import ScrollFloat from "../open-source/ScrollFloat";
+
 export default function Example() {
 	return (
 		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			coming soon
+			<ScrollFloat>test test 123</ScrollFloat>
 		</div>
 	);
 }

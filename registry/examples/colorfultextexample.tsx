@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ColourfulText } from "@/components/ColorfulText";
+import { ColourfulText } from "@/registry/open-source/ColorfulText";
 import { motion } from "framer-motion";
 
 export default function ColourfulTextDemo() {
@@ -16,7 +16,7 @@ export default function ColourfulTextDemo() {
 				transition={{ duration: 1 }}
 			/>
 			<h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
-				The best <ColourfulText text="components" /> <br /> you will ever
+				The best <ColourfulText text={"components"} /> <br /> you will ever
 				find
 			</h1>
 		</div>

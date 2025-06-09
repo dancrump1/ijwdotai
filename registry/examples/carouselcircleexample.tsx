@@ -2,10 +2,21 @@
 
 import React from "react";
 
+import CarouselCircle from "../open-source/CarouselCircle";
+
 export default function Example() {
 	return (
 		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			coming soon
+			<CarouselCircle
+				images={[
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+				]}
+			/>{" "}
 		</div>
 	);
 }

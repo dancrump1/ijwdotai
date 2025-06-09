@@ -11,6 +11,8 @@ const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
 const homepage = "https://acme.com";
 const name = "acme";
 
+const incompleteExamples = [];
+
 const registryMap = new Map(); // Track all added components
 
 function titleCase(str) {
@@ -70,6 +72,18 @@ function addComponent(componentPath, examplePathMaybe = null) {
 	const exampleExists = fs.existsSync(examplePathMaybe || examplePath);
 
 	if (!fs.existsSync(componentPath)) return;
+
+	if (exampleExists) {
+		const content = fs.readFileSync(examplePathMaybe || examplePath, "utf-8");
+
+		if (/coming soon/i.test(content)) {
+			incompleteExamples.push({
+				name: componentName,
+				examplePath: `registry/examples/${exampleFilename}`,
+				reason: "Placeholder content detected",
+			});
+		}
+	}
 
 	registryMap.set(componentName, true);
 
@@ -151,11 +165,20 @@ function buildRegistry() {
 		missingOutputFile,
 		JSON.stringify(missingComponents, null, 2)
 	);
+	fs.writeFileSync(
+		path.join(registryDir, "incomplete-examples.json"),
+		JSON.stringify(incompleteExamples, null, 2)
+	);
 
 	console.log(`✅ registry.json created with ${items.length} components.`);
 	if (missingComponents.length > 0) {
 		console.log(
-			`⚠️ ${missingComponents.length} components skipped or not found. See missing-components.json`
+			`⚠️ ${missingComponents.length} components skipped. See missing-components.json`
+		);
+	}
+	if (incompleteExamples.length > 0) {
+		console.log(
+			`📝 ${incompleteExamples.length} components have placeholder examples. See incomplete-examples.json`
 		);
 	}
 }

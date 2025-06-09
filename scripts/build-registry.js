@@ -107,7 +107,7 @@ function addComponent(componentPath, examplePathMaybe = null) {
 					]
 				: []),
 			{
-				path: relativeComponentPath,
+				path: "registry/" + relativeComponentPath,
 				type: "registry:ui",
 				target: `components/${file}`,
 			},

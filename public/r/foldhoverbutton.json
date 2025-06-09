@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "foldhoverbutton",
+  "type": "registry:component",
+  "title": "Fold Hover Button",
+  "description": "Fold Hover Button",
+  "files": [
+    {
+      "path": "registry/examples/foldhoverbuttonexample.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/FoldHoverButton.tsx",
+      "content": "import React, { useState } from \"react\";\n\nimport Image from \"next/image\";\n\nimport { motion, useAnimation } from \"framer-motion\";\n\n// Credit:\n// https://eclairui.gopx.dev/components/buttons/folder-hover-button\n\ninterface FolderHoverButtonProps {\n\tfolderName: string;\n\timages: string[];\n}\n\nfunction FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {\n\tconst [isHovered, setIsHovered] = useState(false);\n\tconst controls = useAnimation();\n\n\tconst handleHoverStart = () => {\n\t\tsetIsHovered(true);\n\t\tcontrols.start(\"open\");\n\t};\n\n\tconst handleHoverEnd = () => {\n\t\tsetIsHovered(false);\n\t\tcontrols.start(\"closed\");\n\t};\n\n\tconst maxRotation = 45;\n\tconst rotationStep = maxRotation / (images.length + 1);\n\n\tconst folderVariants = {\n\t\tclosed: {\n\t\t\trotateX: 0,\n\t\t\ty: 0,\n\t\t\tz: 40,\n\t\t\tzIndex: 1,\n\t\t},\n\t\topen: {\n\t\t\trotateX: -maxRotation,\n\t\t\tz: 40,\n\t\t\tzIndex: 3,\n\t\t},\n\t};\n\n\tconst imageVariants = (index: number) => ({\n\t\tclosed: { rotateX: 0, y: 0, z: 0, opacity: 1 },\n\t\topen: {\n\t\t\trotateX: -maxRotation + (index + 1) * rotationStep,\n\t\t\tz: 30 - index * 5,\n\t\t\topacity: 1,\n\t\t\ttransition: {\n\t\t\t\ttype: \"spring\",\n\t\t\t\tstiffness: 300,\n\t\t\t\tdamping: 20,\n\t\t\t\tdelay: index * 0.1,\n\t\t\t},\n\t\t},\n\t});\n\n\treturn (\n\t\t<div\n\t\t\tclassName=\"relative w-4/5 h-32 cursor-pointer\"\n\t\t\tstyle={{ perspective: \"1000px\" }}\n\t\t\tonMouseEnter={handleHoverStart}\n\t\t\tonMouseLeave={handleHoverEnd}\n\t\t\trole=\"button\"\n\t\t\ttabIndex={0}\n\t\t\taria-label={`Open ${folderName} folder`}\n\t\t>\n\t\t\t<div\n\t\t\t\tclassName=\"absolute inset-0 flex items-end justify-center\"\n\t\t\t\tstyle={{ transformStyle: \"preserve-3d\" }}\n\t\t\t>\n\t\t\t\t{images.map((image, index) => (\n\t\t\t\t\t<motion.div\n\t\t\t\t\t\tkey={index}\n\t\t\t\t\t\tclassName=\"absolute inset-0 origin-bottom\"\n\t\t\t\t\t\tinitial=\"closed\"\n\t\t\t\t\t\tanimate={controls}\n\t\t\t\t\t\tvariants={imageVariants(index)}\n\t\t\t\t\t\tstyle={{\n\t\t\t\t\t\t\ttransformStyle: \"preserve-3d\",\n\t\t\t\t\t\t\tzIndex: images.length - index + (isHovered ? 2 : 1),\n\t\t\t\t\t\t}}\n\t\t\t\t\t>\n\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\tsrc={image}\n\t\t\t\t\t\t\talt={`Image ${index + 1} in ${folderName} folder`}\n\t\t\t\t\t\t\tlayout=\"fill\"\n\t\t\t\t\t\t\tobjectFit=\"cover\"\n\t\t\t\t\t\t\tclassName=\"rounded-lg\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</motion.div>\n\t\t\t\t))}\n\t\t\t\t<motion.div\n\t\t\t\t\tclassName=\"absolute inset-0 bg-[#1f1f1f] border-[2px] border-white/5 rounded-lg origin-bottom\"\n\t\t\t\t\tinitial=\"closed\"\n\t\t\t\t\tanimate={controls}\n\t\t\t\t\tvariants={folderVariants}\n\t\t\t\t\ttransition={{ type: \"spring\", stiffness: 300, damping: 20 }}\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\ttransformStyle: \"preserve-3d\",\n\t\t\t\t\t\tzIndex: images.length + 1,\n\t\t\t\t\t}}\n\t\t\t\t>\n\t\t\t\t\t<div className=\"absolute inset-0 flex items-center justify-center\">\n\t\t\t\t\t\t<span className=\"text-2xl font-caveat text-white\">\n\t\t\t\t\t\t\t{folderName}\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</div>\n\t\t\t\t</motion.div>\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n\nexport default FolderHoverButton;\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/FoldHoverButton.tsx"
+    }
+  ]
+}

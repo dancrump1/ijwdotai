@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "springmodal",
+  "type": "registry:component",
+  "title": "Spring Modal",
+  "description": "Spring Modal",
+  "files": [
+    {
+      "path": "registry/examples/springmodalexample.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\nimport { SpringModal } from \"@/components/SpringModal\";\n\nexport default function Example() {\n\tconst [isOpen, setIsOpen] = useState(false);\n\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"px-4 py-64 bg-slate-900 grid place-content-center\">\n\t\t\t\t<button\n\t\t\t\t\tonClick={() => setIsOpen(true)}\n\t\t\t\t\tclassName=\"bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity\"\n\t\t\t\t>\n\t\t\t\t\tOpen Modal\n\t\t\t\t</button>\n\t\t\t\t<SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/SpringModal.tsx",
+      "content": "import { Dispatch, SetStateAction, useState } from \"react\";\n\nimport { AnimatePresence, motion } from \"framer-motion\";\n\n// www.hover.dev/components/modals#spring-modal\n\nconst ExampleWrapper = () => {\n\tconst [isOpen, setIsOpen] = useState(false);\n\treturn (\n\t\t<div className=\"px-4 py-64 bg-slate-900 grid place-content-center\">\n\t\t\t<button\n\t\t\t\tonClick={() => setIsOpen(true)}\n\t\t\t\tclassName=\"bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity\"\n\t\t\t>\n\t\t\t\tOpen Modal\n\t\t\t</button>\n\t\t\t<SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />\n\t\t</div>\n\t);\n};\n\nexport const SpringModal = ({\n\tisOpen,\n\tsetIsOpen,\n}: {\n\tisOpen: boolean;\n\tsetIsOpen: Dispatch<SetStateAction<boolean>>;\n}) => {\n\treturn (\n\t\t<AnimatePresence>\n\t\t\t{isOpen && (\n\t\t\t\t<motion.div\n\t\t\t\t\tinitial={{ opacity: 0 }}\n\t\t\t\t\tanimate={{ opacity: 1 }}\n\t\t\t\t\texit={{ opacity: 0 }}\n\t\t\t\t\tonClick={() => setIsOpen(false)}\n\t\t\t\t\tclassName=\"bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer\"\n\t\t\t\t>\n\t\t\t\t\t<motion.div\n\t\t\t\t\t\tinitial={{ scale: 0, rotate: \"12.5deg\" }}\n\t\t\t\t\t\tanimate={{ scale: 1, rotate: \"0deg\" }}\n\t\t\t\t\t\texit={{ scale: 0, rotate: \"0deg\" }}\n\t\t\t\t\t\tonClick={(e) => e.stopPropagation()}\n\t\t\t\t\t\tclassName=\"bg-gradient-to-br from-violet-600 to-indigo-600 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<div className=\"relative z-10\">\n\t\t\t\t\t\t\t<h3 className=\"text-3xl font-bold text-center mb-2\">\n\t\t\t\t\t\t\t\tOne more thing!\n\t\t\t\t\t\t\t</h3>\n\t\t\t\t\t\t\t<p className=\"text-center mb-6\">\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit.\n\t\t\t\t\t\t\t\tId aperiam vitae, sapiente ducimus eveniet in velit.\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<div className=\"flex gap-2\">\n\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\tonClick={() => setIsOpen(false)}\n\t\t\t\t\t\t\t\t\tclassName=\"bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tNah, go back\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\t\tonClick={() => setIsOpen(false)}\n\t\t\t\t\t\t\t\t\tclassName=\"bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tUnderstood!\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</motion.div>\n\t\t\t\t</motion.div>\n\t\t\t)}\n\t\t</AnimatePresence>\n\t);\n};\n\nexport default ExampleWrapper;\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/SpringModal.tsx"
+    }
+  ]
+}

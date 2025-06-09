@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popularpricecard",
+  "type": "registry:component",
+  "title": "Popular Price Card",
+  "description": "Popular Price Card",
+  "files": [
+    {
+      "path": "registry/examples/popularpricecardexample.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/PopularPriceCard.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { motion } from \"framer-motion\";\nimport { Check } from \"lucide-react\";\n\nconst features = [\n\t\"5 users license\",\n\t\"Access to all components\",\n\t\"Lifetime access\",\n\t\"Unlimited projects\",\n\t\"Customer supports\",\n\t\"Free updates\",\n];\n\nconst variants = {\n\tbadge: {\n\t\thidden: {\n\t\t\topacity: 0,\n\t\t\ty: 50,\n\t\t},\n\t\tvisible: {\n\t\t\topacity: 1,\n\t\t\ty: 0,\n\t\t\ttransition: { delay: 1.2 },\n\t\t},\n\t},\n\tcard: {\n\t\thidden: {\n\t\t\topacity: 0,\n\t\t\ty: 50,\n\t\t},\n\t\tvisible: {\n\t\t\topacity: 1,\n\t\t\ty: 0,\n\t\t},\n\t},\n};\n\nexport default function PopularPriceCard() {\n\treturn (\n\t\t<div className=\"flex items-center justify-center relative mt-4\">\n\t\t\t<motion.div\n\t\t\t\tclassName=\"absolute -top-7 left-0\"\n\t\t\t\tvariants={variants.badge}\n\t\t\t\tinitial=\"hidden\"\n\t\t\t\tanimate=\"visible\"\n\t\t\t\ttransition={{ duration: 1 }}\n\t\t\t>\n\t\t\t\t<div className=\"bg-priceAccent text-white px-4 py-1.5 rounded-r-xl rounded-l-3xl text-sm font-medium pb-12 pl-6\">\n\t\t\t\t\tMost Popular\n\t\t\t\t</div>\n\t\t\t</motion.div>\n\t\t\t<motion.div\n\t\t\t\tclassName=\"z-10 w-full max-w-md rounded-3xl bg-[#1C1C1E] p-6 text-white shadow-xl relative\"\n\t\t\t\tvariants={variants.card}\n\t\t\t\tinitial=\"hidden\"\n\t\t\t\tanimate=\"visible\"\n\t\t\t\ttransition={{ duration: 0.5 }}\n\t\t\t>\n\t\t\t\t<p className=\"text-xl font-medium\">Startup Plan</p>\n\t\t\t\t<p className=\"mb-6 text-sm text-gray-400\">\n\t\t\t\t\tFor small development teams and startups\n\t\t\t\t</p>\n\n\t\t\t\t<div className=\"mb-2 flex items-baseline\">\n\t\t\t\t\t<span className=\"text-4xl font-bold\">$499</span>\n\t\t\t\t\t<span className=\"ml-2 text-lg text-gray-400\">/month</span>\n\t\t\t\t</div>\n\t\t\t\t<div className=\"my-4\">\n\t\t\t\t\t<Button className=\"w-full bg-priceAccent hover:bg-priceAccent/80\">\n\t\t\t\t\t\tSubscribe\n\t\t\t\t\t</Button>\n\t\t\t\t</div>\n\t\t\t\t<ul className=\"space-y-3\">\n\t\t\t\t\t{features.map((feature, index) => (\n\t\t\t\t\t\t<motion.li\n\t\t\t\t\t\t\tkey={index}\n\t\t\t\t\t\t\tclassName=\"flex items-center space-x-3\"\n\t\t\t\t\t\t\tinitial={{ opacity: 0, x: -50 }}\n\t\t\t\t\t\t\tanimate={{ opacity: 1, x: 0 }}\n\t\t\t\t\t\t\ttransition={{ duration: 0.5, delay: index * 0.1 }}\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<motion.span\n\t\t\t\t\t\t\t\tclassName=\"flex h-5 w-5 flex-shrink-0 items-center justify-center\"\n\t\t\t\t\t\t\t\tinitial={{ scale: 0 }}\n\t\t\t\t\t\t\t\tanimate={{ scale: 1 }}\n\t\t\t\t\t\t\t\ttransition={{\n\t\t\t\t\t\t\t\t\ttype: \"spring\",\n\t\t\t\t\t\t\t\t\tstiffness: 500,\n\t\t\t\t\t\t\t\t\tdelay: index * 0.1 + 0.2,\n\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<Check className=\"h-4 w-4 text-priceAccent\" />\n\t\t\t\t\t\t\t</motion.span>\n\t\t\t\t\t\t\t<p className=\"text-sm text-gray-300\">{feature}</p>\n\t\t\t\t\t\t</motion.li>\n\t\t\t\t\t))}\n\t\t\t\t</ul>\n\t\t\t</motion.div>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/PopularPriceCard.tsx"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst buttonVariants = cva(\n\t\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-white hover:text-gray-400 font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tsimple:\n\t\t\t\t\t\"bg-secondary relative z-10 bg-transparent hover:border-secondary hover:bg-secondary/50  border border-transparent dark:text-white text-sm md:text-sm transition font-medium duration-200  rounded-md px-4 py-2  flex items-center justify-center\",\n\t\t\t\tdefault: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n\t\t\t\toutline:\n\t\t\t\t\t\"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tghost: \"hover:bg-accent hover:text-black hover:stroke-black dark:text-white text-black\",\n\t\t\t\tlink: \"text-primary underline-offset-4 hover:underline\",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tdefault: \"h-10 px-4 py-2\",\n\t\t\t\tsm: \"h-9 rounded-md px-3\",\n\t\t\t\tlg: \"h-11 rounded-md px-8\",\n\t\t\t\ticon: \"h-10 w-10\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"default\",\n\t\t},\n\t}\n);\n\nexport interface ButtonProps\n\textends React.ButtonHTMLAttributes<HTMLButtonElement>,\n\t\tVariantProps<typeof buttonVariants> {\n\tasChild?: boolean;\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n\t({ className, variant, size, asChild = false, ...props }, ref) => {\n\t\tconst Comp = asChild ? Slot : \"button\";\n\t\treturn (\n\t\t\t<Comp\n\t\t\t\tclassName={cn(buttonVariants({ variant, size, className }))}\n\t\t\t\tref={ref}\n\t\t\t\t{...props}\n\t\t\t/>\n\t\t);\n\t}\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\n",
+      "type": "registry:ui",
+      "target": "components/ui/button.tsx"
+    },
+    {
+      "path": "lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+      "type": "registry:ui",
+      "target": "lib/utils.ts"
+    }
+  ]
+}

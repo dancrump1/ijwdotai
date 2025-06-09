@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ghostlabel",
+  "type": "registry:component",
+  "title": "Ghost Label",
+  "description": "Ghost Label",
+  "files": [
+    {
+      "path": "registry/examples/ghostlabelexample.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/GhostLabel.tsx",
+      "content": "import React from \"react\";\n\ntype GhostLabelProps = {\n\ttext: string;\n};\n\nconst GhostLabel: React.FC<GhostLabelProps> = ({ text }: GhostLabelProps) => {\n\treturn (\n\t\t<p className=\"absolute -inset-y-[130px] -inset-x-[30px]  md:-inset-x-[50px] flex text-[150px] font-bold -z-0 opacity-10 font-anton\">\n\t\t\t{text}\n\t\t</p>\n\t);\n};\n\nexport default GhostLabel;\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/GhostLabel.tsx"
+    }
+  ]
+}

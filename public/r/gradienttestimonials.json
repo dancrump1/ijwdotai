@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gradienttestimonials",
+  "type": "registry:component",
+  "title": "Gradient Testimonials",
+  "description": "Gradient Testimonials",
+  "files": [
+    {
+      "path": "registry/examples/gradienttestimonialsexample.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/GradientTestimonials.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nconst Testimonials = ({ data }) => {\n\treturn (\n\t\t<section className=\"h-fit w-full bg-white\">\n\t\t\t<div className=\"mx-auto flex flex-wrap justify-center gradient-background cont-page\">\n\t\t\t\t{data.map(({ title, comment }) => {\n\t\t\t\t\treturn (\n\t\t\t\t\t\t<div className=\"relative gradient-card basis-1/3 grow\">\n\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\tclassName=\"absolute -inset-1 bg-white\"\n\t\t\t\t\t\t\t\tstyle={{\n\t\t\t\t\t\t\t\t\tmask: \"url(./TextBox_frame.svg)\",\n\t\t\t\t\t\t\t\t\tmaskSize: \"contain\",\n\t\t\t\t\t\t\t\t\tmaskRepeat: \"no-repeat\",\n\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t></div>\n\t\t\t\t\t\t\t<div className=\"z-10 relative p-20 text-white mix-blend-difference\">\n\t\t\t\t\t\t\t\t{title}\n\t\t\t\t\t\t\t\t{comment}\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t);\n\t\t\t\t})}\n\t\t\t</div>\n\t\t</section>\n\t);\n};\n\nexport default Testimonials;\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/GradientTestimonials.tsx"
+    }
+  ]
+}

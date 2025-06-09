@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "numberticker",
+  "type": "registry:component",
+  "title": "Number Ticker",
+  "description": "Number Ticker",
+  "files": [
+    {
+      "path": "registry/examples/numbertickerexample.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport NumberTicker from \"@/components/NumberTicker\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<NumberTicker\n\t\t\t\tvalue={100}\n\t\t\t\tclassName=\"whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white\"\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/NumberTicker.tsx",
+      "content": "\"use client\";\n\nimport { useEffect, useRef } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { useInView, useMotionValue, useSpring } from \"framer-motion\";\n\n// https://magicui.design/docs/components/number-ticker\n\nexport default function NumberTicker({\n\tvalue,\n\tdirection = \"up\",\n\tdelay = 0,\n\tclassName,\n}: {\n\tvalue: number;\n\tdirection?: \"up\" | \"down\";\n\tclassName?: string;\n\tdelay?: number; // delay in s\n}) {\n\tconst ref = useRef<HTMLSpanElement>(null);\n\tconst motionValue = useMotionValue(direction === \"down\" ? value : 0);\n\tconst springValue = useSpring(motionValue, {\n\t\tdamping: 30,\n\t\tstiffness: 100,\n\t});\n\tconst isInView = useInView(ref, { once: true, margin: \"0px\" });\n\n\tuseEffect(() => {\n\t\tisInView &&\n\t\t\tsetTimeout(() => {\n\t\t\t\tmotionValue.set(direction === \"down\" ? 0 : value);\n\t\t\t}, delay * 1000);\n\t}, [motionValue, isInView, delay, value, direction]);\n\n\tuseEffect(\n\t\t() =>\n\t\t\tspringValue.on(\"change\", (latest) => {\n\t\t\t\tif (ref.current) {\n\t\t\t\t\tref.current.textContent = Intl.NumberFormat(\"en-US\").format(\n\t\t\t\t\t\tNumber(latest.toFixed(0))\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t}),\n\t\t[springValue]\n\t);\n\n\treturn (\n\t\t<span className={cn(\"inline-block tabular-nums\", className)} ref={ref} />\n\t);\n}\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/NumberTicker.tsx"
+    },
+    {
+      "path": "lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+      "type": "registry:ui",
+      "target": "lib/utils.ts"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sectionheader",
+  "type": "registry:component",
+  "title": "Section Header",
+  "description": "Section Header",
+  "files": [
+    {
+      "path": "registry/open-source/SectionHeader.tsx",
+      "content": "import React, { PropsWithChildren } from \"react\";\n\nconst SectionHeader = ({ children }: PropsWithChildren) => {\n\treturn <div className=\"container py-10 fs-40-85\">{children}</div>;\n};\n\nexport default SectionHeader;\n",
+      "type": "registry:ui",
+      "target": "registry/open-source/SectionHeader.tsx"
+    }
+  ]
+}

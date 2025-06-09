@@ -1,0 +1,472 @@
+[
+  {
+    "name": "AccordionSlices",
+    "examplePath": "registry/examples/accordionslicesexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "AnimatedHoverCard",
+    "examplePath": "registry/examples/animatedhovercardexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "AnimatedList",
+    "examplePath": "registry/examples/animatedlistexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "AwardCarousel",
+    "examplePath": "registry/examples/awardcarouselexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Background",
+    "examplePath": "registry/examples/backgroundexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "BlurVignette",
+    "examplePath": "registry/examples/blurvignetteexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "BookTestimonials",
+    "examplePath": "registry/examples/booktestimonialsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Btn08",
+    "examplePath": "registry/examples/btn08example.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "BusinessFooter",
+    "examplePath": "registry/examples/businessfooterexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CSSBox",
+    "examplePath": "registry/examples/cssboxexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CardDeck",
+    "examplePath": "registry/examples/carddeckexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Cards",
+    "examplePath": "registry/examples/cardsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CarouselCircle",
+    "examplePath": "registry/examples/carouselcircleexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CarouselStack",
+    "examplePath": "registry/examples/carouselstackexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CircleText",
+    "examplePath": "registry/examples/circletextexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ColorPicker",
+    "examplePath": "registry/examples/colorpickerexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CursorCarousel",
+    "examplePath": "registry/examples/cursorcarouselexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CursorMask",
+    "examplePath": "registry/examples/cursormaskexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "CurvedNavbar",
+    "examplePath": "registry/examples/curvednavbarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Dither",
+    "examplePath": "registry/examples/ditherexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ElasticLine",
+    "examplePath": "registry/examples/elasticlineexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ExpandingTabs",
+    "examplePath": "registry/examples/expandingtabsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FallingText",
+    "examplePath": "registry/examples/fallingtextexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FancyInput",
+    "examplePath": "registry/examples/fancyinputexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FilmReel",
+    "examplePath": "registry/examples/filmreelexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FloatingNav",
+    "examplePath": "registry/examples/floatingnavexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FlowerMenu",
+    "examplePath": "registry/examples/flowermenuexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FlowingNav",
+    "examplePath": "registry/examples/flowingnavexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FluidMorph",
+    "examplePath": "registry/examples/fluidmorphexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FocusCards",
+    "examplePath": "registry/examples/focuscardsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FoldHoverButton",
+    "examplePath": "registry/examples/foldhoverbuttonexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Folder",
+    "examplePath": "registry/examples/folderexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FollowCursor",
+    "examplePath": "registry/examples/followcursorexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "FuzzyText",
+    "examplePath": "registry/examples/fuzzytextexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GalaxyButton",
+    "examplePath": "registry/examples/galaxybuttonexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GhostLabel",
+    "examplePath": "registry/examples/ghostlabelexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GlowingEffect",
+    "examplePath": "registry/examples/glowingeffectexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GooeyTabs",
+    "examplePath": "registry/examples/gooeytabsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GradientCheckbox",
+    "examplePath": "registry/examples/gradientcheckboxexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GradientTestimonials",
+    "examplePath": "registry/examples/gradienttestimonialsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Gravity",
+    "examplePath": "registry/examples/gravityexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "HorizontalScrollGallery",
+    "examplePath": "registry/examples/horizontalscrollgalleryexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "HoverGallery",
+    "examplePath": "registry/examples/hovergalleryexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ImageReveal",
+    "examplePath": "registry/examples/imagerevealexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ImageRipple",
+    "examplePath": "registry/examples/imagerippleexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ImageZoom",
+    "examplePath": "registry/examples/imagezoomexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "InfiniteCarousel",
+    "examplePath": "registry/examples/infinitecarouselexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "InfiniteMenu",
+    "examplePath": "registry/examples/infinitemenuexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "InnerGlow",
+    "examplePath": "registry/examples/innerglowexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "LaneCard",
+    "examplePath": "registry/examples/lanecardexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Lens",
+    "examplePath": "registry/examples/lensexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "LetterHover",
+    "examplePath": "registry/examples/letterhoverexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "LinearDialog",
+    "examplePath": "registry/examples/lineardialogexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ListRotator",
+    "examplePath": "registry/examples/listrotatorexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MagnetLines",
+    "examplePath": "registry/examples/magnetlinesexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MatrixBackground",
+    "examplePath": "registry/examples/matrixbackgroundexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MobileNav",
+    "examplePath": "registry/examples/mobilenavexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MobileNavBasic",
+    "examplePath": "registry/examples/mobilenavbasicexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "NavBar",
+    "examplePath": "registry/examples/navbarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navbar2",
+    "examplePath": "registry/examples/navbar2example.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navbar3",
+    "examplePath": "registry/examples/navbar3example.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navigation",
+    "examplePath": "registry/examples/navigationexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "OppositeScroll",
+    "examplePath": "registry/examples/oppositescrollexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "OppositeScrollLinks",
+    "examplePath": "registry/examples/oppositescrolllinksexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ParallaxCarousel",
+    "examplePath": "registry/examples/parallaxcarouselexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ParallaxFloating",
+    "examplePath": "registry/examples/parallaxfloatingexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "PingPong",
+    "examplePath": "registry/examples/pingpongexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Pipeline",
+    "examplePath": "registry/examples/pipelineexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Pointer",
+    "examplePath": "registry/examples/pointerexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "PopularPriceCard",
+    "examplePath": "registry/examples/popularpricecardexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "PricingTable",
+    "examplePath": "registry/examples/pricingtableexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ProgressCarousel",
+    "examplePath": "registry/examples/progresscarouselexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ResizeNavbar",
+    "examplePath": "registry/examples/resizenavbarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ScreenSaver",
+    "examplePath": "registry/examples/screensaverexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ScrollFloat",
+    "examplePath": "registry/examples/scrollfloatexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ScrollIsland",
+    "examplePath": "registry/examples/scrollislandexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ScrollReveal",
+    "examplePath": "registry/examples/scrollrevealexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "SelectModal",
+    "examplePath": "registry/examples/selectmodalexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ShareButton",
+    "examplePath": "registry/examples/sharebuttonexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ShuffleHero",
+    "examplePath": "registry/examples/shuffleheroexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Sidebar",
+    "examplePath": "registry/examples/sidebarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "SimpleFooter",
+    "examplePath": "registry/examples/simplefooterexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "SocialLinks",
+    "examplePath": "registry/examples/sociallinksexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "StripeAccordion",
+    "examplePath": "registry/examples/stripeaccordionexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "StripesPreloader",
+    "examplePath": "registry/examples/stripespreloaderexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "SwapColumnFeatures",
+    "examplePath": "registry/examples/swapcolumnfeaturesexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Terminal",
+    "examplePath": "registry/examples/terminalexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextAnimate",
+    "examplePath": "registry/examples/textanimateexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextEnhanced",
+    "examplePath": "registry/examples/textenhancedexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextGradient",
+    "examplePath": "registry/examples/textgradientexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextHover",
+    "examplePath": "registry/examples/texthoverexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextProximity",
+    "examplePath": "registry/examples/textproximityexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Threads",
+    "examplePath": "registry/examples/threadsexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TilesBackground",
+    "examplePath": "registry/examples/tilesbackgroundexample.tsx",
+    "reason": "Placeholder content"
+  }
+]

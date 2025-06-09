@@ -30,12 +30,34 @@ function extractRelativeImports(content) {
 	}
 	return matches;
 }
+const aliasMap = {
+	"@/components/ui": path.join(process.cwd(), "components", "ui"),
+	"@/lib": path.join(process.cwd(), "lib"),
+};
 
-function resolveImportPath(baseFilePath, relativePath) {
-	const fullPath = path.resolve(path.dirname(baseFilePath), relativePath);
-	if (fs.existsSync(`${fullPath}.tsx`)) return `${fullPath}.tsx`;
-	if (fs.existsSync(`${fullPath}/index.tsx`)) return `${fullPath}/index.tsx`;
-	return null;
+function resolveImportPath(baseFilePath, importPath) {
+	// Relative path
+	if (importPath.startsWith(".") || importPath.startsWith("..")) {
+		const fullPath = path.resolve(path.dirname(baseFilePath), importPath);
+		if (fs.existsSync(`${fullPath}.tsx`)) return `${fullPath}.tsx`;
+		if (fs.existsSync(`${fullPath}/index.tsx`))
+			return `${fullPath}/index.tsx`;
+	}
+
+	// Aliased path
+	for (const alias in aliasMap) {
+		if (importPath.startsWith(alias)) {
+			const relativeSubPath = importPath
+				.replace(alias, "")
+				.replace(/^\/+/, "");
+			const fullPath = path.join(aliasMap[alias], relativeSubPath);
+			if (fs.existsSync(`${fullPath}.tsx`)) return `${fullPath}.tsx`;
+			if (fs.existsSync(`${fullPath}/index.tsx`))
+				return `${fullPath}/index.tsx`;
+		}
+	}
+
+	return null; // Unresolvable (probably an external library)
 }
 
 function addComponent(componentPath, examplePathMaybe = null) {

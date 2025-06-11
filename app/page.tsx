@@ -2034,7 +2034,7 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
-						<label>Components per page</label>
+						<label>Components per row</label>
 
 						<ToggleGroup
 							className="inline-flex space-x-px rounded"
@@ -2060,7 +2060,7 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
-						<label>may lag when removing filters</label>
+						<label>Filters (may cause lag)</label>
 						<MultiSelect
 							options={filterOptions.sort((a, b) =>
 								a.label.localeCompare(b.label)
@@ -2070,19 +2070,20 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
+						<label>Static VS Animated</label>
 						<ToggleGroup
-							className="inline-flex space-x-px rounded"
+							className="inline-flex space-x-px rounded border"
 							type="single"
 							defaultValue="left"
 							aria-label="component complexity"
 							onClick={() => setBasic(!basic)}
 						>
-							<ToggleGroupItem value="left" aria-label="Simple">
-								Simple
+							<ToggleGroupItem value="left" aria-label="Static">
+								Static
 							</ToggleGroupItem>
 
 							<ToggleGroupItem value="right" aria-label="Complex">
-								Complex (will lag on click)
+								Animated
 							</ToggleGroupItem>
 						</ToggleGroup>
 					</div>

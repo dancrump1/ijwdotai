@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { CardBody, CardContainer, CardItem } from "./3dCard";
 import MobileNav from "./MobileNavBasic";

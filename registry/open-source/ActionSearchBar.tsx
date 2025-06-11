@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 
 import { Input } from "@/components/ui/input";
-import { AnimatePresence, motion } from "framer-motion";
 import {
 	AudioLines,
 	BarChart2,
@@ -15,6 +14,7 @@ import {
 	Send,
 	Video,
 } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://kokonutui.com/docs/components/action-search-bar

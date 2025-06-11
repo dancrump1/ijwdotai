@@ -1,10 +1,17 @@
 "use client";
 
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import {
+	forwardRef,
+	useCallback,
+	useEffect,
+	useImperativeHandle,
+	useRef,
+	useState,
+} from "react";
 import type { HTMLAttributes } from "react";
-import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
 import { cn } from "@/registry/utils/cn";
+import { AnimatePresence, motion, useAnimation } from "motion/react";
 
 export interface KeyboardIconHandle {
 	startAnimation: () => void;

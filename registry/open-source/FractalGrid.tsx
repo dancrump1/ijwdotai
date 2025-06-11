@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 
-
-
-import { AnimatePresence, motion } from "framer-motion";
-
-
-
-
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.cult-ui.com/docs/components/bg-animated-fractal-grid

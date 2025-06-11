@@ -10,8 +10,8 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import { AnimatePresence, motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.cult-ui.com/docs/components/color-picker

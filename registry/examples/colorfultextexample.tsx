@@ -3,7 +3,7 @@
 import React from "react";
 
 import { ColourfulText } from "@/registry/open-source/ColorfulText";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function ColourfulTextDemo() {
 	return (

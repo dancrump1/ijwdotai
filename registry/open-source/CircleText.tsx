@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 
 // Credit:
 // https://www.reactbits.dev/text-animations/circular-text

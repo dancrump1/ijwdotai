@@ -17,8 +17,8 @@ import {
 } from "react";
 
 import clsx from "clsx";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import isHotkey from "is-hotkey";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { v4 as uuid } from "uuid";
 
 /*********************************************
@@ -460,11 +460,11 @@ export const Node = function TreeNode({
 							? dispatch({
 									id: id,
 									type: TreeViewActionTypes.CLOSE,
-							  })
+								})
 							: dispatch({
 									id: id,
 									type: TreeViewActionTypes.OPEN,
-							  });
+								});
 						selectId(id);
 					}}
 				>

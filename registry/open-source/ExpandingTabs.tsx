@@ -2,8 +2,8 @@
 
 import React, { useRef, useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { Bell, HelpCircle, Home, Settings, Shield } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import { useOnClickOutside } from "usehooks-ts";
 
 // Credit:

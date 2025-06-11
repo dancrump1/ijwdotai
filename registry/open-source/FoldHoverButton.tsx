@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 
 // Credit:
 // https://eclairui.gopx.dev/components/buttons/folder-hover-button

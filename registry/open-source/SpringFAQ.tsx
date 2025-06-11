@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Code, Heart, Sparkles } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit
 // https://starui.link/docs/components/faq-spring

@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { CheckIcon, EuroIcon } from "lucide-react";
+import { motion } from "motion/react";
 
 // Credit:
 // https://cuicui.day/marketing-ui/pricing-tables

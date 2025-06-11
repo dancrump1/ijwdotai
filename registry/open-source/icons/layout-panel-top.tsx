@@ -1,9 +1,10 @@
 "use client";
 
-import { useAnimation, motion } from "framer-motion";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
 import { cn } from "@/registry/utils/cn";
+import { motion, useAnimation } from "motion/react";
 
 export interface LayoutPanelTopIconHandle {
 	startAnimation: () => void;

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import { cn } from "@/registry/utils/cn";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { v4 as uuidv4 } from "uuid";
 
 import {

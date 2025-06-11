@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // https://ui.aceternity.com/components/3d-pin
 

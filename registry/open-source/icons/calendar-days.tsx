@@ -1,11 +1,11 @@
 "use client";
 
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import type { Variants } from "framer-motion";
-import { useCallback, useImperativeHandle, useRef } from "react";
+import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 import type { HTMLAttributes } from "react";
-import { forwardRef } from "react";
+
 import { cn } from "@/registry/utils/cn";
+import { AnimatePresence, motion, useAnimation } from "motion/react";
+import type { Variants } from "motion/react";
 
 export interface CalendarDaysIconHandle {
 	startAnimation: () => void;

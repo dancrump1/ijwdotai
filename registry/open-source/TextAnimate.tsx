@@ -3,7 +3,7 @@
 import { ElementType } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
+import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
 
 type AnimationType = "text" | "word" | "character" | "line";
 type AnimationVariant =

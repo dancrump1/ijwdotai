@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { FastAverageColor } from "fast-average-color";
-import { motion } from "framer-motion";
-import parse from "html-react-parser";
-
 import { cn } from "@/lib/utils";
+import { FastAverageColor } from "fast-average-color";
+import parse from "html-react-parser";
+import { motion } from "motion/react";
+
 import CardTags from "./CardTags";
 import { closestColor } from "./ExploreCard";
 import { localStorageKey } from "./FavoritesBoard";

@@ -1,6 +1,6 @@
 import React, { MouseEventHandler, ReactNode, useRef } from "react";
 
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "motion/react";
 
 // www.hover.dev/components/other#mouse-image-trail
 

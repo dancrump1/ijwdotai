@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 
 //ui.aceternity.com/components/timeline
 

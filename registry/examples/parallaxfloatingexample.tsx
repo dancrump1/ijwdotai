@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { LayoutGroup, motion } from "framer-motion";
+import { LayoutGroup, motion } from "motion/react";
 
 import Floating, { FloatingElement } from "../open-source/ParallaxFloating";
 import TextRotate from "../open-source/TextRotate";

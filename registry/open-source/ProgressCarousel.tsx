@@ -9,7 +9,7 @@ import React, {
 } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.ui-layouts.com/components/progressive-carousel

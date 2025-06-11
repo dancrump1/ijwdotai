@@ -10,7 +10,7 @@ import React, {
 
 import Link from "next/link";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { IconType } from "react-icons";
 
 const SwapColumnFeatures = () => {

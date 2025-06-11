@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { useMousePosition } from "@/registry/utils/elasticLinePosition";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "motion/react";
 import { twMerge } from "tailwind-merge";
 
 // Credit:

@@ -11,7 +11,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import { useMousePositionRef } from "@/registry/utils/useMousePosition";
-import { useAnimationFrame } from "framer-motion";
+import { useAnimationFrame } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/image/parallax-floating

@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { motion } from "motion/react";
 
 const features = [
 	"5 users license",

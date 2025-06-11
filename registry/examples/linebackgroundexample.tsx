@@ -3,7 +3,7 @@
 import React from "react";
 
 import { GoogleGeminiEffect } from "@/components/LineBackground";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "motion/react";
 
 export default function GoogleGeminiEffectDemo() {
 	const ref = React.useRef(null);

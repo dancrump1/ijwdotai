@@ -7,7 +7,7 @@ import React, {
 	useState,
 } from "react";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 // Credit:
 // https://www.reactbits.dev/components/animated-list

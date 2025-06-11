@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Lane = ({ children, ...props }) => {
 	const [isHovered, setIsHovered] = useState(false);

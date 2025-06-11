@@ -4,7 +4,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const World = dynamic(() => import("@/components/Globe").then((m) => m.World));
 

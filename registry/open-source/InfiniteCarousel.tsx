@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.pldkhoa.dev/playground/infinite-carousel
 
 interface LogoRowProps {
-	logos: typeof items[number][number][];
+	logos: (typeof items)[number][number][];
 	index: number;
 	activeIndex: number;
 }

@@ -6,7 +6,7 @@ import {
 	TargetAndTransition,
 	Transition,
 	VariantLabels,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://motion-primitives.com/docs/text-roll

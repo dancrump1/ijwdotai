@@ -1,7 +1,7 @@
 "use client";
 
 import UnderlineToBackground from "@/components/UnderlineToBackground";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function UnderlineToBackgroundDemo() {
 	const fadeInVariants = {

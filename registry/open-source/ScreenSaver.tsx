@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 import { useDimensions } from "@/registry/utils/useDimensions";
-import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
+import { motion, useAnimationFrame, useMotionValue } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/blocks/screensaver

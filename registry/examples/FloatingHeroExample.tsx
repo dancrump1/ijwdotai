@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import Floating, { FloatingElement } from "@/components/ParallaxFloating";
 import TextRotate from "@/components/TextRotate";
-import { LayoutGroup, motion } from "framer-motion";
+import { LayoutGroup, motion } from "motion/react";
 
 const exampleImages = [
 	{

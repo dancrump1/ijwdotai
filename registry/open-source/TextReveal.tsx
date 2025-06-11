@@ -3,7 +3,7 @@
 import React, { memo, useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 
 // https://ui.aceternity.com/components/text-reveal-card

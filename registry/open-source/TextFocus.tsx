@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Credit:
 // https://www.reactbits.dev/text-animations/true-focus
@@ -44,9 +44,12 @@ const TextFocus: React.FC<TrueFocusProps> = ({
 
 	useEffect(() => {
 		if (!manualMode) {
-			const interval = setInterval(() => {
-				setCurrentIndex((prev) => (prev + 1) % words.length);
-			}, (animationDuration + pauseBetweenAnimations) * 1000);
+			const interval = setInterval(
+				() => {
+					setCurrentIndex((prev) => (prev + 1) % words.length);
+				},
+				(animationDuration + pauseBetweenAnimations) * 1000
+			);
 
 			return () => clearInterval(interval);
 		}
@@ -100,8 +103,8 @@ const TextFocus: React.FC<TrueFocusProps> = ({
 										? `blur(0px)`
 										: `blur(${blurAmount}px)`
 									: isActive
-									? `blur(0px)`
-									: `blur(${blurAmount}px)`,
+										? `blur(0px)`
+										: `blur(${blurAmount}px)`,
 								transition: `filter ${animationDuration}s ease`,
 							} as React.CSSProperties
 						}

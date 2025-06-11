@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const YEARS = Array.from({ length: 2024 - 1993 + 1 }, (_, i) => 2024 - i);
 

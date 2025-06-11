@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 function Page({ children }) {
 	const [loader, setLoader] = useState(false);

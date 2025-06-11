@@ -10,7 +10,7 @@ import {
 	useScroll,
 	useSpring,
 	useTransform,
-} from "framer-motion";
+} from "motion/react";
 
 // https://ui.aceternity.com/components/hero-parallax
 

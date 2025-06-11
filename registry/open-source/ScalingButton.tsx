@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 type ScalingButtonProps = {
 	springTransition?: {

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
 import { Maximize2, Minimize2, Play } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 interface YouTubePlayer2Props {
 	videoId: string;

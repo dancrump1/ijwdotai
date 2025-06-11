@@ -7,7 +7,7 @@ import {
 	motion,
 	stagger,
 	useAnimate,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/letter-swap

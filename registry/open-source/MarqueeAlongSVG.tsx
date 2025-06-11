@@ -10,7 +10,7 @@ import {
 	useSpring,
 	useTransform,
 	useVelocity,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/blocks/marquee-along-svg-path

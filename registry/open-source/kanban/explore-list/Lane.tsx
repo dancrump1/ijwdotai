@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { cn } from "@/registry/utils/cn";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 const Lane = ({ children, ...rest }) => {
 	const ref = useRef(null);

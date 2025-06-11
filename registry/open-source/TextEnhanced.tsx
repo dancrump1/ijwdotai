@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Credit:
 // https://kokonutui.com/docs/components/text#text---enhanced

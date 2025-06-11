@@ -17,7 +17,7 @@ import {
 	motion,
 	MotionProps,
 	Transition,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/text-rotate

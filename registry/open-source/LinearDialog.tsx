@@ -11,15 +11,15 @@ import React, {
 } from "react";
 
 import { cn } from "@/lib/utils";
+// import useClickOutside from '@/hooks/useClickOutside';
+import { XIcon } from "lucide-react";
 import {
 	AnimatePresence,
 	motion,
 	MotionConfig,
 	Transition,
 	Variant,
-} from "framer-motion";
-// import useClickOutside from '@/hooks/useClickOutside';
-import { XIcon } from "lucide-react";
+} from "motion/react";
 import { createPortal } from "react-dom";
 
 // Credit:

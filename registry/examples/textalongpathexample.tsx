@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 
 import AnimatedPathText from "@/components/TextAlongPath";
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function TextAlongPathExample() {
 	// Rounded rectangle path

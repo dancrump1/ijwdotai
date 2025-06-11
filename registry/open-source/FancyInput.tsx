@@ -4,8 +4,8 @@ import type React from "react";
 import { useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
 import { Loader } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://starui.link/docs/components/subscribe

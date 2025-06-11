@@ -7,7 +7,7 @@ import Link, { LinkProps } from "next/link";
 
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 interface Links {
 	label: string;

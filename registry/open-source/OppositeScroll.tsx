@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 
 // Credit:

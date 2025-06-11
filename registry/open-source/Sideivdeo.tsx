@@ -2,9 +2,9 @@
 
 import React, { forwardRef, ReactNode } from "react";
 
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import useMeasure from "react-use-measure";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
+import useMeasure from "react-use-measure";
 
 type PanelContainerProps = {
 	panelOpen: boolean;

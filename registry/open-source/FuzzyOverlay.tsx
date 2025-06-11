@@ -1,7 +1,7 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const FuzzyOverlay = ({ className }: { className?: string }) => {
 	return (

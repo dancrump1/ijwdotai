@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useRef } from "react";
 
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/text-along-path
@@ -136,7 +136,7 @@ const AnimatedPathText = ({
 					dur: `${duration}s`,
 					repeatCount: repeatCount,
 					...(easingFunction && easingFunction),
-			  }
+				}
 			: null;
 
 	return (

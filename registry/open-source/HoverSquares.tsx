@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "motion/react";
 import {
 	SiAdobe,
 	SiApple,

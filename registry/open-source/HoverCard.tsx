@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 
 // https://ui.aceternity.com/components/evervault-card
 

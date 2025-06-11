@@ -6,9 +6,10 @@ import React, {
 	useImperativeHandle,
 	useRef,
 } from "react";
-import { motion, useAnimation } from "framer-motion";
 import type { HTMLAttributes } from "react";
+
 import { cn } from "@/registry/utils/cn";
+import { motion, useAnimation } from "motion/react";
 
 export interface FileTextIconHandle {
 	startAnimation: () => void;

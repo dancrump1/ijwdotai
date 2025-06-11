@@ -1,6 +1,6 @@
 import React, { MouseEventHandler, ReactNode, useRef } from "react";
 
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "motion/react";
 import { FiMousePointer } from "react-icons/fi";
 
 const MouseImageTrailExample = () => {

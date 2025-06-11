@@ -10,7 +10,7 @@ import {
 	useAnimationFrame,
 	useMotionValue,
 	ValueAnimationTransition,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/physics/elastic-line

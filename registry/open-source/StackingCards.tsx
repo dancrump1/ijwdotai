@@ -14,7 +14,7 @@ import {
 	useScroll,
 	useTransform,
 	type MotionValue,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit
 // https://www.fancycomponents.dev/docs/components/blocks/stacking-cards

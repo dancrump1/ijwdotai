@@ -12,7 +12,7 @@ import {
 	motion,
 	useMotionValue,
 	useSpring,
-} from "framer-motion";
+} from "motion/react";
 
 // https://ui.aceternity.com/components/link-preview
 

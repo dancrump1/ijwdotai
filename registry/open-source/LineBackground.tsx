@@ -3,7 +3,7 @@
 import React from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionValue } from "framer-motion";
+import { motion, MotionValue } from "motion/react";
 
 // https://ui.aceternity.com/components/google-gemini-effect
 

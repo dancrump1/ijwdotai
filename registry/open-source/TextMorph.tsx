@@ -3,7 +3,7 @@
 import { useId, useMemo } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, Transition, Variants } from "framer-motion";
+import { AnimatePresence, motion, Transition, Variants } from "motion/react";
 
 // Credit:
 // https://motion-primitives.com/docs/text-morph

@@ -8,7 +8,7 @@ import {
 	motionValue,
 	useSpring,
 	useTransform,
-} from "framer-motion";
+} from "motion/react";
 import useMeasure from "react-use-measure";
 
 // Credit:

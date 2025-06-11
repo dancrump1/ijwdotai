@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 import { FiArrowUpRight } from "react-icons/fi";
 
 const IMG_PADDING = 12;

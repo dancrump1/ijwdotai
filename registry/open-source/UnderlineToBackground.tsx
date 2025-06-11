@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import { motion, ValueAnimationTransition } from "framer-motion";
+import { motion, ValueAnimationTransition } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/underline-to-background

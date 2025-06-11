@@ -8,7 +8,7 @@ import {
 	HTMLMotionProps,
 	motion,
 	useMotionValue,
-} from "framer-motion";
+} from "motion/react";
 
 interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 
 export const TracingBeam = ({
 	children,

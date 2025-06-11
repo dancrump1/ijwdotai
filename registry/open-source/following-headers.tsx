@@ -1,11 +1,12 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState, type HTMLProps } from "react";
+
 import Link from "next/link";
 
-import { type HTMLProps, useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
+import { ChevronRight } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://cuicui.day/application-ui/table-of-contents

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { DynamicAnimationOptions, motion, useAnimate } from "framer-motion";
 import { debounce } from "lodash";
+import { DynamicAnimationOptions, motion, useAnimate } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/random-letter-swap

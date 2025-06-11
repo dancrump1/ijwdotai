@@ -1,7 +1,7 @@
 "use client";
 
 import TextRotate from "@/components/TextRotate";
-import { LayoutGroup, motion } from "framer-motion";
+import { LayoutGroup, motion } from "motion/react";
 
 export default function TextRotateExample() {
 	return (

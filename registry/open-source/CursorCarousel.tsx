@@ -9,8 +9,8 @@ import image5 from "@/public/itjustworks.jpg";
 import image6 from "@/public/itjustworks.jpg";
 import image7 from "@/public/itjustworks.jpg";
 import image8 from "@/public/itjustworks.jpg";
-import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 const One = () => {
 	const containerRef = useRef<HTMLDivElement>(null);

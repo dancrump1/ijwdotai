@@ -332,14 +332,6 @@ import {
 	IconSignature,
 	IconTableColumn,
 } from "@tabler/icons-react";
-import {
-	AnimatePresence,
-	LayoutGroup,
-	motion,
-	useMotionValueEvent,
-	useScroll,
-	useTransform,
-} from "framer-motion";
 import Lenis from "lenis";
 import {
 	CheckIcon,
@@ -352,6 +344,14 @@ import {
 	XCircle,
 	XIcon,
 } from "lucide-react";
+import {
+	AnimatePresence,
+	LayoutGroup,
+	motion,
+	useMotionValueEvent,
+	useScroll,
+	useTransform,
+} from "motion/react";
 import { Poline, positionFunctions } from "poline";
 import { FiMousePointer } from "react-icons/fi";
 import { useMediaQuery } from "usehooks-ts";

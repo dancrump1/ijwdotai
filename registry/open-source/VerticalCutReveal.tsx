@@ -11,7 +11,7 @@ import {
 } from "react";
 
 import { cn } from "@/lib/utils";
-import { DynamicAnimationOptions, motion } from "framer-motion";
+import { DynamicAnimationOptions, motion } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/vertical-cut-reveal

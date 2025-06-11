@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 
 //https://ui.aceternity.com/components/sticky-scroll-reveal
 

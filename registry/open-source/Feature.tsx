@@ -8,7 +8,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 type CardDataProps = {
 	blogEntries: {

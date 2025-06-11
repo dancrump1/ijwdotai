@@ -3,7 +3,7 @@
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 import { AnimatedTooltip } from "./ToolTip";
 

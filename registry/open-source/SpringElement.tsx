@@ -1,6 +1,14 @@
 "use client";
 
-import * as React from "react";
+import React, {
+	ReactElement,
+	useEffect,
+	useImperativeHandle,
+	useLayoutEffect,
+	useRef,
+	useState,
+	useSyncExternalStore,
+} from "react";
 
 import { cn } from "@/lib/utils";
 import {
@@ -8,7 +16,7 @@ import {
 	useMotionValue,
 	useSpring,
 	type HTMLMotionProps,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://animate-ui.com/docs/components/spring-element
@@ -86,7 +94,7 @@ const generateSpringPath = (
 };
 
 function useMotionValueValue(mv: any) {
-	return React.useSyncExternalStore(
+	return useSyncExternalStore(
 		(callback) => {
 			const unsub = mv.on("change", callback);
 			return unsub;
@@ -97,7 +105,7 @@ function useMotionValueValue(mv: any) {
 }
 
 type SpringAvatarProps = {
-	children: React.ReactElement;
+	children: ReactElement;
 	className?: string;
 	springClassName?: string;
 	dragElastic?: number;
@@ -137,12 +145,12 @@ function SpringElement({
 	const sx = useMotionValueValue(springX);
 	const sy = useMotionValueValue(springY);
 
-	const childRef = React.useRef<HTMLDivElement>(null);
-	React.useImperativeHandle(ref, () => childRef.current as HTMLDivElement);
-	const [center, setCenter] = React.useState({ x: 0, y: 0 });
-	const [isDragging, setIsDragging] = React.useState(false);
+	const childRef = useRef<HTMLDivElement>(null);
+	useImperativeHandle(ref, () => childRef.current as HTMLDivElement);
+	const [center, setCenter] = useState({ x: 0, y: 0 });
+	const [isDragging, setIsDragging] = useState(false);
 
-	React.useLayoutEffect(() => {
+	useLayoutEffect(() => {
 		function update() {
 			if (childRef.current) {
 				const rect = childRef.current.getBoundingClientRect();
@@ -161,7 +169,7 @@ function SpringElement({
 		};
 	}, []);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		if (isDragging) {
 			document.body.style.cursor = "grabbing";
 		} else {
@@ -182,7 +190,7 @@ function SpringElement({
 			<svg
 				width="100vw"
 				height="100vh"
-				className="fixed inset-0 w-screen h-screen pointer-events-none z-40 inset-0"
+				className="fixed inset-0 w-screen h-screen pointer-events-none z-40"
 			>
 				<path
 					d={path}

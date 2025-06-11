@@ -10,7 +10,7 @@ import {
 	AnimateSharedLayout,
 	motion,
 	useInView,
-} from "framer-motion";
+} from "motion/react";
 
 const items = [
 	{
@@ -211,13 +211,15 @@ const Modal: React.FC = () => {
 	return (
 		<>
 			<div className="columns-3 ">
-				{items.slice(0, 8)?.map((item, index) => (
-					<SliderModal
-						item={item}
-						itemArr={items}
-						uniqueId={`id-${index}`}
-					/>
-				))}
+				{items
+					.slice(0, 8)
+					?.map((item, index) => (
+						<SliderModal
+							item={item}
+							itemArr={items}
+							uniqueId={`id-${index}`}
+						/>
+					))}
 			</div>
 		</>
 	);

@@ -12,7 +12,7 @@ import {
 	motion,
 	useMotionValueEvent,
 	useScroll,
-} from "framer-motion";
+} from "motion/react";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
 
 import { ModeToggle } from "./atoms/mode-toggle";

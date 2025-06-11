@@ -9,8 +9,8 @@ import {
 	MotionConfig,
 	useMotionValueEvent,
 	useScroll,
-} from "framer-motion";
-import type { HTMLMotionProps } from "framer-motion";
+} from "motion/react";
+import type { HTMLMotionProps } from "motion/react";
 
 // Credit:
 // https://starui.link/docs/components/scroll-island

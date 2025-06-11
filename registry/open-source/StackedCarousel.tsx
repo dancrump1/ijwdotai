@@ -4,8 +4,8 @@ import React, { useCallback, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://eclairui.gopx.dev/components/carousels/stacked-carousel

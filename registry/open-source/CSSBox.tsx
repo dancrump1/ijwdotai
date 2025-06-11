@@ -10,7 +10,7 @@ import {
 } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 
 interface FaceProps {
 	transform: string;

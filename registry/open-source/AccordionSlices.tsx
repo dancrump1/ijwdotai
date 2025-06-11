@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 
 import { useWindowSize } from "@/registry/utils/useWindowSize";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { IconType } from "react-icons";
 import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
 

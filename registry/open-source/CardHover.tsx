@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // https://ui.aceternity.com/components/card-hover-effect
 

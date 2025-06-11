@@ -10,8 +10,8 @@ import React, {
 } from "react";
 
 import { cn } from "@/registry/utils/cn";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { X } from "lucide-react";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
 
 const TRANSITION = {
 	type: "spring",

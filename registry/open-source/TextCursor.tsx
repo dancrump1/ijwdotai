@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.reactbits.dev/text-animations/text-cursor
@@ -138,7 +138,7 @@ const TextCursor: React.FC<TextCursorProps> = ({
 											item.angle,
 											item.angle + (item.randomRotate || 0),
 											item.angle,
-									  ]
+										]
 									: item.angle,
 							}}
 							exit={{ opacity: 0, scale: 0 }}

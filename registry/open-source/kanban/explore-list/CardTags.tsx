@@ -1,7 +1,7 @@
 import React from "react";
 
 import { cn } from "@/registry/utils/cn";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 const CardTags = ({ tags, setOpen, open }) => {
 	if (tags.length > 3)

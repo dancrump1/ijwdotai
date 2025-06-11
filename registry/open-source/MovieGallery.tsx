@@ -1,12 +1,12 @@
 import React, { SetStateAction, useState } from "react";
 
+import { Bookmark, ChevronRight } from "lucide-react";
 import {
 	AnimatePresence,
 	motion,
 	MotionConfig,
 	useAnimate,
-} from "framer-motion";
-import { Bookmark, ChevronRight } from "lucide-react";
+} from "motion/react";
 
 // Credit:
 // https://pro.bossadizenith.me/

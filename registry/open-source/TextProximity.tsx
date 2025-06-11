@@ -8,7 +8,7 @@ import {
 	useAnimationFrame,
 	useMotionValue,
 	useTransform,
-} from "framer-motion";
+} from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/text-cursor-proximity

@@ -11,7 +11,7 @@ import {
 	motion,
 	useMotionValueEvent,
 	useScroll,
-} from "framer-motion";
+} from "motion/react";
 
 // https://ui.aceternity.com/components/floating-navbar
 

@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // www.hover.dev/components/modals#spring-modal
 

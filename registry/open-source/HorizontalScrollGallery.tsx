@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 //optional hook for smooth scrolling
 // import useLenis from "@/hooks/useLenis";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 
 // Credit:
 // https://www.edilozi.pro/docs/components/horizontal-scroll

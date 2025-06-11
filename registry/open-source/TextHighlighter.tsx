@@ -11,7 +11,7 @@ import {
 } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, Transition, useInView, UseInViewOptions } from "framer-motion";
+import { motion, Transition, useInView, UseInViewOptions } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/text/text-highlighter

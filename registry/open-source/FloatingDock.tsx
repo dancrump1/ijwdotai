@@ -24,7 +24,7 @@ import {
 	useMotionValue,
 	useSpring,
 	useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { FiMenu } from "react-icons/fi";
 
 // https://ui.aceternity.com/components/floating-dock

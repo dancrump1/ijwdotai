@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 
 import CurvedNavbar from "../open-source/CurvedNavbar";
 

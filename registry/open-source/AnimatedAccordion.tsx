@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "motion/react";
 
 // Credit:
 // https://zenui.net/animations/animated-accordion

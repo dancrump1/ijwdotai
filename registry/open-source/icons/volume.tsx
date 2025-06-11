@@ -1,10 +1,17 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { Fragment, useState } from "react";
+import {
+	forwardRef,
+	Fragment,
+	useCallback,
+	useImperativeHandle,
+	useRef,
+	useState,
+} from "react";
 import type { HTMLAttributes } from "react";
-import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
+
 import { cn } from "@/registry/utils/cn";
+import { AnimatePresence, motion } from "motion/react";
 
 export interface VolumeIconHandle {
 	startAnimation: () => void;

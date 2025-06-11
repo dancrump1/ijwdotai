@@ -10,7 +10,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Poline, positionFunctions } from "poline";
 
 import ColorPicker from "../open-source/ColorPicker";

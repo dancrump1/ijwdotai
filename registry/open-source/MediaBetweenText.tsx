@@ -3,7 +3,7 @@
 import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import { motion, useInView, UseInViewOptions, Variants } from "framer-motion";
+import { motion, useInView, UseInViewOptions, Variants } from "motion/react";
 
 type MediaBetweenTextProps = {
 	firstText: string;

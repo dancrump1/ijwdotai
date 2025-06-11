@@ -3,7 +3,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/filter/gooey-svg-filter

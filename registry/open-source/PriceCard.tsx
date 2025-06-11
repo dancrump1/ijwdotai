@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { motion } from "motion/react";
 
 import { ScalingButton } from "./ScalingButton";
 

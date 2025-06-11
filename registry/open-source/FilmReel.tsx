@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 
-import { motion, useAnimation, useInView } from "framer-motion";
 import { debounce } from "lodash";
+import { motion, useAnimation, useInView } from "motion/react";
 
 // Credit:
 // https://www.serenity-ui.com/components/filmroll

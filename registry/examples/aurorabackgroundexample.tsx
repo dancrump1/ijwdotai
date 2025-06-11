@@ -3,7 +3,7 @@
 import React from "react";
 
 import { AuroraBackground } from "@/components/AuroraBackground";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Example() {
 	return (

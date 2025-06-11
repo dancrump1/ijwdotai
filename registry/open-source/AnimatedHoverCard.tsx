@@ -106,7 +106,7 @@
 
 import React from "react";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 // Credit:
 // https://ui.noxhd.com/components/animated-card/

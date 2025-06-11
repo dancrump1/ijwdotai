@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 // Inspiration:
 // www.hover.dev/components/other#opposite-scroll-content

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import { ProgressiveBlur } from "@/components/ProgressiveBlur";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function ProgressiveBlurExample() {
 	const [isHover, setIsHover] = useState(false);

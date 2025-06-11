@@ -11,6 +11,7 @@ import React, {
 
 import { Button, ButtonProps } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Check, Loader2, SendHorizontal, X } from "lucide-react";
 import {
 	AnimatePresence,
 	motion,
@@ -18,8 +19,7 @@ import {
 	useSpring,
 	useTransform,
 	type PanInfo,
-} from "framer-motion";
-import { Check, Loader2, SendHorizontal, X } from "lucide-react";
+} from "motion/react";
 import { v4 as uuidv4 } from "uuid";
 
 // Credit:

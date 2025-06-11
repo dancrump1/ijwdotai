@@ -9,8 +9,8 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
 
 // Credit:
 // https://starui.link/docs/components/select-model

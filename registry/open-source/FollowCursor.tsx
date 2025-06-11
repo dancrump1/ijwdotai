@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "motion/react";
 
 // Credit:
 // https://www.sparkui.me/components/mouse-follower

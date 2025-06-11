@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { motion, PanInfo, useMotionValue, useTransform } from "framer-motion";
+import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
 // replace icons with your own if needed
 import {
 	FiCircle,
@@ -165,7 +165,7 @@ export default function ParallaxCarousel({
 					left: -trackItemOffset * (carouselItems.length - 1),
 					right: 0,
 				},
-		  };
+			};
 
 	return (
 		<div
@@ -254,8 +254,8 @@ export default function ParallaxCarousel({
 										? "bg-white"
 										: "bg-[#333333]"
 									: round
-									? "bg-[#555]"
-									: "bg-[rgba(51,51,51,0.4)]"
+										? "bg-[#555]"
+										: "bg-[rgba(51,51,51,0.4)]"
 							}`}
 							animate={{
 								scale: currentIndex % items.length === index ? 1.2 : 1,

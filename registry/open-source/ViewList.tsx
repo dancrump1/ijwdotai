@@ -2,8 +2,8 @@ import React from "react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import { Layers2, LayoutGrid, List, LucideIcon, Star } from "lucide-react";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
 
 type Views = "List" | "Grid" | "Stacked";
 

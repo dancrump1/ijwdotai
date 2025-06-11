@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Component from "@/components/Component";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -259,6 +260,7 @@ import Game from "@/registry/open-source/snake-game/Game";
 import { SocialLinks } from "@/registry/open-source/SocialLinks";
 import { SparklesCore } from "@/registry/open-source/Sparkles";
 import { Spotlight } from "@/registry/open-source/Spotlight";
+import { SpringElement } from "@/registry/open-source/SpringElement";
 import { FAQSpring } from "@/registry/open-source/SpringFAQ";
 import { SpringModal } from "@/registry/open-source/SpringModal";
 import StackedCarousel from "@/registry/open-source/StackedCarousel";
@@ -2530,6 +2532,31 @@ export default function Home() {
 											</motion.div>
 										</LayoutGroup>
 									</div>{" "}
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() ===
+												filter_constants.TRANSITIONS
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Spring Element"
+								>
+									<SpringElement>
+										<Avatar className="size-20">
+											<AvatarImage
+												draggable={false}
+												src="/itjustworks.jpg"
+											/>
+											<AvatarFallback>AK</AvatarFallback>
+										</Avatar>
+									</SpringElement>
 								</Component>
 								<Component
 									collapsed={collapsed}

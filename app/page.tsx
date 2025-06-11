@@ -2037,7 +2037,7 @@ export default function Home() {
 						<label>Components per row</label>
 
 						<ToggleGroup
-							className="inline-flex space-x-px rounded"
+							className="inline-flex space-x-px rounded border"
 							type="single"
 							defaultValue="1"
 							aria-label="Components per row"
@@ -2060,7 +2060,7 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
-						<label>Filters (may cause lag)</label>
+						<label>Filters</label>
 						<MultiSelect
 							options={filterOptions.sort((a, b) =>
 								a.label.localeCompare(b.label)
@@ -2070,7 +2070,7 @@ export default function Home() {
 					</div>
 					<div className={"border-l-2 border-white h-[50px]"}></div>
 					<div className="flex flex-col">
-						<label>Static VS Animated</label>
+						<label>Component Types</label>
 						<ToggleGroup
 							className="inline-flex space-x-px rounded border"
 							type="single"

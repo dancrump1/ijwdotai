@@ -197,6 +197,7 @@ import MarqueeAlongSvgPath from "@/registry/open-source/MarqueeAlongSVG";
 import { MaskContainer } from "@/registry/open-source/MaskEffect";
 import MatrixBackground from "@/registry/open-source/MatrixBackground";
 import MediaBetweenText from "@/registry/open-source/MediaBetweenText";
+import ModelViewer from "@/registry/open-source/ModelViewer";
 import { MouseImageTrail } from "@/registry/open-source/MouseImageTrail";
 import NineDotGridRandom from "@/registry/open-source/NineDotLoader";
 import NumberTicker from "@/registry/open-source/NumberTicker";
@@ -2261,6 +2262,28 @@ export default function Home() {
 							</>
 						) : (
 							<>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Model Viewer"
+								>
+									<div className="h-[500px]">
+										<ModelViewer
+											url="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/ToyCar/glTF-Binary/ToyCar.glb"
+											width={"100%"}
+											height={"100%"}
+										/>
+									</div>
+								</Component>
 								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}

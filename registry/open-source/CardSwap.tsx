@@ -13,6 +13,9 @@ import React, {
 
 import gsap from "gsap";
 
+// Credit:
+// https://www.reactbits.dev/components/card-swap
+
 export interface CardSwapProps {
 	width?: number | string;
 	height?: number | string;

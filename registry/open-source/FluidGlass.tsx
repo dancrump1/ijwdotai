@@ -391,7 +391,7 @@ function Typography() {
 			anchorX="center"
 			anchorY="middle"
 		>
-			React Bits
+			Drive Brand studio
 		</Text>
 	);
 }

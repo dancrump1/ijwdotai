@@ -39,10 +39,7 @@ export type MediaBetweenTextRef = {
 	reset: () => void;
 };
 
-export const MediaBetweenText = forwardRef<
-	MediaBetweenTextRef,
-	MediaBetweenTextProps
->(
+const MediaBetweenText = forwardRef<MediaBetweenTextRef, MediaBetweenTextProps>(
 	(
 		{
 			firstText,

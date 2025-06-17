@@ -10,6 +10,7 @@ import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import Image1 from "@/public/itjustworks.jpg";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
+import Cubes from "@/registry/open-source/Cubes";
 import {
 	animeData,
 	ASCII,
@@ -2145,6 +2146,40 @@ export const ClientWrapper = () => {
 							</>
 						) : (
 							<>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Cubes"
+								>
+									<div
+										style={{
+											height: "100%",
+											width: "100%",
+											position: "relative",
+										}}
+									>
+										<Cubes
+											gridSize={8}
+											maxAngle={60}
+											radius={4}
+											borderStyle="2px dashed #5227FF"
+											faceColor="#1a1a2e"
+											rippleColor="#ff6b6b"
+											rippleSpeed={1.5}
+											autoAnimate={true}
+											rippleOnClick={true}
+										/>
+									</div>
+								</Component>
 								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}

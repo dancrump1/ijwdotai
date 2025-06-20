@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/imagerevealexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ImageReveal from \"../open-source/ImageReveal\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<ImageReveal />\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

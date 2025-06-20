@@ -22,7 +22,7 @@ const FlipCardBasic = () => {
 	);
 };
 
-const Front = () => {
+export const Front = () => {
 	return (
 		<div className="w-full h-full relative flex items-center justify-center">
 			<img
@@ -37,7 +37,7 @@ const Front = () => {
 	);
 };
 
-const Back = () => {
+export const Back = () => {
 	return (
 		<div className="w-full h-full relative flex flex-col items-center justify-center gap-3 p-4 bg-zinc-950 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900">
 			<h3 className="text-xl font-bold uppercase tracking-widest">

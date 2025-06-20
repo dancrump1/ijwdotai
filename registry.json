@@ -606,11 +606,6 @@
 			"description": "Cards",
 			"files": [
 				{
-					"path": "registry/examples/cardsexample.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
 					"path": "registry/open-source/Cards.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/Cards.tsx"
@@ -660,6 +655,24 @@
 					"path": "lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "checkboxanimated",
+			"type": "registry:component",
+			"title": "Checkbox Animated",
+			"description": "Checkbox Animated",
+			"files": [
+				{
+					"path": "registry/examples/checkboxanimatedexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/CheckboxAnimated.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/CheckboxAnimated.tsx"
 				}
 			]
 		},
@@ -873,6 +886,24 @@
 					"path": "registry/open-source/ContentWithImage.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/ContentWithImage.tsx"
+				}
+			]
+		},
+		{
+			"name": "cubes",
+			"type": "registry:component",
+			"title": "Cubes",
+			"description": "Cubes",
+			"files": [
+				{
+					"path": "registry/examples/cubesexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/Cubes.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/Cubes.tsx"
 				}
 			]
 		},
@@ -1200,6 +1231,42 @@
 			]
 		},
 		{
+			"name": "fishybutton",
+			"type": "registry:component",
+			"title": "Fishy Button",
+			"description": "Fishy Button",
+			"files": [
+				{
+					"path": "registry/open-source/FishyButton.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/FishyButton.tsx"
+				}
+			]
+		},
+		{
+			"name": "flipcard",
+			"type": "registry:component",
+			"title": "Flip Card",
+			"description": "Flip Card",
+			"files": [
+				{
+					"path": "registry/examples/flipcardexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/FlipCard.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/FlipCard.tsx"
+				},
+				{
+					"path": "lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
 			"name": "flippedmenu",
 			"type": "registry:component",
 			"title": "Flipped Menu",
@@ -1319,6 +1386,24 @@
 					"path": "registry/open-source/FlowingNav.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/FlowingNav.tsx"
+				}
+			]
+		},
+		{
+			"name": "fluidglass",
+			"type": "registry:component",
+			"title": "Fluid Glass",
+			"description": "Fluid Glass",
+			"files": [
+				{
+					"path": "registry/examples/fluidglassexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/FluidGlass.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/FluidGlass.tsx"
 				}
 			]
 		},
@@ -1818,6 +1903,19 @@
 			]
 		},
 		{
+			"name": "halffilledtext",
+			"type": "registry:component",
+			"title": "Half Filled Text",
+			"description": "Half Filled Text",
+			"files": [
+				{
+					"path": "registry/open-source/HalfFilledText.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/HalfFilledText.tsx"
+				}
+			]
+		},
+		{
 			"name": "herohighlight",
 			"type": "registry:component",
 			"title": "Hero Highlight",
@@ -2199,6 +2297,29 @@
 					"path": "registry/open-source/InnerGlow.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/InnerGlow.tsx"
+				},
+				{
+					"path": "lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "inputanimated",
+			"type": "registry:component",
+			"title": "Input Animated",
+			"description": "Input Animated",
+			"files": [
+				{
+					"path": "registry/examples/inputanimatedexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/InputAnimated.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/InputAnimated.tsx"
 				},
 				{
 					"path": "lib/utils.ts",
@@ -2664,6 +2785,24 @@
 			]
 		},
 		{
+			"name": "modelviewer",
+			"type": "registry:component",
+			"title": "Model Viewer",
+			"description": "Model Viewer",
+			"files": [
+				{
+					"path": "registry/examples/modelviewerexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/ModelViewer.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/ModelViewer.tsx"
+				}
+			]
+		},
+		{
 			"name": "mouseimagetrail",
 			"type": "registry:component",
 			"title": "Mouse Image Trail",
@@ -3068,6 +3207,19 @@
 			]
 		},
 		{
+			"name": "positionawarebutton",
+			"type": "registry:component",
+			"title": "Position Aware Button",
+			"description": "Position Aware Button",
+			"files": [
+				{
+					"path": "registry/open-source/PositionAwareButton.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/PositionAwareButton.tsx"
+				}
+			]
+		},
+		{
 			"name": "poweroffslide",
 			"type": "registry:component",
 			"title": "Power Off Slide",
@@ -3197,6 +3349,19 @@
 					"path": "lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "projectshowcase",
+			"type": "registry:component",
+			"title": "Project Showcase",
+			"description": "Project Showcase",
+			"files": [
+				{
+					"path": "registry/open-source/ProjectShowcase.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/ProjectShowcase.tsx"
 				}
 			]
 		},
@@ -3780,6 +3945,29 @@
 			]
 		},
 		{
+			"name": "springelement",
+			"type": "registry:component",
+			"title": "Spring Element",
+			"description": "Spring Element",
+			"files": [
+				{
+					"path": "registry/examples/springelementexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/SpringElement.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/SpringElement.tsx"
+				},
+				{
+					"path": "lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
 			"name": "springfaq",
 			"type": "registry:component",
 			"title": "Spring F A Q",
@@ -4316,6 +4504,29 @@
 			]
 		},
 		{
+			"name": "textsplit",
+			"type": "registry:component",
+			"title": "Text Split",
+			"description": "Text Split",
+			"files": [
+				{
+					"path": "registry/examples/textsplitexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/TextSplit.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/TextSplit.tsx"
+				},
+				{
+					"path": "lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
 			"name": "textunderline",
 			"type": "registry:component",
 			"title": "Text Underline",
@@ -4705,6 +4916,24 @@
 					"path": "registry/open-source/bottom-blur.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/bottom-blur.tsx"
+				}
+			]
+		},
+		{
+			"name": "cardswapexample",
+			"type": "registry:component",
+			"title": "Cardswapexample",
+			"description": "Cardswapexample",
+			"files": [
+				{
+					"path": "registry/open-source/cardswapexample.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/cardswapexample.tsx"
+				},
+				{
+					"path": "registry/open-source/CardSwap.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/CardSwap.tsx"
 				}
 			]
 		},

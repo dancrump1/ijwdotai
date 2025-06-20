@@ -9,8 +9,13 @@ import Link from "next/link";
 import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import Image1 from "@/public/itjustworks.jpg";
+import { Back, Front } from "@/registry/examples/flipcardexample";
+import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
 import Cubes from "@/registry/open-source/Cubes";
+import { FlipCard } from "@/registry/open-source/FlipCard";
+import { InputAnimated } from "@/registry/open-source/InputAnimated";
+import { TextSplit } from "@/registry/open-source/TextSplit";
 import {
 	animeData,
 	ASCII,
@@ -1876,6 +1881,14 @@ export const ClientWrapper = () => {
 
 	const [selectedGif, setSelectedGif] = useState(gifUrls[0]);
 
+	const [states, setStates] = useState(Array(4).fill(false));
+
+	const toggle = (index: number) => {
+		const updated = [...states];
+		updated[index] = !updated[index];
+		setStates(updated);
+	};
+
 	return (
 		<>
 			<header className="flex flex-col gap-1 sticky top-0 bg-background z-50">
@@ -2146,6 +2159,121 @@ export const ClientWrapper = () => {
 							</>
 						) : (
 							<>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Text Split"
+								>
+									<div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
+										<TextSplit
+											className="text-9xl font-semibold uppercase"
+											topClassName="text-red-500"
+											bottomClassName="text-zinc-950 dark:text-zinc-50"
+										>
+											Berlix UI
+										</TextSplit>
+										;{" "}
+									</div>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Checkbox animated"
+								>
+									<div className="flex gap-6 items-end">
+										<CheckBoxAnimated
+											checked={states[0]}
+											onClick={() => toggle(0)}
+											size={20}
+										/>
+										<CheckBoxAnimated
+											checked={states[1]}
+											onClick={() => toggle(1)}
+											size={24}
+											color="#3b82f6"
+										/>
+										<CheckBoxAnimated
+											checked={states[2]}
+											onClick={() => toggle(2)}
+											size={28}
+											color="#facc15"
+										/>
+										<CheckBoxAnimated
+											checked={states[3]}
+											onClick={() => toggle(3)}
+											size={32}
+											color="#ef4444"
+										/>
+									</div>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Input animated"
+								>
+									<InputAnimated
+										label="Email Address"
+										value={value}
+										onChange={(e) => setValue(e.target.value)}
+									/>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Flip Card"
+								>
+									<FlipCard
+										front={<Front />}
+										back={<Back />}
+										panelClassName=""
+										flipDirection="horizontal"
+										flipRotation="forward"
+									/>
+									<FlipCard
+										front={<Front />}
+										back={<Back />}
+										className="w-[350px]"
+										panelClassName="rounded-2xl bg-black"
+										flipDirection="vertical"
+										flipRotation="reverse"
+									/>
+								</Component>
 								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}

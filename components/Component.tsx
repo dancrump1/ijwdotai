@@ -208,6 +208,7 @@ const Component = ({
 				}
 			)}
 			id={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
+			key={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 		>
 			<span className="flex items-center mb-3">
 				<h2 className="text-xl sm:pl-3">{title}</h2>

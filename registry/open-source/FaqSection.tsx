@@ -144,10 +144,10 @@ const FAQPage: React.FC = () => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3 }}
-							className="border dark:border-white/20 border-black/20 rounded-lg overflow-hidden"
+							className="border dark:border-white/20 border-black/20 rounded-lg overflow-hidden bg-white"
 						>
 							<motion.button
-								className="w-full text-left p-4 flex justify-between items-center font-bold"
+								className="w-full text-left p-4 flex justify-between items-center font-bold text-gray-800"
 								onClick={() =>
 									setOpenQuestion(
 										openQuestion === item.question
@@ -175,7 +175,7 @@ const FAQPage: React.FC = () => {
 								transition={{ duration: 0.3 }}
 								className="overflow-hidden"
 							>
-								<div className="p-4 border-t dark:border-white/20 border-black/20 text-black/70 dark:text-white/70">
+								<div className="p-4 border-t dark:border-white/20 border-black/20 text-gray-700 dark:text-white/70 bg-white">
 									{item.answer}
 								</div>
 							</motion.div>

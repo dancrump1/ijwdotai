@@ -121,11 +121,11 @@ const Folder: React.FC<FolderProps> = ({
 				onClick={handleClick}
 			>
 				<div
-					className="relative w-[100px] h-[80px] rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px]"
+					className="relative w-[100px] h-[80px] rounded-tl-0 rounded-tr-[10px] rounded-br-[10px] rounded-bl-[10px] bg-white"
 					style={{ backgroundColor: folderBackColor }}
 				>
 					<span
-						className="absolute z-0 bottom-[98%] left-0 w-[30px] h-[10px] rounded-tl-[5px] rounded-tr-[5px] rounded-bl-0 rounded-br-0"
+						className="absolute z-0 bottom-[98%] left-0 w-[30px] h-[10px] rounded-tl-[5px] rounded-tr-[5px] rounded-bl-0 rounded-br-0 bg-white"
 						style={{ backgroundColor: folderBackColor }}
 					></span>
 					{/* Render papers */}
@@ -141,7 +141,7 @@ const Folder: React.FC<FolderProps> = ({
 						const transformStyle = open
 							? `${getOpenTransform(i)} translate(${
 									paperOffsets[i].x
-							  }px, ${paperOffsets[i].y}px)`
+								}px, ${paperOffsets[i].y}px)`
 							: undefined;
 
 						return (
@@ -149,7 +149,7 @@ const Folder: React.FC<FolderProps> = ({
 								key={i}
 								onMouseMove={(e) => handlePaperMouseMove(e, i)}
 								onMouseLeave={(e) => handlePaperMouseLeave(e, i)}
-								className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out ${
+								className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out bg-white ${
 									!open
 										? "transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
 										: "hover:scale-110"

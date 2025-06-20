@@ -169,7 +169,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 					key={i}
 					onMouseMove={handleCardMove}
 					onClick={() => handleCardClick(c.url)}
-					className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
+					className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer bg-white"
 					style={
 						{
 							"--card-border": c.borderColor || "transparent",
@@ -193,18 +193,20 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 							className="w-full h-full object-cover rounded-[10px]"
 						/>
 					</div>
-					<footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">
-						<h3 className="m-0 text-[1.05rem] font-semibold">
+					<footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 bg-white">
+						<h3 className="m-0 text-[1.05rem] font-semibold text-gray-800">
 							{c.title}
 						</h3>
 						{c.handle && (
-							<span className="text-[0.95rem] opacity-80 text-right">
+							<span className="text-[0.95rem] opacity-80 text-right text-gray-600">
 								{c.handle}
 							</span>
 						)}
-						<p className="m-0 text-[0.85rem] opacity-85">{c.subtitle}</p>
+						<p className="m-0 text-[0.85rem] opacity-85 text-gray-600">
+							{c.subtitle}
+						</p>
 						{c.location && (
-							<span className="text-[0.85rem] opacity-85 text-right">
+							<span className="text-[0.85rem] opacity-85 text-right text-gray-600">
 								{c.location}
 							</span>
 						)}
@@ -220,7 +222,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 					maskImage:
 						"radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
 					WebkitMaskImage:
-						"radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
+						"radial-gradient(circle var(--r) at var(--x) var,--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
 				}}
 			/>
 			<div
@@ -233,7 +235,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 					maskImage:
 						"radial-gradient(circle var(--r) at var(--x) var(--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",
 					WebkitMaskImage:
-						"radial-gradient(circle var(--r) at var(--x) var(--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",
+						"radial-gradient(circle var(--r) at var(--x) var,--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",
 					opacity: 1,
 				}}
 			/>

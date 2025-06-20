@@ -81,12 +81,12 @@ const FooterSecond = () => {
 					<div className="col-span-1 sm:col-span-2 lg:col-span-1">
 						<div className="flex items-center mb-4">
 							{brandDetails.brandIcon}
-							<span className="text-xl font-bold ml-2">
+							<span className="text-xl font-bold ml-2 text-gray-800">
 								{brandDetails.brandName}
 							</span>
 						</div>
 						<p
-							className="text-sm mb-4"
+							className="text-sm mb-4 text-gray-600"
 							dangerouslySetInnerHTML={{ __html: brandDetails.address }}
 						/>
 						<div className="flex space-x-4">
@@ -107,7 +107,7 @@ const FooterSecond = () => {
 					<div className="sm:col-span-2 lg:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8 ">
 						{footerSections.map((section, index) => (
 							<div key={index} className="space-y-4">
-								<h3 className="font-semibold mb-2 text-sm uppercase tracking-wider">
+								<h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-gray-800">
 									{section.title}
 								</h3>
 								<ul className="space-y-2">

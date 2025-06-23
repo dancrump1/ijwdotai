@@ -2591,7 +2591,7 @@ export const ClientWrapper = () => {
 										</EditorProvider>
 									</div>
 								</Component>
-								{/* <Component
+								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2616,8 +2616,8 @@ export const ClientWrapper = () => {
 											</span>
 										</div>
 									))}
-								</Component> */}
-								{/* <Component
+								</Component>
+								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2641,7 +2641,7 @@ export const ClientWrapper = () => {
 											width={1200}
 										/>
 									</FullscreenImage>
-								</Component> */}
+								</Component>
 								<Component
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
@@ -9524,22 +9524,6 @@ export const ClientWrapper = () => {
 									selectedFilters={selectedFilters}
 									title="tour"
 									subfolder="tour"
-								></Component>
-
-								<Component
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.TRANSITIONS
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="video player"
 								></Component>
 
 								<Component

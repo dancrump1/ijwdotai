@@ -69,7 +69,7 @@ function Model({ containerRef }) {
 	useEffect(() => {
 		const generatedMeshes = Array.from({ length: max }).map((_, i) => (
 			<mesh
-				key={i}
+				key={i + "ripple"}
 				position={[0, 0, 0]}
 				ref={(el) => (meshRefs.current[i] = el)}
 				rotation={[0, 0, Math.random()]}

@@ -66,13 +66,13 @@ const MenuToggler = ({
 				>
 					{[0, 1, 2].map((i) => (
 						<span
-							key={i}
+							key={i + "flower-span"}
 							className={`absolute bg-current transition-all ${
 								isOpen && i === 0
 									? "opacity-0"
 									: isOpen
-									? `${i === 1 ? "rotate-45" : "-rotate-45"}`
-									: ""
+										? `${i === 1 ? "rotate-45" : "-rotate-45"}`
+										: ""
 							}`}
 							style={{
 								transitionDuration: `${animationDuration}ms`,
@@ -82,7 +82,7 @@ const MenuToggler = ({
 									? `calc(50% - ${lineHeight / 2}px)`
 									: `calc(50% + ${(i - 1) * lineSpacing}px - ${
 											lineHeight / 2
-									  }px)`,
+										}px)`,
 							}}
 						/>
 					))}
@@ -125,7 +125,7 @@ const MenuItem = ({
 				transform: isOpen
 					? `rotate(${(360 / itemCount) * index}deg) translateX(-${
 							itemSize + 30
-					  }px)`
+						}px)`
 					: "none",
 				transitionDuration: `${animationDuration}ms`,
 			}}
@@ -182,7 +182,7 @@ export default function FlowerMenu({
 			<ul className="absolute inset-0 m-0 h-full w-full list-none p-0">
 				{menuItems.map((item, index) => (
 					<MenuItem
-						key={index}
+						key={index + "flower-item"}
 						item={item}
 						index={index}
 						isOpen={isOpen}

@@ -95,7 +95,7 @@ const ListRotator = ({}) => {
 						{listItems.map((item, index) => {
 							return (
 								<li
-									key={index}
+									key={index + "list-rotator"}
 									className="absolute top-1/2 w-full whitespace-nowrap text-center text-[calc(1rem+3vw)] leading-[calc(1rem+3.5vw)]"
 									style={{
 										backfaceVisibility: "hidden",

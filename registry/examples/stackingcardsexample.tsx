@@ -63,7 +63,7 @@ export default function StackingCardsDemo() {
 				{cards.map(({ bgColor, description, image, title }, index) => {
 					return (
 						<StackingCardItem
-							key={index}
+							key={index + "stacking-cards"}
 							index={index}
 							className="h-[620px]"
 						>

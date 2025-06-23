@@ -1,10 +1,10 @@
 export default function NineDotGridRandom() {
-  const animationDuration = 1;
+	const animationDuration = 1;
 
-  return (
-    <>
-      <style>
-        {`
+	return (
+		<>
+			<style>
+				{`
           @keyframes three-dot-loader-growing {
             0% {
               transform: scale(1) ;
@@ -17,24 +17,24 @@ export default function NineDotGridRandom() {
             }
           }
         `}
-      </style>
+			</style>
 
-      <div className="grid grid-cols-3 gap-3">
-        {[...new Array(9)].map((_, index) => (
-          <div
-            className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
-            key={index.toString()}
-            style={{
-              animationName: "three-dot-loader-growing",
-              animationDuration: `${animationDuration}s`,
-              animationIterationCount: "infinite",
-              animationDirection: "both",
-              animationTimingFunction: "ease-in",
-              animationDelay: `${Math.random() * (animationDuration / 2)}s`,
-            }}
-          />
-        ))}
-      </div>
-    </>
-  );
+			<div className="grid grid-cols-3 gap-3">
+				{[...new Array(9)].map((_, index) => (
+					<div
+						className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
+						key={index.toString() + "nine-dot"}
+						style={{
+							animationName: "three-dot-loader-growing",
+							animationDuration: `${animationDuration}s`,
+							animationIterationCount: "infinite",
+							animationDirection: "both",
+							animationTimingFunction: "ease-in",
+							animationDelay: `${Math.random() * (animationDuration / 2)}s`,
+						}}
+					/>
+				))}
+			</div>
+		</>
+	);
 }

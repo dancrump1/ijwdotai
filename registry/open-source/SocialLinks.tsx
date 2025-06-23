@@ -57,7 +57,7 @@ export function SocialLinks({
 							? "opacity-50"
 							: "opacity-100"
 					)}
-					key={index}
+					key={index + "social-links"}
 					onMouseEnter={() => {
 						setHoveredSocial(social.name);
 						setRotation(Math.random() * 20 - 10);

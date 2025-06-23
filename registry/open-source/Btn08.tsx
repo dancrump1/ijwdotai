@@ -48,7 +48,7 @@ export function Btn08({
 				{shareButtons.map((button, index) => (
 					<button
 						type="button"
-						key={index}
+						key={index + "button8"}
 						className={cn(
 							"h-10",
 							"w-10",

@@ -86,7 +86,7 @@ const StickyScroll1 = ({ containerRef }) => {
 							const isLastItem = index + 1 === contentArray.length;
 							return (
 								<div
-									key={index}
+									key={index + "sticky-scroll"}
 									style={{
 										backgroundColor: bgColor,
 										zIndex: contentArray.length - index,

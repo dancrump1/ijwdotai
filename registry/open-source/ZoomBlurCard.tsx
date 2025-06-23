@@ -94,7 +94,7 @@ const ZoomBlurCardTitle: React.FC<ZoomBlurCardTitleProps> = ({
 			<motion.div>
 				{children.split("").map((letter, index) => (
 					<motion.span
-						key={index}
+						key={index + "zoom-item"}
 						initial={{ y: 0 }}
 						animate={isHovered ? { y: "-100%" } : { y: 0 }}
 						transition={{
@@ -111,7 +111,7 @@ const ZoomBlurCardTitle: React.FC<ZoomBlurCardTitleProps> = ({
 			<motion.div className="absolute inset-0">
 				{children.split("").map((letter, index) => (
 					<motion.span
-						key={index}
+						key={index + "zoom-item-2"}
 						initial={{ y: "100%" }}
 						animate={isHovered ? { y: 0 } : { y: "100%" }}
 						transition={{

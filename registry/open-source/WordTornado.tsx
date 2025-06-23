@@ -15,7 +15,7 @@ export default function WordTornadoDemo() {
 			<WordTornado>
 				{words.map((word, index) => (
 					<span
-						key={index}
+						key={index + "tornato"}
 						className="inline-block ease-spring duration-500"
 					>
 						{word}
@@ -164,9 +164,8 @@ export class WordTornadoFactory {
 				const moveX = (-dx / distance) * scale * this.maxMovement;
 				const moveY = (-dy / distance) * scale * this.maxMovement;
 
-				this.elements[
-					i
-				].style.transform = `translate(${moveX}px, ${moveY}px)`;
+				this.elements[i].style.transform =
+					`translate(${moveX}px, ${moveY}px)`;
 			}
 		}
 

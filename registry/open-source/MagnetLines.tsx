@@ -56,7 +56,7 @@ export default function MagnetLines({
 	const total = rows * columns;
 	const spans = Array.from({ length: total }, (_, i) => (
 		<span
-			key={i}
+			key={i + "line-magnet"}
 			className="block origin-center"
 			style={{
 				backgroundColor: lineColor,

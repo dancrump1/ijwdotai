@@ -146,7 +146,7 @@ const Folder: React.FC<FolderProps> = ({
 
 						return (
 							<div
-								key={i}
+								key={i + "folder"}
 								onMouseMove={(e) => handlePaperMouseMove(e, i)}
 								onMouseLeave={(e) => handlePaperMouseLeave(e, i)}
 								className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out bg-white ${

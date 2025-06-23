@@ -92,7 +92,7 @@ const FooterSecond = () => {
 						<div className="flex space-x-4">
 							{socialIcons.map((icon, index) => (
 								<a
-									key={index}
+									key={index + "business-footer"}
 									href={icon.link}
 									className="text-gray-600 hover:text-gray-900 transition-colors"
 									target="_blank"
@@ -106,7 +106,10 @@ const FooterSecond = () => {
 					</div>
 					<div className="sm:col-span-2 lg:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-8 ">
 						{footerSections.map((section, index) => (
-							<div key={index} className="space-y-4">
+							<div
+								key={index + "business-footer-section"}
+								className="space-y-4"
+							>
 								<h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-gray-800">
 									{section.title}
 								</h3>

@@ -81,7 +81,7 @@ const ToolTitle: React.FC<ToolTitleProps> = ({
 			<motion.div>
 				{children.split("").map((letter, index) => (
 					<motion.span
-						key={index}
+						key={index + "simple-grid"}
 						initial={{ y: 0 }}
 						animate={isHovered ? { y: "-100%" } : { y: 0 }}
 						transition={{
@@ -98,7 +98,7 @@ const ToolTitle: React.FC<ToolTitleProps> = ({
 			<motion.div className="absolute inset-0">
 				{children.split("").map((letter, index) => (
 					<motion.span
-						key={index}
+						key={index + "simple-grid-child"}
 						initial={{ y: "100%" }}
 						animate={isHovered ? { y: 0 } : { y: "100%" }}
 						transition={{
@@ -172,7 +172,7 @@ const SimpleGrid: React.FC = () => {
 	return (
 		<div className="w-full aspect-square grid grid-cols-3 grid-rows-3 gap-4">
 			{cards.map((card, index) => (
-				<BentoCard key={index} {...card} />
+				<BentoCard key={index + "simple-grid-bento"} {...card} />
 			))}
 		</div>
 	);

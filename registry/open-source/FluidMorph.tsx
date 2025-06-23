@@ -92,7 +92,7 @@ export default function FluidMorph() {
 			<div className="flex cursor-pointer flex-row gap-4 text-3xl">
 				{numbers.map((_, i) => (
 					<span
-						key={i}
+						key={i + "fuid-morph"}
 						className={`border-light-200 bg-light-50 dark:border-dark-200 dark:bg-dark-50 flex h-12 w-12 items-center justify-center rounded-full border text-sm transition disabled:opacity-50 ${
 							i === index
 								? "cursor-not-allowed text-amber-500"

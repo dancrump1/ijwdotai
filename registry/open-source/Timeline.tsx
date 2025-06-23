@@ -134,7 +134,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 					)
 					.map((item, index) => (
 						<div
-							key={index}
+							key={index + "timeline-item"}
 							className="flex justify-start md:gap-16 md:mr-[5%]"
 						>
 							<div className="pt-28 min-w-16 max-w-xs md:w-full bg-backgroundSecondary">

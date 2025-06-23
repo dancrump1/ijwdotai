@@ -85,7 +85,11 @@ export default function HeroHome() {
 			<div className="grid grid-cols-2 gap-[2vw] lg:grid-cols-4 lg:gap-[1vw]">
 				{pages.map((page, index) => {
 					return (
-						<Link href={`/${page.slug}`} key={index} className="group">
+						<Link
+							href={`/${page.slug}`}
+							key={index + "hero-home"}
+							className="group"
+						>
 							<div className="relative aspect-square overflow-hidden transition-all duration-500 group-hover:rounded-[50%]">
 								<Image
 									src={page.image}

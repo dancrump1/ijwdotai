@@ -80,7 +80,7 @@ const TypewriterTestimonial: React.FC<TestimonialsProps> = ({
 		<div className="flex justify-center items-center gap-4 flex-wrap">
 			{testimonials.map((testimonial, index) => (
 				<motion.div
-					key={index}
+					key={index + "typewriter-testimonial"}
 					className="relative flex flex-col items-center"
 					onMouseEnter={() => handleMouseEnter(index)}
 					onMouseLeave={handleMouseLeave}

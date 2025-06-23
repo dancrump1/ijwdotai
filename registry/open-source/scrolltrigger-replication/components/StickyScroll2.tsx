@@ -131,7 +131,7 @@ const StickyScroll2 = ({ containerRef }) => {
 						const isActive = activeIndex == index;
 						return (
 							<div
-								key={index}
+								key={index + "sticky-scroll-2"}
 								className="screen container h-screen w-full"
 							>
 								<div className="flex gap-x-10 sm:ml-64 lg:ml-[500px] lg:justify-between">

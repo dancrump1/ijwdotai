@@ -60,7 +60,7 @@ function SelectModel() {
 			<SelectContent>
 				<SelectGroup className="group origin-[var(--transform-origin)] rounded-md bg-white py-1 shadow-lg outline outline-neutral-200 transition-[transform,scale,opacity] data-[ending-style]:scale-100 data-[ending-style]:opacity-100 data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none">
 					{exampleData.map((item) => (
-						<SelectItemTest value={item} key={item}>
+						<SelectItemTest value={item} key={item + "select-modal"}>
 							{item}
 						</SelectItemTest>
 					))}

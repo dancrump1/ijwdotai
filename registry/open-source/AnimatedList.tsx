@@ -176,7 +176,7 @@ const AnimatedList: React.FC<AnimatedListProps> = ({
 			>
 				{items.map((item, index) => (
 					<AnimatedItem
-						key={index}
+						key={index + "animated-list"}
 						delay={0.1}
 						index={index}
 						onMouseEnter={() => setSelectedIndex(index)}

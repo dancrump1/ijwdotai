@@ -120,7 +120,7 @@ const TextGradientTransition = () => {
 			<h1 className="mb-10 flex select-none flex-col items-center text-center text-7xl font-bold tracking-tight md:text-8xl lg:flex-row lg:justify-center lg:tracking-tighter xl:tracking-tight">
 				{titleWords.map((word, index) => {
 					return (
-						<span className="relative" key={index}>
+						<span className="relative" key={index + "text-gradient"}>
 							{/* Grey text */}
 							<WordGrey className="absolute inset-0">
 								{word.text}
@@ -173,7 +173,7 @@ const TextGradientTransition = () => {
 						return (
 							<>
 								<ButtonBg
-									key={index}
+									key={index + "button-bg"}
 									$startColor={word.startColor}
 									$endColor={word.endColor}
 									$index={index}

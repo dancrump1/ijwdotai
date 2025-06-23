@@ -43,7 +43,7 @@ function Subscribe() {
 									"inline-block",
 									show ? "text-amber-500" : "text-neutral-400"
 								)}
-								key={index}
+								key={index + "fancy-input"}
 								initial={false}
 								animate={{
 									x: 20,

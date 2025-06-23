@@ -20,7 +20,7 @@ export function StackCard({ cards, className, ...props }: StackCard) {
 			<div className="relative">
 				{cards.map((card, index) => (
 					<motion.div
-						key={index}
+						key={index + "carousel-stack"}
 						initial={false}
 						className={cn(
 							index > 0 && "absolute bottom-0 left-0 w-full",

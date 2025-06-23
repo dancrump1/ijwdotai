@@ -226,7 +226,7 @@ const Header = () => {
 									const isActive = index === pageActiveIndex;
 									return (
 										<img
-											key={index}
+											key={index + "header-img"}
 											src={page.img}
 											className={clsx(
 												"absolute inset-0 h-full w-full object-cover transition-opacity duration-300",
@@ -246,7 +246,7 @@ const Header = () => {
 										onMouseEnter={() => onMouseEnter(index)}
 										onMouseOut={onMouseOut}
 										className="group relative isolate font-bebasNeue text-6xl font-bold leading-[0.8] transition-all duration-300 hover:invert"
-										key={index}
+										key={index + "header-link"}
 										href={"#"}
 									>
 										{page.name}
@@ -260,7 +260,7 @@ const Header = () => {
 							<div className="flex flex-col items-start gap-y-1">
 								{socialLinks.map((link, index) => {
 									return (
-										<LinkWithUnderline key={index}>
+										<LinkWithUnderline key={index + "link-underline"}>
 											{link}
 										</LinkWithUnderline>
 									);
@@ -269,7 +269,9 @@ const Header = () => {
 							<div className="flex flex-col items-start gap-y-1">
 								{privatePages.map((link, index) => {
 									return (
-										<LinkWithUnderline key={index}>
+										<LinkWithUnderline
+											key={index + "link-underline-2"}
+										>
 											{link}
 										</LinkWithUnderline>
 									);

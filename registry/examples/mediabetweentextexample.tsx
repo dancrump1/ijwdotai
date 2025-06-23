@@ -70,7 +70,7 @@ export default function MediaBetweenTextScrollDemo() {
 					{elements.map((element, index) => (
 						<a href={element.url} target="_blank" rel="noreferrer">
 							<MediaBetweenText
-								key={index}
+								key={index + "media-between-text"}
 								firstText={element.left}
 								secondText={element.right}
 								mediaUrl={element.src}

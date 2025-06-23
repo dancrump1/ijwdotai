@@ -59,7 +59,7 @@ export function TextRoll({
 			{letters.map((letter, i) => {
 				return (
 					<span
-						key={i}
+						key={i + "text-roll"}
 						className="relative inline-block [perspective:10000px] [transform-style:preserve-3d] [width:auto]"
 						aria-hidden="true"
 					>

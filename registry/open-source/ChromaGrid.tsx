@@ -166,7 +166,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 		>
 			{data.map((c, i) => (
 				<article
-					key={i}
+					key={i + "chroma-grid"}
 					onMouseMove={handleCardMove}
 					onClick={() => handleCardClick(c.url)}
 					className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer bg-white"

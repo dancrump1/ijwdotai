@@ -63,7 +63,7 @@ const Services = () => {
 					const isFirstAndLast = !index || index === features.length - 1;
 					return (
 						<div
-							key={index}
+							key={index + "services-items"}
 							className="service relative h-screen w-full text-white will-change-[contain] contain-paint"
 						>
 							<div

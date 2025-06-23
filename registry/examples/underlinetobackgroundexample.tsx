@@ -29,7 +29,7 @@ export default function UnderlineToBackgroundDemo() {
 			>
 				{words.map((word, index) => (
 					<motion.span
-						key={index}
+						key={index + "underline-to-background"}
 						variants={wordVariants}
 						className="inline-block mr-1"
 					>

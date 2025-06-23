@@ -94,7 +94,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 						<div>
 							<ol className="grid grid-cols-2 gap-2 ">
 								{testimonials.map((testimonial, index) => (
-									<React.Fragment key={index}>
+									<React.Fragment key={index + "book-fragment"}>
 										<li
 											onClick={() => handleFlip(index + 2)}
 											className="flex justify-start items-center text-xs cursor-pointer"
@@ -121,7 +121,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 				{/* Testimonials Pages */}
 				{testimonials.map((testimonial, index) => (
 					<div
-						key={index}
+						key={index + "testimonial-page"}
 						className="w-full h-full flex justify-center items-center bg-gray-200 border border-gray-300 box-border cursor-grab"
 					>
 						<div className="page-front text-end text-white p-3 bg-gray-400">
@@ -148,7 +148,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 						<div className="flex justify-center items-center mt-3 ">
 							{[...Array(testimonial.rating)].map((_, i) => (
 								<svg
-									key={i}
+									key={i + "testimonial-svg"}
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="#FFA800"
@@ -163,7 +163,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 							))}
 							{[...Array(5 - testimonial.rating)].map((_, i) => (
 								<svg
-									key={i}
+									key={i + "testimonial-svg-2"}
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
 									fill="#CBD5E1"

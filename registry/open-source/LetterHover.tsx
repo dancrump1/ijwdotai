@@ -100,7 +100,10 @@ const LetterSwapForward = ({
 
 			{label.split("").map((letter: string, i: number) => {
 				return (
-					<span className="whitespace-pre relative flex" key={i}>
+					<span
+						className="whitespace-pre relative flex"
+						key={i + "letter-hover"}
+					>
 						<motion.span className={`relative letter`} style={{ top: 0 }}>
 							{letter}
 						</motion.span>

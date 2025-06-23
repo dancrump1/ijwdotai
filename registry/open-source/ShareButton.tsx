@@ -55,7 +55,7 @@ const ShareButton = ({
 					return (
 						<button
 							type="button"
-							key={index}
+							key={index + "share-button"}
 							onClick={link.onClick}
 							className={cn(
 								"h-10",

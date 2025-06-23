@@ -49,7 +49,7 @@ export default function InfiniteCarousel() {
 			<div className="relative h-40 w-full">
 				{items.map((logos, index) => (
 					<LogoRow
-						key={index}
+						key={index + "infinite-carousel"}
 						activeIndex={activeIndex}
 						logos={logos}
 						index={index}

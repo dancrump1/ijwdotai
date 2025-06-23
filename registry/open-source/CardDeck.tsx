@@ -151,7 +151,7 @@ const CardDeck: React.FC<CardStack3DProps> = ({ images }) => {
 			>
 				{images.map((image, index) => (
 					<Card
-						key={index}
+						key={index + "card-deck"}
 						{...image}
 						index={index}
 						isHovered={isHovered}

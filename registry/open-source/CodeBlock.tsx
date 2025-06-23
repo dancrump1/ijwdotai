@@ -62,7 +62,7 @@ const CodeBlock = ({
 					<div className="flex  overflow-x-auto">
 						{tabs.map((tab, index) => (
 							<button
-								key={index}
+								key={index + "code-block"}
 								onClick={() => setActiveTab(index)}
 								className={`px-3 !py-2 text-xs transition-colors font-sans ${
 									activeTab === index

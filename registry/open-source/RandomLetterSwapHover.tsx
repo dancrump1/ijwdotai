@@ -111,7 +111,10 @@ const RandomLetterSwapForward = ({
 
 			{label.split("").map((letter: string, i: number) => {
 				return (
-					<span className="whitespace-pre relative flex" key={i}>
+					<span
+						className="whitespace-pre relative flex"
+						key={i + "random-letter-swap"}
+					>
 						<motion.span
 							className={`relative pb-2 letter-${i}`}
 							style={{ top: 0 }}
@@ -228,7 +231,10 @@ const RandomLetterSwapPingPong = ({
 
 			{label.split("").map((letter: string, i: number) => {
 				return (
-					<span className="whitespace-pre relative flex" key={i}>
+					<span
+						className="whitespace-pre relative flex"
+						key={i + "random-letter-swap-hover"}
+					>
 						<motion.span
 							className={`relative pb-2 letter-${i}`}
 							style={{ top: 0 }}

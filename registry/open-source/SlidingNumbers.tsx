@@ -34,7 +34,7 @@ function Digit({ value, place }: { value: number; place: number }) {
 		<div className="relative inline-block w-[1ch] overflow-x-visible overflow-y-clip leading-none tabular-nums">
 			<div className="invisible">0</div>
 			{Array.from({ length: 10 }, (_, i) => (
-				<Number key={i} mv={animatedValue} number={i} />
+				<Number key={i + "sliding-numbers"} mv={animatedValue} number={i} />
 			))}
 		</div>
 	);

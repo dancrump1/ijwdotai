@@ -75,7 +75,7 @@ export default function PopularPriceCard() {
 				<ul className="space-y-3">
 					{features.map((feature, index) => (
 						<motion.li
-							key={index}
+							key={index + "popular-card"}
 							className="flex items-center space-x-3"
 							initial={{ opacity: 0, x: -50 }}
 							animate={{ opacity: 1, x: 0 }}

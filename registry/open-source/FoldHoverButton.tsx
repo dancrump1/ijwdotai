@@ -74,7 +74,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 			>
 				{images.map((image, index) => (
 					<motion.div
-						key={index}
+						key={index + "fold-button"}
 						className="absolute inset-0 origin-bottom"
 						initial="closed"
 						animate={controls}

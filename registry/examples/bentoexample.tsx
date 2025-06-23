@@ -16,7 +16,7 @@ export function Example() {
 		<BentoGrid className="max-w-4xl mx-auto">
 			{items.map((item, i) => (
 				<BentoGridItem
-					key={i}
+					key={i + "bento"}
 					title={item.title}
 					description={item.description}
 					header={item.header}

@@ -49,7 +49,7 @@ const CarouselCircle: React.FC<CarouselCircleProps> = ({ images }) => {
 				>
 					{images.map((item, index) => (
 						<motion.div
-							key={index}
+							key={index + "carousel-circle"}
 							className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
 							style={{
 								rotateY: `${rotation + (360 / numimages) * index}deg`,

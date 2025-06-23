@@ -13,8 +13,54 @@ import { Back, Front } from "@/registry/examples/flipcardexample";
 import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
 import Cubes from "@/registry/open-source/Cubes";
+import {
+	Editor,
+	EditorBubbleMenu,
+	EditorCharacterCount,
+	EditorClearFormatting,
+	EditorFloatingMenu,
+	EditorFormatBold,
+	EditorFormatCode,
+	EditorFormatItalic,
+	EditorFormatStrike,
+	EditorFormatSubscript,
+	EditorFormatSuperscript,
+	EditorFormatUnderline,
+	EditorLinkSelector,
+	EditorNodeBulletList,
+	EditorNodeCode,
+	EditorNodeHeading1,
+	EditorNodeHeading2,
+	EditorNodeHeading3,
+	EditorNodeOrderedList,
+	EditorNodeQuote,
+	EditorNodeTable,
+	EditorNodeTaskList,
+	EditorNodeText,
+	EditorProvider,
+	EditorSelector,
+	EditorTableColumnAfter,
+	EditorTableColumnBefore,
+	EditorTableColumnDelete,
+	EditorTableColumnMenu,
+	EditorTableDelete,
+	EditorTableFix,
+	EditorTableGlobalMenu,
+	EditorTableHeaderColumnToggle,
+	EditorTableHeaderRowToggle,
+	EditorTableMenu,
+	EditorTableMergeCells,
+	EditorTableRowAfter,
+	EditorTableRowBefore,
+	EditorTableRowDelete,
+	EditorTableRowMenu,
+	EditorTableSplitCell,
+	JSONContent,
+} from "@/registry/open-source/Editor";
 import { FlipCard } from "@/registry/open-source/FlipCard";
+import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
+import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
 import { TextSplit } from "@/registry/open-source/TextSplit";
 import {
 	animeData,
@@ -1563,7 +1609,7 @@ export const ClientWrapper = () => {
 	const mediaBetweenTextRef2 = useRef(null);
 	const containerRef = useRef(null);
 
-	const [basic, setBasic] = useState(true);
+	const [basic, setBasic] = useState(false);
 
 	const { scrollYProgress } = useScroll({ container: containerRef });
 
@@ -1889,6 +1935,314 @@ export const ClientWrapper = () => {
 		setStates(updated);
 	};
 
+	const [editorContent, setEditorContent] = useState<JSONContent>({
+		type: "doc",
+		content: [
+			{
+				type: "heading",
+				attrs: { level: 1 },
+				content: [{ type: "text", text: "Heading 1" }],
+			},
+			{
+				type: "heading",
+				attrs: { level: 2 },
+				content: [{ type: "text", text: "Heading 2" }],
+			},
+			{
+				type: "heading",
+				attrs: { level: 3 },
+				content: [{ type: "text", text: "Heading 3" }],
+			},
+			{
+				type: "heading",
+				attrs: { level: 4 },
+				content: [{ type: "text", text: "Heading 4" }],
+			},
+			{
+				type: "heading",
+				attrs: { level: 5 },
+				content: [{ type: "text", text: "Heading 5" }],
+			},
+			{
+				type: "heading",
+				attrs: { level: 6 },
+				content: [{ type: "text", text: "Heading 6" }],
+			},
+			{ type: "paragraph" },
+			{
+				type: "paragraph",
+				content: [{ type: "text", text: "Hello, world." }],
+			},
+			{ type: "paragraph" },
+			{
+				type: "taskList",
+				content: [
+					{
+						type: "taskItem",
+						attrs: { checked: false },
+						content: [
+							{
+								type: "paragraph",
+								content: [
+									{ type: "text", text: "This is a todo list" },
+								],
+							},
+						],
+					},
+					{
+						type: "taskItem",
+						attrs: { checked: false },
+						content: [
+							{
+								type: "paragraph",
+								content: [{ type: "text", text: "With two items" }],
+							},
+						],
+					},
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "bulletList",
+				content: [
+					{
+						type: "listItem",
+						content: [
+							{
+								type: "paragraph",
+								content: [
+									{ type: "text", text: "This is an unordered list" },
+								],
+							},
+							{
+								type: "bulletList",
+								content: [
+									{
+										type: "listItem",
+										content: [
+											{
+												type: "paragraph",
+												content: [
+													{
+														type: "text",
+														text: "With a nested item",
+													},
+												],
+											},
+										],
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "orderedList",
+				attrs: { start: 1 },
+				content: [
+					{
+						type: "listItem",
+						content: [
+							{
+								type: "paragraph",
+								content: [
+									{ type: "text", text: "This is an ordered list" },
+								],
+							},
+						],
+					},
+					{
+						type: "listItem",
+						content: [
+							{
+								type: "paragraph",
+								content: [{ type: "text", text: "With two items" }],
+							},
+						],
+					},
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "blockquote",
+				content: [
+					{
+						type: "paragraph",
+						content: [
+							{
+								type: "text",
+								text: "This is a quote, probably by someone famous.",
+							},
+						],
+					},
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "paragraph",
+				content: [
+					{ type: "text", text: "This is some " },
+					{ type: "text", marks: [{ type: "code" }], text: "inline code" },
+					{ type: "text", text: ", while this is a code block:" },
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "codeBlock",
+				attrs: { language: null },
+				content: [
+					{
+						type: "text",
+						text: "function x () {\\n  console.log('hello, world.');\\n}",
+					},
+				],
+			},
+			{ type: "paragraph" },
+			{
+				type: "paragraph",
+				content: [
+					{
+						type: "text",
+						text: "You can also create complex tables, like so:",
+					},
+				],
+			},
+			{
+				type: "table",
+				content: [
+					{
+						type: "tableRow",
+						content: [
+							{
+								type: "tableHeader",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [
+											{ type: "text", text: "Here’s a column" },
+										],
+									},
+								],
+							},
+							{
+								type: "tableHeader",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [
+											{ type: "text", text: "Another column" },
+										],
+									},
+								],
+							},
+							{
+								type: "tableHeader",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Yet another" }],
+									},
+								],
+							},
+						],
+					},
+					{
+						type: "tableRow",
+						content: [
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 1A" }],
+									},
+								],
+							},
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 2A" }],
+									},
+								],
+							},
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 3A" }],
+									},
+								],
+							},
+						],
+					},
+					{
+						type: "tableRow",
+						content: [
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 1B" }],
+									},
+								],
+							},
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 2B" }],
+									},
+								],
+							},
+							{
+								type: "tableCell",
+								attrs: { colspan: 1, rowspan: 1, colwidth: null },
+								content: [
+									{
+										type: "paragraph",
+										content: [{ type: "text", text: "Cell 3B" }],
+									},
+								],
+							},
+						],
+					},
+				],
+			},
+		],
+	});
+
+	const handleUpdate = ({ editor }: { editor: Editor }) => {
+		const json = editor.getJSON();
+		setEditorContent(json);
+		console.log(JSON.stringify(json));
+	};
+
+	const spinnerVariants: SpinnerProps["variant"][] = [
+		"default",
+		"circle",
+		"pinwheel",
+		"circle-filled",
+		"ellipsis",
+		"ring",
+		"bars",
+		"infinite",
+	];
+
 	return (
 		<>
 			<header className="flex flex-col gap-1 sticky top-0 bg-background z-50">
@@ -1974,7 +2328,7 @@ export const ClientWrapper = () => {
 						<ToggleGroup
 							className="inline-flex space-x-px rounded border"
 							type="single"
-							defaultValue="left"
+							defaultValue="right"
 							aria-label="component complexity"
 							onClick={() => setBasic(!basic)}
 						>
@@ -2171,6 +2525,135 @@ export const ClientWrapper = () => {
 										),
 									]}
 									selectedFilters={selectedFilters}
+									title="Editor"
+								>
+									<div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
+										<EditorProvider
+											className="h-full w-full overflow-y-auto rounded-lg border bg-background p-4"
+											content={editorContent}
+											onUpdate={handleUpdate}
+											placeholder="Start typing..."
+										>
+											<EditorFloatingMenu>
+												<EditorNodeHeading1 hideName />
+												<EditorNodeBulletList hideName />
+												<EditorNodeQuote hideName />
+												<EditorNodeCode hideName />
+												<EditorNodeTable hideName />
+											</EditorFloatingMenu>
+											<EditorBubbleMenu>
+												<EditorSelector title="Text">
+													<EditorNodeText />
+													<EditorNodeHeading1 />
+													<EditorNodeHeading2 />
+													<EditorNodeHeading3 />
+													<EditorNodeBulletList />
+													<EditorNodeOrderedList />
+													<EditorNodeTaskList />
+													<EditorNodeQuote />
+													<EditorNodeCode />
+												</EditorSelector>
+												<EditorSelector title="Format">
+													<EditorFormatBold />
+													<EditorFormatItalic />
+													<EditorFormatUnderline />
+													<EditorFormatStrike />
+													<EditorFormatCode />
+													<EditorFormatSuperscript />
+													<EditorFormatSubscript />
+												</EditorSelector>
+												<EditorLinkSelector />
+												<EditorClearFormatting />
+											</EditorBubbleMenu>
+											<EditorTableMenu>
+												<EditorTableColumnMenu>
+													<EditorTableColumnBefore />
+													<EditorTableColumnAfter />
+													<EditorTableColumnDelete />
+												</EditorTableColumnMenu>
+												<EditorTableRowMenu>
+													<EditorTableRowBefore />
+													<EditorTableRowAfter />
+													<EditorTableRowDelete />
+												</EditorTableRowMenu>
+												<EditorTableGlobalMenu>
+													<EditorTableHeaderColumnToggle />
+													<EditorTableHeaderRowToggle />
+													<EditorTableDelete />
+													<EditorTableMergeCells />
+													<EditorTableSplitCell />
+													<EditorTableFix />
+												</EditorTableGlobalMenu>
+											</EditorTableMenu>
+											<EditorCharacterCount.Words>
+												Words:{" "}
+											</EditorCharacterCount.Words>
+										</EditorProvider>
+									</div>
+								</Component>
+								{/* <Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Spinner"
+								>
+									{spinnerVariants.map((variant) => (
+										<div
+											className="flex flex-col items-center justify-center gap-4"
+											key={variant}
+										>
+											<Spinner key={variant} variant={variant} />
+											<span className="font-mono text-muted-foreground text-xs">
+												{variant}
+											</span>
+										</div>
+									))}
+								</Component> */}
+								{/* <Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Fullscreen Image"
+								>
+									<FullscreenImage>
+										<Image
+											alt="Placeholder image"
+											className="h-auto w-96"
+											height={800}
+											src="/itjustworks.jpg"
+											unoptimized
+											width={1200}
+										/>
+									</FullscreenImage>
+								</Component> */}
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
 									title="Text Split"
 								>
 									<div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
@@ -2181,7 +2664,6 @@ export const ClientWrapper = () => {
 										>
 											Berlix UI
 										</TextSplit>
-										;{" "}
 									</div>
 								</Component>
 								<Component
@@ -3261,7 +3743,7 @@ export const ClientWrapper = () => {
 										>
 											{words.map((word, index) => (
 												<motion.span
-													key={index}
+													key={index + word}
 													variants={wordVariants}
 													className="inline-block mr-1"
 												>
@@ -3453,7 +3935,7 @@ export const ClientWrapper = () => {
 												) => {
 													return (
 														<StackingCardItem
-															key={index}
+															key={index + description}
 															index={index}
 															className="h-[620px]"
 														>
@@ -4744,7 +5226,7 @@ export const ClientWrapper = () => {
 															rel="noreferrer"
 														>
 															<MediaBetweenText
-																key={index}
+																key={index + "mediaBetween"}
 																firstText={element.left}
 																secondText={element.right}
 																mediaUrl={element.src}
@@ -5164,7 +5646,7 @@ export const ClientWrapper = () => {
 												);
 												return (
 													<MatterBody
-														key={i}
+														key={i + "matter-body"}
 														matterBodyOptions={{
 															friction: 0.5,
 															restitution: 0.2,
@@ -5616,7 +6098,7 @@ export const ClientWrapper = () => {
 											<div className="absolute bottom-2 flex w-full justify-between px-6">
 												{ASCII.map((hand, i) => (
 													<span
-														key={i}
+														key={i + hand}
 														className="text-2xl opacity-80"
 													>
 														{hand}
@@ -7654,7 +8136,7 @@ export const ClientWrapper = () => {
 										{[Image1, Image1, Image1, Image1].map(
 											(image, index) => (
 												<Screensaver
-													key={index}
+													key={index + "screensaver"}
 													speed={1}
 													startPosition={{
 														x: index * 3,
@@ -9243,7 +9725,7 @@ export const ClientWrapper = () => {
 									<BentoGrid className="max-w-4xl mx-auto">
 										{bentoItems.map((item, i) => (
 											<BentoGridItem
-												key={i}
+												key={i + "bento"}
 												title={item.title}
 												description={item.description}
 												header={item.header}
@@ -9593,7 +10075,7 @@ export const ClientWrapper = () => {
 													<SelectContent>
 														{gifUrls.map((gif, index) => (
 															<SelectItem
-																key={index}
+																key={index + "gif-text"}
 																value={gif}
 															>
 																GIF {index + 1}

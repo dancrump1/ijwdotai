@@ -116,7 +116,7 @@ const Improvements = () => {
 				>
 					{galleryItems.map((cols, index) => (
 						<div
-							key={index}
+							key={index + "improvements"}
 							className="gallery-col flex h-full w-[33vw] flex-col gap-8"
 						>
 							{cols.map((img, colIndex) => (

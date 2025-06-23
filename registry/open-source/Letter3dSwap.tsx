@@ -406,7 +406,10 @@ const Letter3DSwap = ({
 				aria-hidden="true"
 			>
 				{characters.map((char, i) => (
-					<span key={i} className="measure-letter inline-block">
+					<span
+						key={i + "letter-3d"}
+						className="measure-letter inline-block"
+					>
 						{char}
 					</span>
 				))}
@@ -446,7 +449,7 @@ const Letter3DSwap = ({
 				<span className="sr-only">{text}</span>
 
 				{characters.map((char, index) => (
-					<span key={index}>{renderCharBox(char, index)}</span>
+					<span key={index + "3d-swap"}>{renderCharBox(char, index)}</span>
 				))}
 			</div>
 		</>

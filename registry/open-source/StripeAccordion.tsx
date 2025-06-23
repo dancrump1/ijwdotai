@@ -38,7 +38,7 @@ function Gallery({ items, setIndex, setOpen, index }) {
 									? "w-[250px] "
 									: "xl:w-[50px] md:w-[30px] sm:w-[20px] w-[14px]"
 							} h-[200px] flex-shrink-0  object-cover transition-[width] ease-in-out duration-300`}
-							key={item}
+							key={item + "stripe-accordion"}
 							onMouseEnter={() => {
 								setIndex(i);
 							}}
@@ -311,7 +311,9 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 											index: React.Key | null | undefined
 										) => (
 											<>
-												<React.Fragment key={index}>
+												<React.Fragment
+													key={index + "stripe-accordion-item"}
+												>
 													<AnimatePresence mode="popLayout">
 														{tab.id === newItem.id && (
 															<motion.figure
@@ -382,7 +384,7 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 										) => {
 											return (
 												<motion.div
-													key={index}
+													key={index + "accordion-stripe"}
 													className={`relative p-2   cursor-grab active:cursor-grabbing`}
 													onClick={() => setNewItem(itemData)}
 												>

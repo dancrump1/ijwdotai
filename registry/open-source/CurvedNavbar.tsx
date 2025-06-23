@@ -158,7 +158,7 @@ export default function CurvedNavbar({ isActive, setIsActive }) {
 					{navItems.map((data, index) => {
 						return (
 							<NavLink
-								key={index}
+								key={index + "curved-nav"}
 								data={{ ...data, index }}
 								isActive={selectedIndicator == data.href}
 								setSelectedIndicator={setSelectedIndicator}

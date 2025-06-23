@@ -102,7 +102,7 @@ const One = () => {
 					<div className="absolute h-10 w-fit flex items-center gap-1 left-0 right-0 mx-auto bottom-0">
 						{Array.from({ length: images.length }).map((_, index) => (
 							<motion.div
-								key={index}
+								key={index + "cursor-carousel"}
 								animate={{
 									width: index === currentIndex ? 40 : 2,
 								}}

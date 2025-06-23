@@ -44,7 +44,7 @@ export default function AttractorPreview() {
 					);
 					return (
 						<MatterBody
-							key={i}
+							key={i + "attractor-example"}
 							matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
 							x={`${Math.random() * 100}%`}
 							y={`${Math.random() * 30}%`}

@@ -48,7 +48,7 @@ const AddLaneForm = ({ onAdd, onCancel, t }) => {
 							<motion.span
 								aria-hidden
 								className="inline-block"
-								key={index}
+								key={index + "addlaneform"}
 								initial={false}
 								animate={{
 									x: 20,
@@ -121,7 +121,7 @@ const AddLaneForm = ({ onAdd, onCancel, t }) => {
 								<motion.span
 									aria-hidden
 									className="inline-block"
-									key={index}
+									key={index + 'add-lane-forms-letters}
 									initial={false}
 									animate={{
 										x: 20,

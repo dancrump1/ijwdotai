@@ -45,7 +45,7 @@ const AwardsCarousel = ({ Award }) => {
 							onHoverStart2(index);
 							onHoverStart(index);
 						}}
-						key={index}
+						key={index + "award-carousel"}
 						className="flex"
 					>
 						<div
@@ -101,7 +101,7 @@ const AwardsCarousel = ({ Award }) => {
 				>
 					{Award.map((award, index) => (
 						<motion.div
-							key={index}
+							key={index + "award"}
 							className={cn(
 								"flex-none w-full text-center text-xl px-48",
 								currents === index
@@ -131,7 +131,7 @@ const AwardsCarousel = ({ Award }) => {
 					{Award.map((image, index) => (
 						<motion.div
 							aria-current={currents === index}
-							key={index}
+							key={index + "award-image"}
 							className={cn(
 								"w-2 h-2 mx-1 rounded-full transition-all",
 								currents === index ? "bg-white w-4" : "bg-stone-500"

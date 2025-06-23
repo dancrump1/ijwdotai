@@ -164,7 +164,7 @@ export function TextAnimationFlippingWords() {
 						},
 					].map((card, index) => (
 						<div
-							key={index}
+							key={index + "flipping-text"}
 							className="rounded-xl bg-white p-4 shadow-md transition-all hover:shadow-lg dark:bg-neutral-800"
 						>
 							<div className="flex items-start space-x-3">

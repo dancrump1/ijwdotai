@@ -38,7 +38,7 @@ const MovieGallery = () => {
 				<div className="flex gap-5">
 					{movies.map((movie, index) => (
 						<Movie
-							key={index}
+							key={index + "movie-gallery"}
 							setHover={setHover}
 							hover={hover}
 							movie={movie}

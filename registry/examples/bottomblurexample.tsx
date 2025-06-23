@@ -10,7 +10,7 @@ export default function BottomBlurOutExample() {
 			<div className="relative w-52 dark:text-white">
 				{Array.from({ length: 20 }).map((_, index) => (
 					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-					<div key={index}>
+					<div key={index + "bottom-blur"}>
 						Sunt id fugiat dolor nostrud aute eiusmod ea sint. Ea laborum
 						do irure et. Ea elit incididunt velit veniam anim ullamco elit
 						sunt. Ea veniam nisi elit nostrud eu sit ut non Lorem

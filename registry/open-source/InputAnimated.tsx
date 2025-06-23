@@ -55,7 +55,7 @@ export const InputAnimated = ({
 			>
 				{label.split("").map((char, index) => (
 					<motion.span
-						key={index}
+						key={index + "input-animated"}
 						className="inline-block text-sm"
 						variants={letterVariants}
 						style={{ willChange: "transform" }}

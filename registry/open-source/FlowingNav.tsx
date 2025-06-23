@@ -43,7 +43,7 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [] }) => {
 		<div className="w-full h-full overflow-hidden">
 			<nav className="flex flex-col h-full m-0 p-0">
 				{items.map((item, idx) => (
-					<MenuItem key={idx} {...item} />
+					<MenuItem key={idx + "flowing-nav"} {...item} />
 				))}
 			</nav>
 		</div>
@@ -106,7 +106,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, text, image }) => {
 
 	const repeatedMarqueeContent = React.useMemo(() => {
 		return Array.from({ length: 4 }).map((_, idx) => (
-			<React.Fragment key={idx}>
+			<React.Fragment key={idx + "repeatedMarquee"}>
 				<span className="text-[#060606] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]">
 					{text}
 				</span>

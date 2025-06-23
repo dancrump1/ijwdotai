@@ -99,7 +99,7 @@ const AirplaneIcon = forwardRef<AirplaneIconHandle, AirplaneIconProps>(
 					/>
 					{SPEED_LINES.map((line, index) => (
 						<motion.line
-							key={index}
+							key={index + "airplane"}
 							x1={line.x1}
 							y1={line.y1}
 							x2={line.x2}

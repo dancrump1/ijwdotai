@@ -208,7 +208,7 @@ const Gallery = () => {
 						{tiles.map((tile, index) => {
 							return (
 								<div
-									key={index}
+									key={index + "gallery-item"}
 									style={{ ...tile.styles }}
 									className="absolute overflow-hidden rounded-2xl transition-transform duration-700 ease-out hover:scale-105"
 								>

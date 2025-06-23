@@ -40,7 +40,7 @@ export function DemoPipelineView() {
 						onTouchEnd={handleMouseLeave}
 					>
 						<motion.div
-							key={i}
+							key={i + "pipeline"}
 							className={`h-1 w-10 rounded-[4px] ${
 								selected === i ? "bg-yellow-400" : "bg-primary"
 							}`}

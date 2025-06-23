@@ -37,7 +37,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
 		return text.split(/(\s+)/).map((word, index) => {
 			if (word.match(/^\s+$/)) return word;
 			return (
-				<span className="inline-block" key={index}>
+				<span className="inline-block" key={index + "scroll-reveal"}>
 					{word}
 				</span>
 			);

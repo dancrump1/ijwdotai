@@ -25,7 +25,7 @@ export default function Example() {
 					"/itjustworks.jpg",
 				].map((image, index) => (
 					<Screensaver
-						key={index}
+						key={index + "screensaver-example"}
 						speed={1}
 						startPosition={{
 							x: index * 3,

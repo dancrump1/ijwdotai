@@ -26,7 +26,7 @@ const Board: React.FC<BoardProps> = ({
 		>
 			{snakeDots.map((dot, i) => (
 				<div
-					key={i}
+					key={i + "board"}
 					style={{
 						position: "absolute",
 						width: `${SCALE}px`,

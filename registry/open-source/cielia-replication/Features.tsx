@@ -73,7 +73,7 @@ const Features = () => {
 			<SectionHeader>Parallax Content Image</SectionHeader>
 			{features.map((feature, index) => (
 				<div
-					key={index}
+					key={index + "features-item"}
 					className="feature relative isolate overflow-hidden"
 				>
 					<div className="container grid min-h-[60vh] place-items-center py-28 text-white lg:min-h-[80vh]">

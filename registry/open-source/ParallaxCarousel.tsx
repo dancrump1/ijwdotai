@@ -210,7 +210,7 @@ export default function ParallaxCarousel({
 					});
 					return (
 						<motion.div
-							key={index}
+							key={index + "parallax-carousel"}
 							className={`relative shrink-0 flex flex-col ${
 								round
 									? "items-center justify-center text-center bg-[#060606] border-0"
@@ -247,7 +247,7 @@ export default function ParallaxCarousel({
 				<div className="mt-4 flex w-[150px] justify-between px-8">
 					{items.map((_, index) => (
 						<motion.div
-							key={index}
+							key={index + "parallax-carousel-item"}
 							className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${
 								currentIndex % items.length === index
 									? round

@@ -1,10 +1,10 @@
 export default function ThreeDotLoaderGrowing() {
-  const animationDuration = 1;
+	const animationDuration = 1;
 
-  return (
-    <>
-      <style>
-        {`
+	return (
+		<>
+			<style>
+				{`
           @keyframes three-dot-loader-growing {
             0% {
               transform: scale(1) ;
@@ -17,23 +17,23 @@ export default function ThreeDotLoaderGrowing() {
             }
           }
         `}
-      </style>
-      <div className="flex gap-2">
-        {[...new Array(3)].map((_, index) => (
-          <div
-            className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
-            key={index.toString()}
-            style={{
-              animationName: "three-dot-loader-growing",
-              animationDuration: `${animationDuration}s`,
-              animationIterationCount: "infinite",
-              animationDirection: "normal",
-              animationTimingFunction: "ease-in-out",
-              animationDelay: `${(animationDuration / 3) * index}s`,
-            }}
-          />
-        ))}
-      </div>
-    </>
-  );
+			</style>
+			<div className="flex gap-2">
+				{[...new Array(3)].map((_, index) => (
+					<div
+						className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
+						key={index.toString() + "three-dot"}
+						style={{
+							animationName: "three-dot-loader-growing",
+							animationDuration: `${animationDuration}s`,
+							animationIterationCount: "infinite",
+							animationDirection: "normal",
+							animationTimingFunction: "ease-in-out",
+							animationDelay: `${(animationDuration / 3) * index}s`,
+						}}
+					/>
+				))}
+			</div>
+		</>
+	);
 }

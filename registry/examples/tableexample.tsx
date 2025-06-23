@@ -84,7 +84,7 @@ export function TableHero() {
 				</TableHead>
 				<TableBody>
 					{data.map((item) => (
-						<TableRow key={item.id}>
+						<TableRow key={item.id + "table-example"}>
 							<TableCell>{item.name}</TableCell>
 							<TableCell className="text-right">{item.sales}</TableCell>
 							<TableCell>{item.region}</TableCell>

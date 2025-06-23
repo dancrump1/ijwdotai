@@ -31,7 +31,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 	return (
 		<div className="relative w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 ">
 			{cards.map((card, i) => (
-				<div key={i} className={cn(card.className, "")}>
+				<div key={i + "layout-grid"} className={cn(card.className, "")}>
 					<motion.div
 						onClick={() => handleClick(card)}
 						className={cn(

@@ -18,7 +18,7 @@ export default function MarqueeAlongSvgPathDemo() {
 			>
 				{imgs.map((img, i) => (
 					<div
-						key={i}
+						key={i + "marqueeSVG"}
 						className="w-14 h-full hover:scale-150 duration-300 ease-in-out"
 					>
 						<img

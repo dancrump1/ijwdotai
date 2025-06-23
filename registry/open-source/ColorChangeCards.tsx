@@ -63,7 +63,7 @@ const Card = ({
 				<div>
 					<h4>
 						{heading.split("").map((l, i) => (
-							<ShiftLetter letter={l} key={i} />
+							<ShiftLetter letter={l} key={i + "color-change-card"} />
 						))}
 					</h4>
 					<p>{description}</p>

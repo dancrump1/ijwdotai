@@ -72,7 +72,7 @@ const WifiIcon = forwardRef<WifiIconHandle, WifiIconProps>(
 				>
 					{WIFI_LEVELS.map((level, index) => (
 						<motion.path
-							key={index}
+							key={index + "wifi"}
 							d={level.d}
 							initial={{ opacity: level.initialOpacity }}
 							animate={controls}

@@ -26,7 +26,7 @@ export const Front = () => {
 	return (
 		<div className="w-full h-full relative flex items-center justify-center">
 			<img
-				src="/images/red-texture.jpg"
+				src="/itjustworks.jpg"
 				alt="front image"
 				className="w-full h-full absolute inset-0"
 			/>

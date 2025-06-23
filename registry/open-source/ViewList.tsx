@@ -105,7 +105,7 @@ const ListView = ({ view }: { view: Views }) => {
 		<div className="flex flex-col gap-2">
 			{items.map((item, idx) => (
 				<ItemView
-					key={idx}
+					key={idx + "view-list"}
 					item={item}
 					idx={idx}
 					view={view}
@@ -120,7 +120,12 @@ const GridView = ({ view }: { view: Views }) => {
 	return (
 		<div className="grid grid-cols-2 gap-6">
 			{items.map((item, idx) => (
-				<ItemView key={idx} item={item} idx={idx} view={view} />
+				<ItemView
+					key={idx + "view-list-item"}
+					item={item}
+					idx={idx}
+					view={view}
+				/>
 			))}
 		</div>
 	);
@@ -132,7 +137,7 @@ const StackedView = ({ view }: { view: Views }) => {
 			<div className="relative flex w-full items-center justify-center h-32">
 				{items.map((item, idx) => (
 					<ItemView
-						key={idx}
+						key={idx + "view-list-item-stacked"}
 						item={item}
 						idx={idx}
 						view={view}

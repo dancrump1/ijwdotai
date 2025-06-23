@@ -91,7 +91,10 @@ export function TransitionProvider({
 			>
 				<div className="grid h-full w-full grid-cols-12">
 					{[...Array(12)].map((_, i) => (
-						<div className="relative h-full w-full" key={i}>
+						<div
+							className="relative h-full w-full"
+							key={i + "transition-provider"}
+						>
 							{/* 101% to remove anti aliasing */}
 							<div className="bg-charleston-green w-[101%)] column absolute inset-0"></div>
 						</div>
@@ -114,7 +117,7 @@ export function TransitionProvider({
 					{[...Array(12 * 12)].map((_, i) => (
 						<div
 							className="bg-charleston-green box h-full w-full"
-							key={i}
+							key={i + "pixel-transition"}
 						></div>
 					))}
 				</div>

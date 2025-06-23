@@ -71,7 +71,7 @@ export function PerfSlayer(props: ComponentPropsWithoutRef<"div">) {
 	return (
 		<div {...props} className={clsx("relative p-4", props.className)}>
 			{new Array(number).fill("").map((_, i) => (
-				<Truck key={i} />
+				<Truck key={i + "truck"} />
 			))}
 
 			<div className="relative flex w-min mx-auto border-black border-4 p-2 translate-y-1/4 justify-center items-center bg-white">

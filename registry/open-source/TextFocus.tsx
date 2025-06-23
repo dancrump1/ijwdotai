@@ -93,7 +93,7 @@ const TextFocus: React.FC<TrueFocusProps> = ({
 				const isActive = index === currentIndex;
 				return (
 					<span
-						key={index}
+						key={index + "text-focus"}
 						ref={(el) => (wordRefs.current[index] = el)}
 						className="relative text-[3rem] font-black cursor-pointer"
 						style={

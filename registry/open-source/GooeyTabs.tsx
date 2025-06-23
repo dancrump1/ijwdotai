@@ -72,7 +72,10 @@ export function GooeyDemo() {
 				>
 					<div className="flex w-full ">
 						{TAB_CONTENT.map((_, index) => (
-							<div key={index} className="relative flex-1 h-8 md:h-12">
+							<div
+								key={index + "gooey-tabs"}
+								className="relative flex-1 h-8 md:h-12"
+							>
 								{activeTab === index && (
 									<motion.div
 										layoutId="active-tab"
@@ -136,7 +139,7 @@ export function GooeyDemo() {
 				<div className="relative flex w-full ">
 					{TAB_CONTENT.map((tab, index) => (
 						<button
-							key={index}
+							key={index + "gooey-content"}
 							onClick={() => setActiveTab(index)}
 							className="flex-1 h-8 md:h-12"
 						>

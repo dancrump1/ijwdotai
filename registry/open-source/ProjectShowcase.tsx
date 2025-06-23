@@ -323,7 +323,7 @@ export const ProjectShowcase = ({
 										.split(" ")
 										.map((word, index) => (
 											<motion.span
-												key={index}
+												key={index + "project-testimonial"}
 												initial={{
 													filter: "blur(10px)",
 													opacity: 0,
@@ -461,7 +461,7 @@ export const ProjectShowcase = ({
 										.split(" ")
 										.map((word, index) => (
 											<motion.span
-												key={index}
+												key={index + "project-active-testimonial"}
 												initial={{
 													filter: "blur(10px)",
 													opacity: 0,

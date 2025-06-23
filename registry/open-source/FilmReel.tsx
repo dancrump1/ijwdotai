@@ -44,7 +44,10 @@ const FilmReel = ({ videos }: { videos: string[] }) => {
 						<FilmPerforations />
 						<div className="flex space-x-8 py-4">
 							{videos.map((videoUrl, index) => (
-								<ZoomableVideo key={index} videoUrl={videoUrl} />
+								<ZoomableVideo
+									key={index + "film-reel"}
+									videoUrl={videoUrl}
+								/>
 							))}
 						</div>
 						<FilmPerforations />
@@ -134,7 +137,7 @@ const FilmPerforations: React.FC = React.memo(function FilmPerforations() {
 		<div className="flex justify-between py-2">
 			{[...Array(20)].map((_, index) => (
 				<div
-					key={index}
+					key={index + "film-perf"}
 					className="w-8 h-4 bg-gray-300 rounded shadow-md border border-gray-700"
 				></div>
 			))}

@@ -35,7 +35,7 @@ const Content = ({ content }: { content: typeof items }) => {
 		<div className="w-full">
 			{content.map(({ id, title, description }, idx) => (
 				<div
-					key={id}
+					key={title + id}
 					className={`p-8 h-screen flex flex-col justify-between ${
 						idx % 2 ? "bg-white text-black" : "bg-black text-white"
 					}`}
@@ -66,7 +66,7 @@ const Images = ({
 			<motion.div style={{ top }} className="absolute left-0 right-0">
 				{[...content].reverse().map(({ img, id, title }) => (
 					<img
-						key={id}
+						key={id + "opposite-scroll"}
 						alt={title}
 						className="h-screen w-full object-cover"
 						src={img}

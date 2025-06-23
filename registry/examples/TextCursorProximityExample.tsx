@@ -48,7 +48,10 @@ export default function TextCursorProximityExample() {
 
 				<div className="absolute bottom-2 flex w-full justify-between px-6">
 					{ASCII.map((hand, i) => (
-						<span key={i} className="text-2xl opacity-80">
+						<span
+							key={i + "cursor-proximity"}
+							className="text-2xl opacity-80"
+						>
 							{hand}
 						</span>
 					))}

@@ -63,7 +63,7 @@ const Text = ({ children }: { children: string }) => {
 					style={{
 						transition: "0.35s font-weight, 0.35s color",
 					}}
-					key={idx}
+					key={idx + "bubble-text"}
 				>
 					{child}
 				</span>

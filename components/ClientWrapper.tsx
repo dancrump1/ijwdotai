@@ -62,6 +62,7 @@ import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
 import { TextSplit } from "@/registry/open-source/TextSplit";
+import TextTrail from "@/registry/open-source/TextTrail";
 import {
 	animeData,
 	ASCII,
@@ -2616,6 +2617,38 @@ export const ClientWrapper = () => {
 											</span>
 										</div>
 									))}
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Text Trail"
+								>
+									<div className="h-[75vh] w-full">
+										<TextTrail
+											text="Drive Brand Studio"
+											fontFamily="Figtree"
+											fontWeight="900"
+											noiseFactor={1.2}
+											noiseScale={0.001}
+											rgbPersistFactor={0.95}
+											alphaPersistFactor={0.92}
+											animateColor={true}
+											startColor="#ff6b6b"
+											textColor="#4ecdc4"
+											backgroundColor="#1a1a2e"
+											colorCycleInterval={2000}
+											supersample={2}
+										/>
+									</div>
 								</Component>
 								<Component
 									collapsed={collapsed}

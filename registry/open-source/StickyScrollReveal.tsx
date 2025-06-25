@@ -11,7 +11,6 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 export const StickyScroll = ({
 	content,
 	contentClassName,
-	containerRef,
 }: {
 	content: {
 		title: string;
@@ -19,16 +18,9 @@ export const StickyScroll = ({
 		content?: React.ReactNode | any;
 	}[];
 	contentClassName?: string;
-	containerRef?: any;
 }) => {
 	const [activeCard, setActiveCard] = React.useState(0);
 	const ref = useRef<any>(null);
-	const [componentContainerRef, setComponentContainerRef] = useState(null);
-
-	useEffect(() => {
-		setComponentContainerRef(containerRef);
-	}, [containerRef]);
-
 	const { scrollYProgress } = useScroll({
 		// uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
 		target: ref,
@@ -78,7 +70,7 @@ export const StickyScroll = ({
 				backgroundColor:
 					backgroundColors[activeCard % backgroundColors.length],
 			}}
-			className="relative flex overflow-auto justify-center space-x-10 rounded-md p-10"
+			className="relative flex justify-center space-x-10 rounded-md p-10"
 			ref={ref}
 		>
 			<div className="div relative flex items-start px-4">

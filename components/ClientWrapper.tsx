@@ -10,6 +10,7 @@ import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import Image1 from "@/public/itjustworks.jpg";
 import { Back, Front } from "@/registry/examples/flipcardexample";
+import Ballpit from "@/registry/open-source/Ballpit";
 import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
 import Cubes from "@/registry/open-source/Cubes";
@@ -2590,6 +2591,38 @@ export const ClientWrapper = () => {
 												Words:{" "}
 											</EditorCharacterCount.Words>
 										</EditorProvider>
+									</div>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "transitions"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Ballpit"
+								>
+									<div
+										style={{
+											position: "relative",
+											overflow: "hidden",
+											minHeight: "100px",
+											maxHeight: "400px",
+											width: "100%",
+										}}
+									>
+										<Ballpit
+											count={300}
+											gravity={0.6}
+											friction={0.999}
+											wallBounce={1}
+											followCursor={true}
+										/>
 									</div>
 								</Component>
 								<Component
@@ -9259,7 +9292,10 @@ export const ClientWrapper = () => {
 									title="sticky scroll reveal"
 								>
 									<div className="w-full py-4">
-										<StickyScroll content={content} />
+										<StickyScroll
+											content={content}
+											containerRef={containerRef}
+										/>
 									</div>{" "}
 								</Component>
 								<Component

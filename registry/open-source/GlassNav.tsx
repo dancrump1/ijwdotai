@@ -5,6 +5,9 @@ import { AnimationScope, motion, useAnimate } from "motion/react";
 import { FiArrowUpRight, FiMenu } from "react-icons/fi";
 import useMeasure from "react-use-measure";
 
+// Credit:
+// https://www.hover.dev/components/navigation
+
 const GlassNavigation = ({ demo = false }) => {
 	const [hovered, setHovered] = useState(false);
 	const [menuOpen, setMenuOpen] = useState(false);

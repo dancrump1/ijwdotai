@@ -27,7 +27,7 @@ import { RoomEnvironment as z } from "three/examples/jsm/environments/RoomEnviro
 // Credit:
 // https://www.reactbits.dev/backgrounds/ballpit
 
-const Ballpit = ({ className = "", followCursor = true, ...props }: any) => {
+const Ballpit = ({ className = "", followCursor = false, ...props }: any) => {
 	const canvasRef = useRef(null);
 	const spheresInstanceRef = useRef(null);
 

@@ -62,6 +62,7 @@ import { FlipCard } from "@/registry/open-source/FlipCard";
 import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
+import TextCurve from "@/registry/open-source/TextCurve";
 import { TextSplit } from "@/registry/open-source/TextSplit";
 import TextTrail from "@/registry/open-source/TextTrail";
 import {
@@ -2523,6 +2524,36 @@ export const ClientWrapper = () => {
 									tags={[
 										filterOptions.find(
 											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Text Curve"
+								>
+									<TextCurve marqueeText="Welcome to React Bits ✦" />
+									<TextCurve
+										marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
+										speed={3}
+										curveAmount={500}
+										direction="right"
+										interactive={true}
+										className="custom-text-style"
+									/>
+									<TextCurve
+										marqueeText="Smooth Curved Animation"
+										speed={1}
+										curveAmount={300}
+										interactive={false}
+									/>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
 												filter.label.toLowerCase() === "transitions"
 										),
 									]}
@@ -2618,10 +2649,11 @@ export const ClientWrapper = () => {
 									>
 										<Ballpit
 											count={300}
-											gravity={0.6}
-											friction={0.999}
-											wallBounce={1}
-											followCursor={true}
+											gravity={0.2}
+											friction={0.914}
+											wallBounce={0.55}
+											lightIntensity={100}
+											followCursor={false}
 										/>
 									</div>
 								</Component>

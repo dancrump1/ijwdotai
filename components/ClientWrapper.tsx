@@ -61,6 +61,7 @@ import {
 import { FlipCard } from "@/registry/open-source/FlipCard";
 import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
+import MagicBento from "@/registry/open-source/MagicBento";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
 import TextCurve from "@/registry/open-source/TextCurve";
 import { TextSplit } from "@/registry/open-source/TextSplit";
@@ -131,6 +132,9 @@ import {
 } from "motion/react";
 import { Poline, positionFunctions } from "poline";
 import { useMediaQuery } from "usehooks-ts";
+
+import { Slider } from "./ui/slider";
+import { Switch } from "./ui/switch";
 
 const ComponentLoading = () => {
 	useEffect(() => {
@@ -2246,6 +2250,14 @@ export const ClientWrapper = () => {
 		"infinite",
 	];
 
+	const [enableStars, setEnableStars] = useState(true);
+	const [enableSpotlight, setEnableSpotlight] = useState(true);
+	const [disableAnimations, setDisableAnimations] = useState(false);
+	const [spotlightRadius, setSpotlightRadius] = useState([400]);
+	const [enableTilt, setEnableTilt] = useState(false);
+	const [clickEffect, setClickEffect] = useState(true);
+	const [enableMagnetism, setEnableMagnetism] = useState(false);
+
 	return (
 		<>
 			<header className="flex flex-col gap-1 sticky top-0 bg-background z-50">
@@ -2545,6 +2557,77 @@ export const ClientWrapper = () => {
 										curveAmount={300}
 										interactive={false}
 									/>
+								</Component>
+								<Component
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="MagicBento"
+								>
+									<MagicBento
+										enableStars={enableStars}
+										enableSpotlight={enableSpotlight}
+										disableAnimations={disableAnimations}
+										spotlightRadius={spotlightRadius[0]}
+										enableTilt={enableTilt}
+										clickEffect={clickEffect}
+										enableMagnetism={enableMagnetism}
+									/>
+
+									<div>
+										<Slider
+											title="Spotlight Radius"
+											min={50}
+											max={800}
+											step={10}
+											value={spotlightRadius[0]}
+											onValueCommit={setSpotlightRadius}
+										/>
+
+										<Switch
+											name="Stars Effect"
+											checked={enableStars}
+											onCheckedChange={setEnableStars}
+										/>
+
+										<Switch
+											title="Spotlight Effect"
+											checked={enableSpotlight}
+											onCheckedChange={setEnableSpotlight}
+										/>
+
+										<Switch
+											title="Tilt Effect"
+											checked={enableTilt}
+											onCheckedChange={setEnableTilt}
+										/>
+
+										<Switch
+											title="Click Effect"
+											checked={clickEffect}
+											onCheckedChange={setClickEffect}
+										/>
+
+										<Switch
+											title="Magnetism"
+											checked={enableMagnetism}
+											onCheckedChange={setEnableMagnetism}
+										/>
+
+										<Switch
+											title="Disable All Animations"
+											checked={disableAnimations}
+											onCheckedChange={setDisableAnimations}
+										/>
+									</div>
 								</Component>
 								<Component
 									collapsed={collapsed}

@@ -119,12 +119,20 @@ const Component = ({
 	subfolder,
 	collapsed,
 	setCollapsed,
+	allFilters,
 	...props
 }) => {
 	const [showCode, setShowCode] = useState(false);
 
 	const [textContent, setTextContent] = useState("");
 	const [textFilename, setTextFilename] = useState("");
+
+	const allTags = [
+		...tags,
+		...allFilters.filter((filter) =>
+			title.toLowerCase().includes(filter.label.toLowerCase())
+		),
+	];
 
 	const mungedTitle = title
 		.split(" ")
@@ -183,12 +191,15 @@ const Component = ({
 
 	if (
 		!!selectedFilters.length &&
-		!selectedFilters.find((filter) =>
-			tags
+		!selectedFilters.find((filter) => {
+			console.log(allTags.map((tag) => tag?.label).filter((item) => !!item));
+			console.log(filter);
+
+			return allTags
 				.map((tag) => tag?.label)
 				.filter((item) => !!item)
-				.includes(filter)
-		)
+				.find((item) => item.includes(filter));
+		})
 	) {
 		return null;
 	}

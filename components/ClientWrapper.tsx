@@ -1047,7 +1047,6 @@ const WordTornadoDemo = dynamic(
 	() => import("@/registry/open-source/WordTornado"),
 	{ loading: ComponentLoading }
 );
-
 const Avatar = dynamic(
 	() => import("@/components/ui/avatar").then((mod) => mod.Avatar),
 	{ loading: ComponentLoading }
@@ -1177,7 +1176,6 @@ const TooltipTrigger = dynamic(
 	() => import("@/components/ui/tooltip").then((mod) => mod.TooltipTrigger),
 	{ loading: ComponentLoading }
 );
-
 const AccordionBasic = dynamic(
 	() =>
 		import("@/registry/basic/AccordionBasic").then(
@@ -1403,7 +1401,6 @@ const ContentWithImage = dynamic(
 const CSSBox = dynamic(() => import("@/registry/open-source/CSSBox"), {
 	loading: ComponentLoading,
 });
-
 const One = dynamic(() => import("@/registry/open-source/CursorCarousel"), {
 	loading: ComponentLoading,
 });
@@ -1592,20 +1589,15 @@ const Testimonials = dynamic(
 const Gravity = dynamic(() => import("@/registry/open-source/Gravity"), {
 	loading: ComponentLoading,
 });
-
-// import ModelViewer from "@/registry/open-source/ModelViewer";
 const ModelViewer = dynamic(
 	() => import("@/registry/open-source/ModelViewer"),
 	{
 		loading: ComponentLoading,
 	}
 );
-
-// import FluidGlass from "@/registry/open-source/FluidGlass";
 const FluidGlass = dynamic(() => import("@/registry/open-source/FluidGlass"), {
 	loading: ComponentLoading,
 });
-
 const Scene = dynamic(() => import("@/registry/open-source/ImageRipple"), {
 	loading: ComponentLoading,
 });
@@ -2374,6 +2366,7 @@ export const ClientWrapper = () => {
 						{basic ? (
 							<>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2389,6 +2382,7 @@ export const ClientWrapper = () => {
 									title="Basic Hero"
 								></Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2406,6 +2400,7 @@ export const ClientWrapper = () => {
 									<BasicCard />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2423,6 +2418,7 @@ export const ClientWrapper = () => {
 									<CardWithImages />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2440,6 +2436,7 @@ export const ClientWrapper = () => {
 									<DualRingSpinnerLoader />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2457,6 +2454,7 @@ export const ClientWrapper = () => {
 									<CircularBarsSpinnerLoader />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2474,6 +2472,7 @@ export const ClientWrapper = () => {
 									<ThreeDotSimpleLoader />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2491,6 +2490,7 @@ export const ClientWrapper = () => {
 									<ThreeDotLoaderGrowing />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2509,6 +2509,7 @@ export const ClientWrapper = () => {
 									</VerticalTiles>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2529,6 +2530,7 @@ export const ClientWrapper = () => {
 						) : (
 							<>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2559,6 +2561,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2588,7 +2591,7 @@ export const ClientWrapper = () => {
 											min={50}
 											max={800}
 											step={10}
-											value={spotlightRadius[0]}
+											value={[spotlightRadius[0]]}
 											onValueCommit={setSpotlightRadius}
 										/>
 
@@ -2630,6 +2633,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2708,6 +2712,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2741,6 +2746,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2767,6 +2773,7 @@ export const ClientWrapper = () => {
 									))}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2799,6 +2806,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2824,6 +2832,7 @@ export const ClientWrapper = () => {
 									</FullscreenImage>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2848,6 +2857,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2888,6 +2898,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2908,6 +2919,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2938,6 +2950,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -2972,6 +2985,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3007,6 +3021,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3029,6 +3044,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3067,6 +3083,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3093,6 +3110,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3178,6 +3196,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3241,6 +3260,7 @@ export const ClientWrapper = () => {
 									</CardContainer>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3301,6 +3321,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3326,6 +3347,7 @@ export const ClientWrapper = () => {
 									</SpringElement>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3359,6 +3381,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3631,6 +3654,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3674,6 +3698,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3745,6 +3770,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3762,6 +3788,7 @@ export const ClientWrapper = () => {
 									<WordTornadoDemo />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3816,6 +3843,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3835,6 +3863,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3882,6 +3911,7 @@ export const ClientWrapper = () => {
 									</TracingBeam>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3901,6 +3931,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3945,6 +3976,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3967,6 +3999,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -3990,6 +4023,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4013,6 +4047,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4048,6 +4083,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4064,6 +4100,7 @@ export const ClientWrapper = () => {
 									<TextParallaxContentExample />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4083,6 +4120,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4157,6 +4195,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4187,6 +4226,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4203,6 +4243,7 @@ export const ClientWrapper = () => {
 									<SimpleGrid />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4219,6 +4260,7 @@ export const ClientWrapper = () => {
 									<SlideButton />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4259,6 +4301,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4299,6 +4342,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4318,6 +4362,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4349,6 +4394,7 @@ export const ClientWrapper = () => {
 									</ScrollReveal>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4387,6 +4433,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4434,6 +4481,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4454,6 +4502,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4471,6 +4520,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4509,6 +4559,7 @@ export const ClientWrapper = () => {
 									</HeroHighlight>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4525,6 +4576,7 @@ export const ClientWrapper = () => {
 									<HeroParallax products={products} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4541,6 +4593,7 @@ export const ClientWrapper = () => {
 									<FocusCards />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4557,6 +4610,7 @@ export const ClientWrapper = () => {
 									<TextAnimationFlippingWords />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4573,6 +4627,7 @@ export const ClientWrapper = () => {
 									<FAQPage />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4589,6 +4644,7 @@ export const ClientWrapper = () => {
 									<ColorChangeCards />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4608,6 +4664,7 @@ export const ClientWrapper = () => {
 									</h2>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4627,6 +4684,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4643,6 +4701,7 @@ export const ClientWrapper = () => {
 									<BubbleText text="Bubble text" />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4686,6 +4745,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4719,6 +4779,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4768,6 +4829,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4870,6 +4932,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4895,6 +4958,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4929,6 +4993,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -4955,6 +5020,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5094,6 +5160,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5118,6 +5185,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5167,6 +5235,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5198,6 +5267,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5251,6 +5321,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5268,6 +5339,7 @@ export const ClientWrapper = () => {
 									<GradientCheckbox />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5363,6 +5435,7 @@ export const ClientWrapper = () => {
 									</section>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5496,6 +5569,7 @@ export const ClientWrapper = () => {
 									</section>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5789,6 +5863,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5851,6 +5926,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5867,6 +5943,7 @@ export const ClientWrapper = () => {
 									<Scene />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -5968,6 +6045,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6006,6 +6084,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6033,6 +6112,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6069,6 +6149,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6106,6 +6187,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6127,6 +6209,7 @@ export const ClientWrapper = () => {
 									<Example containerRef={containerRef} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6221,6 +6304,7 @@ export const ClientWrapper = () => {
 									</ProgressCarousel>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6326,6 +6410,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6372,6 +6457,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6388,6 +6474,7 @@ export const ClientWrapper = () => {
 									<AccordionSlices />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6404,6 +6491,7 @@ export const ClientWrapper = () => {
 									<CardDeck images={images} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6429,6 +6517,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6445,6 +6534,7 @@ export const ClientWrapper = () => {
 									<StackCard cards={exampleData} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6466,6 +6556,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6483,6 +6574,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6502,6 +6594,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6531,6 +6624,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6571,6 +6665,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6609,6 +6704,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6626,6 +6722,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6646,6 +6743,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6665,6 +6763,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6681,6 +6780,7 @@ export const ClientWrapper = () => {
 									<FlowingMenu items={demoItems} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6715,6 +6815,7 @@ export const ClientWrapper = () => {
 									</>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6731,6 +6832,7 @@ export const ClientWrapper = () => {
 									<ImageReveal />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6747,6 +6849,7 @@ export const ClientWrapper = () => {
 									<SocialLinks socials={socials} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -6890,6 +6993,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7103,6 +7207,7 @@ export const ClientWrapper = () => {
 									</section>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7121,6 +7226,7 @@ export const ClientWrapper = () => {
 								</Component>
 								{/* Unlock this ability with App router, stuck on Page router currently */}
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7140,6 +7246,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7157,6 +7264,7 @@ export const ClientWrapper = () => {
 									<InfiniteCarousel />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7239,6 +7347,7 @@ export const ClientWrapper = () => {
 									</>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7259,6 +7368,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7277,6 +7387,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7344,6 +7455,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7368,7 +7480,8 @@ export const ClientWrapper = () => {
 									</TextAnimate>
 								</Component>
 								{/* TODO: Why does this grow in height to 3.68xe^10px???? */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -7384,6 +7497,7 @@ export const ClientWrapper = () => {
                                 </Component> */}
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7401,6 +7515,7 @@ export const ClientWrapper = () => {
 									<DynamicTheme containerRef={containerRef} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7430,6 +7545,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7451,6 +7567,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7471,6 +7588,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7488,6 +7606,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7505,6 +7624,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7529,6 +7649,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7546,6 +7667,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7563,6 +7685,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7582,6 +7705,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7605,7 +7729,8 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								{/* TODO: Hide until I create an example and a registry example */}
-								{/* <Component
+								{/* <Component allFilters={filterOptions}
+
                                     collapsed={collapsed}
                                     setCollapsed={setCollapsed}
                                     gridView={gridView}
@@ -7623,6 +7748,7 @@ export const ClientWrapper = () => {
                                 </Component> */}
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7639,6 +7765,7 @@ export const ClientWrapper = () => {
 									<FooterThird />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7656,6 +7783,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7684,6 +7812,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7713,6 +7842,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7730,6 +7860,7 @@ export const ClientWrapper = () => {
 									<Testimonials data={example_testimonials_data} />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7748,6 +7879,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7767,6 +7899,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7788,6 +7921,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7966,6 +8100,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -7999,6 +8134,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8024,6 +8160,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8054,6 +8191,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8071,6 +8209,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8102,6 +8241,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8118,6 +8258,7 @@ export const ClientWrapper = () => {
 									<ActionSearchBar />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8154,6 +8295,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8181,6 +8323,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8197,6 +8340,7 @@ export const ClientWrapper = () => {
 									<GooeyDemo />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8255,6 +8399,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8273,6 +8418,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8289,6 +8435,7 @@ export const ClientWrapper = () => {
 									<ManyOffersVariant1 />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8342,6 +8489,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8361,6 +8509,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8428,6 +8577,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8446,6 +8596,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8553,6 +8704,7 @@ export const ClientWrapper = () => {
 									</>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8571,6 +8723,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8587,6 +8740,7 @@ export const ClientWrapper = () => {
 									<CardRotation />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8603,6 +8757,7 @@ export const ClientWrapper = () => {
 									<CardStack />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8620,6 +8775,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8658,6 +8814,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8674,6 +8831,7 @@ export const ClientWrapper = () => {
 									<ContentWithImage />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8691,6 +8849,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8707,6 +8866,7 @@ export const ClientWrapper = () => {
 									<FloatingDock />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8726,6 +8886,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8743,6 +8904,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8794,6 +8956,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8829,6 +8992,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8847,6 +9011,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8875,6 +9040,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8898,6 +9064,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8915,6 +9082,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8942,6 +9110,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8966,6 +9135,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -8997,6 +9167,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9014,6 +9185,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9030,6 +9202,7 @@ export const ClientWrapper = () => {
 									<ImageWheel />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9052,6 +9225,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9082,6 +9256,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9100,6 +9275,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9133,6 +9309,7 @@ export const ClientWrapper = () => {
 									</Lens>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9158,6 +9335,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9177,6 +9355,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9196,6 +9375,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9230,6 +9410,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9265,6 +9446,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9282,6 +9464,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9299,6 +9482,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9315,6 +9499,7 @@ export const ClientWrapper = () => {
 									<PlaceholdersAndVanishInput />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9332,6 +9517,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9349,6 +9535,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9365,6 +9552,7 @@ export const ClientWrapper = () => {
 									<FAQSpring />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9393,6 +9581,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9414,6 +9603,7 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9431,6 +9621,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9497,6 +9688,7 @@ export const ClientWrapper = () => {
 									</TableRoot>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9516,6 +9708,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9541,6 +9734,7 @@ export const ClientWrapper = () => {
 									</button>{" "}
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9572,6 +9766,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9590,6 +9785,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9607,6 +9803,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9623,6 +9820,7 @@ export const ClientWrapper = () => {
 								></Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9642,6 +9840,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9659,6 +9858,7 @@ export const ClientWrapper = () => {
 									<DemoPipelineView />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9677,6 +9877,7 @@ export const ClientWrapper = () => {
 									<Game />
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9694,6 +9895,7 @@ export const ClientWrapper = () => {
 								></Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9711,6 +9913,7 @@ export const ClientWrapper = () => {
 								></Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9729,6 +9932,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9750,6 +9954,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9787,6 +9992,7 @@ export const ClientWrapper = () => {
 									</AuroraBackground>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9808,6 +10014,7 @@ export const ClientWrapper = () => {
 									/>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9846,6 +10053,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9877,6 +10085,7 @@ export const ClientWrapper = () => {
 								</Component>
 
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -9906,6 +10115,7 @@ export const ClientWrapper = () => {
 									</BentoGrid>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -10189,6 +10399,7 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -10331,7 +10542,8 @@ export const ClientWrapper = () => {
 									</div>
 								</Component>
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10365,7 +10577,8 @@ export const ClientWrapper = () => {
                                 </Component> */}
 
 								{/* TODO: Figure out why this maxes out gpu */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10382,6 +10595,7 @@ export const ClientWrapper = () => {
 
 								{/* TODO: Fix Lanyard */}
 								<Component
+									allFilters={filterOptions}
 									collapsed={collapsed}
 									setCollapsed={setCollapsed}
 									gridView={gridView}
@@ -10404,7 +10618,8 @@ export const ClientWrapper = () => {
 								</Component>
 
 								{/* TODO: Fix SVG path */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10418,7 +10633,8 @@ export const ClientWrapper = () => {
                                     <MarqueeAlongSvgPathDemo />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10430,7 +10646,8 @@ export const ClientWrapper = () => {
                                     title="pointer hover"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                         gridView={gridView}
                                         setComponentCount={setComponentCount}
                                         tags={[
@@ -10443,7 +10660,8 @@ export const ClientWrapper = () => {
                                     ></Component> */}
 
 								{/* TODO: Fix meteors */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10457,7 +10675,8 @@ export const ClientWrapper = () => {
                                     <MeteorsDemo />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10468,7 +10687,8 @@ export const ClientWrapper = () => {
                                     selectedFilters={selectedFilters}
                                     title="mobile nav"
                                 ></Component>
-                                <Component collapsed={collapsed} setCollapsed={setCollapsed}
+                                <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10480,7 +10700,8 @@ export const ClientWrapper = () => {
                                     title="mobile nav basic"
                                 ></Component> */}
 
-								{/* <Component
+								{/* <Component allFilters={filterOptions}
+
                                     collapsed={collapsed}
                                     setCollapsed={setCollapsed}
                                     gridView={gridView}
@@ -10524,7 +10745,8 @@ export const ClientWrapper = () => {
                                     </MouseImageTrail>
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10535,7 +10757,8 @@ export const ClientWrapper = () => {
                                     selectedFilters={selectedFilters}
                                     title="nav bar"
                                 ></Component>
-                                <Component collapsed={collapsed} setCollapsed={setCollapsed}
+                                <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10546,7 +10769,8 @@ export const ClientWrapper = () => {
                                     selectedFilters={selectedFilters}
                                     title="nav bar 2"
                                 ></Component>
-                                <Component collapsed={collapsed} setCollapsed={setCollapsed}
+                                <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10557,7 +10781,8 @@ export const ClientWrapper = () => {
                                     selectedFilters={selectedFilters}
                                     title="nav bar 3"
                                 ></Component>
-                                <Component collapsed={collapsed} setCollapsed={setCollapsed}
+                                <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10570,7 +10795,8 @@ export const ClientWrapper = () => {
                                 ></Component> */}
 
 								{/* TODO: Fix this components export */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10587,7 +10813,8 @@ export const ClientWrapper = () => {
                                 </Component> */}
 
 								{/* TODO: Fix shape blur */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10617,7 +10844,8 @@ export const ClientWrapper = () => {
                                     </div>
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10629,7 +10857,8 @@ export const ClientWrapper = () => {
                                     title="sidebar"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10642,7 +10871,8 @@ export const ClientWrapper = () => {
                                 ></Component> */}
 
 								{/* TODO: find svg path */}
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10656,7 +10886,8 @@ export const ClientWrapper = () => {
                                     <TextAlongPathExample />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10668,7 +10899,8 @@ export const ClientWrapper = () => {
                                     title="text enhanced"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10680,7 +10912,8 @@ export const ClientWrapper = () => {
                                     title="zoom blur card"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10692,7 +10925,8 @@ export const ClientWrapper = () => {
                                     title="code block"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10706,7 +10940,8 @@ export const ClientWrapper = () => {
                                     <GlobeDemo />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10721,7 +10956,8 @@ export const ClientWrapper = () => {
                                     <IconsList />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10734,7 +10970,8 @@ export const ClientWrapper = () => {
                                     subfolder="kanban"
                                 ></Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                     gridView={gridView}
                                     setComponentCount={setComponentCount}
                                     tags={[
@@ -10748,7 +10985,8 @@ export const ClientWrapper = () => {
                                     <NineDotGridRandom />
                                 </Component> */}
 
-								{/* <Component collapsed={collapsed} setCollapsed={setCollapsed}
+								{/* <Component allFilters={filterOptions}
+ collapsed={collapsed} setCollapsed={setCollapsed}
                                 gridView={gridView}
                                 setComponentCount={setComponentCount}
                                 tags={[

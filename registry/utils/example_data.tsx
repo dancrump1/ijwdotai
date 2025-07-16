@@ -1126,7 +1126,7 @@ export const filterOptions = [
 	{ label: "stats", value: "stats" },
 	{ label: "tabs", value: "tabs" },
 	{ label: "testimonials", value: "testimonials" },
-	{ label: "text", value: "tet" },
+	{ label: "text", value: "text" },
 	{ label: "timeline", value: "timeline" },
 	{ label: "transitions", value: "transitions" },
 ];

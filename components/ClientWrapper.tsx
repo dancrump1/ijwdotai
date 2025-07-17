@@ -10,6 +10,7 @@ import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import Image1 from "@/public/itjustworks.jpg";
 import { Back, Front } from "@/registry/examples/flipcardexample";
+import MarqueeAlongSvgPathDemo from "@/registry/examples/marqueealongsvgexample";
 import Ballpit from "@/registry/open-source/Ballpit";
 import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
@@ -10618,20 +10619,23 @@ export const ClientWrapper = () => {
 								</Component>
 
 								{/* TODO: Fix SVG path */}
-								{/* <Component allFilters={filterOptions}
- collapsed={collapsed} setCollapsed={setCollapsed}
-                                    gridView={gridView}
-                                    setComponentCount={setComponentCount}
-                                    tags={[
-                                        filterOptions.find(
-                                            (filter) => filter.label.toLowerCase() === "card"
-                                        ),
-                                    ]}
-                                    selectedFilters={selectedFilters}
-                                    title="marquee along svg"
-                                >
-                                    <MarqueeAlongSvgPathDemo />
-                                </Component> */}
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "card"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="marquee along svg"
+								>
+									<MarqueeAlongSvgPathDemo />
+								</Component>
 
 								{/* <Component allFilters={filterOptions}
  collapsed={collapsed} setCollapsed={setCollapsed}

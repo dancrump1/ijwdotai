@@ -10,7 +10,9 @@ import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import Image1 from "@/public/itjustworks.jpg";
 import { Back, Front } from "@/registry/examples/flipcardexample";
+import { IconsList } from "@/registry/examples/IconsExample";
 import MarqueeAlongSvgPathDemo from "@/registry/examples/marqueealongsvgexample";
+import TextAlongPathExample from "@/registry/examples/textalongpathexample";
 import Ballpit from "@/registry/open-source/Ballpit";
 import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
 import CSSBoxRef from "@/registry/open-source/CSSBox";
@@ -61,6 +63,7 @@ import {
 } from "@/registry/open-source/Editor";
 import { FlipCard } from "@/registry/open-source/FlipCard";
 import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
+import { ICON_LIST } from "@/registry/open-source/icons";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
 import MagicBento from "@/registry/open-source/MagicBento";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
@@ -132,6 +135,7 @@ import {
 	useTransform,
 } from "motion/react";
 import { Poline, positionFunctions } from "poline";
+import { FiMousePointer } from "react-icons/fi";
 import { useMediaQuery } from "usehooks-ts";
 
 import { Slider } from "./ui/slider";
@@ -10594,7 +10598,6 @@ export const ClientWrapper = () => {
                                     <SmokeyCursorDemo />
                                 </Component> */}
 
-								{/* TODO: Fix Lanyard */}
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}
@@ -10618,7 +10621,6 @@ export const ClientWrapper = () => {
 									</div>{" "}
 								</Component>
 
-								{/* TODO: Fix SVG path */}
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}
@@ -10704,50 +10706,51 @@ export const ClientWrapper = () => {
                                     title="mobile nav basic"
                                 ></Component> */}
 
-								{/* <Component allFilters={filterOptions}
-
-                                    collapsed={collapsed}
-                                    setCollapsed={setCollapsed}
-                                    gridView={gridView}
-                                    setComponentCount={setComponentCount}
-                                    tags={[
-                                        filterOptions.find(
-                                            (filter) => filter.label.toLowerCase() === "card"
-                                        ),
-                                    ]}
-                                    selectedFilters={selectedFilters}
-                                    title="mouse image trail"
-                                >
-                                    <MouseImageTrail
-                                        renderImageBuffer={50}
-                                        rotationRange={25}
-                                        images={[
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                            "/itjustworks.jpg",
-                                        ]}
-                                    >
-                                        <section className="grid h-screen w-full place-content-center bg-white">
-                                            <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
-                                                <FiMousePointer />
-                                                <span>Hover me</span>
-                                            </p>
-                                        </section>
-                                    </MouseImageTrail>
-                                </Component> */}
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "card"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="mouse image trail"
+								>
+									<MouseImageTrail
+										renderImageBuffer={50}
+										rotationRange={25}
+										images={[
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+											"/itjustworks.jpg",
+										]}
+									>
+										<section className="grid h-screen w-full place-content-center bg-white">
+											<span className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
+												<FiMousePointer />
+												<span>Hover me</span>
+											</span>
+										</section>
+									</MouseImageTrail>
+								</Component>
 
 								{/* <Component allFilters={filterOptions}
  collapsed={collapsed} setCollapsed={setCollapsed}
@@ -10875,20 +10878,23 @@ export const ClientWrapper = () => {
                                 ></Component> */}
 
 								{/* TODO: find svg path */}
-								{/* <Component allFilters={filterOptions}
- collapsed={collapsed} setCollapsed={setCollapsed}
-                                    gridView={gridView}
-                                    setComponentCount={setComponentCount}
-                                    tags={[
-                                        filterOptions.find(
-                                            (filter) => filter.label.toLowerCase() === "card"
-                                        ),
-                                    ]}
-                                    selectedFilters={selectedFilters}
-                                    title="text along path"
-                                >
-                                    <TextAlongPathExample />
-                                </Component> */}
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "card"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="text along path"
+								>
+									<TextAlongPathExample />
+								</Component>
 
 								{/* <Component allFilters={filterOptions}
  collapsed={collapsed} setCollapsed={setCollapsed}
@@ -10944,21 +10950,24 @@ export const ClientWrapper = () => {
                                     <GlobeDemo />
                                 </Component> */}
 
-								{/* <Component allFilters={filterOptions}
- collapsed={collapsed} setCollapsed={setCollapsed}
-                                    gridView={gridView}
-                                    setComponentCount={setComponentCount}
-                                    tags={[
-                                        filterOptions.find(
-                                            (filter) => filter.label.toLowerCase() === "card"
-                                        ),
-                                    ]}
-                                    selectedFilters={selectedFilters}
-                                    title="icons"
-                                    subfolder="icons"
-                                >
-                                    <IconsList />
-                                </Component> */}
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "card"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="icons"
+									subfolder="icons"
+								>
+									<IconsList icons={ICON_LIST} />
+								</Component>
 
 								{/* <Component allFilters={filterOptions}
  collapsed={collapsed} setCollapsed={setCollapsed}

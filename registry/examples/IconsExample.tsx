@@ -3,11 +3,12 @@
 import path from "path";
 import { useMemo, useRef } from "react";
 
-import { ICON_LIST } from "@/components/icons";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Fuse from "fuse.js";
 import { parseAsString, useQueryState } from "nuqs";
+
+import { ICON_LIST } from "../open-source/icons";
 
 const useSearch = (items: Icon[]) => {
 	const [query] = useQueryState("q");

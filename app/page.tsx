@@ -1,13 +1,17 @@
-"use client";
+import { promises as fs } from "fs";
+import path from "path";
 
-import React from "react";
+import Home from "./homepage";
 
-import { ClientWrapper } from "@/components/ClientWrapper";
+const registryDir = path.resolve(
+	"/home/dan/shadcn-style-lib/registry",
+	"../registry"
+);
 
-export default function Home() {
-	return (
-		<div className="flex flex-col min-h-svh px-4 py-8 gap-8">
-			<ClientWrapper />
-		</div>
-	);
+const openSourceDir = path.join(registryDir, "open-source");
+
+export default async function Page() {
+	const componentFiles = await fs.readdir(openSourceDir);
+
+	return <Home files={componentFiles} />;
 }

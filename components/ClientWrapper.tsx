@@ -66,6 +66,7 @@ import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { ICON_LIST } from "@/registry/open-source/icons";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
 import MagicBento from "@/registry/open-source/MagicBento";
+import PixelImage from "@/registry/open-source/PixelImage";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
 import TextCurve from "@/registry/open-source/TextCurve";
 import { TextSplit } from "@/registry/open-source/TextSplit";
@@ -114,13 +115,18 @@ import {
 import { useWindowSize } from "@/registry/utils/useWindowSize";
 import Lenis from "lenis";
 import {
+	Bell,
 	CheckIcon,
 	ChevronDown,
 	Facebook,
+	HelpCircle,
 	Home,
 	Instagram,
 	Linkedin,
+	Mail,
 	Plus,
+	Send,
+	Star,
 	Twitter,
 	XCircle,
 	XIcon,
@@ -1607,7 +1613,7 @@ const Scene = dynamic(() => import("@/registry/open-source/ImageRipple"), {
 	loading: ComponentLoading,
 });
 
-export const ClientWrapper = () => {
+export const ClientWrapper = ({ files }: { files: string[] }) => {
 	const cubeRef = useRef<typeof CSSBoxRef>(null);
 	const mediaBetweenTextRef = useRef(null);
 	const mediaBetweenTextRef2 = useRef(null);
@@ -2255,50 +2261,82 @@ export const ClientWrapper = () => {
 	const [clickEffect, setClickEffect] = useState(true);
 	const [enableMagnetism, setEnableMagnetism] = useState(false);
 
-	return (
-		<>
-			<header className="flex flex-col gap-1 sticky top-0 bg-background z-50">
-				<h1 className="text-3xl font-bold tracking-tight">
-					Drive Brand Studio Component Library of {componentCount?.length}{" "}
-					components
-				</h1>
-				<p className="text-muted-foreground">
-					A custom registry for utilizing code in AI tooling.
-				</p>
-				<div className="flex gap-5 flex-row">
-					<div className="flex flex-col">
-						<label>Collapse All</label>
-						<input
-							type="checkbox"
-							id="collapse-all"
-							title="collapse all"
-							className="w-[25px]"
-							checked={allElements.length === collapsed.length}
-							onChange={(e) => {
-								if (
-									collapsed.length &&
-									[...new Set([...collapsed, ...allElements])]
-										.length !== collapsed.length
-								) {
-									setCollapsed([]);
-								} else if (
-									[...new Set([...collapsed, ...allElements])]
-										.length === collapsed.length
-								) {
-									setCollapsed([]);
-								} else {
-									const containers = [
-										...document.querySelectorAll(
-											".component-container"
-										),
-									] as HTMLElement[];
+	// Main FAB state
+	const [isExpanded, setIsExpanded] = useState(false);
+	const [hoveredButton, setHoveredButton] = useState<string | null>(null);
 
-									setCollapsed(containers.map((el) => el.id));
-								}
-							}}
-						/>
-					</div>
-					<div className={"border-l-2 border-white h-[50px]"}></div>
+	const actionButtons = [
+		{
+			id: "contact",
+			icon: Mail,
+			label: "Contact",
+			color: "bg-blue-500 hover:bg-blue-600",
+			position: "bottom-20 right-2",
+		},
+		{
+			id: "feedback",
+			icon: Star,
+			label: "Feedback",
+			color: "bg-green-500 hover:bg-green-600",
+			position: "bottom-16 right-16",
+		},
+		{
+			id: "support",
+			icon: HelpCircle,
+			label: "Support",
+			color: "bg-orange-500 hover:bg-orange-600",
+			position: "bottom-2 right-16",
+		},
+		{
+			id: "newsletter",
+			icon: Bell,
+			label: "Newsletter",
+			color: "bg-purple-500 hover:bg-purple-600",
+			position: "bottom-2 right-2",
+		},
+	];
+
+	const renderForm = (buttonId: string) => {
+		switch (buttonId) {
+			case "contact":
+				return (
+					<>
+						<div className="flex flex-col">
+							<label>Collapse All</label>
+							<input
+								type="checkbox"
+								id="collapse-all"
+								title="collapse all"
+								className="w-[25px]"
+								checked={allElements.length === collapsed.length}
+								onChange={(e) => {
+									if (
+										collapsed.length &&
+										[...new Set([...collapsed, ...allElements])]
+											.length !== collapsed.length
+									) {
+										setCollapsed([]);
+									} else if (
+										[...new Set([...collapsed, ...allElements])]
+											.length === collapsed.length
+									) {
+										setCollapsed([]);
+									} else {
+										const containers = [
+											...document.querySelectorAll(
+												".component-container"
+											),
+										] as HTMLElement[];
+
+										setCollapsed(containers.map((el) => el.id));
+									}
+								}}
+							/>
+						</div>
+					</>
+				);
+			case "feedback":
+				return (
 					<div className="flex flex-col">
 						<label>Components per row</label>
 
@@ -2324,7 +2362,9 @@ export const ClientWrapper = () => {
 							</ToggleGroupItem>
 						</ToggleGroup>
 					</div>
-					<div className={"border-l-2 border-white h-[50px]"}></div>
+				);
+			case "support":
+				return (
 					<div className="flex flex-col">
 						<label>Filters</label>
 						<MultiSelect
@@ -2334,7 +2374,9 @@ export const ClientWrapper = () => {
 							onValueChange={setSelectedFilters}
 						/>
 					</div>
-					<div className={"border-l-2 border-white h-[50px]"}></div>
+				);
+			case "newsletter":
+				return (
 					<div className="flex flex-col">
 						<label>Component Types</label>
 						<ToggleGroup
@@ -2353,6 +2395,36 @@ export const ClientWrapper = () => {
 							</ToggleGroupItem>
 						</ToggleGroup>
 					</div>
+				);
+			default:
+				return null;
+		}
+	};
+
+	return (
+		<>
+			<header className="flex flex-col gap-1 sticky top-0 bg-background z-50">
+				<h1 className="text-3xl font-bold tracking-tight">
+					{componentCount?.length} examples vs {files.length} total files
+				</h1>
+				<p className="text-muted-foreground">
+					Collection of OOS React components using tailwind and motion.
+				</p>
+				<p className="text-muted-foreground">
+					I recommend Collapsing All and setting components-per-row to 3 or
+					4. Once collapsed, you can expand individual components
+					vertically and horizontally with controls on each component card.
+				</p>
+				<p className="text-muted-foreground">
+					Live use of 200+ components. Expect some lag and maxed out
+					hardware usage.
+				</p>
+				<div className="flex gap-5 flex-row">
+					<div className={"border-l-2 border-white h-[50px]"}></div>
+
+					<div className={"border-l-2 border-white h-[50px]"}></div>
+
+					<div className={"border-l-2 border-white h-[50px]"}></div>
 				</div>
 			</header>
 
@@ -2534,6 +2606,27 @@ export const ClientWrapper = () => {
 							</>
 						) : (
 							<>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Pixel Image"
+								>
+									<PixelImage
+										src="/itjustworks.jpg"
+										grid="6x4"
+										grayscaleAnimation={true}
+									/>
+								</Component>
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}
@@ -11024,6 +11117,64 @@ export const ClientWrapper = () => {
 					</ScrollIsland>
 				</section>
 			</main>
+			<div
+				className="fixed bottom-6 right-6 z-50"
+				onMouseEnter={() => setIsExpanded(true)}
+				onMouseLeave={() => setIsExpanded(false)}
+			>
+				{/* Action Buttons */}
+				{actionButtons.map((button, index) => {
+					const Icon = button.icon;
+					return (
+						<div key={button.id}>
+							<div
+								className=""
+								onMouseLeave={() => setHoveredButton(null)}
+							>
+								{/* Form Card */}
+								<div
+									className={`
+                  transition-all duration-300 ease-in-out z-50
+                  ${hoveredButton === button.id ? "opacity-100 bg-black translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"}
+                `}
+								>
+									{renderForm(button.id)}
+								</div>
+
+								{/* Action Button */}
+								<Button
+									size="sm"
+									className={`
+                  h-12 w-12 rounded-full shadow-lg transition-all duration-300 ease-in-out
+                  ${button.color}
+                  ${isExpanded ? "opacity-100 scale-100" : "opacity-0 scale-0"}
+                `}
+									style={{
+										transitionDelay: isExpanded
+											? `${index * 50}ms`
+											: "0ms",
+									}}
+									onMouseEnter={() => setHoveredButton(button.id)}
+								>
+									{button.label}
+								</Button>
+							</div>
+						</div>
+					);
+				})}
+
+				{/* Main FAB */}
+				<Button
+					size="lg"
+					onClick={() => setIsExpanded(!isExpanded)}
+					className={`
+            h-14 w-14 rounded-full shadow-lg transition-all duration-300 ease-in-out
+            ${isExpanded ? "bg-red-500 hover:bg-red-600 rotate-45" : "bg-blue-500 hover:bg-blue-600"}
+          `}
+				>
+					<Plus className="h-6 w-6" />
+				</Button>
+			</div>
 		</>
 	);
 };

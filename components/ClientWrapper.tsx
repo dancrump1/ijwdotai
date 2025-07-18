@@ -68,6 +68,7 @@ import { InputAnimated } from "@/registry/open-source/InputAnimated";
 import MagicBento from "@/registry/open-source/MagicBento";
 import PixelImage from "@/registry/open-source/PixelImage";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
+import TargetCursor from "@/registry/open-source/TargetCursor";
 import TextCurve from "@/registry/open-source/TextCurve";
 import { TextSplit } from "@/registry/open-source/TextSplit";
 import TextTrail from "@/registry/open-source/TextTrail";
@@ -2606,6 +2607,34 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 							</>
 						) : (
 							<>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Target Cursor"
+								>
+									<div>
+										<TargetCursor
+											spinDuration={2}
+											hideDefaultCursor={true}
+										/>
+
+										<h1>Hover over the elements below</h1>
+										<button className="cursor-target">
+											Click me!
+										</button>
+										<div className="cursor-target">Hover target</div>
+									</div>
+								</Component>
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}

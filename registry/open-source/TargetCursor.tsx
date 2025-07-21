@@ -2,6 +2,9 @@ import React, { useCallback, useEffect, useMemo, useRef } from "react";
 
 import { gsap } from "gsap";
 
+// Credit:
+// https://www.reactbits.dev/animations/target-cursor
+
 export interface TargetCursorProps {
 	targetSelector?: string;
 	spinDuration?: number;

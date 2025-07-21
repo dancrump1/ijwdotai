@@ -6,6 +6,12 @@
   "description": "Scroll Trigger Context",
   "files": [
     {
+      "path": "registry/examples/scrolltriggercontextexample.tsx",
+      "content": "\n\t\t\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n    return (\n        <div className=\"relative w-full flex items-center justify-center\">\n          \n            \n        </div>\n    );\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
       "path": "registry/open-source/ScrollTriggerContext.tsx",
       "content": "\"use client\";\n\nimport { useEffect } from \"react\";\n\nimport gsap from \"gsap\";\nimport { ScrollTrigger } from \"gsap/dist/ScrollTrigger\";\nimport { useLenis } from \"lenis/react\";\n\ngsap.registerPlugin(ScrollTrigger);\n\nexport function ScrollTriggerConfig() {\n\tconst lenis = useLenis(ScrollTrigger.update);\n\n\tuseEffect(() => {\n\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\n\t\treturn () => {\n\t\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\t\t};\n\t}, []);\n\n\tuseEffect(() => ScrollTrigger.refresh(), [lenis]);\n\n\treturn null;\n}\n",
       "type": "registry:ui",

@@ -18,16 +18,16 @@
       "target": "registry/open-source/ActionSearchBar.tsx"
     },
     {
-      "path": "components/ui/input.tsx",
+      "path": "./components/ui/input.tsx",
       "content": "// SHADCN UI GENERATED CODE\n\nimport React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\nexport interface InputProps\n\textends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n\t({ className, type, ...props }, ref) => {\n\t\treturn (\n\t\t\t<input\n\t\t\t\ttype={type}\n\t\t\t\tclassName={cn(\n\t\t\t\t\t\"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n\t\t\t\t\tclassName\n\t\t\t\t)}\n\t\t\t\tref={ref}\n\t\t\t\t{...props}\n\t\t\t/>\n\t\t);\n\t}\n);\nInput.displayName = \"Input\";\n\nexport { Input };\n",
       "type": "registry:ui",
       "target": "components/ui/input.tsx"
     },
     {
-      "path": "lib/utils.ts",
+      "path": "./lib/utils.ts",
       "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
       "type": "registry:ui",
-      "target": "lib/utils.ts"
+      "target": "./lib/utils.ts"
     }
   ]
 }

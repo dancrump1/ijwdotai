@@ -6,6 +6,12 @@
   "description": "Three Bounce Loader",
   "files": [
     {
+      "path": "registry/examples/threebounceloaderexample.tsx",
+      "content": "\n\t\t\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n    return (\n        <div className=\"relative w-full flex items-center justify-center\">\n          \n            \n        </div>\n    );\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
       "path": "registry/open-source/ThreeBounceLoader.tsx",
       "content": "const ThreeDotSimpleLoader = () => {\n\treturn (\n\t\t<div className=\"flex items-center justify-center space-x-2 dark:invert\">\n\t\t\t<span className=\"sr-only\">Loading...</span>\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900 [animation-delay:-0.3s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900 [animation-delay:-0.15s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900\" />\n\t\t</div>\n\t);\n};\n\nexport default ThreeDotSimpleLoader;\n",
       "type": "registry:ui",

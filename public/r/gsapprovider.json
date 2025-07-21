@@ -6,6 +6,12 @@
   "description": "Gsap Provider",
   "files": [
     {
+      "path": "registry/examples/gsapproviderexample.tsx",
+      "content": "\n\t\t\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n    return (\n        <div className=\"relative w-full flex items-center justify-center\">\n          \n            \n        </div>\n    );\n}\n",
+      "type": "registry:page",
+      "target": "~/example.tsx"
+    },
+    {
       "path": "registry/open-source/GsapProvider.tsx",
       "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\n\nimport Tempus from \"tempus\";\nimport gsap from \"gsap\";\n\nimport { ScrollTriggerConfig } from \"./ScrollTriggerContext\";\n\nexport function GsapProvider({ scrollTrigger = true }) {\n\tconst [isMounted, setIsMounted] = useState(false);\n\tuseEffect(() => {\n\t\tgsap.defaults({ ease: \"none\" });\n\n\t\t// merge rafs\n\t\tgsap.ticker.lagSmoothing(0);\n\t\tgsap.ticker.remove(gsap.updateRoot);\n\t\tTempus?.add((time: number) => {\n\t\t\tgsap.updateRoot(time / 1000);\n\t\t}, 0);\n\n\t\tsetIsMounted(true);\n\t}, []);\n\n\tif (!isMounted) return null;\n\n\treturn scrollTrigger && <ScrollTriggerConfig />;\n}\n",
       "type": "registry:ui",

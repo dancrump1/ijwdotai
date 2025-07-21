@@ -161,6 +161,32 @@ function buildRegistryItem(componentFile) {
 			target: "~/example.tsx",
 		});
 	}
+	if (!fs.existsSync(examplePath)) {
+		const relExamplePath = `registry/examples/${exampleName}`;
+
+		incompleteExamples.push({
+			name: componentName,
+			examplePath: relExamplePath,
+			reason: "missing example",
+		});
+
+		const content = `
+		"use client";
+
+import React from "react";
+
+export default function Example() {
+    return (
+        <div className="relative w-full flex items-center justify-center">
+          
+            
+        </div>
+    );
+}
+`;
+
+		fs.writeFileSync(relExamplePath, content, "utf-8");
+	}
 
 	return {
 		name: componentName.toLowerCase(),

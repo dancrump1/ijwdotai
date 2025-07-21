@@ -67,7 +67,7 @@ const CircleExpenable = () => {
 
 				return (
 					<motion.div
-						key={item.id}
+						key={item.title.toLowerCase().replaceAll(" ", "")}
 						className="relative cursor-pointer overflow-hidden rounded-full border-4"
 						style={{
 							borderColor: isExpanded

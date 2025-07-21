@@ -1,17 +1,21 @@
-import { promises as fs } from "fs";
+import fs from "fs";
 import path from "path";
 
 import Home from "./homepage";
 
-const registryDir = path.resolve(
-	"/home/dan/shadcn-style-lib/registry",
-	"../registry"
-);
+function getComponentFiles(): string[] {
+	const dirPath = path.join(process.cwd(), "public", "my-files");
 
-const openSourceDir = path.join(registryDir, "open-source");
+	try {
+		return fs.readdirSync(dirPath);
+	} catch (err) {
+		console.error("Error reading my-files directory:", err);
+		return [];
+	}
+}
 
 export default async function Page() {
-	const componentFiles = await fs.readdir(openSourceDir);
+	const componentFiles = "";
 
-	return <Home files={componentFiles} />;
+	return <Home files={getComponentFiles()} />;
 }

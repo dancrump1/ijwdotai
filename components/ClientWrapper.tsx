@@ -179,13 +179,13 @@ const ComponentLoading = () => {
 	);
 };
 
+const PeelReveal = dynamic(() => import("@/registry/open-source/PeelReveal"), {
+	loading: ComponentLoading,
+});
 const MatterBody = dynamic(
 	() => import("@/registry/open-source/Gravity").then((mod) => mod.MatterBody),
 	{
 		loading: ComponentLoading,
-		// loader: async () => {
-		// 	return await ComponentLoading;
-		// },
 	}
 );
 const GridContent = dynamic(
@@ -1656,21 +1656,21 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 		return 20;
 	};
 
-	useEffect(() => {
-		const lenis = new Lenis({
-			autoRaf: true,
-			// wrapper: containerRef.current,
-			duration: 1.2,
-			orientation: "vertical",
-			gestureOrientation: "vertical",
-			smoothWheel: true,
-			touchMultiplier: 2,
-		});
+	// useEffect(() => {
+	// 	const lenis = new Lenis({
+	// 		autoRaf: true,
+	// 		// wrapper: containerRef.current,
+	// 		duration: 1.2,
+	// 		orientation: "vertical",
+	// 		gestureOrientation: "vertical",
+	// 		smoothWheel: true,
+	// 		touchMultiplier: 2,
+	// 	});
 
-		return () => {
-			lenis.destroy();
-		};
-	}, []);
+	// 	return () => {
+	// 		lenis.destroy();
+	// 	};
+	// }, []);
 
 	const handleNext = () => {
 		setCurrentStep((prev) => prev + 1);
@@ -2634,6 +2634,32 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 										</button>
 										<div className="cursor-target">Hover target</div>
 									</div>
+								</Component>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Peel Reveal"
+								>
+									<PeelReveal
+										imageSrc={"/itjustworks.jpg"}
+										width={200}
+										rotate={30}
+										peelBackHoverPct={20}
+										peelBackActivePct={40}
+										shadowIntensity={0.6}
+										lightingIntensity={0.1}
+										initialPosition={{ x: -100, y: 100 }}
+									/>
 								</Component>
 								<Component
 									allFilters={filterOptions}

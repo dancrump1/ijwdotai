@@ -65,6 +65,7 @@ import { FlipCard } from "@/registry/open-source/FlipCard";
 import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
 import { ICON_LIST } from "@/registry/open-source/icons";
 import { InputAnimated } from "@/registry/open-source/InputAnimated";
+import LightRays from "@/registry/open-source/LightRays";
 import MagicBento from "@/registry/open-source/MagicBento";
 import PixelImage from "@/registry/open-source/PixelImage";
 import { Spinner, SpinnerProps } from "@/registry/open-source/Spinner";
@@ -72,6 +73,7 @@ import TargetCursor from "@/registry/open-source/TargetCursor";
 import TextCurve from "@/registry/open-source/TextCurve";
 import { TextSplit } from "@/registry/open-source/TextSplit";
 import TextTrail from "@/registry/open-source/TextTrail";
+import TextType from "@/registry/open-source/TextType";
 import {
 	animeData,
 	ASCII,
@@ -2426,13 +2428,6 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 					Live use of 200+ components. Expect some lag and maxed out
 					hardware usage.
 				</p>
-				<div className="flex gap-5 flex-row">
-					<div className={"border-l-2 border-white h-[50px]"}></div>
-
-					<div className={"border-l-2 border-white h-[50px]"}></div>
-
-					<div className={"border-l-2 border-white h-[50px]"}></div>
-				</div>
 			</header>
 
 			<main className="flex flex-col flex-1 gap-8">
@@ -2613,6 +2608,33 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 							</>
 						) : (
 							<>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "text"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Text Type"
+								>
+									<TextType
+										text={[
+											"Text typing effect",
+											"for your websites",
+											"Happy coding!",
+										]}
+										typingSpeed={75}
+										pauseDuration={1500}
+										showCursor={true}
+										cursorCharacter="|"
+									/>
+								</Component>
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}
@@ -3962,6 +3984,35 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 									title="word tornado"
 								>
 									<WordTornadoDemo />
+								</Component>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() ===
+												filter_constants.BACKGROUND
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Light Rays background"
+								>
+									<LightRays
+										raysOrigin="top-center"
+										raysColor="#00ffff"
+										raysSpeed={1.5}
+										lightSpread={0.8}
+										rayLength={1.2}
+										followMouse={true}
+										mouseInfluence={0.1}
+										noiseAmount={0.1}
+										distortion={0.05}
+										className="custom-rays"
+									/>
 								</Component>
 								<Component
 									allFilters={filterOptions}

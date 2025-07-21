@@ -1070,6 +1070,7 @@ export const filter_constants = {
 	MOBILE_READY: "mobile ready",
 	DARK_MODE: "dark mode ready",
 	a11y_ready: "A11Y ready",
+	BACKGROUND: "background",
 	ACCORDION: "accordion",
 	BUTTON: "button",
 	BLOG_ARTICLES: "block/articles",

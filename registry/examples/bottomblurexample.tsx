@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { BottomBlurOut } from "@/components/bottom-blur";
+import { BottomBlurOut } from "@/components/bottomblur";
 
 export default function BottomBlurOutExample() {
 	return (

@@ -192,9 +192,6 @@ const Component = ({
 	if (
 		!!selectedFilters.length &&
 		!selectedFilters.find((filter) => {
-			console.log(allTags.map((tag) => tag?.label).filter((item) => !!item));
-			console.log(filter);
-
 			return allTags
 				.map((tag) => tag?.label)
 				.filter((item) => !!item)

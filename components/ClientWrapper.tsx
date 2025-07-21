@@ -182,6 +182,12 @@ const ComponentLoading = () => {
 const PeelReveal = dynamic(() => import("@/registry/open-source/PeelReveal"), {
 	loading: ComponentLoading,
 });
+const CircleExpenable = dynamic(
+	() => import("@/registry/open-source/CircleAccordion"),
+	{
+		loading: ComponentLoading,
+	}
+);
 const MatterBody = dynamic(
 	() => import("@/registry/open-source/Gravity").then((mod) => mod.MatterBody),
 	{
@@ -1301,7 +1307,7 @@ const BookTestimonial3D = dynamic(
 );
 const BottomBlurOut = dynamic(
 	() =>
-		import("@/registry/open-source/bottom-blur").then(
+		import("@/registry/open-source/bottomblur").then(
 			(mod) => mod.BottomBlurOut
 		),
 	{ loading: ComponentLoading }
@@ -2607,6 +2613,23 @@ export const ClientWrapper = ({ files }: { files: string[] }) => {
 							</>
 						) : (
 							<>
+								<Component
+									allFilters={filterOptions}
+									collapsed={collapsed}
+									setCollapsed={setCollapsed}
+									gridView={gridView}
+									setComponentCount={setComponentCount}
+									tags={[
+										filterOptions.find(
+											(filter) =>
+												filter.label.toLowerCase() === "carousel"
+										),
+									]}
+									selectedFilters={selectedFilters}
+									title="Circle Expandable"
+								>
+									<CircleExpenable />
+								</Component>
 								<Component
 									allFilters={filterOptions}
 									collapsed={collapsed}

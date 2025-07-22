@@ -1,23 +1,15 @@
-# registry-template
+# Adding a new Component
+1. Create file in `registry/open-source`
+2. Add component code to file. Tailwind is best, but add any utils or css to the single file. Check `registry/utils` for existing utilities.
+3. After the imports, add: <br />`// Credit`<br />`// https://[open_source_link]`
+1. Add file in `registry/example`, naming it all lowercase and no spaces, `[component_name]example.tsx`
+2. Simple export default an Example function that returns a div that takes up the whole screen and centers the component, and implement the component inside the div.
+3. Add implementation to `ClientWrapper` component. Recommend using VSCode's `fold all` function and expanding until you get to the `basic` ternary, and expand the 2nd fragment. Clone the first `<Component></Component>` and replace the children and props (tags, name, etc)
 
-You can use the `shadcn` CLI to run your own component registry. Running your own
-component registry allows you to distribute your custom components, hooks, pages, and
-other files to any React project.
+# BUILDING THE REGISTRY
+##### Do this to add new components to `Open in AI` button
+1. Run `npm run generate` to create the `registry.json` file, along with some metadata files
+2. Move the generated `registry.json` to the root of the project, replacing the current file.
+3. Run `npm run registry:build`  
+4. Push the files to the server
 
-> [!IMPORTANT]  
-> This template uses Tailwind v3. For Tailwind v4, see [registry-template](https://github.com/shadcn-ui/registry-template-v4).
-
-## Getting Started
-
-This is a template for creating a custom registry using Next.js.
-
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
-- The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
-
-## Documentation
-
-Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.

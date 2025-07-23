@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
@@ -334,13 +335,21 @@ const components = [
 
 export const ClientWrapper = ({
 	files,
-	slug,
+	params,
 }: {
 	files: string[];
-	slug?: string;
+	params?: any;
 }) => {
+	const searchParams = useSearchParams();
+
+	const searchFilters = searchParams.getAll("subcategory");
 	const matchingComponents = components.filter((item) => {
-		return !!slug ? item.includes(slug) : true;
+		return !!params?.slug
+			? item.includes(params.slug) ||
+					!!searchFilters
+						.map((filter) => item.includes(filter))
+						.filter((item) => !!item).length
+			: true;
 	});
 	const componentImports = matchingComponents.map((item) => {
 		return dynamic(
@@ -383,11 +392,6 @@ export const ClientWrapper = ({
 			}
 		});
 	});
-	const [isOpen, setIsOpen] = useState(false);
-
-	const handleIsOpen = () => {
-		setIsOpen(!isOpen);
-	};
 
 	const [gridView, setGridView] = useState(false);
 
@@ -766,7 +770,6 @@ export const ClientWrapper = ({
 									return (
 										<Component
 											key={"custom-oop-component" + i}
-											allFilters={filterOptions}
 											collapsed={collapsed}
 											setCollapsed={setCollapsed}
 											gridView={gridView}

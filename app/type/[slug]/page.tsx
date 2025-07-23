@@ -23,5 +23,5 @@ export default async function Page({
 	params: Promise<{ slug: string }>;
 }) {
 	const thing = getComponentFiles();
-	return <FlexWrapper files={thing} slug={(await params).slug} />;
+	return <FlexWrapper files={thing} params={await params} />;
 }

@@ -15,7 +15,7 @@
       "path": "registry/open-source/FuzzyOverlay.tsx",
       "content": "import React from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { motion } from \"motion/react\";\n\nconst FuzzyOverlay = ({ className }: { className?: string }) => {\n\treturn (\n\t\t<motion.div\n\t\t\tinitial={{ transform: \"translateX(-10%) translateY(-10%)\" }}\n\t\t\tanimate={{\n\t\t\t\ttransform: \"translateX(10%) translateY(10%)\",\n\t\t\t}}\n\t\t\ttransition={{\n\t\t\t\trepeat: Infinity,\n\t\t\t\tduration: 0.2,\n\t\t\t\tease: \"linear\",\n\t\t\t\trepeatType: \"mirror\",\n\t\t\t}}\n\t\t\t// You can download these PNGs here:\n\t\t\t// https://www.hover.dev/black-noise.png\n\t\t\t// https://www.hover.dev/noise.png\n\t\t\tstyle={{\n\t\t\t\tbackgroundImage: 'url(\"/dist/local/black-noise.png\")',\n\t\t\t\t// backgroundImage: 'url(\"local/noise.png\")',\n\t\t\t}}\n\t\t\tclassName={cn(\n\t\t\t\t\"pointer-events-none absolute -inset-[100%] opacity-0\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t/>\n\t);\n};\n\nexport default FuzzyOverlay;\n",
       "type": "registry:ui",
-      "target": "@/components/FuzzyOverlay.tsx"
+      "target": "components/FuzzyOverlay.tsx"
     },
     {
       "path": "./lib/utils.ts",

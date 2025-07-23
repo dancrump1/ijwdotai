@@ -17,7 +17,7 @@
 				{
 					"path": "registry/open-source/3dCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/3dCard.tsx"
+					"target": "components/3dCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -40,7 +40,7 @@
 				{
 					"path": "registry/open-source/3dNavBar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/3dNavBar.tsx"
+					"target": "components/3dNavBar.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -60,12 +60,12 @@
 				{
 					"path": "registry/open-source/3dCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/3dCard.tsx"
+					"target": "components/3dCard.tsx"
 				},
 				{
 					"path": "registry/open-source/MobileNavBasic.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MobileNavBasic.tsx"
+					"target": "components/MobileNavBasic.tsx"
 				}
 			]
 		},
@@ -83,7 +83,7 @@
 				{
 					"path": "registry/open-source/AccordionSlices.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AccordionSlices.tsx"
+					"target": "components/AccordionSlices.tsx"
 				}
 			]
 		},
@@ -101,7 +101,7 @@
 				{
 					"path": "registry/open-source/ActionSearchBar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ActionSearchBar.tsx"
+					"target": "components/ActionSearchBar.tsx"
 				},
 				{
 					"path": "./components/ui/input.tsx",
@@ -129,7 +129,7 @@
 				{
 					"path": "registry/open-source/AnimatedAccordion.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AnimatedAccordion.tsx"
+					"target": "components/AnimatedAccordion.tsx"
 				}
 			]
 		},
@@ -147,7 +147,7 @@
 				{
 					"path": "registry/open-source/AnimatedHoverCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AnimatedHoverCard.tsx"
+					"target": "components/AnimatedHoverCard.tsx"
 				}
 			]
 		},
@@ -165,7 +165,7 @@
 				{
 					"path": "registry/open-source/AnimatedList.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AnimatedList.tsx"
+					"target": "components/AnimatedList.tsx"
 				}
 			]
 		},
@@ -183,7 +183,7 @@
 				{
 					"path": "registry/open-source/Attractor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Attractor.tsx"
+					"target": "components/Attractor.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -206,7 +206,7 @@
 				{
 					"path": "registry/open-source/AuroraBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AuroraBackground.tsx"
+					"target": "components/AuroraBackground.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -229,7 +229,7 @@
 				{
 					"path": "registry/open-source/AwardCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/AwardCarousel.tsx"
+					"target": "components/AwardCarousel.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -252,7 +252,7 @@
 				{
 					"path": "registry/open-source/Background.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Background.tsx"
+					"target": "components/Background.tsx"
 				}
 			]
 		},
@@ -270,7 +270,7 @@
 				{
 					"path": "registry/open-source/BackgroundBeams.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BackgroundBeams.tsx"
+					"target": "components/BackgroundBeams.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -293,7 +293,7 @@
 				{
 					"path": "registry/open-source/BackgroundBoxes.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BackgroundBoxes.tsx"
+					"target": "components/BackgroundBoxes.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -316,7 +316,7 @@
 				{
 					"path": "registry/open-source/BackgroundGradient.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BackgroundGradient.tsx"
+					"target": "components/BackgroundGradient.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -339,7 +339,7 @@
 				{
 					"path": "registry/open-source/Ballpit.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Ballpit.tsx"
+					"target": "components/Ballpit.tsx"
 				}
 			]
 		},
@@ -357,7 +357,7 @@
 				{
 					"path": "registry/open-source/Bento.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Bento.tsx"
+					"target": "components/Bento.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -372,7 +372,7 @@
 				{
 					"path": "registry/open-source/FuzzyOverlay.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FuzzyOverlay.tsx"
+					"target": "components/FuzzyOverlay.tsx"
 				}
 			]
 		},
@@ -390,7 +390,7 @@
 				{
 					"path": "registry/open-source/BlurVignette.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BlurVignette.tsx"
+					"target": "components/BlurVignette.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -413,7 +413,7 @@
 				{
 					"path": "registry/open-source/BookTestimonials.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BookTestimonials.tsx"
+					"target": "components/BookTestimonials.tsx"
 				}
 			]
 		},
@@ -431,7 +431,7 @@
 				{
 					"path": "registry/open-source/Btn08.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Btn08.tsx"
+					"target": "components/Btn08.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -459,7 +459,7 @@
 				{
 					"path": "registry/open-source/BubbleText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BubbleText.tsx"
+					"target": "components/BubbleText.tsx"
 				}
 			]
 		},
@@ -477,7 +477,7 @@
 				{
 					"path": "registry/open-source/BusinessFooter.tsx",
 					"type": "registry:ui",
-					"target": "@/components/BusinessFooter.tsx"
+					"target": "components/BusinessFooter.tsx"
 				}
 			]
 		},
@@ -495,7 +495,7 @@
 				{
 					"path": "registry/open-source/CSSBox.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CSSBox.tsx"
+					"target": "components/CSSBox.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -518,7 +518,7 @@
 				{
 					"path": "registry/open-source/CanvasReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CanvasReveal.tsx"
+					"target": "components/CanvasReveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -541,7 +541,7 @@
 				{
 					"path": "registry/open-source/CardDeck.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CardDeck.tsx"
+					"target": "components/CardDeck.tsx"
 				}
 			]
 		},
@@ -559,7 +559,7 @@
 				{
 					"path": "registry/open-source/CardHover.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CardHover.tsx"
+					"target": "components/CardHover.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -582,7 +582,7 @@
 				{
 					"path": "registry/open-source/CardRotation.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CardRotation.tsx"
+					"target": "components/CardRotation.tsx"
 				}
 			]
 		},
@@ -600,7 +600,7 @@
 				{
 					"path": "registry/open-source/CardStack.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CardStack.tsx"
+					"target": "components/CardStack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -623,7 +623,7 @@
 				{
 					"path": "registry/open-source/CardSwap.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CardSwap.tsx"
+					"target": "components/CardSwap.tsx"
 				}
 			]
 		},
@@ -641,7 +641,7 @@
 				{
 					"path": "registry/open-source/Cards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Cards.tsx"
+					"target": "components/Cards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -664,7 +664,7 @@
 				{
 					"path": "registry/open-source/CarouselCircle.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CarouselCircle.tsx"
+					"target": "components/CarouselCircle.tsx"
 				}
 			]
 		},
@@ -682,7 +682,7 @@
 				{
 					"path": "registry/open-source/CarouselStack.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CarouselStack.tsx"
+					"target": "components/CarouselStack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -705,7 +705,7 @@
 				{
 					"path": "registry/open-source/CheckboxAnimated.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CheckboxAnimated.tsx"
+					"target": "components/CheckboxAnimated.tsx"
 				}
 			]
 		},
@@ -723,7 +723,7 @@
 				{
 					"path": "registry/open-source/ChromaGrid.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ChromaGrid.tsx"
+					"target": "components/ChromaGrid.tsx"
 				}
 			]
 		},
@@ -741,7 +741,7 @@
 				{
 					"path": "registry/open-source/CircleAccordion.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CircleAccordion.tsx"
+					"target": "components/CircleAccordion.tsx"
 				}
 			]
 		},
@@ -759,7 +759,7 @@
 				{
 					"path": "registry/open-source/CircleText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CircleText.tsx"
+					"target": "components/CircleText.tsx"
 				}
 			]
 		},
@@ -777,7 +777,7 @@
 				{
 					"path": "registry/open-source/CircularBarsLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CircularBarsLoader.tsx"
+					"target": "components/CircularBarsLoader.tsx"
 				}
 			]
 		},
@@ -795,7 +795,7 @@
 				{
 					"path": "registry/open-source/CodeBlock.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CodeBlock.tsx"
+					"target": "components/CodeBlock.tsx"
 				}
 			]
 		},
@@ -813,7 +813,7 @@
 				{
 					"path": "registry/open-source/ColorChangeCards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ColorChangeCards.tsx"
+					"target": "components/ColorChangeCards.tsx"
 				}
 			]
 		},
@@ -831,7 +831,7 @@
 				{
 					"path": "registry/open-source/ColorPicker.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ColorPicker.tsx"
+					"target": "components/ColorPicker.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -869,7 +869,7 @@
 				{
 					"path": "registry/open-source/ColorfulText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ColorfulText.tsx"
+					"target": "components/ColorfulText.tsx"
 				}
 			]
 		},
@@ -887,7 +887,7 @@
 				{
 					"path": "registry/open-source/Compare.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Compare.tsx"
+					"target": "components/Compare.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -897,7 +897,7 @@
 				{
 					"path": "registry/open-source/Sparkles.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Sparkles.tsx"
+					"target": "components/Sparkles.tsx"
 				}
 			]
 		},
@@ -915,7 +915,7 @@
 				{
 					"path": "registry/open-source/ContainerScroll.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ContainerScroll.tsx"
+					"target": "components/ContainerScroll.tsx"
 				}
 			]
 		},
@@ -933,7 +933,7 @@
 				{
 					"path": "registry/open-source/ContentWithImage.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ContentWithImage.tsx"
+					"target": "components/ContentWithImage.tsx"
 				}
 			]
 		},
@@ -951,7 +951,7 @@
 				{
 					"path": "registry/open-source/Cubes.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Cubes.tsx"
+					"target": "components/Cubes.tsx"
 				}
 			]
 		},
@@ -969,7 +969,7 @@
 				{
 					"path": "registry/open-source/CursorCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CursorCarousel.tsx"
+					"target": "components/CursorCarousel.tsx"
 				}
 			]
 		},
@@ -987,7 +987,7 @@
 				{
 					"path": "registry/open-source/CursorMask.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CursorMask.tsx"
+					"target": "components/CursorMask.tsx"
 				}
 			]
 		},
@@ -1005,7 +1005,7 @@
 				{
 					"path": "registry/open-source/CurvedNavbar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/CurvedNavbar.tsx"
+					"target": "components/CurvedNavbar.tsx"
 				}
 			]
 		},
@@ -1023,7 +1023,7 @@
 				{
 					"path": "registry/open-source/DarkVeil.tsx",
 					"type": "registry:ui",
-					"target": "@/components/DarkVeil.tsx"
+					"target": "components/DarkVeil.tsx"
 				}
 			]
 		},
@@ -1041,7 +1041,7 @@
 				{
 					"path": "registry/open-source/DialogStack.tsx",
 					"type": "registry:ui",
-					"target": "@/components/DialogStack.tsx"
+					"target": "components/DialogStack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1064,7 +1064,7 @@
 				{
 					"path": "registry/open-source/Dither.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Dither.tsx"
+					"target": "components/Dither.tsx"
 				}
 			]
 		},
@@ -1082,7 +1082,7 @@
 				{
 					"path": "registry/open-source/DualRingLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/DualRingLoader.tsx"
+					"target": "components/DualRingLoader.tsx"
 				}
 			]
 		},
@@ -1100,7 +1100,7 @@
 				{
 					"path": "registry/open-source/DynamicIsland.tsx",
 					"type": "registry:ui",
-					"target": "@/components/DynamicIsland.tsx"
+					"target": "components/DynamicIsland.tsx"
 				}
 			]
 		},
@@ -1118,7 +1118,7 @@
 				{
 					"path": "registry/open-source/DynamicTheme.tsx",
 					"type": "registry:ui",
-					"target": "@/components/DynamicTheme.tsx"
+					"target": "components/DynamicTheme.tsx"
 				}
 			]
 		},
@@ -1136,7 +1136,7 @@
 				{
 					"path": "registry/open-source/Editor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Editor.tsx"
+					"target": "components/Editor.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -1164,7 +1164,7 @@
 				{
 					"path": "registry/open-source/ElasticLine.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ElasticLine.tsx"
+					"target": "components/ElasticLine.tsx"
 				}
 			]
 		},
@@ -1182,52 +1182,52 @@
 				{
 					"path": "registry/open-source/ExampleReplication.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ExampleReplication.tsx"
+					"target": "components/ExampleReplication.tsx"
 				},
 				{
 					"path": "registry/open-source/Features.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Features.tsx"
+					"target": "components/Features.tsx"
 				},
 				{
 					"path": "registry/open-source/SectionHeader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SectionHeader.tsx"
+					"target": "components/SectionHeader.tsx"
 				},
 				{
 					"path": "registry/open-source/Gallery.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Gallery.tsx"
+					"target": "components/Gallery.tsx"
 				},
 				{
 					"path": "registry/open-source/GsapProvider.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GsapProvider.tsx"
+					"target": "components/GsapProvider.tsx"
 				},
 				{
 					"path": "registry/open-source/ScrollTriggerContext.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollTriggerContext.tsx"
+					"target": "components/ScrollTriggerContext.tsx"
 				},
 				{
 					"path": "registry/open-source/Improvements.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Improvements.tsx"
+					"target": "components/Improvements.tsx"
 				},
 				{
 					"path": "registry/open-source/Introduction.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Introduction.tsx"
+					"target": "components/Introduction.tsx"
 				},
 				{
 					"path": "registry/open-source/LottieScrollTrigger.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LottieScrollTrigger.tsx"
+					"target": "components/LottieScrollTrigger.tsx"
 				},
 				{
 					"path": "registry/open-source/Services.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Services.tsx"
+					"target": "components/Services.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1250,7 +1250,7 @@
 				{
 					"path": "registry/open-source/ExpandingTabs.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ExpandingTabs.tsx"
+					"target": "components/ExpandingTabs.tsx"
 				}
 			]
 		},
@@ -1268,7 +1268,7 @@
 				{
 					"path": "registry/open-source/FallingText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FallingText.tsx"
+					"target": "components/FallingText.tsx"
 				}
 			]
 		},
@@ -1286,7 +1286,7 @@
 				{
 					"path": "registry/open-source/FancyInput.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FancyInput.tsx"
+					"target": "components/FancyInput.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1309,7 +1309,7 @@
 				{
 					"path": "registry/open-source/FaqSection.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FaqSection.tsx"
+					"target": "components/FaqSection.tsx"
 				}
 			]
 		},
@@ -1327,7 +1327,7 @@
 				{
 					"path": "registry/open-source/Feature.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Feature.tsx"
+					"target": "components/Feature.tsx"
 				}
 			]
 		},
@@ -1345,12 +1345,12 @@
 				{
 					"path": "registry/open-source/Features.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Features.tsx"
+					"target": "components/Features.tsx"
 				},
 				{
 					"path": "registry/open-source/SectionHeader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SectionHeader.tsx"
+					"target": "components/SectionHeader.tsx"
 				}
 			]
 		},
@@ -1368,7 +1368,7 @@
 				{
 					"path": "registry/open-source/FilmReel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FilmReel.tsx"
+					"target": "components/FilmReel.tsx"
 				}
 			]
 		},
@@ -1386,7 +1386,7 @@
 				{
 					"path": "registry/open-source/FishyButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FishyButton.tsx"
+					"target": "components/FishyButton.tsx"
 				}
 			]
 		},
@@ -1404,7 +1404,7 @@
 				{
 					"path": "registry/open-source/FlipCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FlipCard.tsx"
+					"target": "components/FlipCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1427,7 +1427,7 @@
 				{
 					"path": "registry/open-source/FlippedMenu.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FlippedMenu.tsx"
+					"target": "components/FlippedMenu.tsx"
 				}
 			]
 		},
@@ -1445,7 +1445,7 @@
 				{
 					"path": "registry/open-source/FlippingText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FlippingText.tsx"
+					"target": "components/FlippingText.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1468,7 +1468,7 @@
 				{
 					"path": "registry/open-source/FloatingDock.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FloatingDock.tsx"
+					"target": "components/FloatingDock.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1491,7 +1491,7 @@
 				{
 					"path": "registry/open-source/FloatingNav.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FloatingNav.tsx"
+					"target": "components/FloatingNav.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1514,7 +1514,7 @@
 				{
 					"path": "registry/open-source/FlowerMenu.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FlowerMenu.tsx"
+					"target": "components/FlowerMenu.tsx"
 				}
 			]
 		},
@@ -1532,7 +1532,7 @@
 				{
 					"path": "registry/open-source/FlowingNav.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FlowingNav.tsx"
+					"target": "components/FlowingNav.tsx"
 				}
 			]
 		},
@@ -1550,7 +1550,7 @@
 				{
 					"path": "registry/open-source/FluidGlass.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FluidGlass.tsx"
+					"target": "components/FluidGlass.tsx"
 				}
 			]
 		},
@@ -1568,7 +1568,7 @@
 				{
 					"path": "registry/open-source/FluidMorph.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FluidMorph.tsx"
+					"target": "components/FluidMorph.tsx"
 				}
 			]
 		},
@@ -1586,7 +1586,7 @@
 				{
 					"path": "registry/open-source/FocusCards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FocusCards.tsx"
+					"target": "components/FocusCards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1609,7 +1609,7 @@
 				{
 					"path": "registry/open-source/FoldHoverButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FoldHoverButton.tsx"
+					"target": "components/FoldHoverButton.tsx"
 				}
 			]
 		},
@@ -1627,7 +1627,7 @@
 				{
 					"path": "registry/open-source/Folder.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Folder.tsx"
+					"target": "components/Folder.tsx"
 				}
 			]
 		},
@@ -1645,7 +1645,7 @@
 				{
 					"path": "registry/open-source/FollowCursor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FollowCursor.tsx"
+					"target": "components/FollowCursor.tsx"
 				}
 			]
 		},
@@ -1658,7 +1658,7 @@
 				{
 					"path": "registry/open-source/FollowingEyes.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FollowingEyes.tsx"
+					"target": "components/FollowingEyes.tsx"
 				}
 			]
 		},
@@ -1676,7 +1676,7 @@
 				{
 					"path": "registry/open-source/FollowingHeaders.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FollowingHeaders.tsx"
+					"target": "components/FollowingHeaders.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1699,7 +1699,7 @@
 				{
 					"path": "registry/open-source/FollowingPointer.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FollowingPointer.tsx"
+					"target": "components/FollowingPointer.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1722,7 +1722,7 @@
 				{
 					"path": "registry/open-source/FractalGrid.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FractalGrid.tsx"
+					"target": "components/FractalGrid.tsx"
 				}
 			]
 		},
@@ -1740,7 +1740,7 @@
 				{
 					"path": "registry/open-source/Frequency.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Frequency.tsx"
+					"target": "components/Frequency.tsx"
 				}
 			]
 		},
@@ -1758,7 +1758,7 @@
 				{
 					"path": "registry/open-source/FullscreenImage.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FullscreenImage.tsx"
+					"target": "components/FullscreenImage.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1781,7 +1781,7 @@
 				{
 					"path": "registry/open-source/FuzzyOverlay.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FuzzyOverlay.tsx"
+					"target": "components/FuzzyOverlay.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1804,7 +1804,7 @@
 				{
 					"path": "registry/open-source/FuzzyText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/FuzzyText.tsx"
+					"target": "components/FuzzyText.tsx"
 				}
 			]
 		},
@@ -1822,7 +1822,7 @@
 				{
 					"path": "registry/open-source/GalaxyButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GalaxyButton.tsx"
+					"target": "components/GalaxyButton.tsx"
 				}
 			]
 		},
@@ -1840,12 +1840,12 @@
 				{
 					"path": "registry/open-source/Gallery.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Gallery.tsx"
+					"target": "components/Gallery.tsx"
 				},
 				{
 					"path": "registry/open-source/SectionHeader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SectionHeader.tsx"
+					"target": "components/SectionHeader.tsx"
 				}
 			]
 		},
@@ -1863,7 +1863,7 @@
 				{
 					"path": "registry/open-source/GhostLabel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GhostLabel.tsx"
+					"target": "components/GhostLabel.tsx"
 				}
 			]
 		},
@@ -1881,7 +1881,7 @@
 				{
 					"path": "registry/open-source/GifText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GifText.tsx"
+					"target": "components/GifText.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1904,7 +1904,7 @@
 				{
 					"path": "registry/open-source/GlassNav.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GlassNav.tsx"
+					"target": "components/GlassNav.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1927,7 +1927,7 @@
 				{
 					"path": "registry/open-source/Globe.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Globe.tsx"
+					"target": "components/Globe.tsx"
 				}
 			]
 		},
@@ -1945,7 +1945,7 @@
 				{
 					"path": "registry/open-source/GlowingBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GlowingBackground.tsx"
+					"target": "components/GlowingBackground.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1968,7 +1968,7 @@
 				{
 					"path": "registry/open-source/GlowingEffect.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GlowingEffect.tsx"
+					"target": "components/GlowingEffect.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1991,7 +1991,7 @@
 				{
 					"path": "registry/open-source/GooeyTabs.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GooeyTabs.tsx"
+					"target": "components/GooeyTabs.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -2019,7 +2019,7 @@
 				{
 					"path": "registry/open-source/GradientBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GradientBackground.tsx"
+					"target": "components/GradientBackground.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2042,7 +2042,7 @@
 				{
 					"path": "registry/open-source/GradientCheckbox.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GradientCheckbox.tsx"
+					"target": "components/GradientCheckbox.tsx"
 				}
 			]
 		},
@@ -2060,7 +2060,7 @@
 				{
 					"path": "registry/open-source/GradientTestimonials.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GradientTestimonials.tsx"
+					"target": "components/GradientTestimonials.tsx"
 				}
 			]
 		},
@@ -2078,7 +2078,7 @@
 				{
 					"path": "registry/open-source/Gravity.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Gravity.tsx"
+					"target": "components/Gravity.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2101,7 +2101,7 @@
 				{
 					"path": "registry/open-source/GridContent.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GridContent.tsx"
+					"target": "components/GridContent.tsx"
 				}
 			]
 		},
@@ -2119,7 +2119,7 @@
 				{
 					"path": "registry/open-source/GridDistortion.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GridDistortion.tsx"
+					"target": "components/GridDistortion.tsx"
 				}
 			]
 		},
@@ -2137,7 +2137,7 @@
 				{
 					"path": "registry/open-source/GridToFlex.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GridToFlex.tsx"
+					"target": "components/GridToFlex.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2160,12 +2160,12 @@
 				{
 					"path": "registry/open-source/GsapProvider.tsx",
 					"type": "registry:ui",
-					"target": "@/components/GsapProvider.tsx"
+					"target": "components/GsapProvider.tsx"
 				},
 				{
 					"path": "registry/open-source/ScrollTriggerContext.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollTriggerContext.tsx"
+					"target": "components/ScrollTriggerContext.tsx"
 				}
 			]
 		},
@@ -2183,7 +2183,7 @@
 				{
 					"path": "registry/open-source/HalfFilledText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HalfFilledText.tsx"
+					"target": "components/HalfFilledText.tsx"
 				}
 			]
 		},
@@ -2201,7 +2201,7 @@
 				{
 					"path": "registry/open-source/HeroHighlight.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HeroHighlight.tsx"
+					"target": "components/HeroHighlight.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2224,7 +2224,7 @@
 				{
 					"path": "registry/open-source/HeroParallax.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HeroParallax.tsx"
+					"target": "components/HeroParallax.tsx"
 				}
 			]
 		},
@@ -2242,7 +2242,7 @@
 				{
 					"path": "registry/open-source/HorizontalCta.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HorizontalCta.tsx"
+					"target": "components/HorizontalCta.tsx"
 				}
 			]
 		},
@@ -2260,7 +2260,7 @@
 				{
 					"path": "registry/open-source/HorizontalScrollGallery.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HorizontalScrollGallery.tsx"
+					"target": "components/HorizontalScrollGallery.tsx"
 				}
 			]
 		},
@@ -2278,7 +2278,7 @@
 				{
 					"path": "registry/open-source/Hover.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Hover.tsx"
+					"target": "components/Hover.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2301,7 +2301,7 @@
 				{
 					"path": "registry/open-source/HoverBorder.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HoverBorder.tsx"
+					"target": "components/HoverBorder.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2324,7 +2324,7 @@
 				{
 					"path": "registry/open-source/HoverCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HoverCard.tsx"
+					"target": "components/HoverCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2347,7 +2347,7 @@
 				{
 					"path": "registry/open-source/HoverCards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HoverCards.tsx"
+					"target": "components/HoverCards.tsx"
 				}
 			]
 		},
@@ -2365,7 +2365,7 @@
 				{
 					"path": "registry/open-source/HoverGallery.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HoverGallery.tsx"
+					"target": "components/HoverGallery.tsx"
 				}
 			]
 		},
@@ -2383,7 +2383,7 @@
 				{
 					"path": "registry/open-source/HoverSquares.tsx",
 					"type": "registry:ui",
-					"target": "@/components/HoverSquares.tsx"
+					"target": "components/HoverSquares.tsx"
 				}
 			]
 		},
@@ -2401,7 +2401,7 @@
 				{
 					"path": "registry/open-source/ImageReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ImageReveal.tsx"
+					"target": "components/ImageReveal.tsx"
 				}
 			]
 		},
@@ -2419,7 +2419,7 @@
 				{
 					"path": "registry/open-source/ImageRipple.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ImageRipple.tsx"
+					"target": "components/ImageRipple.tsx"
 				}
 			]
 		},
@@ -2437,7 +2437,7 @@
 				{
 					"path": "registry/open-source/ImageWheel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ImageWheel.tsx"
+					"target": "components/ImageWheel.tsx"
 				}
 			]
 		},
@@ -2455,7 +2455,7 @@
 				{
 					"path": "registry/open-source/ImageZoom.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ImageZoom.tsx"
+					"target": "components/ImageZoom.tsx"
 				}
 			]
 		},
@@ -2473,7 +2473,7 @@
 				{
 					"path": "registry/open-source/Improvements.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Improvements.tsx"
+					"target": "components/Improvements.tsx"
 				}
 			]
 		},
@@ -2491,7 +2491,7 @@
 				{
 					"path": "registry/open-source/InfiniteCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InfiniteCarousel.tsx"
+					"target": "components/InfiniteCarousel.tsx"
 				}
 			]
 		},
@@ -2509,7 +2509,7 @@
 				{
 					"path": "registry/open-source/InfiniteMenu.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InfiniteMenu.tsx"
+					"target": "components/InfiniteMenu.tsx"
 				}
 			]
 		},
@@ -2527,7 +2527,7 @@
 				{
 					"path": "registry/open-source/InfiniteMovingCards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InfiniteMovingCards.tsx"
+					"target": "components/InfiniteMovingCards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2550,7 +2550,7 @@
 				{
 					"path": "registry/open-source/InfoCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InfoCard.tsx"
+					"target": "components/InfoCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2573,7 +2573,7 @@
 				{
 					"path": "registry/open-source/InnerGlow.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InnerGlow.tsx"
+					"target": "components/InnerGlow.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2596,7 +2596,7 @@
 				{
 					"path": "registry/open-source/InputAnimated.tsx",
 					"type": "registry:ui",
-					"target": "@/components/InputAnimated.tsx"
+					"target": "components/InputAnimated.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2619,12 +2619,12 @@
 				{
 					"path": "registry/open-source/Introduction.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Introduction.tsx"
+					"target": "components/Introduction.tsx"
 				},
 				{
 					"path": "registry/open-source/LottieScrollTrigger.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LottieScrollTrigger.tsx"
+					"target": "components/LottieScrollTrigger.tsx"
 				}
 			]
 		},
@@ -2642,7 +2642,7 @@
 				{
 					"path": "registry/open-source/Lamp.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Lamp.tsx"
+					"target": "components/Lamp.tsx"
 				}
 			]
 		},
@@ -2660,7 +2660,7 @@
 				{
 					"path": "registry/open-source/LaneCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LaneCard.tsx"
+					"target": "components/LaneCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2683,7 +2683,7 @@
 				{
 					"path": "registry/open-source/Lanyard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Lanyard.tsx"
+					"target": "components/Lanyard.tsx"
 				}
 			]
 		},
@@ -2701,7 +2701,7 @@
 				{
 					"path": "registry/open-source/LayoutGrid.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LayoutGrid.tsx"
+					"target": "components/LayoutGrid.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2724,7 +2724,7 @@
 				{
 					"path": "registry/open-source/Lens.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Lens.tsx"
+					"target": "components/Lens.tsx"
 				}
 			]
 		},
@@ -2742,7 +2742,7 @@
 				{
 					"path": "registry/open-source/Letter3dSwap.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Letter3dSwap.tsx"
+					"target": "components/Letter3dSwap.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2765,7 +2765,7 @@
 				{
 					"path": "registry/open-source/LetterHover.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LetterHover.tsx"
+					"target": "components/LetterHover.tsx"
 				}
 			]
 		},
@@ -2783,7 +2783,7 @@
 				{
 					"path": "registry/open-source/LightRays.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LightRays.tsx"
+					"target": "components/LightRays.tsx"
 				}
 			]
 		},
@@ -2801,7 +2801,7 @@
 				{
 					"path": "registry/open-source/LineBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LineBackground.tsx"
+					"target": "components/LineBackground.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2824,7 +2824,7 @@
 				{
 					"path": "registry/open-source/LinearDialog.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LinearDialog.tsx"
+					"target": "components/LinearDialog.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2847,7 +2847,7 @@
 				{
 					"path": "registry/open-source/LinkPreview.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LinkPreview.tsx"
+					"target": "components/LinkPreview.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2870,7 +2870,7 @@
 				{
 					"path": "registry/open-source/ListRotator.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ListRotator.tsx"
+					"target": "components/ListRotator.tsx"
 				}
 			]
 		},
@@ -2888,7 +2888,7 @@
 				{
 					"path": "registry/open-source/LottieScrollTrigger.tsx",
 					"type": "registry:ui",
-					"target": "@/components/LottieScrollTrigger.tsx"
+					"target": "components/LottieScrollTrigger.tsx"
 				}
 			]
 		},
@@ -2906,7 +2906,7 @@
 				{
 					"path": "registry/open-source/Macbook.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Macbook.tsx"
+					"target": "components/Macbook.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2916,7 +2916,7 @@
 				{
 					"path": "registry/open-source/ToolTip.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ToolTip.tsx"
+					"target": "components/ToolTip.tsx"
 				}
 			]
 		},
@@ -2934,7 +2934,7 @@
 				{
 					"path": "registry/open-source/MagicBento.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MagicBento.tsx"
+					"target": "components/MagicBento.tsx"
 				}
 			]
 		},
@@ -2952,7 +2952,7 @@
 				{
 					"path": "registry/open-source/MagnetLines.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MagnetLines.tsx"
+					"target": "components/MagnetLines.tsx"
 				}
 			]
 		},
@@ -2970,7 +2970,7 @@
 				{
 					"path": "registry/open-source/MarqueeAlongSVG.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MarqueeAlongSVG.tsx"
+					"target": "components/MarqueeAlongSVG.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2993,7 +2993,7 @@
 				{
 					"path": "registry/open-source/MaskEffect.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MaskEffect.tsx"
+					"target": "components/MaskEffect.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3016,7 +3016,7 @@
 				{
 					"path": "registry/open-source/Masonry.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Masonry.tsx"
+					"target": "components/Masonry.tsx"
 				}
 			]
 		},
@@ -3034,7 +3034,7 @@
 				{
 					"path": "registry/open-source/MatrixBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MatrixBackground.tsx"
+					"target": "components/MatrixBackground.tsx"
 				}
 			]
 		},
@@ -3052,7 +3052,7 @@
 				{
 					"path": "registry/open-source/MediaBetweenText.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MediaBetweenText.tsx"
+					"target": "components/MediaBetweenText.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3075,7 +3075,7 @@
 				{
 					"path": "registry/open-source/Meteors.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Meteors.tsx"
+					"target": "components/Meteors.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3098,7 +3098,7 @@
 				{
 					"path": "registry/open-source/MobileNav.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MobileNav.tsx"
+					"target": "components/MobileNav.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3121,7 +3121,7 @@
 				{
 					"path": "registry/open-source/MobileNavBasic.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MobileNavBasic.tsx"
+					"target": "components/MobileNavBasic.tsx"
 				}
 			]
 		},
@@ -3139,7 +3139,7 @@
 				{
 					"path": "registry/open-source/ModelViewer.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ModelViewer.tsx"
+					"target": "components/ModelViewer.tsx"
 				}
 			]
 		},
@@ -3157,7 +3157,7 @@
 				{
 					"path": "registry/open-source/MouseImageTrail.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MouseImageTrail.tsx"
+					"target": "components/MouseImageTrail.tsx"
 				}
 			]
 		},
@@ -3175,7 +3175,7 @@
 				{
 					"path": "registry/open-source/MovieGallery.tsx",
 					"type": "registry:ui",
-					"target": "@/components/MovieGallery.tsx"
+					"target": "components/MovieGallery.tsx"
 				}
 			]
 		},
@@ -3193,7 +3193,7 @@
 				{
 					"path": "registry/open-source/NavBar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/NavBar.tsx"
+					"target": "components/NavBar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3203,7 +3203,7 @@
 				{
 					"path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/theme_changer/ThemeToggleButton.tsx"
+					"target": "components/theme_changer/ThemeToggleButton.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -3226,7 +3226,7 @@
 				{
 					"path": "registry/open-source/Navbar2.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Navbar2.tsx"
+					"target": "components/Navbar2.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -3259,7 +3259,7 @@
 				{
 					"path": "registry/open-source/Navbar3.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Navbar3.tsx"
+					"target": "components/Navbar3.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -3292,7 +3292,7 @@
 				{
 					"path": "registry/open-source/Navigation.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Navigation.tsx"
+					"target": "components/Navigation.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3315,7 +3315,7 @@
 				{
 					"path": "registry/open-source/NineDotLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/NineDotLoader.tsx"
+					"target": "components/NineDotLoader.tsx"
 				}
 			]
 		},
@@ -3333,7 +3333,7 @@
 				{
 					"path": "registry/open-source/NumberTicker.tsx",
 					"type": "registry:ui",
-					"target": "@/components/NumberTicker.tsx"
+					"target": "components/NumberTicker.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3356,7 +3356,7 @@
 				{
 					"path": "registry/open-source/OppositeScroll.tsx",
 					"type": "registry:ui",
-					"target": "@/components/OppositeScroll.tsx"
+					"target": "components/OppositeScroll.tsx"
 				}
 			]
 		},
@@ -3374,7 +3374,7 @@
 				{
 					"path": "registry/open-source/OppositeScrollLinks.tsx",
 					"type": "registry:ui",
-					"target": "@/components/OppositeScrollLinks.tsx"
+					"target": "components/OppositeScrollLinks.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3397,7 +3397,7 @@
 				{
 					"path": "registry/open-source/ParallaxCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ParallaxCarousel.tsx"
+					"target": "components/ParallaxCarousel.tsx"
 				}
 			]
 		},
@@ -3415,7 +3415,7 @@
 				{
 					"path": "registry/open-source/ParallaxFloating.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ParallaxFloating.tsx"
+					"target": "components/ParallaxFloating.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3438,7 +3438,7 @@
 				{
 					"path": "registry/open-source/ParallaxScroll.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ParallaxScroll.tsx"
+					"target": "components/ParallaxScroll.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3461,7 +3461,7 @@
 				{
 					"path": "registry/open-source/PeelReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PeelReveal.tsx"
+					"target": "components/PeelReveal.tsx"
 				}
 			]
 		},
@@ -3479,7 +3479,7 @@
 				{
 					"path": "registry/open-source/Pin.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Pin.tsx"
+					"target": "components/Pin.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3502,7 +3502,7 @@
 				{
 					"path": "registry/open-source/PingPong.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PingPong.tsx"
+					"target": "components/PingPong.tsx"
 				}
 			]
 		},
@@ -3520,7 +3520,7 @@
 				{
 					"path": "registry/open-source/Pipeline.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Pipeline.tsx"
+					"target": "components/Pipeline.tsx"
 				}
 			]
 		},
@@ -3538,7 +3538,7 @@
 				{
 					"path": "registry/open-source/PixelImage.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PixelImage.tsx"
+					"target": "components/PixelImage.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3561,7 +3561,7 @@
 				{
 					"path": "registry/open-source/Pointer.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Pointer.tsx"
+					"target": "components/Pointer.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3584,7 +3584,7 @@
 				{
 					"path": "registry/open-source/PopularPriceCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PopularPriceCard.tsx"
+					"target": "components/PopularPriceCard.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -3612,7 +3612,7 @@
 				{
 					"path": "registry/open-source/PositionAwareButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PositionAwareButton.tsx"
+					"target": "components/PositionAwareButton.tsx"
 				}
 			]
 		},
@@ -3630,7 +3630,7 @@
 				{
 					"path": "registry/open-source/PowerOffSlide.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PowerOffSlide.tsx"
+					"target": "components/PowerOffSlide.tsx"
 				}
 			]
 		},
@@ -3648,7 +3648,7 @@
 				{
 					"path": "registry/open-source/Preloader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Preloader.tsx"
+					"target": "components/Preloader.tsx"
 				}
 			]
 		},
@@ -3666,12 +3666,12 @@
 				{
 					"path": "registry/open-source/PriceCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PriceCard.tsx"
+					"target": "components/PriceCard.tsx"
 				},
 				{
 					"path": "registry/open-source/ScalingButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScalingButton.tsx"
+					"target": "components/ScalingButton.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -3699,7 +3699,7 @@
 				{
 					"path": "registry/open-source/PricingTable.tsx",
 					"type": "registry:ui",
-					"target": "@/components/PricingTable.tsx"
+					"target": "components/PricingTable.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3722,7 +3722,7 @@
 				{
 					"path": "registry/open-source/ProgressCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ProgressCarousel.tsx"
+					"target": "components/ProgressCarousel.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3745,7 +3745,7 @@
 				{
 					"path": "registry/open-source/ProgressiveBlur.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ProgressiveBlur.tsx"
+					"target": "components/ProgressiveBlur.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3768,7 +3768,7 @@
 				{
 					"path": "registry/open-source/ProjectShowcase.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ProjectShowcase.tsx"
+					"target": "components/ProjectShowcase.tsx"
 				}
 			]
 		},
@@ -3786,7 +3786,7 @@
 				{
 					"path": "registry/open-source/RandomLetterSwapHover.tsx",
 					"type": "registry:ui",
-					"target": "@/components/RandomLetterSwapHover.tsx"
+					"target": "components/RandomLetterSwapHover.tsx"
 				}
 			]
 		},
@@ -3804,7 +3804,7 @@
 				{
 					"path": "registry/open-source/ResizeNavbar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ResizeNavbar.tsx"
+					"target": "components/ResizeNavbar.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -3832,7 +3832,7 @@
 				{
 					"path": "registry/open-source/RoundedScrollbar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/RoundedScrollbar.tsx"
+					"target": "components/RoundedScrollbar.tsx"
 				}
 			]
 		},
@@ -3850,7 +3850,7 @@
 				{
 					"path": "registry/open-source/Sandbox.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Sandbox.tsx"
+					"target": "components/Sandbox.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3873,7 +3873,7 @@
 				{
 					"path": "registry/open-source/ScalingButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScalingButton.tsx"
+					"target": "components/ScalingButton.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -3901,7 +3901,7 @@
 				{
 					"path": "registry/open-source/ScreenSaver.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScreenSaver.tsx"
+					"target": "components/ScreenSaver.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3924,7 +3924,7 @@
 				{
 					"path": "registry/open-source/ScrollFloat.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollFloat.tsx"
+					"target": "components/ScrollFloat.tsx"
 				}
 			]
 		},
@@ -3942,7 +3942,7 @@
 				{
 					"path": "registry/open-source/ScrollIsland.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollIsland.tsx"
+					"target": "components/ScrollIsland.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3965,7 +3965,7 @@
 				{
 					"path": "registry/open-source/ScrollReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollReveal.tsx"
+					"target": "components/ScrollReveal.tsx"
 				}
 			]
 		},
@@ -3983,7 +3983,7 @@
 				{
 					"path": "registry/open-source/ScrollTriggerContext.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ScrollTriggerContext.tsx"
+					"target": "components/ScrollTriggerContext.tsx"
 				}
 			]
 		},
@@ -4001,7 +4001,7 @@
 				{
 					"path": "registry/open-source/Searchbar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Searchbar.tsx"
+					"target": "components/Searchbar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4011,7 +4011,7 @@
 				{
 					"path": "registry/open-source/ThreeDotLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ThreeDotLoader.tsx"
+					"target": "components/ThreeDotLoader.tsx"
 				}
 			]
 		},
@@ -4029,7 +4029,7 @@
 				{
 					"path": "registry/open-source/SectionHeader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SectionHeader.tsx"
+					"target": "components/SectionHeader.tsx"
 				}
 			]
 		},
@@ -4047,7 +4047,7 @@
 				{
 					"path": "registry/open-source/SelectModal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SelectModal.tsx"
+					"target": "components/SelectModal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4070,7 +4070,7 @@
 				{
 					"path": "registry/open-source/Services.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Services.tsx"
+					"target": "components/Services.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4093,7 +4093,7 @@
 				{
 					"path": "registry/open-source/ShapeBlur.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ShapeBlur.tsx"
+					"target": "components/ShapeBlur.tsx"
 				}
 			]
 		},
@@ -4111,7 +4111,7 @@
 				{
 					"path": "registry/open-source/ShareButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ShareButton.tsx"
+					"target": "components/ShareButton.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -4139,7 +4139,7 @@
 				{
 					"path": "registry/open-source/ShuffleHero.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ShuffleHero.tsx"
+					"target": "components/ShuffleHero.tsx"
 				}
 			]
 		},
@@ -4157,7 +4157,7 @@
 				{
 					"path": "registry/open-source/Sidebar.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Sidebar.tsx"
+					"target": "components/Sidebar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4180,7 +4180,7 @@
 				{
 					"path": "registry/open-source/Sideivdeo.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Sideivdeo.tsx"
+					"target": "components/Sideivdeo.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4203,7 +4203,7 @@
 				{
 					"path": "registry/open-source/SimpleFooter.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SimpleFooter.tsx"
+					"target": "components/SimpleFooter.tsx"
 				}
 			]
 		},
@@ -4221,7 +4221,7 @@
 				{
 					"path": "registry/open-source/SimpleGrid.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SimpleGrid.tsx"
+					"target": "components/SimpleGrid.tsx"
 				}
 			]
 		},
@@ -4239,7 +4239,7 @@
 				{
 					"path": "registry/open-source/SlideButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SlideButton.tsx"
+					"target": "components/SlideButton.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -4267,7 +4267,7 @@
 				{
 					"path": "registry/open-source/SlidingNumbers.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SlidingNumbers.tsx"
+					"target": "components/SlidingNumbers.tsx"
 				}
 			]
 		},
@@ -4285,7 +4285,7 @@
 				{
 					"path": "registry/open-source/SmokeyCursor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SmokeyCursor.tsx"
+					"target": "components/SmokeyCursor.tsx"
 				}
 			]
 		},
@@ -4303,7 +4303,7 @@
 				{
 					"path": "registry/open-source/SmoothCursor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SmoothCursor.tsx"
+					"target": "components/SmoothCursor.tsx"
 				}
 			]
 		},
@@ -4321,7 +4321,7 @@
 				{
 					"path": "registry/open-source/SmoothSlider.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SmoothSlider.tsx"
+					"target": "components/SmoothSlider.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4344,7 +4344,7 @@
 				{
 					"path": "registry/open-source/Snowflakes.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Snowflakes.tsx"
+					"target": "components/Snowflakes.tsx"
 				}
 			]
 		},
@@ -4362,7 +4362,7 @@
 				{
 					"path": "registry/open-source/SocialLinks.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SocialLinks.tsx"
+					"target": "components/SocialLinks.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4385,7 +4385,7 @@
 				{
 					"path": "registry/open-source/Sparkles.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Sparkles.tsx"
+					"target": "components/Sparkles.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4408,7 +4408,7 @@
 				{
 					"path": "registry/open-source/Spinner.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Spinner.tsx"
+					"target": "components/Spinner.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4431,7 +4431,7 @@
 				{
 					"path": "registry/open-source/Spotlight.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Spotlight.tsx"
+					"target": "components/Spotlight.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4454,7 +4454,7 @@
 				{
 					"path": "registry/open-source/SpringElement.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SpringElement.tsx"
+					"target": "components/SpringElement.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4477,7 +4477,7 @@
 				{
 					"path": "registry/open-source/SpringFAQ.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SpringFAQ.tsx"
+					"target": "components/SpringFAQ.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4500,7 +4500,7 @@
 				{
 					"path": "registry/open-source/SpringModal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SpringModal.tsx"
+					"target": "components/SpringModal.tsx"
 				}
 			]
 		},
@@ -4518,7 +4518,7 @@
 				{
 					"path": "registry/open-source/StackedCarousel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StackedCarousel.tsx"
+					"target": "components/StackedCarousel.tsx"
 				}
 			]
 		},
@@ -4536,7 +4536,7 @@
 				{
 					"path": "registry/open-source/StackingCards.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StackingCards.tsx"
+					"target": "components/StackingCards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4559,7 +4559,7 @@
 				{
 					"path": "registry/open-source/StarfieldWrapper.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StarfieldWrapper.tsx"
+					"target": "components/StarfieldWrapper.tsx"
 				}
 			]
 		},
@@ -4577,7 +4577,7 @@
 				{
 					"path": "registry/open-source/StickerPeel.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StickerPeel.tsx"
+					"target": "components/StickerPeel.tsx"
 				}
 			]
 		},
@@ -4595,7 +4595,7 @@
 				{
 					"path": "registry/open-source/StickyScrollReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StickyScrollReveal.tsx"
+					"target": "components/StickyScrollReveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4618,7 +4618,7 @@
 				{
 					"path": "registry/open-source/StripeAccordion.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StripeAccordion.tsx"
+					"target": "components/StripeAccordion.tsx"
 				}
 			]
 		},
@@ -4636,7 +4636,7 @@
 				{
 					"path": "registry/open-source/StripesPreloader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/StripesPreloader.tsx"
+					"target": "components/StripesPreloader.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4659,7 +4659,7 @@
 				{
 					"path": "registry/open-source/SwapColumnFeatures.tsx",
 					"type": "registry:ui",
-					"target": "@/components/SwapColumnFeatures.tsx"
+					"target": "components/SwapColumnFeatures.tsx"
 				}
 			]
 		},
@@ -4677,7 +4677,7 @@
 				{
 					"path": "registry/open-source/Table.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Table.tsx"
+					"target": "components/Table.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4700,7 +4700,7 @@
 				{
 					"path": "registry/open-source/Tabs.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Tabs.tsx"
+					"target": "components/Tabs.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4723,7 +4723,7 @@
 				{
 					"path": "registry/open-source/TargetCursor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TargetCursor.tsx"
+					"target": "components/TargetCursor.tsx"
 				}
 			]
 		},
@@ -4741,7 +4741,7 @@
 				{
 					"path": "registry/open-source/Terminal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Terminal.tsx"
+					"target": "components/Terminal.tsx"
 				}
 			]
 		},
@@ -4759,7 +4759,7 @@
 				{
 					"path": "registry/open-source/TextAlongPath.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextAlongPath.tsx"
+					"target": "components/TextAlongPath.tsx"
 				}
 			]
 		},
@@ -4777,7 +4777,7 @@
 				{
 					"path": "registry/open-source/TextAnimate.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextAnimate.tsx"
+					"target": "components/TextAnimate.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4800,7 +4800,7 @@
 				{
 					"path": "registry/open-source/TextCursor.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextCursor.tsx"
+					"target": "components/TextCursor.tsx"
 				}
 			]
 		},
@@ -4818,7 +4818,7 @@
 				{
 					"path": "registry/open-source/TextCurve.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextCurve.tsx"
+					"target": "components/TextCurve.tsx"
 				}
 			]
 		},
@@ -4836,7 +4836,7 @@
 				{
 					"path": "registry/open-source/TextEnhanced.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextEnhanced.tsx"
+					"target": "components/TextEnhanced.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4859,7 +4859,7 @@
 				{
 					"path": "registry/open-source/TextFocus.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextFocus.tsx"
+					"target": "components/TextFocus.tsx"
 				}
 			]
 		},
@@ -4877,7 +4877,7 @@
 				{
 					"path": "registry/open-source/TextGradient.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextGradient.tsx"
+					"target": "components/TextGradient.tsx"
 				}
 			]
 		},
@@ -4895,7 +4895,7 @@
 				{
 					"path": "registry/open-source/TextHighlighter.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextHighlighter.tsx"
+					"target": "components/TextHighlighter.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4918,7 +4918,7 @@
 				{
 					"path": "registry/open-source/TextHover.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextHover.tsx"
+					"target": "components/TextHover.tsx"
 				}
 			]
 		},
@@ -4936,7 +4936,7 @@
 				{
 					"path": "registry/open-source/TextMorph.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextMorph.tsx"
+					"target": "components/TextMorph.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4959,7 +4959,7 @@
 				{
 					"path": "registry/open-source/TextParallaxContent.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextParallaxContent.tsx"
+					"target": "components/TextParallaxContent.tsx"
 				}
 			]
 		},
@@ -4977,7 +4977,7 @@
 				{
 					"path": "registry/open-source/TextProximity.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextProximity.tsx"
+					"target": "components/TextProximity.tsx"
 				}
 			]
 		},
@@ -4995,7 +4995,7 @@
 				{
 					"path": "registry/open-source/TextReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextReveal.tsx"
+					"target": "components/TextReveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5018,7 +5018,7 @@
 				{
 					"path": "registry/open-source/TextRoll.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextRoll.tsx"
+					"target": "components/TextRoll.tsx"
 				}
 			]
 		},
@@ -5036,7 +5036,7 @@
 				{
 					"path": "registry/open-source/TextRotate.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextRotate.tsx"
+					"target": "components/TextRotate.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5059,7 +5059,7 @@
 				{
 					"path": "registry/open-source/TextSplit.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextSplit.tsx"
+					"target": "components/TextSplit.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5082,7 +5082,7 @@
 				{
 					"path": "registry/open-source/TextTrail.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextTrail.tsx"
+					"target": "components/TextTrail.tsx"
 				}
 			]
 		},
@@ -5100,7 +5100,7 @@
 				{
 					"path": "registry/open-source/TextType.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextType.tsx"
+					"target": "components/TextType.tsx"
 				}
 			]
 		},
@@ -5118,7 +5118,7 @@
 				{
 					"path": "registry/open-source/TextUnderline.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TextUnderline.tsx"
+					"target": "components/TextUnderline.tsx"
 				}
 			]
 		},
@@ -5136,7 +5136,7 @@
 				{
 					"path": "registry/open-source/Threads.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Threads.tsx"
+					"target": "components/Threads.tsx"
 				}
 			]
 		},
@@ -5154,7 +5154,7 @@
 				{
 					"path": "registry/open-source/ThreeBounceLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ThreeBounceLoader.tsx"
+					"target": "components/ThreeBounceLoader.tsx"
 				}
 			]
 		},
@@ -5172,7 +5172,7 @@
 				{
 					"path": "registry/open-source/ThreeDotLoader.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ThreeDotLoader.tsx"
+					"target": "components/ThreeDotLoader.tsx"
 				}
 			]
 		},
@@ -5190,7 +5190,7 @@
 				{
 					"path": "registry/open-source/TilesBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TilesBackground.tsx"
+					"target": "components/TilesBackground.tsx"
 				}
 			]
 		},
@@ -5208,7 +5208,7 @@
 				{
 					"path": "registry/open-source/Timeline.tsx",
 					"type": "registry:ui",
-					"target": "@/components/Timeline.tsx"
+					"target": "components/Timeline.tsx"
 				}
 			]
 		},
@@ -5226,7 +5226,7 @@
 				{
 					"path": "registry/open-source/ToolTip.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ToolTip.tsx"
+					"target": "components/ToolTip.tsx"
 				}
 			]
 		},
@@ -5244,7 +5244,7 @@
 				{
 					"path": "registry/open-source/TracingBeam.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TracingBeam.tsx"
+					"target": "components/TracingBeam.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5267,7 +5267,7 @@
 				{
 					"path": "registry/open-source/TypewriterTestimonials.tsx",
 					"type": "registry:ui",
-					"target": "@/components/TypewriterTestimonials.tsx"
+					"target": "components/TypewriterTestimonials.tsx"
 				}
 			]
 		},
@@ -5285,7 +5285,7 @@
 				{
 					"path": "registry/open-source/UnderlineToBackground.tsx",
 					"type": "registry:ui",
-					"target": "@/components/UnderlineToBackground.tsx"
+					"target": "components/UnderlineToBackground.tsx"
 				}
 			]
 		},
@@ -5303,7 +5303,7 @@
 				{
 					"path": "registry/open-source/VerticalCutReveal.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VerticalCutReveal.tsx"
+					"target": "components/VerticalCutReveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5326,7 +5326,7 @@
 				{
 					"path": "registry/open-source/VideoButton.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VideoButton.tsx"
+					"target": "components/VideoButton.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5349,7 +5349,7 @@
 				{
 					"path": "registry/open-source/VideoHero.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VideoHero.tsx"
+					"target": "components/VideoHero.tsx"
 				}
 			]
 		},
@@ -5367,7 +5367,7 @@
 				{
 					"path": "registry/open-source/VideoPlayer.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VideoPlayer.tsx"
+					"target": "components/VideoPlayer.tsx"
 				}
 			]
 		},
@@ -5385,7 +5385,7 @@
 				{
 					"path": "registry/open-source/VideoPlayer2.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VideoPlayer2.tsx"
+					"target": "components/VideoPlayer2.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5413,7 +5413,7 @@
 				{
 					"path": "registry/open-source/VideoViewer.tsx",
 					"type": "registry:ui",
-					"target": "@/components/VideoViewer.tsx"
+					"target": "components/VideoViewer.tsx"
 				}
 			]
 		},
@@ -5431,7 +5431,7 @@
 				{
 					"path": "registry/open-source/ViewList.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ViewList.tsx"
+					"target": "components/ViewList.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5459,7 +5459,7 @@
 				{
 					"path": "registry/open-source/WobbleCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/WobbleCard.tsx"
+					"target": "components/WobbleCard.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5482,7 +5482,7 @@
 				{
 					"path": "registry/open-source/WordTornado.tsx",
 					"type": "registry:ui",
-					"target": "@/components/WordTornado.tsx"
+					"target": "components/WordTornado.tsx"
 				}
 			]
 		},
@@ -5500,7 +5500,7 @@
 				{
 					"path": "registry/open-source/ZoomBlurCard.tsx",
 					"type": "registry:ui",
-					"target": "@/components/ZoomBlurCard.tsx"
+					"target": "components/ZoomBlurCard.tsx"
 				}
 			]
 		},
@@ -5518,7 +5518,7 @@
 				{
 					"path": "registry/open-source/bottomblur.tsx",
 					"type": "registry:ui",
-					"target": "@/components/bottomblur.tsx"
+					"target": "components/bottomblur.tsx"
 				}
 			]
 		}

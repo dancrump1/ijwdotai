@@ -15,13 +15,13 @@
       "path": "registry/open-source/GsapProvider.tsx",
       "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\n\nimport Tempus from \"tempus\";\nimport gsap from \"gsap\";\n\nimport { ScrollTriggerConfig } from \"./ScrollTriggerContext\";\n\nexport function GsapProvider({ scrollTrigger = true }) {\n\tconst [isMounted, setIsMounted] = useState(false);\n\tuseEffect(() => {\n\t\tgsap.defaults({ ease: \"none\" });\n\n\t\t// merge rafs\n\t\tgsap.ticker.lagSmoothing(0);\n\t\tgsap.ticker.remove(gsap.updateRoot);\n\t\tTempus?.add((time: number) => {\n\t\t\tgsap.updateRoot(time / 1000);\n\t\t}, 0);\n\n\t\tsetIsMounted(true);\n\t}, []);\n\n\tif (!isMounted) return null;\n\n\treturn scrollTrigger && <ScrollTriggerConfig />;\n}\n",
       "type": "registry:ui",
-      "target": "@/components/GsapProvider.tsx"
+      "target": "components/GsapProvider.tsx"
     },
     {
       "path": "registry/open-source/ScrollTriggerContext.tsx",
       "content": "\"use client\";\n\nimport { useEffect } from \"react\";\n\nimport gsap from \"gsap\";\nimport { ScrollTrigger } from \"gsap/dist/ScrollTrigger\";\nimport { useLenis } from \"lenis/react\";\n\ngsap.registerPlugin(ScrollTrigger);\n\nexport function ScrollTriggerConfig() {\n\tconst lenis = useLenis(ScrollTrigger.update);\n\n\tuseEffect(() => {\n\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\n\t\treturn () => {\n\t\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\t\t};\n\t}, []);\n\n\tuseEffect(() => ScrollTrigger.refresh(), [lenis]);\n\n\treturn null;\n}\n",
       "type": "registry:ui",
-      "target": "@/components/ScrollTriggerContext.tsx"
+      "target": "components/ScrollTriggerContext.tsx"
     }
   ]
 }

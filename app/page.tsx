@@ -114,7 +114,7 @@ export default function HomePage() {
 					// Build href
 					const href =
 						category === "All"
-							? "/"
+							? "/all"
 							: `/type/${encodeURIComponent(category.toLowerCase().replace(/\s&\s|\s/g, "-"))}${queryString}`;
 
 					return (

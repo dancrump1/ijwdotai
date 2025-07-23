@@ -15,7 +15,7 @@
       "path": "registry/open-source/ScrollTriggerContext.tsx",
       "content": "\"use client\";\n\nimport { useEffect } from \"react\";\n\nimport gsap from \"gsap\";\nimport { ScrollTrigger } from \"gsap/dist/ScrollTrigger\";\nimport { useLenis } from \"lenis/react\";\n\ngsap.registerPlugin(ScrollTrigger);\n\nexport function ScrollTriggerConfig() {\n\tconst lenis = useLenis(ScrollTrigger.update);\n\n\tuseEffect(() => {\n\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\n\t\treturn () => {\n\t\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\t\t};\n\t}, []);\n\n\tuseEffect(() => ScrollTrigger.refresh(), [lenis]);\n\n\treturn null;\n}\n",
       "type": "registry:ui",
-      "target": "registry/open-source/ScrollTriggerContext.tsx"
+      "target": "@/components/ScrollTriggerContext.tsx"
     }
   ]
 }

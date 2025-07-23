@@ -2,17 +2,18 @@ import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
+import { CheckIcon, ChevronDown, XCircle, XIcon } from "lucide-react";
+
+import { Button } from "./ui/button";
 import {
+	Command,
 	CommandEmpty,
 	CommandGroup,
 	CommandInput,
 	CommandItem,
 	CommandList,
 	CommandSeparator,
-} from "cmdk";
-import { CheckIcon, ChevronDown, Command, XCircle, XIcon } from "lucide-react";
-
-import { Button } from "./ui/button";
+} from "./ui/command";
 import { Popover } from "./ui/popover";
 
 /**

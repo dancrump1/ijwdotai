@@ -91,7 +91,7 @@ const MouseImageTrail = ({
 	};
 
 	const renderNextImage = () => {
-		const imageIndex = imageRenderCount.current % images.length;
+		const imageIndex = imageRenderCount.current % images?.length;
 		const selector = `[data-mouse-move-index="${imageIndex}"]`;
 
 		const el = document.querySelector(selector) as HTMLElement;
@@ -141,7 +141,7 @@ const MouseImageTrail = ({
 		>
 			{children}
 
-			{images.map((img, index) => (
+			{images?.map((img, index) => (
 				<img
 					className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0"
 					src={img}

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/sociallinksexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { SocialLinks } from \"../open-source/SocialLinks\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<SocialLinks\n\t\t\t\tsocials={[\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"Instagram\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"LinkedIn\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"Spotify\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"TikTok\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t]}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { SocialLinks } from \"@/components/SocialLinks\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<SocialLinks\n\t\t\t\tsocials={[\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"Instagram\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"LinkedIn\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"Spotify\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\tname: \"TikTok\",\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t},\n\t\t\t\t]}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

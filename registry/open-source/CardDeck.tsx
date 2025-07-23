@@ -149,7 +149,7 @@ const CardDeck: React.FC<CardStack3DProps> = ({ images }) => {
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
 			>
-				{images.map((image, index) => (
+				{images?.map((image, index) => (
 					<Card
 						key={index + "card-deck"}
 						{...image}

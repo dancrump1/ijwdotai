@@ -27,7 +27,7 @@ const StackedCarousel: React.FC<StackedCarouselProps> = ({
 	borderWidth = 12,
 	backgroundColor = "#e0f1fa",
 }) => {
-	const [order, setOrder] = useState(images.map((_, index) => index));
+	const [order, setOrder] = useState(images?.map((_, index) => index));
 	const [isMoving, setIsMoving] = useState(false);
 	const [direction, setDirection] = useState<"left" | "right" | null>(null);
 	const animationQueue = useRef<("left" | "right")[]>([]);
@@ -82,7 +82,7 @@ const StackedCarousel: React.FC<StackedCarouselProps> = ({
 				className="relative"
 			>
 				<AnimatePresence>
-					{images.map((src, index) => {
+					{images?.map((src, index) => {
 						const orderIndex = order.indexOf(index);
 						const isTop = orderIndex === order.length - 1;
 						const isBottom = orderIndex === 0;

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/imagezoomexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ImageZoom from \"../open-source/ImageZoom\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div>\n\t\t\t\t<ImageZoom\n\t\t\t\t\toutsideImage={\"/oie_transparent.png\"}\n\t\t\t\t\tinsideImage={\"/itjustworks.jpg\"}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ImageZoom from \"@/components/ImageZoom\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div>\n\t\t\t\t<ImageZoom\n\t\t\t\t\toutsideImage={\"/oie_transparent.png\"}\n\t\t\t\t\tinsideImage={\"/itjustworks.jpg\"}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

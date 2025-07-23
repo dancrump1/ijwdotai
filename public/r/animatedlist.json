@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/animatedlistexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport AnimatedList from \"../open-source/AnimatedList\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<AnimatedList\n\t\t\t\titems={[\n\t\t\t\t\t\"Item 1\",\n\t\t\t\t\t\"Item 2\",\n\t\t\t\t\t\"Item 3\",\n\t\t\t\t\t\"Item 4\",\n\t\t\t\t\t\"Item 5\",\n\t\t\t\t\t\"Item 6\",\n\t\t\t\t\t\"Item 7\",\n\t\t\t\t\t\"Item 8\",\n\t\t\t\t\t\"Item 9\",\n\t\t\t\t\t\"Item 10\",\n\t\t\t\t]}\n\t\t\t\tonItemSelect={(item, index) => console.log(item, index)}\n\t\t\t\tshowGradients={true}\n\t\t\t\tenableArrowNavigation={true}\n\t\t\t\tdisplayScrollbar={true}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport AnimatedList from \"@/components/AnimatedList\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<AnimatedList\n\t\t\t\titems={[\n\t\t\t\t\t\"Item 1\",\n\t\t\t\t\t\"Item 2\",\n\t\t\t\t\t\"Item 3\",\n\t\t\t\t\t\"Item 4\",\n\t\t\t\t\t\"Item 5\",\n\t\t\t\t\t\"Item 6\",\n\t\t\t\t\t\"Item 7\",\n\t\t\t\t\t\"Item 8\",\n\t\t\t\t\t\"Item 9\",\n\t\t\t\t\t\"Item 10\",\n\t\t\t\t]}\n\t\t\t\tonItemSelect={(item, index) => console.log(item, index)}\n\t\t\t\tshowGradients={true}\n\t\t\t\tenableArrowNavigation={true}\n\t\t\t\tdisplayScrollbar={true}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

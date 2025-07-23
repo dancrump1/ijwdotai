@@ -27,7 +27,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 	};
 
 	const maxRotation = 45;
-	const rotationStep = maxRotation / (images.length + 1);
+	const rotationStep = maxRotation / (images?.length + 1);
 
 	const folderVariants = {
 		closed: {
@@ -72,7 +72,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 				className="absolute inset-0 flex items-end justify-center"
 				style={{ transformStyle: "preserve-3d" }}
 			>
-				{images.map((image, index) => (
+				{images?.map((image, index) => (
 					<motion.div
 						key={index + "fold-button"}
 						className="absolute inset-0 origin-bottom"
@@ -81,7 +81,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 						variants={imageVariants(index)}
 						style={{
 							transformStyle: "preserve-3d",
-							zIndex: images.length - index + (isHovered ? 2 : 1),
+							zIndex: images?.length - index + (isHovered ? 2 : 1),
 						}}
 					>
 						<Image
@@ -101,7 +101,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 					transition={{ type: "spring", stiffness: 300, damping: 20 }}
 					style={{
 						transformStyle: "preserve-3d",
-						zIndex: images.length + 1,
+						zIndex: images?.length + 1,
 					}}
 				>
 					<div className="absolute inset-0 flex items-center justify-center">

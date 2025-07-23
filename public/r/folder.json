@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/folderexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Folder from \"../open-source/Folder\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div style={{ height: \"600px\", position: \"relative\" }}>\n\t\t\t\t<Folder size={2} color=\"#00d8ff\" className=\"custom-folder\" />\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Folder from \"@/components/Folder\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div style={{ height: \"600px\", position: \"relative\" }}>\n\t\t\t\t<Folder size={2} color=\"#00d8ff\" className=\"custom-folder\" />\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

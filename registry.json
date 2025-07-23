@@ -1650,6 +1650,42 @@
 			]
 		},
 		{
+			"name": "followingeyes",
+			"type": "registry:component",
+			"title": "Following Eyes",
+			"description": "Following Eyes",
+			"files": [
+				{
+					"path": "registry/open-source/FollowingEyes.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/FollowingEyes.tsx"
+				}
+			]
+		},
+		{
+			"name": "followingheaders",
+			"type": "registry:component",
+			"title": "Following Headers",
+			"description": "Following Headers",
+			"files": [
+				{
+					"path": "registry/examples/followingheadersexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/FollowingHeaders.tsx",
+					"type": "registry:ui",
+					"target": "registry/open-source/FollowingHeaders.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "./lib/utils.ts"
+				}
+			]
+		},
+		{
 			"name": "followingpointer",
 			"type": "registry:component",
 			"title": "Following Pointer",
@@ -5483,29 +5519,6 @@
 					"path": "registry/open-source/bottomblur.tsx",
 					"type": "registry:ui",
 					"target": "registry/open-source/bottomblur.tsx"
-				}
-			]
-		},
-		{
-			"name": "following-headers",
-			"type": "registry:component",
-			"title": "Following headers",
-			"description": "Following headers",
-			"files": [
-				{
-					"path": "registry/examples/following-headersexample.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/following-headers.tsx",
-					"type": "registry:ui",
-					"target": "registry/open-source/following-headers.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "./lib/utils.ts"
 				}
 			]
 		}

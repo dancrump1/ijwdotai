@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/followcursorexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport MouseFollower from \"../open-source/FollowCursor\";\n\nexport default function Example() {\n\tconst [mouseFollowerContainer, setMouseFollowerContainer] = useState();\n\n\tuseEffect(() => {\n\t\tif (window !== undefined) {\n\t\t\tsetMouseFollowerContainer(document.getElementById(\"mouseFollower\"));\n\t\t}\n\t}, []);\n\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"w-full h-[33vh] relative\" id=\"mouseFollower\">\n\t\t\t\t<MouseFollower container={mouseFollowerContainer} />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport MouseFollower from \"@/components/FollowCursor\";\n\nexport default function Example() {\n\tconst [mouseFollowerContainer, setMouseFollowerContainer] = useState();\n\n\tuseEffect(() => {\n\t\tif (window !== undefined) {\n\t\t\tsetMouseFollowerContainer(document.getElementById(\"mouseFollower\"));\n\t\t}\n\t}, []);\n\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"w-full h-[33vh] relative\" id=\"mouseFollower\">\n\t\t\t\t<MouseFollower container={mouseFollowerContainer} />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

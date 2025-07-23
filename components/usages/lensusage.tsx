@@ -13,18 +13,9 @@ export default function Usage() {
 				<Image
 					src={"/itjustworks.jpg"}
 					alt={"it just woks"}
-					width={images?.[0]?.width || 0}
-					height={images?.[0]?.height || 0}
+					width={100}
+					height={100}
 					className="object-cover max-h-[80vh] w-auto mx-auto border-8 border-background"
-					style={
-						images?.[0].focalPoint
-							? {
-									objectPosition: `${
-										images[0]?.focalPoint?.[0] * 100
-									}% ${images[0]?.focalPoint?.[1] * 100}%`,
-								}
-							: {}
-					}
 				/>
 			</Lens>{" "}
 		</div>

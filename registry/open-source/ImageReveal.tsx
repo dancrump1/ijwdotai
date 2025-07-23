@@ -110,7 +110,7 @@ const ImageReveal: React.FC = () => {
 			className="relative w-full min-h-fit dark:bg-gradient-to-b from-black from-10% to-gray-950 to-100% bg-gray-100 rounded-md border"
 			onMouseLeave={handleMouseLeave}
 		>
-			{images.map((image, i) => (
+			{images?.map((image, i) => (
 				<div
 					key={image.alt || i + "image-reveal"}
 					className={`p-4 cursor-pointer relative sm:flex items-center justify-between`}

@@ -58,13 +58,13 @@ const One = () => {
 	const handlePrev = () => {
 		setDirection(-1);
 		setCurrentIndex(
-			(prevIndex) => (prevIndex - 1 + images.length) % images.length
+			(prevIndex) => (prevIndex - 1 + images?.length) % images?.length
 		);
 	};
 
 	const handleNext = () => {
 		setDirection(1);
-		setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+		setCurrentIndex((prevIndex) => (prevIndex + 1) % images?.length);
 	};
 
 	return (
@@ -100,7 +100,7 @@ const One = () => {
 						/>
 					</motion.div>
 					<div className="absolute h-10 w-fit flex items-center gap-1 left-0 right-0 mx-auto bottom-0">
-						{Array.from({ length: images.length }).map((_, index) => (
+						{Array.from({ length: images?.length }).map((_, index) => (
 							<motion.div
 								key={index + "cursor-carousel"}
 								animate={{

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/texttypeexample.tsx",
-      "content": "import TextType from \"../open-source/TextType\";\n\nconst Example = () => {\n\treturn (\n\t\t<TextType\n\t\t\ttext={[\"Text typing effect\", \"for your websites\", \"Happy coding!\"]}\n\t\t\ttypingSpeed={75}\n\t\t\tpauseDuration={1500}\n\t\t\tshowCursor={true}\n\t\t\tcursorCharacter=\"|\"\n\t\t/>\n\t);\n};\n\nexport default Example;\n",
+      "content": "import TextType from \"@/components/TextType\";\n\nconst Example = () => {\n\treturn (\n\t\t<TextType\n\t\t\ttext={[\"Text typing effect\", \"for your websites\", \"Happy coding!\"]}\n\t\t\ttypingSpeed={75}\n\t\t\tpauseDuration={1500}\n\t\t\tshowCursor={true}\n\t\t\tcursorCharacter=\"|\"\n\t\t/>\n\t);\n};\n\nexport default Example;\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

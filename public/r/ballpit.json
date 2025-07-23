@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/ballpitexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Ballpit from \"../open-source/Ballpit\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\">\n\t\t\t<Ballpit\n\t\t\t\tcount={200}\n\t\t\t\tgravity={0.7}\n\t\t\t\tfriction={0.8}\n\t\t\t\twallBounce={0.95}\n\t\t\t\tfollowCursor={true}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Ballpit from \"@/components/Ballpit\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\">\n\t\t\t<Ballpit\n\t\t\t\tcount={200}\n\t\t\t\tgravity={0.7}\n\t\t\t\tfriction={0.8}\n\t\t\t\twallBounce={0.95}\n\t\t\t\tfollowCursor={true}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

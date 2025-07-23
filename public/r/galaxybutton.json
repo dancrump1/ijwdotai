@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/galaxybuttonexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport GalaxyButton from \"../open-source/GalaxyButton\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"flex flex-col items-center justify-center gap-8 \">\n\t\t\t\t<GalaxyButton\n\t\t\t\t\ttext=\"Galaxy Button\"\n\t\t\t\t\tgradientColors={[\"#9500FD\", \"#3B82F6\", \"#00ffb6\"]}\n\t\t\t\t\tfontSize=\"1.2rem\"\n\t\t\t\t\tpadding=\"1.25rem 4rem\"\n\t\t\t\t\tonClick={() => console.log(\"Galaxy Button clicked!\")}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport GalaxyButton from \"@/components/GalaxyButton\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"flex flex-col items-center justify-center gap-8 \">\n\t\t\t\t<GalaxyButton\n\t\t\t\t\ttext=\"Galaxy Button\"\n\t\t\t\t\tgradientColors={[\"#9500FD\", \"#3B82F6\", \"#00ffb6\"]}\n\t\t\t\t\tfontSize=\"1.2rem\"\n\t\t\t\t\tpadding=\"1.25rem 4rem\"\n\t\t\t\t\tonClick={() => console.log(\"Galaxy Button clicked!\")}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

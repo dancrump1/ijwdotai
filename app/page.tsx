@@ -37,7 +37,10 @@ export default function HomePage() {
 						key={category}
 						onMouseEnter={() => setHovered(category)}
 						onMouseLeave={() => setHovered(null)}
-						href={"/" + category.toLowerCase()}
+						href={
+							(category === "All" ? "" : "/type/") +
+							category.toLowerCase().replace(/s$/, "")
+						}
 						className={`rounded-2xl px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
 							category === "All" ? "text-red-400" : "text-white"
 						}`}

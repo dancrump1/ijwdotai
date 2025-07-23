@@ -17,7 +17,7 @@ interface CarouselCircleProps {
 const CarouselCircle: React.FC<CarouselCircleProps> = ({ images }) => {
 	const [rotation, setRotation] = useState(0);
 	const [centerImage, setCenterImage] = useState(images[0]);
-	const numimages = images.length;
+	const numimages = images?.length;
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -47,7 +47,7 @@ const CarouselCircle: React.FC<CarouselCircleProps> = ({ images }) => {
 					className="relative w-[90vw] max-w-[600px] h-[60vw] max-h-[400px]"
 					style={{ perspective: 500 }}
 				>
-					{images.map((item, index) => (
+					{images?.map((item, index) => (
 						<motion.div
 							key={index + "carousel-circle"}
 							className="absolute top-0 left-0 w-full h-full flex items-center justify-center"

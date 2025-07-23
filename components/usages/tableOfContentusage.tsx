@@ -1,4 +1,4 @@
-import TableOfContent from "@/registry/open-source/following-headers";
+import TableOfContent from "@/registry/open-source/FollowingHeaders";
 
 export default function TableOfContentPreview() {
 	return (

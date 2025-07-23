@@ -1,4 +1,4 @@
-import TableOfContent from "@/components/following-headers";
+import TableOfContent from "@/components/FollowingHeaders";
 
 export default function TableOfContentExample() {
 	return (

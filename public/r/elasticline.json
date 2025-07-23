@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/elasticlineexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ElasticLine from \"../open-source/ElasticLine\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"w-full px-6 sm:px-8 md:px-12\">\n\t\t\t\t<ElasticLine\n\t\t\t\t\treleaseThreshold={50}\n\t\t\t\t\tstrokeWidth={1}\n\t\t\t\t\tanimateInTransition={{\n\t\t\t\t\t\ttype: \"spring\",\n\t\t\t\t\t\tstiffness: 300,\n\t\t\t\t\t\tdamping: 30,\n\t\t\t\t\t\tdelay: 0.15,\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ElasticLine from \"@/components/ElasticLine\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"w-full px-6 sm:px-8 md:px-12\">\n\t\t\t\t<ElasticLine\n\t\t\t\t\treleaseThreshold={50}\n\t\t\t\t\tstrokeWidth={1}\n\t\t\t\t\tanimateInTransition={{\n\t\t\t\t\t\ttype: \"spring\",\n\t\t\t\t\t\tstiffness: 300,\n\t\t\t\t\t\tdamping: 30,\n\t\t\t\t\t\tdelay: 0.15,\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

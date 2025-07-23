@@ -1,12 +1,9 @@
+"use server";
+
 import fs from "fs";
 import path from "path";
-import { useState } from "react";
 
-import Link from "next/link";
-
-import { motion } from "framer-motion";
-
-import Home from "../homepage";
+import FlexWrapper from "../../components/FlexWrapper";
 
 function getComponentFiles(): string[] {
 	const dirPath = path.join(process.cwd(), "public", "r");
@@ -20,6 +17,11 @@ function getComponentFiles(): string[] {
 		return [];
 	}
 }
-export default async function Page() {
-	return <Home files={getComponentFiles()} />;
+export default async function Page({
+	params,
+}: {
+	params: Promise<{ slug: string }>;
+}) {
+	const thing = getComponentFiles();
+	return <FlexWrapper files={thing} />;
 }

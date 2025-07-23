@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/tilesbackgroundexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TilesBackground from \"../open-source/TilesBackground\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<TilesBackground />\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TilesBackground from \"@/components/TilesBackground\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<TilesBackground />\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

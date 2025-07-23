@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/expandingtabsexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ExpandableTabs from \"../open-source/ExpandingTabs\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<ExpandableTabs />\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ExpandableTabs from \"@/components/ExpandingTabs\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<ExpandableTabs />\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

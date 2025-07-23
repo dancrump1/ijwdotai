@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/cardswapexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport CardSwap, { SwapCard } from \"../open-source/CardSwap\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\">\n\t\t\t<CardSwap\n\t\t\t\tcardDistance={60}\n\t\t\t\tverticalDistance={70}\n\t\t\t\tdelay={5000}\n\t\t\t\tpauseOnHover={false}\n\t\t\t>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 1</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 2</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 3</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t</CardSwap>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport CardSwap, { SwapCard } from \"@/components/CardSwap\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\">\n\t\t\t<CardSwap\n\t\t\t\tcardDistance={60}\n\t\t\t\tverticalDistance={70}\n\t\t\t\tdelay={5000}\n\t\t\t\tpauseOnHover={false}\n\t\t\t>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 1</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 2</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t\t<SwapCard>\n\t\t\t\t\t<h3>Card 3</h3>\n\t\t\t\t\t<p>Your content here</p>\n\t\t\t\t</SwapCard>\n\t\t\t</CardSwap>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

@@ -1020,7 +1020,7 @@ class InfiniteGridMenu {
 					})
 			)
 		).then((images) => {
-			images.forEach((img, i) => {
+			images?.forEach((img, i) => {
 				const x = (i % this.atlasSize) * cellSize;
 				const y = Math.floor(i / this.atlasSize) * cellSize;
 				ctx.drawImage(img, x, y, cellSize, cellSize);

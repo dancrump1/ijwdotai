@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/fullscreenimageexample.tsx",
-      "content": "\"use client\";\n\nimport Image from \"next/image\";\n\nimport { FullscreenImage } from \"../open-source/FullscreenImage\";\n\nconst Example = () => (\n\t<FullscreenImage>\n\t\t<Image\n\t\t\talt=\"Placeholder image\"\n\t\t\tclassName=\"h-auto w-96\"\n\t\t\theight={800}\n\t\t\tsrc=\"/itjustworks.jpg\"\n\t\t\tunoptimized\n\t\t\twidth={1200}\n\t\t/>\n\t</FullscreenImage>\n);\nexport default Example;\n",
+      "content": "\"use client\";\n\nimport Image from \"next/image\";\n\nimport { FullscreenImage } from \"@/components/FullscreenImage\";\n\nconst Example = () => (\n\t<FullscreenImage>\n\t\t<Image\n\t\t\talt=\"Placeholder image\"\n\t\t\tclassName=\"h-auto w-96\"\n\t\t\theight={800}\n\t\t\tsrc=\"/itjustworks.jpg\"\n\t\t\tunoptimized\n\t\t\twidth={1200}\n\t\t/>\n\t</FullscreenImage>\n);\nexport default Example;\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

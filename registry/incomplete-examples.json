@@ -5,6 +5,11 @@
     "reason": "Placeholder content"
   },
   {
+    "name": "FollowingEyes",
+    "examplePath": "registry/examples/followingeyesexample.tsx",
+    "reason": "missing example"
+  },
+  {
     "name": "GlowingEffect",
     "examplePath": "registry/examples/glowingeffectexample.tsx",
     "reason": "Placeholder content"

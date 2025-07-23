@@ -83,7 +83,7 @@ const IconsList = ({ icons }: Props) => {
 
 	return (
 		<div className="flex flex-col sm:mb-20 mb-10 mt-8 gap-6">
-			<ListSearch count={icons.length} />
+			<ListSearch count={icons?.length} />
 			{results.length === 0 && <div>nothing here</div>}
 			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-[repeat(auto-fill,minmax(165px,1fr))] gap-3">
 				{results.map((icon) => {

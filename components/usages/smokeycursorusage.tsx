@@ -19,7 +19,7 @@ import {
 	CardTitle,
 } from "../ui/card";
 
-export function SmokeyCursorDemo() {
+export default function SmokeyCursorDemo() {
 	// State for cursor settings
 	const [settings, setSettings] = useState({
 		simResolution: 128,

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/stripeaccordionexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport StripeAccordion, {\n\tExampleSlider,\n\tUnsplashGrid,\n} from \"../open-source/StripeAccordion\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<StripeAccordion />\n\t\t\t<UnsplashGrid />\n\t\t\t<ExampleSlider />{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport StripeAccordion, {\n\tExampleSlider,\n\tUnsplashGrid,\n} from \"@/components/StripeAccordion\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<StripeAccordion />\n\t\t\t<UnsplashGrid />\n\t\t\t<ExampleSlider />{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

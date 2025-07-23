@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/innerglowexample.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { InnerGlow } from \"../open-source/InnerGlow\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"grid relative mx-auto w-[300px] h-[300px] overflow-hidden bg-white rounded-md p-6 aspect-square place-items-center text-3xl font-medium\">\n\t\t\t\t<InnerGlow />\n\t\t\t\t<p>Inner Glow</p>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { InnerGlow } from \"@/components/InnerGlow\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"grid relative mx-auto w-[300px] h-[300px] overflow-hidden bg-white rounded-md p-6 aspect-square place-items-center text-3xl font-medium\">\n\t\t\t\t<InnerGlow />\n\t\t\t\t<p>Inner Glow</p>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

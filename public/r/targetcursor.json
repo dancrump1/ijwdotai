@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/examples/targetcursorexample.tsx",
-      "content": "import TargetCursor from \"../open-source/TargetCursor\";\n\nexport default function App() {\n\treturn (\n\t\t<div>\n\t\t\t<TargetCursor spinDuration={2} hideDefaultCursor={true} />\n\n\t\t\t<h1>Hover over the elements below</h1>\n\t\t\t<button className=\"cursor-target\">Click me!</button>\n\t\t\t<div className=\"cursor-target\">Hover target</div>\n\t\t</div>\n\t);\n}\n",
+      "content": "import TargetCursor from \"@/components/TargetCursor\";\n\nexport default function App() {\n\treturn (\n\t\t<div>\n\t\t\t<TargetCursor spinDuration={2} hideDefaultCursor={true} />\n\n\t\t\t<h1>Hover over the elements below</h1>\n\t\t\t<button className=\"cursor-target\">Click me!</button>\n\t\t\t<div className=\"cursor-target\">Hover target</div>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:page",
       "target": "~/example.tsx"
     },

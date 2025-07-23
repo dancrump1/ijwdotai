@@ -1,6 +1,6 @@
 "use client";
 
-import { TextSplit } from "../open-source/TextSplit";
+import { TextSplit } from "@/components/TextSplit";
 
 export default function TextRotateExample() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FlowerMenu from "../open-source/FlowerMenu";
+import FlowerMenu from "@/components/FlowerMenu";
 
 export default function Example() {
 	return (

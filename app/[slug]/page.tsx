@@ -1,20 +1,32 @@
-import React from "react";
+"use server";
 
-import { pages } from "@/registry/open-source/page-transitions/data";
-import DetailPage from "@/registry/open-source/page-transitions/DetailPage";
+import fs from "fs";
+import path from "path";
+import { useState } from "react";
 
-export async function generateStaticParams() {
-	return pages.map((page) => ({
-		slug: page.slug,
-	}));
+import Link from "next/link";
+
+import { motion } from "framer-motion";
+
+import Home from "../homepage";
+
+function getComponentFiles(): string[] {
+	const dirPath = path.join(process.cwd(), "public", "r");
+
+	try {
+		return fs
+			.readdirSync(dirPath)
+			.filter((file) => fs.statSync(path.join(dirPath, file)).isFile()); // Only return file names
+	} catch (err) {
+		console.error("Error reading directory:", err);
+		return [];
+	}
 }
-
-export default async function Detail({
+export default async function Page({
 	params,
 }: {
 	params: Promise<{ slug: string }>;
 }) {
-	const { slug } = await params;
-	const pageContent = pages.find((page) => page.slug === slug);
-	return <DetailPage pageContent={pageContent} />;
+	const thing = getComponentFiles();
+	return <Home files={thing} slug={(await params).slug} />;
 }

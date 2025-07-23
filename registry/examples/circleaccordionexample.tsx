@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CircleExpenable from "../open-source/CircleAccordion";
+import CircleExpenable from "@/components/CircleAccordion";
 
 export default function Example() {
 	return (

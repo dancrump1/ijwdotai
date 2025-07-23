@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TextGradientTransition from "../open-source/TextGradient";
+import TextGradientTransition from "@/components/TextGradient";
 
 export default function Example() {
 	return (

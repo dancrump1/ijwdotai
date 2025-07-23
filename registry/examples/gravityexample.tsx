@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { MatterBody } from "../open-source/Gravity";
+import { MatterBody } from "@/components/Gravity";
 
 export default function Example() {
 	return (

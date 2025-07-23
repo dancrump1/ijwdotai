@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { FullscreenImage } from "../open-source/FullscreenImage";
+import { FullscreenImage } from "@/components/FullscreenImage";
 
 const Example = () => (
 	<FullscreenImage>

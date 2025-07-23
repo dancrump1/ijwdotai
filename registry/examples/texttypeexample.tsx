@@ -1,4 +1,4 @@
-import TextType from "../open-source/TextType";
+import TextType from "@/components/TextType";
 
 const Example = () => {
 	return (

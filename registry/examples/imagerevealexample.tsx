@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ImageReveal from "../open-source/ImageReveal";
+import ImageReveal from "@/components/ImageReveal";
 
 export default function Example() {
 	return (

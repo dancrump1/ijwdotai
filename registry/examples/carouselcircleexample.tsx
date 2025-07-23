@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CarouselCircle from "../open-source/CarouselCircle";
+import CarouselCircle from "@/components/CarouselCircle";
 
 export default function Example() {
 	return (

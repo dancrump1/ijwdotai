@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import SwapColumnFeatures from "../open-source/SwapColumnFeatures";
+import SwapColumnFeatures from "@/components/SwapColumnFeatures";
 
 export default function Example() {
 	return (

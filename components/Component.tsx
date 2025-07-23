@@ -140,6 +140,8 @@ const Component = ({
 		.join(" ");
 
 	useEffect(() => {
+		// TODO: mungedTitle is no longer camel cased (coming from new usages folder)
+		// How to pull file when we do not have the capitalization needed?
 		const fetchData = async () => {
 			const response = await fetch(
 				`/api/registry/${subfolder ? `${subfolder}/` : ""}${mungedTitle.replaceAll(" ", "")}`

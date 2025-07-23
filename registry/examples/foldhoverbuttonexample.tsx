@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FolderHoverButton from "../open-source/FoldHoverButton";
+import FolderHoverButton from "@/components/FoldHoverButton";
 
 export default function Example() {
 	return (

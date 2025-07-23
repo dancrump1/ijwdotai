@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { GooeyDemo } from "../open-source/GooeyTabs";
+import { GooeyDemo } from "@/components/GooeyTabs";
 
 export default function Example() {
 	return (

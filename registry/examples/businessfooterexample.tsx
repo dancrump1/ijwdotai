@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FooterSecond from "../open-source/BusinessFooter";
+import FooterSecond from "@/components/BusinessFooter";
 
 export default function Example() {
 	return (

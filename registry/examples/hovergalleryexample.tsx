@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { HoverCard } from "../open-source/HoverGallery";
+import { HoverCard } from "@/components/HoverGallery";
 
 export default function Example() {
 	return (

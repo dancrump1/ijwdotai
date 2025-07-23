@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 import Image from "next/image";
 
-import CSSBox, { CSSBoxRef } from "../open-source/CSSBox";
+import CSSBox, { CSSBoxRef } from "@/components/CSSBox";
 
 export default function Example() {
 	const cubeRef = useRef<CSSBoxRef>(null);

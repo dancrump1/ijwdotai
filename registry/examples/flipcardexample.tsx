@@ -1,4 +1,4 @@
-import { FlipCard } from "../open-source/FlipCard";
+import { FlipCard } from "@/components/FlipCard";
 
 const FlipCardBasic = () => {
 	return (

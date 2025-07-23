@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TextCursorProximity from "../open-source/TextProximity";
+import TextCursorProximity from "@/components/TextProximity";
 
 export default function Example() {
 	return (

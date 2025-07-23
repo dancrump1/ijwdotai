@@ -69,22 +69,22 @@ export function ScrollIsland({ children, containerRef, gridView }) {
 						{titleEls.map((item) => {
 							return (
 								<motion.li
-									key={item.textContent
+									key={item?.textContent
 										?.replaceAll(" ", "")
-										.toLowerCase()}
+										?.toLowerCase()}
 									className={cn(
 										"list-inside list-decimal transition-[filter] text-neutral-300",
 										open ? "blur-none" : "blur-sm"
 									)}
 								>
 									<a
-										href={`#${item.textContent
+										href={`#${item?.textContent
 											?.replaceAll(" ", "")
-											.toLowerCase()}`}
+											?.toLowerCase()}`}
 										className="h-7 inline-flex items-center"
 										onClick={() => setOpen(false)}
 									>
-										{item.textContent}
+										{item?.textContent}
 									</a>
 								</motion.li>
 							);

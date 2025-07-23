@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Folder from "../open-source/Folder";
+import Folder from "@/components/Folder";
 
 export default function Example() {
 	return (

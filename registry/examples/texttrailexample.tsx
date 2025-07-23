@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TextTrail from "../open-source/TextTrail";
+import TextTrail from "@/components/TextTrail";
 
 export default function Example() {
 	return (

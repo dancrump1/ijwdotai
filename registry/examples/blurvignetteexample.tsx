@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { BlurVignette } from "../open-source/BlurVignette";
+import { BlurVignette } from "@/components/BlurVignette";
 
 export default function Example() {
 	return (

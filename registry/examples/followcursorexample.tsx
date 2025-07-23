@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import MouseFollower from "../open-source/FollowCursor";
+import MouseFollower from "@/components/FollowCursor";
 
 export default function Example() {
 	const [mouseFollowerContainer, setMouseFollowerContainer] = useState();

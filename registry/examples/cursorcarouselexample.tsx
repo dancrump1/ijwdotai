@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import One from "../open-source/CursorCarousel";
+import One from "@/components/CursorCarousel";
 
 export default function Example() {
 	return (

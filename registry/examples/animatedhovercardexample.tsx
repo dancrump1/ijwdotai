@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AnimatedCard from "../open-source/AnimatedHoverCard";
+import AnimatedCard from "@/components/AnimatedHoverCard";
 
 export default function Example() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import MaskCursor from "../open-source/CursorMask";
+import MaskCursor from "@/components/CursorMask";
 
 export default function Example() {
 	return (

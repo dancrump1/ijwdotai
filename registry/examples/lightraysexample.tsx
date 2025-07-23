@@ -1,4 +1,4 @@
-import LightRays from "../open-source/LightRays";
+import LightRays from "@/components/LightRays";
 
 const Example = () => {
 	return (

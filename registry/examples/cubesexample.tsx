@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 
+import Cubes from "@/components/Cubes";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
-
-import Cubes from "../open-source/Cubes";
 
 export default function Example() {
 	const [borderStyle, setBorderStyle] = useState("2px dashed #B19EEF");

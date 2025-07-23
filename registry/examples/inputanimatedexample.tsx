@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { InputAnimated } from "../open-source/InputAnimated";
+import { InputAnimated } from "@/components/InputAnimated";
 
 const InputPreview = () => {
 	const [value, setValue] = useState("");

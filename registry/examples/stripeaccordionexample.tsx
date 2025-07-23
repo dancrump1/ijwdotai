@@ -5,7 +5,7 @@ import React from "react";
 import StripeAccordion, {
 	ExampleSlider,
 	UnsplashGrid,
-} from "../open-source/StripeAccordion";
+} from "@/components/StripeAccordion";
 
 export default function Example() {
 	return (

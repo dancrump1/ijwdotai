@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import InfiniteCarousel from "../open-source/InfiniteCarousel";
+import InfiniteCarousel from "@/components/InfiniteCarousel";
 
 export default function Example() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { InnerGlow } from "../open-source/InnerGlow";
+import { InnerGlow } from "@/components/InnerGlow";
 
 export default function Example() {
 	return (

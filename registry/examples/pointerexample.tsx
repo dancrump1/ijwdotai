@@ -2,6 +2,7 @@
 
 import React from "react";
 
+import { Pointer } from "@/components/Pointer";
 import {
 	Card,
 	CardContent,
@@ -10,8 +11,6 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { motion } from "motion/react";
-
-import { Pointer } from "../open-source/Pointer";
 
 export default function Example() {
 	return (

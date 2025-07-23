@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { SelectModel } from "../open-source/SelectModal";
+import { SelectModel } from "@/components/SelectModal";
 
 export default function Example() {
 	return (

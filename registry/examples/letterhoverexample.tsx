@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import LetterSwapForward from "../open-source/LetterHover";
-import { RandomLetterSwapPingPong } from "../open-source/RandomLetterSwapHover";
+import LetterSwapForward from "@/components/LetterHover";
+import { RandomLetterSwapPingPong } from "@/components/RandomLetterSwapHover";
 
 export default function Example() {
 	return (

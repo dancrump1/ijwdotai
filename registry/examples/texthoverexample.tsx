@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { TextHoverEffect } from "../open-source/TextHover";
+import { TextHoverEffect } from "@/components/TextHover";
 
 export default function Example() {
 	return (

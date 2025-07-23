@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ListRotator from "../open-source/ListRotator";
+import ListRotator from "@/components/ListRotator";
 
 export default function Example() {
 	return (

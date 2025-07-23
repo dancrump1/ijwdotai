@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FluidMorph from "../open-source/FluidMorph";
+import FluidMorph from "@/components/FluidMorph";
 
 export default function Example() {
 	return (

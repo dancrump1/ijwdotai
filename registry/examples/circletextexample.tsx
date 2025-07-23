@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CircularText from "../open-source/CircleText";
+import CircularText from "@/components/CircleText";
 
 export default function Example() {
 	return (

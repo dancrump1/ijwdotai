@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Dither from "../open-source/Dither";
+import Dither from "@/components/Dither";
 
 export default function Example() {
 	return (

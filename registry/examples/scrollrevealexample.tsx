@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ScrollReveal from "../open-source/ScrollReveal";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Example() {
 	return (

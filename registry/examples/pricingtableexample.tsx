@@ -4,16 +4,15 @@ import React from "react";
 
 import Image from "next/image";
 
-import { Home } from "lucide-react";
-import { useMediaQuery } from "usehooks-ts";
-
 import {
 	ProgressCarousel,
 	SliderBtn,
 	SliderBtnGroup,
 	SliderContent,
 	SliderWrapper,
-} from "../open-source/ProgressCarousel";
+} from "@/components/ProgressCarousel";
+import { Home } from "lucide-react";
+import { useMediaQuery } from "usehooks-ts";
 
 export default function Example() {
 	const isMobile = useMediaQuery("(min-width: 640px)");

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Testimonials from "../open-source/GradientTestimonials";
+import Testimonials from "@/components/GradientTestimonials";
 
 export default function Example() {
 	return (

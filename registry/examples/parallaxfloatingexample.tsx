@@ -4,8 +4,8 @@ import React from "react";
 
 import { LayoutGroup, motion } from "motion/react";
 
-import Floating, { FloatingElement } from "../open-source/ParallaxFloating";
-import TextRotate from "../open-source/TextRotate";
+import Floating, { FloatingElement } from "@/components/ParallaxFloating";
+import TextRotate from "@/components/TextRotate";
 
 const exampleImages = [
 import Link from "next/link";

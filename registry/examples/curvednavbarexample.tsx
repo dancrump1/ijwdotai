@@ -2,9 +2,8 @@
 
 import React from "react";
 
+import CurvedNavbar from "@/components/CurvedNavbar";
 import { AnimatePresence } from "motion/react";
-
-import CurvedNavbar from "../open-source/CurvedNavbar";
 
 export default function Example() {
 	const [isActive, setIsActive] = useState(false);

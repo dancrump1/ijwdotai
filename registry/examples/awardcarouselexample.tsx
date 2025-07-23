@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AwardsCarousel from "../open-source/AwardCarousel";
+import AwardsCarousel from "@/components/AwardCarousel";
 
 export default function Example() {
 	return (

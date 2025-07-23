@@ -141,6 +141,8 @@ function buildRegistryItem(componentFile) {
 		}
 	}
 
+	// TODO: Add handling from implementation files
+
 	// Handle example if exists
 	const exampleName = `${componentName.toLowerCase()}example.tsx`;
 	const examplePath = path.join(examplesDir, exampleName);

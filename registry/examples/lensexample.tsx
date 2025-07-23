@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { Lens } from "../open-source/Lens";
+import { Lens } from "@/components/Lens";
 
 export default function Example() {
 	return (

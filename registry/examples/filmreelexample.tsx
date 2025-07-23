@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FilmReel from "../open-source/FilmReel";
+import FilmReel from "@/components/FilmReel";
 
 export default function Example() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ParallaxCarousel from "../open-source/ParallaxCarousel";
+import ParallaxCarousel from "@/components/ParallaxCarousel";
 
 export default function Example() {
 	return (

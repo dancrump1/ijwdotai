@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import SmokeyCursor from "@/components/SmokeyCursor";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -18,8 +19,6 @@ import {
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-import SmokeyCursor from "../open-source/SmokeyCursor";
 
 export function SmokeyCursorDemo() {
 	// State for cursor settings

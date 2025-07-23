@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ModelViewer from "../open-source/ModelViewer";
+import ModelViewer from "@/components/ModelViewer";
 
 export default function Example() {
 	return (

@@ -2,6 +2,7 @@
 
 import React, { useCallback, useState } from "react";
 
+import ColorPicker from "@/components/ColorPicker";
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import {
@@ -12,8 +13,6 @@ import {
 } from "@/components/ui/tooltip";
 import { motion } from "motion/react";
 import { Poline, positionFunctions } from "poline";
-
-import ColorPicker from "../open-source/ColorPicker";
 
 export default function Example() {
 	const [colorScheme, setColorScheme] = useState<any>({

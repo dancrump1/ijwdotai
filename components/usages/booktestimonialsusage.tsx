@@ -1,0 +1,14 @@
+"use client";
+
+import React from "react";
+
+import BookTestimonial3D from "@/registry/open-source/BookTestimonials";
+import { testimonials } from "@/registry/utils/example_data";
+
+export default function Usage() {
+	return (
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+			<BookTestimonial3D testimonials={testimonials} />
+		</div>
+	);
+}

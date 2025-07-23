@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Btn08 } from "../open-source/Btn08";
+import { Btn08 } from "@/components/Btn08";
 
 export default function Example() {
 	return (

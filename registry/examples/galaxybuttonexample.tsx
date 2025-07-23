@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import GalaxyButton from "../open-source/GalaxyButton";
+import GalaxyButton from "@/components/GalaxyButton";
 
 export default function Example() {
 	return (

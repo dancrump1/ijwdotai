@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import TextCursorProximity from "../open-source/TextProximity";
+
+import TextCursorProximity from "@/components/TextProximity";
 
 export default function Preview() {
 	const containerRef = useRef<HTMLDivElement>(null);

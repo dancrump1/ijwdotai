@@ -10,7 +10,7 @@ import {
 	SliderBtnGroup,
 	SliderContent,
 	SliderWrapper,
-} from "../open-source/ProgressCarousel";
+} from "@/components/ProgressCarousel";
 
 export default function Example() {
 	const items = [

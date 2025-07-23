@@ -2,9 +2,8 @@
 
 import { useEffect, useRef } from "react";
 
+import TextHighlighter from "@/components/TextHighlighter";
 import Lenis from "lenis";
-
-import TextHighlighter from "../open-source/TextHighlighter";
 
 export default function TextHighlighterDemo() {
 	const containerRef = useRef<HTMLDivElement | null>(null);

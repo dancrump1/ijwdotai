@@ -1,6 +1,6 @@
 "use client";
 
-import TextCurve from "../open-source/TextCurve";
+import TextCurve from "@/components/TextCurve";
 
 export default function TextCurveExample() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import MagnetLines from "../open-source/MagnetLines";
+import MagnetLines from "@/components/MagnetLines";
 
 export default function Example() {
 	return (

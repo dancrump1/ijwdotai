@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
 import CircularBarsSpinnerLoader from "@/registry/open-source/CircularBarsLoader";
 import CodeBlock from "@/registry/open-source/CodeBlock";
@@ -220,8 +222,10 @@ const Component = ({
 			id={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 			key={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 		>
-			<span className="flex items-center mb-3">
-				<h2 className="text-xl sm:pl-3">{title}</h2>
+			<span className="flex items-center mb-3 flex-wrap">
+				<Link href={"/" + title.toLowerCase()} className="text-xl sm:pl-3">
+					{title}
+				</Link>
 				<button onClick={() => setShowCode(!showCode)} className="ml-auto">
 					{showCode ? "preview" : "code"}
 				</button>

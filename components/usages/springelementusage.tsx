@@ -3,8 +3,8 @@
 import React from "react";
 
 import { SpringElement } from "@/registry/open-source/SpringElement";
-import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { Avatar } from "radix-ui";
+
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export default function Usage() {
 	return (

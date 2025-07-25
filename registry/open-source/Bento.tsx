@@ -55,7 +55,7 @@ export const BentoGridItem = ({
 			href={href || ""}
 		>
 			<img
-				src={header}
+				src={"/itjustworks.jpg"}
 				srcSet={srcset}
 				className="lazyload h-full w-full object-cover"
 				alt="image with artdirection"

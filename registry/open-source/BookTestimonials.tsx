@@ -40,8 +40,14 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 				height={450}
 				showCover={true}
 				usePortrait={isMobile}
-				onFlip={(e) => console.log(e.data)}
-				onChangeState={(e) => console.log(e.data)}
+				onFlip={(e) => {
+					// console.log(e.data);
+					return null;
+				}}
+				onChangeState={(e) => {
+					// console.log(e.data)
+					return null;
+				}}
 				className={""}
 				style={{}}
 				startPage={0}

@@ -3,23 +3,27 @@
 import React, { useState } from "react";
 
 import { FractalDotGrid } from "@/registry/open-source/FractalGrid";
+import { Check, Copy } from "lucide-react";
+
 import {
+	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "@radix-ui/react-accordion";
+} from "../ui/accordion";
+import { Button } from "../ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 import {
+	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@radix-ui/react-select";
-import { Check, Copy } from "lucide-react";
-import { Input } from "postcss";
-import { Accordion, Label, Select, Slider, Switch } from "radix-ui";
-
-import { Button } from "../ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+} from "../ui/select";
+import { Slider } from "../ui/slider";
+import { Switch } from "../ui/switch";
 import { useToast } from "../ui/use-toast";
 
 const initialConfig = {

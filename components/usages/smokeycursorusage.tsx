@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 
 import SmokeyCursor from "@/registry/open-source/SmokeyCursor";
-import {
-	SelectContent,
-	SelectItem,
-	SelectTrigger,
-	SelectValue,
-} from "@radix-ui/react-select";
-import { TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
-import { Label, Select, Slider, Tabs } from "radix-ui";
 
 import { Button } from "../ui/button";
 import {
@@ -18,6 +10,16 @@ import {
 	CardHeader,
 	CardTitle,
 } from "../ui/card";
+import { Label } from "../ui/label";
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from "../ui/select";
+import { Slider } from "../ui/slider";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function SmokeyCursorDemo() {
 	// State for cursor settings

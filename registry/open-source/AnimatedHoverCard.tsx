@@ -134,12 +134,13 @@ const AnimatedCard = ({ title, subtitle }) => {
 				<div className={"content"}>
 					<h3 className={"cardtitle"}>{title}</h3>
 					<div className={"cardsubtitle"}>
-						{subtitle.split("").map((char) => {
+						{subtitle.split("").map((char, i) => {
 							return (
 								<motion.span
 									style={{
 										marginRight: char === " " ? "0.4rem" : "0.1",
 									}}
+									key={"hover-card" + i}
 									className="inline-block relative"
 									variants={textVariants}
 								>

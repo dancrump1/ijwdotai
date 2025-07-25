@@ -53,7 +53,7 @@ const LeftContent = ({ content }: { content: any }) => {
 						key={id + "oppo-link-img"}
 						alt={title}
 						className="h-screen w-full object-cover"
-						src={image.src}
+						src={image.src || "/itjustworks.jpg"}
 					/>
 				</Link>
 			))}
@@ -92,7 +92,7 @@ const RightContent = ({
 							key={id + "oppo-img"}
 							alt={title}
 							className="h-screen w-full object-cover"
-							src={image.src}
+							src={image.src || "/itjustworks.jpg"}
 						/>
 					</Link>
 				))}

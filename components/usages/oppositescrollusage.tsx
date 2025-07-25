@@ -15,12 +15,7 @@ export default function Usage() {
 						image: "/itjustworks.jpg",
 						uri: "/#",
 					},
-					{
-						id: 1,
-						title: "first entry",
-						image: "/itjustworks.jpg",
-						uri: "/#",
-					},
+
 					{
 						id: 2,
 						title: "first entry",

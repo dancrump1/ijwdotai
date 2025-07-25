@@ -1,6 +1,6 @@
 import TableOfContent from "@/registry/open-source/FollowingHeaders";
 
-export default function TableOfContentPreview() {
+export default function Usage() {
 	return (
 		<div className="relative flex w-full flex-col gap-8 md:flex-row">
 			<TableOfContent

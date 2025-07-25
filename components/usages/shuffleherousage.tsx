@@ -133,7 +133,7 @@ const shuffle = (array) => {
 const generateSquares = (pageData) => {
 	return shuffle(pageData?.headerImage || pageData).map((sq, i) => (
 		<motion.div
-			key={sq.url || sq.src}
+			key={sq.url + i || sq.src + i}
 			layout
 			transition={{ duration: 1.5, type: "spring" }}
 			className="w-full h-full"

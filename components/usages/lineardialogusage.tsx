@@ -3,19 +3,16 @@
 import React from "react";
 
 import {
-	DialogContainer,
-	DialogImage,
-} from "@/registry/open-source/LinearDialog";
-import { Plus } from "lucide-react";
-import { Dialog } from "radix-ui";
-
-import {
+	Dialog,
 	DialogClose,
+	DialogContainer,
 	DialogContent,
 	DialogDescription,
+	DialogImage,
 	DialogTitle,
 	DialogTrigger,
-} from "../ui/dialog";
+} from "@/registry/open-source/LinearDialog";
+import { Plus } from "lucide-react";
 
 export default function Usage() {
 	return (

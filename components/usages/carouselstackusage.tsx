@@ -25,6 +25,7 @@ export default function Usage() {
 								height={100}
 								size={64}
 								className="text-neutral-500"
+								src="/itjustworks.jpg"
 							/>
 						</div>
 						<p className="text-sm">
@@ -63,6 +64,7 @@ export default function Usage() {
 						</h3>
 						<div className="aspect-video grid place-items-center bg-neutral-200 rounded-md">
 							<Image
+								src="/itjustworks.jpg"
 								width={100}
 								height={100}
 								size={64}

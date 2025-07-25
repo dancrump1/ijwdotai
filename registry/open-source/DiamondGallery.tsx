@@ -32,6 +32,8 @@ const DiamondGallery = ({ images }: DiamondGalleryProps) => {
 				const imageElement = (
 					<Image
 						src={img.image}
+						height={100}
+						width={100}
 						alt={`Diamond Image ${idx + 1}`}
 						className="size-full object-cover -rotate-45 scale-150"
 						onMouseEnter={() => setHoveredIndex(idx)}

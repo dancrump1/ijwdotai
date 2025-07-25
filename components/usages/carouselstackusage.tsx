@@ -47,6 +47,7 @@ export default function Usage() {
 								height={100}
 								size={64}
 								className="text-neutral-500"
+								src="/itjustworks.jpg"
 							/>
 						</div>
 						<p className="text-sm">

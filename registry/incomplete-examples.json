@@ -5,11 +5,6 @@
     "reason": "Placeholder content"
   },
   {
-    "name": "FollowingEyes",
-    "examplePath": "registry/examples/followingeyesexample.tsx",
-    "reason": "missing example"
-  },
-  {
     "name": "GlowingEffect",
     "examplePath": "registry/examples/glowingeffectexample.tsx",
     "reason": "Placeholder content"
@@ -70,6 +65,11 @@
     "reason": "Placeholder content"
   },
   {
+    "name": "Skeleton",
+    "examplePath": "registry/examples/skeletonexample.tsx",
+    "reason": "missing example"
+  },
+  {
     "name": "Terminal",
     "examplePath": "registry/examples/terminalexample.tsx",
     "reason": "Placeholder content"
@@ -83,5 +83,10 @@
     "name": "Threads",
     "examplePath": "registry/examples/threadsexample.tsx",
     "reason": "Placeholder content"
+  },
+  {
+    "name": "Tunnel",
+    "examplePath": "registry/examples/tunnelexample.tsx",
+    "reason": "missing example"
   }
 ]

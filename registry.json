@@ -1051,6 +1051,24 @@
 			]
 		},
 		{
+			"name": "diamondgallery",
+			"type": "registry:component",
+			"title": "Diamond Gallery",
+			"description": "Diamond Gallery",
+			"files": [
+				{
+					"path": "registry/examples/diamondgalleryexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/DiamondGallery.tsx",
+					"type": "registry:ui",
+					"target": "components/DiamondGallery.tsx"
+				}
+			]
+		},
+		{
 			"name": "dither",
 			"type": "registry:component",
 			"title": "Dither",
@@ -1310,6 +1328,24 @@
 					"path": "registry/open-source/FaqSection.tsx",
 					"type": "registry:ui",
 					"target": "components/FaqSection.tsx"
+				}
+			]
+		},
+		{
+			"name": "faultyterminal",
+			"type": "registry:component",
+			"title": "Faulty Terminal",
+			"description": "Faulty Terminal",
+			"files": [
+				{
+					"path": "registry/examples/faultyterminalexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/FaultyTerminal.tsx",
+					"type": "registry:ui",
+					"target": "components/FaultyTerminal.tsx"
 				}
 			]
 		},
@@ -1655,6 +1691,11 @@
 			"title": "Following Eyes",
 			"description": "Following Eyes",
 			"files": [
+				{
+					"path": "registry/examples/followingeyesexample.tsx",
+					"type": "registry:page",
+					"target": "~/example.tsx"
+				},
 				{
 					"path": "registry/open-source/FollowingEyes.tsx",
 					"type": "registry:ui",
@@ -4226,6 +4267,24 @@
 			]
 		},
 		{
+			"name": "skeleton",
+			"type": "registry:component",
+			"title": "Skeleton",
+			"description": "Skeleton",
+			"files": [
+				{
+					"path": "registry/open-source/Skeleton.tsx",
+					"type": "registry:ui",
+					"target": "components/Skeleton.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
 			"name": "slidebutton",
 			"type": "registry:component",
 			"title": "Slide Button",
@@ -5250,6 +5309,19 @@
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "tunnel",
+			"type": "registry:component",
+			"title": "Tunnel",
+			"description": "Tunnel",
+			"files": [
+				{
+					"path": "registry/open-source/Tunnel.tsx",
+					"type": "registry:ui",
+					"target": "components/Tunnel.tsx"
 				}
 			]
 		},

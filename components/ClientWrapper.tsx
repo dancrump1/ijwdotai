@@ -72,6 +72,7 @@ export const ClientWrapper = ({
 			() => import("@/components/usages/" + item.replace(".tsx", "")),
 			{
 				loading: ComponentLoading,
+				ssr: false,
 			}
 		);
 	});
@@ -539,7 +540,7 @@ export const ClientWrapper = ({
 								{/* Form Card */}
 								<div
 									className={`
-                  transition-all duration-300 ease-in-out z-50 absolute left-0 bg-black
+                  transition-all duration-300 ease-in-out z-50 absolute ${index === 0 ? "left-0" : "-left-16"} bg-black
                   ${hoveredButton === button.id ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"}
                 `}
 								>

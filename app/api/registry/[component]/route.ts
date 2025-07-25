@@ -7,7 +7,7 @@ export async function GET(
 	request: NextRequest,
 	{ params }: { params: { component: string } }
 ) {
-	const { component } = params;
+	const { component } = await params;
 
 	// Basic sanitization
 	const safeComponent = component.replace(/[^a-zA-Z0-9_-]/g, "");

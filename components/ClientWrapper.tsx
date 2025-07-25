@@ -142,7 +142,6 @@ export const ClientWrapper = ({
 	}, [allElements, collapsed]);
 
 	// Main FAB state
-	const [isExpanded, setIsExpanded] = useState(false);
 	const [hoveredButton, setHoveredButton] = useState<string | null>(null);
 
 	const actionButtons = [
@@ -291,34 +290,9 @@ export const ClientWrapper = ({
 		}
 	};
 
-	const [hideHeader, setHideHeader] = useState(false);
-
 	return (
 		<div key="client-wrapper">
-			<header
-				className={cn(
-					"flex flex-col gap-1 sticky top-0 bg-background z-50",
-					hideHeader && "hidden"
-				)}
-			>
-				<h1 className="text-3xl font-bold tracking-tight">
-					{componentCount?.length} examples vs {files.length} total files
-				</h1>
-				<p className="text-muted-foreground">
-					Collection of OOS React components using tailwind and motion.
-				</p>
-				<p className="text-muted-foreground">
-					I recommend Collapsing All and setting components-per-row to 3 or
-					4. Once collapsed, you can expand individual components
-					vertically and horizontally with controls on each component card.
-				</p>
-				<p className="text-muted-foreground">
-					Live use of 200+ components. Expect some lag and maxed out
-					hardware usage.
-				</p>
-				<button onClick={() => setHideHeader(true)}>x</button>
-			</header>
-
+			<Header componentCount={componentCount} files={files} />
 			<main className="flex flex-col flex-1 gap-8">
 				<section
 					className={
@@ -523,64 +497,109 @@ export const ClientWrapper = ({
 					</ScrollIsland>
 				</section>
 			</main>
-			<div
-				className="fixed bottom-6 right-6 z-50"
-				onMouseEnter={() => setIsExpanded(true)}
-				onMouseLeave={() => setIsExpanded(false)}
-			>
-				{/* Action Buttons */}
-				{actionButtons.map((button, index) => {
-					const Icon = button.icon;
-					return (
-						<div key={button.id} className="relative">
+			<FAB
+				actionButtons={actionButtons}
+				setHoveredButton={setHoveredButton}
+				hoveredButton={hoveredButton}
+				renderForm={renderForm}
+			/>
+		</div>
+	);
+};
+
+const FAB = ({
+	actionButtons,
+	setHoveredButton,
+	hoveredButton,
+	renderForm,
+}) => {
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	return (
+		<div
+			className="fixed bottom-6 right-6 z-50"
+			onMouseEnter={() => setIsExpanded(true)}
+			onMouseLeave={() => setIsExpanded(false)}
+		>
+			{/* Action Buttons */}
+			{actionButtons.map((button, index) => {
+				const Icon = button.icon;
+				return (
+					<div key={button.id} className="relative">
+						<div className="" onMouseLeave={() => setHoveredButton(null)}>
+							{/* Form Card */}
 							<div
-								className=""
-								onMouseLeave={() => setHoveredButton(null)}
-							>
-								{/* Form Card */}
-								<div
-									className={`
+								className={`
                   transition-all duration-300 ease-in-out z-50 absolute ${index === 0 ? "left-0" : "-left-16"} bg-black
                   ${hoveredButton === button.id ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"}
                 `}
-								>
-									{renderForm(button.id)}
-								</div>
+							>
+								{renderForm(button.id)}
+							</div>
 
-								{/* Action Button */}
-								<Button
-									size="sm"
-									className={`
+							{/* Action Button */}
+							<Button
+								size="sm"
+								className={`
                   h-12 w-12 rounded-full shadow-lg transition-all duration-300 ease-in-out
                   ${button.color}
                   ${isExpanded ? "opacity-100 scale-100" : "opacity-0 scale-0"}
                 `}
-									style={{
-										transitionDelay: isExpanded
-											? `${index * 50}ms`
-											: "0ms",
-									}}
-									onMouseEnter={() => setHoveredButton(button.id)}
-								>
-									{button.label}
-								</Button>
-							</div>
+								style={{
+									transitionDelay: isExpanded
+										? `${index * 50}ms`
+										: "0ms",
+								}}
+								onMouseEnter={() => setHoveredButton(button.id)}
+							>
+								{button.label}
+							</Button>
 						</div>
-					);
-				})}
+					</div>
+				);
+			})}
 
-				{/* Main FAB */}
-				<Button
-					size="lg"
-					onClick={() => setIsExpanded(!isExpanded)}
-					className={`
+			{/* Main FAB */}
+			<Button
+				size="lg"
+				onClick={() => setIsExpanded(!isExpanded)}
+				className={`
             h-14 w-14 rounded-full shadow-lg transition-all duration-300 ease-in-out
             ${isExpanded ? "bg-red-500 hover:bg-red-600 rotate-45" : "bg-blue-500 hover:bg-blue-600"}
           `}
-				>
-					<Plus className="h-6 w-6" />
-				</Button>
-			</div>
+			>
+				<Plus className="h-6 w-6" />
+			</Button>
 		</div>
+	);
+};
+
+const Header = ({ componentCount, files }) => {
+	const [hideHeader, setHideHeader] = useState(false);
+
+	return (
+		<header
+			className={cn(
+				"flex flex-col gap-1 sticky top-0 bg-background z-50",
+				hideHeader && "hidden"
+			)}
+		>
+			<h1 className="text-3xl font-bold tracking-tight">
+				{componentCount?.length} examples vs {files.length} total files
+			</h1>
+			<p className="text-muted-foreground">
+				Collection of OOS React components using tailwind and motion.
+			</p>
+			<p className="text-muted-foreground">
+				I recommend Collapsing All and setting components-per-row to 3 or 4.
+				Once collapsed, you can expand individual components vertically and
+				horizontally with controls on each component card.
+			</p>
+			<p className="text-muted-foreground">
+				Live use of 200+ components. Expect some lag and maxed out hardware
+				usage.
+			</p>
+			<button onClick={() => setHideHeader(true)}>x</button>
+		</header>
 	);
 };

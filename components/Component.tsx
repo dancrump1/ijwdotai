@@ -12,14 +12,17 @@ import { filterOptions } from "@/registry/utils/example_data";
 
 import { OpenInV0Button } from "./open-in-v0-button";
 
-function useOnScreen(threshold = 0.001) {
+function useOnScreen(threshold = 0.001, rootMargin = "100px") {
 	const ref = useRef(null);
 	const [isIntersecting, setIntersecting] = useState(false);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			([entry]) => setIntersecting(entry.isIntersecting),
-			{ threshold }
+			{
+				threshold,
+				rootMargin, // Trigger before the element enters the viewport
+			}
 		);
 
 		if (ref.current) {
@@ -27,7 +30,7 @@ function useOnScreen(threshold = 0.001) {
 		}
 
 		return () => observer.disconnect();
-	}, []);
+	}, [threshold, rootMargin]);
 
 	return [ref, isIntersecting];
 }
@@ -39,7 +42,7 @@ function LazyComponentWrapper({
 	collapsed,
 	fullScreen,
 }) {
-	const [triggerRef, isVisible] = useOnScreen(0.001);
+	const [triggerRef, isVisible] = useOnScreen();
 	const measureRef = useRef(null);
 	const [height, setHeight] = useState(null);
 	const [hasMeasured, setHasMeasured] = useState(false);

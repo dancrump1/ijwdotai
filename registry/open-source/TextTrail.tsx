@@ -162,7 +162,9 @@ const TextTrail: React.FC<TextTrailProps> = ({
 		renderer.setSize(w, h);
 		renderer.domElement.id = idConst;
 		if (document.getElementById(idConst)) {
-			ref.current?.removeChild(document.getElementById(idConst));
+			if (ref.current?.contains(renderer.domElement)) {
+				ref.current?.removeChild(document.getElementById(idConst));
+			}
 			ref.current.appendChild(renderer.domElement);
 		} else {
 			ref.current.appendChild(renderer.domElement);
@@ -329,7 +331,9 @@ const TextTrail: React.FC<TextTrailProps> = ({
 			clearInterval(timer);
 			ref.current?.removeEventListener("pointermove", onMove);
 			ro.disconnect();
-			ref.current?.removeChild(renderer.domElement);
+			if (ref.current?.contains(renderer.domElement)) {
+				ref.current?.removeChild(renderer.domElement);
+			}
 			renderer.dispose();
 			rt0.dispose();
 			rt1.dispose();

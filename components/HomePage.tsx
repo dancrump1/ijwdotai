@@ -145,6 +145,29 @@ export default function HomePage({
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
+			<section>
+				<h2>Credits ({credits.length}):</h2>
+				<ul className="flex flex-wrap gap-2">
+					{credits.map((item, i) => (
+						<li>
+							<a href={item} target="_blank" rel="noopener noreferrer">
+								{item
+									.replace("https://", "")
+									.replace("www.", "")
+									.replace(".dev", "")
+									.replace(".com", "")
+									.replace(".net", "")
+									.replace(".me", "")
+									.replace(".io", "")
+									.replace(".app", "")
+									.replace("/", "")
+									.replace(".design", "")}
+							</a>
+							{credits.length > i + 1 && " |"}
+						</li>
+					))}
+				</ul>
+			</section>
 			<div className="grid grid-cols-7 h-full">
 				<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 					{Object.entries(categories).map(
@@ -284,29 +307,6 @@ export default function HomePage({
 					</div>
 				</div>
 			</div>
-			<section>
-				<h2>Credits ({credits.length}):</h2>
-				<ul className="flex flex-wrap gap-2">
-					{credits.map((item, i) => (
-						<li>
-							<a href={item} target="_blank" rel="noopener noreferrer">
-								{item
-									.replace("https://", "")
-									.replace("www.", "")
-									.replace(".dev", "")
-									.replace(".com", "")
-									.replace(".net", "")
-									.replace(".me", "")
-									.replace(".io", "")
-									.replace(".app", "")
-									.replace("/", "")
-									.replace(".design", "")}
-							</a>
-							{credits.length > i + 1 && " |"}
-						</li>
-					))}
-				</ul>
-			</section>
 		</main>
 	);
 }

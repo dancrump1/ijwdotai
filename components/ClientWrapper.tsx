@@ -68,7 +68,10 @@ export const ClientWrapper = ({
 	});
 	const componentImports = matchingComponents.map(({ name }) => {
 		return dynamic(
-			() => import("@/components/usages/" + name.replace(".tsx", "")),
+			() =>
+				import(
+					"@/components/usages/" + name.replace(".json", "") + "usage.tsx"
+				),
 			{
 				loading: ComponentLoading,
 				ssr: false,
@@ -472,7 +475,7 @@ export const ClientWrapper = ({
 											]}
 											selectedFilters={selectedFilters}
 											title={matchingComponents[i].name.replace(
-												"usage.tsx",
+												".json",
 												""
 											)}
 											code={undefined}

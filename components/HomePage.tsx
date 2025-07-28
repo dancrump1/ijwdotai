@@ -145,7 +145,7 @@ export default function HomePage({
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
-			<div className="grid grid-cols-6 h-full">
+			<div className="grid grid-cols-7 h-full">
 				<div className="grid grid-cols-2 col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 					{Object.entries(categories).map(
 						([category, subcategories], i) => {
@@ -248,19 +248,6 @@ export default function HomePage({
 							);
 						}
 					)}
-
-					{!!newItems.length && (
-						<div className="hidden md:block ">
-							<span className="text-lg border-b-2 border-white">
-								New Items:
-							</span>
-							<ul className="flex flex-col flex-wrap h-full overflow-hidden">
-								{newItems.map((item) => (
-									<li>{item.name.replace(".json", "")}</li>
-								))}
-							</ul>
-						</div>
-					)}
 				</div>
 				<div className="hidden md:block col-span-2">
 					<span className="text-lg border-b-2 border-white">
@@ -272,7 +259,7 @@ export default function HomePage({
 						))}
 					</ul>
 				</div>
-				<div className="hidden md:block">
+				<div className="hidden md:block col-span-1">
 					<span className="text-lg border-b-2 border-white">
 						Filter Match:
 					</span>
@@ -281,6 +268,20 @@ export default function HomePage({
 							<li>{item.replace(".json", "")}</li>
 						))}
 					</ul>
+				</div>
+				<div className="hidden md:block col-span-1">
+					<div className="hidden md:block ">
+						<span className="text-lg border-b-2 border-white">
+							New Items:
+						</span>
+						{!!newItems.length && (
+							<ul className="flex flex-col flex-wrap h-full overflow-hidden">
+								{newItems.map((item) => (
+									<li>{item.name.replace(".json", "")}</li>
+								))}
+							</ul>
+						)}
+					</div>
 				</div>
 			</div>
 			<section>

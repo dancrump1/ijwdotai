@@ -288,7 +288,7 @@ export default function HomePage({
 				<ul className="flex flex-wrap gap-2">
 					{credits.map((item, i) => (
 						<li>
-							<a href={item}>
+							<a href={item} target="_blank" rel="noopener noreferrer">
 								{item
 									.replace("https://", "")
 									.replace("www.", "")

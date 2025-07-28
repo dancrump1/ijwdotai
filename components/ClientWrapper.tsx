@@ -6,7 +6,6 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-import { components } from "@/app/page";
 import Component from "@/components/Component";
 import { cn } from "@/lib/utils";
 import { ScrollIsland } from "@/registry/open-source/ScrollIsland";
@@ -53,23 +52,23 @@ export const ClientWrapper = ({
 	files,
 	params,
 }: {
-	files: string[];
+	files: { name: string; isNew: boolean }[];
 	params?: any;
 }) => {
 	const searchParams = useSearchParams();
 
 	const searchFilters = searchParams.getAll("subcategory");
-	const matchingComponents = components.filter((item) => {
+	const matchingComponents = files.filter(({ name }) => {
 		return !!params?.slug
-			? item.includes(params.slug) ||
+			? name.includes(params.slug) ||
 					!!searchFilters
-						.map((filter) => item.includes(filter))
+						.map((filter) => name.includes(filter))
 						.filter((item) => !!item).length
 			: true;
 	});
-	const componentImports = matchingComponents.map((item) => {
+	const componentImports = matchingComponents.map(({ name }) => {
 		return dynamic(
-			() => import("@/components/usages/" + item.replace(".tsx", "")),
+			() => import("@/components/usages/" + name.replace(".tsx", "")),
 			{
 				loading: ComponentLoading,
 				ssr: false,
@@ -472,7 +471,7 @@ export const ClientWrapper = ({
 												),
 											]}
 											selectedFilters={selectedFilters}
-											title={matchingComponents[i].replace(
+											title={matchingComponents[i].name.replace(
 												"usage.tsx",
 												""
 											)}

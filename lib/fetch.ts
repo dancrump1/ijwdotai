@@ -35,6 +35,8 @@ export async function getComponentFilesWithDates(): Promise<
 				const fullPath = path.join(dirPath, file);
 				const stat = await fs.statSync(fullPath);
 				if (stat.isFile()) {
+					console.log("stat.birthtime");
+					console.log(stat.birthtime);
 					return {
 						name: file,
 						isNew: isDateWithinLastWeek(stat.birthtime),

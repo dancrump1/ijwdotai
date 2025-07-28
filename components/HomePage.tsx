@@ -146,7 +146,7 @@ export default function HomePage({
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
 			<div className="grid grid-cols-7 h-full">
-				<div className="grid grid-cols-2 col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
+				<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 					{Object.entries(categories).map(
 						([category, subcategories], i) => {
 							// Build query string from subcategories

@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+	Suspense,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -461,30 +467,33 @@ export const ClientWrapper = ({
 							<>
 								{componentImports.map((ComponentImported, i) => {
 									return (
-										<Component
-											key={"custom-oop-component" + i}
-											collapsed={collapsed}
-											setCollapsed={setCollapsed}
-											gridView={gridView}
-											setComponentCount={setComponentCount}
-											tags={[
-												filterOptions.find(
-													(filter) =>
-														filter.label.toLowerCase() === "card"
-												),
-											]}
-											selectedFilters={selectedFilters}
-											title={matchingComponents[i].name.replace(
-												".json",
-												""
-											)}
-											code={undefined}
-											filename={undefined}
-											containerRef={undefined}
-											subfolder={undefined}
-										>
-											<ComponentImported />
-										</Component>
+										<Suspense>
+											<Component
+												key={"custom-oop-component" + i}
+												collapsed={collapsed}
+												setCollapsed={setCollapsed}
+												gridView={gridView}
+												setComponentCount={setComponentCount}
+												tags={[
+													filterOptions.find(
+														(filter) =>
+															filter.label.toLowerCase() ===
+															"card"
+													),
+												]}
+												selectedFilters={selectedFilters}
+												title={matchingComponents[i].name.replace(
+													".json",
+													""
+												)}
+												code={undefined}
+												filename={undefined}
+												containerRef={undefined}
+												subfolder={undefined}
+											>
+												<ComponentImported />
+											</Component>
+										</Suspense>
 									);
 								})}
 								<section>

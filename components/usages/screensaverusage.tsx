@@ -38,7 +38,7 @@ export default function Usage() {
 								{...image}
 								width={100}
 								height={100}
-								src={image.src}
+								src={image}
 								alt={`Usage ${index + 1}`}
 								className="w-full h-full object-cover"
 							/>

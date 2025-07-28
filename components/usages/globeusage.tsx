@@ -6,8 +6,11 @@ import dynamic from "next/dynamic";
 
 import { motion } from "motion/react";
 
-const World = dynamic(() =>
-	import("@/registry/open-source/Globe").then((m) => m.World)
+const World = dynamic(
+	() => import("@/registry/open-source/Globe").then((m) => m.World),
+	{
+		ssr: false,
+	}
 );
 
 export default function GlobeDemo() {

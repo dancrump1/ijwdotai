@@ -217,6 +217,7 @@ function DitheredWaves({
 	});
 
 	useEffect(() => {
+		let isMounted = true;
 		const dpr = gl.getPixelRatio();
 		const newWidth = Math.floor(size.width * dpr);
 		const newHeight = Math.floor(size.height * dpr);
@@ -224,6 +225,7 @@ function DitheredWaves({
 		if (currentRes.x !== newWidth || currentRes.y !== newHeight) {
 			currentRes.set(newWidth, newHeight);
 			if (
+				isMounted &&
 				effect.current &&
 				effect.current.uniforms.get("resolution") &&
 				effect.current.uniforms.get("resolution")!.value
@@ -233,9 +235,15 @@ function DitheredWaves({
 					.value.set(newWidth, newHeight);
 			}
 		}
+
+		return () => {
+			isMounted = false;
+		};
 	}, [size, gl]);
 
 	useFrame(({ clock }) => {
+		if (!mesh.current || !effect.current) return;
+
 		if (!disableAnimation) {
 			waveUniformsRef.current.time.value = clock.getElapsedTime();
 		}

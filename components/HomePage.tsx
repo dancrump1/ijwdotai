@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
 export const categories = {
 	All: [],
+	New: [],
 	Cards: ["card", "deck", "stack", "flip", "tile"],
 	Buttons: ["button", "btn", "click", "press"],
 	Text: ["text", "label", "type", "word", "letter", "font"],
@@ -103,8 +104,8 @@ export default function HomePage({
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
-			<div className="flex h-full">
-				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
+			<div className="grid grid-cols-6 h-full">
+				<div className="grid grid-cols-2 col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 					{Object.entries(categories).map(
 						([category, subcategories], i) => {
 							// Build query string from subcategories
@@ -136,6 +137,33 @@ export default function HomePage({
 							const containsNew = !!categoryTotal.find(
 								(item) => !!item.isNew
 							);
+
+							if (category === "New") {
+								return (
+									<Link
+										onMouseEnter={() => {
+											setItems(
+												files
+													.filter((item) => item.isNew)
+													.map((item) => item.name)
+											);
+										}}
+										onMouseLeave={() => {
+											setHovered(null);
+											setItems([]);
+											setSubcategories([]);
+											setNewItems([]);
+										}}
+										key={"all-new"}
+										href={"new"}
+										className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+									>
+										NEW
+										<br />
+										{files.filter((item) => item.isNew).length}
+									</Link>
+								);
+							}
 
 							return (
 								<Link
@@ -179,6 +207,7 @@ export default function HomePage({
 							);
 						}
 					)}
+
 					{!!newItems.length && (
 						<div className="hidden md:block ">
 							<span className="text-lg border-b-2 border-white">
@@ -186,29 +215,29 @@ export default function HomePage({
 							</span>
 							<ul className="flex flex-col flex-wrap h-full overflow-hidden">
 								{newItems.map((item) => (
-									<li>{item.name.replace("usage.tsx", "")}</li>
+									<li>{item.name.replace(".json", "")}</li>
 								))}
 							</ul>
 						</div>
 					)}
 				</div>
-				<div className="hidden md:block md:w-[25%] ">
+				<div className="hidden md:block col-span-2">
+					<span className="text-lg border-b-2 border-white">
+						Matching Items:
+					</span>
+					<ul className="flex flex-col flex-wrap h-full max-h-[50vh] overflow-hidden">
+						{items.map((item) => (
+							<li>{item.replace(".json", "")}</li>
+						))}
+					</ul>
+				</div>
+				<div className="hidden md:block">
 					<span className="text-lg border-b-2 border-white">
 						Filter Match:
 					</span>
 					<ul className="flex flex-col flex-wrap h-full overflow-hidden">
 						{subcategories.map((item) => (
-							<li>{item}</li>
-						))}
-					</ul>
-				</div>
-				<div className="hidden md:block md:w-[25%] ">
-					<span className="text-lg border-b-2 border-white">
-						Matching Items:
-					</span>
-					<ul className="flex flex-col flex-wrap h-full overflow-hidden">
-						{items.map((item) => (
-							<li>{item.replace("usage.tsx", "")}</li>
+							<li>{item.replace(".json", "")}</li>
 						))}
 					</ul>
 				</div>

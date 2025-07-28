@@ -9,7 +9,7 @@ export default function ColourfulTextDemo() {
 	return (
 		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
 			<motion.img
-				src="https://assets.aceternity.com/linear-demo.webp"
+				src="/itjustworks.jpg"
 				className="h-full w-full object-cover absolute inset-0 [mask-image:radial-gradient(circle,transparent,black_80%)] pointer-events-none"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 0.5 }}

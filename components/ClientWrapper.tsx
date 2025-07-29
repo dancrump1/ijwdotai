@@ -23,7 +23,7 @@ import { MultiSelect } from "./MultiSelect";
 import { Button } from "./ui/button";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
-const ComponentLoading = () => {
+export const ComponentLoading = () => {
 	useEffect(() => {
 		return () => {};
 	}, []);

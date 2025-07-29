@@ -58,7 +58,7 @@ export const ClientWrapper = ({
 	files,
 	params,
 }: {
-	files: { name: string; isNew: boolean }[];
+	files: { name: string; isNew: Date }[];
 	params?: any;
 }) => {
 	const searchParams = useSearchParams();

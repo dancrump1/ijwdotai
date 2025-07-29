@@ -94,11 +94,13 @@ function scanFileRecursively(absPath, seen = new Set()) {
 	const target = relPath.startsWith("registry")
 		? `components/${path.basename(absPath)}`
 		: relPath.replace(/^.*?components\//, "components/");
+	const stat = fs.statSync(absPath);
 
 	const fileObj = {
 		path: relPath,
 		type: "registry:ui",
 		target,
+		dateAdded: stat.birthtime,
 	};
 
 	const code = fs.readFileSync(absPath, "utf-8");
@@ -150,6 +152,8 @@ function buildRegistryItem(componentFile) {
 	if (fs.existsSync(examplePath)) {
 		const relExamplePath = `registry/examples/${exampleName}`;
 		const content = fs.readFileSync(examplePath, "utf-8");
+		const stat = fs.statSync(relExamplePath);
+
 		if (/coming\s+soon/i.test(content)) {
 			incompleteExamples.push({
 				name: componentName,
@@ -161,8 +165,10 @@ function buildRegistryItem(componentFile) {
 			path: relExamplePath,
 			type: "registry:page",
 			target: "~/example.tsx",
+			dateAdded: stat.birthtime,
 		});
 	}
+
 	if (!fs.existsSync(examplePath)) {
 		const relExamplePath = `registry/examples/${exampleName}`;
 
@@ -190,11 +196,14 @@ export default function Example() {
 		fs.writeFileSync(relExamplePath, content, "utf-8");
 	}
 
+	const stat = fs.statSync(absPath);
+
 	return {
 		name: componentName.toLowerCase(),
 		type: "registry:component",
 		title: titleCase(componentName),
 		description: titleCase(componentName),
+		dateAdded: stat.birthtime,
 		files: uniqueFiles,
 	};
 }

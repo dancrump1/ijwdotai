@@ -134,8 +134,10 @@ const credits = [
 
 export default function HomePage({
 	files,
+	newFiles,
 }: {
-	files: { name: string; isNew: boolean }[];
+	files: { name: string; isNew: Date }[];
+	newFiles: { name: string }[];
 }) {
 	const [hovered, setHovered] = useState<string | null>(null);
 
@@ -145,30 +147,7 @@ export default function HomePage({
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
-			<section>
-				<h2>Credits ({credits.length}):</h2>
-				<ul className="flex flex-wrap gap-2">
-					{credits.map((item, i) => (
-						<li>
-							<a href={item} target="_blank" rel="noopener noreferrer">
-								{item
-									.replace("https://", "")
-									.replace("www.", "")
-									.replace(".dev", "")
-									.replace(".com", "")
-									.replace(".net", "")
-									.replace(".me", "")
-									.replace(".io", "")
-									.replace(".app", "")
-									.replace("/", "")
-									.replace(".design", "")}
-							</a>
-							{credits.length > i + 1 && " |"}
-						</li>
-					))}
-				</ul>
-			</section>
-			<div className="grid grid-cols-7 h-full">
+			<div className="grid grid-cols-7 h-full min-h-screen">
 				<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 					{Object.entries(categories).map(
 						([category, subcategories], i) => {
@@ -198,19 +177,18 @@ export default function HomePage({
 										.filter((item) => !!item).length
 							);
 
-							const containsNew = !!categoryTotal.find(
-								(item) => !!item.isNew
+							const newInsideContainer = categoryTotal.filter(
+								(item) =>
+									!!newFiles.map(
+										(newfile) => newfile.name === item.name
+									).length
 							);
 
 							if (category === "New") {
 								return (
 									<Link
 										onMouseEnter={() => {
-											setItems(
-												files
-													.filter((item) => item.isNew)
-													.map((item) => item.name)
-											);
+											setItems(newFiles.map((item) => item.name));
 										}}
 										onMouseLeave={() => {
 											setHovered(null);
@@ -224,7 +202,7 @@ export default function HomePage({
 									>
 										NEW
 										<br />
-										{files.filter((item) => item.isNew).length}
+										{newFiles.length}
 									</Link>
 								);
 							}
@@ -236,11 +214,9 @@ export default function HomePage({
 										setHovered(category);
 										setItems(categoryTotal.map((item) => item.name));
 										setSubcategories(subcategories);
-										containsNew &&
-											categoryTotal.forEach(
-												(item) =>
-													item.isNew &&
-													setNewItems((prev) => [...prev, item])
+										!!newInsideContainer.length &&
+											newInsideContainer.forEach((item) =>
+												setNewItems((prev) => [...prev, item])
 											);
 									}}
 									onMouseLeave={() => {
@@ -262,7 +238,7 @@ export default function HomePage({
 										? files.length
 										: categoryTotal.length}
 									<br />
-									{containsNew && (
+									{!!newInsideContainer.length && (
 										<span className="absolute -top-0 -right-0 rotate-45">
 											⭐
 										</span>
@@ -271,6 +247,13 @@ export default function HomePage({
 							);
 						}
 					)}
+					<span
+						className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+					>
+						⭐: Component added within a week
+						<br />
+						All: May cause lag
+					</span>
 				</div>
 				<div className="hidden md:block col-span-2">
 					<span className="text-lg border-b-2 border-white">
@@ -307,6 +290,31 @@ export default function HomePage({
 					</div>
 				</div>
 			</div>
+			<section className="h-screen">
+				<h2>Credits ({credits.length}):</h2>
+				<div className="flex flex-wrap gap-2">
+					{credits.sort().map((item, i) => (
+						<a
+							href={item}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+						>
+							{item
+								.replace("https://", "")
+								.replace("www.", "")
+								.replace(".dev", "")
+								.replace(".com", "")
+								.replace(".net", "")
+								.replace(".me", "")
+								.replace(".io", "")
+								.replace(".app", "")
+								.replace("/", "")
+								.replace(".design", "")}
+						</a>
+					))}
+				</div>
+			</section>
 		</main>
 	);
 }

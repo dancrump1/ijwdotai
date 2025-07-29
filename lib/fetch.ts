@@ -3,7 +3,7 @@
 import fs from "fs";
 import path from "path";
 
-function isDateWithinLastWeek(targetDate: Date) {
+export async function isDateWithinLastWeek(targetDate: Date): Promise<boolean> {
 	// Get today's date
 	const today = new Date();
 
@@ -24,7 +24,7 @@ function isDateWithinLastWeek(targetDate: Date) {
 }
 
 export async function getComponentFilesWithDates(): Promise<
-	{ name: string; isNew: boolean }[]
+	{ name: string; isNew: Date }[]
 > {
 	const dirPath = path.join(process.cwd(), "public", "r");
 
@@ -35,18 +35,17 @@ export async function getComponentFilesWithDates(): Promise<
 				const fullPath = path.join(dirPath, file);
 				const stat = await fs.statSync(fullPath);
 				if (stat.isFile()) {
-					console.log("stat.birthtime");
-					console.log(stat.birthtime);
 					return {
 						name: file,
-						isNew: isDateWithinLastWeek(stat.birthtime),
+						isNew: stat.birthtime,
 					};
 				}
 				return null;
 			})
 		);
 
-		return fileStats.filter(Boolean) as { name: string; isNew: boolean }[];
+		// On the server, these are all just the same date.
+		return fileStats.filter(Boolean) as { name: string; isNew: Date }[];
 	} catch (err) {
 		console.error("Error reading directory:", err);
 		return [];

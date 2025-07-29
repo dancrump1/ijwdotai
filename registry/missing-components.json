@@ -110,6 +110,1261 @@
     "reason": "Import not resolvable"
   },
   {
+    "importedBy": "registry/open-source/icons/alarm-clock.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/align-center.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/align-horizontal.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/align-vertical.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/angry.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/archive.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/at-sign.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/attach-file.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/badge-percent.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bell.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bold.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bone.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/calendar-cog.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-pie.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-scatter.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-dollar-sign.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/clock.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/copy.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cursor-click.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/delete.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/download.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/downvote.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-pen.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/expand.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-pen-line.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-stack.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/fingerprint.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/frame.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/gauge.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/git-pull-request.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/github.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/grip.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/hand-coins.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/home.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/italic.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/languages.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/layers.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/link.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/menu.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/party-popper.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/pen-tool.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/refresh-ccw.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/route.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/scan-text.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/settings.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/settings-gear.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sun.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/underline.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/undo.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/connect.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/upvote.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/users.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/volume.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cart.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/stethoscope.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/earth.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/workflow.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/logout.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-help.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/user.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/audio-lines.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/flame.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/eye-off.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-stack.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/badge-alert.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-circle.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-circle-more.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/search.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/shield-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/timer.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bluetooth-searching.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bluetooth-connected.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/bluetooth-off.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/flask.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/syringe.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/a-arrow-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/compass.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/trending-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/trending-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/trending-up-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/play.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/pause.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevrons-up-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevrons-down-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevrons-left-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevrons-right-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-chevron-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-chevron-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-chevron-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-chevron-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/circle-dashed.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/check-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/id-card.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/loader-pinwheel.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/rocking-chair.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-column-decreasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-column-increasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-bar-decreasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-bar-increasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/banana.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/ban.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/wifi.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chrome.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/figma.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/fish-symbol.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/git-commit-vertical.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/git-commit-horizontal.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/waypoints.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/ship.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/roller-coaster.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/airplane.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/drum.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/train-track.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sparkles.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/webhook.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/rabbit.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cog.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cpu.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/rocket.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/activity.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-check-inside.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-minus-inside.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-plus-inside.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-off.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-house.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-minus.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-plus.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/map-pin-x-inside.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/battery-full.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/terminal.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/keyboard.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/clap.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/layout-panel-top.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/book-text.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/shower-head.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/telescope.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/wind.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cctv.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/coffee.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-down-z-a.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-down-a-z.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-down-0-1.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-down-1-0.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/clipboard-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/facebook.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/linkedin.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/twitter.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/youtube.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/instagram.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/twitch.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/dribbble.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/discord.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/x.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/moon.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/vibrate.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/smartphone-charging.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cast.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/upload.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cloud-sun.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sunset.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sun-dim.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sun-medium.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/sun-moon.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-square.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-square-more.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-circle-dashed.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/message-square-dashed.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/a-arrow-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/calendar-days.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-down-dash.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-left-dash.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-right-dash.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-up-dash.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/arrow-big-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/key.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/key-circle.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/key-square.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-line.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-spline.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-chart-line.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-no-axes-column-increasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chart-no-axes-column-decreasing.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/radio.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/radio-tower.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/air-vent.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/tornado.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/wind-arrow-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cloud-rain.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/cloud-rain-wind.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/waves.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/waves-ladder.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-arrow-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-arrow-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-arrow-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-arrow-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/blocks.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/calendar-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/calendar-check-2.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-check-2.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/mail-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/monitor-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/laptop-minimal-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevron-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevron-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevron-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/chevron-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-chevron-down.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-chevron-up.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-chevron-right.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-chevron-left.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/gallery-horizontal-end.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/gallery-vertical-end.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/hand-heart.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/square-activity.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/rotate-cw.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/rotate-ccw.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/gallery-thumbnails.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/user-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/user-round-check.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/boxes.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/refresh-cw.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/refresh-ccw-dot.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/refresh-cw-off.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/redo.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/undo-dot.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/redo-dot.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/scan-face.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/frown.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/smile-plus.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/smile.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/laugh.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/annoyed.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/meh.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/history.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/file-text.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/user-round-plus.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/panel-left-open.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/panel-left-close.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
+    "importedBy": "registry/open-source/icons/panel-right-open.tsx",
+    "importPath": "@/registry/utils/cn",
+    "reason": "Import not resolvable"
+  },
+  {
     "importedBy": "registry/open-source/ImageRipple.tsx",
     "importPath": "@/registry/utils/rippleDimensions",
     "reason": "Import not resolvable"

@@ -65,11 +65,6 @@
     "reason": "Placeholder content"
   },
   {
-    "name": "Skeleton",
-    "examplePath": "registry/examples/skeletonexample.tsx",
-    "reason": "missing example"
-  },
-  {
     "name": "Terminal",
     "examplePath": "registry/examples/terminalexample.tsx",
     "reason": "Placeholder content"
@@ -83,10 +78,5 @@
     "name": "Threads",
     "examplePath": "registry/examples/threadsexample.tsx",
     "reason": "Placeholder content"
-  },
-  {
-    "name": "Tunnel",
-    "examplePath": "registry/examples/tunnelexample.tsx",
-    "reason": "missing example"
   }
 ]

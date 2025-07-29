@@ -27,17 +27,21 @@ export async function getComponentFilesWithDates(): Promise<
 	{ name: string; isNew: Date }[]
 > {
 	const dirPath = path.join(process.cwd(), "public", "r");
+	const publicPath = path.join(process.cwd(), "public");
 
 	try {
 		const files = await fs.readdirSync(dirPath);
+		const dates = await fetch("../public/timeline.json").then((res) =>
+			res.json()
+		);
 		const fileStats = await Promise.all(
-			files.map(async (file) => {
+			files.map(async (file, i) => {
 				const fullPath = path.join(dirPath, file);
 				const stat = await fs.statSync(fullPath);
 				if (stat.isFile()) {
 					return {
 						name: file,
-						isNew: stat.birthtime,
+						isNew: dates[i].dateAdded,
 					};
 				}
 				return null;

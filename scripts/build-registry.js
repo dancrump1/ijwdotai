@@ -5,10 +5,12 @@ const path = require("path");
    🔧  CONFIG
    ────────────────────────────── */
 const registryDir = path.resolve(__dirname, "../registry");
+const publicDir = path.resolve(__dirname, "../public");
 const openSourceDir = path.join(registryDir, "open-source");
 const examplesDir = path.join(registryDir, "examples");
 
 const outputFile = path.join(registryDir, "registry.json");
+const timelineFile = path.join(publicDir, "timeline.json");
 const missingOutputFile = path.join(registryDir, "missing-components.json");
 const incompleteExFile = path.join(registryDir, "incomplete-examples.json");
 
@@ -225,6 +227,14 @@ function buildRegistry() {
 	};
 
 	fs.writeFileSync(outputFile, JSON.stringify(registry, null, 2));
+	fs.writeFileSync(
+		timelineFile,
+		JSON.stringify(
+			items.map(({ name, dateAdded }) => ({ name, dateAdded })),
+			null,
+			2
+		)
+	);
 	fs.writeFileSync(
 		missingOutputFile,
 		JSON.stringify(missingComponents, null, 2)

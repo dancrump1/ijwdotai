@@ -36,8 +36,10 @@ import {
 	XIcon,
 } from "lucide-react";
 
+import { MultiSelect } from "./MultiSelect";
 import RenameChatDialog from "./RenameChatDialog";
 import SettingsDialog from "./SettingsDialog";
+import { Select } from "./ui/select";
 
 interface Attachment {
 	url: string;
@@ -129,6 +131,276 @@ interface PromptComponentProps {
 	onRenameChat?: (newName: string) => Promise<void>;
 }
 
+const registrarComponents = [
+	"3dcard",
+	"3dnavbar",
+	"accordionslices",
+	"actionsearchbar",
+	"animatedaccordion",
+	"animatedhovercard",
+	"animatedlist",
+	"attractor",
+	"aurorabackground",
+	"awardcarousel",
+	"background",
+	"backgroundbeams",
+	"backgroundboxes",
+	"backgroundgradient",
+	"ballpit",
+	"bento",
+	"blurvignette",
+	"booktestimonials",
+	"btn08",
+	"bubbletext",
+	"businessfooter",
+	"cssbox",
+	"canvasreveal",
+	"carddeck",
+	"cardhover",
+	"cardrotation",
+	"cardstack",
+	"cardswap",
+	"cards",
+	"carouselcircle",
+	"carouselstack",
+	"checkboxanimated",
+	"chromagrid",
+	"circleaccordion",
+	"circletext",
+	"circularbarsloader",
+	"codeblock",
+	"colorchangecards",
+	"colorpicker",
+	"colorfultext",
+	"compare",
+	"containerscroll",
+	"contentwithimage",
+	"cubes",
+	"cursorcarousel",
+	"cursormask",
+	"curvednavbar",
+	"darkveil",
+	"dialogstack",
+	"diamondgallery",
+	"dither",
+	"dualringloader",
+	"dynamicisland",
+	"dynamictheme",
+	"editor",
+	"elasticline",
+	"examplereplication",
+	"expandingtabs",
+	"fallingtext",
+	"fancyinput",
+	"faqsection",
+	"faultyterminal",
+	"feature",
+	"features",
+	"filmreel",
+	"fishybutton",
+	"flipcard",
+	"flippedmenu",
+	"flippingtext",
+	"floatingdock",
+	"floatingnav",
+	"flowermenu",
+	"flowingnav",
+	"fluidglass",
+	"fluidmorph",
+	"focuscards",
+	"foldhoverbutton",
+	"folder",
+	"followcursor",
+	"followingeyes",
+	"followingheaders",
+	"followingpointer",
+	"fractalgrid",
+	"frequency",
+	"fullscreenimage",
+	"fuzzyoverlay",
+	"fuzzytext",
+	"galaxybutton",
+	"gallery",
+	"ghostlabel",
+	"giftext",
+	"glassnav",
+	"globe",
+	"glowingbackground",
+	"glowingeffect",
+	"gooeytabs",
+	"gradientbackground",
+	"gradientcheckbox",
+	"gradienttestimonials",
+	"gravity",
+	"gridcontent",
+	"griddistortion",
+	"gridtoflex",
+	"gsapprovider",
+	"halffilledtext",
+	"herohighlight",
+	"heroparallax",
+	"horizontalcta",
+	"horizontalscrollgallery",
+	"hover",
+	"hoverborder",
+	"hovercard",
+	"hovercards",
+	"hovergallery",
+	"hoversquares",
+	"imagereveal",
+	"imageripple",
+	"imagewheel",
+	"imagezoom",
+	"improvements",
+	"infinitecarousel",
+	"infinitemenu",
+	"infinitemovingcards",
+	"infocard",
+	"innerglow",
+	"inputanimated",
+	"introduction",
+	"lamp",
+	"lanecard",
+	"lanyard",
+	"layoutgrid",
+	"lens",
+	"letter3dswap",
+	"letterhover",
+	"lightrays",
+	"linebackground",
+	"lineardialog",
+	"linkpreview",
+	"listrotator",
+	"lottiescrolltrigger",
+	"macbook",
+	"magicbento",
+	"magnetlines",
+	"marqueealongsvg",
+	"maskeffect",
+	"masonry",
+	"matrixbackground",
+	"mediabetweentext",
+	"meteors",
+	"mobilenav",
+	"mobilenavbasic",
+	"modelviewer",
+	"mouseimagetrail",
+	"moviegallery",
+	"navbar",
+	"navbar2",
+	"navbar3",
+	"navigation",
+	"ninedotloader",
+	"numberticker",
+	"oppositescroll",
+	"oppositescrolllinks",
+	"parallaxcarousel",
+	"parallaxfloating",
+	"parallaxscroll",
+	"peelreveal",
+	"pin",
+	"pingpong",
+	"pipeline",
+	"pixelimage",
+	"pointer",
+	"popularpricecard",
+	"positionawarebutton",
+	"poweroffslide",
+	"preloader",
+	"pricecard",
+	"pricingtable",
+	"progresscarousel",
+	"progressiveblur",
+	"projectshowcase",
+	"randomletterswaphover",
+	"resizenavbar",
+	"roundedscrollbar",
+	"sandbox",
+	"scalingbutton",
+	"screensaver",
+	"scrollfloat",
+	"scrollisland",
+	"scrollreveal",
+	"scrolltriggercontext",
+	"searchbar",
+	"sectionheader",
+	"selectmodal",
+	"services",
+	"shapeblur",
+	"sharebutton",
+	"shufflehero",
+	"sidebar",
+	"sideivdeo",
+	"simplefooter",
+	"simplegrid",
+	"skeleton",
+	"slidebutton",
+	"slidingnumbers",
+	"smokeycursor",
+	"smoothcursor",
+	"smoothslider",
+	"snowflakes",
+	"sociallinks",
+	"sparkles",
+	"spinner",
+	"spotlight",
+	"springelement",
+	"springfaq",
+	"springmodal",
+	"stackedcarousel",
+	"stackingcards",
+	"starfieldwrapper",
+	"stickerpeel",
+	"stickyscrollreveal",
+	"stripeaccordion",
+	"stripespreloader",
+	"swapcolumnfeatures",
+	"table",
+	"tabs",
+	"targetcursor",
+	"terminal",
+	"textalongpath",
+	"textanimate",
+	"textcursor",
+	"textcurve",
+	"textenhanced",
+	"textfocus",
+	"textgradient",
+	"texthighlighter",
+	"texthover",
+	"textmorph",
+	"textparallaxcontent",
+	"textproximity",
+	"textreveal",
+	"textroll",
+	"textrotate",
+	"textsplit",
+	"texttrail",
+	"texttype",
+	"textunderline",
+	"threads",
+	"threebounceloader",
+	"threedotloader",
+	"tilesbackground",
+	"timeline",
+	"tooltip",
+	"tracingbeam",
+	"tunnel",
+	"typewritertestimonials",
+	"underlinetobackground",
+	"verticalcutreveal",
+	"videobutton",
+	"videohero",
+	"videoplayer",
+	"videoplayer2",
+	"videoviewer",
+	"viewlist",
+	"wobblecard",
+	"wordtornado",
+	"zoomblurcard",
+	"bottomblur",
+];
+
 export default function PromptComponent({
 	initialPrompt = "",
 	initialExpanded = true,
@@ -153,7 +425,13 @@ export default function PromptComponent({
 	const [isPromptExpanded, setIsPromptExpanded] = useState(initialExpanded);
 	const [shouldAnimate, setShouldAnimate] = useState(false);
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
+	const initialAttachments = registrarComponents.map((item) => {
+		return {
+			url: `https://components.drivedev.net/r/${item}.json`,
+		};
+	});
 	const [attachments, setAttachments] = useState<Attachment[]>([]);
+	const [selectedComponents, setSelectedComponents] = useState([]);
 	const [isListening, setIsListening] = useState(false);
 	const [speechSupported, setSpeechSupported] = useState(false);
 	const [previewState, setPreviewState] = useState<{
@@ -199,6 +477,10 @@ export default function PromptComponent({
 			}
 		}
 	}, [initialPrompt]);
+
+	useEffect(() => {
+		setAttachments(selectedComponents);
+	}, [selectedComponents]);
 
 	// Save prompt to sessionStorage whenever it changes
 	useEffect(() => {
@@ -571,7 +853,7 @@ export default function PromptComponent({
 					{/* Main prompt container */}
 					<div className="mx-auto max-w-4xl px-3 sm:px-6 pb-4 sm:pb-8 pointer-events-auto">
 						<div
-							className={`relative bg-card/80 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border transition-all duration-200 ${
+							className={`relative bg-card/80 backdrop-blur-lg rounded-2xl shadow-2xl border transition-all duration-200 ${
 								isDragging
 									? "border-primary border-2 bg-primary/5"
 									: "border-border/50"
@@ -806,6 +1088,20 @@ export default function PromptComponent({
 															}
 															chats={projectChats}
 															onChatChange={onChatChange}
+														/>
+														<MultiSelect
+															options={registrarComponents.map(
+																(item) => ({
+																	label: item,
+																	value: item,
+																})
+															)}
+															onValueChange={
+																setSelectedComponents
+															}
+															popoverClassname="bg-black z-[55] h-[50vh]"
+															className="z-[55]"
+															maxCount={10}
 														/>
 													</>
 												) : currentProjectId &&

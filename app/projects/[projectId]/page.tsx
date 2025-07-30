@@ -4,7 +4,8 @@ import { useEffect } from "react";
 
 import { useParams, useRouter } from "next/navigation";
 
-import { ApiKeyError, useApiValidation } from "@/components/V0Chat";
+import ApiKeyError from "@/components/ApiKeyError";
+import { useApiValidation } from "@/lib/useApiValidation";
 
 export default function ProjectPage() {
 	const params = useParams();

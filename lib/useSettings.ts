@@ -9,7 +9,7 @@ export interface Settings {
 }
 
 const DEFAULT_SETTINGS: Settings = {
-	model: "v0-1.5-md",
+	model: "v0-1.5-sm",
 	imageGenerations: false,
 	thinking: false,
 };

@@ -479,7 +479,11 @@ export default function PromptComponent({
 	}, [initialPrompt]);
 
 	useEffect(() => {
-		setAttachments(selectedComponents);
+		setAttachments(
+			selectedComponents.map((item) => ({
+				url: `https://components.drivedev.net/r/${item}.json`,
+			}))
+		);
 	}, [selectedComponents]);
 
 	// Save prompt to sessionStorage whenever it changes

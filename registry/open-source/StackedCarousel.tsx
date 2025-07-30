@@ -92,7 +92,7 @@ const StackedCarousel: React.FC<StackedCarouselProps> = ({
 
 						return (
 							<motion.div
-								key={src + i + "stackedcarousel"}
+								key={src + index + "stackedcarousel"}
 								style={{
 									width: "100%",
 									height: "100%",

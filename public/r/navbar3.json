@@ -15,7 +15,7 @@
       "path": "registry/open-source/Navbar3.tsx",
       "content": "import { ModeToggle } from \"@/components/ui/mode-toggle\";\n\n// https://www.hover.dev/components/heros\nexport const NavBar3 = () => {\n\treturn (\n\t\t<nav className=\"fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 text-white\">\n\t\t\t<div className=\"text-black dark:text-white\">logo</div>\n\t\t\t<section className=\"flex gap-2\">\n\t\t\t\t<button\n\t\t\t\t\t// onClick={() => {\n\t\t\t\t\t//   document.getElementById(\"launch-schedule\")?.scrollIntoView({\n\t\t\t\t\t//     behavior: \"smooth\",\n\t\t\t\t\t//   });\n\t\t\t\t\t// }}\n\t\t\t\t\tclassName=\"flex items-center gap-1 text-xs hover:text-pink-900 dark:hover:text-pink-300 text-zinc-900 dark:text-zinc-400\"\n\t\t\t\t>\n\t\t\t\t\tNav Button\n\t\t\t\t</button>\n\t\t\t\t<ModeToggle />\n\t\t\t</section>\n\t\t</nav>\n\t);\n};\n",
       "type": "registry:ui",
-      "target": "components/Navbar3.tsx"
+      "target": "open-source/Navbar3.tsx"
     },
     {
       "path": "./components/ui/mode-toggle.tsx",
@@ -31,7 +31,7 @@
     },
     {
       "path": "./lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+      "content": "import registry from \"@/registry.json\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport type { RegistryItem } from \"shadcn/registry\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n\nconst components = registry.items as unknown as RegistryItem[];\n\nexport const getComponents = (selectedTags: any[] = []): RegistryItem[] => {\n\treturn selectedTags.length\n\t\t? components.filter((component) =>\n\t\t\t\tselectedTags.every(\n\t\t\t\t\t(tag) => component.meta?.tags?.includes(tag) ?? false\n\t\t\t\t)\n\t\t\t)\n\t\t: components;\n};\n\nexport const getComponentsByNames = (names: string[]): RegistryItem[] => {\n\tconst componentsMap = new Map(components.map((comp) => [comp.name, comp]));\n\n\treturn names\n\t\t.map((name) => componentsMap.get(name))\n\t\t.filter((comp): comp is RegistryItem => comp !== undefined);\n};\n\nexport const getAvailableTags = (selectedTags: any[]): any[] => {\n\tif (!selectedTags.length) return [];\n\n\t// Get all components that have all the selected tags\n\tconst matchingComponents = components.filter((component) =>\n\t\tselectedTags.every((tag) => component.meta?.tags?.includes(tag) ?? false)\n\t);\n\n\t// Get all unique tags from the matching components\n\tconst availableTags = new Set<any>();\n\tmatchingComponents.forEach((component) => {\n\t\tcomponent.meta?.tags?.forEach((tag: any) => {\n\t\t\tif (!selectedTags.includes(tag)) {\n\t\t\t\tavailableTags.add(tag);\n\t\t\t}\n\t\t});\n\t});\n\n\treturn Array.from(availableTags);\n};\n\nexport const convertRegistryPaths = (content: string): string => {\n\treturn content\n\t\t.replace(/@\\/registry\\/default\\/ui/g, \"@/components/ui\")\n\t\t.replace(/@\\/registry\\/default\\/compositions/g, \"@/components\")\n\t\t.replace(/@\\/registry\\/default\\/hooks/g, \"@/hooks\")\n\t\t.replace(/@\\/registry\\/default\\/lib/g, \"@/lib\");\n};\n",
       "type": "registry:ui",
       "target": "lib/utils.ts"
     }

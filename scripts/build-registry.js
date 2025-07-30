@@ -115,8 +115,7 @@ function scanFileRecursively(absPath, seen = new Set()) {
 			registry:item	Use for universal registry items.
 		*/
 		type: "registry:ui",
-
-		// target,
+		target,
 		dateAdded: stat.birthtime,
 	};
 
@@ -181,7 +180,7 @@ function buildRegistryItem(componentFile) {
 		uniqueFiles.unshift({
 			path: relExamplePath,
 			type: "registry:page",
-			// target: "~/example.tsx",
+			target: "~/example.tsx",
 			dateAdded: stat.birthtime,
 		});
 	}

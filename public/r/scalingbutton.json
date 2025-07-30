@@ -15,7 +15,7 @@
       "path": "registry/open-source/ScalingButton.tsx",
       "content": "import * as React from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { motion } from \"motion/react\";\n\ntype ScalingButtonProps = {\n\tspringTransition?: {\n\t\ttype: string;\n\t\tstiffness: number;\n\t\tdamping: number;\n\t};\n};\n\nconst springTransitionDefault = {\n\ttype: \"spring\",\n\tstiffness: 400,\n\tdamping: 12,\n};\n\nexport const ScalingButton = React.forwardRef<\n\tHTMLButtonElement,\n\tScalingButtonProps\n>(({ children, springTransition = springTransitionDefault, ...props }, ref) => {\n\treturn (\n\t\t<motion.div\n\t\t\twhileHover={{ scale: 1.1 }}\n\t\t\twhileTap={{ scale: 0.9 }}\n\t\t\ttransition={springTransition}\n\t\t>\n\t\t\t<Button ref={ref} {...props}>\n\t\t\t\t{children}\n\t\t\t</Button>\n\t\t</motion.div>\n\t);\n});\n\nScalingButton.displayName = \"ScalingButton\";\n",
       "type": "registry:ui",
-      "target": "components/ScalingButton.tsx"
+      "target": "open-source/ScalingButton.tsx"
     },
     {
       "path": "./components/ui/button.tsx",
@@ -25,7 +25,7 @@
     },
     {
       "path": "./lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+      "content": "import registry from \"@/registry.json\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport type { RegistryItem } from \"shadcn/registry\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n\nconst components = registry.items as unknown as RegistryItem[];\n\nexport const getComponents = (selectedTags: any[] = []): RegistryItem[] => {\n\treturn selectedTags.length\n\t\t? components.filter((component) =>\n\t\t\t\tselectedTags.every(\n\t\t\t\t\t(tag) => component.meta?.tags?.includes(tag) ?? false\n\t\t\t\t)\n\t\t\t)\n\t\t: components;\n};\n\nexport const getComponentsByNames = (names: string[]): RegistryItem[] => {\n\tconst componentsMap = new Map(components.map((comp) => [comp.name, comp]));\n\n\treturn names\n\t\t.map((name) => componentsMap.get(name))\n\t\t.filter((comp): comp is RegistryItem => comp !== undefined);\n};\n\nexport const getAvailableTags = (selectedTags: any[]): any[] => {\n\tif (!selectedTags.length) return [];\n\n\t// Get all components that have all the selected tags\n\tconst matchingComponents = components.filter((component) =>\n\t\tselectedTags.every((tag) => component.meta?.tags?.includes(tag) ?? false)\n\t);\n\n\t// Get all unique tags from the matching components\n\tconst availableTags = new Set<any>();\n\tmatchingComponents.forEach((component) => {\n\t\tcomponent.meta?.tags?.forEach((tag: any) => {\n\t\t\tif (!selectedTags.includes(tag)) {\n\t\t\t\tavailableTags.add(tag);\n\t\t\t}\n\t\t});\n\t});\n\n\treturn Array.from(availableTags);\n};\n\nexport const convertRegistryPaths = (content: string): string => {\n\treturn content\n\t\t.replace(/@\\/registry\\/default\\/ui/g, \"@/components/ui\")\n\t\t.replace(/@\\/registry\\/default\\/compositions/g, \"@/components\")\n\t\t.replace(/@\\/registry\\/default\\/hooks/g, \"@/hooks\")\n\t\t.replace(/@\\/registry\\/default\\/lib/g, \"@/lib\");\n};\n",
       "type": "registry:ui",
       "target": "lib/utils.ts"
     }

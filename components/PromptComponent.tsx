@@ -24,7 +24,6 @@ import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
-	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -535,7 +534,7 @@ export default function PromptComponent({
 						{isLoading ? (
 							<div className="animate-spin rounded-full h-6 w-6 border-2 border-foreground border-t-transparent"></div>
 						) : (
-							<div className="rounded-full h-6 w-6 border-2 border-foreground border-t-transparent"></div>
+							<div className=" rounded-full h-6 w-6 border-2 border-foreground border-t-transparent"></div>
 						)}
 					</button>
 				</div>
@@ -885,7 +884,7 @@ export default function PromptComponent({
 																chatData.latestVersion
 																	.status === "completed" && (
 																	<>
-																		<DropdownMenuSeparator />
+																		<hr className="border border-1 border-black" />
 																		<DropdownMenuItem
 																			onClick={async () => {
 																				try {
@@ -973,7 +972,7 @@ export default function PromptComponent({
 																onRenameChat &&
 																chatData && (
 																	<>
-																		<DropdownMenuSeparator />
+																		<hr className="border border-1 border-black" />
 																		<RenameChatDialog
 																			chatId={currentChatId}
 																			currentName={

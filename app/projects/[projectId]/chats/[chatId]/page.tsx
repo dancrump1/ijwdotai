@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 
 import { useParams, useRouter } from "next/navigation";
 
-import {
-	ApiKeyError,
-	ErrorDialog,
-	PromptComponent,
-	useApiValidation,
-} from "@/components/V0Chat";
+import ApiKeyError from "@/components/ApiKeyError";
+import ErrorDialog from "@/components/ErrorDialog";
+import PromptComponent from "@/components/PromptComponent";
+import { useApiValidation } from "@/lib/useApiValidation";
 
 export default function ChatPage() {
 	const params = useParams();

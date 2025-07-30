@@ -14,12 +14,12 @@ export async function isDateWithinLastWeek(targetDate: Date): Promise<boolean> {
 	// of both dates to ensure only the date part is considered.
 	today.setHours(0, 0, 0, 0);
 	oneWeekAgo.setHours(0, 0, 0, 0);
-	targetDate.setHours(0, 0, 0, 0);
+	targetDate?.setHours(0, 0, 0, 0);
 
 	// Compare the target date to the date one week ago
 	return (
-		targetDate.getTime() >= oneWeekAgo.getTime() &&
-		targetDate.getTime() <= today.getTime()
+		targetDate?.getTime() >= oneWeekAgo.getTime() &&
+		targetDate?.getTime() <= today.getTime()
 	);
 }
 
@@ -37,6 +37,7 @@ export async function getComponentFilesWithDates(): Promise<
 			publicPath + "/timeline.json",
 			"utf-8"
 		);
+
 		const fileStats = await Promise.all(
 			files.map(async (file, i) => {
 				const fullPath = path.join(dirPath, file);
@@ -44,7 +45,7 @@ export async function getComponentFilesWithDates(): Promise<
 				if (stat.isFile()) {
 					return {
 						name: file,
-						isNew: JSON.parse(dates)[i].dateAdded,
+						isNew: new Date(JSON.parse(dates)[i].dateAdded),
 					};
 				}
 				return null;

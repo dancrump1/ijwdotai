@@ -20,6 +20,7 @@ const name = "acme";
 
 /* project-specific path aliases */
 const aliasMap = {
+	"@/public": path.join(process.cwd(), "public"),
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
 	"@/lib": path.join(process.cwd(), "lib"),
 	"@/registry/open-source": path.join(
@@ -99,9 +100,23 @@ function scanFileRecursively(absPath, seen = new Set()) {
 	const stat = fs.statSync(absPath);
 
 	const fileObj = {
+		// Where the component lives in our codebase
 		path: relPath,
+		/*
+			registry:block	Use for complex components with multiple files.
+			registry:component	Use for simple components.
+			registry:lib	Use for lib and utils.
+			registry:hook	Use for hooks.
+			registry:ui	Use for UI components and single-file primitives
+			registry:page	Use for page or file-based routes.
+			registry:file	Use for miscellaneous files.
+			registry:style	Use for registry styles. eg. new-york
+			registry:theme	Use for themes.
+			registry:item	Use for universal registry items.
+		*/
 		type: "registry:ui",
-		target,
+
+		// target,
 		dateAdded: stat.birthtime,
 	};
 
@@ -166,7 +181,7 @@ function buildRegistryItem(componentFile) {
 		uniqueFiles.unshift({
 			path: relExamplePath,
 			type: "registry:page",
-			target: "~/example.tsx",
+			// target: "~/example.tsx",
 			dateAdded: stat.birthtime,
 		});
 	}

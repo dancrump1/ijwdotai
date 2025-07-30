@@ -4,25 +4,19 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+// @ts-expect-error no modules for typescript
+import splitting from "splitting";
 
 const dishes = ["Fish and Chips", "Sunday Roast", "Shepherd's Pie"];
 const navigationLinks = ["Contact", "Recruitment", "Privacy"];
 
 const FlippedMenu = () => {
-	const [splitting, setSplitting] = useState<any>(null);
 	const scope = useRef<HTMLDivElement>(null);
 	const [isOpen, setIsOpen] = useState(false);
 	const timelineRef = useRef<gsap.core.Timeline | null>(null);
 	const btnWord1 = useRef<HTMLSpanElement>(null);
 	const btnWord2 = useRef<HTMLSpanElement>(null);
 	const menu = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		// @ts-expect-error no modules for typescript
-		import("splitting").then((Splitting) => {
-			setSplitting(() => Splitting.default);
-		});
-	}, []);
 
 	useGSAP(
 		async () => {

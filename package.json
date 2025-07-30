@@ -60,6 +60,8 @@
 		"@types/react": "^18.2.61",
 		"@types/react-syntax-highlighter": "^15.5.13",
 		"@types/three": "^0.173.0",
+		"@upstash/ratelimit": "^2.0.6",
+		"@upstash/redis": "^1.35.2",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"cmdk": "^1.1.1",
@@ -121,6 +123,7 @@
 		"url-loader": "^4.1.1",
 		"usehooks-ts": "^3.1.1",
 		"uuid": "^11.1.0",
+		"v0-sdk": "^0.5.1",
 		"video.js": "^8.10.0",
 		"zod": "^3.24.1"
 	},

@@ -425,11 +425,7 @@ export default function PromptComponent({
 	const [isPromptExpanded, setIsPromptExpanded] = useState(initialExpanded);
 	const [shouldAnimate, setShouldAnimate] = useState(false);
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
-	const initialAttachments = registrarComponents.map((item) => {
-		return {
-			url: `https://components.drivedev.net/r/${item}.json`,
-		};
-	});
+
 	const [attachments, setAttachments] = useState<Attachment[]>([]);
 	const [selectedComponents, setSelectedComponents] = useState([]);
 	const [isListening, setIsListening] = useState(false);
@@ -481,7 +477,7 @@ export default function PromptComponent({
 	useEffect(() => {
 		setAttachments(
 			selectedComponents.map((item) => ({
-				url: `https://components.drivedev.net/r/${item}.json`,
+				url: `https://ijwdotai.com/r/${item}`,
 			}))
 		);
 	}, [selectedComponents]);

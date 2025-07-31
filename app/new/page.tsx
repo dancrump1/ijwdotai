@@ -1,6 +1,6 @@
 "use server";
 
-import { getComponentFilesWithDates, isDateWithinLastWeek } from "@/lib/fetch";
+import { getComponentFilesWithDates } from "@/lib/fetch";
 
 import FlexWrapper from "../../components/FlexWrapper";
 
@@ -11,11 +11,5 @@ export default async function Page({
 }) {
 	const files = await getComponentFilesWithDates();
 
-	return (
-		<FlexWrapper
-			files={files.filter(
-				async (item) => await isDateWithinLastWeek(item.isNew)
-			)}
-		/>
-	);
+	return <FlexWrapper files={files} />;
 }

@@ -1,24 +1,51 @@
 const fs = require("fs");
 const path = require("path");
 
-/* ──────────────────────────────
-   🔧  CONFIG
-   ────────────────────────────── */
+/**
+ * Absolute path to the registry directory.
+ * @type {string}
+ */
 const registryDir = path.resolve(__dirname, "../registry");
-const publicDir = path.resolve(__dirname, "../public");
+/**
+ * Path to the open-source components directory.
+ * @type {string}
+ */
 const openSourceDir = path.join(registryDir, "open-source");
-const examplesDir = path.join(registryDir, "examples");
 
+/**
+ * Path to the component usages directory.
+ * @type {string}
+ */
+const usagesDir = path.join(__dirname, "components", "usages");
+
+/**
+ * Path to the main registry output file.
+ * @type {string}
+ */
 const outputFile = path.join(registryDir, "registry.json");
-const timelineFile = path.join(publicDir, "timeline.json");
-const missingOutputFile = path.join(registryDir, "missing-components.json");
-const incompleteExFile = path.join(registryDir, "incomplete-examples.json");
 
+/**
+ * JSON Schema URL for the registry file.
+ * @type {string}
+ */
 const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
+
+/**
+ * Homepage URL for the project.
+ * @type {string}
+ */
 const homepage = "https://acme.com";
+
+/**
+ * Name of the registry/project.
+ * @type {string}
+ */
 const name = "acme";
 
-/* project-specific path aliases */
+/**
+ * Maps path aliases to actual directories for resolving imports.
+ * @type {Object<string, string>}
+ */
 const aliasMap = {
 	"@/public": path.join(process.cwd(), "public"),
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
@@ -28,17 +55,14 @@ const aliasMap = {
 		"registry",
 		"open-source"
 	),
+	"@/registry/utils": path.join(process.cwd(), "registry", "utils"),
 };
 
-/* ──────────────────────────────
-   📦  STATE
-   ────────────────────────────── */
-const missingComponents = [];
-const incompleteExamples = [];
-
-/* ──────────────────────────────
-   🛠 HELPERS
-   ────────────────────────────── */
+/**
+ * Converts a string into title case.
+ * @param {string} s - Input string.
+ * @returns {string} - Title-cased string.
+ */
 const titleCase = (s) =>
 	s
 		.replace(/[-_]/g, " ")
@@ -47,6 +71,11 @@ const titleCase = (s) =>
 		.replace(/^./, (c) => c.toUpperCase())
 		.trim();
 
+/**
+ * Extracts relative and aliased import paths from code.
+ * @param {string} code - Source code to scan.
+ * @returns {string[]} - Array of import paths.
+ */
 const extractImports = (code) => {
 	const rx = /import\s+.*?['"]([^'"]+)['"]/g;
 	const out = [];
@@ -57,6 +86,14 @@ const extractImports = (code) => {
 	return out;
 };
 
+/**
+ * Resolves a file path from an import statement.
+ * Supports relative and aliased imports.
+ *
+ * @param {string} from - File path from which the import originates.
+ * @param {string} imp - Import path to resolve.
+ * @returns {string|null} - Resolved file path, or null if not found.
+ */
 const resolveImportPath = (from, imp) => {
 	if (imp.startsWith(".")) {
 		const base = path.resolve(path.dirname(from), imp);
@@ -80,43 +117,31 @@ const resolveImportPath = (from, imp) => {
 	return null;
 };
 
-/* ──────────────────────────────
-   🔁 Recursive File Scanner
-   ────────────────────────────── */
+/**
+ * Recursively scans a file and its import tree for registry-related metadata.
+ *
+ * @param {string} absPath - Absolute path to the starting file.
+ * @param {Set<string>} [seen=new Set()] - Tracks visited files to prevent cycles.
+ * @returns {{path: string; type: "registry:block" | "registry:component"|"registry:lib"|"registry:hook"|"registry:ui"|"registry:page"|"registry:file"|"registry:style"|"registry:theme"|"registry:item"}[]} - Array of file metadata objects.
+ */
 function scanFileRecursively(absPath, seen = new Set()) {
 	if (seen.has(absPath)) return [];
 
-	if (!fs.existsSync(absPath)) {
-		missingComponents.push({ path: absPath, reason: "file missing" });
-		return [];
-	}
+	if (!fs.existsSync(absPath)) return [];
 
 	seen.add(absPath);
 
+	// Actual path to component within THIS library
 	const relPath = path.relative(registryDir, absPath).replace(/\\/g, "/");
+	// Path for inside v0 AI filesystem
 	const target = relPath.startsWith("registry")
 		? `components/${path.basename(absPath)}`
-		: relPath.replace(/^.*?components\//, "components/");
-	const stat = fs.statSync(absPath);
+		: relPath.replace(/^.*?components\//, "components/").replace("../", "");
 
 	const fileObj = {
-		// Where the component lives in our codebase
 		path: relPath,
-		/*
-			registry:block	Use for complex components with multiple files.
-			registry:component	Use for simple components.
-			registry:lib	Use for lib and utils.
-			registry:hook	Use for hooks.
-			registry:ui	Use for UI components and single-file primitives
-			registry:page	Use for page or file-based routes.
-			registry:file	Use for miscellaneous files.
-			registry:style	Use for registry styles. eg. new-york
-			registry:theme	Use for themes.
-			registry:item	Use for universal registry items.
-		*/
 		type: "registry:ui",
-		target,
-		dateAdded: stat.birthtime,
+		target: "@/" + target.replace("../", ""),
 	};
 
 	const code = fs.readFileSync(absPath, "utf-8");
@@ -124,24 +149,19 @@ function scanFileRecursively(absPath, seen = new Set()) {
 
 	const children = imports.flatMap((imp) => {
 		const resolved = resolveImportPath(absPath, imp);
-		return resolved
-			? scanFileRecursively(resolved, seen)
-			: (() => {
-					missingComponents.push({
-						importedBy: path.relative(process.cwd(), absPath),
-						importPath: imp,
-						reason: "Import not resolvable",
-					});
-					return [];
-				})();
+		return resolved ? scanFileRecursively(resolved, seen) : [];
 	});
 
 	return [fileObj, ...children];
 }
 
-/* ──────────────────────────────
-   🧱 Build Registry Item
-   ────────────────────────────── */
+/**
+ * Builds a registry item for a given component file.
+ * Adds the component file and all its dependencies, plus an optional example file.
+ *
+ * @param {string} componentFile - Filename of the component inside `openSourceDir`.
+ * @returns {Object} - Registry item object.
+ */
 function buildRegistryItem(componentFile) {
 	const absPath = path.join(openSourceDir, componentFile);
 	const componentName = path.basename(componentFile, ".tsx");
@@ -149,7 +169,6 @@ function buildRegistryItem(componentFile) {
 
 	const files = scanFileRecursively(absPath, seenFiles);
 
-	// Ensure uniqueness per registry item
 	const uniqueFiles = [];
 	const added = new Set();
 	for (const f of files) {
@@ -159,78 +178,39 @@ function buildRegistryItem(componentFile) {
 		}
 	}
 
-	// TODO: Add handling from implementation files
-
-	// Handle example if exists
-	const exampleName = `${componentName.toLowerCase()}example.tsx`;
-	const examplePath = path.join(examplesDir, exampleName);
+	const exampleName = `${componentName.toLowerCase()}usage.tsx`;
+	const examplePath = path.join("components/usages/", exampleName);
 
 	if (fs.existsSync(examplePath)) {
-		const relExamplePath = `registry/examples/${exampleName}`;
+		const relExamplePath = `components/usages/${exampleName}`;
 		const content = fs.readFileSync(examplePath, "utf-8");
-		const stat = fs.statSync(relExamplePath);
 
-		if (/coming\s+soon/i.test(content)) {
-			incompleteExamples.push({
-				name: componentName,
-				examplePath: relExamplePath,
-				reason: "Placeholder content",
-			});
-		}
 		uniqueFiles.unshift({
 			path: relExamplePath,
 			type: "registry:page",
 			target: "~/example.tsx",
-			dateAdded: stat.birthtime,
 		});
+	} else {
 	}
-
-	if (!fs.existsSync(examplePath)) {
-		const relExamplePath = `registry/examples/${exampleName}`;
-
-		incompleteExamples.push({
-			name: componentName,
-			examplePath: relExamplePath,
-			reason: "missing example",
-		});
-
-		const content = `
-		"use client";
-
-import React from "react";
-
-export default function Example() {
-    return (
-        <div className="relative w-full flex items-center justify-center">
-          
-            
-        </div>
-    );
-}
-`;
-
-		fs.writeFileSync(relExamplePath, content, "utf-8");
-	}
-
-	const stat = fs.statSync(absPath);
 
 	return {
 		name: componentName.toLowerCase(),
 		type: "registry:component",
 		title: titleCase(componentName),
 		description: titleCase(componentName),
-		dateAdded: stat.birthtime,
 		files: uniqueFiles,
 	};
 }
 
-/* ──────────────────────────────
-   🏗️ Build Full Registry
-   ────────────────────────────── */
+/**
+ * Builds the full registry from all components in the open-source directory.
+ * Writes the resulting JSON object to `registry.json`.
+ */
 function buildRegistry() {
 	const componentFiles = fs
 		.readdirSync(openSourceDir)
 		.filter((f) => f.endsWith(".tsx"));
+
 	const items = componentFiles.map(buildRegistryItem);
 
 	const registry = {
@@ -241,32 +221,6 @@ function buildRegistry() {
 	};
 
 	fs.writeFileSync(outputFile, JSON.stringify(registry, null, 2));
-	fs.writeFileSync(
-		timelineFile,
-		JSON.stringify(
-			items.map(({ name, dateAdded }) => ({ name, dateAdded })),
-			null,
-			2
-		)
-	);
-	fs.writeFileSync(
-		missingOutputFile,
-		JSON.stringify(missingComponents, null, 2)
-	);
-	fs.writeFileSync(
-		incompleteExFile,
-		JSON.stringify(incompleteExamples, null, 2)
-	);
-
-	console.log(`✅ registry.json written – ${items.length} components.`);
-	if (missingComponents.length)
-		console.log(
-			`⚠️  ${missingComponents.length} missing/unresolvable items – see missing-components.json`
-		);
-	if (incompleteExamples.length)
-		console.log(
-			`📝 ${incompleteExamples.length} placeholder examples – see incomplete-examples.json`
-		);
 }
 
 buildRegistry();

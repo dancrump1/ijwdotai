@@ -136,16 +136,13 @@ const credits = [
 
 export default function HomePage({
 	files,
-	newFiles,
 }: {
 	files: { name: string; isNew: Date }[];
-	newFiles: { name: string }[];
 }) {
 	const [hovered, setHovered] = useState<string | null>(null);
 
 	const [items, setItems] = useState([""]);
 	const [subcategories, setSubcategories] = useState([""]);
-	const [newItems, setNewItems] = useState<any[]>([]);
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
@@ -181,36 +178,6 @@ export default function HomePage({
 											.filter((item) => !!item).length
 								);
 
-								const newInsideContainer = categoryTotal.filter(
-									(item) =>
-										!!newFiles.map(
-											(newfile) => newfile.name === item.name
-										).length
-								);
-
-								if (category === "New") {
-									return (
-										<Link
-											onMouseEnter={() => {
-												setItems(newFiles.map((item) => item.name));
-											}}
-											onMouseLeave={() => {
-												setHovered(null);
-												setItems([]);
-												setSubcategories([]);
-												setNewItems([]);
-											}}
-											key={"all-new"}
-											href={"new"}
-											className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${"text-white"}`}
-										>
-											NEW
-											<br />
-											{newFiles.length}
-										</Link>
-									);
-								}
-
 								return (
 									<Link
 										key={category}
@@ -220,16 +187,11 @@ export default function HomePage({
 												categoryTotal.map((item) => item.name)
 											);
 											setSubcategories(subcategories);
-											!!newInsideContainer.length &&
-												newInsideContainer.forEach((item) =>
-													setNewItems((prev) => [...prev, item])
-												);
 										}}
 										onMouseLeave={() => {
 											setHovered(null);
 											setItems([]);
 											setSubcategories([]);
-											setNewItems([]);
 										}}
 										href={href}
 										className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
@@ -246,11 +208,6 @@ export default function HomePage({
 											? files.length
 											: categoryTotal.length}
 										<br />
-										{!!newInsideContainer.length && (
-											<span className="absolute -top-0 -right-0 rotate-45">
-												⭐
-											</span>
-										)}
 									</Link>
 								);
 							}
@@ -288,13 +245,6 @@ export default function HomePage({
 							<span className="text-lg border-b-2 border-white">
 								New Items:
 							</span>
-							{!!newItems.length && (
-								<ul className="flex flex-col flex-wrap h-full overflow-hidden">
-									{newItems.map((item) => (
-										<li>{item.name.replace(".json", "")}</li>
-									))}
-								</ul>
-							)}
 						</div>
 					</div>
 				</div>

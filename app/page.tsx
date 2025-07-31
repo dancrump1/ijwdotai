@@ -11,8 +11,8 @@ export default async function Page({}: {}) {
 		<>
 			<Suspense>
 				<HomePage files={files} />
+				<V0Chat files={files} />
 			</Suspense>
-			<V0Chat />
 		</>
 	);
 }

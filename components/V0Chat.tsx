@@ -11,7 +11,7 @@ import ErrorDialog from "./ErrorDialog";
 import PromptComponent from "./PromptComponent";
 import RateLimitDialog from "./RateLimitDialog";
 
-export default function HomePage() {
+export default function V0Chat({ files }: { files: any }) {
 	const router = useRouter();
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
@@ -27,6 +27,7 @@ export default function HomePage() {
 	}>({});
 	const [showErrorDialog, setShowErrorDialog] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
+	const [projectChatsLoaded, setProjectChatsLoaded] = useState(false);
 
 	// API validation on page load
 	const { isValidating, showApiKeyError } = useApiValidation();
@@ -94,6 +95,7 @@ export default function HomePage() {
 			if (cachedChats) {
 				const parsedChats = JSON.parse(cachedChats);
 				setProjectChats(parsedChats);
+				setProjectChatsLoaded(true);
 			}
 		} catch (err) {
 			// Silently handle cache loading errors
@@ -106,6 +108,7 @@ export default function HomePage() {
 				const data = await response.json();
 				const chatsData = data.chats || [];
 				setProjectChats(chatsData);
+				setProjectChatsLoaded(true);
 
 				// Store in sessionStorage for next time
 				try {
@@ -213,6 +216,7 @@ export default function HomePage() {
 			setShowErrorDialog(true);
 		} finally {
 			setIsLoading(false);
+			setProjectChatsLoaded(true);
 		}
 	};
 
@@ -279,6 +283,7 @@ export default function HomePage() {
 				currentChatId={selectedChatId}
 				onProjectChange={handleProjectChange}
 				onChatChange={handleChatChange}
+				selectOptions={files}
 			/>
 
 			<RateLimitDialog

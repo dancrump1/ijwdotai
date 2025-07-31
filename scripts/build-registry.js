@@ -5,18 +5,13 @@ const path = require("path");
  * Absolute path to the registry directory.
  * @type {string}
  */
-const registryDir = path.resolve(__dirname, "../registry");
+const registryDir = path.join(process.cwd(), "registry");
+
 /**
  * Path to the open-source components directory.
  * @type {string}
  */
 const openSourceDir = path.join(registryDir, "open-source");
-
-/**
- * Path to the component usages directory.
- * @type {string}
- */
-const usagesDir = path.join(__dirname, "components", "usages");
 
 /**
  * Path to the main registry output file.
@@ -34,13 +29,13 @@ const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
  * Homepage URL for the project.
  * @type {string}
  */
-const homepage = "https://acme.com";
+const homepage = "https://ijwdotai.com";
 
 /**
  * Name of the registry/project.
  * @type {string}
  */
-const name = "acme";
+const name = "ijwdotai";
 
 /**
  * Maps path aliases to actual directories for resolving imports.
@@ -49,6 +44,7 @@ const name = "acme";
 const aliasMap = {
 	"@/public": path.join(process.cwd(), "public"),
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
+	"@/components/usages": path.join(process.cwd(), "components", "usages"),
 	"@/lib": path.join(process.cwd(), "lib"),
 	"@/registry/open-source": path.join(
 		process.cwd(),
@@ -141,7 +137,7 @@ function scanFileRecursively(absPath, seen = new Set()) {
 	const fileObj = {
 		path: relPath,
 		type: "registry:ui",
-		target: "@/" + target.replace("../", ""),
+		target: target.replace("../", ""),
 	};
 
 	const code = fs.readFileSync(absPath, "utf-8");
@@ -187,7 +183,7 @@ function buildRegistryItem(componentFile) {
 
 		uniqueFiles.unshift({
 			path: relExamplePath,
-			type: "registry:page",
+			type: "registry:block",
 			target: "~/example.tsx",
 		});
 	} else {
@@ -195,7 +191,7 @@ function buildRegistryItem(componentFile) {
 
 	return {
 		name: componentName.toLowerCase(),
-		type: "registry:component",
+		type: "registry:block",
 		title: titleCase(componentName),
 		description: titleCase(componentName),
 		files: uniqueFiles,

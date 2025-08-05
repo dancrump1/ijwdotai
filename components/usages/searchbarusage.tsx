@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { PlaceholdersAndVanishInput } from "@/registry/open-source/Searchbar";
+import { PlaceholdersAndVanishInput } from "@/registry/open-source/searchbar";
 
 export default function Usage() {
 	return (

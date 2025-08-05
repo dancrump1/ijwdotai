@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import MatrixBackground from "@/registry/open-source/MatrixBackground";
+import MatrixBackground from "@/registry/open-source/matrix-background";
 
 export default function Usage() {
 	return (

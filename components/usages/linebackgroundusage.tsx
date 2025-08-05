@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { GoogleGeminiEffect } from "@/registry/open-source/LineBackground";
+import { GoogleGeminiEffect } from "@/registry/open-source/line-background";
 import { useScroll, useTransform } from "motion/react";
 
 export default function GoogleGeminiEffectDemo() {

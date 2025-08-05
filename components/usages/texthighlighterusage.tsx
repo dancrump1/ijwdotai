@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import TextHighlighter from "@/registry/open-source/TextHighlighter";
+import TextHighlighter from "@/registry/open-source/text-highlighter";
 import Lenis from "lenis";
 
 export default function TextHighlighterDemo() {

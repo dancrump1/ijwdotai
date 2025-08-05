@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import PeelReveal from "@/registry/open-source/PeelReveal";
+import PeelReveal from "@/registry/open-source/peel-reveal";
 
 export default function Usage() {
 	return (

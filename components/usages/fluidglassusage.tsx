@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FluidGlass from "@/registry/open-source/FluidGlass";
+import FluidGlass from "@/registry/open-source/fluid-glass";
 
 // IMPORTANT INFO BELOW
 // This component requires a 3D model to function correctly.

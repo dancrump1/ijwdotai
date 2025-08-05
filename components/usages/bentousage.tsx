@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BentoGrid, BentoGridItem } from "@/registry/open-source/Bento";
+import { BentoGrid, BentoGridItem } from "@/registry/open-source/bento";
 import {
 	IconArrowWaveRightUp,
 	IconBoxAlignRightFilled,

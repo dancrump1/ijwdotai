@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CursorFollow from "@/registry/open-source/CursorFollow";
+import CursorFollow from "@/registry/open-source/cursor-follow";
 
 const images = [
 	{

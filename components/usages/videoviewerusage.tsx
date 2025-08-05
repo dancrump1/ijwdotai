@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { VideoContainer } from "@/registry/open-source/VideoViewer";
+import { VideoContainer } from "@/registry/open-source/video-viewer";
 
 export default function Usage() {
 	return (

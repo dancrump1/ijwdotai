@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import InfiniteMenu from "@/registry/open-source/InfiniteMenu";
+import InfiniteMenu from "@/registry/open-source/infinite-menu";
 
 export default function Usage() {
 	return (

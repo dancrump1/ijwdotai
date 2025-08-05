@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { CardRotation } from "@/registry/open-source/CardRotation";
+import { CardRotation } from "@/registry/open-source/card-rotation";
 
 export default function Usage() {
 	return (

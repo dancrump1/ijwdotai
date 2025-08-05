@@ -1,21 +1,21 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "navbar3",
-  "type": "registry:component",
+  "type": "registry:block",
   "title": "Navbar3",
   "description": "Navbar3",
   "files": [
     {
-      "path": "registry/examples/navbar3example.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Example() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
-      "type": "registry:page",
+      "path": "components/usages/navbar3usage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
       "target": "~/example.tsx"
     },
     {
-      "path": "registry/open-source/Navbar3.tsx",
+      "path": "registry/open-source/navbar3.tsx",
       "content": "import { ModeToggle } from \"@/components/ui/mode-toggle\";\n\n// https://www.hover.dev/components/heros\nexport const NavBar3 = () => {\n\treturn (\n\t\t<nav className=\"fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 text-white\">\n\t\t\t<div className=\"text-black dark:text-white\">logo</div>\n\t\t\t<section className=\"flex gap-2\">\n\t\t\t\t<button\n\t\t\t\t\t// onClick={() => {\n\t\t\t\t\t//   document.getElementById(\"launch-schedule\")?.scrollIntoView({\n\t\t\t\t\t//     behavior: \"smooth\",\n\t\t\t\t\t//   });\n\t\t\t\t\t// }}\n\t\t\t\t\tclassName=\"flex items-center gap-1 text-xs hover:text-pink-900 dark:hover:text-pink-300 text-zinc-900 dark:text-zinc-400\"\n\t\t\t\t>\n\t\t\t\t\tNav Button\n\t\t\t\t</button>\n\t\t\t\t<ModeToggle />\n\t\t\t</section>\n\t\t</nav>\n\t);\n};\n",
       "type": "registry:ui",
-      "target": "open-source/Navbar3.tsx"
+      "target": "open-source/navbar3.tsx"
     },
     {
       "path": "./components/ui/mode-toggle.tsx",

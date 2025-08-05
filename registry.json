@@ -1,23 +1,23 @@
 {
 	"$schema": "https://ui.shadcn.com/schema/registry.json",
-	"name": "acme",
-	"homepage": "https://acme.com",
+	"name": "ijwdotai",
+	"homepage": "https://ijwdotai.com",
 	"items": [
 		{
-			"name": "3dcard",
-			"type": "registry:component",
-			"title": "3d Card",
-			"description": "3d Card",
+			"name": "3d-card",
+			"type": "registry:block",
+			"title": "3d card",
+			"description": "3d card",
 			"files": [
 				{
 					"path": "components/usages/3dcardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/3dCard.tsx",
+					"path": "registry/open-source/3d-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/3dCard.tsx"
+					"target": "open-source/3d-card.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -27,20 +27,20 @@
 			]
 		},
 		{
-			"name": "3dnavbar",
-			"type": "registry:component",
-			"title": "3d Nav Bar",
-			"description": "3d Nav Bar",
+			"name": "3d-nav-bar",
+			"type": "registry:block",
+			"title": "3d nav bar",
+			"description": "3d nav bar",
 			"files": [
 				{
 					"path": "components/usages/3dnavbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/3dNavBar.tsx",
+					"path": "registry/open-source/3d-nav-bar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/3dNavBar.tsx"
+					"target": "open-source/3d-nav-bar.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -58,32 +58,32 @@
 					"target": "lib/utils.ts"
 				},
 				{
-					"path": "registry/open-source/3dCard.tsx",
+					"path": "registry/open-source/3d-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/3dCard.tsx"
+					"target": "open-source/3d-card.tsx"
 				},
 				{
-					"path": "registry/open-source/MobileNavBasic.tsx",
+					"path": "registry/open-source/mobile-nav-basic.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MobileNavBasic.tsx"
+					"target": "open-source/mobile-nav-basic.tsx"
 				}
 			]
 		},
 		{
-			"name": "accordionslices",
-			"type": "registry:component",
-			"title": "Accordion Slices",
-			"description": "Accordion Slices",
+			"name": "accordion-slices",
+			"type": "registry:block",
+			"title": "Accordion slices",
+			"description": "Accordion slices",
 			"files": [
 				{
 					"path": "components/usages/accordionslicesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AccordionSlices.tsx",
+					"path": "registry/open-source/accordion-slices.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AccordionSlices.tsx"
+					"target": "open-source/accordion-slices.tsx"
 				},
 				{
 					"path": "registry/utils/useWindowSize.tsx",
@@ -93,20 +93,20 @@
 			]
 		},
 		{
-			"name": "actionsearchbar",
-			"type": "registry:component",
-			"title": "Action Search Bar",
-			"description": "Action Search Bar",
+			"name": "action-search-bar",
+			"type": "registry:block",
+			"title": "Action search bar",
+			"description": "Action search bar",
 			"files": [
 				{
 					"path": "components/usages/actionsearchbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ActionSearchBar.tsx",
+					"path": "registry/open-source/action-search-bar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ActionSearchBar.tsx"
+					"target": "open-source/action-search-bar.tsx"
 				},
 				{
 					"path": "./components/ui/input.tsx",
@@ -121,74 +121,74 @@
 			]
 		},
 		{
-			"name": "animatedaccordion",
-			"type": "registry:component",
-			"title": "Animated Accordion",
-			"description": "Animated Accordion",
+			"name": "animated-accordion",
+			"type": "registry:block",
+			"title": "Animated accordion",
+			"description": "Animated accordion",
 			"files": [
 				{
 					"path": "components/usages/animatedaccordionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AnimatedAccordion.tsx",
+					"path": "registry/open-source/animated-accordion.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AnimatedAccordion.tsx"
+					"target": "open-source/animated-accordion.tsx"
 				}
 			]
 		},
 		{
-			"name": "animatedhovercard",
-			"type": "registry:component",
-			"title": "Animated Hover Card",
-			"description": "Animated Hover Card",
+			"name": "animated-hover-card",
+			"type": "registry:block",
+			"title": "Animated hover card",
+			"description": "Animated hover card",
 			"files": [
 				{
 					"path": "components/usages/animatedhovercardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AnimatedHoverCard.tsx",
+					"path": "registry/open-source/animated-hover-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AnimatedHoverCard.tsx"
+					"target": "open-source/animated-hover-card.tsx"
 				}
 			]
 		},
 		{
-			"name": "animatedlist",
-			"type": "registry:component",
-			"title": "Animated List",
-			"description": "Animated List",
+			"name": "animated-list",
+			"type": "registry:block",
+			"title": "Animated list",
+			"description": "Animated list",
 			"files": [
 				{
 					"path": "components/usages/animatedlistusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AnimatedList.tsx",
+					"path": "registry/open-source/animated-list.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AnimatedList.tsx"
+					"target": "open-source/animated-list.tsx"
 				}
 			]
 		},
 		{
 			"name": "attractor",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Attractor",
 			"description": "Attractor",
 			"files": [
 				{
 					"path": "components/usages/attractorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Attractor.tsx",
+					"path": "registry/open-source/attractor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Attractor.tsx"
+					"target": "open-source/attractor.tsx"
 				},
 				{
 					"path": "registry/utils/calculatePosition.ts",
@@ -213,20 +213,20 @@
 			]
 		},
 		{
-			"name": "aurorabackground",
-			"type": "registry:component",
-			"title": "Aurora Background",
-			"description": "Aurora Background",
+			"name": "aurora-background",
+			"type": "registry:block",
+			"title": "Aurora background",
+			"description": "Aurora background",
 			"files": [
 				{
 					"path": "components/usages/aurorabackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AuroraBackground.tsx",
+					"path": "registry/open-source/aurora-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AuroraBackground.tsx"
+					"target": "open-source/aurora-background.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -236,20 +236,89 @@
 			]
 		},
 		{
-			"name": "awardcarousel",
-			"type": "registry:component",
-			"title": "Award Carousel",
-			"description": "Award Carousel",
+			"name": "award-carousel",
+			"type": "registry:block",
+			"title": "Award carousel",
+			"description": "Award carousel",
 			"files": [
 				{
 					"path": "components/usages/awardcarouselusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/AwardCarousel.tsx",
+					"path": "registry/open-source/award-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/AwardCarousel.tsx"
+					"target": "open-source/award-carousel.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "background-beams",
+			"type": "registry:block",
+			"title": "Background beams",
+			"description": "Background beams",
+			"files": [
+				{
+					"path": "components/usages/backgroundbeamsusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/background-beams.tsx",
+					"type": "registry:ui",
+					"target": "open-source/background-beams.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "background-boxes",
+			"type": "registry:block",
+			"title": "Background boxes",
+			"description": "Background boxes",
+			"files": [
+				{
+					"path": "components/usages/backgroundboxesusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/background-boxes.tsx",
+					"type": "registry:ui",
+					"target": "open-source/background-boxes.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "background-gradient",
+			"type": "registry:block",
+			"title": "Background gradient",
+			"description": "Background gradient",
+			"files": [
+				{
+					"path": "components/usages/backgroundgradientusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/background-gradient.tsx",
+					"type": "registry:ui",
+					"target": "open-source/background-gradient.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -260,124 +329,55 @@
 		},
 		{
 			"name": "background",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Background",
 			"description": "Background",
 			"files": [
 				{
 					"path": "components/usages/backgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Background.tsx",
+					"path": "registry/open-source/background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Background.tsx"
-				}
-			]
-		},
-		{
-			"name": "backgroundbeams",
-			"type": "registry:component",
-			"title": "Background Beams",
-			"description": "Background Beams",
-			"files": [
-				{
-					"path": "components/usages/backgroundbeamsusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/BackgroundBeams.tsx",
-					"type": "registry:ui",
-					"target": "open-source/BackgroundBeams.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "backgroundboxes",
-			"type": "registry:component",
-			"title": "Background Boxes",
-			"description": "Background Boxes",
-			"files": [
-				{
-					"path": "components/usages/backgroundboxesusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/BackgroundBoxes.tsx",
-					"type": "registry:ui",
-					"target": "open-source/BackgroundBoxes.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "backgroundgradient",
-			"type": "registry:component",
-			"title": "Background Gradient",
-			"description": "Background Gradient",
-			"files": [
-				{
-					"path": "components/usages/backgroundgradientusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/BackgroundGradient.tsx",
-					"type": "registry:ui",
-					"target": "open-source/BackgroundGradient.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "open-source/background.tsx"
 				}
 			]
 		},
 		{
 			"name": "ballpit",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Ballpit",
 			"description": "Ballpit",
 			"files": [
 				{
 					"path": "components/usages/ballpitusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Ballpit.tsx",
+					"path": "registry/open-source/ballpit.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Ballpit.tsx"
+					"target": "open-source/ballpit.tsx"
 				}
 			]
 		},
 		{
 			"name": "bento",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Bento",
 			"description": "Bento",
 			"files": [
 				{
 					"path": "components/usages/bentousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Bento.tsx",
+					"path": "registry/open-source/bento.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Bento.tsx"
+					"target": "open-source/bento.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -390,27 +390,27 @@
 					"target": "lib/utils.ts"
 				},
 				{
-					"path": "registry/open-source/FuzzyOverlay.tsx",
+					"path": "registry/open-source/fuzzy-overlay.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FuzzyOverlay.tsx"
+					"target": "open-source/fuzzy-overlay.tsx"
 				}
 			]
 		},
 		{
-			"name": "blurvignette",
-			"type": "registry:component",
-			"title": "Blur Vignette",
-			"description": "Blur Vignette",
+			"name": "blur-vignette",
+			"type": "registry:block",
+			"title": "Blur vignette",
+			"description": "Blur vignette",
 			"files": [
 				{
 					"path": "components/usages/blurvignetteusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/BlurVignette.tsx",
+					"path": "registry/open-source/blur-vignette.tsx",
 					"type": "registry:ui",
-					"target": "open-source/BlurVignette.tsx"
+					"target": "open-source/blur-vignette.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -420,20 +420,20 @@
 			]
 		},
 		{
-			"name": "booktestimonials",
-			"type": "registry:component",
-			"title": "Book Testimonials",
-			"description": "Book Testimonials",
+			"name": "book-testimonials",
+			"type": "registry:block",
+			"title": "Book testimonials",
+			"description": "Book testimonials",
 			"files": [
 				{
 					"path": "components/usages/booktestimonialsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/BookTestimonials.tsx",
+					"path": "registry/open-source/book-testimonials.tsx",
 					"type": "registry:ui",
-					"target": "open-source/BookTestimonials.tsx"
+					"target": "open-source/book-testimonials.tsx"
 				},
 				{
 					"path": "registry/utils/useOrientation.tsx",
@@ -443,20 +443,38 @@
 			]
 		},
 		{
+			"name": "bottom-blur",
+			"type": "registry:block",
+			"title": "Bottom blur",
+			"description": "Bottom blur",
+			"files": [
+				{
+					"path": "components/usages/bottomblurusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/bottom-blur.tsx",
+					"type": "registry:ui",
+					"target": "open-source/bottom-blur.tsx"
+				}
+			]
+		},
+		{
 			"name": "btn08",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Btn08",
 			"description": "Btn08",
 			"files": [
 				{
 					"path": "components/usages/btn08usage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Btn08.tsx",
+					"path": "registry/open-source/btn08.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Btn08.tsx"
+					"target": "open-source/btn08.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -471,79 +489,56 @@
 			]
 		},
 		{
-			"name": "bubbletext",
-			"type": "registry:component",
-			"title": "Bubble Text",
-			"description": "Bubble Text",
+			"name": "bubble-text",
+			"type": "registry:block",
+			"title": "Bubble text",
+			"description": "Bubble text",
 			"files": [
 				{
 					"path": "components/usages/bubbletextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/BubbleText.tsx",
+					"path": "registry/open-source/bubble-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/BubbleText.tsx"
+					"target": "open-source/bubble-text.tsx"
 				}
 			]
 		},
 		{
-			"name": "businessfooter",
-			"type": "registry:component",
-			"title": "Business Footer",
-			"description": "Business Footer",
+			"name": "business-footer",
+			"type": "registry:block",
+			"title": "Business footer",
+			"description": "Business footer",
 			"files": [
 				{
 					"path": "components/usages/businessfooterusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/BusinessFooter.tsx",
+					"path": "registry/open-source/business-footer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/BusinessFooter.tsx"
+					"target": "open-source/business-footer.tsx"
 				}
 			]
 		},
 		{
-			"name": "cssbox",
-			"type": "registry:component",
-			"title": "C S S Box",
-			"description": "C S S Box",
-			"files": [
-				{
-					"path": "components/usages/cssboxusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/CSSBox.tsx",
-					"type": "registry:ui",
-					"target": "open-source/CSSBox.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "canvasreveal",
-			"type": "registry:component",
-			"title": "Canvas Reveal",
-			"description": "Canvas Reveal",
+			"name": "canvas-reveal",
+			"type": "registry:block",
+			"title": "Canvas reveal",
+			"description": "Canvas reveal",
 			"files": [
 				{
 					"path": "components/usages/canvasrevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CanvasReveal.tsx",
+					"path": "registry/open-source/canvas-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CanvasReveal.tsx"
+					"target": "open-source/canvas-reveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -553,38 +548,38 @@
 			]
 		},
 		{
-			"name": "carddeck",
-			"type": "registry:component",
-			"title": "Card Deck",
-			"description": "Card Deck",
+			"name": "card-deck",
+			"type": "registry:block",
+			"title": "Card deck",
+			"description": "Card deck",
 			"files": [
 				{
 					"path": "components/usages/carddeckusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CardDeck.tsx",
+					"path": "registry/open-source/card-deck.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CardDeck.tsx"
+					"target": "open-source/card-deck.tsx"
 				}
 			]
 		},
 		{
-			"name": "cardhover",
-			"type": "registry:component",
-			"title": "Card Hover",
-			"description": "Card Hover",
+			"name": "card-hover",
+			"type": "registry:block",
+			"title": "Card hover",
+			"description": "Card hover",
 			"files": [
 				{
 					"path": "components/usages/cardhoverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CardHover.tsx",
+					"path": "registry/open-source/card-hover.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CardHover.tsx"
+					"target": "open-source/card-hover.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -594,38 +589,38 @@
 			]
 		},
 		{
-			"name": "cardrotation",
-			"type": "registry:component",
-			"title": "Card Rotation",
-			"description": "Card Rotation",
+			"name": "card-rotation",
+			"type": "registry:block",
+			"title": "Card rotation",
+			"description": "Card rotation",
 			"files": [
 				{
 					"path": "components/usages/cardrotationusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CardRotation.tsx",
+					"path": "registry/open-source/card-rotation.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CardRotation.tsx"
+					"target": "open-source/card-rotation.tsx"
 				}
 			]
 		},
 		{
-			"name": "cardstack",
-			"type": "registry:component",
-			"title": "Card Stack",
-			"description": "Card Stack",
+			"name": "card-stack",
+			"type": "registry:block",
+			"title": "Card stack",
+			"description": "Card stack",
 			"files": [
 				{
 					"path": "components/usages/cardstackusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CardStack.tsx",
+					"path": "registry/open-source/card-stack.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CardStack.tsx"
+					"target": "open-source/card-stack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -635,38 +630,38 @@
 			]
 		},
 		{
-			"name": "cardswap",
-			"type": "registry:component",
-			"title": "Card Swap",
-			"description": "Card Swap",
+			"name": "card-swap",
+			"type": "registry:block",
+			"title": "Card swap",
+			"description": "Card swap",
 			"files": [
 				{
 					"path": "components/usages/cardswapusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CardSwap.tsx",
+					"path": "registry/open-source/card-swap.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CardSwap.tsx"
+					"target": "open-source/card-swap.tsx"
 				}
 			]
 		},
 		{
 			"name": "cards",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Cards",
 			"description": "Cards",
 			"files": [
 				{
 					"path": "components/usages/cardsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Cards.tsx",
+					"path": "registry/open-source/cards.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Cards.tsx"
+					"target": "open-source/cards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -676,38 +671,38 @@
 			]
 		},
 		{
-			"name": "carouselcircle",
-			"type": "registry:component",
-			"title": "Carousel Circle",
-			"description": "Carousel Circle",
+			"name": "carousel-circle",
+			"type": "registry:block",
+			"title": "Carousel circle",
+			"description": "Carousel circle",
 			"files": [
 				{
 					"path": "components/usages/carouselcircleusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CarouselCircle.tsx",
+					"path": "registry/open-source/carousel-circle.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CarouselCircle.tsx"
+					"target": "open-source/carousel-circle.tsx"
 				}
 			]
 		},
 		{
-			"name": "carouselstack",
-			"type": "registry:component",
-			"title": "Carousel Stack",
-			"description": "Carousel Stack",
+			"name": "carousel-stack",
+			"type": "registry:block",
+			"title": "Carousel stack",
+			"description": "Carousel stack",
 			"files": [
 				{
 					"path": "components/usages/carouselstackusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CarouselStack.tsx",
+					"path": "registry/open-source/carousel-stack.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CarouselStack.tsx"
+					"target": "open-source/carousel-stack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -717,146 +712,146 @@
 			]
 		},
 		{
-			"name": "checkboxanimated",
-			"type": "registry:component",
-			"title": "Checkbox Animated",
-			"description": "Checkbox Animated",
+			"name": "checkbox-animated",
+			"type": "registry:block",
+			"title": "Checkbox animated",
+			"description": "Checkbox animated",
 			"files": [
 				{
 					"path": "components/usages/checkboxanimatedusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CheckboxAnimated.tsx",
+					"path": "registry/open-source/checkbox-animated.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CheckboxAnimated.tsx"
+					"target": "open-source/checkbox-animated.tsx"
 				}
 			]
 		},
 		{
-			"name": "chromagrid",
-			"type": "registry:component",
-			"title": "Chroma Grid",
-			"description": "Chroma Grid",
+			"name": "chroma-grid",
+			"type": "registry:block",
+			"title": "Chroma grid",
+			"description": "Chroma grid",
 			"files": [
 				{
 					"path": "components/usages/chromagridusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ChromaGrid.tsx",
+					"path": "registry/open-source/chroma-grid.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ChromaGrid.tsx"
+					"target": "open-source/chroma-grid.tsx"
 				}
 			]
 		},
 		{
-			"name": "circleaccordion",
-			"type": "registry:component",
-			"title": "Circle Accordion",
-			"description": "Circle Accordion",
+			"name": "circle-accordion",
+			"type": "registry:block",
+			"title": "Circle accordion",
+			"description": "Circle accordion",
 			"files": [
 				{
 					"path": "components/usages/circleaccordionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CircleAccordion.tsx",
+					"path": "registry/open-source/circle-accordion.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CircleAccordion.tsx"
+					"target": "open-source/circle-accordion.tsx"
 				}
 			]
 		},
 		{
-			"name": "circletext",
-			"type": "registry:component",
-			"title": "Circle Text",
-			"description": "Circle Text",
+			"name": "circle-text",
+			"type": "registry:block",
+			"title": "Circle text",
+			"description": "Circle text",
 			"files": [
 				{
 					"path": "components/usages/circletextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CircleText.tsx",
+					"path": "registry/open-source/circle-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CircleText.tsx"
+					"target": "open-source/circle-text.tsx"
 				}
 			]
 		},
 		{
-			"name": "circularbarsloader",
-			"type": "registry:component",
-			"title": "Circular Bars Loader",
-			"description": "Circular Bars Loader",
+			"name": "circular-bars-loader",
+			"type": "registry:block",
+			"title": "Circular bars loader",
+			"description": "Circular bars loader",
 			"files": [
 				{
 					"path": "components/usages/circularbarsloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CircularBarsLoader.tsx",
+					"path": "registry/open-source/circular-bars-loader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CircularBarsLoader.tsx"
+					"target": "open-source/circular-bars-loader.tsx"
 				}
 			]
 		},
 		{
-			"name": "codeblock",
-			"type": "registry:component",
-			"title": "Code Block",
-			"description": "Code Block",
+			"name": "code-block",
+			"type": "registry:block",
+			"title": "Code block",
+			"description": "Code block",
 			"files": [
 				{
 					"path": "components/usages/codeblockusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CodeBlock.tsx",
+					"path": "registry/open-source/code-block.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CodeBlock.tsx"
+					"target": "open-source/code-block.tsx"
 				}
 			]
 		},
 		{
-			"name": "colorchangecards",
-			"type": "registry:component",
-			"title": "Color Change Cards",
-			"description": "Color Change Cards",
+			"name": "color-change-cards",
+			"type": "registry:block",
+			"title": "Color change cards",
+			"description": "Color change cards",
 			"files": [
 				{
 					"path": "components/usages/colorchangecardsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ColorChangeCards.tsx",
+					"path": "registry/open-source/color-change-cards.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ColorChangeCards.tsx"
+					"target": "open-source/color-change-cards.tsx"
 				}
 			]
 		},
 		{
-			"name": "colorpicker",
-			"type": "registry:component",
-			"title": "Color Picker",
-			"description": "Color Picker",
+			"name": "color-picker",
+			"type": "registry:block",
+			"title": "Color picker",
+			"description": "Color picker",
 			"files": [
 				{
 					"path": "components/usages/colorpickerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ColorPicker.tsx",
+					"path": "registry/open-source/color-picker.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ColorPicker.tsx"
+					"target": "open-source/color-picker.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -881,138 +876,174 @@
 			]
 		},
 		{
-			"name": "colorfultext",
-			"type": "registry:component",
-			"title": "Colorful Text",
-			"description": "Colorful Text",
+			"name": "colorful-text",
+			"type": "registry:block",
+			"title": "Colorful text",
+			"description": "Colorful text",
 			"files": [
 				{
 					"path": "components/usages/colorfultextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ColorfulText.tsx",
+					"path": "registry/open-source/colorful-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ColorfulText.tsx"
+					"target": "open-source/colorful-text.tsx"
 				}
 			]
 		},
 		{
 			"name": "compare",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Compare",
 			"description": "Compare",
 			"files": [
 				{
 					"path": "components/usages/compareusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Compare.tsx",
+					"path": "registry/open-source/compare.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Compare.tsx"
+					"target": "open-source/compare.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
-				},
-				{
-					"path": "registry/open-source/Sparkles.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Sparkles.tsx"
 				}
 			]
 		},
 		{
-			"name": "containerscroll",
-			"type": "registry:component",
-			"title": "Container Scroll",
-			"description": "Container Scroll",
+			"name": "container-scroll",
+			"type": "registry:block",
+			"title": "Container scroll",
+			"description": "Container scroll",
 			"files": [
 				{
 					"path": "components/usages/containerscrollusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ContainerScroll.tsx",
+					"path": "registry/open-source/container-scroll.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ContainerScroll.tsx"
+					"target": "open-source/container-scroll.tsx"
 				}
 			]
 		},
 		{
-			"name": "contentwithimage",
-			"type": "registry:component",
-			"title": "Content With Image",
-			"description": "Content With Image",
+			"name": "content-with-image",
+			"type": "registry:block",
+			"title": "Content with image",
+			"description": "Content with image",
 			"files": [
 				{
 					"path": "components/usages/contentwithimageusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ContentWithImage.tsx",
+					"path": "registry/open-source/content-with-image.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ContentWithImage.tsx"
+					"target": "open-source/content-with-image.tsx"
+				}
+			]
+		},
+		{
+			"name": "css-box",
+			"type": "registry:block",
+			"title": "Css box",
+			"description": "Css box",
+			"files": [
+				{
+					"path": "components/usages/cssboxusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/css-box.tsx",
+					"type": "registry:ui",
+					"target": "open-source/css-box.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
 				}
 			]
 		},
 		{
 			"name": "cubes",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Cubes",
 			"description": "Cubes",
 			"files": [
 				{
 					"path": "components/usages/cubesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Cubes.tsx",
+					"path": "registry/open-source/cubes.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Cubes.tsx"
+					"target": "open-source/cubes.tsx"
 				}
 			]
 		},
 		{
-			"name": "cursorcarousel",
-			"type": "registry:component",
-			"title": "Cursor Carousel",
-			"description": "Cursor Carousel",
+			"name": "cursor-carousel",
+			"type": "registry:block",
+			"title": "Cursor carousel",
+			"description": "Cursor carousel",
 			"files": [
 				{
 					"path": "components/usages/cursorcarouselusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CursorCarousel.tsx",
+					"path": "registry/open-source/cursor-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CursorCarousel.tsx"
+					"target": "open-source/cursor-carousel.tsx"
 				}
 			]
 		},
 		{
-			"name": "cursormask",
-			"type": "registry:component",
-			"title": "Cursor Mask",
-			"description": "Cursor Mask",
+			"name": "cursor-follow",
+			"type": "registry:block",
+			"title": "Cursor follow",
+			"description": "Cursor follow",
 			"files": [
 				{
-					"path": "components/usages/cursormaskusage.tsx",
-					"type": "registry:page",
+					"path": "components/usages/cursorfollowusage.tsx",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CursorMask.tsx",
+					"path": "registry/open-source/cursor-follow.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CursorMask.tsx"
+					"target": "open-source/cursor-follow.tsx"
+				}
+			]
+		},
+		{
+			"name": "cursor-mask",
+			"type": "registry:block",
+			"title": "Cursor mask",
+			"description": "Cursor mask",
+			"files": [
+				{
+					"path": "components/usages/cursormaskusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/cursor-mask.tsx",
+					"type": "registry:ui",
+					"target": "open-source/cursor-mask.tsx"
 				},
 				{
 					"path": "registry/utils/elasticLinePosition.ts",
@@ -1022,56 +1053,56 @@
 			]
 		},
 		{
-			"name": "curvednavbar",
-			"type": "registry:component",
-			"title": "Curved Navbar",
-			"description": "Curved Navbar",
+			"name": "curved-navbar",
+			"type": "registry:block",
+			"title": "Curved navbar",
+			"description": "Curved navbar",
 			"files": [
 				{
 					"path": "components/usages/curvednavbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/CurvedNavbar.tsx",
+					"path": "registry/open-source/curved-navbar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/CurvedNavbar.tsx"
+					"target": "open-source/curved-navbar.tsx"
 				}
 			]
 		},
 		{
-			"name": "darkveil",
-			"type": "registry:component",
-			"title": "Dark Veil",
-			"description": "Dark Veil",
+			"name": "dark-veil",
+			"type": "registry:block",
+			"title": "Dark veil",
+			"description": "Dark veil",
 			"files": [
 				{
 					"path": "components/usages/darkveilusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DarkVeil.tsx",
+					"path": "registry/open-source/dark-veil.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DarkVeil.tsx"
+					"target": "open-source/dark-veil.tsx"
 				}
 			]
 		},
 		{
-			"name": "dialogstack",
-			"type": "registry:component",
-			"title": "Dialog Stack",
-			"description": "Dialog Stack",
+			"name": "dialog-stack",
+			"type": "registry:block",
+			"title": "Dialog stack",
+			"description": "Dialog stack",
 			"files": [
 				{
 					"path": "components/usages/dialogstackusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DialogStack.tsx",
+					"path": "registry/open-source/dialog-stack.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DialogStack.tsx"
+					"target": "open-source/dialog-stack.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1081,110 +1112,110 @@
 			]
 		},
 		{
-			"name": "diamondgallery",
-			"type": "registry:component",
-			"title": "Diamond Gallery",
-			"description": "Diamond Gallery",
+			"name": "diamond-gallery",
+			"type": "registry:block",
+			"title": "Diamond gallery",
+			"description": "Diamond gallery",
 			"files": [
 				{
 					"path": "components/usages/diamondgalleryusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DiamondGallery.tsx",
+					"path": "registry/open-source/diamond-gallery.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DiamondGallery.tsx"
+					"target": "open-source/diamond-gallery.tsx"
 				}
 			]
 		},
 		{
 			"name": "dither",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Dither",
 			"description": "Dither",
 			"files": [
 				{
 					"path": "components/usages/ditherusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Dither.tsx",
+					"path": "registry/open-source/dither.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Dither.tsx"
+					"target": "open-source/dither.tsx"
 				}
 			]
 		},
 		{
-			"name": "dualringloader",
-			"type": "registry:component",
-			"title": "Dual Ring Loader",
-			"description": "Dual Ring Loader",
+			"name": "dual-ring-loader",
+			"type": "registry:block",
+			"title": "Dual ring loader",
+			"description": "Dual ring loader",
 			"files": [
 				{
 					"path": "components/usages/dualringloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DualRingLoader.tsx",
+					"path": "registry/open-source/dual-ring-loader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DualRingLoader.tsx"
+					"target": "open-source/dual-ring-loader.tsx"
 				}
 			]
 		},
 		{
-			"name": "dynamicisland",
-			"type": "registry:component",
-			"title": "Dynamic Island",
-			"description": "Dynamic Island",
+			"name": "dynamic-island",
+			"type": "registry:block",
+			"title": "Dynamic island",
+			"description": "Dynamic island",
 			"files": [
 				{
 					"path": "components/usages/dynamicislandusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DynamicIsland.tsx",
+					"path": "registry/open-source/dynamic-island.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DynamicIsland.tsx"
+					"target": "open-source/dynamic-island.tsx"
 				}
 			]
 		},
 		{
-			"name": "dynamictheme",
-			"type": "registry:component",
-			"title": "Dynamic Theme",
-			"description": "Dynamic Theme",
+			"name": "dynamic-theme",
+			"type": "registry:block",
+			"title": "Dynamic theme",
+			"description": "Dynamic theme",
 			"files": [
 				{
 					"path": "components/usages/dynamicthemeusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/DynamicTheme.tsx",
+					"path": "registry/open-source/dynamic-theme.tsx",
 					"type": "registry:ui",
-					"target": "open-source/DynamicTheme.tsx"
+					"target": "open-source/dynamic-theme.tsx"
 				}
 			]
 		},
 		{
 			"name": "editor",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Editor",
 			"description": "Editor",
 			"files": [
 				{
 					"path": "components/usages/editorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Editor.tsx",
+					"path": "registry/open-source/editor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Editor.tsx"
+					"target": "open-source/editor.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -1199,20 +1230,20 @@
 			]
 		},
 		{
-			"name": "elasticline",
-			"type": "registry:component",
-			"title": "Elastic Line",
-			"description": "Elastic Line",
+			"name": "elastic-line",
+			"type": "registry:block",
+			"title": "Elastic line",
+			"description": "Elastic line",
 			"files": [
 				{
 					"path": "components/usages/elasticlineusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ElasticLine.tsx",
+					"path": "registry/open-source/elastic-line.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ElasticLine.tsx"
+					"target": "open-source/elastic-line.tsx"
 				},
 				{
 					"path": "registry/utils/useDimensions.ts",
@@ -1232,124 +1263,74 @@
 			]
 		},
 		{
-			"name": "examplereplication",
-			"type": "registry:component",
-			"title": "Example Replication",
-			"description": "Example Replication",
+			"name": "example-replication",
+			"type": "registry:block",
+			"title": "Example replication",
+			"description": "Example replication",
 			"files": [
 				{
 					"path": "components/usages/examplereplicationusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ExampleReplication.tsx",
+					"path": "registry/open-source/example-replication.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ExampleReplication.tsx"
-				},
-				{
-					"path": "registry/open-source/Features.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Features.tsx"
-				},
-				{
-					"path": "registry/open-source/SectionHeader.tsx",
-					"type": "registry:ui",
-					"target": "open-source/SectionHeader.tsx"
-				},
-				{
-					"path": "registry/open-source/Gallery.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Gallery.tsx"
-				},
-				{
-					"path": "registry/open-source/GsapProvider.tsx",
-					"type": "registry:ui",
-					"target": "open-source/GsapProvider.tsx"
-				},
-				{
-					"path": "registry/open-source/ScrollTriggerContext.tsx",
-					"type": "registry:ui",
-					"target": "open-source/ScrollTriggerContext.tsx"
-				},
-				{
-					"path": "registry/open-source/Improvements.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Improvements.tsx"
-				},
-				{
-					"path": "registry/open-source/Introduction.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Introduction.tsx"
-				},
-				{
-					"path": "registry/open-source/LottieScrollTrigger.tsx",
-					"type": "registry:ui",
-					"target": "open-source/LottieScrollTrigger.tsx"
-				},
-				{
-					"path": "registry/open-source/Services.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Services.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "open-source/example-replication.tsx"
 				}
 			]
 		},
 		{
-			"name": "expandingtabs",
-			"type": "registry:component",
-			"title": "Expanding Tabs",
-			"description": "Expanding Tabs",
+			"name": "expanding-tabs",
+			"type": "registry:block",
+			"title": "Expanding tabs",
+			"description": "Expanding tabs",
 			"files": [
 				{
 					"path": "components/usages/expandingtabsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ExpandingTabs.tsx",
+					"path": "registry/open-source/expanding-tabs.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ExpandingTabs.tsx"
+					"target": "open-source/expanding-tabs.tsx"
 				}
 			]
 		},
 		{
-			"name": "fallingtext",
-			"type": "registry:component",
-			"title": "Falling Text",
-			"description": "Falling Text",
+			"name": "falling-text",
+			"type": "registry:block",
+			"title": "Falling text",
+			"description": "Falling text",
 			"files": [
 				{
 					"path": "components/usages/fallingtextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FallingText.tsx",
+					"path": "registry/open-source/falling-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FallingText.tsx"
+					"target": "open-source/falling-text.tsx"
 				}
 			]
 		},
 		{
-			"name": "fancyinput",
-			"type": "registry:component",
-			"title": "Fancy Input",
-			"description": "Fancy Input",
+			"name": "fancy-input",
+			"type": "registry:block",
+			"title": "Fancy input",
+			"description": "Fancy input",
 			"files": [
 				{
 					"path": "components/usages/fancyinputusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FancyInput.tsx",
+					"path": "registry/open-source/fancy-input.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FancyInput.tsx"
+					"target": "open-source/fancy-input.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1359,133 +1340,128 @@
 			]
 		},
 		{
-			"name": "faqsection",
-			"type": "registry:component",
-			"title": "Faq Section",
-			"description": "Faq Section",
+			"name": "faq-section",
+			"type": "registry:block",
+			"title": "Faq section",
+			"description": "Faq section",
 			"files": [
 				{
 					"path": "components/usages/faqsectionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FaqSection.tsx",
+					"path": "registry/open-source/faq-section.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FaqSection.tsx"
+					"target": "open-source/faq-section.tsx"
 				}
 			]
 		},
 		{
-			"name": "faultyterminal",
-			"type": "registry:component",
-			"title": "Faulty Terminal",
-			"description": "Faulty Terminal",
+			"name": "faulty-terminal",
+			"type": "registry:block",
+			"title": "Faulty terminal",
+			"description": "Faulty terminal",
 			"files": [
 				{
 					"path": "components/usages/faultyterminalusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FaultyTerminal.tsx",
+					"path": "registry/open-source/faulty-terminal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FaultyTerminal.tsx"
+					"target": "open-source/faulty-terminal.tsx"
 				}
 			]
 		},
 		{
 			"name": "feature",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Feature",
 			"description": "Feature",
 			"files": [
 				{
 					"path": "components/usages/featureusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Feature.tsx",
+					"path": "registry/open-source/feature.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Feature.tsx"
+					"target": "open-source/feature.tsx"
 				}
 			]
 		},
 		{
 			"name": "features",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Features",
 			"description": "Features",
 			"files": [
 				{
 					"path": "components/usages/featuresusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Features.tsx",
+					"path": "registry/open-source/features.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Features.tsx"
-				},
-				{
-					"path": "registry/open-source/SectionHeader.tsx",
-					"type": "registry:ui",
-					"target": "open-source/SectionHeader.tsx"
+					"target": "open-source/features.tsx"
 				}
 			]
 		},
 		{
-			"name": "filmreel",
-			"type": "registry:component",
-			"title": "Film Reel",
-			"description": "Film Reel",
+			"name": "film-reel",
+			"type": "registry:block",
+			"title": "Film reel",
+			"description": "Film reel",
 			"files": [
 				{
 					"path": "components/usages/filmreelusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FilmReel.tsx",
+					"path": "registry/open-source/film-reel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FilmReel.tsx"
+					"target": "open-source/film-reel.tsx"
 				}
 			]
 		},
 		{
-			"name": "fishybutton",
-			"type": "registry:component",
-			"title": "Fishy Button",
-			"description": "Fishy Button",
+			"name": "fishy-button",
+			"type": "registry:block",
+			"title": "Fishy button",
+			"description": "Fishy button",
 			"files": [
 				{
 					"path": "components/usages/fishybuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FishyButton.tsx",
+					"path": "registry/open-source/fishy-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FishyButton.tsx"
+					"target": "open-source/fishy-button.tsx"
 				}
 			]
 		},
 		{
-			"name": "flipcard",
-			"type": "registry:component",
-			"title": "Flip Card",
-			"description": "Flip Card",
+			"name": "flip-card",
+			"type": "registry:block",
+			"title": "Flip card",
+			"description": "Flip card",
 			"files": [
 				{
 					"path": "components/usages/flipcardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FlipCard.tsx",
+					"path": "registry/open-source/flip-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FlipCard.tsx"
+					"target": "open-source/flip-card.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1495,38 +1471,38 @@
 			]
 		},
 		{
-			"name": "flippedmenu",
-			"type": "registry:component",
-			"title": "Flipped Menu",
-			"description": "Flipped Menu",
+			"name": "flipped-menu",
+			"type": "registry:block",
+			"title": "Flipped menu",
+			"description": "Flipped menu",
 			"files": [
 				{
 					"path": "components/usages/flippedmenuusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FlippedMenu.tsx",
+					"path": "registry/open-source/flipped-menu.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FlippedMenu.tsx"
+					"target": "open-source/flipped-menu.tsx"
 				}
 			]
 		},
 		{
-			"name": "flippingtext",
-			"type": "registry:component",
-			"title": "Flipping Text",
-			"description": "Flipping Text",
+			"name": "flipping-text",
+			"type": "registry:block",
+			"title": "Flipping text",
+			"description": "Flipping text",
 			"files": [
 				{
 					"path": "components/usages/flippingtextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FlippingText.tsx",
+					"path": "registry/open-source/flipping-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FlippingText.tsx"
+					"target": "open-source/flipping-text.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1536,20 +1512,20 @@
 			]
 		},
 		{
-			"name": "floatingdock",
-			"type": "registry:component",
-			"title": "Floating Dock",
-			"description": "Floating Dock",
+			"name": "floating-dock",
+			"type": "registry:block",
+			"title": "Floating dock",
+			"description": "Floating dock",
 			"files": [
 				{
 					"path": "components/usages/floatingdockusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FloatingDock.tsx",
+					"path": "registry/open-source/floating-dock.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FloatingDock.tsx"
+					"target": "open-source/floating-dock.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1559,20 +1535,20 @@
 			]
 		},
 		{
-			"name": "floatingnav",
-			"type": "registry:component",
-			"title": "Floating Nav",
-			"description": "Floating Nav",
+			"name": "floating-nav",
+			"type": "registry:block",
+			"title": "Floating nav",
+			"description": "Floating nav",
 			"files": [
 				{
 					"path": "components/usages/floatingnavusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FloatingNav.tsx",
+					"path": "registry/open-source/floating-nav.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FloatingNav.tsx"
+					"target": "open-source/floating-nav.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1582,92 +1558,92 @@
 			]
 		},
 		{
-			"name": "flowermenu",
-			"type": "registry:component",
-			"title": "Flower Menu",
-			"description": "Flower Menu",
+			"name": "flower-menu",
+			"type": "registry:block",
+			"title": "Flower menu",
+			"description": "Flower menu",
 			"files": [
 				{
 					"path": "components/usages/flowermenuusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FlowerMenu.tsx",
+					"path": "registry/open-source/flower-menu.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FlowerMenu.tsx"
+					"target": "open-source/flower-menu.tsx"
 				}
 			]
 		},
 		{
-			"name": "flowingnav",
-			"type": "registry:component",
-			"title": "Flowing Nav",
-			"description": "Flowing Nav",
+			"name": "flowing-nav",
+			"type": "registry:block",
+			"title": "Flowing nav",
+			"description": "Flowing nav",
 			"files": [
 				{
 					"path": "components/usages/flowingnavusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FlowingNav.tsx",
+					"path": "registry/open-source/flowing-nav.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FlowingNav.tsx"
+					"target": "open-source/flowing-nav.tsx"
 				}
 			]
 		},
 		{
-			"name": "fluidglass",
-			"type": "registry:component",
-			"title": "Fluid Glass",
-			"description": "Fluid Glass",
+			"name": "fluid-glass",
+			"type": "registry:block",
+			"title": "Fluid glass",
+			"description": "Fluid glass",
 			"files": [
 				{
 					"path": "components/usages/fluidglassusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FluidGlass.tsx",
+					"path": "registry/open-source/fluid-glass.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FluidGlass.tsx"
+					"target": "open-source/fluid-glass.tsx"
 				}
 			]
 		},
 		{
-			"name": "fluidmorph",
-			"type": "registry:component",
-			"title": "Fluid Morph",
-			"description": "Fluid Morph",
+			"name": "fluid-morph",
+			"type": "registry:block",
+			"title": "Fluid morph",
+			"description": "Fluid morph",
 			"files": [
 				{
 					"path": "components/usages/fluidmorphusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FluidMorph.tsx",
+					"path": "registry/open-source/fluid-morph.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FluidMorph.tsx"
+					"target": "open-source/fluid-morph.tsx"
 				}
 			]
 		},
 		{
-			"name": "focuscards",
-			"type": "registry:component",
-			"title": "Focus Cards",
-			"description": "Focus Cards",
+			"name": "focus-cards",
+			"type": "registry:block",
+			"title": "Focus cards",
+			"description": "Focus cards",
 			"files": [
 				{
 					"path": "components/usages/focuscardsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FocusCards.tsx",
+					"path": "registry/open-source/focus-cards.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FocusCards.tsx"
+					"target": "open-source/focus-cards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1677,92 +1653,92 @@
 			]
 		},
 		{
-			"name": "foldhoverbutton",
-			"type": "registry:component",
-			"title": "Fold Hover Button",
-			"description": "Fold Hover Button",
+			"name": "fold-hover-button",
+			"type": "registry:block",
+			"title": "Fold hover button",
+			"description": "Fold hover button",
 			"files": [
 				{
 					"path": "components/usages/foldhoverbuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FoldHoverButton.tsx",
+					"path": "registry/open-source/fold-hover-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FoldHoverButton.tsx"
+					"target": "open-source/fold-hover-button.tsx"
 				}
 			]
 		},
 		{
 			"name": "folder",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Folder",
 			"description": "Folder",
 			"files": [
 				{
 					"path": "components/usages/folderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Folder.tsx",
+					"path": "registry/open-source/folder.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Folder.tsx"
+					"target": "open-source/folder.tsx"
 				}
 			]
 		},
 		{
-			"name": "followcursor",
-			"type": "registry:component",
-			"title": "Follow Cursor",
-			"description": "Follow Cursor",
+			"name": "follow-cursor",
+			"type": "registry:block",
+			"title": "Follow cursor",
+			"description": "Follow cursor",
 			"files": [
 				{
 					"path": "components/usages/followcursorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FollowCursor.tsx",
+					"path": "registry/open-source/follow-cursor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FollowCursor.tsx"
+					"target": "open-source/follow-cursor.tsx"
 				}
 			]
 		},
 		{
-			"name": "followingeyes",
-			"type": "registry:component",
-			"title": "Following Eyes",
-			"description": "Following Eyes",
+			"name": "following-eyes",
+			"type": "registry:block",
+			"title": "Following eyes",
+			"description": "Following eyes",
 			"files": [
 				{
 					"path": "components/usages/followingeyesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FollowingEyes.tsx",
+					"path": "registry/open-source/following-eyes.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FollowingEyes.tsx"
+					"target": "open-source/following-eyes.tsx"
 				}
 			]
 		},
 		{
-			"name": "followingheaders",
-			"type": "registry:component",
-			"title": "Following Headers",
-			"description": "Following Headers",
+			"name": "following-headers",
+			"type": "registry:block",
+			"title": "Following headers",
+			"description": "Following headers",
 			"files": [
 				{
 					"path": "components/usages/followingheadersusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FollowingHeaders.tsx",
+					"path": "registry/open-source/following-headers.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FollowingHeaders.tsx"
+					"target": "open-source/following-headers.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1772,20 +1748,20 @@
 			]
 		},
 		{
-			"name": "followingpointer",
-			"type": "registry:component",
-			"title": "Following Pointer",
-			"description": "Following Pointer",
+			"name": "following-pointer",
+			"type": "registry:block",
+			"title": "Following pointer",
+			"description": "Following pointer",
 			"files": [
 				{
 					"path": "components/usages/followingpointerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FollowingPointer.tsx",
+					"path": "registry/open-source/following-pointer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FollowingPointer.tsx"
+					"target": "open-source/following-pointer.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1795,56 +1771,56 @@
 			]
 		},
 		{
-			"name": "fractalgrid",
-			"type": "registry:component",
-			"title": "Fractal Grid",
-			"description": "Fractal Grid",
+			"name": "fractal-grid",
+			"type": "registry:block",
+			"title": "Fractal grid",
+			"description": "Fractal grid",
 			"files": [
 				{
 					"path": "components/usages/fractalgridusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FractalGrid.tsx",
+					"path": "registry/open-source/fractal-grid.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FractalGrid.tsx"
+					"target": "open-source/fractal-grid.tsx"
 				}
 			]
 		},
 		{
 			"name": "frequency",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Frequency",
 			"description": "Frequency",
 			"files": [
 				{
 					"path": "components/usages/frequencyusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Frequency.tsx",
+					"path": "registry/open-source/frequency.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Frequency.tsx"
+					"target": "open-source/frequency.tsx"
 				}
 			]
 		},
 		{
-			"name": "fullscreenimage",
-			"type": "registry:component",
-			"title": "Fullscreen Image",
-			"description": "Fullscreen Image",
+			"name": "fullscreen-image",
+			"type": "registry:block",
+			"title": "Fullscreen image",
+			"description": "Fullscreen image",
 			"files": [
 				{
 					"path": "components/usages/fullscreenimageusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FullscreenImage.tsx",
+					"path": "registry/open-source/fullscreen-image.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FullscreenImage.tsx"
+					"target": "open-source/fullscreen-image.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1854,20 +1830,20 @@
 			]
 		},
 		{
-			"name": "fuzzyoverlay",
-			"type": "registry:component",
-			"title": "Fuzzy Overlay",
-			"description": "Fuzzy Overlay",
+			"name": "fuzzy-overlay",
+			"type": "registry:block",
+			"title": "Fuzzy overlay",
+			"description": "Fuzzy overlay",
 			"files": [
 				{
 					"path": "components/usages/fuzzyoverlayusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FuzzyOverlay.tsx",
+					"path": "registry/open-source/fuzzy-overlay.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FuzzyOverlay.tsx"
+					"target": "open-source/fuzzy-overlay.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1877,97 +1853,92 @@
 			]
 		},
 		{
-			"name": "fuzzytext",
-			"type": "registry:component",
-			"title": "Fuzzy Text",
-			"description": "Fuzzy Text",
+			"name": "fuzzy-text",
+			"type": "registry:block",
+			"title": "Fuzzy text",
+			"description": "Fuzzy text",
 			"files": [
 				{
 					"path": "components/usages/fuzzytextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/FuzzyText.tsx",
+					"path": "registry/open-source/fuzzy-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/FuzzyText.tsx"
+					"target": "open-source/fuzzy-text.tsx"
 				}
 			]
 		},
 		{
-			"name": "galaxybutton",
-			"type": "registry:component",
-			"title": "Galaxy Button",
-			"description": "Galaxy Button",
+			"name": "galaxy-button",
+			"type": "registry:block",
+			"title": "Galaxy button",
+			"description": "Galaxy button",
 			"files": [
 				{
 					"path": "components/usages/galaxybuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GalaxyButton.tsx",
+					"path": "registry/open-source/galaxy-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GalaxyButton.tsx"
+					"target": "open-source/galaxy-button.tsx"
 				}
 			]
 		},
 		{
 			"name": "gallery",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Gallery",
 			"description": "Gallery",
 			"files": [
 				{
 					"path": "components/usages/galleryusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Gallery.tsx",
+					"path": "registry/open-source/gallery.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Gallery.tsx"
-				},
-				{
-					"path": "registry/open-source/SectionHeader.tsx",
-					"type": "registry:ui",
-					"target": "open-source/SectionHeader.tsx"
+					"target": "open-source/gallery.tsx"
 				}
 			]
 		},
 		{
-			"name": "ghostlabel",
-			"type": "registry:component",
-			"title": "Ghost Label",
-			"description": "Ghost Label",
+			"name": "ghost-label",
+			"type": "registry:block",
+			"title": "Ghost label",
+			"description": "Ghost label",
 			"files": [
 				{
 					"path": "components/usages/ghostlabelusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GhostLabel.tsx",
+					"path": "registry/open-source/ghost-label.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GhostLabel.tsx"
+					"target": "open-source/ghost-label.tsx"
 				}
 			]
 		},
 		{
-			"name": "giftext",
-			"type": "registry:component",
-			"title": "Gif Text",
-			"description": "Gif Text",
+			"name": "gif-text",
+			"type": "registry:block",
+			"title": "Gif text",
+			"description": "Gif text",
 			"files": [
 				{
 					"path": "components/usages/giftextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GifText.tsx",
+					"path": "registry/open-source/gif-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GifText.tsx"
+					"target": "open-source/gif-text.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -1977,20 +1948,20 @@
 			]
 		},
 		{
-			"name": "glassnav",
-			"type": "registry:component",
-			"title": "Glass Nav",
-			"description": "Glass Nav",
+			"name": "glass-nav",
+			"type": "registry:block",
+			"title": "Glass nav",
+			"description": "Glass nav",
 			"files": [
 				{
 					"path": "components/usages/glassnavusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GlassNav.tsx",
+					"path": "registry/open-source/glass-nav.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GlassNav.tsx"
+					"target": "open-source/glass-nav.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2001,37 +1972,37 @@
 		},
 		{
 			"name": "globe",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Globe",
 			"description": "Globe",
 			"files": [
 				{
 					"path": "components/usages/globeusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Globe.tsx",
+					"path": "registry/open-source/globe.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Globe.tsx"
+					"target": "open-source/globe.tsx"
 				}
 			]
 		},
 		{
-			"name": "glowingbackground",
-			"type": "registry:component",
-			"title": "Glowing Background",
-			"description": "Glowing Background",
+			"name": "glowing-background",
+			"type": "registry:block",
+			"title": "Glowing background",
+			"description": "Glowing background",
 			"files": [
 				{
 					"path": "components/usages/glowingbackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GlowingBackground.tsx",
+					"path": "registry/open-source/glowing-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GlowingBackground.tsx"
+					"target": "open-source/glowing-background.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2041,20 +2012,20 @@
 			]
 		},
 		{
-			"name": "glowingeffect",
-			"type": "registry:component",
-			"title": "Glowing Effect",
-			"description": "Glowing Effect",
+			"name": "glowing-effect",
+			"type": "registry:block",
+			"title": "Glowing effect",
+			"description": "Glowing effect",
 			"files": [
 				{
 					"path": "components/usages/glowingeffectusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GlowingEffect.tsx",
+					"path": "registry/open-source/glowing-effect.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GlowingEffect.tsx"
+					"target": "open-source/glowing-effect.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2064,20 +2035,20 @@
 			]
 		},
 		{
-			"name": "gooeytabs",
-			"type": "registry:component",
-			"title": "Gooey Tabs",
-			"description": "Gooey Tabs",
+			"name": "gooey-tabs",
+			"type": "registry:block",
+			"title": "Gooey tabs",
+			"description": "Gooey tabs",
 			"files": [
 				{
 					"path": "components/usages/gooeytabsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GooeyTabs.tsx",
+					"path": "registry/open-source/gooey-tabs.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GooeyTabs.tsx"
+					"target": "open-source/gooey-tabs.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -2092,20 +2063,20 @@
 			]
 		},
 		{
-			"name": "gradientbackground",
-			"type": "registry:component",
-			"title": "Gradient Background",
-			"description": "Gradient Background",
+			"name": "gradient-background",
+			"type": "registry:block",
+			"title": "Gradient background",
+			"description": "Gradient background",
 			"files": [
 				{
 					"path": "components/usages/gradientbackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GradientBackground.tsx",
+					"path": "registry/open-source/gradient-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GradientBackground.tsx"
+					"target": "open-source/gradient-background.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2115,56 +2086,56 @@
 			]
 		},
 		{
-			"name": "gradientcheckbox",
-			"type": "registry:component",
-			"title": "Gradient Checkbox",
-			"description": "Gradient Checkbox",
+			"name": "gradient-checkbox",
+			"type": "registry:block",
+			"title": "Gradient checkbox",
+			"description": "Gradient checkbox",
 			"files": [
 				{
 					"path": "components/usages/gradientcheckboxusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GradientCheckbox.tsx",
+					"path": "registry/open-source/gradient-checkbox.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GradientCheckbox.tsx"
+					"target": "open-source/gradient-checkbox.tsx"
 				}
 			]
 		},
 		{
-			"name": "gradienttestimonials",
-			"type": "registry:component",
-			"title": "Gradient Testimonials",
-			"description": "Gradient Testimonials",
+			"name": "gradient-testimonials",
+			"type": "registry:block",
+			"title": "Gradient testimonials",
+			"description": "Gradient testimonials",
 			"files": [
 				{
 					"path": "components/usages/gradienttestimonialsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GradientTestimonials.tsx",
+					"path": "registry/open-source/gradient-testimonials.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GradientTestimonials.tsx"
+					"target": "open-source/gradient-testimonials.tsx"
 				}
 			]
 		},
 		{
 			"name": "gravity",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Gravity",
 			"description": "Gravity",
 			"files": [
 				{
 					"path": "components/usages/gravityusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Gravity.tsx",
+					"path": "registry/open-source/gravity.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Gravity.tsx"
+					"target": "open-source/gravity.tsx"
 				},
 				{
 					"path": "registry/utils/calculatePosition.ts",
@@ -2184,56 +2155,56 @@
 			]
 		},
 		{
-			"name": "gridcontent",
-			"type": "registry:component",
-			"title": "Grid Content",
-			"description": "Grid Content",
+			"name": "grid-content",
+			"type": "registry:block",
+			"title": "Grid content",
+			"description": "Grid content",
 			"files": [
 				{
 					"path": "components/usages/gridcontentusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GridContent.tsx",
+					"path": "registry/open-source/grid-content.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GridContent.tsx"
+					"target": "open-source/grid-content.tsx"
 				}
 			]
 		},
 		{
-			"name": "griddistortion",
-			"type": "registry:component",
-			"title": "Grid Distortion",
-			"description": "Grid Distortion",
+			"name": "grid-distortion",
+			"type": "registry:block",
+			"title": "Grid distortion",
+			"description": "Grid distortion",
 			"files": [
 				{
 					"path": "components/usages/griddistortionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GridDistortion.tsx",
+					"path": "registry/open-source/grid-distortion.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GridDistortion.tsx"
+					"target": "open-source/grid-distortion.tsx"
 				}
 			]
 		},
 		{
-			"name": "gridtoflex",
-			"type": "registry:component",
-			"title": "Grid To Flex",
-			"description": "Grid To Flex",
+			"name": "grid-to-flex",
+			"type": "registry:block",
+			"title": "Grid to flex",
+			"description": "Grid to flex",
 			"files": [
 				{
 					"path": "components/usages/gridtoflexusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GridToFlex.tsx",
+					"path": "registry/open-source/grid-to-flex.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GridToFlex.tsx"
+					"target": "open-source/grid-to-flex.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2243,61 +2214,56 @@
 			]
 		},
 		{
-			"name": "gsapprovider",
-			"type": "registry:component",
-			"title": "Gsap Provider",
-			"description": "Gsap Provider",
+			"name": "gsap-provider",
+			"type": "registry:block",
+			"title": "Gsap provider",
+			"description": "Gsap provider",
 			"files": [
 				{
 					"path": "components/usages/gsapproviderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/GsapProvider.tsx",
+					"path": "registry/open-source/gsap-provider.tsx",
 					"type": "registry:ui",
-					"target": "open-source/GsapProvider.tsx"
-				},
-				{
-					"path": "registry/open-source/ScrollTriggerContext.tsx",
-					"type": "registry:ui",
-					"target": "open-source/ScrollTriggerContext.tsx"
+					"target": "open-source/gsap-provider.tsx"
 				}
 			]
 		},
 		{
-			"name": "halffilledtext",
-			"type": "registry:component",
-			"title": "Half Filled Text",
-			"description": "Half Filled Text",
+			"name": "half-filled-text",
+			"type": "registry:block",
+			"title": "Half filled text",
+			"description": "Half filled text",
 			"files": [
 				{
 					"path": "components/usages/halffilledtextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/HalfFilledText.tsx",
+					"path": "registry/open-source/half-filled-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/HalfFilledText.tsx"
+					"target": "open-source/half-filled-text.tsx"
 				}
 			]
 		},
 		{
-			"name": "herohighlight",
-			"type": "registry:component",
-			"title": "Hero Highlight",
-			"description": "Hero Highlight",
+			"name": "hero-highlight",
+			"type": "registry:block",
+			"title": "Hero highlight",
+			"description": "Hero highlight",
 			"files": [
 				{
 					"path": "components/usages/herohighlightusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/HeroHighlight.tsx",
+					"path": "registry/open-source/hero-highlight.tsx",
 					"type": "registry:ui",
-					"target": "open-source/HeroHighlight.tsx"
+					"target": "open-source/hero-highlight.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -2307,192 +2273,197 @@
 			]
 		},
 		{
-			"name": "heroparallax",
-			"type": "registry:component",
-			"title": "Hero Parallax",
-			"description": "Hero Parallax",
+			"name": "hero-parallax",
+			"type": "registry:block",
+			"title": "Hero parallax",
+			"description": "Hero parallax",
 			"files": [
 				{
 					"path": "components/usages/heroparallaxusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/HeroParallax.tsx",
+					"path": "registry/open-source/hero-parallax.tsx",
 					"type": "registry:ui",
-					"target": "open-source/HeroParallax.tsx"
+					"target": "open-source/hero-parallax.tsx"
 				}
 			]
 		},
 		{
-			"name": "horizontalcta",
-			"type": "registry:component",
-			"title": "Horizontal Cta",
-			"description": "Horizontal Cta",
+			"name": "horizontal-cta",
+			"type": "registry:block",
+			"title": "Horizontal cta",
+			"description": "Horizontal cta",
 			"files": [
 				{
 					"path": "components/usages/horizontalctausage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/HorizontalCta.tsx",
+					"path": "registry/open-source/horizontal-cta.tsx",
 					"type": "registry:ui",
-					"target": "open-source/HorizontalCta.tsx"
+					"target": "open-source/horizontal-cta.tsx"
 				}
 			]
 		},
 		{
-			"name": "horizontalscrollgallery",
-			"type": "registry:component",
-			"title": "Horizontal Scroll Gallery",
-			"description": "Horizontal Scroll Gallery",
+			"name": "horizontal-scroll-gallery",
+			"type": "registry:block",
+			"title": "Horizontal scroll gallery",
+			"description": "Horizontal scroll gallery",
 			"files": [
 				{
 					"path": "components/usages/horizontalscrollgalleryusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/HorizontalScrollGallery.tsx",
+					"path": "registry/open-source/horizontal-scroll-gallery.tsx",
 					"type": "registry:ui",
-					"target": "open-source/HorizontalScrollGallery.tsx"
+					"target": "open-source/horizontal-scroll-gallery.tsx"
+				}
+			]
+		},
+		{
+			"name": "hover-border",
+			"type": "registry:block",
+			"title": "Hover border",
+			"description": "Hover border",
+			"files": [
+				{
+					"path": "components/usages/hoverborderusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/hover-border.tsx",
+					"type": "registry:ui",
+					"target": "open-source/hover-border.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "hover-card",
+			"type": "registry:block",
+			"title": "Hover card",
+			"description": "Hover card",
+			"files": [
+				{
+					"path": "components/usages/hovercardusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/hover-card.tsx",
+					"type": "registry:ui",
+					"target": "open-source/hover-card.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "hover-cards",
+			"type": "registry:block",
+			"title": "Hover cards",
+			"description": "Hover cards",
+			"files": [
+				{
+					"path": "components/usages/hovercardsusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/hover-cards.tsx",
+					"type": "registry:ui",
+					"target": "open-source/hover-cards.tsx"
+				}
+			]
+		},
+		{
+			"name": "hover-gallery",
+			"type": "registry:block",
+			"title": "Hover gallery",
+			"description": "Hover gallery",
+			"files": [
+				{
+					"path": "components/usages/hovergalleryusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/hover-gallery.tsx",
+					"type": "registry:ui",
+					"target": "open-source/hover-gallery.tsx"
+				}
+			]
+		},
+		{
+			"name": "hover-squares",
+			"type": "registry:block",
+			"title": "Hover squares",
+			"description": "Hover squares",
+			"files": [
+				{
+					"path": "components/usages/hoversquaresusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/hover-squares.tsx",
+					"type": "registry:ui",
+					"target": "open-source/hover-squares.tsx"
 				}
 			]
 		},
 		{
 			"name": "hover",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Hover",
 			"description": "Hover",
 			"files": [
 				{
 					"path": "components/usages/hoverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Hover.tsx",
+					"path": "registry/open-source/hover.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Hover.tsx"
+					"target": "open-source/hover.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "hoverborder",
-			"type": "registry:component",
-			"title": "Hover Border",
-			"description": "Hover Border",
-			"files": [
-				{
-					"path": "components/usages/hoverborderusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/HoverBorder.tsx",
-					"type": "registry:ui",
-					"target": "open-source/HoverBorder.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "hovercard",
-			"type": "registry:component",
-			"title": "Hover Card",
-			"description": "Hover Card",
-			"files": [
-				{
-					"path": "components/usages/hovercardusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/HoverCard.tsx",
-					"type": "registry:ui",
-					"target": "open-source/HoverCard.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "hovercards",
-			"type": "registry:component",
-			"title": "Hover Cards",
-			"description": "Hover Cards",
-			"files": [
-				{
-					"path": "components/usages/hovercardsusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/HoverCards.tsx",
-					"type": "registry:ui",
-					"target": "open-source/HoverCards.tsx"
-				}
-			]
-		},
-		{
-			"name": "hovergallery",
-			"type": "registry:component",
-			"title": "Hover Gallery",
-			"description": "Hover Gallery",
-			"files": [
-				{
-					"path": "components/usages/hovergalleryusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/HoverGallery.tsx",
-					"type": "registry:ui",
-					"target": "open-source/HoverGallery.tsx"
-				}
-			]
-		},
-		{
-			"name": "hoversquares",
-			"type": "registry:component",
-			"title": "Hover Squares",
-			"description": "Hover Squares",
-			"files": [
-				{
-					"path": "components/usages/hoversquaresusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/HoverSquares.tsx",
-					"type": "registry:ui",
-					"target": "open-source/HoverSquares.tsx"
 				}
 			]
 		},
 		{
 			"name": "icons",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Icons",
 			"description": "Icons",
 			"files": [
 				{
-					"path": "registry/open-source/Icons.tsx",
+					"path": "components/usages/iconsusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/icons.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Icons.tsx"
+					"target": "open-source/icons.tsx"
 				},
 				{
 					"path": "./components/ui/input.tsx",
@@ -3782,38 +3753,38 @@
 			]
 		},
 		{
-			"name": "imagereveal",
-			"type": "registry:component",
-			"title": "Image Reveal",
-			"description": "Image Reveal",
+			"name": "image-reveal",
+			"type": "registry:block",
+			"title": "Image reveal",
+			"description": "Image reveal",
 			"files": [
 				{
 					"path": "components/usages/imagerevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ImageReveal.tsx",
+					"path": "registry/open-source/image-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ImageReveal.tsx"
+					"target": "open-source/image-reveal.tsx"
 				}
 			]
 		},
 		{
-			"name": "imageripple",
-			"type": "registry:component",
-			"title": "Image Ripple",
-			"description": "Image Ripple",
+			"name": "image-ripple",
+			"type": "registry:block",
+			"title": "Image ripple",
+			"description": "Image ripple",
 			"files": [
 				{
 					"path": "components/usages/imagerippleusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ImageRipple.tsx",
+					"path": "registry/open-source/image-ripple.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ImageRipple.tsx"
+					"target": "open-source/image-ripple.tsx"
 				},
 				{
 					"path": "registry/utils/rippleDimensions.ts",
@@ -3833,110 +3804,110 @@
 			]
 		},
 		{
-			"name": "imagewheel",
-			"type": "registry:component",
-			"title": "Image Wheel",
-			"description": "Image Wheel",
+			"name": "image-wheel",
+			"type": "registry:block",
+			"title": "Image wheel",
+			"description": "Image wheel",
 			"files": [
 				{
 					"path": "components/usages/imagewheelusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ImageWheel.tsx",
+					"path": "registry/open-source/image-wheel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ImageWheel.tsx"
+					"target": "open-source/image-wheel.tsx"
 				}
 			]
 		},
 		{
-			"name": "imagezoom",
-			"type": "registry:component",
-			"title": "Image Zoom",
-			"description": "Image Zoom",
+			"name": "image-zoom",
+			"type": "registry:block",
+			"title": "Image zoom",
+			"description": "Image zoom",
 			"files": [
 				{
 					"path": "components/usages/imagezoomusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ImageZoom.tsx",
+					"path": "registry/open-source/image-zoom.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ImageZoom.tsx"
+					"target": "open-source/image-zoom.tsx"
 				}
 			]
 		},
 		{
 			"name": "improvements",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Improvements",
 			"description": "Improvements",
 			"files": [
 				{
 					"path": "components/usages/improvementsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Improvements.tsx",
+					"path": "registry/open-source/improvements.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Improvements.tsx"
+					"target": "open-source/improvements.tsx"
 				}
 			]
 		},
 		{
-			"name": "infinitecarousel",
-			"type": "registry:component",
-			"title": "Infinite Carousel",
-			"description": "Infinite Carousel",
+			"name": "infinite-carousel",
+			"type": "registry:block",
+			"title": "Infinite carousel",
+			"description": "Infinite carousel",
 			"files": [
 				{
 					"path": "components/usages/infinitecarouselusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InfiniteCarousel.tsx",
+					"path": "registry/open-source/infinite-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InfiniteCarousel.tsx"
+					"target": "open-source/infinite-carousel.tsx"
 				}
 			]
 		},
 		{
-			"name": "infinitemenu",
-			"type": "registry:component",
-			"title": "Infinite Menu",
-			"description": "Infinite Menu",
+			"name": "infinite-menu",
+			"type": "registry:block",
+			"title": "Infinite menu",
+			"description": "Infinite menu",
 			"files": [
 				{
 					"path": "components/usages/infinitemenuusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InfiniteMenu.tsx",
+					"path": "registry/open-source/infinite-menu.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InfiniteMenu.tsx"
+					"target": "open-source/infinite-menu.tsx"
 				}
 			]
 		},
 		{
-			"name": "infinitemovingcards",
-			"type": "registry:component",
-			"title": "Infinite Moving Cards",
-			"description": "Infinite Moving Cards",
+			"name": "infinite-moving-cards",
+			"type": "registry:block",
+			"title": "Infinite moving cards",
+			"description": "Infinite moving cards",
 			"files": [
 				{
 					"path": "components/usages/infinitemovingcardsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InfiniteMovingCards.tsx",
+					"path": "registry/open-source/infinite-moving-cards.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InfiniteMovingCards.tsx"
+					"target": "open-source/infinite-moving-cards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3946,20 +3917,20 @@
 			]
 		},
 		{
-			"name": "infocard",
-			"type": "registry:component",
-			"title": "Info Card",
-			"description": "Info Card",
+			"name": "info-card",
+			"type": "registry:block",
+			"title": "Info card",
+			"description": "Info card",
 			"files": [
 				{
 					"path": "components/usages/infocardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InfoCard.tsx",
+					"path": "registry/open-source/info-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InfoCard.tsx"
+					"target": "open-source/info-card.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3969,20 +3940,20 @@
 			]
 		},
 		{
-			"name": "innerglow",
-			"type": "registry:component",
-			"title": "Inner Glow",
-			"description": "Inner Glow",
+			"name": "inner-glow",
+			"type": "registry:block",
+			"title": "Inner glow",
+			"description": "Inner glow",
 			"files": [
 				{
 					"path": "components/usages/innerglowusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InnerGlow.tsx",
+					"path": "registry/open-source/inner-glow.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InnerGlow.tsx"
+					"target": "open-source/inner-glow.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -3992,20 +3963,20 @@
 			]
 		},
 		{
-			"name": "inputanimated",
-			"type": "registry:component",
-			"title": "Input Animated",
-			"description": "Input Animated",
+			"name": "input-animated",
+			"type": "registry:block",
+			"title": "Input animated",
+			"description": "Input animated",
 			"files": [
 				{
 					"path": "components/usages/inputanimatedusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/InputAnimated.tsx",
+					"path": "registry/open-source/input-animated.tsx",
 					"type": "registry:ui",
-					"target": "open-source/InputAnimated.tsx"
+					"target": "open-source/input-animated.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4016,60 +3987,55 @@
 		},
 		{
 			"name": "introduction",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Introduction",
 			"description": "Introduction",
 			"files": [
 				{
 					"path": "components/usages/introductionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Introduction.tsx",
+					"path": "registry/open-source/introduction.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Introduction.tsx"
-				},
-				{
-					"path": "registry/open-source/LottieScrollTrigger.tsx",
-					"type": "registry:ui",
-					"target": "open-source/LottieScrollTrigger.tsx"
+					"target": "open-source/introduction.tsx"
 				}
 			]
 		},
 		{
 			"name": "lamp",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Lamp",
 			"description": "Lamp",
 			"files": [
 				{
 					"path": "components/usages/lampusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Lamp.tsx",
+					"path": "registry/open-source/lamp.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Lamp.tsx"
+					"target": "open-source/lamp.tsx"
 				}
 			]
 		},
 		{
-			"name": "lanecard",
-			"type": "registry:component",
-			"title": "Lane Card",
-			"description": "Lane Card",
+			"name": "lane-card",
+			"type": "registry:block",
+			"title": "Lane card",
+			"description": "Lane card",
 			"files": [
 				{
 					"path": "components/usages/lanecardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LaneCard.tsx",
+					"path": "registry/open-source/lane-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LaneCard.tsx"
+					"target": "open-source/lane-card.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4080,37 +4046,37 @@
 		},
 		{
 			"name": "lanyard",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Lanyard",
 			"description": "Lanyard",
 			"files": [
 				{
 					"path": "components/usages/lanyardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Lanyard.tsx",
+					"path": "registry/open-source/lanyard.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Lanyard.tsx"
+					"target": "open-source/lanyard.tsx"
 				}
 			]
 		},
 		{
-			"name": "layoutgrid",
-			"type": "registry:component",
-			"title": "Layout Grid",
-			"description": "Layout Grid",
+			"name": "layout-grid",
+			"type": "registry:block",
+			"title": "Layout grid",
+			"description": "Layout grid",
 			"files": [
 				{
 					"path": "components/usages/layoutgridusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LayoutGrid.tsx",
+					"path": "registry/open-source/layout-grid.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LayoutGrid.tsx"
+					"target": "open-source/layout-grid.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4121,96 +4087,96 @@
 		},
 		{
 			"name": "lens",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Lens",
 			"description": "Lens",
 			"files": [
 				{
 					"path": "components/usages/lensusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Lens.tsx",
+					"path": "registry/open-source/lens.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Lens.tsx"
+					"target": "open-source/lens.tsx"
 				}
 			]
 		},
 		{
-			"name": "letter3dswap",
-			"type": "registry:component",
-			"title": "Letter3d Swap",
-			"description": "Letter3d Swap",
-			"files": [
-				{
-					"path": "components/usages/letter3dswapusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/Letter3dSwap.tsx",
-					"type": "registry:ui",
-					"target": "open-source/Letter3dSwap.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "letterhover",
-			"type": "registry:component",
-			"title": "Letter Hover",
-			"description": "Letter Hover",
+			"name": "letter-hover",
+			"type": "registry:block",
+			"title": "Letter hover",
+			"description": "Letter hover",
 			"files": [
 				{
 					"path": "components/usages/letterhoverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LetterHover.tsx",
+					"path": "registry/open-source/letter-hover.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LetterHover.tsx"
+					"target": "open-source/letter-hover.tsx"
 				}
 			]
 		},
 		{
-			"name": "lightrays",
-			"type": "registry:component",
-			"title": "Light Rays",
-			"description": "Light Rays",
+			"name": "letter3d-swap",
+			"type": "registry:block",
+			"title": "Letter3d swap",
+			"description": "Letter3d swap",
+			"files": [
+				{
+					"path": "components/usages/letter3dswapusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/letter3d-swap.tsx",
+					"type": "registry:ui",
+					"target": "open-source/letter3d-swap.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "light-rays",
+			"type": "registry:block",
+			"title": "Light rays",
+			"description": "Light rays",
 			"files": [
 				{
 					"path": "components/usages/lightraysusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LightRays.tsx",
+					"path": "registry/open-source/light-rays.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LightRays.tsx"
+					"target": "open-source/light-rays.tsx"
 				}
 			]
 		},
 		{
-			"name": "linebackground",
-			"type": "registry:component",
-			"title": "Line Background",
-			"description": "Line Background",
+			"name": "line-background",
+			"type": "registry:block",
+			"title": "Line background",
+			"description": "Line background",
 			"files": [
 				{
 					"path": "components/usages/linebackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LineBackground.tsx",
+					"path": "registry/open-source/line-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LineBackground.tsx"
+					"target": "open-source/line-background.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4220,20 +4186,20 @@
 			]
 		},
 		{
-			"name": "lineardialog",
-			"type": "registry:component",
-			"title": "Linear Dialog",
-			"description": "Linear Dialog",
+			"name": "linear-dialog",
+			"type": "registry:block",
+			"title": "Linear dialog",
+			"description": "Linear dialog",
 			"files": [
 				{
 					"path": "components/usages/lineardialogusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LinearDialog.tsx",
+					"path": "registry/open-source/linear-dialog.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LinearDialog.tsx"
+					"target": "open-source/linear-dialog.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4243,20 +4209,20 @@
 			]
 		},
 		{
-			"name": "linkpreview",
-			"type": "registry:component",
-			"title": "Link Preview",
-			"description": "Link Preview",
+			"name": "link-preview",
+			"type": "registry:block",
+			"title": "Link preview",
+			"description": "Link preview",
 			"files": [
 				{
 					"path": "components/usages/linkpreviewusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LinkPreview.tsx",
+					"path": "registry/open-source/link-preview.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LinkPreview.tsx"
+					"target": "open-source/link-preview.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4266,120 +4232,115 @@
 			]
 		},
 		{
-			"name": "listrotator",
-			"type": "registry:component",
-			"title": "List Rotator",
-			"description": "List Rotator",
+			"name": "list-rotator",
+			"type": "registry:block",
+			"title": "List rotator",
+			"description": "List rotator",
 			"files": [
 				{
 					"path": "components/usages/listrotatorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ListRotator.tsx",
+					"path": "registry/open-source/list-rotator.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ListRotator.tsx"
+					"target": "open-source/list-rotator.tsx"
 				}
 			]
 		},
 		{
-			"name": "lottiescrolltrigger",
-			"type": "registry:component",
-			"title": "Lottie Scroll Trigger",
-			"description": "Lottie Scroll Trigger",
+			"name": "lottie-scroll-trigger",
+			"type": "registry:block",
+			"title": "Lottie scroll trigger",
+			"description": "Lottie scroll trigger",
 			"files": [
 				{
 					"path": "components/usages/lottiescrolltriggerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/LottieScrollTrigger.tsx",
+					"path": "registry/open-source/lottie-scroll-trigger.tsx",
 					"type": "registry:ui",
-					"target": "open-source/LottieScrollTrigger.tsx"
+					"target": "open-source/lottie-scroll-trigger.tsx"
 				}
 			]
 		},
 		{
 			"name": "macbook",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Macbook",
 			"description": "Macbook",
 			"files": [
 				{
 					"path": "components/usages/macbookusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Macbook.tsx",
+					"path": "registry/open-source/macbook.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Macbook.tsx"
+					"target": "open-source/macbook.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
-				},
-				{
-					"path": "registry/open-source/ToolTip.tsx",
-					"type": "registry:ui",
-					"target": "open-source/ToolTip.tsx"
 				}
 			]
 		},
 		{
-			"name": "magicbento",
-			"type": "registry:component",
-			"title": "Magic Bento",
-			"description": "Magic Bento",
+			"name": "magic-bento",
+			"type": "registry:block",
+			"title": "Magic bento",
+			"description": "Magic bento",
 			"files": [
 				{
 					"path": "components/usages/magicbentousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MagicBento.tsx",
+					"path": "registry/open-source/magic-bento.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MagicBento.tsx"
+					"target": "open-source/magic-bento.tsx"
 				}
 			]
 		},
 		{
-			"name": "magnetlines",
-			"type": "registry:component",
-			"title": "Magnet Lines",
-			"description": "Magnet Lines",
+			"name": "magnet-lines",
+			"type": "registry:block",
+			"title": "Magnet lines",
+			"description": "Magnet lines",
 			"files": [
 				{
 					"path": "components/usages/magnetlinesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MagnetLines.tsx",
+					"path": "registry/open-source/magnet-lines.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MagnetLines.tsx"
+					"target": "open-source/magnet-lines.tsx"
 				}
 			]
 		},
 		{
-			"name": "marqueealongsvg",
-			"type": "registry:component",
-			"title": "Marquee Along S V G",
-			"description": "Marquee Along S V G",
+			"name": "marquee-along-svg",
+			"type": "registry:block",
+			"title": "Marquee along svg",
+			"description": "Marquee along svg",
 			"files": [
 				{
 					"path": "components/usages/marqueealongsvgusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MarqueeAlongSVG.tsx",
+					"path": "registry/open-source/marquee-along-svg.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MarqueeAlongSVG.tsx"
+					"target": "open-source/marquee-along-svg.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4389,20 +4350,20 @@
 			]
 		},
 		{
-			"name": "maskeffect",
-			"type": "registry:component",
-			"title": "Mask Effect",
-			"description": "Mask Effect",
+			"name": "mask-effect",
+			"type": "registry:block",
+			"title": "Mask effect",
+			"description": "Mask effect",
 			"files": [
 				{
 					"path": "components/usages/maskeffectusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MaskEffect.tsx",
+					"path": "registry/open-source/mask-effect.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MaskEffect.tsx"
+					"target": "open-source/mask-effect.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4413,55 +4374,55 @@
 		},
 		{
 			"name": "masonry",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Masonry",
 			"description": "Masonry",
 			"files": [
 				{
 					"path": "components/usages/masonryusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Masonry.tsx",
+					"path": "registry/open-source/masonry.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Masonry.tsx"
+					"target": "open-source/masonry.tsx"
 				}
 			]
 		},
 		{
-			"name": "matrixbackground",
-			"type": "registry:component",
-			"title": "Matrix Background",
-			"description": "Matrix Background",
+			"name": "matrix-background",
+			"type": "registry:block",
+			"title": "Matrix background",
+			"description": "Matrix background",
 			"files": [
 				{
 					"path": "components/usages/matrixbackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MatrixBackground.tsx",
+					"path": "registry/open-source/matrix-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MatrixBackground.tsx"
+					"target": "open-source/matrix-background.tsx"
 				}
 			]
 		},
 		{
-			"name": "mediabetweentext",
-			"type": "registry:component",
-			"title": "Media Between Text",
-			"description": "Media Between Text",
+			"name": "media-between-text",
+			"type": "registry:block",
+			"title": "Media between text",
+			"description": "Media between text",
 			"files": [
 				{
 					"path": "components/usages/mediabetweentextusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MediaBetweenText.tsx",
+					"path": "registry/open-source/media-between-text.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MediaBetweenText.tsx"
+					"target": "open-source/media-between-text.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4472,19 +4433,19 @@
 		},
 		{
 			"name": "meteors",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Meteors",
 			"description": "Meteors",
 			"files": [
 				{
 					"path": "components/usages/meteorsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Meteors.tsx",
+					"path": "registry/open-source/meteors.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Meteors.tsx"
+					"target": "open-source/meteors.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4494,115 +4455,115 @@
 			]
 		},
 		{
-			"name": "mobilenav",
-			"type": "registry:component",
-			"title": "Mobile Nav",
-			"description": "Mobile Nav",
-			"files": [
-				{
-					"path": "components/usages/mobilenavusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/MobileNav.tsx",
-					"type": "registry:ui",
-					"target": "open-source/MobileNav.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				}
-			]
-		},
-		{
-			"name": "mobilenavbasic",
-			"type": "registry:component",
-			"title": "Mobile Nav Basic",
-			"description": "Mobile Nav Basic",
+			"name": "mobile-nav-basic",
+			"type": "registry:block",
+			"title": "Mobile nav basic",
+			"description": "Mobile nav basic",
 			"files": [
 				{
 					"path": "components/usages/mobilenavbasicusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MobileNavBasic.tsx",
+					"path": "registry/open-source/mobile-nav-basic.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MobileNavBasic.tsx"
+					"target": "open-source/mobile-nav-basic.tsx"
 				}
 			]
 		},
 		{
-			"name": "modelviewer",
-			"type": "registry:component",
-			"title": "Model Viewer",
-			"description": "Model Viewer",
+			"name": "mobile-nav",
+			"type": "registry:block",
+			"title": "Mobile nav",
+			"description": "Mobile nav",
+			"files": [
+				{
+					"path": "components/usages/mobilenavusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/mobile-nav.tsx",
+					"type": "registry:ui",
+					"target": "open-source/mobile-nav.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "model-viewer",
+			"type": "registry:block",
+			"title": "Model viewer",
+			"description": "Model viewer",
 			"files": [
 				{
 					"path": "components/usages/modelviewerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ModelViewer.tsx",
+					"path": "registry/open-source/model-viewer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ModelViewer.tsx"
+					"target": "open-source/model-viewer.tsx"
 				}
 			]
 		},
 		{
-			"name": "mouseimagetrail",
-			"type": "registry:component",
-			"title": "Mouse Image Trail",
-			"description": "Mouse Image Trail",
+			"name": "mouse-image-trail",
+			"type": "registry:block",
+			"title": "Mouse image trail",
+			"description": "Mouse image trail",
 			"files": [
 				{
 					"path": "components/usages/mouseimagetrailusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MouseImageTrail.tsx",
+					"path": "registry/open-source/mouse-image-trail.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MouseImageTrail.tsx"
+					"target": "open-source/mouse-image-trail.tsx"
 				}
 			]
 		},
 		{
-			"name": "moviegallery",
-			"type": "registry:component",
-			"title": "Movie Gallery",
-			"description": "Movie Gallery",
+			"name": "movie-gallery",
+			"type": "registry:block",
+			"title": "Movie gallery",
+			"description": "Movie gallery",
 			"files": [
 				{
 					"path": "components/usages/moviegalleryusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/MovieGallery.tsx",
+					"path": "registry/open-source/movie-gallery.tsx",
 					"type": "registry:ui",
-					"target": "open-source/MovieGallery.tsx"
+					"target": "open-source/movie-gallery.tsx"
 				}
 			]
 		},
 		{
-			"name": "navbar",
-			"type": "registry:component",
-			"title": "Nav Bar",
-			"description": "Nav Bar",
+			"name": "nav-bar",
+			"type": "registry:block",
+			"title": "Nav bar",
+			"description": "Nav bar",
 			"files": [
 				{
 					"path": "components/usages/navbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/NavBar.tsx",
+					"path": "registry/open-source/nav-bar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/NavBar.tsx"
+					"target": "open-source/nav-bar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4623,19 +4584,19 @@
 		},
 		{
 			"name": "navbar2",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Navbar2",
 			"description": "Navbar2",
 			"files": [
 				{
 					"path": "components/usages/navbar2usage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Navbar2.tsx",
+					"path": "registry/open-source/navbar2.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Navbar2.tsx"
+					"target": "open-source/navbar2.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -4656,19 +4617,19 @@
 		},
 		{
 			"name": "navbar3",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Navbar3",
 			"description": "Navbar3",
 			"files": [
 				{
 					"path": "components/usages/navbar3usage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Navbar3.tsx",
+					"path": "registry/open-source/navbar3.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Navbar3.tsx"
+					"target": "open-source/navbar3.tsx"
 				},
 				{
 					"path": "./components/ui/mode-toggle.tsx",
@@ -4689,19 +4650,19 @@
 		},
 		{
 			"name": "navigation",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Navigation",
 			"description": "Navigation",
 			"files": [
 				{
 					"path": "components/usages/navigationusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Navigation.tsx",
+					"path": "registry/open-source/navigation.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Navigation.tsx"
+					"target": "open-source/navigation.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4711,38 +4672,38 @@
 			]
 		},
 		{
-			"name": "ninedotloader",
-			"type": "registry:component",
-			"title": "Nine Dot Loader",
-			"description": "Nine Dot Loader",
+			"name": "nine-dot-loader",
+			"type": "registry:block",
+			"title": "Nine dot loader",
+			"description": "Nine dot loader",
 			"files": [
 				{
 					"path": "components/usages/ninedotloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/NineDotLoader.tsx",
+					"path": "registry/open-source/nine-dot-loader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/NineDotLoader.tsx"
+					"target": "open-source/nine-dot-loader.tsx"
 				}
 			]
 		},
 		{
-			"name": "numberticker",
-			"type": "registry:component",
-			"title": "Number Ticker",
-			"description": "Number Ticker",
+			"name": "number-ticker",
+			"type": "registry:block",
+			"title": "Number ticker",
+			"description": "Number ticker",
 			"files": [
 				{
 					"path": "components/usages/numbertickerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/NumberTicker.tsx",
+					"path": "registry/open-source/number-ticker.tsx",
 					"type": "registry:ui",
-					"target": "open-source/NumberTicker.tsx"
+					"target": "open-source/number-ticker.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4752,38 +4713,20 @@
 			]
 		},
 		{
-			"name": "oppositescroll",
-			"type": "registry:component",
-			"title": "Opposite Scroll",
-			"description": "Opposite Scroll",
-			"files": [
-				{
-					"path": "components/usages/oppositescrollusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/OppositeScroll.tsx",
-					"type": "registry:ui",
-					"target": "open-source/OppositeScroll.tsx"
-				}
-			]
-		},
-		{
-			"name": "oppositescrolllinks",
-			"type": "registry:component",
-			"title": "Opposite Scroll Links",
-			"description": "Opposite Scroll Links",
+			"name": "opposite-scroll-links",
+			"type": "registry:block",
+			"title": "Opposite scroll links",
+			"description": "Opposite scroll links",
 			"files": [
 				{
 					"path": "components/usages/oppositescrolllinksusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/OppositeScrollLinks.tsx",
+					"path": "registry/open-source/opposite-scroll-links.tsx",
 					"type": "registry:ui",
-					"target": "open-source/OppositeScrollLinks.tsx"
+					"target": "open-source/opposite-scroll-links.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4793,38 +4736,56 @@
 			]
 		},
 		{
-			"name": "parallaxcarousel",
-			"type": "registry:component",
-			"title": "Parallax Carousel",
-			"description": "Parallax Carousel",
+			"name": "opposite-scroll",
+			"type": "registry:block",
+			"title": "Opposite scroll",
+			"description": "Opposite scroll",
 			"files": [
 				{
-					"path": "components/usages/parallaxcarouselusage.tsx",
-					"type": "registry:page",
+					"path": "components/usages/oppositescrollusage.tsx",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ParallaxCarousel.tsx",
+					"path": "registry/open-source/opposite-scroll.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ParallaxCarousel.tsx"
+					"target": "open-source/opposite-scroll.tsx"
 				}
 			]
 		},
 		{
-			"name": "parallaxfloating",
-			"type": "registry:component",
-			"title": "Parallax Floating",
-			"description": "Parallax Floating",
+			"name": "parallax-carousel",
+			"type": "registry:block",
+			"title": "Parallax carousel",
+			"description": "Parallax carousel",
 			"files": [
 				{
-					"path": "components/usages/parallaxfloatingusage.tsx",
-					"type": "registry:page",
+					"path": "components/usages/parallaxcarouselusage.tsx",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ParallaxFloating.tsx",
+					"path": "registry/open-source/parallax-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ParallaxFloating.tsx"
+					"target": "open-source/parallax-carousel.tsx"
+				}
+			]
+		},
+		{
+			"name": "parallax-floating",
+			"type": "registry:block",
+			"title": "Parallax floating",
+			"description": "Parallax floating",
+			"files": [
+				{
+					"path": "components/usages/parallaxfloatingusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/parallax-floating.tsx",
+					"type": "registry:ui",
+					"target": "open-source/parallax-floating.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4839,20 +4800,20 @@
 			]
 		},
 		{
-			"name": "parallaxscroll",
-			"type": "registry:component",
-			"title": "Parallax Scroll",
-			"description": "Parallax Scroll",
+			"name": "parallax-scroll",
+			"type": "registry:block",
+			"title": "Parallax scroll",
+			"description": "Parallax scroll",
 			"files": [
 				{
 					"path": "components/usages/parallaxscrollusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ParallaxScroll.tsx",
+					"path": "registry/open-source/parallax-scroll.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ParallaxScroll.tsx"
+					"target": "open-source/parallax-scroll.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4862,38 +4823,38 @@
 			]
 		},
 		{
-			"name": "peelreveal",
-			"type": "registry:component",
-			"title": "Peel Reveal",
-			"description": "Peel Reveal",
+			"name": "peel-reveal",
+			"type": "registry:block",
+			"title": "Peel reveal",
+			"description": "Peel reveal",
 			"files": [
 				{
 					"path": "components/usages/peelrevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PeelReveal.tsx",
+					"path": "registry/open-source/peel-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PeelReveal.tsx"
+					"target": "open-source/peel-reveal.tsx"
 				}
 			]
 		},
 		{
 			"name": "pin",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Pin",
 			"description": "Pin",
 			"files": [
 				{
 					"path": "components/usages/pinusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Pin.tsx",
+					"path": "registry/open-source/pin.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Pin.tsx"
+					"target": "open-source/pin.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4903,56 +4864,56 @@
 			]
 		},
 		{
-			"name": "pingpong",
-			"type": "registry:component",
-			"title": "Ping Pong",
-			"description": "Ping Pong",
+			"name": "ping-pong",
+			"type": "registry:block",
+			"title": "Ping pong",
+			"description": "Ping pong",
 			"files": [
 				{
 					"path": "components/usages/pingpongusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PingPong.tsx",
+					"path": "registry/open-source/ping-pong.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PingPong.tsx"
+					"target": "open-source/ping-pong.tsx"
 				}
 			]
 		},
 		{
 			"name": "pipeline",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Pipeline",
 			"description": "Pipeline",
 			"files": [
 				{
 					"path": "components/usages/pipelineusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Pipeline.tsx",
+					"path": "registry/open-source/pipeline.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Pipeline.tsx"
+					"target": "open-source/pipeline.tsx"
 				}
 			]
 		},
 		{
-			"name": "pixelimage",
-			"type": "registry:component",
-			"title": "Pixel Image",
-			"description": "Pixel Image",
+			"name": "pixel-image",
+			"type": "registry:block",
+			"title": "Pixel image",
+			"description": "Pixel image",
 			"files": [
 				{
 					"path": "components/usages/pixelimageusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PixelImage.tsx",
+					"path": "registry/open-source/pixel-image.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PixelImage.tsx"
+					"target": "open-source/pixel-image.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4963,19 +4924,19 @@
 		},
 		{
 			"name": "pointer",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Pointer",
 			"description": "Pointer",
 			"files": [
 				{
 					"path": "components/usages/pointerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Pointer.tsx",
+					"path": "registry/open-source/pointer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Pointer.tsx"
+					"target": "open-source/pointer.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -4985,20 +4946,20 @@
 			]
 		},
 		{
-			"name": "popularpricecard",
-			"type": "registry:component",
-			"title": "Popular Price Card",
-			"description": "Popular Price Card",
+			"name": "popular-price-card",
+			"type": "registry:block",
+			"title": "Popular price card",
+			"description": "Popular price card",
 			"files": [
 				{
 					"path": "components/usages/popularpricecardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PopularPriceCard.tsx",
+					"path": "registry/open-source/popular-price-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PopularPriceCard.tsx"
+					"target": "open-source/popular-price-card.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5013,107 +4974,92 @@
 			]
 		},
 		{
-			"name": "positionawarebutton",
-			"type": "registry:component",
-			"title": "Position Aware Button",
-			"description": "Position Aware Button",
+			"name": "position-aware-button",
+			"type": "registry:block",
+			"title": "Position aware button",
+			"description": "Position aware button",
 			"files": [
 				{
 					"path": "components/usages/positionawarebuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PositionAwareButton.tsx",
+					"path": "registry/open-source/position-aware-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PositionAwareButton.tsx"
+					"target": "open-source/position-aware-button.tsx"
 				}
 			]
 		},
 		{
-			"name": "poweroffslide",
-			"type": "registry:component",
-			"title": "Power Off Slide",
-			"description": "Power Off Slide",
+			"name": "power-off-slide",
+			"type": "registry:block",
+			"title": "Power off slide",
+			"description": "Power off slide",
 			"files": [
 				{
 					"path": "components/usages/poweroffslideusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PowerOffSlide.tsx",
+					"path": "registry/open-source/power-off-slide.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PowerOffSlide.tsx"
+					"target": "open-source/power-off-slide.tsx"
 				}
 			]
 		},
 		{
 			"name": "preloader",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Preloader",
 			"description": "Preloader",
 			"files": [
 				{
 					"path": "components/usages/preloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Preloader.tsx",
+					"path": "registry/open-source/preloader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Preloader.tsx"
+					"target": "open-source/preloader.tsx"
 				}
 			]
 		},
 		{
-			"name": "pricecard",
-			"type": "registry:component",
-			"title": "Price Card",
-			"description": "Price Card",
+			"name": "price-card",
+			"type": "registry:block",
+			"title": "Price card",
+			"description": "Price card",
 			"files": [
 				{
 					"path": "components/usages/pricecardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PriceCard.tsx",
+					"path": "registry/open-source/price-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PriceCard.tsx"
-				},
-				{
-					"path": "registry/open-source/ScalingButton.tsx",
-					"type": "registry:ui",
-					"target": "open-source/ScalingButton.tsx"
-				},
-				{
-					"path": "./components/ui/button.tsx",
-					"type": "registry:ui",
-					"target": "components/ui/button.tsx"
-				},
-				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "open-source/price-card.tsx"
 				}
 			]
 		},
 		{
-			"name": "pricingtable",
-			"type": "registry:component",
-			"title": "Pricing Table",
-			"description": "Pricing Table",
+			"name": "pricing-table",
+			"type": "registry:block",
+			"title": "Pricing table",
+			"description": "Pricing table",
 			"files": [
 				{
 					"path": "components/usages/pricingtableusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/PricingTable.tsx",
+					"path": "registry/open-source/pricing-table.tsx",
 					"type": "registry:ui",
-					"target": "open-source/PricingTable.tsx"
+					"target": "open-source/pricing-table.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5123,20 +5069,20 @@
 			]
 		},
 		{
-			"name": "progresscarousel",
-			"type": "registry:component",
-			"title": "Progress Carousel",
-			"description": "Progress Carousel",
+			"name": "progress-carousel",
+			"type": "registry:block",
+			"title": "Progress carousel",
+			"description": "Progress carousel",
 			"files": [
 				{
 					"path": "components/usages/progresscarouselusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ProgressCarousel.tsx",
+					"path": "registry/open-source/progress-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ProgressCarousel.tsx"
+					"target": "open-source/progress-carousel.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5146,20 +5092,20 @@
 			]
 		},
 		{
-			"name": "progressiveblur",
-			"type": "registry:component",
-			"title": "Progressive Blur",
-			"description": "Progressive Blur",
+			"name": "progressive-blur",
+			"type": "registry:block",
+			"title": "Progressive blur",
+			"description": "Progressive blur",
 			"files": [
 				{
 					"path": "components/usages/progressiveblurusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ProgressiveBlur.tsx",
+					"path": "registry/open-source/progressive-blur.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ProgressiveBlur.tsx"
+					"target": "open-source/progressive-blur.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5169,56 +5115,56 @@
 			]
 		},
 		{
-			"name": "projectshowcase",
-			"type": "registry:component",
-			"title": "Project Showcase",
-			"description": "Project Showcase",
+			"name": "project-showcase",
+			"type": "registry:block",
+			"title": "Project showcase",
+			"description": "Project showcase",
 			"files": [
 				{
 					"path": "components/usages/projectshowcaseusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ProjectShowcase.tsx",
+					"path": "registry/open-source/project-showcase.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ProjectShowcase.tsx"
+					"target": "open-source/project-showcase.tsx"
 				}
 			]
 		},
 		{
-			"name": "randomletterswaphover",
-			"type": "registry:component",
-			"title": "Random Letter Swap Hover",
-			"description": "Random Letter Swap Hover",
+			"name": "random-letter-swap-hover",
+			"type": "registry:block",
+			"title": "Random letter swap hover",
+			"description": "Random letter swap hover",
 			"files": [
 				{
 					"path": "components/usages/randomletterswaphoverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/RandomLetterSwapHover.tsx",
+					"path": "registry/open-source/random-letter-swap-hover.tsx",
 					"type": "registry:ui",
-					"target": "open-source/RandomLetterSwapHover.tsx"
+					"target": "open-source/random-letter-swap-hover.tsx"
 				}
 			]
 		},
 		{
-			"name": "resizenavbar",
-			"type": "registry:component",
-			"title": "Resize Navbar",
-			"description": "Resize Navbar",
+			"name": "resize-navbar",
+			"type": "registry:block",
+			"title": "Resize navbar",
+			"description": "Resize navbar",
 			"files": [
 				{
 					"path": "components/usages/resizenavbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ResizeNavbar.tsx",
+					"path": "registry/open-source/resize-navbar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ResizeNavbar.tsx"
+					"target": "open-source/resize-navbar.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5233,38 +5179,38 @@
 			]
 		},
 		{
-			"name": "roundedscrollbar",
-			"type": "registry:component",
-			"title": "Rounded Scrollbar",
-			"description": "Rounded Scrollbar",
+			"name": "rounded-scrollbar",
+			"type": "registry:block",
+			"title": "Rounded scrollbar",
+			"description": "Rounded scrollbar",
 			"files": [
 				{
 					"path": "components/usages/roundedscrollbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/RoundedScrollbar.tsx",
+					"path": "registry/open-source/rounded-scrollbar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/RoundedScrollbar.tsx"
+					"target": "open-source/rounded-scrollbar.tsx"
 				}
 			]
 		},
 		{
 			"name": "sandbox",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Sandbox",
 			"description": "Sandbox",
 			"files": [
 				{
 					"path": "components/usages/sandboxusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Sandbox.tsx",
+					"path": "registry/open-source/sandbox.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Sandbox.tsx"
+					"target": "open-source/sandbox.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5274,20 +5220,20 @@
 			]
 		},
 		{
-			"name": "scalingbutton",
-			"type": "registry:component",
-			"title": "Scaling Button",
-			"description": "Scaling Button",
+			"name": "scaling-button",
+			"type": "registry:block",
+			"title": "Scaling button",
+			"description": "Scaling button",
 			"files": [
 				{
 					"path": "components/usages/scalingbuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ScalingButton.tsx",
+					"path": "registry/open-source/scaling-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScalingButton.tsx"
+					"target": "open-source/scaling-button.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5302,20 +5248,20 @@
 			]
 		},
 		{
-			"name": "screensaver",
-			"type": "registry:component",
-			"title": "Screen Saver",
-			"description": "Screen Saver",
+			"name": "screen-saver",
+			"type": "registry:block",
+			"title": "Screen saver",
+			"description": "Screen saver",
 			"files": [
 				{
 					"path": "components/usages/screensaverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ScreenSaver.tsx",
+					"path": "registry/open-source/screen-saver.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScreenSaver.tsx"
+					"target": "open-source/screen-saver.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5330,38 +5276,38 @@
 			]
 		},
 		{
-			"name": "scrollfloat",
-			"type": "registry:component",
-			"title": "Scroll Float",
-			"description": "Scroll Float",
+			"name": "scroll-float",
+			"type": "registry:block",
+			"title": "Scroll float",
+			"description": "Scroll float",
 			"files": [
 				{
 					"path": "components/usages/scrollfloatusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ScrollFloat.tsx",
+					"path": "registry/open-source/scroll-float.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScrollFloat.tsx"
+					"target": "open-source/scroll-float.tsx"
 				}
 			]
 		},
 		{
-			"name": "scrollisland",
-			"type": "registry:component",
-			"title": "Scroll Island",
-			"description": "Scroll Island",
+			"name": "scroll-island",
+			"type": "registry:block",
+			"title": "Scroll island",
+			"description": "Scroll island",
 			"files": [
 				{
 					"path": "components/usages/scrollislandusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ScrollIsland.tsx",
+					"path": "registry/open-source/scroll-island.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScrollIsland.tsx"
+					"target": "open-source/scroll-island.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5371,102 +5317,110 @@
 			]
 		},
 		{
-			"name": "scrollreveal",
-			"type": "registry:component",
-			"title": "Scroll Reveal",
-			"description": "Scroll Reveal",
+			"name": "scroll-reveal-paragraph",
+			"type": "registry:block",
+			"title": "Scroll reveal paragraph",
+			"description": "Scroll reveal paragraph",
 			"files": [
 				{
-					"path": "components/usages/scrollrevealusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/ScrollReveal.tsx",
+					"path": "registry/open-source/scroll-reveal-paragraph.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScrollReveal.tsx"
+					"target": "open-source/scroll-reveal-paragraph.tsx"
 				}
 			]
 		},
 		{
-			"name": "scrolltriggercontext",
-			"type": "registry:component",
-			"title": "Scroll Trigger Context",
-			"description": "Scroll Trigger Context",
+			"name": "scroll-reveal",
+			"type": "registry:block",
+			"title": "Scroll reveal",
+			"description": "Scroll reveal",
 			"files": [
 				{
-					"path": "components/usages/scrolltriggercontextusage.tsx",
-					"type": "registry:page",
+					"path": "components/usages/scrollrevealusage.tsx",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ScrollTriggerContext.tsx",
+					"path": "registry/open-source/scroll-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ScrollTriggerContext.tsx"
+					"target": "open-source/scroll-reveal.tsx"
+				}
+			]
+		},
+		{
+			"name": "scroll-trigger-context",
+			"type": "registry:block",
+			"title": "Scroll trigger context",
+			"description": "Scroll trigger context",
+			"files": [
+				{
+					"path": "components/usages/scrolltriggercontextusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/scroll-trigger-context.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scroll-trigger-context.tsx"
 				}
 			]
 		},
 		{
 			"name": "searchbar",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Searchbar",
 			"description": "Searchbar",
 			"files": [
 				{
 					"path": "components/usages/searchbarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Searchbar.tsx",
+					"path": "registry/open-source/searchbar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Searchbar.tsx"
+					"target": "open-source/searchbar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
-				},
-				{
-					"path": "registry/open-source/ThreeDotLoader.tsx",
-					"type": "registry:ui",
-					"target": "open-source/ThreeDotLoader.tsx"
 				}
 			]
 		},
 		{
-			"name": "sectionheader",
-			"type": "registry:component",
-			"title": "Section Header",
-			"description": "Section Header",
+			"name": "section-header",
+			"type": "registry:block",
+			"title": "Section header",
+			"description": "Section header",
 			"files": [
 				{
 					"path": "components/usages/sectionheaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SectionHeader.tsx",
+					"path": "registry/open-source/section-header.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SectionHeader.tsx"
+					"target": "open-source/section-header.tsx"
 				}
 			]
 		},
 		{
-			"name": "selectmodal",
-			"type": "registry:component",
-			"title": "Select Modal",
-			"description": "Select Modal",
+			"name": "select-modal",
+			"type": "registry:block",
+			"title": "Select modal",
+			"description": "Select modal",
 			"files": [
 				{
 					"path": "components/usages/selectmodalusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SelectModal.tsx",
+					"path": "registry/open-source/select-modal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SelectModal.tsx"
+					"target": "open-source/select-modal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5477,19 +5431,19 @@
 		},
 		{
 			"name": "services",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Services",
 			"description": "Services",
 			"files": [
 				{
 					"path": "components/usages/servicesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Services.tsx",
+					"path": "registry/open-source/services.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Services.tsx"
+					"target": "open-source/services.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5499,38 +5453,38 @@
 			]
 		},
 		{
-			"name": "shapeblur",
-			"type": "registry:component",
-			"title": "Shape Blur",
-			"description": "Shape Blur",
+			"name": "shape-blur",
+			"type": "registry:block",
+			"title": "Shape blur",
+			"description": "Shape blur",
 			"files": [
 				{
 					"path": "components/usages/shapeblurusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ShapeBlur.tsx",
+					"path": "registry/open-source/shape-blur.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ShapeBlur.tsx"
+					"target": "open-source/shape-blur.tsx"
 				}
 			]
 		},
 		{
-			"name": "sharebutton",
-			"type": "registry:component",
-			"title": "Share Button",
-			"description": "Share Button",
+			"name": "share-button",
+			"type": "registry:block",
+			"title": "Share button",
+			"description": "Share button",
 			"files": [
 				{
 					"path": "components/usages/sharebuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ShareButton.tsx",
+					"path": "registry/open-source/share-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ShareButton.tsx"
+					"target": "open-source/share-button.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5545,38 +5499,38 @@
 			]
 		},
 		{
-			"name": "shufflehero",
-			"type": "registry:component",
-			"title": "Shuffle Hero",
-			"description": "Shuffle Hero",
+			"name": "shuffle-hero",
+			"type": "registry:block",
+			"title": "Shuffle hero",
+			"description": "Shuffle hero",
 			"files": [
 				{
 					"path": "components/usages/shuffleherousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ShuffleHero.tsx",
+					"path": "registry/open-source/shuffle-hero.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ShuffleHero.tsx"
+					"target": "open-source/shuffle-hero.tsx"
 				}
 			]
 		},
 		{
 			"name": "sidebar",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Sidebar",
 			"description": "Sidebar",
 			"files": [
 				{
 					"path": "components/usages/sidebarusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Sidebar.tsx",
+					"path": "registry/open-source/sidebar.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Sidebar.tsx"
+					"target": "open-source/sidebar.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5587,19 +5541,19 @@
 		},
 		{
 			"name": "sideivdeo",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Sideivdeo",
 			"description": "Sideivdeo",
 			"files": [
 				{
 					"path": "components/usages/sideivdeousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Sideivdeo.tsx",
+					"path": "registry/open-source/sideivdeo.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Sideivdeo.tsx"
+					"target": "open-source/sideivdeo.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5609,56 +5563,56 @@
 			]
 		},
 		{
-			"name": "simplefooter",
-			"type": "registry:component",
-			"title": "Simple Footer",
-			"description": "Simple Footer",
+			"name": "simple-footer",
+			"type": "registry:block",
+			"title": "Simple footer",
+			"description": "Simple footer",
 			"files": [
 				{
 					"path": "components/usages/simplefooterusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SimpleFooter.tsx",
+					"path": "registry/open-source/simple-footer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SimpleFooter.tsx"
+					"target": "open-source/simple-footer.tsx"
 				}
 			]
 		},
 		{
-			"name": "simplegrid",
-			"type": "registry:component",
-			"title": "Simple Grid",
-			"description": "Simple Grid",
+			"name": "simple-grid",
+			"type": "registry:block",
+			"title": "Simple grid",
+			"description": "Simple grid",
 			"files": [
 				{
 					"path": "components/usages/simplegridusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SimpleGrid.tsx",
+					"path": "registry/open-source/simple-grid.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SimpleGrid.tsx"
+					"target": "open-source/simple-grid.tsx"
 				}
 			]
 		},
 		{
 			"name": "skeleton",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Skeleton",
 			"description": "Skeleton",
 			"files": [
 				{
 					"path": "components/usages/skeletonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Skeleton.tsx",
+					"path": "registry/open-source/skeleton.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Skeleton.tsx"
+					"target": "open-source/skeleton.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5668,20 +5622,20 @@
 			]
 		},
 		{
-			"name": "slidebutton",
-			"type": "registry:component",
-			"title": "Slide Button",
-			"description": "Slide Button",
+			"name": "slide-button",
+			"type": "registry:block",
+			"title": "Slide button",
+			"description": "Slide button",
 			"files": [
 				{
 					"path": "components/usages/slidebuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SlideButton.tsx",
+					"path": "registry/open-source/slide-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SlideButton.tsx"
+					"target": "open-source/slide-button.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -5696,74 +5650,74 @@
 			]
 		},
 		{
-			"name": "slidingnumbers",
-			"type": "registry:component",
-			"title": "Sliding Numbers",
-			"description": "Sliding Numbers",
+			"name": "sliding-numbers",
+			"type": "registry:block",
+			"title": "Sliding numbers",
+			"description": "Sliding numbers",
 			"files": [
 				{
 					"path": "components/usages/slidingnumbersusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SlidingNumbers.tsx",
+					"path": "registry/open-source/sliding-numbers.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SlidingNumbers.tsx"
+					"target": "open-source/sliding-numbers.tsx"
 				}
 			]
 		},
 		{
-			"name": "smokeycursor",
-			"type": "registry:component",
-			"title": "Smokey Cursor",
-			"description": "Smokey Cursor",
+			"name": "smokey-cursor",
+			"type": "registry:block",
+			"title": "Smokey cursor",
+			"description": "Smokey cursor",
 			"files": [
 				{
 					"path": "components/usages/smokeycursorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SmokeyCursor.tsx",
+					"path": "registry/open-source/smokey-cursor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SmokeyCursor.tsx"
+					"target": "open-source/smokey-cursor.tsx"
 				}
 			]
 		},
 		{
-			"name": "smoothcursor",
-			"type": "registry:component",
-			"title": "Smooth Cursor",
-			"description": "Smooth Cursor",
+			"name": "smooth-cursor",
+			"type": "registry:block",
+			"title": "Smooth cursor",
+			"description": "Smooth cursor",
 			"files": [
 				{
 					"path": "components/usages/smoothcursorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SmoothCursor.tsx",
+					"path": "registry/open-source/smooth-cursor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SmoothCursor.tsx"
+					"target": "open-source/smooth-cursor.tsx"
 				}
 			]
 		},
 		{
-			"name": "smoothslider",
-			"type": "registry:component",
-			"title": "Smooth Slider",
-			"description": "Smooth Slider",
+			"name": "smooth-slider",
+			"type": "registry:block",
+			"title": "Smooth slider",
+			"description": "Smooth slider",
 			"files": [
 				{
 					"path": "components/usages/smoothsliderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SmoothSlider.tsx",
+					"path": "registry/open-source/smooth-slider.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SmoothSlider.tsx"
+					"target": "open-source/smooth-slider.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5774,37 +5728,37 @@
 		},
 		{
 			"name": "snowflakes",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Snowflakes",
 			"description": "Snowflakes",
 			"files": [
 				{
 					"path": "components/usages/snowflakesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Snowflakes.tsx",
+					"path": "registry/open-source/snowflakes.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Snowflakes.tsx"
+					"target": "open-source/snowflakes.tsx"
 				}
 			]
 		},
 		{
-			"name": "sociallinks",
-			"type": "registry:component",
-			"title": "Social Links",
-			"description": "Social Links",
+			"name": "social-links",
+			"type": "registry:block",
+			"title": "Social links",
+			"description": "Social links",
 			"files": [
 				{
 					"path": "components/usages/sociallinksusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SocialLinks.tsx",
+					"path": "registry/open-source/social-links.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SocialLinks.tsx"
+					"target": "open-source/social-links.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5815,19 +5769,19 @@
 		},
 		{
 			"name": "sparkles",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Sparkles",
 			"description": "Sparkles",
 			"files": [
 				{
 					"path": "components/usages/sparklesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Sparkles.tsx",
+					"path": "registry/open-source/sparkles.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Sparkles.tsx"
+					"target": "open-source/sparkles.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5838,19 +5792,19 @@
 		},
 		{
 			"name": "spinner",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Spinner",
 			"description": "Spinner",
 			"files": [
 				{
 					"path": "components/usages/spinnerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Spinner.tsx",
+					"path": "registry/open-source/spinner.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Spinner.tsx"
+					"target": "open-source/spinner.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5861,19 +5815,19 @@
 		},
 		{
 			"name": "spotlight",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Spotlight",
 			"description": "Spotlight",
 			"files": [
 				{
 					"path": "components/usages/spotlightusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Spotlight.tsx",
+					"path": "registry/open-source/spotlight.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Spotlight.tsx"
+					"target": "open-source/spotlight.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5883,20 +5837,20 @@
 			]
 		},
 		{
-			"name": "springelement",
-			"type": "registry:component",
-			"title": "Spring Element",
-			"description": "Spring Element",
+			"name": "spring-element",
+			"type": "registry:block",
+			"title": "Spring element",
+			"description": "Spring element",
 			"files": [
 				{
 					"path": "components/usages/springelementusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SpringElement.tsx",
+					"path": "registry/open-source/spring-element.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SpringElement.tsx"
+					"target": "open-source/spring-element.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5906,20 +5860,20 @@
 			]
 		},
 		{
-			"name": "springfaq",
-			"type": "registry:component",
-			"title": "Spring F A Q",
-			"description": "Spring F A Q",
+			"name": "spring-faq",
+			"type": "registry:block",
+			"title": "Spring faq",
+			"description": "Spring faq",
 			"files": [
 				{
 					"path": "components/usages/springfaqusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SpringFAQ.tsx",
+					"path": "registry/open-source/spring-faq.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SpringFAQ.tsx"
+					"target": "open-source/spring-faq.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5929,56 +5883,56 @@
 			]
 		},
 		{
-			"name": "springmodal",
-			"type": "registry:component",
-			"title": "Spring Modal",
-			"description": "Spring Modal",
+			"name": "spring-modal",
+			"type": "registry:block",
+			"title": "Spring modal",
+			"description": "Spring modal",
 			"files": [
 				{
 					"path": "components/usages/springmodalusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SpringModal.tsx",
+					"path": "registry/open-source/spring-modal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SpringModal.tsx"
+					"target": "open-source/spring-modal.tsx"
 				}
 			]
 		},
 		{
-			"name": "stackedcarousel",
-			"type": "registry:component",
-			"title": "Stacked Carousel",
-			"description": "Stacked Carousel",
+			"name": "stacked-carousel",
+			"type": "registry:block",
+			"title": "Stacked carousel",
+			"description": "Stacked carousel",
 			"files": [
 				{
 					"path": "components/usages/stackedcarouselusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StackedCarousel.tsx",
+					"path": "registry/open-source/stacked-carousel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StackedCarousel.tsx"
+					"target": "open-source/stacked-carousel.tsx"
 				}
 			]
 		},
 		{
-			"name": "stackingcards",
-			"type": "registry:component",
-			"title": "Stacking Cards",
-			"description": "Stacking Cards",
+			"name": "stacking-cards",
+			"type": "registry:block",
+			"title": "Stacking cards",
+			"description": "Stacking cards",
 			"files": [
 				{
 					"path": "components/usages/stackingcardsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StackingCards.tsx",
+					"path": "registry/open-source/stacking-cards.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StackingCards.tsx"
+					"target": "open-source/stacking-cards.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -5988,56 +5942,56 @@
 			]
 		},
 		{
-			"name": "starfieldwrapper",
-			"type": "registry:component",
-			"title": "Starfield Wrapper",
-			"description": "Starfield Wrapper",
+			"name": "starfield-wrapper",
+			"type": "registry:block",
+			"title": "Starfield wrapper",
+			"description": "Starfield wrapper",
 			"files": [
 				{
 					"path": "components/usages/starfieldwrapperusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StarfieldWrapper.tsx",
+					"path": "registry/open-source/starfield-wrapper.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StarfieldWrapper.tsx"
+					"target": "open-source/starfield-wrapper.tsx"
 				}
 			]
 		},
 		{
-			"name": "stickerpeel",
-			"type": "registry:component",
-			"title": "Sticker Peel",
-			"description": "Sticker Peel",
+			"name": "sticker-peel",
+			"type": "registry:block",
+			"title": "Sticker peel",
+			"description": "Sticker peel",
 			"files": [
 				{
 					"path": "components/usages/stickerpeelusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StickerPeel.tsx",
+					"path": "registry/open-source/sticker-peel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StickerPeel.tsx"
+					"target": "open-source/sticker-peel.tsx"
 				}
 			]
 		},
 		{
-			"name": "stickyscrollreveal",
-			"type": "registry:component",
-			"title": "Sticky Scroll Reveal",
-			"description": "Sticky Scroll Reveal",
+			"name": "sticky-scroll-reveal",
+			"type": "registry:block",
+			"title": "Sticky scroll reveal",
+			"description": "Sticky scroll reveal",
 			"files": [
 				{
 					"path": "components/usages/stickyscrollrevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StickyScrollReveal.tsx",
+					"path": "registry/open-source/sticky-scroll-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StickyScrollReveal.tsx"
+					"target": "open-source/sticky-scroll-reveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6047,38 +6001,38 @@
 			]
 		},
 		{
-			"name": "stripeaccordion",
-			"type": "registry:component",
-			"title": "Stripe Accordion",
-			"description": "Stripe Accordion",
+			"name": "stripe-accordion",
+			"type": "registry:block",
+			"title": "Stripe accordion",
+			"description": "Stripe accordion",
 			"files": [
 				{
 					"path": "components/usages/stripeaccordionusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StripeAccordion.tsx",
+					"path": "registry/open-source/stripe-accordion.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StripeAccordion.tsx"
+					"target": "open-source/stripe-accordion.tsx"
 				}
 			]
 		},
 		{
-			"name": "stripespreloader",
-			"type": "registry:component",
-			"title": "Stripes Preloader",
-			"description": "Stripes Preloader",
+			"name": "stripes-preloader",
+			"type": "registry:block",
+			"title": "Stripes preloader",
+			"description": "Stripes preloader",
 			"files": [
 				{
 					"path": "components/usages/stripespreloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/StripesPreloader.tsx",
+					"path": "registry/open-source/stripes-preloader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/StripesPreloader.tsx"
+					"target": "open-source/stripes-preloader.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6088,38 +6042,38 @@
 			]
 		},
 		{
-			"name": "swapcolumnfeatures",
-			"type": "registry:component",
-			"title": "Swap Column Features",
-			"description": "Swap Column Features",
+			"name": "swap-column-features",
+			"type": "registry:block",
+			"title": "Swap column features",
+			"description": "Swap column features",
 			"files": [
 				{
 					"path": "components/usages/swapcolumnfeaturesusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/SwapColumnFeatures.tsx",
+					"path": "registry/open-source/swap-column-features.tsx",
 					"type": "registry:ui",
-					"target": "open-source/SwapColumnFeatures.tsx"
+					"target": "open-source/swap-column-features.tsx"
 				}
 			]
 		},
 		{
 			"name": "table",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Table",
 			"description": "Table",
 			"files": [
 				{
 					"path": "components/usages/tableusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Table.tsx",
+					"path": "registry/open-source/table.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Table.tsx"
+					"target": "open-source/table.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6130,19 +6084,19 @@
 		},
 		{
 			"name": "tabs",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Tabs",
 			"description": "Tabs",
 			"files": [
 				{
 					"path": "components/usages/tabsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Tabs.tsx",
+					"path": "registry/open-source/tabs.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Tabs.tsx"
+					"target": "open-source/tabs.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6152,74 +6106,74 @@
 			]
 		},
 		{
-			"name": "targetcursor",
-			"type": "registry:component",
-			"title": "Target Cursor",
-			"description": "Target Cursor",
+			"name": "target-cursor",
+			"type": "registry:block",
+			"title": "Target cursor",
+			"description": "Target cursor",
 			"files": [
 				{
 					"path": "components/usages/targetcursorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TargetCursor.tsx",
+					"path": "registry/open-source/target-cursor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TargetCursor.tsx"
+					"target": "open-source/target-cursor.tsx"
 				}
 			]
 		},
 		{
 			"name": "terminal",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Terminal",
 			"description": "Terminal",
 			"files": [
 				{
 					"path": "components/usages/terminalusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Terminal.tsx",
+					"path": "registry/open-source/terminal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Terminal.tsx"
+					"target": "open-source/terminal.tsx"
 				}
 			]
 		},
 		{
-			"name": "textalongpath",
-			"type": "registry:component",
-			"title": "Text Along Path",
-			"description": "Text Along Path",
+			"name": "text-along-path",
+			"type": "registry:block",
+			"title": "Text along path",
+			"description": "Text along path",
 			"files": [
 				{
 					"path": "components/usages/textalongpathusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextAlongPath.tsx",
+					"path": "registry/open-source/text-along-path.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextAlongPath.tsx"
+					"target": "open-source/text-along-path.tsx"
 				}
 			]
 		},
 		{
-			"name": "textanimate",
-			"type": "registry:component",
-			"title": "Text Animate",
-			"description": "Text Animate",
+			"name": "text-animate",
+			"type": "registry:block",
+			"title": "Text animate",
+			"description": "Text animate",
 			"files": [
 				{
 					"path": "components/usages/textanimateusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextAnimate.tsx",
+					"path": "registry/open-source/text-animate.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextAnimate.tsx"
+					"target": "open-source/text-animate.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6229,56 +6183,56 @@
 			]
 		},
 		{
-			"name": "textcursor",
-			"type": "registry:component",
-			"title": "Text Cursor",
-			"description": "Text Cursor",
+			"name": "text-cursor",
+			"type": "registry:block",
+			"title": "Text cursor",
+			"description": "Text cursor",
 			"files": [
 				{
 					"path": "components/usages/textcursorusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextCursor.tsx",
+					"path": "registry/open-source/text-cursor.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextCursor.tsx"
+					"target": "open-source/text-cursor.tsx"
 				}
 			]
 		},
 		{
-			"name": "textcurve",
-			"type": "registry:component",
-			"title": "Text Curve",
-			"description": "Text Curve",
+			"name": "text-curve",
+			"type": "registry:block",
+			"title": "Text curve",
+			"description": "Text curve",
 			"files": [
 				{
 					"path": "components/usages/textcurveusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextCurve.tsx",
+					"path": "registry/open-source/text-curve.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextCurve.tsx"
+					"target": "open-source/text-curve.tsx"
 				}
 			]
 		},
 		{
-			"name": "textenhanced",
-			"type": "registry:component",
-			"title": "Text Enhanced",
-			"description": "Text Enhanced",
+			"name": "text-enhanced",
+			"type": "registry:block",
+			"title": "Text enhanced",
+			"description": "Text enhanced",
 			"files": [
 				{
 					"path": "components/usages/textenhancedusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextEnhanced.tsx",
+					"path": "registry/open-source/text-enhanced.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextEnhanced.tsx"
+					"target": "open-source/text-enhanced.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6288,56 +6242,56 @@
 			]
 		},
 		{
-			"name": "textfocus",
-			"type": "registry:component",
-			"title": "Text Focus",
-			"description": "Text Focus",
+			"name": "text-focus",
+			"type": "registry:block",
+			"title": "Text focus",
+			"description": "Text focus",
 			"files": [
 				{
 					"path": "components/usages/textfocususage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextFocus.tsx",
+					"path": "registry/open-source/text-focus.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextFocus.tsx"
+					"target": "open-source/text-focus.tsx"
 				}
 			]
 		},
 		{
-			"name": "textgradient",
-			"type": "registry:component",
-			"title": "Text Gradient",
-			"description": "Text Gradient",
+			"name": "text-gradient",
+			"type": "registry:block",
+			"title": "Text gradient",
+			"description": "Text gradient",
 			"files": [
 				{
 					"path": "components/usages/textgradientusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextGradient.tsx",
+					"path": "registry/open-source/text-gradient.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextGradient.tsx"
+					"target": "open-source/text-gradient.tsx"
 				}
 			]
 		},
 		{
-			"name": "texthighlighter",
-			"type": "registry:component",
-			"title": "Text Highlighter",
-			"description": "Text Highlighter",
+			"name": "text-highlighter",
+			"type": "registry:block",
+			"title": "Text highlighter",
+			"description": "Text highlighter",
 			"files": [
 				{
 					"path": "components/usages/texthighlighterusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextHighlighter.tsx",
+					"path": "registry/open-source/text-highlighter.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextHighlighter.tsx"
+					"target": "open-source/text-highlighter.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6347,38 +6301,38 @@
 			]
 		},
 		{
-			"name": "texthover",
-			"type": "registry:component",
-			"title": "Text Hover",
-			"description": "Text Hover",
+			"name": "text-hover",
+			"type": "registry:block",
+			"title": "Text hover",
+			"description": "Text hover",
 			"files": [
 				{
 					"path": "components/usages/texthoverusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextHover.tsx",
+					"path": "registry/open-source/text-hover.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextHover.tsx"
+					"target": "open-source/text-hover.tsx"
 				}
 			]
 		},
 		{
-			"name": "textmorph",
-			"type": "registry:component",
-			"title": "Text Morph",
-			"description": "Text Morph",
+			"name": "text-morph",
+			"type": "registry:block",
+			"title": "Text morph",
+			"description": "Text morph",
 			"files": [
 				{
 					"path": "components/usages/textmorphusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextMorph.tsx",
+					"path": "registry/open-source/text-morph.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextMorph.tsx"
+					"target": "open-source/text-morph.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6388,38 +6342,38 @@
 			]
 		},
 		{
-			"name": "textparallaxcontent",
-			"type": "registry:component",
-			"title": "Text Parallax Content",
-			"description": "Text Parallax Content",
+			"name": "text-parallax-content",
+			"type": "registry:block",
+			"title": "Text parallax content",
+			"description": "Text parallax content",
 			"files": [
 				{
 					"path": "components/usages/textparallaxcontentusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextParallaxContent.tsx",
+					"path": "registry/open-source/text-parallax-content.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextParallaxContent.tsx"
+					"target": "open-source/text-parallax-content.tsx"
 				}
 			]
 		},
 		{
-			"name": "textproximity",
-			"type": "registry:component",
-			"title": "Text Proximity",
-			"description": "Text Proximity",
+			"name": "text-proximity",
+			"type": "registry:block",
+			"title": "Text proximity",
+			"description": "Text proximity",
 			"files": [
 				{
 					"path": "components/usages/textproximityusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextProximity.tsx",
+					"path": "registry/open-source/text-proximity.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextProximity.tsx"
+					"target": "open-source/text-proximity.tsx"
 				},
 				{
 					"path": "registry/utils/useMousePosition.ts",
@@ -6429,20 +6383,20 @@
 			]
 		},
 		{
-			"name": "textreveal",
-			"type": "registry:component",
-			"title": "Text Reveal",
-			"description": "Text Reveal",
+			"name": "text-reveal",
+			"type": "registry:block",
+			"title": "Text reveal",
+			"description": "Text reveal",
 			"files": [
 				{
 					"path": "components/usages/textrevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextReveal.tsx",
+					"path": "registry/open-source/text-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextReveal.tsx"
+					"target": "open-source/text-reveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6452,38 +6406,38 @@
 			]
 		},
 		{
-			"name": "textroll",
-			"type": "registry:component",
-			"title": "Text Roll",
-			"description": "Text Roll",
+			"name": "text-roll",
+			"type": "registry:block",
+			"title": "Text roll",
+			"description": "Text roll",
 			"files": [
 				{
 					"path": "components/usages/textrollusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextRoll.tsx",
+					"path": "registry/open-source/text-roll.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextRoll.tsx"
+					"target": "open-source/text-roll.tsx"
 				}
 			]
 		},
 		{
-			"name": "textrotate",
-			"type": "registry:component",
-			"title": "Text Rotate",
-			"description": "Text Rotate",
+			"name": "text-rotate",
+			"type": "registry:block",
+			"title": "Text rotate",
+			"description": "Text rotate",
 			"files": [
 				{
 					"path": "components/usages/textrotateusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextRotate.tsx",
+					"path": "registry/open-source/text-rotate.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextRotate.tsx"
+					"target": "open-source/text-rotate.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6493,20 +6447,20 @@
 			]
 		},
 		{
-			"name": "textsplit",
-			"type": "registry:component",
-			"title": "Text Split",
-			"description": "Text Split",
+			"name": "text-split",
+			"type": "registry:block",
+			"title": "Text split",
+			"description": "Text split",
 			"files": [
 				{
 					"path": "components/usages/textsplitusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextSplit.tsx",
+					"path": "registry/open-source/text-split.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextSplit.tsx"
+					"target": "open-source/text-split.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6516,182 +6470,182 @@
 			]
 		},
 		{
-			"name": "texttrail",
-			"type": "registry:component",
-			"title": "Text Trail",
-			"description": "Text Trail",
+			"name": "text-trail",
+			"type": "registry:block",
+			"title": "Text trail",
+			"description": "Text trail",
 			"files": [
 				{
 					"path": "components/usages/texttrailusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextTrail.tsx",
+					"path": "registry/open-source/text-trail.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextTrail.tsx"
+					"target": "open-source/text-trail.tsx"
 				}
 			]
 		},
 		{
-			"name": "texttype",
-			"type": "registry:component",
-			"title": "Text Type",
-			"description": "Text Type",
+			"name": "text-type",
+			"type": "registry:block",
+			"title": "Text type",
+			"description": "Text type",
 			"files": [
 				{
 					"path": "components/usages/texttypeusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextType.tsx",
+					"path": "registry/open-source/text-type.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextType.tsx"
+					"target": "open-source/text-type.tsx"
 				}
 			]
 		},
 		{
-			"name": "textunderline",
-			"type": "registry:component",
-			"title": "Text Underline",
-			"description": "Text Underline",
+			"name": "text-underline",
+			"type": "registry:block",
+			"title": "Text underline",
+			"description": "Text underline",
 			"files": [
 				{
 					"path": "components/usages/textunderlineusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TextUnderline.tsx",
+					"path": "registry/open-source/text-underline.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TextUnderline.tsx"
+					"target": "open-source/text-underline.tsx"
 				}
 			]
 		},
 		{
 			"name": "threads",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Threads",
 			"description": "Threads",
 			"files": [
 				{
 					"path": "components/usages/threadsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Threads.tsx",
+					"path": "registry/open-source/threads.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Threads.tsx"
+					"target": "open-source/threads.tsx"
 				}
 			]
 		},
 		{
-			"name": "threebounceloader",
-			"type": "registry:component",
-			"title": "Three Bounce Loader",
-			"description": "Three Bounce Loader",
+			"name": "three-bounce-loader",
+			"type": "registry:block",
+			"title": "Three bounce loader",
+			"description": "Three bounce loader",
 			"files": [
 				{
 					"path": "components/usages/threebounceloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ThreeBounceLoader.tsx",
+					"path": "registry/open-source/three-bounce-loader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ThreeBounceLoader.tsx"
+					"target": "open-source/three-bounce-loader.tsx"
 				}
 			]
 		},
 		{
-			"name": "threedotloader",
-			"type": "registry:component",
-			"title": "Three Dot Loader",
-			"description": "Three Dot Loader",
+			"name": "three-dot-loader",
+			"type": "registry:block",
+			"title": "Three dot loader",
+			"description": "Three dot loader",
 			"files": [
 				{
 					"path": "components/usages/threedotloaderusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ThreeDotLoader.tsx",
+					"path": "registry/open-source/three-dot-loader.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ThreeDotLoader.tsx"
+					"target": "open-source/three-dot-loader.tsx"
 				}
 			]
 		},
 		{
-			"name": "tilesbackground",
-			"type": "registry:component",
-			"title": "Tiles Background",
-			"description": "Tiles Background",
+			"name": "tiles-background",
+			"type": "registry:block",
+			"title": "Tiles background",
+			"description": "Tiles background",
 			"files": [
 				{
 					"path": "components/usages/tilesbackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TilesBackground.tsx",
+					"path": "registry/open-source/tiles-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TilesBackground.tsx"
+					"target": "open-source/tiles-background.tsx"
 				}
 			]
 		},
 		{
 			"name": "timeline",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Timeline",
 			"description": "Timeline",
 			"files": [
 				{
 					"path": "components/usages/timelineusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Timeline.tsx",
+					"path": "registry/open-source/timeline.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Timeline.tsx"
+					"target": "open-source/timeline.tsx"
 				}
 			]
 		},
 		{
-			"name": "tooltip",
-			"type": "registry:component",
-			"title": "Tool Tip",
-			"description": "Tool Tip",
+			"name": "tool-tip",
+			"type": "registry:block",
+			"title": "Tool tip",
+			"description": "Tool tip",
 			"files": [
 				{
 					"path": "components/usages/tooltipusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ToolTip.tsx",
+					"path": "registry/open-source/tool-tip.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ToolTip.tsx"
+					"target": "open-source/tool-tip.tsx"
 				}
 			]
 		},
 		{
-			"name": "tracingbeam",
-			"type": "registry:component",
-			"title": "Tracing Beam",
-			"description": "Tracing Beam",
+			"name": "tracing-beam",
+			"type": "registry:block",
+			"title": "Tracing beam",
+			"description": "Tracing beam",
 			"files": [
 				{
 					"path": "components/usages/tracingbeamusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TracingBeam.tsx",
+					"path": "registry/open-source/tracing-beam.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TracingBeam.tsx"
+					"target": "open-source/tracing-beam.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6702,73 +6656,73 @@
 		},
 		{
 			"name": "tunnel",
-			"type": "registry:component",
+			"type": "registry:block",
 			"title": "Tunnel",
 			"description": "Tunnel",
 			"files": [
 				{
 					"path": "components/usages/tunnelusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/Tunnel.tsx",
+					"path": "registry/open-source/tunnel.tsx",
 					"type": "registry:ui",
-					"target": "open-source/Tunnel.tsx"
+					"target": "open-source/tunnel.tsx"
 				}
 			]
 		},
 		{
-			"name": "typewritertestimonials",
-			"type": "registry:component",
-			"title": "Typewriter Testimonials",
-			"description": "Typewriter Testimonials",
+			"name": "typewriter-testimonials",
+			"type": "registry:block",
+			"title": "Typewriter testimonials",
+			"description": "Typewriter testimonials",
 			"files": [
 				{
 					"path": "components/usages/typewritertestimonialsusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/TypewriterTestimonials.tsx",
+					"path": "registry/open-source/typewriter-testimonials.tsx",
 					"type": "registry:ui",
-					"target": "open-source/TypewriterTestimonials.tsx"
+					"target": "open-source/typewriter-testimonials.tsx"
 				}
 			]
 		},
 		{
-			"name": "underlinetobackground",
-			"type": "registry:component",
-			"title": "Underline To Background",
-			"description": "Underline To Background",
+			"name": "underline-to-background",
+			"type": "registry:block",
+			"title": "Underline to background",
+			"description": "Underline to background",
 			"files": [
 				{
 					"path": "components/usages/underlinetobackgroundusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/UnderlineToBackground.tsx",
+					"path": "registry/open-source/underline-to-background.tsx",
 					"type": "registry:ui",
-					"target": "open-source/UnderlineToBackground.tsx"
+					"target": "open-source/underline-to-background.tsx"
 				}
 			]
 		},
 		{
-			"name": "verticalcutreveal",
-			"type": "registry:component",
-			"title": "Vertical Cut Reveal",
-			"description": "Vertical Cut Reveal",
+			"name": "vertical-cut-reveal",
+			"type": "registry:block",
+			"title": "Vertical cut reveal",
+			"description": "Vertical cut reveal",
 			"files": [
 				{
 					"path": "components/usages/verticalcutrevealusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VerticalCutReveal.tsx",
+					"path": "registry/open-source/vertical-cut-reveal.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VerticalCutReveal.tsx"
+					"target": "open-source/vertical-cut-reveal.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6778,20 +6732,20 @@
 			]
 		},
 		{
-			"name": "videobutton",
-			"type": "registry:component",
-			"title": "Video Button",
-			"description": "Video Button",
+			"name": "video-button",
+			"type": "registry:block",
+			"title": "Video button",
+			"description": "Video button",
 			"files": [
 				{
 					"path": "components/usages/videobuttonusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VideoButton.tsx",
+					"path": "registry/open-source/video-button.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VideoButton.tsx"
+					"target": "open-source/video-button.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6801,56 +6755,56 @@
 			]
 		},
 		{
-			"name": "videohero",
-			"type": "registry:component",
-			"title": "Video Hero",
-			"description": "Video Hero",
+			"name": "video-hero",
+			"type": "registry:block",
+			"title": "Video hero",
+			"description": "Video hero",
 			"files": [
 				{
 					"path": "components/usages/videoherousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VideoHero.tsx",
+					"path": "registry/open-source/video-hero.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VideoHero.tsx"
+					"target": "open-source/video-hero.tsx"
 				}
 			]
 		},
 		{
-			"name": "videoplayer",
-			"type": "registry:component",
-			"title": "Video Player",
-			"description": "Video Player",
+			"name": "video-player",
+			"type": "registry:block",
+			"title": "Video player",
+			"description": "Video player",
 			"files": [
 				{
 					"path": "components/usages/videoplayerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VideoPlayer.tsx",
+					"path": "registry/open-source/video-player.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VideoPlayer.tsx"
+					"target": "open-source/video-player.tsx"
 				}
 			]
 		},
 		{
-			"name": "videoplayer2",
-			"type": "registry:component",
-			"title": "Video Player2",
-			"description": "Video Player2",
+			"name": "video-player2",
+			"type": "registry:block",
+			"title": "Video player2",
+			"description": "Video player2",
 			"files": [
 				{
 					"path": "components/usages/videoplayer2usage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VideoPlayer2.tsx",
+					"path": "registry/open-source/video-player2.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VideoPlayer2.tsx"
+					"target": "open-source/video-player2.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -6865,38 +6819,38 @@
 			]
 		},
 		{
-			"name": "videoviewer",
-			"type": "registry:component",
-			"title": "Video Viewer",
-			"description": "Video Viewer",
+			"name": "video-viewer",
+			"type": "registry:block",
+			"title": "Video viewer",
+			"description": "Video viewer",
 			"files": [
 				{
 					"path": "components/usages/videoviewerusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/VideoViewer.tsx",
+					"path": "registry/open-source/video-viewer.tsx",
 					"type": "registry:ui",
-					"target": "open-source/VideoViewer.tsx"
+					"target": "open-source/video-viewer.tsx"
 				}
 			]
 		},
 		{
-			"name": "viewlist",
-			"type": "registry:component",
-			"title": "View List",
-			"description": "View List",
+			"name": "view-list",
+			"type": "registry:block",
+			"title": "View list",
+			"description": "View list",
 			"files": [
 				{
 					"path": "components/usages/viewlistusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ViewList.tsx",
+					"path": "registry/open-source/view-list.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ViewList.tsx"
+					"target": "open-source/view-list.tsx"
 				},
 				{
 					"path": "./components/ui/button.tsx",
@@ -6911,20 +6865,20 @@
 			]
 		},
 		{
-			"name": "wobblecard",
-			"type": "registry:component",
-			"title": "Wobble Card",
-			"description": "Wobble Card",
+			"name": "wobble-card",
+			"type": "registry:block",
+			"title": "Wobble card",
+			"description": "Wobble card",
 			"files": [
 				{
 					"path": "components/usages/wobblecardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/WobbleCard.tsx",
+					"path": "registry/open-source/wobble-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/WobbleCard.tsx"
+					"target": "open-source/wobble-card.tsx"
 				},
 				{
 					"path": "./lib/utils.ts",
@@ -6934,56 +6888,38 @@
 			]
 		},
 		{
-			"name": "wordtornado",
-			"type": "registry:component",
-			"title": "Word Tornado",
-			"description": "Word Tornado",
+			"name": "word-tornado",
+			"type": "registry:block",
+			"title": "Word tornado",
+			"description": "Word tornado",
 			"files": [
 				{
 					"path": "components/usages/wordtornadousage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/WordTornado.tsx",
+					"path": "registry/open-source/word-tornado.tsx",
 					"type": "registry:ui",
-					"target": "open-source/WordTornado.tsx"
+					"target": "open-source/word-tornado.tsx"
 				}
 			]
 		},
 		{
-			"name": "zoomblurcard",
-			"type": "registry:component",
-			"title": "Zoom Blur Card",
-			"description": "Zoom Blur Card",
+			"name": "zoom-blur-card",
+			"type": "registry:block",
+			"title": "Zoom blur card",
+			"description": "Zoom blur card",
 			"files": [
 				{
 					"path": "components/usages/zoomblurcardusage.tsx",
-					"type": "registry:page",
+					"type": "registry:block",
 					"target": "~/example.tsx"
 				},
 				{
-					"path": "registry/open-source/ZoomBlurCard.tsx",
+					"path": "registry/open-source/zoom-blur-card.tsx",
 					"type": "registry:ui",
-					"target": "open-source/ZoomBlurCard.tsx"
-				}
-			]
-		},
-		{
-			"name": "bottomblur",
-			"type": "registry:component",
-			"title": "Bottomblur",
-			"description": "Bottomblur",
-			"files": [
-				{
-					"path": "components/usages/bottomblurusage.tsx",
-					"type": "registry:page",
-					"target": "~/example.tsx"
-				},
-				{
-					"path": "registry/open-source/bottomblur.tsx",
-					"type": "registry:ui",
-					"target": "open-source/bottomblur.tsx"
+					"target": "open-source/zoom-blur-card.tsx"
 				}
 			]
 		}

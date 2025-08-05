@@ -1,6 +1,6 @@
 "use client";
 
-import { DirectionAwareHover } from "@/registry/open-source/Hover";
+import { DirectionAwareHover } from "@/registry/open-source/hover";
 
 export default function DirectionAwareHoverDemo() {
 	const imageUrl = "/itjustworks.jpg";

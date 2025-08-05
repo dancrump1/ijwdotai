@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { HorizontalScrollCarousel } from "@/registry/open-source/HorizontalScrollGallery";
+import { HorizontalScrollCarousel } from "@/registry/open-source/horizontal-scroll-gallery";
 
 export default function Usage() {
 	return (

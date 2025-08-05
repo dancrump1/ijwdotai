@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import StackedCarousel from "@/registry/open-source/StackedCarousel";
+import StackedCarousel from "@/registry/open-source/stacked-carousel";
 
 export default function Usage() {
 	return (

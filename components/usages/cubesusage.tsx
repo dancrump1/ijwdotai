@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import Cubes from "@/registry/open-source/Cubes";
+import Cubes from "@/registry/open-source/cubes";
 
 import { Checkbox } from "../ui/checkbox";
 import { Slider } from "../ui/slider";

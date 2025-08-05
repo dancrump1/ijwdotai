@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { SmoothCursor } from "@/registry/open-source/SmoothCursor";
+import { SmoothCursor } from "@/registry/open-source/smooth-cursor";
 
 export default function Usage() {
 	return (

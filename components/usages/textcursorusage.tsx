@@ -1,4 +1,4 @@
-import TextCursor from "@/registry/open-source/TextCursor";
+import TextCursor from "@/registry/open-source/text-cursor";
 
 const TextCursorUsage = () => {
 	return (

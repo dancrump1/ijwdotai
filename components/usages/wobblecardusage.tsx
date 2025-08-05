@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import WobbleCard from "@/registry/open-source/WobbleCard";
+import WobbleCard from "@/registry/open-source/wobble-card";
 
 export default function WobbleCardUsage() {
 	return (

@@ -1,6 +1,9 @@
 "use client";
 
-import { HeroHighlight, Highlight } from "@/registry/open-source/HeroHighlight";
+import {
+	HeroHighlight,
+	Highlight,
+} from "@/registry/open-source/hero-highlight";
 import { motion } from "motion/react";
 
 export default function HeroHighlightDemo() {

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FloatingNav } from "@/registry/open-source/FloatingNav";
+import { FloatingNav } from "@/registry/open-source/floating-nav";
 
 export default function Usage() {
 	return (

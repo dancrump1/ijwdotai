@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FilmReel from "@/registry/open-source/FilmReel";
+import FilmReel from "@/registry/open-source/film-reel";
 
 export default function Usage() {
 	return (

@@ -1,4 +1,4 @@
-import { HoverEffect } from "@/registry/open-source/CardHover";
+import { HoverEffect } from "@/registry/open-source/card-hover";
 
 export default function CardHoverEffectDemo() {
 	return (

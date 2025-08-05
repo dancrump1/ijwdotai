@@ -5,7 +5,7 @@ import React from "react";
 import {
 	RandomLetterSwapForward,
 	RandomLetterSwapPingPong,
-} from "@/registry/open-source/RandomLetterSwapHover";
+} from "@/registry/open-source/random-letter-swap-hover";
 
 export default function Usage() {
 	return (

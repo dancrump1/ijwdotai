@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-trigger-context",
+  "type": "registry:block",
+  "title": "Scroll trigger context",
+  "description": "Scroll trigger context",
+  "files": [
+    {
+      "path": "components/usages/scrolltriggercontextusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\"></div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/scroll-trigger-context.tsx",
+      "content": "\"use client\";\n\nimport { useEffect } from \"react\";\n\nimport gsap from \"gsap\";\nimport { ScrollTrigger } from \"gsap/dist/ScrollTrigger\";\nimport { useLenis } from \"lenis/react\";\n\ngsap.registerPlugin(ScrollTrigger);\n\nexport function ScrollTriggerConfig() {\n\tconst lenis = useLenis(ScrollTrigger.update);\n\n\tuseEffect(() => {\n\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\n\t\treturn () => {\n\t\t\tScrollTrigger.clearScrollMemory(\"manual\");\n\t\t};\n\t}, []);\n\n\tuseEffect(() => ScrollTrigger.refresh(), [lenis]);\n\n\treturn null;\n}\n",
+      "type": "registry:ui",
+      "target": "open-source/scroll-trigger-context.tsx"
+    }
+  ]
+}

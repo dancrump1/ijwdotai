@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import BookTestimonial3D from "@/registry/open-source/BookTestimonials";
+import BookTestimonial3D from "@/registry/open-source/book-testimonials";
 import { testimonials } from "@/registry/utils/example_data";
 
 export default function Usage() {

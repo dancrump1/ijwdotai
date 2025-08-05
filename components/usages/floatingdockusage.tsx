@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FloatingDock } from "@/registry/open-source/FloatingDock";
+import { FloatingDock } from "@/registry/open-source/floating-dock";
 
 export default function Usage() {
 	return (

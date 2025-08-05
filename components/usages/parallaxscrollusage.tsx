@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ParallaxScroll } from "@/registry/open-source/ParallaxScroll";
+import { ParallaxScroll } from "@/registry/open-source/parallax-scroll";
 
 export default function Usage() {
 	return (

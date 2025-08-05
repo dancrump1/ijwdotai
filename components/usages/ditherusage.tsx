@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Dither from "@/registry/open-source/Dither";
+import Dither from "@/registry/open-source/dither";
 
 export default function Usage() {
 	return (

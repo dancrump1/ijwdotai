@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import NavBar from "@/registry/open-source/3dNavBar";
+import NavBar from "@/registry/open-source/3d-nav-bar";
 
 export default function Usage() {
 	return (

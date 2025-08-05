@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ImageZoom from "@/registry/open-source/ImageZoom";
+import ImageZoom from "@/registry/open-source/image-zoom";
 
 export default function Usage() {
 	return (

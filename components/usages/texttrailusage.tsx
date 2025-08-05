@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TextTrail from "@/registry/open-source/TextTrail";
+import TextTrail from "@/registry/open-source/text-trail";
 
 export default function Usage() {
 	return (

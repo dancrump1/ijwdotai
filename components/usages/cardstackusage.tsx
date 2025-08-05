@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { CardStack } from "@/registry/open-source/CardStack";
+import { CardStack } from "@/registry/open-source/card-stack";
 
 export default function Usage() {
 	return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import TypewriterTestimonial from "@/registry/open-source/TypewriterTestimonials";
+import TypewriterTestimonial from "@/registry/open-source/typewriter-testimonials";
 import { testimonials } from "@/registry/utils/example_data";
 
 export const typewritterTestimonials = [

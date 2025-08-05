@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TextFocus from "@/registry/open-source/TextFocus";
+import TextFocus from "@/registry/open-source/text-focus";
 
 export default function Usage() {
 	return (

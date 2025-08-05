@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { SpringModal } from "@/registry/open-source/SpringModal";
+import { SpringModal } from "@/registry/open-source/spring-modal";
 
 export default function Usage() {
 	const [isOpen, setIsOpen] = useState(false);

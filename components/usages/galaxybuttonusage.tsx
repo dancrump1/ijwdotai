@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import GalaxyButton from "@/registry/open-source/GalaxyButton";
+import GalaxyButton from "@/registry/open-source/galaxy-button";
 
 export default function Usage() {
 	return (

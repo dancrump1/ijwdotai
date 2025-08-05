@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Lanyard from "@/registry/open-source/Lanyard";
+import Lanyard from "@/registry/open-source/lanyard";
 
 export default function Usage() {
 	return (

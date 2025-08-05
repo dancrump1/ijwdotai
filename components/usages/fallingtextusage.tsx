@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FallingText from "@/registry/open-source/FallingText";
+import FallingText from "@/registry/open-source/falling-text";
 
 export default function Usage() {
 	return (

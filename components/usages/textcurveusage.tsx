@@ -1,6 +1,6 @@
 "use client";
 
-import TextCurve from "@/registry/open-source/TextCurve";
+import TextCurve from "@/registry/open-source/text-curve";
 
 export default function TextCurveUsage() {
 	return (

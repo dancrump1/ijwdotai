@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { SparklesCore } from "@/registry/open-source/Sparkles";
+import { SparklesCore } from "@/registry/open-source/sparkles";
 
 export default function Usage() {
 	return (

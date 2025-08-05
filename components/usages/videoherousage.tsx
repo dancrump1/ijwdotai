@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import VideoHero from "@/registry/open-source/VideoHero";
+import VideoHero from "@/registry/open-source/video-hero";
 
 export default function Usage() {
 	return (

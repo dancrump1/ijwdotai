@@ -8,7 +8,7 @@ import {
 	TableHeaderCell,
 	TableRoot,
 	TableRow,
-} from "@/registry/open-source/Table";
+} from "@/registry/open-source/table";
 
 export const data: Array<{
 	id: number;

@@ -12,7 +12,7 @@ import {
 	DialogStackPrevious,
 	DialogStackTitle,
 	DialogStackTrigger,
-} from "@/registry/open-source/DialogStack";
+} from "@/registry/open-source/dialog-stack";
 
 import { Button } from "../ui/button";
 

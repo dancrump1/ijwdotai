@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 import Image from "next/image";
 
-import Screensaver from "@/registry/open-source/ScreenSaver";
+import Screensaver from "@/registry/open-source/screen-saver";
 
 export default function Usage() {
 	const screensaverRef = useRef<HTMLDivElement>(null);

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { FractalDotGrid } from "@/registry/open-source/FractalGrid";
+import { FractalDotGrid } from "@/registry/open-source/fractal-grid";
 import { Check, Copy } from "lucide-react";
 
 import {

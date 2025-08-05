@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import NumberTicker from "@/registry/open-source/NumberTicker";
+import NumberTicker from "@/registry/open-source/number-ticker";
 
 export default function Usage() {
 	return (

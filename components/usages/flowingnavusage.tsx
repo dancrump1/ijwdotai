@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FlowingMenu from "@/registry/open-source/FlowingNav";
+import FlowingMenu from "@/registry/open-source/flowing-nav";
 
 export default function Usage() {
 	return (

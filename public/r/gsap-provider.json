@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gsap-provider",
+  "type": "registry:block",
+  "title": "Gsap provider",
+  "description": "Gsap provider",
+  "files": [
+    {
+      "path": "components/usages/gsapproviderusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\"></div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/gsap-provider.tsx",
+      "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\n\nimport Tempus from \"tempus\";\nimport gsap from \"gsap\";\n\nimport { ScrollTriggerConfig } from \"./ScrollTriggerContext\";\n\nexport function GsapProvider({ scrollTrigger = true }) {\n\tconst [isMounted, setIsMounted] = useState(false);\n\tuseEffect(() => {\n\t\tgsap.defaults({ ease: \"none\" });\n\n\t\t// merge rafs\n\t\tgsap.ticker.lagSmoothing(0);\n\t\tgsap.ticker.remove(gsap.updateRoot);\n\t\tTempus?.add((time: number) => {\n\t\t\tgsap.updateRoot(time / 1000);\n\t\t}, 0);\n\n\t\tsetIsMounted(true);\n\t}, []);\n\n\tif (!isMounted) return null;\n\n\treturn scrollTrigger && <ScrollTriggerConfig />;\n}\n",
+      "type": "registry:ui",
+      "target": "open-source/gsap-provider.tsx"
+    }
+  ]
+}

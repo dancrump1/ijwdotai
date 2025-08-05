@@ -1,4 +1,4 @@
-import FaultyTerminal from "@/registry/open-source/FaultyTerminal";
+import FaultyTerminal from "@/registry/open-source/faulty-terminal";
 
 export default function Usage() {
 	return (

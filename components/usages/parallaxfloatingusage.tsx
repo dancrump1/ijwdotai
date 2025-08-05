@@ -6,8 +6,8 @@ import Link from "next/link";
 
 import Floating, {
 	FloatingElement,
-} from "@/registry/open-source/ParallaxFloating";
-import TextRotate from "@/registry/open-source/TextRotate";
+} from "@/registry/open-source/parallax-floating";
+import TextRotate from "@/registry/open-source/text-rotate";
 import { LayoutGroup, motion } from "motion/react";
 
 const exampleImages = [

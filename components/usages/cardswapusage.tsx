@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CardSwap, { SwapCard } from "@/registry/open-source/CardSwap";
+import CardSwap, { SwapCard } from "@/registry/open-source/card-swap";
 
 export default function Usage() {
 	return (

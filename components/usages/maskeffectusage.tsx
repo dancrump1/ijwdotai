@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { MaskContainer } from "@/registry/open-source/MaskEffect";
+import { MaskContainer } from "@/registry/open-source/mask-effect";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CardDeck from "@/registry/open-source/CardDeck";
+import CardDeck from "@/registry/open-source/card-deck";
 
 export default function Usage() {
 	return (

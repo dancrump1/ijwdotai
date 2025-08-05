@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example-replication",
+  "type": "registry:block",
+  "title": "Example replication",
+  "description": "Example replication",
+  "files": [
+    {
+      "path": "components/usages/examplereplicationusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/example-replication.tsx",
+      "content": "import Link from \"next/link\";\n\nimport { ReactLenis } from \"lenis/react\";\n\nimport AboutSection from \"./About\";\nimport Features from \"./Features\";\nimport Gallery from \"./Gallery\";\nimport { GsapProvider } from \"./GsapProvider\";\nimport Improvements from \"./Improvements\";\nimport Introduction from \"./Introduction\";\nimport Services from \"./Services\";\n\nexport const ExampleReplication = () => {\n\treturn (\n\t\t<div>\n\t\t\t<ReactLenis root>\n\t\t\t\t<div>\n\t\t\t\t\t<div className=\"grid min-h-screen place-items-center bg-white py-20 text-black\">\n\t\t\t\t\t\t<div className=\"container flex min-h-[50vh] flex-col justify-center gap-y-20 text-center\">\n\t\t\t\t\t\t\t<h1 className=\"fs-40-85\">\n\t\t\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\t\t\thref={\"https://www.cielia.com/m/special/plus/\"}\n\t\t\t\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\t\t\t\tclassName=\"underline transition duration-300 hover:text-blue-600\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tCielia\n\t\t\t\t\t\t\t\t</Link>{\" \"}\n\t\t\t\t\t\t\t\tReplication\n\t\t\t\t\t\t\t</h1>\n\n\t\t\t\t\t\t\t<div className=\"flex items-center justify-center gap-x-5 text-center fs-25-43\">\n\t\t\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\t\t\thref={\n\t\t\t\t\t\t\t\t\t\t\"https://github.com/PhanDangKhoa96/cielia-replication\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\t\t\t\tclassName=\"hover:underline\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tSource code\n\t\t\t\t\t\t\t\t</Link>\n\t\t\t\t\t\t\t\t<span>|</span>\n\t\t\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\t\t\thref={\"https://www.pldkhoa.dev/playground\"}\n\t\t\t\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\t\t\t\tclassName=\"hover:underline\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tAll demos\n\t\t\t\t\t\t\t\t</Link>\n\t\t\t\t\t\t\t\t<span>|</span>\n\t\t\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\t\t\thref={\"https://www.lummi.ai/\"}\n\t\t\t\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\t\t\t\tclassName=\"hover:underline\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\tImages\n\t\t\t\t\t\t\t\t</Link>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"container grid h-screen place-items-center lg:hidden\">\n\t\t\t\t\t\t<h2 className=\"text-balance uppercase fs-38-56\">\n\t\t\t\t\t\t\tApologies, this screen is currently not optimized for\n\t\t\t\t\t\t\tmobile devices and is only available for screens wider than\n\t\t\t\t\t\t\t1024px.\n\t\t\t\t\t\t</h2>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"hidden space-y-52 lg:block\">\n\t\t\t\t\t\t<Introduction />\n\t\t\t\t\t\t<Features />\n\t\t\t\t\t\t<AboutSection />\n\t\t\t\t\t\t<Services />\n\t\t\t\t\t\t<Improvements />\n\t\t\t\t\t\t<Gallery />\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div className=\"container grid h-screen place-items-center\">\n\t\t\t\t\t\t<h2 className=\"text-balance uppercase fs-40-85\">\n\t\t\t\t\t\t\tHave a good day!\n\t\t\t\t\t\t</h2>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</ReactLenis>\n\t\t\t<GsapProvider scrollTrigger />\n\t\t</div>\n\t);\n};\n",
+      "type": "registry:ui",
+      "target": "open-source/example-replication.tsx"
+    }
+  ]
+}

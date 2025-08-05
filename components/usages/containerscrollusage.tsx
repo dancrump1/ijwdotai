@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ContainerScroll } from "@/registry/open-source/ContainerScroll";
+import { ContainerScroll } from "@/registry/open-source/container-scroll";
 
 export default function Usage() {
 	return (

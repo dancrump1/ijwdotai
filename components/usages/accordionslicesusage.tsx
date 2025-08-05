@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AccordionSlices from "@/registry/open-source/AccordionSlices";
+import AccordionSlices from "@/registry/open-source/accordion-slices";
 
 export default function Usage() {
 	return (

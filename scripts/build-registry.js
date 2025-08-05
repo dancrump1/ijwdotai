@@ -174,7 +174,7 @@ function buildRegistryItem(componentFile) {
 		}
 	}
 
-	const exampleName = `${componentName.toLowerCase()}usage.tsx`;
+	const exampleName = `${componentName.toLowerCase().replaceAll("-", "")}usage.tsx`;
 	const examplePath = path.join("components/usages/", exampleName);
 
 	if (fs.existsSync(examplePath)) {

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ExpandableTabs from "@/registry/open-source/ExpandingTabs";
+import ExpandableTabs from "@/registry/open-source/expanding-tabs";
 
 export default function Usage() {
 	return (

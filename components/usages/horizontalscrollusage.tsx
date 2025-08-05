@@ -1,4 +1,4 @@
-import { HorizontalScrollCarousel } from "@/registry/open-source/HorizontalScrollGallery";
+import { HorizontalScrollCarousel } from "@/registry/open-source/horizontal-scroll-gallery";
 
 const HorizontalScrollDemo = () => {
 	return (

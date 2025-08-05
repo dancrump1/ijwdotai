@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { SlidingNumber } from "@/registry/open-source/SlidingNumbers";
+import { SlidingNumber } from "@/registry/open-source/sliding-numbers";
 
 function Clock() {
 	const [hours, setHours] = useState(new Date().getHours());

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ShapeBlur from "@/registry/open-source/ShapeBlur";
+import ShapeBlur from "@/registry/open-source/shape-blur";
 
 export default function Usage() {
 	return (

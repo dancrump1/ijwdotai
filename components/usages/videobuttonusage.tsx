@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import VideoButton from "@/registry/open-source/VideoButton";
+import VideoButton from "@/registry/open-source/video-button";
 
 export default function VideoButtonUsage() {
 	return (

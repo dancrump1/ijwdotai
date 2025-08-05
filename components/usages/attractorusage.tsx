@@ -1,4 +1,4 @@
-import Attractor, { MatterBody } from "@/registry/open-source/Attractor";
+import Attractor, { MatterBody } from "@/registry/open-source/attractor";
 import { useWindowSize } from "@/registry/utils/useWindowSize";
 
 export default function AttractorPreview() {

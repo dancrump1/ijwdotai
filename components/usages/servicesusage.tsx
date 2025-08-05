@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FeaturesSectionDemo } from "@/registry/open-source/Services";
+import { FeaturesSectionDemo } from "@/registry/open-source/services";
 
 export default function Usage() {
 	return (

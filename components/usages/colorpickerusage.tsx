@@ -2,8 +2,8 @@
 
 import React, { useCallback, useState } from "react";
 
-import { CardContent } from "@/registry/open-source/Cards";
-import ColorPicker from "@/registry/open-source/ColorPicker";
+import { CardContent } from "@/registry/open-source/cards";
+import ColorPicker from "@/registry/open-source/color-picker";
 import { motion } from "motion/react";
 import { Poline, positionFunctions } from "poline";
 

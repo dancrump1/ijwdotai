@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FooterThird from "@/registry/open-source/SimpleFooter";
+import FooterThird from "@/registry/open-source/simple-footer";
 
 export default function Usage() {
 	return (

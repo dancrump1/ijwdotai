@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { AnimatedTextUnderline } from "@/registry/open-source/TextUnderline";
+import { AnimatedTextUnderline } from "@/registry/open-source/text-underline";
 
 export default function Usage() {
 	return (

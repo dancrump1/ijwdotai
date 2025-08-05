@@ -4,7 +4,7 @@ import React from "react";
 
 import StripeAccordion, {
 	UnsplashGrid,
-} from "@/registry/open-source/StripeAccordion";
+} from "@/registry/open-source/stripe-accordion";
 
 export default function Usage() {
 	return (

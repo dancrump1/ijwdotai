@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import GridContent from "@/registry/open-source/GridContent";
+import GridContent from "@/registry/open-source/grid-content";
 
 export default function Usage() {
 	return (

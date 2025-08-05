@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { PinContainer } from "@/registry/open-source/Pin";
+import { PinContainer } from "@/registry/open-source/pin";
 
 export default function Usage() {
 	return (

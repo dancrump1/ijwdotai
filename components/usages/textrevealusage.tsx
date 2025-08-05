@@ -6,7 +6,7 @@ import {
 	TextRevealCard,
 	TextRevealCardDescription,
 	TextRevealCardTitle,
-} from "@/registry/open-source/TextReveal";
+} from "@/registry/open-source/text-reveal";
 
 export function TextRevealCardPreview() {
 	return (

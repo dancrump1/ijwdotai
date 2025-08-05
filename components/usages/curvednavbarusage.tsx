@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import CurvedNavbar from "@/registry/open-source/CurvedNavbar";
+import CurvedNavbar from "@/registry/open-source/curved-navbar";
 import { AnimatePresence } from "motion/react";
 
 export default function Usage() {

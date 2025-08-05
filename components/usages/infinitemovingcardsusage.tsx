@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { InfiniteMovingCards } from "@/registry/open-source/InfiniteMovingCards";
+import { InfiniteMovingCards } from "@/registry/open-source/infinite-moving-cards";
 
 export default function InfiniteMovingCardsDemo() {
 	return (

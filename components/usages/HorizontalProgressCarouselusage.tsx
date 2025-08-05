@@ -8,7 +8,7 @@ import {
 	SliderBtnGroup,
 	SliderContent,
 	SliderWrapper,
-} from "@/registry/open-source/ProgressCarousel";
+} from "@/registry/open-source/progress-carousel";
 
 export default function HorizontalProgressCarousel() {
 	const items = [

@@ -1,4 +1,4 @@
-import TextType from "@/registry/open-source/TextType";
+import TextType from "@/registry/open-source/text-type";
 
 const Usage = () => {
 	return (

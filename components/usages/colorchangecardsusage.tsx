@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ColorChangeCards from "@/registry/open-source/ColorChangeCards";
+import ColorChangeCards from "@/registry/open-source/color-change-cards";
 
 export default function Usage() {
 	return (

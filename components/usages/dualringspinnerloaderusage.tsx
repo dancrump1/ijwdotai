@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import DualRingSpinnerLoader from "@/registry/open-source/DualRingLoader";
+import DualRingSpinnerLoader from "@/registry/open-source/dual-ring-loader";
 
 export default function Usage() {
 	return (

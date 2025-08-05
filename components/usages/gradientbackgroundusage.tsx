@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BackgroundGradientAnimation } from "@/registry/open-source/GradientBackground";
+import { BackgroundGradientAnimation } from "@/registry/open-source/gradient-background";
 
 export default function BackgroundGradientAnimationDemo() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { AuroraBackground } from "@/registry/open-source/AuroraBackground";
+import { AuroraBackground } from "@/registry/open-source/aurora-background";
 import { motion } from "motion/react";
 
 export default function Usage() {

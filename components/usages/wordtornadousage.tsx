@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import WordTornadoDemo from "@/registry/open-source/WordTornado";
+import WordTornadoDemo from "@/registry/open-source/word-tornado";
 
 export default function WordTornadoUsage() {
 	return (

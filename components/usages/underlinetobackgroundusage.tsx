@@ -1,6 +1,6 @@
 "use client";
 
-import UnderlineToBackground from "@/registry/open-source/UnderlineToBackground";
+import UnderlineToBackground from "@/registry/open-source/underline-to-background";
 import { motion } from "motion/react";
 
 export default function UnderlineToBackgroundDemo() {

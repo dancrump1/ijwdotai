@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { TextAnimationFlippingWords } from "@/registry/open-source/FlippingText";
+import { TextAnimationFlippingWords } from "@/registry/open-source/flipping-text";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Ballpit from "@/registry/open-source/Ballpit";
+import Ballpit from "@/registry/open-source/ballpit";
 
 export default function Usage() {
 	return (

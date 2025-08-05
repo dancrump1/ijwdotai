@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import PeelableSticker from "@/registry/open-source/StickerPeel";
+import PeelableSticker from "@/registry/open-source/sticker-peel";
 
 export default function Usage() {
 	return (

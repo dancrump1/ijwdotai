@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FlippedMenu from "@/registry/open-source/FlippedMenu";
+import FlippedMenu from "@/registry/open-source/flipped-menu";
 
 export default function Usage() {
 	return (

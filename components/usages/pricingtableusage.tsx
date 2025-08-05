@@ -10,7 +10,7 @@ import {
 	SliderBtnGroup,
 	SliderContent,
 	SliderWrapper,
-} from "@/registry/open-source/ProgressCarousel";
+} from "@/registry/open-source/progress-carousel";
 import { Home } from "lucide-react";
 import { useMediaQuery } from "usehooks-ts";
 

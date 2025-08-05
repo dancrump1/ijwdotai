@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { BackgroundGradient } from "@/registry/open-source/BackgroundGradient";
+import { BackgroundGradient } from "@/registry/open-source/background-gradient";
 
 export default function Usage() {
 	return (

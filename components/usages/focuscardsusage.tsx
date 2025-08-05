@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FocusCards } from "@/registry/open-source/FocusCards";
+import { FocusCards } from "@/registry/open-source/focus-cards";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AnimatedCard from "@/registry/open-source/AnimatedHoverCard";
+import AnimatedCard from "@/registry/open-source/animated-hover-card";
 
 export default function Usage() {
 	return (

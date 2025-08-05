@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FAQSpring } from "@/registry/open-source/SpringFAQ";
+import { FAQSpring } from "@/registry/open-source/spring-faq";
 
 export default function Usage() {
 	return (

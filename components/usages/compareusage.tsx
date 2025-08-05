@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Compare } from "@/registry/open-source/Compare";
+import { Compare } from "@/registry/open-source/compare";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import SlideButton from "@/registry/open-source/SlideButton";
+import SlideButton from "@/registry/open-source/slide-button";
 
 export default function Usage() {
 	return (

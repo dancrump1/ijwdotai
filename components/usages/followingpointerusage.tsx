@@ -1,4 +1,4 @@
-import { FollowerPointerCard } from "@/registry/open-source/FollowingPointer";
+import { FollowerPointerCard } from "@/registry/open-source/following-pointer";
 
 export default function Usage() {
 	return (

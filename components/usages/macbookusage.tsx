@@ -1,6 +1,6 @@
 import React from "react";
 
-import MacbookScroll from "@/registry/open-source/Macbook";
+import MacbookScroll from "@/registry/open-source/macbook";
 
 export default function MacbookScrollDemo() {
 	return (

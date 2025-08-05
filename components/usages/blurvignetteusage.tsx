@@ -7,7 +7,7 @@ import Image from "next/image";
 import {
 	BlurVignette,
 	BlurVignetteArticle,
-} from "@/registry/open-source/BlurVignette";
+} from "@/registry/open-source/blur-vignette";
 
 export default function Usage() {
 	return (

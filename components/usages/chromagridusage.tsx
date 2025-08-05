@@ -1,4 +1,4 @@
-import ChromaGrid from "@/registry/open-source/ChromaGrid";
+import ChromaGrid from "@/registry/open-source/chroma-grid";
 
 const items = [
 	{

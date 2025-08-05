@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ClipPathLinks } from "@/registry/open-source/HoverSquares";
+import { ClipPathLinks } from "@/registry/open-source/hover-squares";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import DynamicIsland from "@/registry/open-source/DynamicIsland";
+import DynamicIsland from "@/registry/open-source/dynamic-island";
 
 export default function Usage() {
 	return (

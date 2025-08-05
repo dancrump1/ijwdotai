@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { StackCard } from "@/registry/open-source/CarouselStack";
+import { StackCard } from "@/registry/open-source/carousel-stack";
 
 export default function Usage() {
 	return (

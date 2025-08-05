@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Btn08 } from "@/registry/open-source/Btn08";
+import { Btn08 } from "@/registry/open-source/btn08";
 
 export default function Usage() {
 	return (

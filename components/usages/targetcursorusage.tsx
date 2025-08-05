@@ -1,4 +1,4 @@
-import TargetCursor from "@/registry/open-source/TargetCursor";
+import TargetCursor from "@/registry/open-source/target-cursor";
 
 export default function App() {
 	return (

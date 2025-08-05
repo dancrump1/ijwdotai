@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Letter3DSwap from "@/registry/open-source/Letter3dSwap";
+import Letter3DSwap from "@/registry/open-source/letter3d-swap";
 
 export default function Usage() {
 	return (

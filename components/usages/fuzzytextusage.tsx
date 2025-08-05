@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FuzzyText from "@/registry/open-source/FuzzyText";
+import FuzzyText from "@/registry/open-source/fuzzy-text";
 
 export default function Usage() {
 	return (

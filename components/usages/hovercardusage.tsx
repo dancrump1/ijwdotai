@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EvervaultCard, Icon } from "@/registry/open-source/HoverCard";
+import { EvervaultCard, Icon } from "@/registry/open-source/hover-card";
 
 export default function EvervaultCardDemo() {
 	return (

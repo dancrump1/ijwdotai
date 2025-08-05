@@ -1,4 +1,4 @@
-import TableOfContent from "@/registry/open-source/FollowingHeaders";
+import TableOfContent from "@/registry/open-source/following-headers";
 
 export default function Usage() {
 	return (

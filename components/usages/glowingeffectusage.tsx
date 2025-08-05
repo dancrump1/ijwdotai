@@ -1,6 +1,6 @@
 "use client";
 
-import { GlowingEffect } from "@/registry/open-source/GlowingEffect";
+import { GlowingEffect } from "@/registry/open-source/glowing-effect";
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 
 export default function GlowingEffectDemo() {

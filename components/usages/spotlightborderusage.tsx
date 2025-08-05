@@ -1,4 +1,4 @@
-import { Spotlight } from "@/registry/open-source/Spotlight";
+import { Spotlight } from "@/registry/open-source/spotlight";
 
 export default function SpotlightBorder() {
 	return (

@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-import AnimatedPathText from "@/registry/open-source/TextAlongPath";
+import AnimatedPathText from "@/registry/open-source/text-along-path";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Button } from "../ui/button";

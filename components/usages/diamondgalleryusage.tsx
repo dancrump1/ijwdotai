@@ -1,4 +1,4 @@
-import DiamondGallery from "@/registry/open-source/DiamondGallery";
+import DiamondGallery from "@/registry/open-source/diamond-gallery";
 
 export default function Usage() {
 	return (

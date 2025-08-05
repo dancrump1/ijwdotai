@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { AnimatedTooltip } from "@/registry/open-source/ToolTip";
+import { AnimatedTooltip } from "@/registry/open-source/tool-tip";
 
 export const people = [
 	{

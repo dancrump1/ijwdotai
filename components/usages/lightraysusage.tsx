@@ -1,4 +1,4 @@
-import LightRays from "@/registry/open-source/LightRays";
+import LightRays from "@/registry/open-source/light-rays";
 
 const Usage = () => {
 	return (

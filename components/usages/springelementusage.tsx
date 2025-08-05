@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { SpringElement } from "@/registry/open-source/SpringElement";
+import { SpringElement } from "@/registry/open-source/spring-element";
 
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 

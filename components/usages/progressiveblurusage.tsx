@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import { ProgressiveBlur } from "@/registry/open-source/ProgressiveBlur";
+import { ProgressiveBlur } from "@/registry/open-source/progressive-blur";
 import { motion } from "motion/react";
 
 export default function ProgressiveBlurUsage() {

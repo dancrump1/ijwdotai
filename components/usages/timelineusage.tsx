@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Timeline } from "@/registry/open-source/Timeline";
+import { Timeline } from "@/registry/open-source/timeline";
 
 export default function TimelineUsage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ShareButton from "@/registry/open-source/ShareButton";
+import ShareButton from "@/registry/open-source/share-button";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Usage() {

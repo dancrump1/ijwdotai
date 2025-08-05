@@ -9,7 +9,7 @@ import {
 	InfoCardFooter,
 	InfoCardMedia,
 	InfoCardTitle,
-} from "@/registry/open-source/InfoCard";
+} from "@/registry/open-source/info-card";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 export interface Step {

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import BubbleText from "@/registry/open-source/BubbleText";
+import BubbleText from "@/registry/open-source/bubble-text";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import MediaBetweenText, {
 	MediaBetweenTextRef,
-} from "@/registry/open-source/MediaBetweenText";
+} from "@/registry/open-source/media-between-text";
 import { useWindowSize } from "@/registry/utils/useWindowSize";
 
 import { Button } from "../ui/button";

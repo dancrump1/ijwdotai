@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import GhostLabel from "@/registry/open-source/GhostLabel";
+import GhostLabel from "@/registry/open-source/ghost-label";
 
 export default function Usage() {
 	return (

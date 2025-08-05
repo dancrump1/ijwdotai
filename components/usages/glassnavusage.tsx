@@ -1,4 +1,4 @@
-import GlassNavigation from "@/registry/open-source/GlassNav";
+import GlassNavigation from "@/registry/open-source/glass-nav";
 
 export default function Usage() {
 	return (

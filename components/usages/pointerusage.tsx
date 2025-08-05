@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Pointer } from "@/registry/open-source/Pointer";
+import { Pointer } from "@/registry/open-source/pointer";
 import { motion } from "motion/react";
 
 import {

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ScalingButton } from "@/registry/open-source/ScalingButton";
+import { ScalingButton } from "@/registry/open-source/scaling-button";
 
 export default function Usage() {
 	return (

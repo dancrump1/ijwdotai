@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ColourfulText } from "@/registry/open-source/ColorfulText";
+import { ColourfulText } from "@/registry/open-source/colorful-text";
 import { motion } from "motion/react";
 
 export default function ColourfulTextDemo() {

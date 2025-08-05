@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import GradientCheckbox from "@/registry/open-source/GradientCheckbox";
+import GradientCheckbox from "@/registry/open-source/gradient-checkbox";
 
 export default function Usage() {
 	return (

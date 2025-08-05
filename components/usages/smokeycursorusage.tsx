@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import SmokeyCursor from "@/registry/open-source/SmokeyCursor";
+import SmokeyCursor from "@/registry/open-source/smokey-cursor";
 
 import { Button } from "../ui/button";
 import {

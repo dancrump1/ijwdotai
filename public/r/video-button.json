@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "video-button",
+  "type": "registry:block",
+  "title": "Video button",
+  "description": "Video button",
+  "files": [
+    {
+      "path": "components/usages/videobuttonusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport VideoButton from \"@/registry/open-source/video-button\";\n\nexport default function VideoButtonUsage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<VideoButton videoSrc=\"/placeholder.mp4\">\n\t\t\t\t<span className=\"text-xl font-semibold\">Join the club!</span>\n\t\t\t</VideoButton>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/video-button.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\n\n// Credit\n// https://eclairui.gopx.dev/components/buttons/video-button\n\ninterface VideoButtonProps {\n\tchildren: React.ReactNode;\n\tvideoSrc: string;\n\tclassName?: string;\n}\n\nconst VideoButton = ({ children, videoSrc, className }: VideoButtonProps) => {\n\tconst [isHovered, setIsHovered] = useState(false);\n\tconst [isPressed, setIsPressed] = useState(false);\n\n\treturn (\n\t\t<button\n\t\t\tclassName={cn(\n\t\t\t\t\"relative inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 h-10 px-8 py-8 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-white/20 dark:hover:shadow-white/30\",\n\t\t\t\tisPressed && \"scale-95\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\tonMouseEnter={() => {\n\t\t\t\tsetIsHovered(true);\n\t\t\t}}\n\t\t\tonMouseLeave={() => setIsHovered(false)}\n\t\t\tonMouseDown={() => setIsPressed(true)}\n\t\t\tonMouseUp={() => setIsPressed(false)}\n\t\t\tonTouchStart={() => setIsPressed(true)}\n\t\t\tonTouchEnd={() => setIsPressed(false)}\n\t\t>\n\t\t\t<span className=\"relative z-10\">{children}</span>\n\t\t\t<div\n\t\t\t\tclassName={`absolute inset-0 transition-opacity duration-300 ${\n\t\t\t\t\tisHovered ? \"opacity-50\" : \"opacity-0\"\n\t\t\t\t}`}\n\t\t\t>\n\t\t\t\t<video\n\t\t\t\t\tclassName=\"object-cover w-full h-full\"\n\t\t\t\t\tsrc={videoSrc}\n\t\t\t\t\tloop\n\t\t\t\t\tmuted\n\t\t\t\t\t// playsInline\n\t\t\t\t\t// autoPlay\n\t\t\t\t\tonMouseEnter={(e) => e.target.play()}\n\t\t\t\t\tonMouseLeave={(e) => e.target.pause()}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t</button>\n\t);\n};\n\nexport default VideoButton;\n",
+      "type": "registry:ui",
+      "target": "open-source/video-button.tsx"
+    },
+    {
+      "path": "./lib/utils.ts",
+      "content": "import registry from \"@/registry.json\";\nimport { clsx, type ClassValue } from \"clsx\";\nimport type { RegistryItem } from \"shadcn/registry\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n\nconst components = registry.items as unknown as RegistryItem[];\n\nexport const getComponents = (selectedTags: any[] = []): RegistryItem[] => {\n\treturn selectedTags.length\n\t\t? components.filter((component) =>\n\t\t\t\tselectedTags.every(\n\t\t\t\t\t(tag) => component.meta?.tags?.includes(tag) ?? false\n\t\t\t\t)\n\t\t\t)\n\t\t: components;\n};\n\nexport const getComponentsByNames = (names: string[]): RegistryItem[] => {\n\tconst componentsMap = new Map(components.map((comp) => [comp.name, comp]));\n\n\treturn names\n\t\t.map((name) => componentsMap.get(name))\n\t\t.filter((comp): comp is RegistryItem => comp !== undefined);\n};\n\nexport const getAvailableTags = (selectedTags: any[]): any[] => {\n\tif (!selectedTags.length) return [];\n\n\t// Get all components that have all the selected tags\n\tconst matchingComponents = components.filter((component) =>\n\t\tselectedTags.every((tag) => component.meta?.tags?.includes(tag) ?? false)\n\t);\n\n\t// Get all unique tags from the matching components\n\tconst availableTags = new Set<any>();\n\tmatchingComponents.forEach((component) => {\n\t\tcomponent.meta?.tags?.forEach((tag: any) => {\n\t\t\tif (!selectedTags.includes(tag)) {\n\t\t\t\tavailableTags.add(tag);\n\t\t\t}\n\t\t});\n\t});\n\n\treturn Array.from(availableTags);\n};\n\nexport const convertRegistryPaths = (content: string): string => {\n\treturn content\n\t\t.replace(/@\\/registry\\/default\\/ui/g, \"@/components/ui\")\n\t\t.replace(/@\\/registry\\/default\\/compositions/g, \"@/components\")\n\t\t.replace(/@\\/registry\\/default\\/hooks/g, \"@/hooks\")\n\t\t.replace(/@\\/registry\\/default\\/lib/g, \"@/lib\");\n};\n",
+      "type": "registry:ui",
+      "target": "lib/utils.ts"
+    }
+  ]
+}

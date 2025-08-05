@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Folder from "@/registry/open-source/Folder";
+import Folder from "@/registry/open-source/folder";
 
 export default function Usage() {
 	return (

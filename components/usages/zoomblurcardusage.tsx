@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ZoomBlurCard from "@/registry/open-source/ZoomBlurCard";
+import ZoomBlurCard from "@/registry/open-source/zoom-blur-card";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { FullscreenImage } from "@/registry/open-source/FullscreenImage";
+import { FullscreenImage } from "@/registry/open-source/fullscreen-image";
 
 export default function Usage() {
 	return (

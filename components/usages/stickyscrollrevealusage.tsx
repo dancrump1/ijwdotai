@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { StickyScroll } from "@/registry/open-source/StickyScrollReveal";
+import { StickyScroll } from "@/registry/open-source/sticky-scroll-reveal";
 
 export const content = [
 	{

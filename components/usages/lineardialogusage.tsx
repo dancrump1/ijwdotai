@@ -11,7 +11,7 @@ import {
 	DialogImage,
 	DialogTitle,
 	DialogTrigger,
-} from "@/registry/open-source/LinearDialog";
+} from "@/registry/open-source/linear-dialog";
 import { Plus } from "lucide-react";
 
 export default function Usage() {

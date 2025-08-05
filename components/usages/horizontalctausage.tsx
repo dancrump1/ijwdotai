@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import CardCTA from "@/registry/open-source/HorizontalCta";
+import CardCTA from "@/registry/open-source/horizontal-cta";
 
 export default function Usage() {
 	return (

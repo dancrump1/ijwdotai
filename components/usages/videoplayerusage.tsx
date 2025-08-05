@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import VideoPlayer from "@/registry/open-source/VideoPlayer";
+import VideoPlayer from "@/registry/open-source/video-player";
 
 export default function Usage() {
 	return (

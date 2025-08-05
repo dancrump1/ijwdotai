@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { LampContainer } from "@/registry/open-source/Lamp";
+import { LampContainer } from "@/registry/open-source/lamp";
 import { motion } from "motion/react";
 
 export default function LampDemo() {

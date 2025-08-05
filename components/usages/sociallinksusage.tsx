@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { SocialLinks } from "@/registry/open-source/SocialLinks";
+import { SocialLinks } from "@/registry/open-source/social-links";
 
 export default function Usage() {
 	return (

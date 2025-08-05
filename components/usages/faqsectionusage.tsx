@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import FAQPage from "@/registry/open-source/FaqSection";
+import FAQPage from "@/registry/open-source/faq-section";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { CheckBoxAnimated } from "@/registry/open-source/CheckboxAnimated";
+import { CheckBoxAnimated } from "@/registry/open-source/checkbox-animated";
 
 export default function CheckBoxPreview() {
 	const [states, setStates] = useState(Array(4).fill(false));

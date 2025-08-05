@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { TextMorph } from "@/registry/open-source/TextMorph";
+import { TextMorph } from "@/registry/open-source/text-morph";
 
 export default function TextMorphButton() {
 	const [text, setText] = useState("Continue");

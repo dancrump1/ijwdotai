@@ -6,7 +6,7 @@ import {
 	CardBody,
 	CardContainer,
 	CardItem,
-} from "@/registry/open-source/3dCard";
+} from "@/registry/open-source/3d-card";
 
 export default function Usage() {
 	return (

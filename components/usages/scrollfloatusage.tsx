@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ScrollFloat from "@/registry/open-source/ScrollFloat";
+import ScrollFloat from "@/registry/open-source/scroll-float";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import VerticalTiles from "@/registry/open-source/StripesPreloader";
+import VerticalTiles from "@/registry/open-source/stripes-preloader";
 
 export default function Usage() {
 	return (

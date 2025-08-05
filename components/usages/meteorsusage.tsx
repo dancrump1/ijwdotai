@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Meteors } from "@/registry/open-source/Meteors";
+import { Meteors } from "@/registry/open-source/meteors";
 
 export default function MeteorsDemo() {
 	return (

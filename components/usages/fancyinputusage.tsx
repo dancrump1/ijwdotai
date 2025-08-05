@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Subscribe } from "@/registry/open-source/FancyInput";
+import { Subscribe } from "@/registry/open-source/fancy-input";
 
 export default function Usage() {
 	return (

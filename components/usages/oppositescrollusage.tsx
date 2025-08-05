@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import OppositeScroll from "@/registry/open-source/OppositeScrollLinks";
+import OppositeScroll from "@/registry/open-source/opposite-scroll-links";
 
 export default function Usage() {
 	return (

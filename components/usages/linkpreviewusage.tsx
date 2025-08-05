@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { LinkPreview } from "@/registry/open-source/LinkPreview";
+import { LinkPreview } from "@/registry/open-source/link-preview";
 
 export default function LinkPreviewDemo() {
 	return (

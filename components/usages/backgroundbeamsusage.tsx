@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { BackgroundBeams } from "@/registry/open-source/BackgroundBeams";
+import { BackgroundBeams } from "@/registry/open-source/background-beams";
 
 export default function Usage() {
 	return (

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "code-block",
+  "type": "registry:block",
+  "title": "Code block",
+  "description": "Code block",
+  "files": [
+    {
+      "path": "components/usages/codeblockusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\"></div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/code-block.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { IconCheck, IconCopy } from \"@tabler/icons-react\";\nimport { Prism as SyntaxHighlighter } from \"react-syntax-highlighter\";\nimport { atomDark } from \"react-syntax-highlighter/dist/cjs/styles/prism\";\n\ntype CodeBlockProps = {\n\tlanguage: string;\n\tfilename: string;\n\thighlightLines?: number[];\n} & (\n\t| {\n\t\t\tcode: string;\n\t\t\ttabs?: never;\n\t  }\n\t| {\n\t\t\tcode?: never;\n\t\t\ttabs: Array<{\n\t\t\t\tname: string;\n\t\t\t\tcode: string;\n\t\t\t\tlanguage?: string;\n\t\t\t\thighlightLines?: number[];\n\t\t\t}>;\n\t  }\n);\n\nconst CodeBlock = ({\n\tlanguage = \"typescript\",\n\tfilename,\n\tcode,\n\thighlightLines = [],\n\ttabs = [],\n}: CodeBlockProps) => {\n\tconst [copied, setCopied] = React.useState(false);\n\tconst [activeTab, setActiveTab] = React.useState(0);\n\n\tconst tabsExist = tabs.length > 0;\n\n\tconst copyToClipboard = async () => {\n\t\tconst textToCopy = tabsExist ? tabs[activeTab].code : code;\n\t\tif (textToCopy) {\n\t\t\tawait navigator.clipboard.writeText(textToCopy);\n\t\t\tsetCopied(true);\n\t\t\tsetTimeout(() => setCopied(false), 2000);\n\t\t}\n\t};\n\n\tconst activeCode = tabsExist ? tabs[activeTab].code : code;\n\tconst activeLanguage = tabsExist\n\t\t? tabs[activeTab].language || language\n\t\t: language;\n\tconst activeHighlightLines = tabsExist\n\t\t? tabs[activeTab].highlightLines || []\n\t\t: highlightLines;\n\n\treturn (\n\t\t<div className=\"relative w-full rounded-lg bg-slate-900 p-4 font-mono text-sm\">\n\t\t\t<div className=\"flex flex-col gap-2\">\n\t\t\t\t{tabsExist && (\n\t\t\t\t\t<div className=\"flex  overflow-x-auto\">\n\t\t\t\t\t\t{tabs.map((tab, index) => (\n\t\t\t\t\t\t\t<button\n\t\t\t\t\t\t\t\tkey={index + \"code-block\"}\n\t\t\t\t\t\t\t\tonClick={() => setActiveTab(index)}\n\t\t\t\t\t\t\t\tclassName={`px-3 !py-2 text-xs transition-colors font-sans ${\n\t\t\t\t\t\t\t\t\tactiveTab === index\n\t\t\t\t\t\t\t\t\t\t? \"text-white\"\n\t\t\t\t\t\t\t\t\t\t: \"text-zinc-400 hover:text-zinc-200\"\n\t\t\t\t\t\t\t\t}`}\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{tab.name}\n\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t))}\n\t\t\t\t\t</div>\n\t\t\t\t)}\n\t\t\t\t{!tabsExist && filename && (\n\t\t\t\t\t<div className=\"flex justify-between items-center py-2\">\n\t\t\t\t\t\t<div className=\"text-xs text-zinc-400\">{filename}</div>\n\t\t\t\t\t\t<button\n\t\t\t\t\t\t\tonClick={copyToClipboard}\n\t\t\t\t\t\t\tclassName=\"flex items-center gap-1 text-xs text-zinc-400 hover:text-zinc-200 transition-colors font-sans\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t{copied ? <IconCheck size={14} /> : <IconCopy size={14} />}\n\t\t\t\t\t\t</button>\n\t\t\t\t\t</div>\n\t\t\t\t)}\n\t\t\t</div>\n\t\t\t<SyntaxHighlighter\n\t\t\t\tlanguage={activeLanguage}\n\t\t\t\tstyle={atomDark}\n\t\t\t\tcustomStyle={{\n\t\t\t\t\tmargin: 0,\n\t\t\t\t\tpadding: 0,\n\t\t\t\t\tbackground: \"transparent\",\n\t\t\t\t\tfontSize: \"0.875rem\", // text-sm equivalent\n\t\t\t\t}}\n\t\t\t\twrapLines={true}\n\t\t\t\tshowLineNumbers={true}\n\t\t\t\tlineProps={(lineNumber) => ({\n\t\t\t\t\tstyle: {\n\t\t\t\t\t\tbackgroundColor: activeHighlightLines.includes(lineNumber)\n\t\t\t\t\t\t\t? \"rgba(255,255,255,0.1)\"\n\t\t\t\t\t\t\t: \"transparent\",\n\t\t\t\t\t\tdisplay: \"block\",\n\t\t\t\t\t\twidth: \"100%\",\n\t\t\t\t\t},\n\t\t\t\t})}\n\t\t\t\tPreTag=\"div\"\n\t\t\t>\n\t\t\t\t{String(activeCode)}\n\t\t\t</SyntaxHighlighter>\n\t\t</div>\n\t);\n};\n\nexport default CodeBlock;\n",
+      "type": "registry:ui",
+      "target": "open-source/code-block.tsx"
+    }
+  ]
+}

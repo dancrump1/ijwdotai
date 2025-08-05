@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { LayoutGrid } from "@/registry/open-source/LayoutGrid";
+import { LayoutGrid } from "@/registry/open-source/layout-grid";
 
 function LayoutGridDemo() {
 	return (

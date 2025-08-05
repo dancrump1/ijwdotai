@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import TilesBackground from "@/registry/open-source/TilesBackground";
+import TilesBackground from "@/registry/open-source/tiles-background";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Tabs } from "@/registry/open-source/Tabs";
+import { Tabs } from "@/registry/open-source/tabs";
 
 const DummyContent = () => {
 	return (

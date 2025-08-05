@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Testimonials from "@/registry/open-source/GradientTestimonials";
+import Testimonials from "@/registry/open-source/gradient-testimonials";
 
 export default function Usage() {
 	return (
@@ -14,11 +14,11 @@ export default function Usage() {
 						comment: "etst",
 					},
 					{
-						title: "testimonial 1",
+						title: "testimonial 2",
 						comment: "etst",
 					},
 					{
-						title: "testimonial 1",
+						title: "testimonial 3",
 						comment: "etst",
 					},
 				]}

@@ -6,7 +6,7 @@ import {
 	GlowingStarsBackgroundCard,
 	GlowingStarsDescription,
 	GlowingStarsTitle,
-} from "@/registry/open-source/GlowingBackground";
+} from "@/registry/open-source/glowing-background";
 
 export default function GlowingStarsBackgroundCardPreview() {
 	return (

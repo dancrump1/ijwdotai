@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 import Image from "next/image";
 
-import CSSBox, { CSSBoxRef } from "@/registry/open-source/CSSBox";
+import CSSBox, { CSSBoxRef } from "@/registry/open-source/css-box";
 
 import { Button } from "../ui/button";
 

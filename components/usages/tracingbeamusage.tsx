@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { TracingBeam } from "@/registry/open-source/TracingBeam";
+import { TracingBeam } from "@/registry/open-source/tracing-beam";
 
 export default function TracingBeamDemo() {
 	return (

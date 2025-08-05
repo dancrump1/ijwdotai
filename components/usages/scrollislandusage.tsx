@@ -2,7 +2,7 @@
 
 import React, { useCallback, useState } from "react";
 
-import { ScrollIsland } from "@/registry/open-source/ScrollIsland";
+import { ScrollIsland } from "@/registry/open-source/scroll-island";
 
 export default function Usage() {
 	const [titleEls, setTitleEls] = useState<HTMLElement[]>([]);

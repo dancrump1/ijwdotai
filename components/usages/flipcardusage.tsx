@@ -1,4 +1,4 @@
-import { FlipCard } from "@/registry/open-source/FlipCard";
+import { FlipCard } from "@/registry/open-source/flip-card";
 
 export default function FlipCardBasic() {
 	return (

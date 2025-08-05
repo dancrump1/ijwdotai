@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import PricingCard from "@/registry/open-source/PriceCard";
+import PricingCard from "@/registry/open-source/price-card";
 
 export default function Usage() {
 	return (

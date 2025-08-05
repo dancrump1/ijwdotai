@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { CanvasRevealEffect } from "@/registry/open-source/CanvasReveal";
+import { CanvasRevealEffect } from "@/registry/open-source/canvas-reveal";
 import { AnimatePresence, motion } from "motion/react";
 
 export default function CanvasRevealEffectDemo() {

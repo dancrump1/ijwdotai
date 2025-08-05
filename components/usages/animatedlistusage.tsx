@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AnimatedList from "@/registry/open-source/AnimatedList";
+import AnimatedList from "@/registry/open-source/animated-list";
 
 export default function Usage() {
 	return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ImageWheel from "@/registry/open-source/ImageWheel";
+import ImageWheel from "@/registry/open-source/image-wheel";
 
 export default function Usage() {
 	return (

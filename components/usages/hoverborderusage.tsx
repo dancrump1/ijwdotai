@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { HoverBorderGradient } from "@/registry/open-source/HoverBorder";
+import { HoverBorderGradient } from "@/registry/open-source/hover-border";
 
 export default function HoverBorderGradientDemo() {
 	return (

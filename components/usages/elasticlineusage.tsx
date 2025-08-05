@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import ElasticLine from "@/registry/open-source/ElasticLine";
+import ElasticLine from "@/registry/open-source/elastic-line";
 
 export default function Usage() {
 	return (

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dual-ring-loader",
+  "type": "registry:block",
+  "title": "Dual ring loader",
+  "description": "Dual ring loader",
+  "files": [
+    {
+      "path": "components/usages/dualringloaderusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\"></div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/dual-ring-loader.tsx",
+      "content": "const DualRingSpinnerLoader = () => {\n\treturn (\n\t\t<>\n\t\t\t<style>\n\t\t\t\t{`\n          @keyframes spin {\n            0% {\n              rotate: 0deg;\n              scale: 1;\n            }\n            30% {\n              rotate: 20deg;\n              scale: 0.9;\n            }\n            100% {\n              rotate: -360deg;\n              scale: 1;\n            }\n          }\n        `}\n\t\t\t</style>\n\t\t\t<div className=\"relative flex items-center justify-center\">\n\t\t\t\t<div\n\t\t\t\t\tclassName=\"repeat-infinite size-12 rounded-full border-4 border-neutral-700 border-t-transparent ease-in-out dark:invert\"\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tanimationName: \"spin\",\n\t\t\t\t\t\tanimationDuration: \"1.5s\",\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t\t<div\n\t\t\t\t\tclassName=\"repeat-infinite direction-reverse absolute size-9 rounded-full border-4 border-neutral-700 border-b-transparent ease-in-out dark:invert\"\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tanimationName: \"spin\",\n\t\t\t\t\t\tanimationDuration: \"2s\",\n\t\t\t\t\t}}\n\t\t\t\t/>\n\t\t\t\t<span className=\"sr-only\">Loading...</span>\n\t\t\t</div>\n\t\t</>\n\t);\n};\n\nexport default DualRingSpinnerLoader;\n",
+      "type": "registry:ui",
+      "target": "open-source/dual-ring-loader.tsx"
+    }
+  ]
+}

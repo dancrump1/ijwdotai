@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { TextRoll } from "@/registry/open-source/TextRoll";
+import { TextRoll } from "@/registry/open-source/text-roll";
 
 export default function TextRollUsage() {
 	return (

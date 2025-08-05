@@ -5,8 +5,8 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import CircularBarsSpinnerLoader from "@/registry/open-source/CircularBarsLoader";
-import CodeBlock from "@/registry/open-source/CodeBlock";
+import CircularBarsSpinnerLoader from "@/registry/open-source/circular-bars-loader";
+import CodeBlock from "@/registry/open-source/code-block";
 import { ICON_LIST } from "@/registry/open-source/icons";
 import { filterOptions } from "@/registry/utils/example_data";
 

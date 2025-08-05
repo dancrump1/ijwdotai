@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import SimpleGrid from "@/registry/open-source/SimpleGrid";
+import SimpleGrid from "@/registry/open-source/simple-grid";
 
 export default function Usage() {
 	return (

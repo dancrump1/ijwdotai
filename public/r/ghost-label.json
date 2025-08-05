@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ghost-label",
+  "type": "registry:block",
+  "title": "Ghost label",
+  "description": "Ghost label",
+  "files": [
+    {
+      "path": "components/usages/ghostlabelusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport GhostLabel from \"@/registry/open-source/ghost-label\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"w-full max-w-2xl mx-auto py-12 px-4\">\n\t\t\t\t<div className=\"relative ml-[30px] mt-20\">\n\t\t\t\t\t<GhostLabel text=\"1920\" />\n\t\t\t\t\t<p className=\"w-full max-w-[600px] text-sm font-serif text-justify\">\n\t\t\t\t\t\tThe film 1920: Evil Returns follows poet Jaidev, who helps a\n\t\t\t\t\t\twoman with amnesia, only for her to become possessed by a\n\t\t\t\t\t\tmalevolent spirit. As he struggles to save her, dark secrets\n\t\t\t\t\t\tunfold, intertwining love and horror in a chilling narrative.\n\t\t\t\t\t\tThis supernatural horror film, released in 2012, is a\n\t\t\t\t\t\tquasi-sequel to 1920 and features themes of possession and\n\t\t\t\t\t\tredemption\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/ghost-label.tsx",
+      "content": "import React from \"react\";\n\ntype GhostLabelProps = {\n\ttext: string;\n};\n\nconst GhostLabel: React.FC<GhostLabelProps> = ({ text }: GhostLabelProps) => {\n\treturn (\n\t\t<p className=\"absolute -inset-y-[130px] -inset-x-[30px]  md:-inset-x-[50px] flex text-[150px] font-bold -z-0 opacity-10 font-anton\">\n\t\t\t{text}\n\t\t</p>\n\t);\n};\n\nexport default GhostLabel;\n",
+      "type": "registry:ui",
+      "target": "open-source/ghost-label.tsx"
+    }
+  ]
+}

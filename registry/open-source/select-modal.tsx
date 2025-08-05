@@ -39,22 +39,24 @@ function SelectModel() {
 		<Select defaultValue={exampleData[0]} alignItemToTrigger={false}>
 			<SelectTrigger className="relative flex h-10 items-center justify-between gap-3 text-sm rounded-md pr-3 pl-3.5 select-none hover:bg-neutral-100 focus-visible:outline-none focus-visible:-outline-offset-1 active:bg-neutral-100 data-[popup-open]:bg-neutral-100">
 				<SelectValue placeholder="Select Model">
-					{(value) => (
-						<>
-							<span className="sr-only">{value}</span>
-							{generateLetters(value).map(({ letter, key }) => (
-								<motion.span
-									aria-hidden
-									key={key}
-									layoutId={key}
-									className="inline-block"
-									transition={{ type: "spring", bounce: 0.35 }}
-								>
-									{letter.trim() || "\u00A0"}
-								</motion.span>
-							))}
-						</>
-					)}
+					{/* {(value) => {
+						return (
+							<>
+								<span className="sr-only">{value}</span>
+								{generateLetters(value).map(({ letter, key }) => (
+									<motion.span
+										aria-hidden
+										key={key}
+										layoutId={key}
+										className="inline-block"
+										transition={{ type: "spring", bounce: 0.35 }}
+									>
+										{letter.trim() || "\u00A0"}
+									</motion.span>
+								))}
+							</>
+						);
+					}} */}
 				</SelectValue>
 				=
 			</SelectTrigger>

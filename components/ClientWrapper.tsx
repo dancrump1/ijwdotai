@@ -93,7 +93,8 @@ export const ClientWrapper = ({
 				ssr:
 					name.toLowerCase().includes("select-modal") ||
 					name.toLowerCase().includes("dither") ||
-					name.toLowerCase().includes("text-rotate")
+					name.toLowerCase().includes("text-rotate") ||
+					name.toLowerCase().includes("flipped-menu")
 						? false
 						: true,
 			}

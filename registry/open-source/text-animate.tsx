@@ -65,7 +65,7 @@ interface TextAnimateProps extends MotionProps {
 	animation?: AnimationVariant;
 }
 
-export function TextAnimate({
+function TextAnimate({
 	children,
 	delay = 0,
 	duration = 0.6,
@@ -385,3 +385,5 @@ export function TextAnimate({
 		</AnimatePresence>
 	);
 }
+
+export default TextAnimate;

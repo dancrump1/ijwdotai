@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { TextAnimate } from "@/registry/open-source/text-animate";
+import TextAnimate from "@/registry/open-source/text-animate";
 
 export default function Usage() {
 	return (

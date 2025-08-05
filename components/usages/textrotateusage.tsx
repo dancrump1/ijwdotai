@@ -109,7 +109,7 @@ export default function TextRotateUsage() {
 					/>
 				</motion.div>
 			</LayoutGroup>
-			<div className="w-dvw h-dvh overflow-auto absolute snap-y snap-mandatory">
+			{/* <div className="w-dvw h-dvh overflow-auto absolute snap-y snap-mandatory">
 				<div className="sticky inset-0 h-full w-full flex items-center justify-end bg-white dark:text-muted text-foreground">
 					<div className="w-2/3">
 						<TextRotate
@@ -146,7 +146,7 @@ export default function TextRotateUsage() {
 							/>
 						))}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }

@@ -224,17 +224,17 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
 		const elements = useMemo(() => {
 			const currentText = texts[currentTextIndex];
 			if (splitBy === "characters") {
-				const text = currentText.split(" ");
+				const text = currentText?.split(" ");
 				return text.map((word, i) => ({
 					characters: splitIntoCharacters(word),
 					needsSpace: i !== text.length - 1,
 				}));
 			}
 			return splitBy === "words"
-				? currentText.split(" ")
+				? currentText?.split(" ")
 				: splitBy === "lines"
-					? currentText.split("\n")
-					: currentText.split(splitBy);
+					? currentText?.split("\n")
+					: currentText?.split(splitBy);
 		}, [texts, currentTextIndex, splitBy]);
 
 		// Helper function to calculate stagger delay for each text segment

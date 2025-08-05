@@ -7,7 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import CircularBarsSpinnerLoader from "@/registry/open-source/circular-bars-loader";
 import CodeBlock from "@/registry/open-source/code-block";
-import { ICON_LIST } from "@/registry/open-source/icons";
+import { ICON_LIST } from "@/registry/open-source/icons/index";
 import { filterOptions } from "@/registry/utils/example_data";
 
 import { OpenInV0Button } from "./open-in-v0-button";
@@ -114,11 +114,12 @@ function LazyComponentWrapper({
 const Component = ({
 	children,
 	title,
+	content,
 	code,
 	filename,
 	containerRef,
 	blockConfig = [],
-	tags,
+	tags = [],
 	selectedFilters = [],
 	setComponentCount,
 	gridView,
@@ -145,37 +146,6 @@ const Component = ({
 		.join(" ");
 
 	useEffect(() => {
-		// TODO: mungedTitle is no longer camel cased (coming from new usages folder)
-		// How to pull file when we do not have the capitalization needed?
-		const fetchData = async () => {
-			const response = await fetch(
-				`/api/registry/${subfolder ? `${subfolder}/` : ""}${mungedTitle.replaceAll(" ", "")}`
-			);
-			const fileText = await response.text();
-
-			setTextContent(fileText);
-			setTextFilename(await response.url.split("/").pop());
-		};
-
-		const fetchAllData = async () => {
-			Promise.all(
-				blockConfig?.tabs.map(async ({ name }) => {
-					const response = await fetch(`/${name}.txt`);
-					return await response.text();
-				})
-			).then((values) => setTextContent(values));
-			Promise.all(
-				blockConfig?.tabs.map(({ name }) => {
-					const response = fetch(`/${name}.txt`);
-					return response.then((response) =>
-						response.url?.split("/").pop()
-					);
-				})
-			).then((values) => setTextFilename(values));
-		};
-
-		blockConfig.tabs?.length ? fetchAllData() : fetchData();
-
 		setComponentCount((prev) =>
 			prev.includes(mungedTitle) ? prev : [...prev, mungedTitle]
 		);
@@ -276,13 +246,14 @@ const Component = ({
 			<hr className="w-full mb-3" />
 			{showCode ? (
 				<CodeBlock
-					code={!!blockConfig && textContent}
-					filename={!!blockConfig && textFilename}
-					tabs={blockConfig.tabs?.map((config, i) => ({
-						...config,
-						code: textContent[i],
-						name: textFilename[i],
-					}))}
+					code={content}
+					filename={textFilename}
+					// tabs={blockConfig.tabs?.map((config, i) => ({
+					// 	...config,
+					// 	code: textContent[i],
+					// 	name: textFilename[i],
+					// }))}
+					tabs={[]}
 				/>
 			) : (
 				<LazyComponentWrapper

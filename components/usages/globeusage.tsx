@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { motion } from "motion/react";
 
 const World = dynamic(
-	() => import("@/registry/open-source/Globe").then((m) => m.World),
+	() => import("@/registry/open-source/globe").then((m) => m.World),
 	{
 		ssr: false,
 	}

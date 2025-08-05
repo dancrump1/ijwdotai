@@ -4,7 +4,7 @@ import React from "react";
 
 import dynamic from "next/dynamic";
 
-const Scene = dynamic(() => import("@/registry/open-source/ImageRipple"), {
+const Scene = dynamic(() => import("@/registry/open-source/image-ripple"), {
 	loading: () => (
 		<div
 			role="status"

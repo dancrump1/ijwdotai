@@ -2,10 +2,10 @@
 
 import React from "react";
 
-import { cn } from "@/lib/utils.ts";
+import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
-import { SparklesCore } from "./Sparkles.tsx";
+import { SparklesCore } from "./sparkles";
 
 // https://ui.aceternity.com/components/lamp-effect
 

@@ -4,6 +4,7 @@ import React, {
 	Suspense,
 	useCallback,
 	useEffect,
+	useMemo,
 	useRef,
 	useState,
 } from "react";
@@ -58,32 +59,46 @@ export const ClientWrapper = ({
 	files,
 	params,
 }: {
-	files: { name: string; isNew: Date }[];
+	files: { name: string; content: string }[];
 	params?: any;
 }) => {
 	const searchParams = useSearchParams();
 
-	const searchFilters = searchParams.getAll("subcategory");
-	const matchingComponents = files.filter(({ name }) => {
-		return !!params?.slug
-			? name.includes(params.slug) ||
-					!!searchFilters
-						.map((filter) => name.includes(filter))
-						.filter((item) => !!item).length
-			: true;
-	});
-	const componentImports = matchingComponents.map(({ name }) => {
-		return dynamic(
+	const searchFilters = useMemo(
+		() => searchParams.getAll("subcategory"),
+		[searchParams]
+	);
+
+	const matchingComponents = useMemo(() => {
+		return files.filter(({ name }) => {
+			return !!params?.slug
+				? name.includes(params.slug) ||
+						!!searchFilters
+							.map((filter) => name.includes(filter))
+							.filter((item) => !!item).length
+				: true;
+		});
+	}, [files, params?.slug, searchFilters]);
+
+	const componentImports = matchingComponents.map(({ name }) =>
+		dynamic(
 			() =>
 				import(
-					"@/components/usages/" + name.replace(".json", "") + "usage.tsx"
+					"@/components/usages/" +
+						name.replace(".json", "").replaceAll("-", "") +
+						"usage.tsx"
 				),
 			{
 				loading: ComponentLoading,
-				ssr: false,
+				ssr:
+					name.toLowerCase().includes("select-modal") ||
+					name.toLowerCase().includes("dither") ||
+					name.toLowerCase().includes("text-rotate")
+						? false
+						: true,
 			}
-		);
-	});
+		)
+	);
 	const containerRef = useRef(null);
 
 	const [basic, setBasic] = useState(false);
@@ -474,24 +489,24 @@ export const ClientWrapper = ({
 												setCollapsed={setCollapsed}
 												gridView={gridView}
 												setComponentCount={setComponentCount}
-												tags={[
-													filterOptions.find(
-														(filter) =>
-															filter.label.toLowerCase() ===
-															"card"
-													),
-												]}
 												selectedFilters={selectedFilters}
 												title={matchingComponents[i].name.replace(
 													".json",
 													""
 												)}
-												code={undefined}
-												filename={undefined}
-												containerRef={undefined}
-												subfolder={undefined}
+												content={matchingComponents[i].content}
 											>
-												<ComponentImported />
+												{!!ComponentImported ? (
+													<ComponentImported />
+												) : (
+													<div>
+														failed to load{" "}
+														{matchingComponents[i].name.replace(
+															".json",
+															""
+														)}
+													</div>
+												)}
 											</Component>
 										</Suspense>
 									);

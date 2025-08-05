@@ -116,7 +116,7 @@ export default function TextRotateUsage() {
 							ref={textRotateRef}
 							texts={[
 								["/itjustworks.jpg", "/itjustworks.jpg"].map(
-									(image) => image.author
+									(image) => "dan"
 								),
 							]}
 							mainClassName="text-sm sm:text-3xl md:text-4xl w-full justify-center flex pt-2"

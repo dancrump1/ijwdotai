@@ -6,13 +6,8 @@ const nextConfig: NextConfig = {
   },
   /* config options here */
   distDir: process.env.BUILD_DIR || ".next",
+	transpilePackages: ["three"],
 
-  webpack5: true,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-
-    return config;
-  },
   // !! WARN !!
   // Dangerously allow production builds to successfully complete even if
   // your project has type errors.

@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 
-import ThreeDotLoaderGrowing from "./ThreeDotLoader";
+import ThreeDotLoaderGrowing from "./three-dot-loader";
 
 const placeholdersDefault = [
 	"Searching for something?",

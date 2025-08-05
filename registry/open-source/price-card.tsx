@@ -3,7 +3,7 @@
 import { Check } from "lucide-react";
 import { motion } from "motion/react";
 
-import { ScalingButton } from "./ScalingButton";
+import { ScalingButton } from "./scaling-button";
 
 export default function PricingCard() {
 	const features = [

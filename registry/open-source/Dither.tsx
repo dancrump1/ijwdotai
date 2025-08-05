@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import React, { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 
 import { Canvas, ThreeEvent, useFrame, useThree } from "@react-three/fiber";
 import { EffectComposer, wrapEffect } from "@react-three/postprocessing";
@@ -65,7 +65,7 @@ float cnoise(vec2 P) {
   return 2.3 * mix(n_x.x, n_x.y, fade_xy.y);
 }
 
-const int OCTAVES = 8;
+const int OCTAVES = 4;
 float fbm(vec2 p) {
   float value = 0.0;
   float amp = 1.0;
@@ -80,7 +80,7 @@ float fbm(vec2 p) {
 
 float pattern(vec2 p) {
   vec2 p2 = p - time * waveSpeed;
-  return fbm(p - fbm(p + fbm(p2)));
+  return fbm(p + fbm(p2)); 
 }
 
 void main() {
@@ -116,10 +116,14 @@ const float bayerMatrix8x8[64] = float[64](
 );
 
 vec3 dither(vec2 uv, vec3 color) {
-  int x = int(uv.x * resolution.x) % 8;
-  int y = int(uv.y * resolution.y) % 8;
+  vec2 scaledCoord = floor(uv * resolution / pixelSize);
+  int x = int(mod(scaledCoord.x, 8.0));
+  int y = int(mod(scaledCoord.y, 8.0));
   float threshold = bayerMatrix8x8[y * 8 + x] - 0.25;
-  color += threshold;
+  float step = 1.0 / (colorNum - 1.0);
+  color += threshold * step;
+  float bias = 0.2;
+  color = clamp(color - bias, 0.0, 1.0);
   return floor(color * (colorNum - 1.0) + 0.5) / (colorNum - 1.0);
 }
 
@@ -127,7 +131,7 @@ void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
   vec2 normalizedPixelSize = pixelSize / resolution;
   vec2 uvPixel = normalizedPixelSize * floor(uv / normalizedPixelSize);
   vec4 color = texture2D(inputBuffer, uvPixel);
-  color.rgb = dither(uvPixel, color.rgb);
+  color.rgb = dither(uv, color.rgb);
   outputColor = color;
 }
 `;
@@ -156,9 +160,18 @@ class RetroEffectImpl extends Effect {
 	}
 }
 
-const RetroEffect = wrapEffect(
-	RetroEffectImpl
-) as React.ForwardRefExoticComponent<React.RefAttributes<RetroEffectImpl>>;
+const RetroEffect = forwardRef<
+	RetroEffectImpl,
+	{ colorNum: number; pixelSize: number }
+>((props, ref) => {
+	const { colorNum, pixelSize } = props;
+	const WrappedRetroEffect = wrapEffect(RetroEffectImpl);
+	return (
+		<WrappedRetroEffect ref={ref} colorNum={colorNum} pixelSize={pixelSize} />
+	);
+});
+
+RetroEffect.displayName = "RetroEffect";
 
 interface WaveUniforms {
 	[key: string]: THREE.Uniform<any>;
@@ -197,11 +210,7 @@ function DitheredWaves({
 	mouseRadius,
 }: DitheredWavesProps) {
 	const mesh = useRef<THREE.Mesh>(null);
-	const effect = useRef<RetroEffectImpl>(null);
-	const [mousePos, setMousePos] = useState<{ x: number; y: number }>({
-		x: 0,
-		y: 0,
-	});
+	const mouseRef = useRef(new THREE.Vector2());
 	const { viewport, size, gl } = useThree();
 
 	const waveUniformsRef = useRef<WaveUniforms>({
@@ -217,49 +226,39 @@ function DitheredWaves({
 	});
 
 	useEffect(() => {
-		let isMounted = true;
 		const dpr = gl.getPixelRatio();
 		const newWidth = Math.floor(size.width * dpr);
 		const newHeight = Math.floor(size.height * dpr);
 		const currentRes = waveUniformsRef.current.resolution.value;
 		if (currentRes.x !== newWidth || currentRes.y !== newHeight) {
 			currentRes.set(newWidth, newHeight);
-			if (
-				isMounted &&
-				effect.current &&
-				effect.current.uniforms.get("resolution") &&
-				effect.current.uniforms.get("resolution")!.value
-			) {
-				effect.current.uniforms
-					.get("resolution")!
-					.value.set(newWidth, newHeight);
-			}
 		}
-
-		return () => {
-			isMounted = false;
-		};
 	}, [size, gl]);
 
+	const prevColor = useRef([...waveColor]);
 	useFrame(({ clock }) => {
-		if (!mesh.current || !effect.current) return;
+		const u = waveUniformsRef.current;
 
 		if (!disableAnimation) {
-			waveUniformsRef.current.time.value = clock.getElapsedTime();
+			u.time.value = clock.getElapsedTime();
 		}
-		waveUniformsRef.current.waveSpeed.value = waveSpeed;
-		waveUniformsRef.current.waveFrequency.value = waveFrequency;
-		waveUniformsRef.current.waveAmplitude.value = waveAmplitude;
-		waveUniformsRef.current.waveColor.value.set(...waveColor);
-		waveUniformsRef.current.enableMouseInteraction.value =
-			enableMouseInteraction ? 1 : 0;
-		waveUniformsRef.current.mouseRadius.value = mouseRadius;
+
+		if (u.waveSpeed.value !== waveSpeed) u.waveSpeed.value = waveSpeed;
+		if (u.waveFrequency.value !== waveFrequency)
+			u.waveFrequency.value = waveFrequency;
+		if (u.waveAmplitude.value !== waveAmplitude)
+			u.waveAmplitude.value = waveAmplitude;
+
+		if (!prevColor.current.every((v, i) => v === waveColor[i])) {
+			u.waveColor.value.set(...waveColor);
+			prevColor.current = [...waveColor];
+		}
+
+		u.enableMouseInteraction.value = enableMouseInteraction ? 1 : 0;
+		u.mouseRadius.value = mouseRadius;
+
 		if (enableMouseInteraction) {
-			waveUniformsRef.current.mousePos.value.set(mousePos.x, mousePos.y);
-		}
-		if (effect.current) {
-			effect.current.colorNum = colorNum;
-			effect.current.pixelSize = pixelSize;
+			u.mousePos.value.copy(mouseRef.current);
 		}
 	});
 
@@ -267,9 +266,10 @@ function DitheredWaves({
 		if (!enableMouseInteraction) return;
 		const rect = gl.domElement.getBoundingClientRect();
 		const dpr = gl.getPixelRatio();
-		const x = (e.clientX - rect.left) * dpr;
-		const y = (e.clientY - rect.top) * dpr;
-		setMousePos({ x, y });
+		mouseRef.current.set(
+			(e.clientX - rect.left) * dpr,
+			(e.clientY - rect.top) * dpr
+		);
 	};
 
 	return (
@@ -282,9 +282,11 @@ function DitheredWaves({
 					uniforms={waveUniformsRef.current}
 				/>
 			</mesh>
+
 			<EffectComposer>
-				<RetroEffect ref={effect} />
+				<RetroEffect colorNum={colorNum} pixelSize={pixelSize} />
 			</EffectComposer>
+
 			<mesh
 				onPointerMove={handlePointerMove}
 				position={[0, 0, 0.01]}
@@ -321,20 +323,11 @@ export default function Dither({
 	enableMouseInteraction = true,
 	mouseRadius = 1,
 }: DitherProps) {
-	const isMac = false;
-
-	const [windowWidth, setWindowWidth] = useState<number>();
-
-	useEffect(() => {
-		setWindowWidth(window.devicePixelRatio);
-	}, []);
-
 	return (
 		<Canvas
 			className="w-full h-full relative"
-			style={{ padding: isMac ? "1px" : "2px" }}
 			camera={{ position: [0, 0, 6] }}
-			dpr={windowWidth}
+			dpr={window.devicePixelRatio}
 			gl={{ antialias: true, preserveDrawingBuffer: true }}
 		>
 			<DitheredWaves

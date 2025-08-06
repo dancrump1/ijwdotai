@@ -29,13 +29,13 @@ const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
  * Homepage URL for the project.
  * @type {string}
  */
-const homepage = "https://ijwdotai.com";
+const homepage = "https://acme.com";
 
 /**
  * Name of the registry/project.
  * @type {string}
  */
-const name = "ijwdotai";
+const name = "acme";
 
 /**
  * Maps path aliases to actual directories for resolving imports.
@@ -129,6 +129,7 @@ function scanFileRecursively(absPath, seen = new Set()) {
 
 	// Actual path to component within THIS library
 	const relPath = path.relative(registryDir, absPath).replace(/\\/g, "/");
+
 	// Path for inside v0 AI filesystem
 	const target = relPath.startsWith("registry")
 		? `components/${path.basename(absPath)}`

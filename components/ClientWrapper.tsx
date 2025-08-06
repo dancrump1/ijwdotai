@@ -324,10 +324,19 @@ export const ClientWrapper = ({
 					}
 					ref={containerRef}
 				>
-					<ScrollIsland
+					{/* <ScrollIsland
 						gridView={gridView}
 						ref={setupTitles}
 						containerRef={containerRef}
+					> */}
+					<div
+						className={cn("relative w-full grid grid-cols-1 gap-8", {
+							"grid-cols-1": gridView === "1",
+							"grid-cols-2": gridView === "2",
+							"grid-cols-3": gridView === "3",
+							"grid-cols-4": gridView === "4",
+						})}
+						ref={setupTitles}
 					>
 						{basic ? (
 							<>
@@ -521,7 +530,8 @@ export const ClientWrapper = ({
 								</section>
 							</>
 						)}
-					</ScrollIsland>
+					</div>
+					{/* </ScrollIsland> */}
 				</section>
 			</main>
 			<FAB

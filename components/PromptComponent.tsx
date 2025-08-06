@@ -208,7 +208,7 @@ export default function PromptComponent({
 	useEffect(() => {
 		setAttachments(
 			selectedComponents.map((item) => ({
-				url: `https://components.drivedev.net/r/${item}.json`,
+				url: `https://components.drivedev.net/r/${item}`,
 			}))
 		);
 	}, [selectedComponents]);

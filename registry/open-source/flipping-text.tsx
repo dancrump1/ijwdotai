@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, AnimationProps, motion } from "motion/react";
 
-const FlippingText = ({
+export const FlippingText = ({
 	words,
 	className,
 }: {
@@ -20,7 +20,7 @@ const FlippingText = ({
 	useEffect(() => {
 		const typingSpeed = 50; // Speed for typing characters
 		const deletingSpeed = 50; // Speed for deleting characters
-		const pauseBeforeDelete = 1000; // Pause before starting to delete
+		const pauseBeforeDelete = 2000; // Pause before starting to delete
 
 		let timeout: NodeJS.Timeout;
 

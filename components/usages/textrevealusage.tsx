@@ -8,7 +8,7 @@ import {
 	TextRevealCardTitle,
 } from "@/registry/open-source/text-reveal";
 
-export function TextRevealCardPreview() {
+export default function TextRevealCardPreview() {
 	return (
 		<div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
 			<TextRevealCard

@@ -6,7 +6,6 @@ export interface ComponentCategory {
 	slug: string;
 	name: string;
 	components: { name: string }[];
-	isNew?: boolean;
 }
 
 export const simpleCategories: ComponentCategory[] = [
@@ -434,7 +433,6 @@ export const simpleCategories: ComponentCategory[] = [
 			{ name: "comp-595" },
 			{ name: "comp-596" },
 		],
-		isNew: true,
 	},
 	{
 		slug: "notification",
@@ -792,6 +790,5 @@ export const simpleCategories: ComponentCategory[] = [
 			{ name: "comp-598" },
 			{ name: "comp-599" },
 		],
-		isNew: true,
 	},
 ];

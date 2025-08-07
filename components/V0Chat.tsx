@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 
 import { useRouter } from "next/navigation";
 
+import { categories } from "@/app/find/page";
 import { useApiValidation } from "@/lib/useApiValidation";
 
 import ApiKeyError from "./ApiKeyError";
 import ErrorDialog from "./ErrorDialog";
+import { MultiSelect } from "./MultiSelect";
 import PromptComponent from "./PromptComponent";
 import RateLimitDialog from "./RateLimitDialog";
 
@@ -220,19 +222,19 @@ export default function V0Chat({ files }: { files: any }) {
 		}
 	};
 
+	const [selectedComponents, setSelectedComponents] = useState([]);
+
 	// Show API key error page if needed
 	if (showApiKeyError) {
 		return <ApiKeyError />;
 	}
+	const { All, New, ...otherCats } = categories;
 
 	return (
 		<div className="relative min-h-dvh bg-background">
 			{/* Homepage Welcome Message */}
-			<div className="absolute inset-0 flex items-center justify-center">
-				<div
-					className="text-center px-4 sm:px-6"
-					style={{ transform: "translateY(-25%)" }}
-				>
+			<div className="flex items-center justify-center">
+				<div className="text-center px-4 sm:px-6">
 					<h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 text-pretty">
 						Drive Brand Studio GEN
 					</h1>
@@ -243,6 +245,52 @@ export default function V0Chat({ files }: { files: any }) {
 					</p>
 				</div>
 			</div>
+
+			{Object.entries(otherCats).map(([category, subcategories], i) => {
+				const categoryTotal = files.filter(
+					({ name }) =>
+						name.includes(category) ||
+						!!subcategories
+							.map((filter) => name.includes(filter))
+							.filter((item) => !!item).length
+				);
+
+				return (
+					<div className="mx-auto w-[50vw] py-6">
+						{category}
+						<ul key={category} className="grid grid-cols-6 gap-3">
+							{categoryTotal.map((item) => {
+								const itemName = item.name.replace(".json", "");
+								return (
+									<li
+										onClick={() => {
+											selectedComponents.includes(itemName)
+												? setSelectedComponents((prev) =>
+														prev.filter(
+															(prevItem) => itemName !== prevItem
+														)
+													)
+												: setSelectedComponents([
+														itemName,
+														...selectedComponents,
+													]);
+										}}
+										className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+											category === "All"
+												? "text-red-400"
+												: "text-white"
+										}`}
+									>
+										{item.name
+											.replace(".json", "")
+											.replaceAll("-", " ")}
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				);
+			})}
 
 			<PromptComponent
 				onSubmit={handleSubmit}
@@ -255,7 +303,8 @@ export default function V0Chat({ files }: { files: any }) {
 				currentChatId={selectedChatId}
 				onProjectChange={handleProjectChange}
 				onChatChange={handleChatChange}
-				selectOptions={files}
+				selectedComponents={selectedComponents}
+				setSelectedComponents={setSelectedComponents}
 			/>
 
 			<RateLimitDialog

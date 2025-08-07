@@ -87,7 +87,7 @@ interface PromptComponentProps {
 	// Initial state
 	initialPrompt?: string;
 	initialExpanded?: boolean;
-	selectOptions: any[];
+	selectedComponents: any[];
 
 	// Data for dropdowns (optional)
 	projects?: any[];
@@ -149,7 +149,8 @@ export default function PromptComponent({
 	onChatChange,
 	onDeleteChat,
 	onRenameChat,
-	selectOptions,
+	selectedComponents,
+	setSelectedComponents,
 }: PromptComponentProps) {
 	const router = useRouter();
 	const { settings } = useSettings();
@@ -158,7 +159,6 @@ export default function PromptComponent({
 	const [shouldAnimate, setShouldAnimate] = useState(false);
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [attachments, setAttachments] = useState<Attachment[]>([]);
-	const [selectedComponents, setSelectedComponents] = useState([]);
 	const [isListening, setIsListening] = useState(false);
 	const [speechSupported, setSpeechSupported] = useState(false);
 	const [previewState, setPreviewState] = useState<{
@@ -578,9 +578,7 @@ export default function PromptComponent({
 
 			{/* Premium Prompt Area */}
 			{isPromptExpanded && (
-				<div
-					className={`fixed inset-x-0 bottom-0 z-30 pointer-events-none ${shouldAnimate ? "animate-slide-up" : ""}`}
-				>
+				<div className={`${shouldAnimate ? "animate-slide-up" : ""}`}>
 					{/* Main prompt container */}
 					<div className="mx-auto max-w-4xl px-3 sm:px-6 pb-4 sm:pb-8 pointer-events-auto">
 						<div
@@ -632,58 +630,112 @@ export default function PromptComponent({
 									{/* Attachments display */}
 									{attachments.length > 0 && (
 										<div className="mb-3 flex flex-wrap gap-2">
-											{attachments.map((attachment, index) => {
-												const isImage =
-													attachment.type?.startsWith("image/");
+											{attachments
+												.filter((attachment) => !!attachment.name)
+												.map((attachment, index) => {
+													const isImage =
+														attachment.type?.startsWith("image/");
 
-												return (
-													<div
-														key={index}
-														className="flex items-center gap-2 px-3 py-1.5 bg-muted rounded-lg text-sm text-muted-foreground relative"
-														onMouseEnter={(e) => {
-															if (isImage) {
-																const rect =
-																	e.currentTarget.getBoundingClientRect();
-																setPreviewState({
-																	isVisible: true,
-																	src: attachment.url,
-																	alt:
-																		attachment.name ||
-																		"Image attachment",
-																	position: {
-																		x:
-																			rect.left +
-																			rect.width / 2,
-																		y: rect.top - 10,
-																	},
-																});
-															}
-														}}
-														onMouseLeave={() => {
-															if (isImage) {
-																setPreviewState((prev) => ({
-																	...prev,
-																	isVisible: false,
-																}));
-															}
-														}}
-													>
-														<PaperclipIcon className="w-3 h-3" />
-														<span className="truncate max-w-32">
-															{attachment.name || "Attachment"}
-														</span>
-														<button
-															type="button"
+													return (
+														<div
+															key={index}
 															onClick={() =>
 																removeAttachment(index)
 															}
-															className="text-muted-foreground hover:text-foreground transition-colors"
+															className="flex items-center gap-2 px-3 py-1.5 bg-muted rounded-lg text-sm text-muted-foreground relative"
+															onMouseEnter={(e) => {
+																if (isImage) {
+																	const rect =
+																		e.currentTarget.getBoundingClientRect();
+																	setPreviewState({
+																		isVisible: true,
+																		src: attachment.url,
+																		alt:
+																			attachment.name ||
+																			"Image attachment",
+																		position: {
+																			x:
+																				rect.left +
+																				rect.width / 2,
+																			y: rect.top - 10,
+																		},
+																	});
+																}
+															}}
+															onMouseLeave={() => {
+																if (isImage) {
+																	setPreviewState((prev) => ({
+																		...prev,
+																		isVisible: false,
+																	}));
+																}
+															}}
 														>
-															<XIcon className="w-3 h-3" />
-														</button>
-													</div>
-												);
-											})}
+															<PaperclipIcon className="w-3 h-3" />
+															<span className="truncate max-w-32">
+																{attachment.name ||
+																	"Attachment"}
+															</span>
+															<button
+																type="button"
+																onClick={() =>
+																	removeAttachment(index)
+																}
+																className="text-muted-foreground hover:text-foreground transition-colors"
+															>
+																<XIcon className="w-3 h-3" />
+															</button>
+														</div>
+													);
+												})}
+										</div>
+									)}
+
+									{/* selectedComponents display */}
+									{selectedComponents.length > 0 && (
+										<div className="mb-3 flex flex-wrap gap-2">
+											{selectedComponents.map(
+												(attachment, index) => {
+													return (
+														<div
+															key={index}
+															className="flex items-center gap-2 px-3 py-1.5 bg-muted rounded-lg text-sm text-muted-foreground relative"
+															onMouseEnter={(e) => {}}
+															onClick={() => {
+																removeAttachment(index);
+																setSelectedComponents((prev) =>
+																	prev.filter(
+																		(item) =>
+																			item !== attachment
+																	)
+																);
+															}}
+															onMouseLeave={() => {}}
+														>
+															<span className="truncate max-w-32">
+																{attachment || "Attachment"}
+															</span>
+															<button
+																type="button"
+																onClick={() => {
+																	removeAttachment(index);
+																	setSelectedComponents(
+																		(prev) =>
+																			prev.filter(
+																				(item) =>
+																					item !==
+																					attachment
+																			)
+																	);
+																}}
+																className="text-muted-foreground hover:text-foreground transition-colors"
+															>
+																<XIcon className="w-3 h-3" />
+															</button>
+														</div>
+													);
+												}
+											)}
 										</div>
 									)}
 
@@ -819,23 +871,6 @@ export default function PromptComponent({
 															}
 															chats={projectChats}
 															onChatChange={onChatChange}
-														/>
-														<MultiSelect
-															options={selectOptions.map(
-																({ name }) => ({
-																	label: name.replace(
-																		".json",
-																		""
-																	),
-																	value: name,
-																})
-															)}
-															onValueChange={
-																setSelectedComponents
-															}
-															popoverClassname="bg-black z-[55] h-[50vh]"
-															className="z-[55]"
-															maxCount={10}
 														/>
 													</>
 												) : currentProjectId &&

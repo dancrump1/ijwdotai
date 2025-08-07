@@ -207,8 +207,8 @@ export default function PromptComponent({
 
 	useEffect(() => {
 		setAttachments(
-			selectedComponents.map((item) => ({
-				url: `https://components.drivedev.net/r/${item}`,
+			selectedComponents?.map((item) => ({
+				url: `https://components.drivedev.net/r/${item}.json`,
 			}))
 		);
 	}, [selectedComponents]);
@@ -694,7 +694,7 @@ export default function PromptComponent({
 									)}
 
 									{/* selectedComponents display */}
-									{selectedComponents.length > 0 && (
+									{selectedComponents?.length > 0 && (
 										<div className="mb-3 flex flex-wrap gap-2">
 											{selectedComponents.map(
 												(attachment, index) => {

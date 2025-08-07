@@ -578,7 +578,9 @@ export default function PromptComponent({
 
 			{/* Premium Prompt Area */}
 			{isPromptExpanded && (
-				<div className={`${shouldAnimate ? "animate-slide-up" : ""}`}>
+				<div
+					className={`fixed inset-x-0 bottom-0 z-30 pointer-events-none ${shouldAnimate ? "animate-slide-up" : ""}`}
+				>
 					{/* Main prompt container */}
 					<div className="mx-auto max-w-4xl px-3 sm:px-6 pb-4 sm:pb-8 pointer-events-auto">
 						<div

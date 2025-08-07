@@ -268,7 +268,7 @@ export default function V0Chat({ files }: { files: any }) {
 				</div>
 			</div>
 
-			<section className="flex">
+			<section className="flex pb-[200px]">
 				<div>
 					{Object.entries(otherCats).map(
 						([category, subcategories], i) => {

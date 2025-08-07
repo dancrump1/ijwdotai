@@ -1,13 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
+import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
 import { categories } from "@/app/find/page";
 import { useApiValidation } from "@/lib/useApiValidation";
 
 import ApiKeyError from "./ApiKeyError";
+import { ComponentLoading } from "./ClientWrapper";
+import Component from "./Component";
 import ErrorDialog from "./ErrorDialog";
 import { MultiSelect } from "./MultiSelect";
 import PromptComponent from "./PromptComponent";
@@ -223,6 +226,7 @@ export default function V0Chat({ files }: { files: any }) {
 	};
 
 	const [selectedComponents, setSelectedComponents] = useState([]);
+	const [previewComponent, setPreviewComponent] = useState();
 
 	// Show API key error page if needed
 	if (showApiKeyError) {
@@ -230,6 +234,24 @@ export default function V0Chat({ files }: { files: any }) {
 	}
 	const { All, New, ...otherCats } = categories;
 
+	const PreviewComponentImport = dynamic(
+		() =>
+			import(
+				"@/components/usages/" +
+					previewComponent?.name.replace(".json", "").replaceAll("-", "") +
+					"usage.tsx"
+			),
+		{
+			loading: ComponentLoading,
+			ssr:
+				previewComponent?.name.toLowerCase().includes("select-modal") ||
+				previewComponent?.name.toLowerCase().includes("dither") ||
+				previewComponent?.name.toLowerCase().includes("text-rotate") ||
+				previewComponent?.name.toLowerCase().includes("flipped-menu")
+					? false
+					: true,
+		}
+	);
 	return (
 		<div className="relative min-h-dvh bg-background">
 			{/* Homepage Welcome Message */}
@@ -246,51 +268,93 @@ export default function V0Chat({ files }: { files: any }) {
 				</div>
 			</div>
 
-			{Object.entries(otherCats).map(([category, subcategories], i) => {
-				const categoryTotal = files.filter(
-					({ name }) =>
-						name.includes(category) ||
-						!!subcategories
-							.map((filter) => name.includes(filter))
-							.filter((item) => !!item).length
-				);
+			<section className="flex">
+				<div>
+					{Object.entries(otherCats).map(
+						([category, subcategories], i) => {
+							const categoryTotal = files.filter(
+								({ name }) =>
+									name.includes(category) ||
+									!!subcategories
+										.map((filter) => name.includes(filter))
+										.filter((item) => !!item).length
+							);
 
-				return (
-					<div className="mx-auto w-[50vw] py-6">
-						{category}
-						<ul key={category} className="grid grid-cols-6 gap-3">
-							{categoryTotal.map((item) => {
-								const itemName = item.name.replace(".json", "");
-								return (
-									<li
-										onClick={() => {
-											selectedComponents.includes(itemName)
-												? setSelectedComponents((prev) =>
-														prev.filter(
-															(prevItem) => itemName !== prevItem
-														)
-													)
-												: setSelectedComponents([
-														itemName,
-														...selectedComponents,
-													]);
-										}}
-										className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-											category === "All"
-												? "text-red-400"
-												: "text-white"
-										}`}
+							return (
+								<div className="mx-auto w-[50vw] py-6">
+									{category}
+									<ul
+										key={category}
+										className="grid grid-cols-6 gap-3"
 									>
-										{item.name
-											.replace(".json", "")
-											.replaceAll("-", " ")}
-									</li>
-								);
-							})}
-						</ul>
+										{categoryTotal.map((item) => {
+											const itemName = item.name.replace(
+												".json",
+												""
+											);
+
+											return (
+												<li
+													onMouseEnter={() =>
+														setPreviewComponent(item)
+													}
+													onClick={() => {
+														selectedComponents.includes(itemName)
+															? setSelectedComponents((prev) =>
+																	prev.filter(
+																		(prevItem) =>
+																			itemName !== prevItem
+																	)
+																)
+															: setSelectedComponents([
+																	itemName,
+																	...selectedComponents,
+																]);
+													}}
+													className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+														category === "All"
+															? "text-red-400"
+															: "text-white"
+													}`}
+												>
+													{item.name
+														.replace(".json", "")
+														.replaceAll("-", " ")}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							);
+						}
+					)}
+				</div>
+				{!!previewComponent?.name && (
+					<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">
+						<button onClick={() => setPreviewComponent()}>x</button>
+						<Suspense>
+							<Component
+								collapsed={[]}
+								setCollapsed={() => null}
+								gridView={"1"}
+								setComponentCount={() => null}
+								selectedFilters={[]}
+								title={previewComponent?.name.replace(".json", "")}
+								content={previewComponent?.content}
+							>
+								{!!PreviewComponentImport ? (
+									<PreviewComponentImport />
+								) : (
+									<div>
+										failed to load{" "}
+										{previewComponent.name.replace(".json", "")}
+									</div>
+								)}
+							</Component>
+						</Suspense>
 					</div>
-				);
-			})}
+				)}
+			</section>
 
 			<PromptComponent
 				onSubmit={handleSubmit}

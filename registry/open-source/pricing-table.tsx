@@ -137,7 +137,7 @@ const OfferCard = ({
 	return (
 		<div
 			className={cn(
-				"hover:-translate-y-1 h-full transform-gpu overflow-hidden rounded-2xl border bg-neutral-800/95 transition-all duration-300 ease-in-out hover:bg-neutral-800/100 dark:bg-neutral-800/50",
+				"hover:-translate-y-1 h-full transform-gpu overflow-hidden rounded-2xl border bg-neutral-800/95 transition-[transform,background-color] duration-300 ease-in-out hover:bg-neutral-800/100 dark:bg-neutral-800/50",
 				"text-white dark:text-neutral-400",
 				isBestValue ? "border-[#ed8445]" : "border-neutral-500/50 "
 			)}
@@ -153,7 +153,9 @@ const OfferCard = ({
 						: {}
 				}
 			>
-				<div className="font-semiboldtext-neutral-200 text-lg">{title}</div>
+				<div className="font-semibold text-neutral-200 text-lg">
+					{title}
+				</div>
 				<div className="mt-2 text-neutral-400 text-sm">{description}</div>
 				<div className="mt-4">
 					<div className="font-semibold text-4xl text-neutral-200">
@@ -169,7 +171,7 @@ const OfferCard = ({
 
 				<button
 					className={cn(
-						"my-12 inline-flex w-full transform-gpu items-center justify-center rounded-full border border-neutral-400/20 px-12 py-2.5 font-semibold text-neutral-50 tracking-tight transition-all hover:scale-105",
+						"my-12 inline-flex w-full transform-gpu items-center justify-center rounded-full border border-neutral-400/20 px-12 py-2.5 font-semibold text-neutral-50 tracking-tight transition-[background-color,transform] hover:scale-105",
 						isBestValue
 							? " bg-gradient-to-br from-[#f6d4a1] to-[#ed8445]"
 							: "bg-neutral-700 "

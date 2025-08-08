@@ -51,7 +51,7 @@ const MenuToggler = ({
 			/>
 			<label
 				htmlFor="menu-toggler"
-				className="absolute inset-0 z-20 m-auto flex cursor-pointer items-center justify-center rounded-full transition-all"
+				className="absolute inset-0 z-20 m-auto flex cursor-pointer items-center justify-center rounded-full transition-[background-color,color,width,height]"
 				style={{
 					backgroundColor,
 					color: iconColor,
@@ -67,7 +67,7 @@ const MenuToggler = ({
 					{[0, 1, 2].map((i) => (
 						<span
 							key={i + "flower-span"}
-							className={`absolute bg-current transition-all ${
+							className={`absolute bg-current transition-[opacity,tranform] ${
 								isOpen && i === 0
 									? "opacity-0"
 									: isOpen
@@ -116,7 +116,7 @@ const MenuItem = ({
 	const Icon = item.icon;
 	return (
 		<li
-			className={`absolute inset-0 m-auto transition-all ${
+			className={`absolute inset-0 m-auto transition-[opacity,width,height,transform] ${
 				isOpen ? "opacity-100" : "opacity-0"
 			}`}
 			style={{
@@ -134,7 +134,7 @@ const MenuItem = ({
 				href={item.href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={`flex h-full w-full items-center justify-center rounded-full opacity-60 transition-all duration-100 ${
+				className={`flex h-full w-full items-center justify-center rounded-full opacity-60 transition-[transform,opacity,color,background-color] duration-100 ${
 					isOpen ? "pointer-events-auto" : "pointer-events-none"
 				} group hover:scale-125 hover:opacity-100`}
 				style={{

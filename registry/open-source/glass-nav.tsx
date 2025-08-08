@@ -142,7 +142,7 @@ const Buttons = ({
 
 		<button
 			onClick={() => setMenuOpen((pv) => !pv)}
-			className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
+			className="ml-2 block scale-100 text-3xl text-white/90 transition-[transform,color] hover:scale-105 hover:text-white active:scale-95 md:hidden"
 		>
 			<FiMenu />
 		</button>

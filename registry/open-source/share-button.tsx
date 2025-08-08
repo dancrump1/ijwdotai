@@ -40,7 +40,7 @@ const ShareButton = ({
 					"hover:bg-gray-50 dark:hover:bg-gray-950",
 					"text-black dark:text-white",
 					"border border-black/10 dark:border-white/10",
-					"transition-all duration-300",
+					"transition-[opacity,background-color,color,border-color] duration-300",
 					isHovered ? "opacity-0" : "opacity-100",
 					className
 				)}
@@ -72,11 +72,10 @@ const ShareButton = ({
 								isHovered
 									? "translate-x-0 opacity-100"
 									: "-translate-x-full opacity-0",
-								index === 0 && "transition-all duration-200",
-								index === 1 &&
-									"delay-[50ms] transition-all duration-200",
-								index === 2 && "transition-all delay-100 duration-200",
-								index === 3 && "transition-all delay-150 duration-200"
+								index === 0 && "duration-200",
+								index === 1 && "delay-[50ms] duration-200",
+								index === 2 && "delay-100 duration-200",
+								index === 3 && "delay-150 duration-200"
 							)}
 						>
 							<Icon className="size-4" />

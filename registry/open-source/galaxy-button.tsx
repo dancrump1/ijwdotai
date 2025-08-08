@@ -178,21 +178,21 @@ export default function GalaxyButton({
 			</div>
 
 			<div
-				className="absolute inset-0 rounded-full transition-all duration-300 ease-in-out"
+				className="absolute inset-0 rounded-full transition-[box-shadow] duration-300 ease-in-out"
 				style={{
 					boxShadow: shadowStyles.default,
 				}}
 			/>
 
 			<div
-				className="absolute inset-0 rounded-full opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+				className="absolute inset-0 rounded-full opacity-0 transition-[box-shadow,opacity] duration-300 ease-in-out group-hover:opacity-100"
 				style={{
 					boxShadow: shadowStyles.hover,
 				}}
 			/>
 
 			<div
-				className="absolute inset-0 rounded-full opacity-0 transition-all duration-300 ease-in-out group-active:opacity-100"
+				className="absolute inset-0 rounded-full opacity-0 transition-[box-shadow,opacity] duration-300 ease-in-out group-active:opacity-100"
 				style={{
 					boxShadow: shadowStyles.active,
 				}}
@@ -215,7 +215,7 @@ export default function GalaxyButton({
 				variants={shiverVariants}
 				animate={isHovered ? "hover" : "initial"}
 			>
-				<span className="relative z-10 font-light inline-block transition-all duration-500 ease-in-out group-hover:scale-90 group-hover:animate-shiver">
+				<span className="relative z-10 font-light inline-block transition-transform duration-500 ease-in-out group-hover:scale-90 group-hover:animate-shiver">
 					{text}
 				</span>
 			</motion.span>

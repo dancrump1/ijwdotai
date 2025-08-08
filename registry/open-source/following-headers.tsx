@@ -228,11 +228,11 @@ const TableOfContent = ({
 							/>
 							<Link
 								className={cn(
-									"relative z-30 block transform-gpu py-1.5 pr-5 pl-2 text-sm leading-4 tracking-tight transition-all hover:translate-x-0.5",
+									"relative z-30 block transform-gpu py-1.5 pr-5 pl-2 text-sm leading-4 tracking-tight transition-translated hover:translate-x-0.5",
 									// Before element : positionning
 									"before:absolute before:top-0.5 before:right-0 before:bottom-0.5 before:left-0 ",
 									// Before element : animation
-									"before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-all before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100",
+									"before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-[transform,opacity] before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100",
 									(heading.level === 1 || heading.level === 2) &&
 										"font-semibold",
 									heading.level === 3 && "font-normal"
@@ -244,7 +244,7 @@ const TableOfContent = ({
 							>
 								{heading.text}
 							</Link>
-							<ChevronRight className="-translate-y-1/2 absolute top-1/2 right-1 ml-1 size-4 translate-x-1 transform-gpu opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
+							<ChevronRight className="-translate-y-1/2 absolute top-1/2 right-1 ml-1 size-4 translate-x-1 transform-gpu opacity-0 transition-[transform,opacity] group-hover:translate-x-0 group-hover:opacity-100" />
 						</li>
 					);
 				})}

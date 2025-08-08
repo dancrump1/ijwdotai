@@ -106,7 +106,7 @@ const Eye: React.FC<EyeProps> = ({ mouseX, mouseY, selfRef, otherRef }) => {
 		>
 			<div
 				ref={pupilRef}
-				className="absolute bg-black rounded-full h-8 w-8 transition-all duration-[5ms]"
+				className="absolute bg-black rounded-full h-8 w-8 transition-transform duration-[5ms]"
 			>
 				<div className="w-3 h-3 bg-white rounded-full absolute bottom-1 right-1"></div>
 			</div>

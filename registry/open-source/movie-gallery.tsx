@@ -78,7 +78,7 @@ const Movie = ({ setHover, hover, movie }: MovieProps) => {
 			onMouseEnter={() => setHover(movie)}
 			onMouseLeave={() => setHover(null)}
 		>
-			<div className="absolute flex items-end justify-center top-0 left-0 size-full bg-primary/20 transition-all duration-300 opacity-0 group-hover:opacity-100 text-white">
+			<div className="absolute flex items-end justify-center top-0 left-0 size-full bg-primary/20 transition-opacity duration-300 opacity-0 group-hover:opacity-100 text-white">
 				<AnimatePresence>
 					{hover && hover.item === movie.item && (
 						<motion.div

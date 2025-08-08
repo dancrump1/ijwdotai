@@ -1396,7 +1396,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           transform
           translate-x-[20%]
           -translate-y-1/2
-          transition-all
+          transition-opacity
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
 					isMoving
@@ -1417,7 +1417,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           text-[1.5rem]
           top-1/2
           right-[1%]
-          transition-all
+          transition-[transform,opacity]
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
 					isMoving
@@ -1445,7 +1445,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           border-black
           rounded-full
           cursor-pointer
-          transition-all
+          transition-[bottom,opacity,transform]
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
 					isMoving

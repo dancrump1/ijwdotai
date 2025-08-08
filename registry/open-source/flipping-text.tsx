@@ -216,7 +216,7 @@ const LogoCloud = () => {
 						<img
 							src={logo.src}
 							alt={logo.name}
-							className="h-10 w-auto object-contain transition-all dark:invert dark:filter"
+							className="h-10 w-auto object-contain transition-[filter] dark:invert dark:filter"
 						/>
 					</div>
 				))}

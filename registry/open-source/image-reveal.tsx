@@ -133,7 +133,7 @@ const ImageReveal: React.FC = () => {
 						{image.alt}
 					</h2>
 					<button
-						className={`sm:block hidden p-4 rounded-full transition-all duration-300 ease-out ${
+						className={`sm:block hidden p-4 rounded-full transition-[background-color,color] duration-300 ease-out ${
 							activeImage?.id === image?.id
 								? "mix-blend-difference z-20 bg-white text-black"
 								: ""
@@ -142,7 +142,7 @@ const ImageReveal: React.FC = () => {
 						<MoveUpRight className="w-8 h-8" />
 					</button>
 					<div
-						className={`h-[2px] dark:bg-white bg-black absolute bottom-0 left-0 transition-all duration-300 ease-linear ${
+						className={`h-[2px] dark:bg-white bg-black absolute bottom-0 left-0 transition-[width] duration-300 ease-linear ${
 							activeImage?.id === image?.id ? "w-full" : "w-0"
 						}`}
 					/>

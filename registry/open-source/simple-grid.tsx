@@ -38,11 +38,11 @@ const BentoCard: React.FC<BentoCardProps> = ({
 						alt={title}
 						layout="fill"
 						objectFit="cover"
-						className="transition-all duration-300 ease-in-out group-hover:blur-sm group-hover:scale-110 opacity-80 group-hover:opacity-100"
+						className="transition-[filter,opacity,transform] duration-300 ease-in-out group-hover:blur-sm group-hover:scale-110 opacity-80 group-hover:opacity-100"
 					/>
 				</div>
 				<div className="relative z-10 p-3 h-full flex flex-col justify-between text-white">
-					<div className="self-end group-hover:rotate-[-45deg] transition-all duration-700">
+					<div className="self-end group-hover:rotate-[-45deg] transition-transform duration-700">
 						<FaArrowRightLong size={16} />
 					</div>
 					<div>

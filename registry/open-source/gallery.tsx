@@ -212,7 +212,7 @@ const Gallery = () => {
 									style={{ ...tile.styles }}
 									className="absolute overflow-hidden rounded-2xl transition-transform duration-700 ease-out hover:scale-105"
 								>
-									<div className="relative h-full w-full opacity-0 transition-all duration-700 ease-out hover:opacity-100">
+									<div className="relative h-full w-full opacity-0 transition-opacity duration-700 ease-out hover:opacity-100">
 										<img
 											src={tile.image}
 											className="h-full w-full object-cover"

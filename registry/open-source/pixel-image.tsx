@@ -6,6 +6,9 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
+// Credit:
+// https://magicui.design/docs/components/pixel-image
+
 type Grid = {
 	rows: number;
 	cols: number;
@@ -98,7 +101,7 @@ const PixelImage = ({
 				<div
 					key={index}
 					className={cn(
-						"absolute inset-0 transition-all ease-out",
+						"absolute inset-0 transition-opacity ease-out",
 						isVisible ? "opacity-100" : "opacity-0"
 					)}
 					style={{

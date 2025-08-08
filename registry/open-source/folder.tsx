@@ -111,7 +111,7 @@ const Folder: React.FC<FolderProps> = ({
 	return (
 		<div style={scaleStyle} className={className}>
 			<div
-				className={`group relative transition-all duration-200 ease-in cursor-pointer ${
+				className={`group relative transition-transform duration-200 ease-in cursor-pointer ${
 					!open ? "hover:-translate-y-2" : ""
 				}`}
 				style={{
@@ -149,7 +149,7 @@ const Folder: React.FC<FolderProps> = ({
 								key={i + "folder"}
 								onMouseMove={(e) => handlePaperMouseMove(e, i)}
 								onMouseLeave={(e) => handlePaperMouseLeave(e, i)}
-								className={`absolute z-20 bottom-[10%] left-1/2 transition-all duration-300 ease-in-out bg-white ${
+								className={`absolute z-20 bottom-[10%] left-1/2 transition-[transform,background-color] duration-300 ease-in-out bg-white ${
 									!open
 										? "transform -translate-x-1/2 translate-y-[10%] group-hover:translate-y-0"
 										: "hover:scale-110"
@@ -166,7 +166,7 @@ const Folder: React.FC<FolderProps> = ({
 						);
 					})}
 					<div
-						className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out ${
+						className={`absolute z-30 w-full h-full origin-bottom transition-[transform,background-color] duration-300 ease-in-out ${
 							!open
 								? "group-hover:[transform:skew(15deg)_scaleY(0.6)]"
 								: ""
@@ -178,7 +178,7 @@ const Folder: React.FC<FolderProps> = ({
 						}}
 					></div>
 					<div
-						className={`absolute z-30 w-full h-full origin-bottom transition-all duration-300 ease-in-out ${
+						className={`absolute z-30 w-full h-full origin-bottom transition-[transform,background-color] duration-300 ease-in-out ${
 							!open
 								? "group-hover:[transform:skew(-15deg)_scaleY(0.6)]"
 								: ""

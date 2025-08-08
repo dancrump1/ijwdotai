@@ -245,13 +245,13 @@ const Header = () => {
 									<Link
 										onMouseEnter={() => onMouseEnter(index)}
 										onMouseOut={onMouseOut}
-										className="group relative isolate font-bebasNeue text-6xl font-bold leading-[0.8] transition-all duration-300 hover:invert"
+										className="group relative isolate font-bebasNeue text-6xl font-bold leading-[0.8] transition-[filter] duration-300 hover:invert"
 										key={index + "header-link"}
 										href={"#"}
 									>
 										{page.name}
 
-										<span className="absolute -top-1 left-0 -z-10 h-full w-full origin-bottom scale-y-0 bg-current transition-all duration-300 group-hover:scale-100 group-hover:invert"></span>
+										<span className="absolute -top-1 left-0 -z-10 h-full w-full origin-bottom scale-y-0 bg-current transition-[transform,filter] duration-300 group-hover:scale-100 group-hover:invert"></span>
 									</Link>
 								);
 							})}

@@ -51,7 +51,7 @@ const Card = ({
 			className="w-full h-64 bg-slate-300 overflow-hidden cursor-pointer group relative"
 		>
 			<div
-				className="absolute inset-0 saturate-100 md:saturate-0 md:group-hover:saturate-100 group-hover:scale-110 transition-all duration-500"
+				className="absolute inset-0 saturate-100 md:saturate-0 md:group-hover:saturate-100 group-hover:scale-110 transition-[transform,filter] duration-500"
 				style={{
 					backgroundImage: `url(${imgSrc})`,
 					backgroundSize: "cover",

@@ -32,7 +32,7 @@ export function Btn08({
 					"hover:bg-gray-50 dark:hover:bg-gray-950",
 					"text-black dark:text-white",
 					"border border-black/10 dark:border-white/10",
-					"transition-all duration-300",
+					"transition-[background-color] duration-300",
 					isHovered ? "opacity-0" : "opacity-100",
 					className
 				)}
@@ -55,7 +55,7 @@ export function Btn08({
 							"flex items-center justify-center",
 							"bg-black dark:bg-white",
 							"text-white dark:text-black",
-							"transition-all duration-300",
+							"transition-[background-color,transform,opacity] duration-300",
 							index === 0 && "rounded-l-md",
 							index === 3 && "rounded-r-md",
 							"border-r border-white/10 dark:border-black/10 last:border-r-0",
@@ -64,10 +64,10 @@ export function Btn08({
 							isHovered
 								? "translate-x-[0%] opacity-100"
 								: "translate-x-[-100%] opacity-0",
-							index === 0 && "transition-all duration-200",
-							index === 1 && "transition-all duration-200 delay-[50ms]",
-							index === 2 && "transition-all duration-200 delay-100",
-							index === 3 && "transition-all duration-200 delay-150"
+							index === 0 && "duration-200",
+							index === 1 && "duration-200 delay-[50ms]",
+							index === 2 && "duration-200 delay-100",
+							index === 3 && "duration-200 delay-150"
 						)}
 					>
 						<button.icon className="w-4 h-4" />

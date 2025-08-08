@@ -1233,7 +1233,7 @@ export const EditorLinkSelector = ({
 					/>
 					{editor.getAttributes("link").href ? (
 						<Button
-							className="flex h-8 items-center rounded-sm p-1 text-destructive transition-all hover:bg-destructive-foreground dark:hover:bg-destructive"
+							className="flex h-8 items-center rounded-sm p-1 text-destructive transition-[background-color] hover:bg-destructive-foreground dark:hover:bg-destructive"
 							onClick={() => {
 								// @ts-expect-error "TipTap extensions are not typed"
 								editor.chain().focus().unsetLink().run();

@@ -50,7 +50,7 @@ const AwardsCarousel = ({ Award }) => {
 					>
 						<div
 							className={cn(
-								"flex transition-all duration-300",
+								"flex transition-opacity duration-300",
 								currents2 === index ? "opacity-100" : "opacity-25"
 							)}
 						>
@@ -59,7 +59,7 @@ const AwardsCarousel = ({ Award }) => {
 						<div
 							className={cn(
 								"text-sm flex flex-col justify-center items-center w-28",
-								"transition-all duration-300",
+								"transition-opacity duration-300",
 								currents2 === index ? "opacity-100" : "opacity-25"
 							)}
 						>
@@ -68,7 +68,7 @@ const AwardsCarousel = ({ Award }) => {
 						</div>
 						<div
 							className={cn(
-								"flex scale-x-[-1] transition-all duration-300",
+								"flex scale-x-[-1] transition-opacity duration-300",
 								currents2 === index ? "opacity-100" : "opacity-25"
 							)}
 						>
@@ -133,7 +133,7 @@ const AwardsCarousel = ({ Award }) => {
 							aria-current={currents === index}
 							key={index + "award-image"}
 							className={cn(
-								"w-2 h-2 mx-1 rounded-full transition-all",
+								"w-2 h-2 mx-1 rounded-full transition-[background-color]",
 								currents === index ? "bg-white w-4" : "bg-stone-500"
 							)}
 						></motion.div>

@@ -43,7 +43,7 @@ const DiamondGallery = ({ images }: DiamondGalleryProps) => {
 
 				return (
 					<div
-						className={`absolute w-1/2 h-1/2 rotate-45 rounded-lg transition-all duration-500 overflow-hidden 
+						className={`absolute w-1/2 h-1/2 rotate-45 rounded-lg transition-[transform,z-index] duration-500 overflow-hidden 
               ${positions[idx]}
               ${hoveredIndex === idx ? "scale-100 z-1" : "scale-75 z-0"}
               ${

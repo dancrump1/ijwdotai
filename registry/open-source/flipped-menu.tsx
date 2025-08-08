@@ -103,8 +103,8 @@ const FlippedMenu = () => {
 					>
 						Close
 					</span>
-					<span className="absolute left-4 top-1/2 size-1 -translate-y-1/2 rounded-full bg-current transition-all duration-300 ease-out group-hover:left-5"></span>
-					<span className="absolute right-4 top-1/2 size-1 -translate-y-1/2 rounded-full bg-current transition-all duration-300 ease-out group-hover:right-5"></span>
+					<span className="absolute left-4 top-1/2 size-1 -translate-y-1/2 rounded-full bg-current transition-[left] duration-300 ease-out group-hover:left-5"></span>
+					<span className="absolute right-4 top-1/2 size-1 -translate-y-1/2 rounded-full bg-current transition-[right] duration-300 ease-out group-hover:right-5"></span>
 				</button>
 			</div>
 

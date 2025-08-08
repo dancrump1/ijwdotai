@@ -90,7 +90,7 @@ export default function HeroHome() {
 							key={index + "hero-home"}
 							className="group"
 						>
-							<div className="relative aspect-square overflow-hidden transition-all duration-500 group-hover:rounded-[50%]">
+							<div className="relative aspect-square overflow-hidden transition-[border-radius] duration-500 group-hover:rounded-[50%]">
 								<Image
 									src={page.image}
 									alt={page.slug}

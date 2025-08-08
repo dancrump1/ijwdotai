@@ -136,7 +136,7 @@ const Feature = ({
 						>
 							<span>Check out the whole catelog</span>
 							<div className="relative ml-1 h-5 w-5 overflow-hidden">
-								<div className="absolute transition-all duration-200 group-hover:-translate-y-5 group-hover:translate-x-4">
+								<div className="absolute transition-transform duration-200 group-hover:-translate-y-5 group-hover:translate-x-4">
 									<svg
 										width="15"
 										height="15"

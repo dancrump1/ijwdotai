@@ -68,7 +68,7 @@ export default function ApiKeyError() {
 					<button
 						onClick={handleRetry}
 						disabled={isRetrying}
-						className="w-full bg-black text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
+						className="w-full bg-black text-white py-3 px-4 rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-[background-color] duration-200 flex items-center justify-center gap-2"
 					>
 						{isRetrying ? (
 							<>
@@ -87,7 +87,7 @@ export default function ApiKeyError() {
 						href="https://v0.dev/settings"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="w-full bg-gray-100 text-gray-900 py-3 px-4 rounded-lg font-medium hover:bg-gray-200 transition-all duration-200 flex items-center justify-center gap-2"
+						className="w-full bg-gray-100 text-gray-900 py-3 px-4 rounded-lg font-medium hover:bg-gray-200 transition-[background-color] duration-200 flex items-center justify-center gap-2"
 					>
 						<ExternalLink className="w-4 h-4" />
 						Get API Key from v0.dev

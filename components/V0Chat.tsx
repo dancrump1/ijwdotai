@@ -251,6 +251,7 @@ export default function V0Chat({ files }: { files: any }) {
 					: true,
 		}
 	);
+
 	return (
 		<div className="relative min-h-dvh bg-background">
 			{/* Homepage Welcome Message */}

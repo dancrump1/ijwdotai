@@ -1,15 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
+import dynamic from "next/dynamic";
 import { useParams, useRouter } from "next/navigation";
 
+import { categories } from "@/app/find/page";
 import ApiKeyError from "@/components/ApiKeyError";
 import ErrorDialog from "@/components/ErrorDialog";
 import PromptComponent from "@/components/PromptComponent";
-import { getComponentFilesWithDates } from "@/lib/fetch";
 import { useApiValidation } from "@/lib/useApiValidation";
 import { GoogleAnalytics } from "@next/third-parties/google";
+
+import { ComponentLoading } from "./ClientWrapper";
+import Component from "./Component";
 
 export default function ChatPage({ files }: { files: any }) {
 	const params = useParams();
@@ -409,6 +413,30 @@ export default function ChatPage({ files }: { files: any }) {
 		}
 	};
 
+	const [selectedComponents, setSelectedComponents] = useState([]);
+	const [previewComponent, setPreviewComponent] = useState();
+	const [showPreview, setShowPreview] = useState(true);
+	const { All, New, ...otherCats } = categories;
+
+	const PreviewComponentImport = dynamic(
+		() =>
+			import(
+				"@/components/usages/" +
+					previewComponent?.name.replace(".json", "").replaceAll("-", "") +
+					"usage.tsx"
+			),
+		{
+			loading: ComponentLoading,
+			ssr:
+				previewComponent?.name.toLowerCase().includes("select-modal") ||
+				previewComponent?.name.toLowerCase().includes("dither") ||
+				previewComponent?.name.toLowerCase().includes("text-rotate") ||
+				previewComponent?.name.toLowerCase().includes("flipped-menu")
+					? false
+					: true,
+		}
+	);
+
 	// Show API key error page if needed
 	if (showApiKeyError) {
 		return <ApiKeyError />;
@@ -417,26 +445,122 @@ export default function ChatPage({ files }: { files: any }) {
 	return (
 		<div className="relative min-h-dvh bg-background">
 			{/* Preview Area */}
-			<div className="absolute inset-0 overflow-hidden">
-				{generatedApp ? (
-					<div className="w-full h-full bg-white">
-						{/* Preview container */}
-						{generatedApp.startsWith("http") ? (
-							<iframe
-								src={generatedApp}
-								className="w-full h-full border-0"
-								sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-popups allow-top-navigation-by-user-activation allow-pointer-lock"
-							/>
-						) : (
-							<iframe
-								srcDoc={generatedApp}
-								className="w-full h-full border-0"
-								sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-pointer-lock"
-							/>
+			{showPreview && (
+				<div className="absolute inset-0 overflow-hidden">
+					{generatedApp ? (
+						<div className="w-full h-full bg-white">
+							{/* Preview container */}
+							{generatedApp.startsWith("http") ? (
+								<iframe
+									src={generatedApp}
+									className="w-full h-full border-0"
+									sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-popups allow-top-navigation-by-user-activation allow-pointer-lock"
+								/>
+							) : (
+								<iframe
+									srcDoc={generatedApp}
+									className="w-full h-full border-0"
+									sandbox="allow-scripts allow-same-origin allow-modals allow-forms allow-pointer-lock"
+								/>
+							)}
+						</div>
+					) : null}
+				</div>
+			)}
+
+			{!showPreview && (
+				<section className="flex pb-[200px]">
+					<div>
+						{Object.entries(otherCats).map(
+							([category, subcategories], i) => {
+								const categoryTotal = files.filter(
+									({ name }) =>
+										name.includes(category) ||
+										!!subcategories
+											.map((filter) => name.includes(filter))
+											.filter((item) => !!item).length
+								);
+
+								return (
+									<div className="mx-auto w-[50vw] py-6">
+										{category}
+										<ul
+											key={category}
+											className="grid grid-cols-6 gap-3"
+										>
+											{categoryTotal.map((item) => {
+												const itemName = item.name.replace(
+													".json",
+													""
+												);
+
+												return (
+													<li
+														onMouseEnter={() =>
+															setPreviewComponent(item)
+														}
+														onClick={() => {
+															selectedComponents.includes(
+																itemName
+															)
+																? setSelectedComponents(
+																		(prev) =>
+																			prev.filter(
+																				(prevItem) =>
+																					itemName !==
+																					prevItem
+																			)
+																	)
+																: setSelectedComponents([
+																		itemName,
+																		...selectedComponents,
+																	]);
+														}}
+														className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+															category === "All"
+																? "text-red-400"
+																: "text-white"
+														}`}
+													>
+														{item.name
+															.replace(".json", "")
+															.replaceAll("-", " ")}
+													</li>
+												);
+											})}
+										</ul>
+									</div>
+								);
+							}
 						)}
 					</div>
-				) : null}
-			</div>
+					{!!previewComponent?.name && (
+						<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">
+							<button onClick={() => setPreviewComponent()}>x</button>
+							<Suspense>
+								<Component
+									collapsed={[]}
+									setCollapsed={() => null}
+									gridView={"1"}
+									setComponentCount={() => null}
+									selectedFilters={[]}
+									title={previewComponent?.name.replace(".json", "")}
+									content={previewComponent?.content}
+								>
+									{!!PreviewComponentImport ? (
+										<PreviewComponentImport />
+									) : (
+										<div>
+											failed to load{" "}
+											{previewComponent.name.replace(".json", "")}
+										</div>
+									)}
+								</Component>
+							</Suspense>
+						</div>
+					)}
+				</section>
+			)}
 
 			<PromptComponent
 				onSubmit={handleSubmit}
@@ -456,7 +580,7 @@ export default function ChatPage({ files }: { files: any }) {
 				onChatChange={handleChatChange}
 				onDeleteChat={handleDeleteChat}
 				onRenameChat={handleRenameChat}
-				selectOptions={files}
+				setShowPreview={setShowPreview}
 			/>
 
 			<ErrorDialog

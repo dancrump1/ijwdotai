@@ -88,6 +88,7 @@ interface PromptComponentProps {
 	initialPrompt?: string;
 	initialExpanded?: boolean;
 	selectedComponents: any[];
+	setShowPreview?: () => void;
 
 	// Data for dropdowns (optional)
 	projects?: any[];
@@ -151,6 +152,7 @@ export default function PromptComponent({
 	onRenameChat,
 	selectedComponents,
 	setSelectedComponents,
+	setShowPreview,
 }: PromptComponentProps) {
 	const router = useRouter();
 	const { settings } = useSettings();
@@ -874,6 +876,16 @@ export default function PromptComponent({
 															chats={projectChats}
 															onChatChange={onChatChange}
 														/>
+														{!!setShowPreview && (
+															<input
+																type="checkbox"
+																onClick={() =>
+																	setShowPreview(
+																		(prev) => !prev
+																	)
+																}
+															/>
+														)}
 													</>
 												) : currentProjectId &&
 												  (projects.length === 0 ||

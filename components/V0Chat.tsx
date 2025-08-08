@@ -12,7 +12,6 @@ import ApiKeyError from "./ApiKeyError";
 import { ComponentLoading } from "./ClientWrapper";
 import Component from "./Component";
 import ErrorDialog from "./ErrorDialog";
-import { MultiSelect } from "./MultiSelect";
 import PromptComponent from "./PromptComponent";
 import RateLimitDialog from "./RateLimitDialog";
 

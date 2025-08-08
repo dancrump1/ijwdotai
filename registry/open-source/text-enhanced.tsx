@@ -19,7 +19,7 @@ interface AnimatedTextProps {
 }
 
 export default function TextEnhanced({
-	text = "LINE",
+	text = "DRIVE",
 	className = "",
 	shadowColors = {
 		first: "#07bccc",

@@ -581,6 +581,8 @@ export default function ChatPage({ files }: { files: any }) {
 				onDeleteChat={handleDeleteChat}
 				onRenameChat={handleRenameChat}
 				setShowPreview={setShowPreview}
+				selectedComponents={selectedComponents}
+				setSelectedComponents={setSelectedComponents}
 			/>
 
 			<ErrorDialog

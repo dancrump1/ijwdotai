@@ -209,7 +209,7 @@ export default function PromptComponent({
 		setAttachments(
 			selectedComponents?.map((item) => ({
 				url: `https://components.drivedev.net/r/${item}.json`,
-			}))
+			})) || []
 		);
 	}, [selectedComponents]);
 
@@ -630,7 +630,7 @@ export default function PromptComponent({
 									/>
 
 									{/* Attachments display */}
-									{attachments.length > 0 && (
+									{attachments?.length > 0 && (
 										<div className="mb-3 flex flex-wrap gap-2">
 											{attachments
 												.filter((attachment) => !!attachment.name)

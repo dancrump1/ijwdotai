@@ -1551,12 +1551,12 @@ export default function MarketingAgencySite() {
 					id="home"
 					className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted"
 				>
-					<DynamicTextGradientTransition />
+					<TextGradientTransition />
 				</section>
 
 				{/* Services Overview */}
 				<section id="services">
-					<DynamicHoverSquares />
+					<HoverSquares />
 				</section>
 
 				{/* Detailed Services */}
@@ -1600,7 +1600,7 @@ export default function MarketingAgencySite() {
 
 				{/* Portfolio Section */}
 				<section id="portfolio">
-					<DynamicImageReveal />
+					<ImageReveal />
 				</section>
 
 				{/* Testimonials Section */}
@@ -1617,7 +1617,7 @@ export default function MarketingAgencySite() {
 						</p>
 					</div>
 					<div className="relative w-full h-[450px] flex items-center justify-center">
-						<DynamicCardSwap
+						<CardSwap
 							cardDistance={60}
 							verticalDistance={70}
 							delay={5000}
@@ -1682,7 +1682,7 @@ export default function MarketingAgencySite() {
 									Innovations
 								</p>
 							</SwapCard>
-						</DynamicCardSwap>
+						</CardSwap>
 					</div>
 				</section>
 
@@ -1698,7 +1698,7 @@ export default function MarketingAgencySite() {
 						</p>
 					</div>
 					<div className="w-full h-40 flex items-center justify-center relative overflow-hidden">
-						<DynamicMarqueeAlongSvgPath
+						<MarqueeAlongSvgPath
 							path="M1 209.434C58.5872 255.935 387.926 325.938 482.583 209.434C600.905 63.8051 525.516 -43.2211 427.332 19.9613C329.149 83.1436 352.902 242.723 515.041 267.302C644.752 286.966 943.56 181.94 995 156.5"
 							baseVelocity={4}
 							slowdownOnHover={true}
@@ -1724,13 +1724,13 @@ export default function MarketingAgencySite() {
 									/>
 								</div>
 							))}
-						</DynamicMarqueeAlongSvgPath>
+						</MarqueeAlongSvgPath>
 					</div>
 				</section>
 
 				{/* FAQ Section */}
 				<section id="faq">
-					<DynamicFAQPage />
+					<FAQPage />
 				</section>
 
 				{/* Contact Section */}
@@ -1746,7 +1746,7 @@ export default function MarketingAgencySite() {
 							Join our newsletter for marketing insights or get in touch
 							for a personalized consultation.
 						</p>
-						<DynamicFancyInput />
+						<FancyInput />
 					</div>
 				</section>
 			</main>

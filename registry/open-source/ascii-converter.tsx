@@ -16,6 +16,9 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Download, GripVertical, Upload } from "lucide-react";
 
+// Credit:
+// https://v0.app/chat/image-to-ascii-pvp9Kq4jLgZ
+
 // Define a type for colored ASCII characters
 type ColoredChar = {
 	char: string;

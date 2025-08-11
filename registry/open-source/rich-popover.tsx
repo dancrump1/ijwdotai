@@ -8,6 +8,8 @@ import * as Popover from "@radix-ui/react-popover";
 import { Clock, ExternalLink, Play } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
+// Credit:
+// https://smoothui.dev/doc/components/rich-popover
 export interface RichTooltipProps {
 	trigger: React.ReactNode;
 	title: string;

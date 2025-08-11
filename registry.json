@@ -175,6 +175,49 @@
 			]
 		},
 		{
+			"name": "ascii-converter",
+			"type": "registry:block",
+			"title": "Ascii converter",
+			"description": "Ascii converter",
+			"files": [
+				{
+					"path": "components/usages/asciiconverterusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/ascii-converter.tsx",
+					"type": "registry:ui",
+					"target": "open-source/ascii-converter.tsx"
+				},
+				{
+					"path": "./components/ui/button.tsx",
+					"type": "registry:ui",
+					"target": "components/ui/button.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				},
+				{
+					"path": "./components/ui/label.tsx",
+					"type": "registry:ui",
+					"target": "components/ui/label.tsx"
+				},
+				{
+					"path": "./components/ui/slider.tsx",
+					"type": "registry:ui",
+					"target": "components/ui/slider.tsx"
+				},
+				{
+					"path": "./components/ui/switch.tsx",
+					"type": "registry:ui",
+					"target": "components/ui/switch.tsx"
+				}
+			]
+		},
+		{
 			"name": "attractor",
 			"type": "registry:block",
 			"title": "Attractor",
@@ -913,6 +956,11 @@
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				},
+				{
+					"path": "registry/open-source/sparkles.tsx",
+					"type": "registry:ui",
+					"target": "open-source/sparkles.tsx"
 				}
 			]
 		},
@@ -4018,6 +4066,16 @@
 					"path": "registry/open-source/lamp.tsx",
 					"type": "registry:ui",
 					"target": "open-source/lamp.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				},
+				{
+					"path": "registry/open-source/sparkles.tsx",
+					"type": "registry:ui",
+					"target": "open-source/sparkles.tsx"
 				}
 			]
 		},
@@ -5042,6 +5100,21 @@
 					"path": "registry/open-source/price-card.tsx",
 					"type": "registry:ui",
 					"target": "open-source/price-card.tsx"
+				},
+				{
+					"path": "registry/open-source/scaling-button.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scaling-button.tsx"
+				},
+				{
+					"path": "./components/ui/button.tsx",
+					"type": "registry:ui",
+					"target": "components/ui/button.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
 				}
 			]
 		},
@@ -5175,6 +5248,24 @@
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "rich-popover",
+			"type": "registry:block",
+			"title": "Rich popover",
+			"description": "Rich popover",
+			"files": [
+				{
+					"path": "components/usages/richpopoverusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/rich-popover.tsx",
+					"type": "registry:ui",
+					"target": "open-source/rich-popover.tsx"
 				}
 			]
 		},
@@ -5323,6 +5414,11 @@
 			"description": "Scroll reveal paragraph",
 			"files": [
 				{
+					"path": "components/usages/scrollrevealparagraphusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
 					"path": "registry/open-source/scroll-reveal-paragraph.tsx",
 					"type": "registry:ui",
 					"target": "open-source/scroll-reveal-paragraph.tsx"
@@ -5385,6 +5481,11 @@
 					"path": "./lib/utils.ts",
 					"type": "registry:ui",
 					"target": "lib/utils.ts"
+				},
+				{
+					"path": "registry/open-source/three-dot-loader.tsx",
+					"type": "registry:ui",
+					"target": "open-source/three-dot-loader.tsx"
 				}
 			]
 		},

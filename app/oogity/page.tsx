@@ -13,7 +13,6 @@ import React, {
 	useState,
 } from "react";
 
-import dynamic from "next/dynamic"; // Import dynamic
 import Image from "next/image";
 import Link from "next/link";
 
@@ -49,7 +48,6 @@ import {
 	SiSpotify,
 	SiTiktok,
 } from "react-icons/si";
-import { useMediaQuery } from "usehooks-ts";
 
 const titleWords = [
 	{ text: "Innovate.", startColor: "#0071f2", endColor: "#01dfd8" },
@@ -1384,29 +1382,6 @@ const MarqueeAlongSvgPath = ({
 		</div>
 	);
 };
-
-// Dynamically import interactive components
-const DynamicTextGradientTransition = dynamic(
-	() => Promise.resolve(TextGradientTransition),
-	{ ssr: false }
-);
-const DynamicHoverSquares = dynamic(() => Promise.resolve(HoverSquares), {
-	ssr: false,
-});
-const DynamicCardSwap = dynamic(() => Promise.resolve(CardSwap), {
-	ssr: false,
-});
-const DynamicFancyInput = dynamic(() => Promise.resolve(FancyInput), {
-	ssr: false,
-});
-const DynamicImageReveal = dynamic(() => Promise.resolve(ImageReveal), {
-	ssr: false,
-});
-const DynamicFAQPage = dynamic(() => Promise.resolve(FAQPage), { ssr: false });
-const DynamicMarqueeAlongSvgPath = dynamic(
-	() => Promise.resolve(MarqueeAlongSvgPath),
-	{ ssr: false }
-);
 
 export default function MarketingAgencySite() {
 	const clientLogos = [

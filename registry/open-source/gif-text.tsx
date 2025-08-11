@@ -113,7 +113,7 @@ const GifText = React.memo(function GifTextComponent({
 			{/* Hidden image for preloading */}
 			{gifUrl && (
 				<Image
-					src={gifUrl || "/placeholder.svg"}
+					src={gifUrl || "/itjustworks.jpg"}
 					alt=""
 					width={1}
 					height={1}

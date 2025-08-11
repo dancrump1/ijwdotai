@@ -683,13 +683,12 @@ const images: ImageData[] = [
 	},
 	{
 		id: 4,
-		src: "/placeholder.svg?height=400&width=300",
+		src: "/itjustworks.jpg",
 		alt: "Public Relations Strategy",
 	},
 ];
 
 const ImageReveal: React.FC = () => {
-	const isDesktop = useMediaQuery("(min-width: 768px)");
 	const [activeImage, setActiveImage] = useState<ImageData | null>(null);
 	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 	const [opacity, setOpacity] = useState(0);
@@ -773,13 +772,12 @@ const ImageReveal: React.FC = () => {
 						className={`p-4 cursor-pointer relative sm:flex items-center justify-between`}
 						onMouseEnter={() => handleImageHover(image)}
 					>
-						{!isDesktop && (
-							<img
-								src="/itjustworks.jpg"
-								className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md"
-								alt="mobileImg"
-							/>
-						)}
+						<img
+							src="/itjustworks.jpg"
+							className="sm:w-32 sm:h-20 w-full h-52 object-cover rounded-md block md:hidden"
+							alt="mobileImg"
+						/>
+
 						<h2
 							className={`text-foreground uppercase md:text-5xl sm:text-2xl text-xl font-semibold sm:py-6 py-2 leading-[100%] relative ${
 								activeImage?.id === image?.id
@@ -805,13 +803,13 @@ const ImageReveal: React.FC = () => {
 						/>
 					</div>
 				))}
-				{isDesktop && activeImage && (
+				{activeImage && (
 					<Image
 						height={200}
 						width={200}
 						src={activeImage.src || "/itjustworks.jpg"}
 						alt={activeImage.alt}
-						className={`fixed bg-card object-cover pointer-events-none z-10 w-[300px] h-[400px] rounded-lg shadow-xl`}
+						className={`fixed hidden md:block bg-card object-cover pointer-events-none z-10 w-[300px] h-[400px] rounded-lg shadow-xl`}
 						style={{
 							left: `${cursorPosition.x}px`,
 							top: `${cursorPosition.y}px`,
@@ -1701,6 +1699,7 @@ export default function MarketingAgencySite() {
 						<MarqueeAlongSvgPath
 							path="M1 209.434C58.5872 255.935 387.926 325.938 482.583 209.434C600.905 63.8051 525.516 -43.2211 427.332 19.9613C329.149 83.1436 352.902 242.723 515.041 267.302C644.752 286.966 943.56 181.94 995 156.5"
 							baseVelocity={4}
+							pathId="oogity-boogity"
 							slowdownOnHover={true}
 							draggable={true}
 							repeat={2}

@@ -30,26 +30,18 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			{/* React scan */}
-			{/* <head>
-				<script
-					crossOrigin="anonymous"
-					src="//unpkg.com/react-scan/dist/auto.global.js"
-				/>
-			</head> */}
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<NuqsAdapter>
-					<ThemeProvider
-						attribute="class"
-						defaultTheme="system"
-						enableSystem
-					>
-						{children}
-					</ThemeProvider>
-				</NuqsAdapter>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<NuqsAdapter>{children}</NuqsAdapter>
+				</ThemeProvider>
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />
 		</html>

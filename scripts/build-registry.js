@@ -149,7 +149,10 @@ const buildRegistry = () => {
 		items: registryItems,
 	};
 
-	fs.writeFileSync(registryOutputPath, JSON.stringify(registryData, null, 2));
+	fs.writeFileSync(
+		path.join(process.cwd(), "registry.json"),
+		JSON.stringify(registryData, null, 2)
+	);
 };
 
 buildRegistry();

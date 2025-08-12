@@ -5385,6 +5385,32 @@
 			]
 		},
 		{
+			"name": "scroll-horizontal-2",
+			"type": "registry:block",
+			"title": "Scroll horizontal 2",
+			"description": "Scroll horizontal 2",
+			"files": [
+				{
+					"path": "registry/open-source/scroll-horizontal-2.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scroll-horizontal-2.tsx"
+				}
+			]
+		},
+		{
+			"name": "scroll-horizontal",
+			"type": "registry:block",
+			"title": "Scroll horizontal",
+			"description": "Scroll horizontal",
+			"files": [
+				{
+					"path": "registry/open-source/scroll-horizontal.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scroll-horizontal.tsx"
+				}
+			]
+		},
+		{
 			"name": "scroll-island",
 			"type": "registry:block",
 			"title": "Scroll island",
@@ -5458,6 +5484,52 @@
 					"path": "registry/open-source/scroll-trigger-context.tsx",
 					"type": "registry:ui",
 					"target": "open-source/scroll-trigger-context.tsx"
+				}
+			]
+		},
+		{
+			"name": "scroll-velocity",
+			"type": "registry:block",
+			"title": "Scroll velocity",
+			"description": "Scroll velocity",
+			"files": [
+				{
+					"path": "components/usages/scrollvelocityusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/scroll-velocity.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scroll-velocity.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
+				}
+			]
+		},
+		{
+			"name": "scrollable-card-stack",
+			"type": "registry:block",
+			"title": "Scrollable card stack",
+			"description": "Scrollable card stack",
+			"files": [
+				{
+					"path": "components/usages/scrollablecardstackusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
+					"path": "registry/open-source/scrollable-card-stack.tsx",
+					"type": "registry:ui",
+					"target": "open-source/scrollable-card-stack.tsx"
+				},
+				{
+					"path": "./lib/utils.ts",
+					"type": "registry:ui",
+					"target": "lib/utils.ts"
 				}
 			]
 		},

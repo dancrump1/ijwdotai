@@ -27,69 +27,69 @@ export function throttle(fn: (...args: any[]) => any, wait: number) {
 export const items = [
 	{
 		id: 1,
-		url: "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 2,
-		url: "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 3,
-		url: "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 4,
-		url: "https://images.unsplash.com/photo-1584043204475-8cc101d6c77a?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 5,
-		url: "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 
 	{
 		id: 7,
-		url: "https://images.unsplash.com/photo-1518599904199-0ca897819ddb?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 8,
-		url: "https://images.unsplash.com/photo-1706049379414-437ec3a54e93?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 
 	{
 		id: 91,
-		url: "https://images.unsplash.com/photo-1709949908219-fd9046282019?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 92,
-		url: "https://images.unsplash.com/photo-1462989856370-729a9c1e2c91?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 10,
-		url: "https://images.unsplash.com/photo-1475727946784-2890c8fdb9c8?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 11,
-		url: "https://images.unsplash.com/photo-1546942113-a6c43b63104a?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 12,
-		url: "https://images.unsplash.com/photo-1726551195764-f98a8e8a57c3?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 13,
-		url: "https://images.unsplash.com/photo-1726551195795-612ca47c0b7d?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 14,
-		url: "https://images.unsplash.com/photo-1532423622396-10a3f979251a?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 15,
-		url: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 	{
 		id: 16,
-		url: "https://images.unsplash.com/photo-1496861083958-175bb1bd5702?q=80&w=1200&auto=format",
+		url: "/itjustworks.jpg",
 	},
 ];
 
@@ -120,7 +120,7 @@ const slideAnimation: MotionProps = {
 	viewport: { amount: 1, once: false },
 };
 
-export default function index() {
+export default function ScrollHorizontal() {
 	const mainRef = useRef<HTMLDivElement>(null);
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const { position } = useElementViewportPosition(mainRef);
@@ -175,7 +175,7 @@ export default function index() {
 							{items.map((item, index) => (
 								<motion.div
 									{...slideAnimation}
-									key={item.id}
+									key={item.id + "scroll-2-horizontal-item"}
 									className="group relative h-[300px] w-[300px] overflow-hidden bg-neutral-200"
 								>
 									<motion.img

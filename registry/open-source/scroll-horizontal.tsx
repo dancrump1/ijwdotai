@@ -61,7 +61,7 @@ export default function HorizontalScroll(): JSX.Element {
 									PASSION
 								</h2>
 								<Image
-									src="https://res.cloudinary.com/dzl9yxixg/image/upload/v1713532202/ui-layout/team_gsu8ej.png"
+									src="/itjustworks.jpg"
 									className="2xl:w-[550px] w-[380px] absolute bottom-0"
 									width={500}
 									height={500}
@@ -73,7 +73,7 @@ export default function HorizontalScroll(): JSX.Element {
 									WORK
 								</h2>
 								<Image
-									src="https://res.cloudinary.com/dzl9yxixg/image/upload/v1713532202/ui-layout/team_gsu8ej.png"
+									src="/itjustworks.jpg"
 									className="2xl:w-[550px] w-[380px] absolute bottom-0"
 									width={500}
 									height={500}
@@ -85,7 +85,7 @@ export default function HorizontalScroll(): JSX.Element {
 									MOTIVATION
 								</h2>
 								<Image
-									src="https://res.cloudinary.com/dzl9yxixg/image/upload/v1713532202/ui-layout/team_gsu8ej.png"
+									src="/itjustworks.jpg"
 									className="2xl:w-[550px] w-[380px] absolute bottom-0"
 									width={500}
 									height={500}
@@ -97,7 +97,7 @@ export default function HorizontalScroll(): JSX.Element {
 									INSPIRATION
 								</h2>
 								<Image
-									src="https://res.cloudinary.com/dzl9yxixg/image/upload/v1713532202/ui-layout/team_gsu8ej.png"
+									src="/itjustworks.jpg"
 									className="2xl:w-[550px] w-[380px] absolute bottom-0"
 									width={500}
 									height={500}
@@ -109,7 +109,7 @@ export default function HorizontalScroll(): JSX.Element {
 									BELIVE
 								</h2>
 								<Image
-									src="https://res.cloudinary.com/dzl9yxixg/image/upload/v1713532202/ui-layout/team_gsu8ej.png"
+									src="/itjustworks.jpg"
 									className="2xl:w-[550px] w-[380px] absolute bottom-0"
 									width={500}
 									height={500}

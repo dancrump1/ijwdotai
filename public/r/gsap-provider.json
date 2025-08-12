@@ -14,8 +14,7 @@
     {
       "path": "registry/open-source/gsap-provider.tsx",
       "content": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\n\nimport Tempus from \"tempus\";\nimport gsap from \"gsap\";\n\nimport { ScrollTriggerConfig } from \"./ScrollTriggerContext\";\n\nexport function GsapProvider({ scrollTrigger = true }) {\n\tconst [isMounted, setIsMounted] = useState(false);\n\tuseEffect(() => {\n\t\tgsap.defaults({ ease: \"none\" });\n\n\t\t// merge rafs\n\t\tgsap.ticker.lagSmoothing(0);\n\t\tgsap.ticker.remove(gsap.updateRoot);\n\t\tTempus?.add((time: number) => {\n\t\t\tgsap.updateRoot(time / 1000);\n\t\t}, 0);\n\n\t\tsetIsMounted(true);\n\t}, []);\n\n\tif (!isMounted) return null;\n\n\treturn scrollTrigger && <ScrollTriggerConfig />;\n}\n",
-      "type": "registry:ui",
-      "target": "open-source/gsap-provider.tsx"
+      "type": "registry:ui"
     }
   ]
 }

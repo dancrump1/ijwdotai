@@ -5,7 +5,7 @@ const path = require("path");
 const registryPath = path.join(process.cwd(), "registry");
 const openSourcePath = path.join(registryPath, "open-source");
 const registryOutputPath = path.join(registryPath, "registry.json");
-const registryUtilsPath = path.join(registryPath, "utils");
+const registryUtilsPath = path.join(registryPath, "utilities");
 
 // Metadata
 const registrySchemaUrl = "https://ui.shadcn.com/schema/registry.json";
@@ -18,7 +18,7 @@ const aliasPaths = {
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
 	"@/components/usages": path.join(process.cwd(), "components", "usages"),
 	"@/registry/open-source": openSourcePath,
-	"@/registry/utils": registryUtilsPath,
+	"@/registry/utilities": registryUtilsPath,
 };
 
 // Helpers
@@ -60,19 +60,36 @@ const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
 		return [];
 	visitedFiles.add(absolutePath);
 
-	const relativePath = path
+	let relativePath = path
 		.relative(registryPath, absolutePath)
 		.replace(/\\/g, "/");
-	const targetPath = relativePath.startsWith("registry")
-		? `components/${path.basename(absolutePath)}`
-		: relativePath
-				.replace(/^.*?components\//, "components/")
-				.replace("../", "");
+
+	// Prefix registry subfolders
+	if (
+		relativePath.startsWith("open-source/") ||
+		relativePath.startsWith("utilities/")
+	) {
+		relativePath = `registry/${relativePath}`;
+	}
+
+	// Target path rules
+	let targetPath;
+	if (relativePath.startsWith("registry/open-source/")) {
+		targetPath = `components/${path.basename(absolutePath)}`;
+	} else if (relativePath.startsWith("registry/")) {
+		targetPath = relativePath.replace(/^registry\//, "");
+	} else {
+		targetPath = relativePath;
+	}
+
+	// Only normalize "../" → "./" for registry files
+	const normalizeDots = (p) =>
+		p.startsWith("registry/") ? p.replace(/^(\.\.\/)+/, "./") : p;
 
 	const fileData = {
-		path: relativePath,
+		path: normalizeDots(relativePath).replace("../", ""),
 		type: "registry:ui",
-		target: targetPath.replace("../", ""),
+		// target: normalizeDots(targetPath).replace("../", ""),
 	};
 
 	const imports = extractImports(fs.readFileSync(absolutePath, "utf-8"));

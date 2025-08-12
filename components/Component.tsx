@@ -203,10 +203,7 @@ const Component = ({
 					{showCode ? "preview" : "code"}
 				</button>
 				<OpenInV0Button
-					name={title
-						.replaceAll(" ", "")
-						.replaceAll("-", "")
-						.toLowerCase()}
+					name={title.replaceAll(" ", "").toLowerCase()}
 					className="w-fit mx-4"
 				/>
 

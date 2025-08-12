@@ -7,8 +7,8 @@ import Link from "next/link";
 import CircularBarsSpinnerLoader from "@/registry/open-source/circular-bars-loader";
 import CodeBlock from "@/registry/open-source/code-block";
 import { ICON_LIST } from "@/registry/open-source/icons/index";
-import { filterOptions } from "@/registry/utils/example_data";
-import { cn } from "@/registry/utils/utils";
+import { filterOptions } from "@/registry/utilities/example_data";
+import { cn } from "@/registry/utilities/utils";
 
 import { OpenInV0Button } from "./open-in-v0-button";
 

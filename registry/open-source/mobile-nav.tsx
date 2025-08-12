@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 const NavAccordion = AccordionPrimitive.Root;

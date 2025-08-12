@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, motion } from "motion/react";
 
 const CardTags = ({ tags, setOpen, open }) => {

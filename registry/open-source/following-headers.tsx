@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type HTMLProps } from "react";
 
 import Link from "next/link";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 

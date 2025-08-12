@@ -3,7 +3,7 @@
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { motion, useAnimation } from "motion/react";
 
 export interface StethoscopeIconHandle {

@@ -8,7 +8,7 @@ import React, {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Credit:

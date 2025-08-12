@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { Facebook, Link, Linkedin, Twitter } from "lucide-react";
 
 export function Btn08({

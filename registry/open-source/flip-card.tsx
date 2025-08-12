@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 // Credit:

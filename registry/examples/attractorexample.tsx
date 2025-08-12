@@ -1,5 +1,5 @@
 import Attractor, { MatterBody } from "@/components/Attractor";
-import { useWindowSize } from "@/registry/utils/useWindowSize";
+import { useWindowSize } from "@/registry/utilities/useWindowSize";
 
 export default function AttractorPreview() {
 	const screenSize = useWindowSize();

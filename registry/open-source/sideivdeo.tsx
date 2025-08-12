@@ -2,7 +2,7 @@
 
 import React, { forwardRef, ReactNode } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import useMeasure from "react-use-measure";
 

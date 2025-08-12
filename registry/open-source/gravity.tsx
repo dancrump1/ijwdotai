@@ -12,9 +12,9 @@ import {
 	useState,
 } from "react";
 
-import { calculatePosition } from "@/registry/utils/calculatePosition";
-import { parsePathToVertices } from "@/registry/utils/parsePathToVertices";
-import { cn } from "@/registry/utils/utils";
+import { calculatePosition } from "@/registry/utilities/calculatePosition";
+import { parsePathToVertices } from "@/registry/utilities/parsePathToVertices";
+import { cn } from "@/registry/utilities/utils";
 import Matter, {
 	Bodies,
 	Common,

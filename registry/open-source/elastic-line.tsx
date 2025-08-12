@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-import { useDimensions } from "@/registry/utils/useDimensions";
-import { useElasticLineEvents } from "@/registry/utils/useElasticeLineEvents";
+import { useDimensions } from "@/registry/utilities/useDimensions";
+import { useElasticLineEvents } from "@/registry/utilities/useElasticeLineEvents";
 import {
 	animate,
 	motion,

@@ -10,7 +10,7 @@ import {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { motion, Transition, useInView, UseInViewOptions } from "motion/react";
 
 // Credit:

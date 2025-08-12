@@ -9,7 +9,7 @@ import React, {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { X } from "lucide-react";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
 

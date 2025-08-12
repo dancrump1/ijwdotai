@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 export function OpenInV0Button({
 	name,

@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 export function FeaturesSectionDemo() {
 	const features = [

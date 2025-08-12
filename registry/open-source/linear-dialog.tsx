@@ -10,7 +10,7 @@ import React, {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 // import useClickOutside from '@/hooks/useClickOutside';
 import { XIcon } from "lucide-react";
 import {

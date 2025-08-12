@@ -2,7 +2,7 @@
 
 import { useId, useMemo } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { AnimatePresence, motion, Transition, Variants } from "motion/react";
 
 // Credit:

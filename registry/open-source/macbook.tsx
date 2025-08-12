@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 import { AnimatedTooltip } from "./ToolTip";

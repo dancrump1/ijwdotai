@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 
 const SharePopoverContent = ({ onClose, shareString }) => {
 	const [copied, setCopied] = useState(false);

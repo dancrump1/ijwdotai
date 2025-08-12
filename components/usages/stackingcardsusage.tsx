@@ -7,7 +7,7 @@ import Image from "next/image";
 import StackingCards, {
 	StackingCardItem,
 } from "@/registry/open-source/stacking-cards";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 const cards = [
 	{

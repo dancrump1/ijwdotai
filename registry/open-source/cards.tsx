@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 
 import Link from "next/link";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { AnimatePresence, motion } from "motion/react";
 
 const CardContainer = ({ children, className }) => {

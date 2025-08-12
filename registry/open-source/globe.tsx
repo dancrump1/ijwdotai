@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import countries from "@/registry/utils/globe.json";
+import countries from "@/registry/utilities/globe.json";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, extend, useThree } from "@react-three/fiber";
 import { Color, Fog, PerspectiveCamera, Scene, Vector3 } from "three";

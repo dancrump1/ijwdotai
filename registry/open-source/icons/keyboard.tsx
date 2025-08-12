@@ -10,7 +10,7 @@ import {
 } from "react";
 import type { HTMLAttributes } from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, motion, useAnimation } from "motion/react";
 
 export interface KeyboardIconHandle {

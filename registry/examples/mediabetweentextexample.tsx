@@ -4,7 +4,7 @@ import MediaBetweenText, {
 	MediaBetweenTextRef,
 } from "@/components/MediaBetweenText";
 import { Button } from "@/components/ui/button";
-import { useWindowSize } from "@/registry/utils/useWindowSize";
+import { useWindowSize } from "@/registry/utilities/useWindowSize";
 
 // Credit:
 // https://www.fancycomponents.dev/docs/components/blocks/media-between-text

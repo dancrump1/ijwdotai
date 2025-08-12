@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 
 import { Popover, PopoverContent, PopoverTrigger } from "../atoms/popover";
 import InlineInputController from "./InlineInput";

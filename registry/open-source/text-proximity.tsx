@@ -2,7 +2,7 @@
 
 import React, { CSSProperties, forwardRef, useRef } from "react";
 
-import { useMousePositionRef } from "@/registry/utils/useMousePosition";
+import { useMousePositionRef } from "@/registry/utilities/useMousePosition";
 import {
 	motion,
 	useAnimationFrame,

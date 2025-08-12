@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { AnimationScope, motion, useAnimate } from "motion/react";
 import { FiArrowUpRight, FiMenu } from "react-icons/fi";
 import useMeasure from "react-use-measure";

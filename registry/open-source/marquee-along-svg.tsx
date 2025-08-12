@@ -1,6 +1,6 @@
 import React, { RefObject, useCallback, useEffect, useRef } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import {
 	motion,
 	SpringOptions,

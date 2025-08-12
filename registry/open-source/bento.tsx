@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 import "lazysizes";
 

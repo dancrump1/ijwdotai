@@ -3,7 +3,7 @@
 import type React from "react";
 import { useState } from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { Loader } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 

@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Boxes } from "@/components/BackgroundBoxes";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 export default function Example() {
 	return (

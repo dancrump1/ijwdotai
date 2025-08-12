@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 import Image from "next/image";
 
-import { useOrientation } from "@/registry/utils/useOrientation";
+import { useOrientation } from "@/registry/utilities/useOrientation";
 import HTMLFlipBook from "react-pageflip";
 
 // Credit:

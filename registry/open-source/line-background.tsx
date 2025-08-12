@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 import { motion, MotionValue } from "motion/react";
 
 // https://ui.aceternity.com/components/google-gemini-effect

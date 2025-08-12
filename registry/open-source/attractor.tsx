@@ -12,10 +12,10 @@ import {
 	useState,
 } from "react";
 
-import { calculatePosition } from "@/registry/utils/calculatePosition";
-import { parsePathToVertices } from "@/registry/utils/parsePathToVertices";
-import { useMousePositionRef } from "@/registry/utils/useMousePosition";
-import { cn } from "@/registry/utils/utils";
+import { calculatePosition } from "@/registry/utilities/calculatePosition";
+import { parsePathToVertices } from "@/registry/utilities/parsePathToVertices";
+import { useMousePositionRef } from "@/registry/utilities/useMousePosition";
+import { cn } from "@/registry/utilities/utils";
 import { debounce } from "lodash";
 import Matter, {
 	Bodies,

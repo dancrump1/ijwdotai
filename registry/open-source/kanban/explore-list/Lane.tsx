@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { useSearchParams } from "next/navigation";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence } from "motion/react";
 
 const Lane = ({ children, ...rest }) => {

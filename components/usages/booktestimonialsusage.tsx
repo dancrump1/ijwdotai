@@ -3,7 +3,7 @@
 import React from "react";
 
 import BookTestimonial3D from "@/registry/open-source/book-testimonials";
-import { testimonials } from "@/registry/utils/example_data";
+import { testimonials } from "@/registry/utilities/example_data";
 
 export default function Usage() {
 	return (

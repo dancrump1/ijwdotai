@@ -9,7 +9,7 @@ import React, {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utils/cn";
+import { cn } from "@/registry/utilities/cn";
 import { createPortal } from "react-dom";
 
 export interface TourContext<T extends string> {

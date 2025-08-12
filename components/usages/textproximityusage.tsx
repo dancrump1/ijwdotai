@@ -3,7 +3,7 @@
 import React from "react";
 
 import TextCursorProximity from "@/registry/open-source/text-proximity";
-import { ASCII } from "@/registry/utils/example_data";
+import { ASCII } from "@/registry/utilities/example_data";
 
 export default function Usage() {
 	return (

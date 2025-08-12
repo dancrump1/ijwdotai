@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import StackingCards, { StackingCardItem } from "@/components/StackingCards";
-import { cn } from "@/registry/utils/utils";
+import { cn } from "@/registry/utilities/utils";
 
 const cards = [
 	{

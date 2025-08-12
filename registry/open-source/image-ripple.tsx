@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from "react";
 
-import useRippleDimensions from "@/registry/utils/rippleDimensions";
-import useMouse from "@/registry/utils/useMouse";
-import { useMousePositionRef } from "@/registry/utils/useMousePosition";
+import useRippleDimensions from "@/registry/utilities/rippleDimensions";
+import useMouse from "@/registry/utilities/useMouse";
+import { useMousePositionRef } from "@/registry/utilities/useMousePosition";
 import { OrthographicCamera, useFBO, useTexture } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";

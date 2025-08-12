@@ -612,23 +612,6 @@
       ]
     },
     {
-      "name": "card-swap",
-      "type": "registry:block",
-      "title": "Card swap",
-      "description": "Card swap",
-      "files": [
-        {
-          "path": "components/usages/cardswapusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/card-swap.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "cards",
       "type": "registry:block",
       "title": "Cards",
@@ -645,6 +628,23 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-swap",
+      "type": "registry:block",
+      "title": "Card swap",
+      "description": "Card swap",
+      "files": [
+        {
+          "path": "components/usages/cardswapusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/card-swap.tsx",
           "type": "registry:ui"
         }
       ]
@@ -807,6 +807,23 @@
       ]
     },
     {
+      "name": "colorful-text",
+      "type": "registry:block",
+      "title": "Colorful text",
+      "description": "Colorful text",
+      "files": [
+        {
+          "path": "components/usages/colorfultextusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/colorful-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "color-picker",
       "type": "registry:block",
       "title": "Color picker",
@@ -835,23 +852,6 @@
         },
         {
           "path": "components/ui/label.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "colorful-text",
-      "type": "registry:block",
-      "title": "Colorful text",
-      "description": "Colorful text",
-      "files": [
-        {
-          "path": "components/usages/colorfultextusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/colorful-text.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1309,23 +1309,6 @@
       ]
     },
     {
-      "name": "feature",
-      "type": "registry:block",
-      "title": "Feature",
-      "description": "Feature",
-      "files": [
-        {
-          "path": "components/usages/featureusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/feature.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "features",
       "type": "registry:block",
       "title": "Features",
@@ -1338,6 +1321,23 @@
         },
         {
           "path": "registry/open-source/features.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "feature",
+      "type": "registry:block",
+      "title": "Feature",
+      "description": "Feature",
+      "files": [
+        {
+          "path": "components/usages/featureusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/feature.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1567,23 +1567,6 @@
       ]
     },
     {
-      "name": "fold-hover-button",
-      "type": "registry:block",
-      "title": "Fold hover button",
-      "description": "Fold hover button",
-      "files": [
-        {
-          "path": "components/usages/foldhoverbuttonusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/fold-hover-button.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "folder",
       "type": "registry:block",
       "title": "Folder",
@@ -1596,6 +1579,23 @@
         },
         {
           "path": "registry/open-source/folder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fold-hover-button",
+      "type": "registry:block",
+      "title": "Fold hover button",
+      "description": "Fold hover button",
+      "files": [
+        {
+          "path": "components/usages/foldhoverbuttonusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/fold-hover-button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1799,6 +1799,10 @@
         },
         {
           "path": "registry/open-source/gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/section-header.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2213,6 +2217,23 @@
       ]
     },
     {
+      "name": "hover-cards",
+      "type": "registry:block",
+      "title": "Hover cards",
+      "description": "Hover cards",
+      "files": [
+        {
+          "path": "components/usages/hovercardsusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/hover-cards.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "hover-card",
       "type": "registry:block",
       "title": "Hover card",
@@ -2229,23 +2250,6 @@
         },
         {
           "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "hover-cards",
-      "type": "registry:block",
-      "title": "Hover cards",
-      "description": "Hover cards",
-      "files": [
-        {
-          "path": "components/usages/hovercardsusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/hover-cards.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3680,23 +3684,6 @@
       ]
     },
     {
-      "name": "letter-hover",
-      "type": "registry:block",
-      "title": "Letter hover",
-      "description": "Letter hover",
-      "files": [
-        {
-          "path": "components/usages/letterhoverusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/letter-hover.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "letter3d-swap",
       "type": "registry:block",
       "title": "Letter3d swap",
@@ -3713,6 +3700,23 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "letter-hover",
+      "type": "registry:block",
+      "title": "Letter hover",
+      "description": "Letter hover",
+      "files": [
+        {
+          "path": "components/usages/letterhoverusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/letter-hover.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3735,27 +3739,6 @@
       ]
     },
     {
-      "name": "line-background",
-      "type": "registry:block",
-      "title": "Line background",
-      "description": "Line background",
-      "files": [
-        {
-          "path": "components/usages/linebackgroundusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/line-background.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "linear-dialog",
       "type": "registry:block",
       "title": "Linear dialog",
@@ -3768,6 +3751,27 @@
         },
         {
           "path": "registry/open-source/linear-dialog.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "line-background",
+      "type": "registry:block",
+      "title": "Line background",
+      "description": "Line background",
+      "files": [
+        {
+          "path": "components/usages/linebackgroundusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/line-background.tsx",
           "type": "registry:ui"
         },
         {
@@ -4094,35 +4098,6 @@
       ]
     },
     {
-      "name": "nav-bar",
-      "type": "registry:block",
-      "title": "Nav bar",
-      "description": "Nav bar",
-      "files": [
-        {
-          "path": "components/usages/navbarusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/nav-bar.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "components/ui/button.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "navbar2",
       "type": "registry:block",
       "title": "Navbar2",
@@ -4176,6 +4151,35 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nav-bar",
+      "type": "registry:block",
+      "title": "Nav bar",
+      "description": "Nav bar",
+      "files": [
+        {
+          "path": "components/usages/navbarusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/nav-bar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -4358,6 +4362,23 @@
       ]
     },
     {
+      "name": "ping-pong",
+      "type": "registry:block",
+      "title": "Ping pong",
+      "description": "Ping pong",
+      "files": [
+        {
+          "path": "components/usages/pingpongusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/ping-pong.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "pin",
       "type": "registry:block",
       "title": "Pin",
@@ -4374,23 +4395,6 @@
         },
         {
           "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "ping-pong",
-      "type": "registry:block",
-      "title": "Ping pong",
-      "description": "Ping pong",
-      "files": [
-        {
-          "path": "components/usages/pingpongusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/ping-pong.tsx",
           "type": "registry:ui"
         }
       ]
@@ -4787,6 +4791,27 @@
       ]
     },
     {
+      "name": "scrollable-card-stack",
+      "type": "registry:block",
+      "title": "Scrollable card stack",
+      "description": "Scrollable card stack",
+      "files": [
+        {
+          "path": "components/usages/scrollablecardstackusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/scrollable-card-stack.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "scroll-float",
       "type": "registry:block",
       "title": "Scroll float",
@@ -4922,27 +4947,6 @@
         },
         {
           "path": "registry/open-source/scroll-velocity.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "scrollable-card-stack",
-      "type": "registry:block",
-      "title": "Scrollable card stack",
-      "description": "Scrollable card stack",
-      "files": [
-        {
-          "path": "components/usages/scrollablecardstackusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/scrollable-card-stack.tsx",
           "type": "registry:ui"
         },
         {
@@ -6261,23 +6265,6 @@
       ]
     },
     {
-      "name": "video-player",
-      "type": "registry:block",
-      "title": "Video player",
-      "description": "Video player",
-      "files": [
-        {
-          "path": "components/usages/videoplayerusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/video-player.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "video-player2",
       "type": "registry:block",
       "title": "Video player2",
@@ -6298,6 +6285,23 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-player",
+      "type": "registry:block",
+      "title": "Video player",
+      "description": "Video player",
+      "files": [
+        {
+          "path": "components/usages/videoplayerusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/video-player.tsx",
           "type": "registry:ui"
         }
       ]

@@ -4,8 +4,8 @@ const path = require("path");
 // Core paths
 const registryPath = path.join(process.cwd(), "registry");
 const openSourcePath = path.join(registryPath, "open-source");
-const registryOutputPath = path.join(registryPath, "registry.json");
 const registryUtilsPath = path.join(registryPath, "utilities");
+const usagesPath = path.join(process.cwd(), "components", "usages");
 
 // Metadata
 const registrySchemaUrl = "https://ui.shadcn.com/schema/registry.json";
@@ -16,7 +16,7 @@ const registryHomepage = "https://components.drivedev.net/";
 const aliasPaths = {
 	"@/public": path.join(process.cwd(), "public"),
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
-	"@/components/usages": path.join(process.cwd(), "components", "usages"),
+	"@/components/usages": usagesPath,
 	"@/registry/open-source": openSourcePath,
 	"@/registry/utilities": registryUtilsPath,
 };
@@ -103,7 +103,12 @@ const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
 	return [fileData, ...childFiles];
 };
 
-const buildRegistryItem = (componentFileName) => {
+const buildRegistryItem = (usageFile, allComponentFiles) => {
+	const componentFileName = allComponentFiles.find(
+		(item) => item.replaceAll("-", "") === usageFile.replace("usage", "")
+	);
+
+	if (!componentFileName) return null;
 	const absoluteComponentPath = path.join(openSourcePath, componentFileName);
 	const componentName = path.basename(componentFileName, ".tsx");
 
@@ -137,10 +142,15 @@ const buildRegistryItem = (componentFileName) => {
 };
 
 const buildRegistry = () => {
+	const allUsageFiles = fs
+		.readdirSync(usagesPath)
+		.filter((f) => f.endsWith(".tsx"));
 	const componentFiles = fs
 		.readdirSync(openSourcePath)
 		.filter((f) => f.endsWith(".tsx"));
-	const registryItems = componentFiles.map(buildRegistryItem);
+	const registryItems = allUsageFiles
+		.map((item) => buildRegistryItem(item, componentFiles))
+		.filter(Boolean);
 
 	const registryData = {
 		$schema: registrySchemaUrl,

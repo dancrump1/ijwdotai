@@ -4,7 +4,7 @@ import React, { MouseEvent, useEffect, useRef } from "react";
 
 import Image from "next/image";
 
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "./section-header";
 
 const tiles = [
 	{

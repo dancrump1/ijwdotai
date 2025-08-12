@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import CTAButton from "./components/CTAButton";
-import Listing from "./components/Listing";
-import StickyScroll1 from "./components/StickyScroll1";
-import StickyScroll2 from "./components/StickyScroll2";
-import { GsapProvider } from "./GsapProvider";
-import { LenisProvider } from "./LenisProvider";
+import CTAButton from "@/registry/open-source/scrolltrigger-replication/components/CTAButton";
+import Listing from "@/registry/open-source/scrolltrigger-replication/components/Listing";
+import StickyScroll1 from "@/registry/open-source/scrolltrigger-replication/components/StickyScroll1";
+import StickyScroll2 from "@/registry/open-source/scrolltrigger-replication/components/StickyScroll2";
+import { GsapProvider } from "@/registry/open-source/scrolltrigger-replication/GsapProvider";
+import { LenisProvider } from "@/registry/open-source/scrolltrigger-replication/LenisProvider";
 
-export const ExampleScrollReplication = ({ containerRef }) => {
+export default function ExampleScrollReplication({ containerRef }) {
 	return (
 		<>
 			<LenisProvider>
@@ -63,4 +63,4 @@ export const ExampleScrollReplication = ({ containerRef }) => {
 			<GsapProvider scrollTrigger />
 		</>
 	);
-};
+}

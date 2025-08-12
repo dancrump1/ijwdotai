@@ -1,10 +1,9 @@
 import { PointerEvent as ReactPointerEvent, useRef, useState } from "react";
 
+import { Content } from "@/registry/open-source/performant-sidebar/Content";
+import { TreeviewComponent } from "@/registry/open-source/performant-sidebar/Treeview";
 import clsx from "clsx";
 import clamp from "lodash.clamp";
-
-import { Content } from "./Content";
-import { TreeviewComponent } from "./Treeview";
 
 // Credit:
 // https://www.joshuawootonn.com/sidebar-animation-performance
@@ -14,7 +13,7 @@ const Open = {
 	Closed: "closed",
 } as const;
 
-type Open = typeof Open[keyof typeof Open];
+type Open = (typeof Open)[keyof typeof Open];
 
 export default function GitlabSidebarPage({ isDemo = false }) {
 	const [selected, select] = useState<string | null>(null);

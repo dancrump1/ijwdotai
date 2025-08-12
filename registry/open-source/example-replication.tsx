@@ -2,13 +2,13 @@ import Link from "next/link";
 
 import { ReactLenis } from "lenis/react";
 
-import AboutSection from "./About";
-import Features from "./Features";
-import Gallery from "./Gallery";
-import { GsapProvider } from "./GsapProvider";
-import Improvements from "./Improvements";
-import Introduction from "./Introduction";
-import Services from "./Services";
+import AboutSection from "./cielia-replication/About";
+import Features from "./cielia-replication/Features";
+import Gallery from "./cielia-replication/Gallery";
+import { GsapProvider } from "./cielia-replication/GsapProvider";
+import Improvements from "./cielia-replication/Improvements";
+import Introduction from "./cielia-replication/Introduction";
+import Services from "./cielia-replication/Services";
 
 export const ExampleReplication = () => {
 	return (

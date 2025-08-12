@@ -10,7 +10,7 @@ import {
 	AnimationStart,
 	AnimationVariant,
 	createAnimation,
-} from "./theme-animations";
+} from "../theme-animations";
 
 // Credit:
 // https://skiper-ui.com/docs/components/theme-toggle-animations

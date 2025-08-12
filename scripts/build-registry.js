@@ -103,10 +103,44 @@ const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
 	return [fileData, ...childFiles];
 };
 
+function getFileWithFolderName(baseDir, folderName) {
+	const folderPath = path.join(baseDir, folderName);
+
+	// Check if folder exists and is actually a directory
+	if (fs.existsSync(folderPath) && fs.statSync(folderPath).isDirectory()) {
+		const filePath = path.join(folderPath, folderName);
+
+		// If you expect an extension, you can adjust this part
+		// Example: looking for folderName + ".txt"
+		const matchingFile = fs
+			.readdirSync(folderPath)
+			.find(
+				(file) => file === folderName || file.startsWith(folderName + ".")
+			);
+
+		if (matchingFile) {
+			const fullFilePath = path.join(folderPath, matchingFile);
+			const fileContent = fs.readFileSync(fullFilePath, "utf8");
+			return { filePath: fullFilePath, content: fileContent };
+		} else {
+			console.log(
+				`No file named "${folderName}" found inside "${folderPath}".`
+			);
+			return null;
+		}
+	} else {
+		console.log(`Folder "${folderPath}" does not exist.`);
+		return null;
+	}
+}
+
 const buildRegistryItem = (usageFile, allComponentFiles) => {
-	const componentFileName = allComponentFiles.find(
-		(item) => item.replaceAll("-", "") === usageFile.replace("usage", "")
-	);
+	const componentFileName = allComponentFiles.find((item) => {
+		return (
+			item.replaceAll("-", "") === usageFile.replace("usage", "") ||
+			!!getFileWithFolderName(usagesPath, usageFile.replace("usage", ""))
+		);
+	});
 
 	if (!componentFileName) return null;
 	const absoluteComponentPath = path.join(openSourcePath, componentFileName);

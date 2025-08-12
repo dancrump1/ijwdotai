@@ -1,14 +1,13 @@
 import Link from "next/link";
 
+import AboutSection from "@/registry/open-source/cielia-replication/About";
+import Features from "@/registry/open-source/cielia-replication/Features";
+import Gallery from "@/registry/open-source/cielia-replication/Gallery";
+import { GsapProvider } from "@/registry/open-source/cielia-replication/GsapProvider";
+import Improvements from "@/registry/open-source/cielia-replication/Improvements";
+import Introduction from "@/registry/open-source/cielia-replication/Introduction";
+import Services from "@/registry/open-source/cielia-replication/Services";
 import { ReactLenis } from "lenis/react";
-
-import AboutSection from "./About";
-import Features from "./Features";
-import Gallery from "./Gallery";
-import { GsapProvider } from "./GsapProvider";
-import Improvements from "./Improvements";
-import Introduction from "./Introduction";
-import Services from "./Services";
 
 export const ExampleReplication = () => {
 	return (

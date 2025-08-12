@@ -12,6 +12,9 @@ import React, {
 import { cn } from "@/registry/utilities/cn";
 import { createPortal } from "react-dom";
 
+// Credit:
+// https://nyxbui.design/docs/components/tour
+
 export interface TourContext<T extends string> {
 	nodes: Map<
 		string,
@@ -39,7 +42,7 @@ export interface TourFocusProps<T extends string> {
 	name: T;
 }
 
-export function TourFactory<T extends string>(order: T[]) {
+export default function TourFactory<T extends string>(order: T[]) {
 	const tourContext = createContext<TourContext<T>>({
 		nodes: new Map(),
 		show: false,

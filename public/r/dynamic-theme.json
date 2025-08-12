@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/dynamicthemeusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\"></div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport DynamicTheme from \"@/registry/open-source/dynamic-theme\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"relative w-full flex items-center justify-center\">\n\t\t\t<DynamicTheme />\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

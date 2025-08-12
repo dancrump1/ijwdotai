@@ -1216,6 +1216,46 @@
         {
           "path": "registry/open-source/example-replication.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/About.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Features.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/SectionHeader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/GsapProvider.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/ScrollTriggerContext.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Improvements.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Introduction.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/LottieScrollTrigger.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Services.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -2085,23 +2125,6 @@
         },
         {
           "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "gsap-provider",
-      "type": "registry:block",
-      "title": "Gsap provider",
-      "description": "Gsap provider",
-      "files": [
-        {
-          "path": "components/usages/gsapproviderusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/gsap-provider.tsx",
           "type": "registry:ui"
         }
       ]
@@ -6032,6 +6055,23 @@
       ]
     },
     {
+      "name": "theme-animations",
+      "type": "registry:block",
+      "title": "Theme animations",
+      "description": "Theme animations",
+      "files": [
+        {
+          "path": "components/usages/themeanimationsusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/theme-animations.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "threads",
       "type": "registry:block",
       "title": "Threads",
@@ -6129,6 +6169,27 @@
         },
         {
           "path": "registry/open-source/tool-tip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tour",
+      "type": "registry:block",
+      "title": "Tour",
+      "description": "Tour",
+      "files": [
+        {
+          "path": "components/usages/tourusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/tour.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]

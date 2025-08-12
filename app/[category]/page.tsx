@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import FlexWrapper from "@/components/FlexWrapper";
-import { getComponentsByNames } from "@/lib/utils";
+import { getComponentsByNames } from "@/registry/utils/utils";
 
 import { getCategory, simpleCategories } from "@/config/components";
 

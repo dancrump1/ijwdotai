@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState, type CSSProperties } from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 // Credit:

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { AnimatePresence, motion } from "motion/react";
 
 import ThreeDotLoaderGrowing from "./three-dot-loader";

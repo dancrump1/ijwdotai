@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { AnimatePresence, motion, useMotionValue } from "motion/react";
 
 // https://ui.aceternity.com/components/following-pointer

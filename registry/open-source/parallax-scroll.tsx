@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { motion, useScroll, useTransform } from "motion/react";
 
 // https://ui.aceternity.com/components/parallax-scroll

@@ -2,7 +2,7 @@
 
 import React, { useMemo, useRef } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
 	CustomBlending,

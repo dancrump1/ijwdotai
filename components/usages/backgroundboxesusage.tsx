@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { cn } from "@/lib/utils";
 import { Boxes } from "@/registry/open-source/background-boxes";
+import { cn } from "@/registry/utils/utils";
 
 export default function Usage() {
 	return (

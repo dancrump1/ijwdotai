@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { motion, Transition, useAnimationControls } from "motion/react";
 
 // handy function to split text into characters with support for unicode and emojis

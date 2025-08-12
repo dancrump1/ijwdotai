@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { AnimatePresence, motion } from "motion/react";
 
 // https://ui.aceternity.com/components/glowing-stars-effect

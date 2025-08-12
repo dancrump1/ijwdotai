@@ -4,7 +4,7 @@ import { memo, useEffect, useMemo, useState } from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 
 // Credit:
 // https://magicui.design/docs/components/pixel-image

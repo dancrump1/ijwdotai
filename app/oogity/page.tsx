@@ -23,7 +23,7 @@ import {
 	NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import gsap from "gsap";
 import { Loader, Menu, MoveUpRight } from "lucide-react";
 import {

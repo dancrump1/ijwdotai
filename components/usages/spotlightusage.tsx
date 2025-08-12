@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { cn } from "@/lib/utils";
 import { Spotlight } from "@/registry/open-source/spotlight";
+import { cn } from "@/registry/utils/utils";
 
 export default function Usage() {
 	return (

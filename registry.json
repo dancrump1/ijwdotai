@@ -20,9 +20,9 @@
 					"target": "open-source/3d-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -53,9 +53,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/3d-card.tsx",
@@ -114,9 +114,9 @@
 					"target": "components/ui/input.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -196,9 +196,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "./components/ui/label.tsx",
@@ -239,11 +239,6 @@
 					"target": "utils/calculatePosition.ts"
 				},
 				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				},
-				{
 					"path": "registry/utils/parsePathToVertices.ts",
 					"type": "registry:ui",
 					"target": "utils/parsePathToVertices.ts"
@@ -252,6 +247,11 @@
 					"path": "registry/utils/useMousePosition.ts",
 					"type": "registry:ui",
 					"target": "utils/useMousePosition.ts"
+				},
+				{
+					"path": "registry/utils/utils.ts",
+					"type": "registry:ui",
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -272,9 +272,9 @@
 					"target": "open-source/aurora-background.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -295,9 +295,9 @@
 					"target": "open-source/award-carousel.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -318,9 +318,9 @@
 					"target": "open-source/background-beams.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -341,9 +341,9 @@
 					"target": "open-source/background-boxes.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -364,9 +364,9 @@
 					"target": "open-source/background-gradient.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -428,9 +428,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/fuzzy-overlay.tsx",
@@ -456,9 +456,9 @@
 					"target": "open-source/blur-vignette.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -525,9 +525,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -584,9 +584,9 @@
 					"target": "open-source/canvas-reveal.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -625,9 +625,9 @@
 					"target": "open-source/card-hover.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -666,9 +666,9 @@
 					"target": "open-source/card-stack.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -707,9 +707,9 @@
 					"target": "open-source/cards.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -748,9 +748,9 @@
 					"target": "open-source/carousel-stack.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -902,9 +902,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "./components/ui/input.tsx",
@@ -953,9 +953,9 @@
 					"target": "open-source/compare.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/sparkles.tsx",
@@ -1017,9 +1017,9 @@
 					"target": "open-source/css-box.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1153,9 +1153,9 @@
 					"target": "open-source/dialog-stack.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1271,9 +1271,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1381,9 +1381,9 @@
 					"target": "open-source/fancy-input.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1512,9 +1512,9 @@
 					"target": "open-source/flip-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1553,9 +1553,9 @@
 					"target": "open-source/flipping-text.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1576,9 +1576,9 @@
 					"target": "open-source/floating-dock.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1599,9 +1599,9 @@
 					"target": "open-source/floating-nav.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1694,9 +1694,9 @@
 					"target": "open-source/focus-cards.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1789,9 +1789,9 @@
 					"target": "open-source/following-headers.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1812,9 +1812,9 @@
 					"target": "open-source/following-pointer.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1871,9 +1871,9 @@
 					"target": "open-source/fullscreen-image.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1894,9 +1894,9 @@
 					"target": "open-source/fuzzy-overlay.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -1989,9 +1989,9 @@
 					"target": "open-source/gif-text.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2012,9 +2012,9 @@
 					"target": "open-source/glass-nav.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2053,9 +2053,9 @@
 					"target": "open-source/glowing-background.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2076,9 +2076,9 @@
 					"target": "open-source/glowing-effect.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2104,9 +2104,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2127,9 +2127,9 @@
 					"target": "open-source/gradient-background.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2191,14 +2191,14 @@
 					"target": "utils/calculatePosition.ts"
 				},
 				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				},
-				{
 					"path": "registry/utils/parsePathToVertices.ts",
 					"type": "registry:ui",
 					"target": "utils/parsePathToVertices.ts"
+				},
+				{
+					"path": "registry/utils/utils.ts",
+					"type": "registry:ui",
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2255,9 +2255,9 @@
 					"target": "open-source/grid-to-flex.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2314,9 +2314,9 @@
 					"target": "open-source/hero-highlight.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2391,9 +2391,9 @@
 					"target": "open-source/hover-border.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2414,9 +2414,9 @@
 					"target": "open-source/hover-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2491,9 +2491,9 @@
 					"target": "open-source/hover.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -2519,9 +2519,9 @@
 					"target": "components/ui/input.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/icons/index.ts",
@@ -3958,9 +3958,9 @@
 					"target": "open-source/infinite-moving-cards.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -3981,9 +3981,9 @@
 					"target": "open-source/info-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4004,9 +4004,9 @@
 					"target": "open-source/inner-glow.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4027,9 +4027,9 @@
 					"target": "open-source/input-animated.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4068,9 +4068,9 @@
 					"target": "open-source/lamp.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/sparkles.tsx",
@@ -4096,9 +4096,9 @@
 					"target": "open-source/lane-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4137,9 +4137,9 @@
 					"target": "open-source/layout-grid.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4196,9 +4196,9 @@
 					"target": "open-source/letter3d-swap.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4237,9 +4237,9 @@
 					"target": "open-source/line-background.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4260,9 +4260,9 @@
 					"target": "open-source/linear-dialog.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4283,9 +4283,9 @@
 					"target": "open-source/link-preview.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4342,9 +4342,9 @@
 					"target": "open-source/macbook.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4401,9 +4401,9 @@
 					"target": "open-source/marquee-along-svg.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4424,9 +4424,9 @@
 					"target": "open-source/mask-effect.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4483,9 +4483,9 @@
 					"target": "open-source/media-between-text.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4506,9 +4506,9 @@
 					"target": "open-source/meteors.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4547,9 +4547,9 @@
 					"target": "open-source/mobile-nav.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4624,9 +4624,9 @@
 					"target": "open-source/nav-bar.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
@@ -4667,9 +4667,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4700,9 +4700,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4723,9 +4723,9 @@
 					"target": "open-source/navigation.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4764,9 +4764,9 @@
 					"target": "open-source/number-ticker.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4787,9 +4787,9 @@
 					"target": "open-source/opposite-scroll-links.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4846,14 +4846,14 @@
 					"target": "open-source/parallax-floating.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				},
-				{
 					"path": "registry/utils/useMousePosition.ts",
 					"type": "registry:ui",
 					"target": "utils/useMousePosition.ts"
+				},
+				{
+					"path": "registry/utils/utils.ts",
+					"type": "registry:ui",
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4874,9 +4874,9 @@
 					"target": "open-source/parallax-scroll.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4915,9 +4915,9 @@
 					"target": "open-source/pin.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4974,9 +4974,9 @@
 					"target": "open-source/pixel-image.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -4997,9 +4997,9 @@
 					"target": "open-source/pointer.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5025,9 +5025,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5112,9 +5112,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5135,9 +5135,9 @@
 					"target": "open-source/pricing-table.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5158,9 +5158,9 @@
 					"target": "open-source/progress-carousel.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5181,9 +5181,9 @@
 					"target": "open-source/progressive-blur.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5245,9 +5245,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5304,9 +5304,9 @@
 					"target": "open-source/sandbox.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5332,9 +5332,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5355,14 +5355,14 @@
 					"target": "open-source/screen-saver.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
-					"type": "registry:ui",
-					"target": "lib/utils.ts"
-				},
-				{
 					"path": "registry/utils/useDimensions.ts",
 					"type": "registry:ui",
 					"target": "utils/useDimensions.ts"
+				},
+				{
+					"path": "registry/utils/utils.ts",
+					"type": "registry:ui",
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5391,6 +5391,11 @@
 			"description": "Scroll horizontal 2",
 			"files": [
 				{
+					"path": "components/usages/scrollhorizontal2usage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
+				{
 					"path": "registry/open-source/scroll-horizontal-2.tsx",
 					"type": "registry:ui",
 					"target": "open-source/scroll-horizontal-2.tsx"
@@ -5403,6 +5408,11 @@
 			"title": "Scroll horizontal",
 			"description": "Scroll horizontal",
 			"files": [
+				{
+					"path": "components/usages/scrollhorizontalusage.tsx",
+					"type": "registry:block",
+					"target": "~/example.tsx"
+				},
 				{
 					"path": "registry/open-source/scroll-horizontal.tsx",
 					"type": "registry:ui",
@@ -5427,9 +5437,9 @@
 					"target": "open-source/scroll-island.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5504,9 +5514,9 @@
 					"target": "open-source/scroll-velocity.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5527,9 +5537,9 @@
 					"target": "open-source/scrollable-card-stack.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5550,9 +5560,9 @@
 					"target": "open-source/searchbar.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				},
 				{
 					"path": "registry/open-source/three-dot-loader.tsx",
@@ -5596,9 +5606,9 @@
 					"target": "open-source/select-modal.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5619,9 +5629,9 @@
 					"target": "open-source/services.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5665,9 +5675,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5706,9 +5716,9 @@
 					"target": "open-source/sidebar.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5729,9 +5739,9 @@
 					"target": "open-source/sideivdeo.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5788,9 +5798,9 @@
 					"target": "open-source/skeleton.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5816,9 +5826,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5893,9 +5903,9 @@
 					"target": "open-source/smooth-slider.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5934,9 +5944,9 @@
 					"target": "open-source/social-links.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5957,9 +5967,9 @@
 					"target": "open-source/sparkles.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -5980,9 +5990,9 @@
 					"target": "open-source/spinner.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6003,9 +6013,9 @@
 					"target": "open-source/spotlight.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6026,9 +6036,9 @@
 					"target": "open-source/spring-element.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6049,9 +6059,9 @@
 					"target": "open-source/spring-faq.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6108,9 +6118,9 @@
 					"target": "open-source/stacking-cards.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6167,9 +6177,9 @@
 					"target": "open-source/sticky-scroll-reveal.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6208,9 +6218,9 @@
 					"target": "open-source/stripes-preloader.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6249,9 +6259,9 @@
 					"target": "open-source/table.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6272,9 +6282,9 @@
 					"target": "open-source/tabs.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6349,9 +6359,9 @@
 					"target": "open-source/text-animate.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6408,9 +6418,9 @@
 					"target": "open-source/text-enhanced.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6467,9 +6477,9 @@
 					"target": "open-source/text-highlighter.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6508,9 +6518,9 @@
 					"target": "open-source/text-morph.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6572,9 +6582,9 @@
 					"target": "open-source/text-reveal.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6613,9 +6623,9 @@
 					"target": "open-source/text-rotate.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6636,9 +6646,9 @@
 					"target": "open-source/text-split.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6821,9 +6831,9 @@
 					"target": "open-source/tracing-beam.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6898,9 +6908,9 @@
 					"target": "open-source/vertical-cut-reveal.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6921,9 +6931,9 @@
 					"target": "open-source/video-button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -6985,9 +6995,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -7031,9 +7041,9 @@
 					"target": "components/ui/button.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},
@@ -7054,9 +7064,9 @@
 					"target": "open-source/wobble-card.tsx"
 				},
 				{
-					"path": "./lib/utils.ts",
+					"path": "registry/utils/utils.ts",
 					"type": "registry:ui",
-					"target": "lib/utils.ts"
+					"target": "utils/utils.ts"
 				}
 			]
 		},

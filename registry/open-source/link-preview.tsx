@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import {
 	AnimatePresence,

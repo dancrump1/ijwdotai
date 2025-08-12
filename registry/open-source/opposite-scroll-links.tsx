@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 // Inspiration:

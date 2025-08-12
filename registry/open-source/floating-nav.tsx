@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import {
 	AnimatePresence,

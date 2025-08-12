@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { FastAverageColor } from "fast-average-color";
 import parse from "html-react-parser";
 import { motion } from "motion/react";

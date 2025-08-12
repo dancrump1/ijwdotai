@@ -14,9 +14,9 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 import Component from "@/components/Component";
-import { cn } from "@/lib/utils";
 import { ScrollIsland } from "@/registry/open-source/scroll-island";
 import { filterOptions } from "@/registry/utils/example_data";
+import { cn } from "@/registry/utils/utils";
 import { Bell, HelpCircle, Mail, Plus, Star } from "lucide-react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 

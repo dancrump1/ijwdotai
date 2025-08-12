@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { CheckIcon, EuroIcon } from "lucide-react";
 import { motion } from "motion/react";
 

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { LayoutGrid, List, LucideIcon, Trash2 } from "lucide-react";
 

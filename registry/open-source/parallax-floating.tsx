@@ -9,8 +9,8 @@ import {
 	useRef,
 } from "react";
 
-import { cn } from "@/lib/utils";
 import { useMousePositionRef } from "@/registry/utils/useMousePosition";
+import { cn } from "@/registry/utils/utils";
 import { useAnimationFrame } from "motion/react";
 
 // Credit:

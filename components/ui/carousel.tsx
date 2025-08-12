@@ -4,7 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from "embla-carousel-react";

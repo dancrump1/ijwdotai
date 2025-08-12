@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Spotlight } from "@/components/Spotlight";
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 
 export default function Example() {
 	return (

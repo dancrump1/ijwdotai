@@ -10,7 +10,7 @@ import React, {
 } from "react";
 
 import { Button, ButtonProps } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "@/registry/utils/utils";
 import { Check, Loader2, SendHorizontal, X } from "lucide-react";
 import {
 	AnimatePresence,

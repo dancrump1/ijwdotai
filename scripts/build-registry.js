@@ -1,223 +1,138 @@
 const fs = require("fs");
 const path = require("path");
 
-/**
- * Absolute path to the registry directory.
- * @type {string}
- */
-const registryDir = path.join(process.cwd(), "registry");
+// Core paths
+const registryPath = path.join(process.cwd(), "registry");
+const openSourcePath = path.join(registryPath, "open-source");
+const registryOutputPath = path.join(registryPath, "registry.json");
+const registryUtilsPath = path.join(registryPath, "utils");
 
-/**
- * Path to the open-source components directory.
- * @type {string}
- */
-const openSourceDir = path.join(registryDir, "open-source");
+// Metadata
+const registrySchemaUrl = "https://ui.shadcn.com/schema/registry.json";
+const registryName = "DriveBrandStudio";
+const registryHomepage = "https://components.drivedev.net/";
 
-/**
- * Path to the main registry output file.
- * @type {string}
- */
-const outputFile = path.join(registryDir, "registry.json");
-
-/**
- * JSON Schema URL for the registry file.
- * @type {string}
- */
-const schemaUrl = "https://ui.shadcn.com/schema/registry.json";
-
-/**
- * Homepage URL for the project.
- * @type {string}
- */
-const homepage = "https://acme.com";
-
-/**
- * Name of the registry/project.
- * @type {string}
- */
-const name = "acme";
-
-/**
- * Maps path aliases to actual directories for resolving imports.
- * @type {Object<string, string>}
- */
-const aliasMap = {
+// Path aliases for resolving imports
+const aliasPaths = {
 	"@/public": path.join(process.cwd(), "public"),
 	"@/components/ui": path.join(process.cwd(), "components", "ui"),
 	"@/components/usages": path.join(process.cwd(), "components", "usages"),
-	"@/lib": path.join(process.cwd(), "lib"),
-	"@/registry/open-source": path.join(
-		process.cwd(),
-		"registry",
-		"open-source"
-	),
-	"@/registry/utils": path.join(process.cwd(), "registry", "utils"),
+	"@/registry/open-source": openSourcePath,
+	"@/registry/utils": registryUtilsPath,
 };
 
-/**
- * Converts a string into title case.
- * @param {string} s - Input string.
- * @returns {string} - Title-cased string.
- */
-const titleCase = (s) =>
-	s
+// Helpers
+const toTitleCase = (str) =>
+	str
 		.replace(/[-_]/g, " ")
 		.replace(/([A-Z])/g, " $1")
 		.replace(/\s+/g, " ")
 		.replace(/^./, (c) => c.toUpperCase())
 		.trim();
 
-/**
- * Extracts relative and aliased import paths from code.
- * @param {string} code - Source code to scan.
- * @returns {string[]} - Array of import paths.
- */
-const extractImports = (code) => {
-	const rx = /import\s+.*?['"]([^'"]+)['"]/g;
-	const out = [];
-	for (let m; (m = rx.exec(code)); ) {
-		const p = m[1];
-		if (p.startsWith(".") || p.startsWith("@/")) out.push(p);
-	}
-	return out;
-};
+const extractImports = (code) =>
+	[...code.matchAll(/import\s+.*?['"]([^'"]+)['"]/g)]
+		.map((match) => match[1])
+		.filter((imp) => imp.startsWith(".") || imp.startsWith("@/"));
 
-/**
- * Resolves a file path from an import statement.
- * Supports relative and aliased imports.
- *
- * @param {string} from - File path from which the import originates.
- * @param {string} imp - Import path to resolve.
- * @returns {string|null} - Resolved file path, or null if not found.
- */
-const resolveImportPath = (from, imp) => {
-	if (imp.startsWith(".")) {
-		const base = path.resolve(path.dirname(from), imp);
-		if (fs.existsSync(base + ".tsx")) return base + ".tsx";
-		if (fs.existsSync(base + ".ts")) return base + ".ts";
-		if (fs.existsSync(base + "/index.tsx")) return base + "/index.tsx";
-		if (fs.existsSync(base + "/index.ts")) return base + "/index.ts";
+const resolveImportPath = (sourcePath, importPath) => {
+	const tryExtensions = (base) =>
+		[".tsx", ".ts", "/index.tsx", "/index.ts"]
+			.map((ext) => base + ext)
+			.find(fs.existsSync);
+
+	if (importPath.startsWith(".")) {
+		return tryExtensions(path.resolve(path.dirname(sourcePath), importPath));
 	}
 
-	for (const alias in aliasMap) {
-		if (imp.startsWith(alias)) {
-			const sub = imp.replace(alias, "").replace(/^\/+/, "");
-			const base = path.join(aliasMap[alias], sub);
-			if (fs.existsSync(base + ".tsx")) return base + ".tsx";
-			if (fs.existsSync(base + ".ts")) return base + ".ts";
-			if (fs.existsSync(base + "/index.tsx")) return base + "/index.tsx";
-			if (fs.existsSync(base + "/index.ts")) return base + "/index.ts";
+	for (const alias in aliasPaths) {
+		if (importPath.startsWith(alias)) {
+			const subPath = importPath.replace(alias, "").replace(/^\/+/, "");
+			return tryExtensions(path.join(aliasPaths[alias], subPath));
 		}
 	}
 
 	return null;
 };
 
-/**
- * Recursively scans a file and its import tree for registry-related metadata.
- *
- * @param {string} absPath - Absolute path to the starting file.
- * @param {Set<string>} [seen=new Set()] - Tracks visited files to prevent cycles.
- * @returns {{path: string; type: "registry:block" | "registry:component"|"registry:lib"|"registry:hook"|"registry:ui"|"registry:page"|"registry:file"|"registry:style"|"registry:theme"|"registry:item"}[]} - Array of file metadata objects.
- */
-function scanFileRecursively(absPath, seen = new Set()) {
-	if (seen.has(absPath)) return [];
+const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
+	if (visitedFiles.has(absolutePath) || !fs.existsSync(absolutePath))
+		return [];
+	visitedFiles.add(absolutePath);
 
-	if (!fs.existsSync(absPath)) return [];
+	const relativePath = path
+		.relative(registryPath, absolutePath)
+		.replace(/\\/g, "/");
+	const targetPath = relativePath.startsWith("registry")
+		? `components/${path.basename(absolutePath)}`
+		: relativePath
+				.replace(/^.*?components\//, "components/")
+				.replace("../", "");
 
-	seen.add(absPath);
-
-	// Actual path to component within THIS library
-	const relPath = path.relative(registryDir, absPath).replace(/\\/g, "/");
-
-	// Path for inside v0 AI filesystem
-	const target = relPath.startsWith("registry")
-		? `components/${path.basename(absPath)}`
-		: relPath.replace(/^.*?components\//, "components/").replace("../", "");
-
-	const fileObj = {
-		path: relPath,
+	const fileData = {
+		path: relativePath,
 		type: "registry:ui",
-		target: target.replace("../", ""),
+		target: targetPath.replace("../", ""),
 	};
 
-	const code = fs.readFileSync(absPath, "utf-8");
-	const imports = extractImports(code);
+	const imports = extractImports(fs.readFileSync(absolutePath, "utf-8"));
+	const childFiles = imports
+		.map((imp) => resolveImportPath(absolutePath, imp))
+		.filter(Boolean)
+		.flatMap((resolvedPath) =>
+			scanFileRecursively(resolvedPath, visitedFiles)
+		);
 
-	const children = imports.flatMap((imp) => {
-		const resolved = resolveImportPath(absPath, imp);
-		return resolved ? scanFileRecursively(resolved, seen) : [];
-	});
+	return [fileData, ...childFiles];
+};
 
-	return [fileObj, ...children];
-}
+const buildRegistryItem = (componentFileName) => {
+	const absoluteComponentPath = path.join(openSourcePath, componentFileName);
+	const componentName = path.basename(componentFileName, ".tsx");
 
-/**
- * Builds a registry item for a given component file.
- * Adds the component file and all its dependencies, plus an optional example file.
- *
- * @param {string} componentFile - Filename of the component inside `openSourceDir`.
- * @returns {Object} - Registry item object.
- */
-function buildRegistryItem(componentFile) {
-	const absPath = path.join(openSourceDir, componentFile);
-	const componentName = path.basename(componentFile, ".tsx");
-	const seenFiles = new Set();
+	const allFiles = scanFileRecursively(absoluteComponentPath);
+	const uniqueFiles = Array.from(
+		new Map(allFiles.map((f) => [f.path, f])).values()
+	);
 
-	const files = scanFileRecursively(absPath, seenFiles);
+	const exampleFileName = `${componentName.toLowerCase().replaceAll("-", "")}usage.tsx`;
+	const exampleFilePath = path.join(
+		process.cwd(),
+		"components/usages",
+		exampleFileName
+	);
 
-	const uniqueFiles = [];
-	const added = new Set();
-	for (const f of files) {
-		if (!added.has(f.path)) {
-			added.add(f.path);
-			uniqueFiles.push(f);
-		}
-	}
-
-	const exampleName = `${componentName.toLowerCase().replaceAll("-", "")}usage.tsx`;
-	const examplePath = path.join("components/usages/", exampleName);
-
-	if (fs.existsSync(examplePath)) {
-		const relExamplePath = `components/usages/${exampleName}`;
-		const content = fs.readFileSync(examplePath, "utf-8");
-
+	if (fs.existsSync(exampleFilePath)) {
 		uniqueFiles.unshift({
-			path: relExamplePath,
+			path: `components/usages/${exampleFileName}`,
 			type: "registry:block",
 			target: "~/example.tsx",
 		});
-	} else {
 	}
 
 	return {
 		name: componentName.toLowerCase(),
 		type: "registry:block",
-		title: titleCase(componentName),
-		description: titleCase(componentName),
+		title: toTitleCase(componentName),
+		description: toTitleCase(componentName),
 		files: uniqueFiles,
 	};
-}
+};
 
-/**
- * Builds the full registry from all components in the open-source directory.
- * Writes the resulting JSON object to `registry.json`.
- */
-function buildRegistry() {
+const buildRegistry = () => {
 	const componentFiles = fs
-		.readdirSync(openSourceDir)
+		.readdirSync(openSourcePath)
 		.filter((f) => f.endsWith(".tsx"));
+	const registryItems = componentFiles.map(buildRegistryItem);
 
-	const items = componentFiles.map(buildRegistryItem);
-
-	const registry = {
-		$schema: schemaUrl,
-		name,
-		homepage,
-		items,
+	const registryData = {
+		$schema: registrySchemaUrl,
+		name: registryName,
+		homepage: registryHomepage,
+		items: registryItems,
 	};
 
-	fs.writeFileSync(outputFile, JSON.stringify(registry, null, 2));
-}
+	fs.writeFileSync(registryOutputPath, JSON.stringify(registryData, null, 2));
+};
 
 buildRegistry();

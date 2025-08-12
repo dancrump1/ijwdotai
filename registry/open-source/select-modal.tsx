@@ -10,7 +10,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion } from "motion/react";
 
 // Credit:

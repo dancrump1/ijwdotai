@@ -1,4 +1,4 @@
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 
 // Credit:
 // https://starui.link/docs/components/inner-glow

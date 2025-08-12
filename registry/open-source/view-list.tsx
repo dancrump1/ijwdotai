@@ -1,7 +1,7 @@
 import React from "react";
 
 import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { Layers2, LayoutGrid, List, LucideIcon, Star } from "lucide-react";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
 

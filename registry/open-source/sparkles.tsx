@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";

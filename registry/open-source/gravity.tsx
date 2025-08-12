@@ -13,8 +13,8 @@ import {
 } from "react";
 
 import { calculatePosition } from "@/registry/utilities/calculatePosition";
+import { cn } from "@/registry/utilities/cn";
 import { parsePathToVertices } from "@/registry/utilities/parsePathToVertices";
-import { cn } from "@/registry/utilities/utils";
 import Matter, {
 	Bodies,
 	Common,

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 
 // https://ui.aceternity.com/components/focus-cards
 

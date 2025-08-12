@@ -26,7 +26,7 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { CheckIcon, ChevronDownIcon } from "lucide-react";
 
 interface Project {

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion } from "motion/react";
 
 // https://ui.aceternity.com/components/layout-grid

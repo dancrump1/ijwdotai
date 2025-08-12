@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { ChevronDown, Code, Heart, Sparkles } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 

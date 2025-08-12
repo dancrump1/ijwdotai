@@ -13,9 +13,9 @@ import {
 } from "react";
 
 import { calculatePosition } from "@/registry/utilities/calculatePosition";
+import { cn } from "@/registry/utilities/cn";
 import { parsePathToVertices } from "@/registry/utilities/parsePathToVertices";
 import { useMousePositionRef } from "@/registry/utilities/useMousePosition";
-import { cn } from "@/registry/utilities/utils";
 import { debounce } from "lodash";
 import Matter, {
 	Bodies,

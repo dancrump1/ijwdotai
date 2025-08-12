@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, motion } from "motion/react";
 
 // https://ui.aceternity.com/components/direction-aware-hover

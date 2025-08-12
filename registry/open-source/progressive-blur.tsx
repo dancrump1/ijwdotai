@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { HTMLMotionProps, motion } from "motion/react";
 
 // Credit:

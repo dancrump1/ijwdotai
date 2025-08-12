@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { LucideIcon } from "lucide-react";
 
 interface ShareLink {

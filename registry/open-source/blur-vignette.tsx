@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 
 // Credit:
 // https://www.ui-layouts.com/components/blur-vignette

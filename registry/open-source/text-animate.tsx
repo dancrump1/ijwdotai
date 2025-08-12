@@ -2,7 +2,7 @@
 
 import { ElementType } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
 
 type AnimationType = "text" | "word" | "character" | "line";

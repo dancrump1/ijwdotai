@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion } from "motion/react";
 
 let interval: any;

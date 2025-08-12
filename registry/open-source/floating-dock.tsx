@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 
 import Link from "next/link";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import {
 	IconBrandGithub,
 	IconBrandX,

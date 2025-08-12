@@ -1,6 +1,6 @@
 import React from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion } from "motion/react";
 
 const FuzzyOverlay = ({ className }: { className?: string }) => {

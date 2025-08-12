@@ -9,7 +9,7 @@ import {
 	useRef,
 } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 
 interface FaceProps {

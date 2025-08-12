@@ -15,8 +15,8 @@ import { useSearchParams } from "next/navigation";
 
 import Component from "@/components/Component";
 import { ScrollIsland } from "@/registry/open-source/scroll-island";
+import { cn } from "@/registry/utilities/cn";
 import { filterOptions } from "@/registry/utilities/example_data";
-import { cn } from "@/registry/utilities/utils";
 import { Bell, HelpCircle, Mail, Plus, Star } from "lucide-react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 

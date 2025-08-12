@@ -27,7 +27,7 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import type { Editor, Range } from "@tiptap/core";
 import { mergeAttributes, Node } from "@tiptap/core";
 import CharacterCount from "@tiptap/extension-character-count";

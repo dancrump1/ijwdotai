@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, AnimationProps, motion } from "motion/react";
 
 export const FlippingText = ({

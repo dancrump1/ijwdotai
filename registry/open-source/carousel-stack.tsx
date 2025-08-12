@@ -1,7 +1,7 @@
 import type React from "react";
 import { useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 

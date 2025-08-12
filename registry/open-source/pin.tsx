@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { motion } from "motion/react";
 
 // https://ui.aceternity.com/components/3d-pin

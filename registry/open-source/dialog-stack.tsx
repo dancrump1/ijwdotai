@@ -19,7 +19,7 @@ import {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { Portal } from "radix-ui";
 

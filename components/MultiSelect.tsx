@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
 import { CheckIcon, ChevronDown, XCircle, XIcon } from "lucide-react";
 

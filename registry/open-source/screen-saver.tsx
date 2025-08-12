@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 
+import { cn } from "@/registry/utilities/cn";
 import { useDimensions } from "@/registry/utilities/useDimensions";
-import { cn } from "@/registry/utilities/utils";
 import { motion, useAnimationFrame, useMotionValue } from "motion/react";
 
 // Credit:

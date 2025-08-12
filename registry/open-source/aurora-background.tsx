@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
 	children: ReactNode;

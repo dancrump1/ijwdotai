@@ -8,7 +8,7 @@ import React, {
 	useState,
 } from "react";
 
-import { cn } from "@/registry/utilities/utils";
+import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, motion } from "motion/react";
 
 // Credit:

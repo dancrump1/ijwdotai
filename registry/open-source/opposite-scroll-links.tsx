@@ -23,7 +23,7 @@ const OppositeScroll = ({ works, className, containerRef, ...props }) => {
 	});
 
 	const leftWorks = works.slice(0, works.length / 2);
-	const rightWorks = works.slice(works.length / 2 + 1, works.length);
+	const rightWorks = works.slice(works.length / 2, works.length);
 	if (!!componentContainerRef && componentContainerRef?.current === undefined)
 		return null;
 

@@ -7,8 +7,7 @@
 		"build": "BUILD_DIR=temp next build --turbopack",
 		"start": "next start -p 3006",
 		"lint": "next lint",
-		"generate": "node scripts/build-registry.js",
-		"registry:build": "shadcn build"
+		"registry:build": "node scripts/build-registry.js && shadcn build"
 	},
 	"dependencies": {
 		"@glidejs/glide": "^3.7.1",

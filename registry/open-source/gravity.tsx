@@ -264,6 +264,9 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
 			});
 
 			const mouse = Mouse.create(render.current.canvas);
+			// Enables scrolling
+			mouse.element.removeEventListener("wheel", mouse.mousewheel);
+
 			mouseConstraint.current = MouseConstraint.create(engine.current, {
 				mouse: mouse,
 				constraint: {

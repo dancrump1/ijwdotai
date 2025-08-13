@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import SectionHeader from "./SectionHeader.tsx";
+import SectionHeader from "./SectionHeader";
 
 const AboutSection = () => {
 	const sectionRef = useRef<HTMLDivElement>(null);

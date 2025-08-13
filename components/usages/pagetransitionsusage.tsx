@@ -1,4 +1,4 @@
-import HeroHome from "@/registry/open-source/page-transitions/HeroHome";
+import HeroHome from "@/registry/open-source/page-transitions";
 import { TransitionProvider } from "@/registry/open-source/page-transitions/TransitionProvider";
 import { GsapProvider } from "@/registry/open-source/scrolltrigger-replication/GsapProvider";
 import { LenisProvider } from "@/registry/open-source/scrolltrigger-replication/LenisProvider";

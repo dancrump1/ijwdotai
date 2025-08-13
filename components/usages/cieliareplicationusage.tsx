@@ -9,7 +9,7 @@ import Introduction from "@/registry/open-source/cielia-replication/Introduction
 import Services from "@/registry/open-source/cielia-replication/Services";
 import { ReactLenis } from "lenis/react";
 
-export const ExampleReplication = () => {
+const ExampleReplication = () => {
 	return (
 		<div>
 			<ReactLenis root>
@@ -85,3 +85,5 @@ export const ExampleReplication = () => {
 		</div>
 	);
 };
+
+export default ExampleReplication;

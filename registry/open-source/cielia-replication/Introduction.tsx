@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import LottieScrollTrigger from "./LottieScrollTrigger";
-import SectionHeader from "./SectionHeader.tsx";
+import SectionHeader from "./SectionHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,7 +84,8 @@ const Introduction = () => {
 			const contentImages = gsap.utils.toArray(
 				".content-image"
 			) as HTMLDivElement[];
-			contentimages?.forEach((contentImage) => {
+
+			contentImages?.forEach((contentImage) => {
 				const overlay = contentImage.querySelector(".overlay");
 				const imageWrapper = contentImage.querySelector(".image");
 				const image = contentImage.querySelector(".image img");

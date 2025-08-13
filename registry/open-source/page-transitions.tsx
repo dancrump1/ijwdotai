@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType, { TargetElement } from "split-type";
 
-import { pages } from "./data";
+import { pages } from "./page-transitions/data";
 
 export default function HeroHome() {
 	const sectionRef = useRef<HTMLDivElement>(null);

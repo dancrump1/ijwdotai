@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
+import CircularText from "@/registry/open-source/circle-text";
 import Floating, {
 	FloatingElement,
 } from "@/registry/open-source/parallax-floating";
@@ -417,6 +418,12 @@ function About() {
 						</ul>
 					</div>
 				</div>
+			</section>
+
+			<section className="flex overflow-hidden py-32">
+				<CircularText text={"Quality"} onHover="goBonkers" />
+				<CircularText text={"Comfort"} />
+				<CircularText text={"Price"} onHover="slowDown" />
 			</section>
 		</main>
 	);

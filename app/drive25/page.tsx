@@ -4,6 +4,7 @@ import React from "react";
 
 import Image from "next/image";
 
+import MarqueeAlongSvgPathDemo from "@/components/usages/marqueealongsvgusage";
 import AccordionSlices from "@/registry/open-source/accordion-slices";
 import FAQPage from "@/registry/open-source/faq-section";
 import Gravity, { MatterBody } from "@/registry/open-source/gravity";
@@ -17,7 +18,7 @@ const colors = ["bg-blue-500", "bg-green-500", "bg-pink-500", "bg-yellow-500"];
 
 function Home({ data }) {
 	return (
-		<main className="dark:text-white dark:bg-zinc-800">
+		<main className="">
 			<section className="h-[90vh] w-full relative">
 				<Gravity gravity={{ x: 0, y: 1 }}>
 					{[
@@ -180,6 +181,10 @@ function Home({ data }) {
 				</div>
 
 				<div></div>
+			</section>
+
+			<section className="relative h-[50vh]">
+				<MarqueeAlongSvgPathDemo />
 			</section>
 
 			<section className="my-32">

@@ -112,7 +112,7 @@ const FAQPage: React.FC = ({ faqs = faqData }: { faqs: FAQData }) => {
 	);
 
 	return (
-		<div className="mb-16">
+		<div className="mb-16 relative">
 			<div className="max-w-4xl mx-auto">
 				<PageHeader
 					title="FAQs"

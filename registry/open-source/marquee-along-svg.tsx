@@ -114,7 +114,7 @@ const MarqueeAlongSvgPath = ({
 	// SVG defaults
 	width = "100%",
 	height = "100%",
-	viewBox = "0 0 100 100",
+	viewBox = "0 0 200 1000",
 
 	// Marquee defaults
 	baseVelocity = 5,
@@ -170,6 +170,8 @@ const MarqueeAlongSvgPath = ({
 			})
 		);
 	}, [children, repeat]);
+
+	const currentOffsetDistance = useMotionValue(0);
 
 	// Function to calculate z-index based on offset distance
 	const calculateZIndex = useCallback(
@@ -388,122 +390,92 @@ const MarqueeAlongSvgPath = ({
 				height={height}
 				viewBox={viewBox}
 				preserveAspectRatio={preserveAspectRatio}
-				className="w-full h-full"
-				id="along-me"
-				// ref={svgRef}
 			>
+				{/* Path for visualization */}
 				<path
 					id={id}
 					d={path}
+					className="w-full"
 					stroke={showPath ? "currentColor" : "none"}
 					fill="none"
 					ref={pathRef}
 				/>
-			</svg>
 
-			{items.map((item) => (
-				<MarqueeItem
-					calculateZIndex={calculateZIndex}
-					keyValue={item.keyValue}
-					baseOffset={baseOffset}
-					easing={easing}
-					cssVariableInterpolation={cssVariableInterpolation}
-					draggable={draggable}
-					grabCursor={grabCursor}
-					enableRollingZIndex={enableRollingZIndex}
-					scaledPath={scaledPath}
-					isHovered={isHovered}
-					items={items}
-					path={path}
-					{...item}
-				/>
-			))}
+				{/* Animate each item along the path */}
+				{items.map(({ child, repeatIndex, itemIndex, key }) => {
+					const itemOffset = useTransform(baseOffset, (v) => {
+						const position = (itemIndex * 100) / items.length;
+						const wrappedValue = wrap(0, 100, v + position);
+						return easing
+							? easing(wrappedValue / 100) * 100
+							: wrappedValue;
+					});
+
+					const x = useMotionValue(0);
+					const y = useMotionValue(0);
+					const zIndex = useTransform(currentOffsetDistance, (value) =>
+						calculateZIndex(value)
+					);
+
+					useEffect(() => {
+						const pathEl = pathRef.current;
+						if (!pathEl) return;
+
+						const totalLength = pathEl.getTotalLength();
+
+						const unsubscribe = itemOffset.on(
+							"change",
+							(value: string) => {
+								const percent = parseFloat(value) / 100;
+								const point = pathEl.getPointAtLength(
+									percent * totalLength
+								);
+								x.set(point.x);
+								y.set(point.y);
+							}
+						);
+
+						return unsubscribe;
+					}, [itemOffset]);
+
+					const cssVariables = Object.fromEntries(
+						(cssVariableInterpolation || []).map(
+							({ property, from, to }) => [
+								property,
+								useTransform(
+									currentOffsetDistance,
+									[0, 100],
+									[from, to]
+								),
+							]
+						)
+					);
+
+					return (
+						<motion.g
+							key={key}
+							className={cn(
+								"along-element relative",
+								draggable && grabCursor && "cursor-grab"
+							)}
+							style={{
+								offsetDistance: itemOffset,
+								zIndex: enableRollingZIndex ? zIndex : undefined,
+								translateX: x,
+								translateY: y,
+								...cssVariables,
+							}}
+							aria-hidden={repeatIndex > 0}
+							onMouseEnter={() => (isHovered.current = true)}
+							onMouseLeave={() => (isHovered.current = false)}
+						>
+							{child}
+						</motion.g>
+					);
+				})}
+			</svg>
 		</div>
 	);
 };
 
 export default MarqueeAlongSvgPath;
-
-export const MarqueeItem = ({
-	child,
-	repeatIndex,
-	itemIndex,
-	calculateZIndex,
-	baseOffset,
-	easing,
-	cssVariableInterpolation,
-	draggable,
-	grabCursor,
-	enableRollingZIndex,
-	scaledPath,
-	isHovered,
-	items,
-	keyValue,
-	path,
-}) => {
-	// Create a unique offset transform for each item
-	const itemOffset = useTransform(baseOffset, (v) => {
-		const position = (itemIndex * 100) / items.length;
-		const wrappedValue = wrap(0, 100, v + position);
-		return `${easing ? easing(wrappedValue / 100) * 100 : wrappedValue}%`;
-	});
-	const itemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
-
-	// Create a motion value for the current offset distance
-	const currentOffsetDistance = useMotionValue(0);
-
-	// Update z-index when offset distance changes
-	const zIndex = useTransform(currentOffsetDistance, (value) =>
-		calculateZIndex(value)
-	);
-
-	// Update current offset distance value when animation runs
-	useEffect(() => {
-		const unsubscribe = itemOffset.on("change", (value: string) => {
-			// Parse percentage string to get numerical value
-			const match = value.match(/^([\d.]+)%$/);
-			if (match && match[1]) {
-				currentOffsetDistance.set(parseFloat(match[1]));
-			}
-		});
-		return unsubscribe;
-	}, [itemOffset, currentOffsetDistance]);
-
-	const cssVariables = Object.fromEntries(
-		(cssVariableInterpolation || []).map(({ property, from, to }) => [
-			property,
-			useTransform(currentOffsetDistance, [0, 100], [from, to]),
-		])
-	);
-
-	const [pathToUse, setPathToUse] = useState();
-
-	useEffect(() => {
-		if (scaledPath !== path) {
-			setPathToUse(scaledPath);
-		}
-	}, [scaledPath, path]);
-
-	return (
-		<motion.div
-			ref={(el) => {
-				if (el) itemRefs.current.set(keyValue, el);
-			}}
-			className={cn(
-				"absolute top-0 left-0 along-element",
-				draggable && grabCursor && "cursor-grab"
-			)}
-			style={{
-				offsetPath: `path("M66.57,94.58c-2.77,0-5.41-3.17-11-3.17C48.74,91.41,42.27,95,35.14,95,14.26,95,0,81.11,0,60.1,0,40.42,15.06,25.36,34.74,25.36,42.27,25.36,50.2,30,54.69,30,63,30,60.37,16,60.37,10.7,60.37,6,60.9,0,67.1,0c4.63,0,5.55,4.36,5.55,8.19V88.5C72.65,93.26,71.2,94.58,66.57,94.58ZM35.27,33.82C20.21,33.82,9,44.91,9,60,9,74.24,21,85.6,35.14,85.6c14.79,0,25.49-11.76,25.49-26.29A25.48,25.48,0,0,0,35.27,33.82Z M131.05,35.68c-1.78.5-5.09.1-7.34-.56-4.21-1.23-7.12-1-11.48-1-8.06,0-19.34,2.25-19.34,12.82V87.45c0,3.83.26,8.45-4.89,8.45s-6.6-3.57-6.6-8.06V34.34c0-4.22.26-8.45,5.68-8.45,2.51,0,5.68,2,5.68,4.76,5.41-4.36,17.57-6.34,24.43-6.34,5.29,0,17.61,1.93,17.61,7.12C134.8,33.67,133.55,35,131.05,35.68Z M192.92,92.47a6.22,6.22,0,0,1-5,2.24,5.83,5.83,0,0,1-5.42-2.64C180,88.5,154.74,31.7,154.74,29.85a5.22,5.22,0,0,1,5.16-5.41,5.5,5.5,0,0,1,5.54,3.3c6.48,11.76,10.31,25.1,17.31,36.72a6.88,6.88,0,0,0,6.6,3.83c3.17,0,4.89-1.19,6.47-3.83,4.23-7.39,13.08-33.55,17-37.91a4.69,4.69,0,0,1,3.44-2,3.67,3.67,0,0,1,3.57,3.7C219.87,30.65,194.77,90.62,192.92,92.47Z M272.44,62.48c-11.62.4-23.38.13-35,.13-4.63,0-8.33,2.51-8.33,7.53,0,11.36,14.4,15.46,23.52,15.46,18.36,0,20.6-13.08,26.68-13.08a3.81,3.81,0,0,1,3.7,3.83,9,9,0,0,1-2.51,5.55c-7.66,9.12-16.65,12.68-28.4,12.68-21,0-35.53-12.42-35.53-33.95,0-19.94,15.19-34.87,35-34.87,14.13,0,31.7,11.76,31.7,26.29C283.27,59.44,279.44,62.22,272.44,62.48Zm-20.74-28c-8.19,0-15.19,2.37-19.68,9.64a9.71,9.71,0,0,0-1.85,5c0,5.15,4.76,6.21,9,6.21h12.42c6.21,0,20.74,2.64,20.74-6.47C272.31,40.42,258.84,34.48,251.7,34.48Z M144.05,94.58c-4.47,0-5.66-2.77-5.66-6.85l.13-54c0-3.82,1.32-7,5.67-7a5,5,0,0,1,4.21,2,8.49,8.49,0,0,1,1.45,5c0,18.05.26,36,.26,54C150.11,91.81,148.4,94.58,144.05,94.58Z")`,
-				offsetDistance: itemOffset,
-				zIndex: enableRollingZIndex ? zIndex : undefined,
-				...cssVariables,
-			}}
-			aria-hidden={repeatIndex > 0}
-			onMouseEnter={() => (isHovered.current = true)}
-			onMouseLeave={() => (isHovered.current = false)}
-		>
-			{child}
-		</motion.div>
-	);
-};

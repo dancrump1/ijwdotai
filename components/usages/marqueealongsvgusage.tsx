@@ -10,79 +10,29 @@ export default function MarqueeAlongSvgPathDemo() {
 			baseVelocity={8}
 			slowdownOnHover={true}
 			draggable={true}
-			repeat={2}
+			repeat={1}
 			dragSensitivity={0.1}
 			showPath
-			className="absolute w-full overflow-hidden"
+			className="absolute w-full h-full"
+			// preserveAspectRatio="none"
 			grabCursor
-			viewBox="0 0 283.27 95.9"
 		>
 			{imgs.map((img, i) => (
-				<div
+				<image
 					key={i + "marqueeSVG"}
-					className="w-14 h-full hover:scale-150 duration-300 ease-in-out"
-				>
-					<img
-						src={img.src}
-						alt={`Usage ${i}`}
-						className="w-full h-full object-cover"
-						draggable={false}
-					/>
-				</div>
+					href={img.src}
+					alt={`Usage ${i}`}
+					height={30}
+					width={30}
+					className="object-cover hover:scale-150 duration-300 ease-in-out"
+					draggable={false}
+				/>
 			))}
 		</MarqueeAlongSvgPath>
 	);
 }
 
 const imgs = [
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://www.instagram.com/p/C4RTJvVpP4R/?igsh=MWZwOTNlYTVodGszMw%3D%3D",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
-	{
-		src: "/itjustworks.jpg",
-		link: "https://google.com",
-	},
 	{
 		src: "/itjustworks.jpg",
 		link: "https://google.com",

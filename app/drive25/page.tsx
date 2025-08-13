@@ -183,7 +183,7 @@ function Home({ data }) {
 				<div></div>
 			</section>
 
-			<section className="relative h-[50vh]">
+			<section className="relative h-[50vh] w-full">
 				<MarqueeAlongSvgPathDemo />
 			</section>
 

@@ -37,4 +37,64 @@ const imgs = [
 		src: "/itjustworks.jpg",
 		link: "https://google.com",
 	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
+	{
+		src: "/itjustworks.jpg",
+		link: "https://google.com",
+	},
 ];

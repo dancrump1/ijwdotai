@@ -722,6 +722,63 @@
       ]
     },
     {
+      "name": "cielia-replication",
+      "type": "registry:block",
+      "title": "Cielia replication",
+      "description": "Cielia replication",
+      "files": [
+        {
+          "path": "components/usages/cieliareplicationusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/cielia-replication.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/About.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/SectionHeader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Features.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/GsapProvider.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/ScrollTriggerContext.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Improvements.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Introduction.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/LottieScrollTrigger.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/cielia-replication/Services.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "circle-accordion",
       "type": "registry:block",
       "title": "Circle accordion",
@@ -1203,63 +1260,6 @@
       ]
     },
     {
-      "name": "example-replication",
-      "type": "registry:block",
-      "title": "Example replication",
-      "description": "Example replication",
-      "files": [
-        {
-          "path": "components/usages/examplereplicationusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/example-replication.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/About.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/Features.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/SectionHeader.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/Gallery.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/GsapProvider.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/ScrollTriggerContext.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/Improvements.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/Introduction.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/LottieScrollTrigger.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/cielia-replication/Services.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "expanding-tabs",
       "type": "registry:block",
       "title": "Expanding tabs",
@@ -1344,23 +1344,6 @@
         },
         {
           "path": "registry/open-source/faulty-terminal.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "features",
-      "type": "registry:block",
-      "title": "Features",
-      "description": "Features",
-      "files": [
-        {
-          "path": "components/usages/featuresusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/features.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1822,27 +1805,6 @@
         },
         {
           "path": "registry/open-source/galaxy-button.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "gallery",
-      "type": "registry:block",
-      "title": "Gallery",
-      "description": "Gallery",
-      "files": [
-        {
-          "path": "components/usages/galleryusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/gallery.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "registry/open-source/section-header.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3374,23 +3336,6 @@
       ]
     },
     {
-      "name": "image-reveal",
-      "type": "registry:block",
-      "title": "Image reveal",
-      "description": "Image reveal",
-      "files": [
-        {
-          "path": "components/usages/imagerevealusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/image-reveal.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "image-ripple",
       "type": "registry:block",
       "title": "Image ripple",
@@ -3449,23 +3394,6 @@
         },
         {
           "path": "registry/open-source/image-zoom.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "improvements",
-      "type": "registry:block",
-      "title": "Improvements",
-      "description": "Improvements",
-      "files": [
-        {
-          "path": "components/usages/improvementsusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/improvements.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3584,23 +3512,6 @@
         },
         {
           "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "introduction",
-      "type": "registry:block",
-      "title": "Introduction",
-      "description": "Introduction",
-      "files": [
-        {
-          "path": "components/usages/introductionusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/introduction.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3837,23 +3748,6 @@
         },
         {
           "path": "registry/open-source/list-rotator.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "lottie-scroll-trigger",
-      "type": "registry:block",
-      "title": "Lottie scroll trigger",
-      "description": "Lottie scroll trigger",
-      "files": [
-        {
-          "path": "components/usages/lottiescrolltriggerusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/lottie-scroll-trigger.tsx",
           "type": "registry:ui"
         }
       ]
@@ -4300,6 +4194,22 @@
         },
         {
           "path": "registry/open-source/opposite-scroll.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "page-transitions",
+      "type": "registry:block",
+      "title": "Page transitions",
+      "description": "Page transitions",
+      "files": [
+        {
+          "path": "registry/open-source/page-transitions.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/page-transitions/data.ts",
           "type": "registry:ui"
         }
       ]
@@ -4941,23 +4851,6 @@
       ]
     },
     {
-      "name": "scroll-trigger-context",
-      "type": "registry:block",
-      "title": "Scroll trigger context",
-      "description": "Scroll trigger context",
-      "files": [
-        {
-          "path": "components/usages/scrolltriggercontextusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/scroll-trigger-context.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "scroll-velocity",
       "type": "registry:block",
       "title": "Scroll velocity",
@@ -4999,23 +4892,6 @@
         },
         {
           "path": "registry/open-source/three-dot-loader.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "section-header",
-      "type": "registry:block",
-      "title": "Section header",
-      "description": "Section header",
-      "files": [
-        {
-          "path": "components/usages/sectionheaderusage.tsx",
-          "type": "registry:block",
-          "target": "~/example.tsx"
-        },
-        {
-          "path": "registry/open-source/section-header.tsx",
           "type": "registry:ui"
         }
       ]

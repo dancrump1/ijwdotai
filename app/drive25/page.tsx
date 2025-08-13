@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import Image from "next/image";
+
 import AccordionSlices from "@/registry/open-source/accordion-slices";
 import FAQPage from "@/registry/open-source/faq-section";
 import Gravity, { MatterBody } from "@/registry/open-source/gravity";
@@ -181,15 +183,77 @@ function Home({ data }) {
 			</section>
 
 			<section className="my-32">
-				<FAQPage />
+				<FAQPage
+					faqs={{
+						Capabilities: [
+							{
+								question: "Strategy",
+								answer:
+									"We offer a wide range of pre-built UI components built with Tailwind CSS and Framer Motion, including buttons, cards, forms, navigation menus, and more.",
+							},
+							{
+								question: "Creative",
+								answer:
+									"Simply copy and paste the code for the components you need into your project, then customize the styles and functionality to match your design.",
+							},
+							{
+								question: "Website",
+								answer:
+									"Yes, our components are designed to be fully responsive and optimized for both desktop and mobile devices.",
+							},
+							{
+								question: "Consultation",
+								answer:
+									"Absolutely! The components are highly customizable, allowing you to easily change colors, fonts, and other styles to match your brand identity.",
+							},
+						],
+						["Case Studies"]: [
+							{
+								question: "Cannon Mt",
+								answer:
+									"Our components are built with modern technologies like Tailwind CSS and Framer Motion, offering advanced features like animations, hover effects, and smooth scrolling.",
+							},
+							{
+								question: "Cranmore",
+								answer:
+									"Yes, we offer comprehensive documentation and support to help you get started and troubleshoot any issues you may encounter.",
+							},
+							{
+								question: "MWV Chamber of Commerce",
+								answer:
+									"We regularly add new components and update existing ones to ensure you always have access to the latest design trends and best practices.",
+							},
+							{
+								question: "Hannaford",
+								answer:
+									"Yes, our components are licensed for commercial use, allowing you to incorporate them into your client projects without any additional fees.",
+							},
+						],
+					}}
+				/>
 			</section>
 
-			<section className="bg-secondary">
-				<ScrollVelocityContainer className="text-4xl my-32 md:text-7xl md:leading-[5rem] font-bold tracking-[-0.02em]">
-					<ScrollVelocityRow baseVelocity={5} direction={1}>
+			<section className="bg-secondary my-32 py-32">
+				<ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[5rem] font-bold tracking-[-0.02em]">
+					<ScrollVelocityRow
+						baseVelocity={5}
+						direction={1}
+						className="z-10 relative"
+					>
 						Let us be you listening ear.{" "}
 					</ScrollVelocityRow>
-					<ScrollVelocityRow baseVelocity={5} direction={-1}>
+					<Image
+						src={"/itjustworks.jpg"}
+						alt={""}
+						height={60}
+						width={60}
+						className="absolute left-[calc(50vw-155px)] top-0 z-20 h-full w-fit"
+					/>
+					<ScrollVelocityRow
+						baseVelocity={5}
+						direction={-1}
+						className="z-30 relative"
+					>
 						Let us be your listening ear.{" "}
 					</ScrollVelocityRow>
 				</ScrollVelocityContainer>{" "}

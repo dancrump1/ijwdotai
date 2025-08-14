@@ -39,7 +39,7 @@ const DesktopNavbar = ({ navItems }: Props) => {
 		<motion.div
 			className={cn(
 				"flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto",
-				!showFloatingNav && "w-full h-screen"
+				!showFloatingNav ? "w-full h-screen" : "w-fit h-fit"
 			)}
 			animate={{
 				width: showFloatingNav ? "80%" : "100%",
@@ -49,47 +49,38 @@ const DesktopNavbar = ({ navItems }: Props) => {
 			transition={{
 				duration: 0.4,
 			}}
+			layout
 		>
-			<AnimatePresence>
-				{!showFloatingNav &&
-					navItems.map((item, i) => (
-						<div
-							className={cn(
-								"absolute",
-								i === 0 && "top-0 inset-x-0 place-items-center",
-								i === 1 && "right-0 inset-y-0 content-center",
-								i === 2 && "bottom-0 inset-x-0 place-items-center",
-								i === 3 && "left-0 inset-y-0 content-center"
-							)}
-						>
-							<NavBarItem
-								href={item.link}
-								key={item.title}
-								target={item.target}
-							>
-								{item.title}
-							</NavBarItem>
-						</div>
-					))}
-			</AnimatePresence>
-			<AnimatePresence>
-				{showFloatingNav && (
-					<motion.div className="flex flex-row gap-2">
-						{/* <Logo /> */}
-						<div className="flex items-center gap-1.5">
-							{navItems.map((item) => (
-								<NavBarItem
-									href={item.link}
-									key={item.title}
-									target={item.target}
-								>
-									{item.title}
-								</NavBarItem>
-							))}
-						</div>
-					</motion.div>
-				)}
-			</AnimatePresence>
+			{navItems.map((item, i) => (
+				<motion.div
+					className={cn(
+						!showFloatingNav &&
+							i === 0 &&
+							"top-0 inset-x-0 place-items-center",
+						!showFloatingNav &&
+							i === 1 &&
+							"right-0 inset-y-0 content-center",
+						!showFloatingNav &&
+							i === 2 &&
+							"bottom-0 inset-x-0 place-items-center",
+						!showFloatingNav &&
+							i === 3 &&
+							"left-0 inset-y-0 content-center"
+					)}
+					animate={{
+						position: showFloatingNav ? "relative" : "absolute",
+					}}
+					transition={{ duration: 0.5 }}
+				>
+					<NavBarItem
+						href={item.link}
+						key={item.title}
+						target={item.target}
+					>
+						{item.title}
+					</NavBarItem>
+				</motion.div>
+			))}
 		</motion.div>
 	);
 };
@@ -127,7 +118,7 @@ function ResizeNavBar() {
 				ease: [0.6, 0.05, 0.1, 0.9],
 				duration: 0.8,
 			}}
-			className="fixed inset-0  h-screen w-screen z-50"
+			className="fixed inset-0  h-screen w-screen z-[500]"
 		>
 			<div className="hidden lg:block h-full w-full">
 				<DesktopNavbar navItems={navItems} />

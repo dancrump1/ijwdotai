@@ -97,20 +97,20 @@ const DesktopNavbar = ({ navItems }: Props) => {
 const navItems = [
 	{
 		title: "Work",
-		link: "/work",
+		link: "/drive25/work",
 	},
 	{
 		title: "About",
-		link: "/about",
+		link: "/drive25/about",
 	},
 
 	{
 		title: "nothing",
-		link: "/nothing",
+		link: "/drive25/nothing",
 	},
 	{
 		title: "nothing",
-		link: "/nothing",
+		link: "/drive25/nothing",
 	},
 ];
 

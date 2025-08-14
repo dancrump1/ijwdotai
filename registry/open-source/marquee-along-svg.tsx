@@ -1,4 +1,11 @@
-import React, { RefObject, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+	RefObject,
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 
 import * as d3 from "d3";
 import {
@@ -292,6 +299,14 @@ const MarqueeAlongPath = ({
 		damping: 20,
 	};
 
+	// Scroll tracking
+	const { scrollY } = useScroll({
+		container: scrollContainer as RefObject<HTMLDivElement>,
+	});
+
+	const scrollVelocity = useVelocity(scrollY);
+	const smoothVelocity = useSpring(scrollVelocity, scrollSpringConfig);
+
 	const smoothScrollVelocity = useSpring(scrollVelocity, springConfig);
 
 	const scrollVelocityFactor = useTransform(
@@ -338,14 +353,6 @@ const MarqueeAlongPath = ({
 	// Generate a random ID for the path if not provided
 	const id =
 		pathId || `marquee-path-${Math.random().toString(36).substring(7)}`;
-
-	// Scroll tracking
-	const { scrollY } = useScroll({
-		container: (scrollContainer as RefObject<HTMLDivElement>) || container,
-	});
-
-	const scrollVelocity = useVelocity(scrollY);
-	const smoothVelocity = useSpring(scrollVelocity, scrollSpringConfig);
 
 	// Hover and drag state tracking
 	const isHovered = useRef(false);

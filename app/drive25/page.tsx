@@ -15,6 +15,7 @@ import Floating, {
 	FloatingElement,
 } from "@/registry/open-source/parallax-floating";
 import Preloader from "@/registry/open-source/preloader";
+import ResizeNavBar from "@/registry/open-source/resize-navbar";
 import {
 	ScrollVelocityContainer,
 	ScrollVelocityRow,
@@ -162,6 +163,7 @@ function Home({ data }) {
 
 			{!loader && (
 				<main className="">
+					<ResizeNavBar />
 					<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
 						<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
 							<Floating sensitivity={-0.5} className="h-full">

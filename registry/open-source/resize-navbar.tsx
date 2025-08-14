@@ -15,8 +15,6 @@ import {
 } from "motion/react";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
 
-import { ModeToggle } from "./atoms/mode-toggle";
-
 type Props = {
 	navItems: {
 		link: string;
@@ -28,62 +26,70 @@ type Props = {
 const DesktopNavbar = ({ navItems }: Props) => {
 	const { scrollY } = useScroll();
 
-	const [showBackground, setShowBackground] = useState(false);
+	const [showFloatingNav, setShowFloatingNav] = useState(false);
 
 	useMotionValueEvent(scrollY, "change", (value) => {
 		if (value > 100) {
-			setShowBackground(true);
+			setShowFloatingNav(true);
 		} else {
-			setShowBackground(false);
+			setShowFloatingNav(false);
 		}
 	});
 	return (
 		<motion.div
 			className={cn(
-				"w-full flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto"
+				"flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto",
+				!showFloatingNav && "w-full h-screen"
 			)}
 			animate={{
-				width: showBackground ? "80%" : "100%",
-				background: showBackground ? "var(--neutral-900)" : "transparent",
+				width: showFloatingNav ? "80%" : "100%",
+				height: showFloatingNav ? "0%" : "100%",
+				background: showFloatingNav ? "var(--neutral-900)" : "transparent",
 			}}
 			transition={{
 				duration: 0.4,
 			}}
 		>
 			<AnimatePresence>
-				{showBackground && (
-					<motion.div
-						key={String(showBackground)}
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{
-							duration: 1,
-						}}
-						className="absolute inset-0 h-full w-full bg-neutral-900 pointer-events-none [mask-image:linear-gradient(to_bottom,white,transparent,white)] rounded-full"
-					/>
+				{!showFloatingNav &&
+					navItems.map((item, i) => (
+						<div
+							className={cn(
+								"absolute",
+								i === 0 && "top-0 inset-x-0 place-items-center",
+								i === 1 && "right-0 inset-y-0 content-center",
+								i === 2 && "bottom-0 inset-x-0 place-items-center",
+								i === 3 && "left-0 inset-y-0 content-center"
+							)}
+						>
+							<NavBarItem
+								href={item.link}
+								key={item.title}
+								target={item.target}
+							>
+								{item.title}
+							</NavBarItem>
+						</div>
+					))}
+			</AnimatePresence>
+			<AnimatePresence>
+				{showFloatingNav && (
+					<motion.div className="flex flex-row gap-2">
+						{/* <Logo /> */}
+						<div className="flex items-center gap-1.5">
+							{navItems.map((item) => (
+								<NavBarItem
+									href={item.link}
+									key={item.title}
+									target={item.target}
+								>
+									{item.title}
+								</NavBarItem>
+							))}
+						</div>
+					</motion.div>
 				)}
 			</AnimatePresence>
-			<div className="flex flex-row gap-2 items-center">
-				{/* <Logo /> */}
-				<div className="flex items-center gap-1.5">
-					{navItems.map((item) => (
-						<NavBarItem
-							href={item.link}
-							key={item.title}
-							target={item.target}
-						>
-							{item.title}
-						</NavBarItem>
-					))}
-				</div>
-			</div>
-			<div className="flex space-x-2 items-center">
-				<Button as={Link} href="/register">
-					Register
-				</Button>
-				<Button>Book a demo</Button>
-				<ModeToggle />
-			</div>
 		</motion.div>
 	);
 };
@@ -121,9 +127,9 @@ function ResizeNavBar() {
 				ease: [0.6, 0.05, 0.1, 0.9],
 				duration: 0.8,
 			}}
-			className="max-w-7xl  fixed top-4  mx-auto inset-x-0 z-50 w-[95%] lg:w-full"
+			className="fixed inset-0  h-screen w-screen z-50"
 		>
-			<div className="hidden lg:block w-full">
+			<div className="hidden lg:block h-full w-full">
 				<DesktopNavbar navItems={navItems} />
 			</div>
 			<div className="flex h-full w-full items-center lg:hidden ">
@@ -219,7 +225,7 @@ const MobileNavbar = ({ navItems }: any) => {
 						>
 							Register
 						</Button>
-						<ModeToggle />
+						{/* <ModeToggle /> */}
 					</div>
 				</div>
 			)}
@@ -248,7 +254,7 @@ export function NavBarItem({
 		<Link
 			href={href}
 			className={cn(
-				"flex items-center justify-center  text-sm leading-[110%] px-4 py-2 rounded-md text-white  hover:bg-neutral-800 hover:text-white/80 dark:text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
+				"flex items-center h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 rounded-md text-white  hover:bg-neutral-800 hover:text-white/80 dark:text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
 				(active || pathname?.includes(href)) &&
 					"bg-transparent dark:text-white",
 				className

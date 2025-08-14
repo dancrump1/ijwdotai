@@ -4,7 +4,7 @@ import { ThemeToggleButton } from "@/registry/open-source/theme_changer/ThemeTog
 
 const ThemeToggleAnimationsDemo = () => {
 	return (
-		<div className="h-full w-full flex items-center justify-center ">
+		<div className="h-screen w-full flex items-center justify-center ">
 			<ThemeToggleButton
 				showLabel
 				variant="gif"

@@ -103,10 +103,10 @@ export function TransitionPanel({
 									{parse(description || "")}
 								</span>
 								<Image
-									src={image[0].url}
+									src={image[0]?.url}
 									height={200}
 									width={400}
-									alt={image[0].title || "Work by Drive Brand Studio"}
+									alt={image[0]?.title || "Work by Drive Brand Studio"}
 								/>
 							</motion.div>
 						)

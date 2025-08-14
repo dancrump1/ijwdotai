@@ -22,61 +22,70 @@ export const fake_workspotlight = [
 	{
 		id: "work1",
 		title: "work 1",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
 		uri: "https://google.com",
 	},
 	{
 		id: "work2",
 		title: "work 2",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work3",
 		title: "work 3",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work4",
 		title: "work 4",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work5",
 		title: "work 5",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work6",
 		title: "work 6",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work7",
 		title: "work 7",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work8",
 		title: "work 8",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work9",
 		title: "work 9",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 	{
 		id: "work10",
 		title: "work 10",
-		image: { src: "/itjustworks.jpg" },
+		image: { url: "/itjustworks.jpg" },
+
 		uri: "https://google.com",
 	},
 ];

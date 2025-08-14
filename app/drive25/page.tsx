@@ -19,7 +19,7 @@ const colors = ["bg-blue-500", "bg-green-500", "bg-pink-500", "bg-yellow-500"];
 function Home({ data }) {
 	return (
 		<main className="">
-			<section className="h-[90vh] w-full relative">
+			<section className="h-[90vh] w-full relative overflow-hidden">
 				<Gravity gravity={{ x: 0, y: 1 }}>
 					{[
 						"Audience",
@@ -169,7 +169,9 @@ function Home({ data }) {
 					DRIVE BRAND STUDIO
 				</h1>
 			</section>
+
 			<InfiniteScrollingLogosAnimation />
+
 			<section className="flex my-32">
 				<div>
 					<h2>The DBS effect</h2>
@@ -263,6 +265,7 @@ function Home({ data }) {
 					</ScrollVelocityRow>
 				</ScrollVelocityContainer>{" "}
 			</section>
+
 			<section className="my-32">
 				<h2>Some of our work</h2>
 				<AccordionSlices />

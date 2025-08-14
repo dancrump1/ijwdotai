@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
+import Ballpit from "@/registry/open-source/ballpit";
 import CircularText from "@/registry/open-source/circle-text";
 import Floating, {
 	FloatingElement,
@@ -139,8 +140,8 @@ function About() {
 
 	return (
 		<main className="dark:text-white dark:bg-zinc-800">
-			<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-				<section className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
+			<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
+				<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
 					<Floating sensitivity={-0.5} className="h-full">
 						<FloatingElement
 							depth={0.5}
@@ -213,7 +214,7 @@ function About() {
 						</FloatingElement>
 					</Floating>
 
-					<div className="flex flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
+					<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
 						<motion.h1
 							className="text-3xl text-white mix-blend-soft-light dark:text-black sm:text-5xl md:text-7xl lg:text-8xl text-center w-full justify-center items-center flex-col flex whitespace-pre leading-tight tracking-tight space-y-1 md:space-y-4"
 							animate={{ opacity: 1, y: 0 }}
@@ -322,8 +323,15 @@ function About() {
 							</motion.button>
 						</div>
 					</div>
-				</section>{" "}
-			</div>
+				</div>
+			</section>
+
+			<section className="flex overflow-hidden my-32">
+				<CircularText text={"Quality"} onHover="goBonkers" />
+				<CircularText text={"Comfort"} />
+				<CircularText text={"Price"} onHover="slowDown" />
+			</section>
+
 			<section className="h-screen">
 				<div className="flex overflow-x-auto h-full w-full items-center justify-center">
 					<div className="w-[1200px] max-w-full">
@@ -419,11 +427,8 @@ function About() {
 					</div>
 				</div>
 			</section>
-
-			<section className="flex overflow-hidden py-32">
-				<CircularText text={"Quality"} onHover="goBonkers" />
-				<CircularText text={"Comfort"} />
-				<CircularText text={"Price"} onHover="slowDown" />
+			<section className="h-[300px]">
+				<Ballpit />
 			</section>
 		</main>
 	);

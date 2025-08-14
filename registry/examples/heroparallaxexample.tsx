@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { HeroParallax } from "@/components/HeroParallax";
+import HeroParallax from "@/components/HeroParallax";
 
 export function HeroParallaxDemo() {
 	return <HeroParallax products={products} />;

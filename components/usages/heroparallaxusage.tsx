@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { HeroParallax } from "@/registry/open-source/hero-parallax";
+import HeroParallax from "@/registry/open-source/hero-parallax";
 
 export default function HeroParallaxDemo() {
 	return <HeroParallax products={products} />;

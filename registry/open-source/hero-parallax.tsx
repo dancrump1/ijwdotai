@@ -14,7 +14,7 @@ import {
 
 // https://ui.aceternity.com/components/hero-parallax
 
-export const HeroParallax = ({
+const HeroParallax = ({
 	products,
 	containerRef,
 }: {
@@ -174,3 +174,5 @@ export const ProductCard = ({
 		</motion.div>
 	);
 };
+
+export default HeroParallax;

@@ -2,7 +2,9 @@
 
 import React from "react";
 
+import { products } from "@/components/usages/heroparallaxusage";
 import CursorFollow from "@/registry/open-source/cursor-follow";
+import HeroParallax from "@/registry/open-source/hero-parallax";
 import { Fade, Slide } from "react-awesome-reveal";
 
 const images = [
@@ -139,8 +141,9 @@ const images = [
 function Work() {
 	return (
 		<main className="dark:text-white dark:bg-zinc-800">
+			<HeroParallax products={products} />
 			<CursorFollow>
-				<div className="flex flex-row items-center justify-center gap-8 py-8 flex-wrap">
+				<div className="flex flex-row items-center justify-center gap-8 py-8 flex-wrap overflow-hidden">
 					{images.map((img, i) => (
 						<Slide
 							direction="up"

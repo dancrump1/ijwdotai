@@ -1,12 +1,6 @@
-import React, {
-	RefObject,
-	useCallback,
-	useEffect,
-	useRef,
-	useState,
-} from "react";
+import React, { RefObject, useEffect, useMemo, useRef, useState } from "react";
 
-import { cn } from "@/registry/utilities/cn";
+import * as d3 from "d3";
 import {
 	motion,
 	SpringOptions,
@@ -21,7 +15,34 @@ import {
 // Credit:
 // https://www.fancycomponents.dev/docs/components/blocks/marquee-along-svg-path
 
-// Custom wrap function
+type MarqueeAlongPathProps = {
+	children: React.ReactNode;
+	path: string;
+	baseVelocity: number;
+	repeat?: number;
+	zIndexBase?: number;
+	enableRollingZIndex?: boolean;
+	scrollContainerRef: React.RefObject<HTMLDivElement | null>;
+};
+
+type MarqueeItemProps = {
+	baseOffset: any;
+	itemIndex: number;
+	totalItems: number;
+	repeatIndex: number;
+	zIndexBase: number;
+	scaledPath: string;
+	isHovered: React.MutableRefObject<boolean>;
+	children: React.ReactNode;
+};
+
+/**
+ * Wraps a number between a min and max value
+ * @param min The minimum value
+ * @param max The maximum value
+ * @param value The value to wrap
+ * @returns The wrapped value between min and max
+ */
 const wrap = (min: number, max: number, value: number): number => {
 	const range = max - min;
 	return ((((value - min) % range) + range) % range) + min;
@@ -101,12 +122,129 @@ interface MarqueeAlongSvgPathProps {
 	cssVariableInterpolation?: CSSVariableInterpolation[];
 }
 
-const MarqueeAlongSvgPath = ({
-	children,
-	className,
+/**
+ * Parse SVG path string into coordinate points using D3
+ * This extracts the actual coordinates from the path for scaling
+ */
+const parsePathToPoints = (
+	pathString: string,
+	maxSamples: number = 100
+): Array<[number, number]> => {
+	const points: Array<[number, number]> = [];
 
-	// Path defaults
+	// Create a temporary SVG element to parse the path
+	const svg = d3.create("svg");
+	const path = svg.append("path").attr("d", pathString);
+
+	// Sample points along the path
+	const pathNode = path.node() as SVGPathElement;
+	if (pathNode) {
+		const totalLength = pathNode.getTotalLength();
+
+		// If the path is too long, sample only a subset of points. Majes
+		const numSamples = Math.min(maxSamples, totalLength);
+
+		for (let i = 0; i <= numSamples; i++) {
+			const point = pathNode.getPointAtLength(
+				(i / numSamples) * totalLength
+			);
+			points.push([point.x, point.y]);
+		}
+	}
+
+	return points;
+};
+
+/**
+ * Create a scaled path using D3's line generator
+ * This is the approach recommended in the CSS-Tricks article
+ */
+const createScaledPath = (
+	originalPath: string,
+	originalWidth: number,
+	originalHeight: number,
+	newWidth: number,
+	newHeight: number
+): string => {
+	// Parse the original path into points
+	const points = parsePathToPoints(originalPath);
+
+	// Create scales for X and Y coordinates
+	const xScale = d3
+		.scaleLinear()
+		.domain([0, originalWidth])
+		.range([0, newWidth]);
+
+	const yScale = d3
+		.scaleLinear()
+		.domain([0, originalHeight])
+		.range([0, newHeight]);
+
+	// Scale the points
+	const scaledPoints = points.map(
+		([x, y]) => [xScale(x), yScale(y)] as [number, number]
+	);
+
+	// Create a smooth curve using D3's line generator
+	const line = d3
+		.line()
+		.x((d) => d[0])
+		.y((d) => d[1])
+		.curve(d3.curveBasis); // Use basis curve for smooth interpolation
+
+	return line(scaledPoints) || "";
+};
+
+const MarqueeItem = ({
+	baseOffset,
+	itemIndex,
+	totalItems,
+	repeatIndex,
+	zIndexBase,
+	scaledPath,
+	isHovered,
+	children,
+}: MarqueeItemProps) => {
+	const itemOffset = useTransform(baseOffset, (v: number) => {
+		const position = (itemIndex * 100) / totalItems;
+		const wrappedValue = wrap(0, 100, v + position);
+		return `${wrappedValue}%`;
+	});
+
+	const zIndex = useTransform(itemOffset, (v) => {
+		const progress = parseFloat(v.replace("%", ""));
+		return Math.floor(zIndexBase + progress);
+	});
+
+	const opacity = useTransform(itemOffset, (v) => {
+		const progress = parseFloat(v.replace("%", "")) / 100;
+		const x = 2 * progress - 1;
+		return Math.pow(1 - Math.pow(Math.abs(x), 10), 2);
+	});
+
+	return (
+		<motion.div
+			className="marquee-item absolute top-0 left-0"
+			style={{
+				offsetPath: `path('${scaledPath}')`,
+				offsetDistance: itemOffset,
+				offsetRotate: "auto",
+				zIndex: zIndex,
+				opacity: opacity,
+			}}
+			aria-hidden={repeatIndex > 0}
+			onMouseEnter={() => (isHovered.current = true)}
+			onMouseLeave={() => (isHovered.current = false)}
+		>
+			{children}
+		</motion.div>
+	);
+};
+
+const MarqueeAlongPath = ({
+	children,
 	path,
+	scrollContainerRef,
 	pathId,
 	preserveAspectRatio = "xMidYMid meet",
 	showPath = false,
@@ -146,26 +284,36 @@ const MarqueeAlongSvgPath = ({
 	zIndexRange = 10, // Range of z-index values to use
 
 	cssVariableInterpolation = [],
-}: MarqueeAlongSvgPathProps) => {
-	const container = useRef<HTMLDivElement>(null);
+}: MarqueeAlongPathProps) => {
 	const baseOffset = useMotionValue(0);
 
-	const pathRef = useRef<SVGPathElement>(null);
+	const springConfig = {
+		stiffness: 100,
+		damping: 20,
+	};
 
-	// Create an array of items outside of the render function
-	const items = React.useMemo(() => {
+	const smoothScrollVelocity = useSpring(scrollVelocity, springConfig);
+
+	const scrollVelocityFactor = useTransform(
+		smoothScrollVelocity,
+		[0, 1000],
+		[0, 5],
+		{ clamp: false }
+	);
+
+	const items = useMemo(() => {
 		const childrenArray = React.Children.toArray(children);
 
 		return childrenArray.flatMap((child, childIndex) =>
 			Array.from({ length: repeat }, (_, repeatIndex) => {
 				const itemIndex = repeatIndex * childrenArray.length + childIndex;
-				const keyValue = `${childIndex}-${repeatIndex}`;
+				const key = `${childIndex}-${repeatIndex}`;
 				return {
 					child,
 					childIndex,
 					repeatIndex,
 					itemIndex,
-					keyValue,
+					key,
 				};
 			})
 		);
@@ -219,263 +367,129 @@ const MarqueeAlongSvgPath = ({
 		[0, 5],
 		{ clamp: false }
 	);
-
-	// Animation frame handler
 	useAnimationFrame((_, delta) => {
-		if (isDragging.current && draggable) {
-			baseOffset.set(baseOffset.get() + dragVelocity.current);
-
-			// Add decay to dragVelocity
-			dragVelocity.current *= 0.9;
-
-			// Stop completely if velocity is very small
-			if (Math.abs(dragVelocity.current) < 0.01) {
-				dragVelocity.current = 0;
-			}
-
-			return;
-		}
-
-		// Update hover factor
 		if (isHovered.current) {
-			hoverFactorValue.set(slowdownOnHover ? slowDownFactor : 1);
+			hoverFactorValue.set(0.3);
 		} else {
 			hoverFactorValue.set(1);
 		}
 
-		// Calculate regular movement
 		let moveBy =
+			((baseVelocity * delta) / 1000) *
 			directionFactor.current *
-			baseVelocity *
-			(delta / 1000) *
 			smoothHoverFactor.get();
 
-		// Adjust movement based on scroll velocity if scrollAwareDirection is enabled
-		if (scrollAwareDirection && !isDragging.current) {
-			if (velocityFactor.get() < 0) {
-				directionFactor.current = -1;
-			} else if (velocityFactor.get() > 0) {
-				directionFactor.current = 1;
-			}
+		if (scrollVelocityFactor.get() < 0) {
+			directionFactor.current = -1;
+		} else if (scrollVelocityFactor.get() > 0) {
+			directionFactor.current = 1;
 		}
 
-		moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-		if (draggable) {
-			moveBy += dragVelocity.current;
-
-			// Update direction based on drag direction if dragAwareDirection is true
-			if (dragAwareDirection && Math.abs(dragVelocity.current) > 0.1) {
-				directionFactor.current = Math.sign(dragVelocity.current);
-			}
-
-			// Gradually decay drag velocity back to zero
-			if (!isDragging.current && Math.abs(dragVelocity.current) > 0.01) {
-				dragVelocity.current *= dragVelocityDecay;
-			} else if (!isDragging.current) {
-				dragVelocity.current = 0;
-			}
-		}
+		moveBy += directionFactor.current * moveBy * scrollVelocityFactor.get();
 
 		baseOffset.set(baseOffset.get() + moveBy);
 	});
 
-	// Pointer event handlers for dragging
-	const lastPointerPosition = useRef({ x: 0, y: 0 });
+	const wrapperRef = useRef<HTMLDivElement>(null);
 
-	const handlePointerDown = (e: React.PointerEvent) => {
-		if (!draggable) return;
-		(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+	// Toggle between scaling methods: 1 or 2
+	const [useScaleMethod] = useState<1 | 2>(1);
 
-		if (grabCursor) {
-			(e.currentTarget as HTMLElement).style.cursor = "grabbing";
-		}
+	// Scale method #1
+	const marqueeContainerRef = useRef<HTMLDivElement>(null);
+	// Original SVG dimensions
+	const originalWidth = 800;
+	const originalHeight = 400;
 
-		isDragging.current = true;
-		lastPointerPosition.current = { x: e.clientX, y: e.clientY };
-
-		// Pause automatic animation by setting velocity to 0
-		dragVelocity.current = 0;
-	};
-
-	const handlePointerMove = (e: React.PointerEvent) => {
-		if (!draggable || !isDragging.current) return;
-
-		const currentPosition = { x: e.clientX, y: e.clientY };
-
-		// Calculate movement delta - simplified for path movement
-		const deltaX = currentPosition.x - lastPointerPosition.current.x;
-		const deltaY = currentPosition.y - lastPointerPosition.current.y;
-
-		// For path following, we use a simple magnitude of movement
-		const delta = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-		const projectedDelta = deltaX > 0 ? delta : -delta;
-
-		// Update drag velocity based on the projected movement
-		dragVelocity.current = projectedDelta * dragSensitivity;
-
-		// Update last position
-		lastPointerPosition.current = currentPosition;
-	};
-
-	const handlePointerUp = (e: React.PointerEvent) => {
-		if (!draggable) return;
-		(e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
-		isDragging.current = false;
-
-		if (grabCursor) {
-			(e.currentTarget as HTMLElement).style.cursor = "grab";
-		}
-	};
-
-	// const svgRef = useRef(null);
-	// const [scaledPath, setScaledPath] = useState(path);
-
-	// useEffect(() => {
-	// 	const updateScaledPath = () => {
-	// 		const pathEl = svgRef.current?.querySelector("#" + id);
-	// 		if (pathEl) {
-	// 			setScaledPath(getScaledPathString(pathEl));
-	// 		}
-	// 	};
-
-	// 	updateScaledPath();
-	// 	window.addEventListener("resize", updateScaledPath);
-	// 	return () => window.removeEventListener("resize", updateScaledPath);
-	// }, []);
-
-	// function getScaledPathString(pathEl, segments = 200) {
-	// 	const length = pathEl.getTotalLength();
-	// 	const points = [];
-
-	// 	for (let i = 0; i <= segments; i++) {
-	// 		const p = pathEl.getPointAtLength((i / segments) * length);
-	// 		points.push(`${p.x},${p.y}`);
-	// 	}
-
-	// 	return `M${points.join(" L")}`;
-	// }
-
-	const [scaledPath, setScaledPath] = useState(path);
 	useEffect(() => {
-		const updatePath = () => {
-			const scaleX = window.innerWidth / 300; // 300 is original width of path
-			const scaleY = window.innerHeight / 100; // 100 is original height of path
+		if (useScaleMethod === 1) {
+			// Scale method #1: CSS transform scale
+			const updateScale = () => {
+				const wrapper = wrapperRef.current;
+				const marqueeContainer = marqueeContainerRef.current;
+				if (!wrapper || !marqueeContainer) return;
 
-			// Regex to match numbers in the path
-			const scaled = path.replace(/-?\d+(\.\d+)?/g, (num) => {
-				return parseFloat(num) * scaleX; // scale X (or Y if needed)
-			});
+				const scale = wrapper.clientWidth / originalWidth;
+				marqueeContainer.style.transform = `scale(${scale})`;
+				marqueeContainer.style.transformOrigin = "top left";
+			};
 
-			setScaledPath(scaled);
-		};
-
-		updatePath();
-		window.addEventListener("resize", updatePath);
-		return () => window.removeEventListener("resize", updatePath);
+			updateScale();
+			window.addEventListener("resize", updateScale);
+			return () => window.removeEventListener("resize", updateScale);
+		}
 	}, []);
+
+	// Scale method #2 with D3
+	const [scaledPath, setScaledPath] = useState(path);
+	const [currentViewBox, setCurrentViewBox] = useState(
+		`0 0 ${originalWidth} ${originalHeight}`
+	);
+
+	useEffect(() => {
+		if (useScaleMethod === 2) {
+			// Scale method #2: D3 path scaling
+			const updatePath = () => {
+				const wrapper = wrapperRef.current;
+				if (!wrapper) return;
+
+				const containerWidth = wrapper.clientWidth;
+				const containerHeight = wrapper.clientHeight;
+
+				// Use D3 to create the scaled path
+				const newPath = createScaledPath(
+					path,
+					originalWidth,
+					originalHeight,
+					containerWidth,
+					containerHeight
+				);
+
+				setScaledPath(newPath);
+				setCurrentViewBox(`0 0 ${containerWidth} ${containerHeight}`);
+			};
+
+			updatePath();
+			window.addEventListener("resize", updatePath);
+			return () => window.removeEventListener("resize", updatePath);
+		}
+	}, [path]);
 
 	return (
 		<div
-			ref={container}
-			onPointerDown={handlePointerDown}
-			onPointerMove={handlePointerMove}
-			onPointerUp={handlePointerUp}
-			onPointerCancel={handlePointerUp}
-			className={cn("relative", className)}
+			className="container w-full relative aspect-[588/187] overflow-x-hidden overflow-y-visible"
+			ref={wrapperRef}
 		>
 			<svg
+				width="100%"
+				height="100%"
+				viewBox={currentViewBox}
+				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				width={width}
-				height={height}
-				viewBox={viewBox}
-				preserveAspectRatio={preserveAspectRatio}
 			>
-				{/* Path for visualization */}
-				<path
-					id={id}
-					d={path}
-					className="w-full"
-					stroke={showPath ? "currentColor" : "none"}
-					fill="none"
-					ref={pathRef}
-				/>
-
-				{/* Animate each item along the path */}
-				{items.map(({ child, repeatIndex, itemIndex, key }) => {
-					const itemOffset = useTransform(baseOffset, (v) => {
-						const position = (itemIndex * 100) / items.length;
-						const wrappedValue = wrap(0, 100, v + position);
-						return easing
-							? easing(wrappedValue / 100) * 100
-							: wrappedValue;
-					});
-
-					const x = useMotionValue(0);
-					const y = useMotionValue(0);
-					const zIndex = useTransform(currentOffsetDistance, (value) =>
-						calculateZIndex(value)
-					);
-
-					useEffect(() => {
-						const pathEl = pathRef.current;
-						if (!pathEl) return;
-
-						const totalLength = pathEl.getTotalLength();
-
-						const unsubscribe = itemOffset.on(
-							"change",
-							(value: string) => {
-								const percent = parseFloat(value) / 100;
-								const point = pathEl.getPointAtLength(
-									percent * totalLength
-								);
-								x.set(point.x);
-								y.set(point.y);
-							}
-						);
-
-						return unsubscribe;
-					}, [itemOffset]);
-
-					const cssVariables = Object.fromEntries(
-						(cssVariableInterpolation || []).map(
-							({ property, from, to }) => [
-								property,
-								useTransform(
-									currentOffsetDistance,
-									[0, 100],
-									[from, to]
-								),
-							]
-						)
-					);
-
-					return (
-						<motion.g
-							key={key}
-							className={cn(
-								"along-element relative",
-								draggable && grabCursor && "cursor-grab"
-							)}
-							style={{
-								offsetDistance: itemOffset,
-								zIndex: enableRollingZIndex ? zIndex : undefined,
-								translateX: x,
-								translateY: y,
-								...cssVariables,
-							}}
-							aria-hidden={repeatIndex > 0}
-							onMouseEnter={() => (isHovered.current = true)}
-							onMouseLeave={() => (isHovered.current = false)}
-						>
-							{child}
-						</motion.g>
-					);
-				})}
+				<path d={scaledPath} stroke="white" fill="none" />
 			</svg>
+			<div
+				className="marquee-container absolute top-0 left-0 w-full h-full"
+				ref={marqueeContainerRef}
+			>
+				{items.map(({ child, repeatIndex, itemIndex, key }) => (
+					<MarqueeItem
+						key={key}
+						baseOffset={baseOffset}
+						itemIndex={itemIndex}
+						totalItems={items.length}
+						repeatIndex={repeatIndex}
+						zIndexBase={zIndexBase}
+						scaledPath={scaledPath}
+						isHovered={isHovered}
+					>
+						{child}
+					</MarqueeItem>
+				))}
+			</div>
 		</div>
 	);
 };
 
-export default MarqueeAlongSvgPath;
+export default MarqueeAlongPath;

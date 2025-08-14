@@ -3,21 +3,26 @@
 import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import MarqueeAlongSvgPathDemo from "@/components/usages/marqueealongsvgusage";
 import AccordionSlices from "@/registry/open-source/accordion-slices";
+import ContentWithImage from "@/registry/open-source/content-with-image";
 import FAQPage from "@/registry/open-source/faq-section";
-import Gravity, { MatterBody } from "@/registry/open-source/gravity";
 import InfiniteScrollingLogosAnimation from "@/registry/open-source/infinite-scrolling-logos-animation";
 import OppositeScroll from "@/registry/open-source/opposite-scroll-links";
+import Floating, {
+	FloatingElement,
+} from "@/registry/open-source/parallax-floating";
 import Preloader from "@/registry/open-source/preloader";
 import {
 	ScrollVelocityContainer,
 	ScrollVelocityRow,
 } from "@/registry/open-source/scroll-velocity";
-import { AnimatePresence } from "motion/react";
+import TextRotate from "@/registry/open-source/text-rotate";
+import { AnimatePresence, LayoutGroup, motion } from "motion/react";
+import SVG from "react-inlinesvg";
 
-const colors = ["bg-blue-500", "bg-green-500", "bg-pink-500", "bg-yellow-500"];
 export const fake_workspotlight = [
 	{
 		id: "work1",
@@ -90,6 +95,56 @@ export const fake_workspotlight = [
 	},
 ];
 
+const exampleImages = [
+	{
+		url: "/itjustworks.jpg",
+		author: "Branislav Rodman",
+		title: "A Black and White Photo of a Woman Brushing Her Teeth",
+	},
+	{
+		url: "/itjustworks.jpg",
+		link: "https://unsplash.com/photos/a-painting-of-a-palm-leaf-on-a-multicolored-background-AaNPwrSNOFE",
+		title: "Neon Palm",
+		author: "Tim Mossholder",
+	},
+	{
+		url: "/itjustworks.jpg",
+		link: "https://unsplash.com/photos/a-blurry-photo-of-a-crowd-of-people-UgbxzloNGsc",
+		author: "ANDRII SOLOK",
+		title: "A blurry photo of a crowd of people",
+	},
+	{
+		url: "/itjustworks.jpg",
+		link: "https://unsplash.com/photos/rippling-crystal-blue-water-9-OCsKoyQlk",
+		author: "Wesley Tingey",
+		title: "Rippling Crystal Blue Water",
+	},
+	{
+		url: "/itjustworks.jpg",
+		link: "https://unsplash.com/de/fotos/mann-im-schwarzen-hemd-unter-blauem-himmel-m8RDNiuEXro",
+		author: "Serhii Tyaglovsky",
+		title: "Mann im schwarzen Hemd unter blauem Himmel",
+	},
+	{
+		url: "/itjustworks.jpg",
+		link: "https://unsplash.com/photos/a-woman-with-a-flower-crown-on-her-head-0S3muIttbsY",
+		author: "Vladimir Yelizarov",
+		title: "A women with a flower crown on her head",
+	},
+	{
+		url: "/itjustworks.jpg",
+		title: "A blurry photo of white flowers in a field",
+		author: "Eugene Golovesov",
+		link: "https://unsplash.com/photos/a-blurry-photo-of-white-flowers-in-a-field-6qbx0lzGPyc",
+	},
+	{
+		url: "/itjustworks.jpg",
+		author: "Mathilde Langevin",
+		link: "https://unsplash.com/photos/a-table-topped-with-two-wine-glasses-and-plates-Ig0gRAHspV0",
+		title: "A table topped with two wine glasses and plates",
+	},
+];
+
 function Home({ data }) {
 	const [loader, setLoader] = useState(true);
 
@@ -107,176 +162,228 @@ function Home({ data }) {
 
 			{!loader && (
 				<main className="">
-					<section className="h-[90vh] w-full relative overflow-hidden">
-						<Gravity gravity={{ x: 0, y: 1 }}>
-							{[
-								"Audience",
-								"Ad Ninjas",
-								"Pixel Punch",
-								"Buzz Hoppers",
-								"Quirk Works",
-								"Brand Bandits",
-								"Vibe Tribe",
-								"Click Circus",
-								"Idea Sparks",
-								"Snappy Snails",
-								"Funky Funnels",
-								"Meme Machine",
-								"Slogan Squad",
-								"Trend Pirates",
-								"Zap Labs",
-								"Hype Hive",
-								"Quirkit",
-								"Buzzlet",
-								"Snaptik",
-								"Brandle",
-								"Zestify",
-								"Huzzle",
-								"Sparklio",
-								"Vibbly",
-								"Funnelo",
-								"Adwizzle",
-								"Trendish",
-								"Blinksy",
-								"Slogify",
-								"Zapster",
-								"Pufflet",
-							].map((item) => {
-								const x = `${Math.random() * 80}%`;
-								const y = `${Math.random() * 80}%`;
-								const colorClass =
-									colors[Math.floor(Math.random() * colors.length)];
+					<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
+						<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
+							<Floating sensitivity={-0.5} className="h-full">
+								<FloatingElement
+									depth={0.5}
+									className="top-[15%] left-[2%] md:top-[25%] md:left-[5%]"
+								>
+									<motion.img
+										src={exampleImages[0].url}
+										alt={exampleImages[0].title}
+										className="w-16 h-12 sm:w-24 sm:h-16 md:w-28 md:h-20 lg:w-32 lg:h-24 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform -rotate-[3deg] shadow-2xl rounded-xl"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 0.5 }}
+									/>
+								</FloatingElement>
 
-								return (
-									<MatterBody
-										matterBodyOptions={{
-											friction: 0.5,
-											restitution: 0.2,
-										}}
-										x={x}
-										y={y}
-										key={item}
-									>
-										<div
-											className={`text-xl sm:text-2xl md:text-3xl ${colorClass} text-white rounded-full hover:cursor-pointer px-8 py-4`}
+								<FloatingElement
+									depth={1}
+									className="top-[0%] left-[8%] md:top-[6%] md:left-[11%]"
+								>
+									<motion.img
+										src={exampleImages[1].url}
+										alt={exampleImages[1].title}
+										className="w-40 h-28 sm:w-48 sm:h-36 md:w-56 md:h-44 lg:w-60 lg:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform -rotate-12 shadow-2xl rounded-xl"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 0.7 }}
+									/>
+								</FloatingElement>
+
+								<FloatingElement
+									depth={4}
+									className="top-[90%] left-[6%] md:top-[80%] md:left-[8%]"
+								>
+									<motion.img
+										src={exampleImages[2].url}
+										alt={exampleImages[2].title}
+										className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-64 lg:h-64 object-cover -rotate-[4deg] hover:scale-105 duration-200 cursor-pointer transition-transform shadow-2xl rounded-xl"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 0.9 }}
+									/>
+								</FloatingElement>
+
+								<FloatingElement
+									depth={2}
+									className="top-[0%] left-[87%] md:top-[2%] md:left-[83%]"
+								>
+									<motion.img
+										src={exampleImages[3].url}
+										alt={exampleImages[3].title}
+										className="w-40 h-36 sm:w-48 sm:h-44 md:w-60 md:h-52 lg:w-64 lg:h-56 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform shadow-2xl rotate-[6deg] rounded-xl"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 1.1 }}
+									/>
+								</FloatingElement>
+
+								<FloatingElement
+									depth={1}
+									className="top-[78%] left-[83%] md:top-[68%] md:left-[83%]"
+								>
+									<motion.img
+										src={exampleImages[4].url}
+										alt={exampleImages[4].title}
+										className="w-44 h-44 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform shadow-2xl rotate-[19deg] rounded-xl"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ delay: 1.3 }}
+									/>
+								</FloatingElement>
+							</Floating>
+
+							<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
+								<motion.h1
+									className="text-3xl text-white mix-blend-soft-light dark:text-black sm:text-5xl md:text-7xl lg:text-8xl text-center w-full justify-center items-center flex-col flex whitespace-pre leading-tight tracking-tight space-y-1 md:space-y-4"
+									animate={{ opacity: 1, y: 0 }}
+									initial={{ opacity: 0, y: 20 }}
+									transition={{
+										duration: 0.2,
+										ease: "easeOut",
+										delay: 0.3,
+									}}
+								>
+									<LayoutGroup>
+										<motion.span
+											layout
+											className="flex whitespace-pre"
 										>
-											{" "}
-											{item}
-										</div>
-									</MatterBody>
-								);
-							})}
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="30%"
-								y="10%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-blue-500 text-white rounded-full hover:cursor-pointer px-8 py-4">
-									Audience
+											<motion.span
+												layout
+												className="flex whitespace-pre"
+												transition={{
+													type: "spring",
+													damping: 30,
+													stiffness: 400,
+												}}
+											></motion.span>
+											<TextRotate
+												texts={[
+													"DRIVE",
+													"pop ✨",
+													"perfect",
+													"quirkasauruses",
+													"🪩 funky",
+													"rock 🤘",
+												]}
+												mainClassName="overflow-hidden pr-3 text-[#0015ff] py-0 pb-2 md:pb-4 rounded-xl"
+												staggerDuration={0.03}
+												staggerFrom="last"
+												rotationInterval={3000}
+												transition={{
+													type: "spring",
+													damping: 30,
+													stiffness: 400,
+												}}
+											/>
+										</motion.span>
+									</LayoutGroup>
+								</motion.h1>
+								<SVG
+									src={"/dbsbottom.svg"}
+									title={"half of our logo"}
+									height={100}
+									width={800}
+									className="stroke-white"
+									role="img"
+									aria-label={"half of our logo"}
+									loader={<span>Loading...</span>}
+								/>
+
+								<div className="flex flex-row justify-center space-x-4 items-center mt-10 sm:mt-16 md:mt-20 lg:mt-20 text-xs">
+									<motion.button
+										className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-background bg-foreground px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
+										animate={{ opacity: 1, y: 0 }}
+										initial={{ opacity: 0, y: 20 }}
+										transition={{
+											duration: 0.2,
+											ease: "easeOut",
+											delay: 0.7,
+											scale: { duration: 0.2 },
+										}}
+										whileHover={{
+											scale: 1.05,
+											transition: {
+												type: "spring",
+												damping: 30,
+												stiffness: 400,
+											},
+										}}
+									>
+										<Link href="/docs/introduction">
+											Check docs{" "}
+											<span className="font-serif ml-1">→</span>
+										</Link>
+									</motion.button>
+									<motion.button
+										className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-white bg-[#0015ff] px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
+										animate={{ opacity: 1, y: 0 }}
+										initial={{ opacity: 0, y: 20 }}
+										transition={{
+											duration: 0.2,
+											ease: "easeOut",
+											delay: 0.7,
+											scale: { duration: 0.2 },
+										}}
+										whileHover={{
+											scale: 1.05,
+											transition: {
+												type: "spring",
+												damping: 30,
+												stiffness: 400,
+											},
+										}}
+									>
+										<Link href="https://github.com/danielpetho/fancy">
+											★ on GitHub
+										</Link>
+									</motion.button>
 								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="30%"
-								y="10%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-blue-500 text-white rounded-full hover:cursor-pointer px-8 py-4">
-									20+ years of experience
-								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="30%"
-								y="30%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-pink-500 text-white rounded-full hover:cursor-grab px-8 py-4 ">
-									Under-Promise <br />
-									Over-Deliver
-								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="40%"
-								y="20%"
-								angle={10}
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-teal-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
-									Outcome
-								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="75%"
-								y="10%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-red-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
-									Research
-								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="80%"
-								y="20%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-orange-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
-									Activate
-								</div>
-							</MatterBody>
-							<MatterBody
-								matterBodyOptions={{
-									friction: 0.5,
-									restitution: 0.2,
-								}}
-								x="50%"
-								y="10%"
-							>
-								<div className="text-xl sm:text-2xl md:text-3xl bg-yellow-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
-									Your Brand
-								</div>
-							</MatterBody>
-						</Gravity>
-						<h1 className="absolute inset-0 z-0 content-center text-center pointer-events-none">
-							DRIVE BRAND STUDIO
-						</h1>
+							</div>
+						</div>
 					</section>
 
-					<InfiniteScrollingLogosAnimation />
+					<section className="bg-secondary my-32 py-32">
+						<ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[5rem] font-bold tracking-[-0.02em]">
+							<ScrollVelocityRow
+								baseVelocity={5}
+								direction={1}
+								className="z-10 relative"
+							>
+								Let us be you listening ear.{" "}
+							</ScrollVelocityRow>
+							<Image
+								src={"/itjustworks.jpg"}
+								alt={""}
+								height={60}
+								width={60}
+								className="absolute left-[calc(50vw-155px)] top-0 z-20 h-full w-fit"
+							/>
+							<ScrollVelocityRow
+								baseVelocity={5}
+								direction={-1}
+								className="z-30 relative"
+							>
+								Let us be your listening ear.{" "}
+							</ScrollVelocityRow>
+						</ScrollVelocityContainer>{" "}
+					</section>
 
 					<section className="flex my-32">
-						<div>
-							<h2>The DBS effect</h2>
-							<span>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-								sed do eiusmod tempor incididunt ut labore et dolore
-								magna aliqua.
-							</span>
-							<button>Learn More</button>
-						</div>
-
-						<div></div>
+						<ContentWithImage image={{ url: "/itjustworks.jpg" }} />
 					</section>
 
-					<section className="relative h-[50vh] w-full">
+					<section className="my-32">
+						<OppositeScroll works={fake_workspotlight} />
+					</section>
+
+					{/* <section className="relative h-[50vh] w-full">
 						<MarqueeAlongSvgPathDemo />
-					</section>
+					</section> */}
 
 					<section className="my-32">
 						<FAQPage
@@ -329,36 +436,13 @@ function Home({ data }) {
 						/>
 					</section>
 
-					<section className="bg-secondary my-32 py-32">
-						<ScrollVelocityContainer className="text-4xl md:text-7xl md:leading-[5rem] font-bold tracking-[-0.02em]">
-							<ScrollVelocityRow
-								baseVelocity={5}
-								direction={1}
-								className="z-10 relative"
-							>
-								Let us be you listening ear.{" "}
-							</ScrollVelocityRow>
-							<Image
-								src={"/itjustworks.jpg"}
-								alt={""}
-								height={60}
-								width={60}
-								className="absolute left-[calc(50vw-155px)] top-0 z-20 h-full w-fit"
-							/>
-							<ScrollVelocityRow
-								baseVelocity={5}
-								direction={-1}
-								className="z-30 relative"
-							>
-								Let us be your listening ear.{" "}
-							</ScrollVelocityRow>
-						</ScrollVelocityContainer>{" "}
+					<section className="my-64">
+						<InfiniteScrollingLogosAnimation />
 					</section>
 
 					<section className="my-32">
 						<h2>Some of our work</h2>
 						<AccordionSlices />
-						<OppositeScroll works={fake_workspotlight} />
 					</section>
 				</main>
 			)}

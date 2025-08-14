@@ -3336,6 +3336,23 @@
       ]
     },
     {
+      "name": "image-reveal",
+      "type": "registry:block",
+      "title": "Image reveal",
+      "description": "Image reveal",
+      "files": [
+        {
+          "path": "components/usages/imagerevealusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/image-reveal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "image-ripple",
       "type": "registry:block",
       "title": "Image ripple",
@@ -3821,10 +3838,6 @@
         {
           "path": "registry/open-source/marquee-along-svg.tsx",
           "type": "registry:ui"
-        },
-        {
-          "path": "registry/utilities/cn.ts",
-          "type": "registry:ui"
         }
       ]
     },
@@ -4204,6 +4217,11 @@
       "title": "Page transitions",
       "description": "Page transitions",
       "files": [
+        {
+          "path": "components/usages/pagetransitionsusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
         {
           "path": "registry/open-source/page-transitions.tsx",
           "type": "registry:ui"
@@ -5512,6 +5530,27 @@
         },
         {
           "path": "registry/open-source/table.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs-transition-panel",
+      "type": "registry:block",
+      "title": "Tabs transition panel",
+      "description": "Tabs transition panel",
+      "files": [
+        {
+          "path": "components/usages/tabstransitionpanelusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/tabs-transition-panel.tsx",
           "type": "registry:ui"
         },
         {

@@ -131,24 +131,45 @@ async function Page({ params }) {
 	const client = cmsClient(params.isEnabled, params?.token);
 	const data = await client.request(gql`
 		{
-			peopleEntries {
-				... on people_people_Entry {
-					firstName
-					lastName
-					jobTitle
-					image {
-						img
-						focalPoint
-						extension
-						url
-						... on images_Asset {
-							image {
-								url
+			entry(uri: "__home__") {
+				... on home_Entry {
+					displayEvents(orderBy: "startDate") {
+						... on events_Event {
+							eventCategory
+							startDate
+							endDate
+							startDateLocalized
+							endDateLocalized
+							allDay
+							multiDay
+							freq
+							interval
+							title
+							subhead
+							copy
+							venue
+							url
+						}
+					}
+
+					headline
+					salesCards {
+						... on priceCard_Entry {
+							title
+							enabled
+
+							price
+							comment
+							copy
+							disclaimer
+
+							priceTable {
+								title
+								online
+								window
 							}
 						}
 					}
-					email
-					description
 				}
 			}
 		}

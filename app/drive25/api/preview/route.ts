@@ -38,7 +38,7 @@ export async function GET(request: Request) {
 
 	const { uri, typeHandle } = data.entry;
 	const isHome = uri === "__home__" || uri === "home";
-	const location = `/${isHome ? "" : uri}`;
+	const location = `/${isHome ? "drive25" : "drive25/" + uri}`;
 
 	// In App Router, setPreviewData is still available but only in *pages router*
 	// Instead, use draftMode()

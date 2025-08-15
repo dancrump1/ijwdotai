@@ -54,18 +54,19 @@ const DesktopNavbar = ({ navItems }: Props) => {
 			{navItems.map((item, i) => (
 				<motion.div
 					className={cn(
+						"",
 						!showFloatingNav &&
 							i === 0 &&
-							"top-0 inset-x-0 place-items-center",
+							"top-6 inset-x-0 place-items-center",
 						!showFloatingNav &&
 							i === 1 &&
-							"right-0 inset-y-0 content-center",
+							"right-6 inset-y-0 content-center",
 						!showFloatingNav &&
 							i === 2 &&
-							"bottom-0 inset-x-0 place-items-center",
+							"bottom-6 inset-x-0 place-items-center",
 						!showFloatingNav &&
 							i === 3 &&
-							"left-0 inset-y-0 content-center"
+							"left-6 inset-y-0 content-center"
 					)}
 					animate={{
 						position: showFloatingNav ? "relative" : "absolute",
@@ -245,7 +246,8 @@ export function NavBarItem({
 		<Link
 			href={href}
 			className={cn(
-				"flex items-center pointer-events-auto h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 rounded-md text-white  hover:bg-neutral-800 hover:text-white/80 dark:text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
+				"border-y-2 border-y-red-500 w-fit",
+				"flex items-center pointer-events-auto h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 text-white  hover:bg-neutral-800 hover:text-white/80 dark:text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
 				(active || pathname?.includes(href)) &&
 					"bg-transparent dark:text-white",
 				className

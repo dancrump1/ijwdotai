@@ -1,7 +1,5 @@
 import React from "react";
 
-import { draftMode } from "next/headers";
-
 import Home from "@/components/layouts/home";
 import cmsClient from "@/lib/cmsClient";
 import { gql } from "graphql-request";

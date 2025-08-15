@@ -154,9 +154,6 @@ function Home({ data }) {
 		}, 2250);
 	}, [loader]);
 
-	console.log("data");
-	console.log(data);
-
 	return (
 		<>
 			<AnimatePresence mode="wait">

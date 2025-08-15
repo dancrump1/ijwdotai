@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 
-import { fake_workspotlight } from "@/app/drive25/page";
+import { fake_workspotlight } from "@/components/layouts/home";
 import {
 	AnimatePresence,
 	motion,

@@ -2,7 +2,6 @@ import React from "react";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { draftMode } from "next/headers";
 
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import ResizeNavBar from "@/registry/open-source/resize-navbar";
@@ -29,17 +28,20 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const { isEnabled } = await draftMode();
-
-	console.log(isEnabled);
-
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<ResizeNavBar />
-				{children}
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<ResizeNavBar />
+					<NuqsAdapter>{children}</NuqsAdapter>
+				</ThemeProvider>
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />
 		</html>

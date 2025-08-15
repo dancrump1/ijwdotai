@@ -6,7 +6,7 @@ interface IHeaders {
 }
 
 export default function cmsClient(
-	preview?: string | null,
+	preview?: boolean,
 	token?: string
 ): GraphQLClient {
 	const endpoints = `${process.env.NEXT_PUBLIC_CRAFT_CMS_GRAPHQL_ENDPOINT}api`;

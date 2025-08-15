@@ -118,12 +118,12 @@ function ResizeNavBar() {
 				ease: [0.6, 0.05, 0.1, 0.9],
 				duration: 0.8,
 			}}
-			className="fixed inset-0  h-screen w-screen z-[500] pointer-events-none"
+			className="fixed lg:inset-0 lg:h-screen w-screen z-[500] lg:pointer-events-none"
 		>
 			<div className="hidden lg:block h-full w-full">
 				<DesktopNavbar navItems={navItems} />
 			</div>
-			<div className="flex h-full w-full items-center lg:hidden ">
+			<div className="flex w-full lg:hidden ">
 				<MobileNavbar navItems={navItems} />
 			</div>
 		</motion.nav>

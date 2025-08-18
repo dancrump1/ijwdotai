@@ -3770,6 +3770,23 @@
       ]
     },
     {
+      "name": "logo-loop",
+      "type": "registry:block",
+      "title": "Logo loop",
+      "description": "Logo loop",
+      "files": [
+        {
+          "path": "components/usages/logoloopusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/logo-loop.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "macbook",
       "type": "registry:block",
       "title": "Macbook",

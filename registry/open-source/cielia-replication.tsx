@@ -15,7 +15,7 @@ export const ExampleReplication = () => {
 		<div>
 			<ReactLenis root>
 				<div>
-					<div className="grid min-h-screen place-items-center bg-white py-20 text-black">
+					<div className="grid min-h-screen place-items-center bg-background py-20 text-foreground">
 						<div className="container flex min-h-[50vh] flex-col justify-center gap-y-20 text-center">
 							<h1 className="fs-40-85">
 								<Link

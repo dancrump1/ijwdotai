@@ -96,7 +96,7 @@ export default function StripeAccordion() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						key="overlay"
-						className="dark:bg-black/40 bg-white/40 backdrop-blur-sm fixed inset-0 z-50 top-0 left-0 bottom-0 right-0 w-full h-full grid place-content-center"
+						className="dark:bg-background/40 bg-background/40 backdrop-blur-sm fixed inset-0 z-50 top-0 left-0 bottom-0 right-0 w-full h-full grid place-content-center"
 						onClick={() => {
 							setOpen(false);
 						}}
@@ -113,7 +113,7 @@ export default function StripeAccordion() {
 									alt="single-image"
 									className="rounded-2xl h-full w-full object-cover"
 								/>
-								<article className="dark:bg-base-dark bg-white rounded-md p-2 mt-2 border ">
+								<article className="dark:bg-base-dark bg-background rounded-md p-2 mt-2 border ">
 									<motion.h1
 										initial={{ scaleY: 0.2 }}
 										animate={{ scaleY: 1 }}
@@ -185,7 +185,7 @@ function ImageItem({ item, index, setSelected }: ImageItemProps) {
 			initial="hidden"
 			animate={isInView && "visible"}
 			ref={ref}
-			className="inline-block group w-full rounded-md  relative dark:bg-black bg-white  before:absolute before:top-0 before:content-[''] before:h-full before:w-full hover:before:bg-gradient-to-t dark:before:from-gray-900  before:from-gray-200/90 before:from-5% before:to-transparent before:to-90% cursor-pointer"
+			className="inline-block group w-full rounded-md  relative dark:bg-background bg-background  before:absolute before:top-0 before:content-[''] before:h-full before:w-full hover:before:bg-gradient-to-t dark:before:from-background  before:from-background/90 before:from-5% before:to-transparent before:to-90% cursor-pointer"
 			onClick={() => setSelected(item)}
 		>
 			<motion.img
@@ -274,7 +274,7 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 						width={400}
 						height={400}
 						src={item?.url}
-						className="bg-white text-black rounded-md w-full cursor-zoom-in"
+						className="bg-background text-foreground rounded-md w-full cursor-zoom-in"
 						alt="img"
 					/>
 				</motion.div>
@@ -286,14 +286,14 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 z-50 top-0 left-0  right-0 bottom-0  flex flex-col items-center w-full h-screen justify-center dark:bg-black/80 bg-gray-300/80 backdrop-blur-lg cursor-zoom-out"
+						className="fixed inset-0 z-50 top-0 left-0  right-0 bottom-0  flex flex-col items-center w-full h-screen justify-center dark:bg-background/80 bg-background/80 backdrop-blur-lg cursor-zoom-out"
 						onClick={() => {
 							setNewItem(null);
 							setIsOpen(false);
 						}}
 					>
 						<button
-							className="absolute top-2 right-2 p-4 border dark:bg-black/80 text-white  bg-gray-400/40 backdrop-blur-lg "
+							className="absolute top-2 right-2 p-4 border dark:bg-background/80 text-foreground  bg-background/40 backdrop-blur-lg "
 							onClick={() => setIsOpen(false)}
 						>
 							X
@@ -318,7 +318,7 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 														{tab.id === newItem.id && (
 															<motion.figure
 																key={tab?.id}
-																className="dark:bg-gray-900/40 bg-gray-100/40 border  rounded-md p-4"
+																className="dark:bg-background/40 bg-background/40 border  rounded-md p-4"
 															>
 																<motion.div
 																	initial={{ opacity: 0 }}
@@ -362,7 +362,7 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 								</AnimatePresence>
 							)}
 							<motion.div
-								className="h-[300px] overflow-hidden dark:bg-gray-900/40 bg-white/40 border rounded-md"
+								className="h-[300px] overflow-hidden dark:bg-background/40 bg-background/40 border rounded-md"
 								ref={carousel}
 							>
 								<motion.div
@@ -404,7 +404,7 @@ const SliderModal = ({ uniqueId, itemArr }: ImageModalProps) => {
 																	ease: "easeOut",
 																},
 															}}
-															className="absolute top-0 left-0 h-full w-full dark:bg-gray-100 bg-gray-800 rounded-md"
+															className="absolute top-0 left-0 h-full w-full dark:bg-background bg-background rounded-md"
 														></motion.div>
 													)}
 												</motion.div>

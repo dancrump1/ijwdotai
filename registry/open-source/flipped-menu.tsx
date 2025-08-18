@@ -80,14 +80,14 @@ const FlippedMenu = () => {
 	return (
 		<article
 			ref={scope}
-			className="relative min-h-96 h-full overflow-hidden bg-white font-herbik text-white/90 sm:aspect-3/2 sm:min-h-0"
+			className="relative min-h-96 h-full overflow-hidden bg-background font-herbik text-foreground/90 sm:aspect-3/2 sm:min-h-0"
 		>
 			<div className="absolute left-10 top-10 z-10">
 				<button
 					aria-expanded={isOpen}
 					aria-controls="menu"
 					onClick={handleToggle}
-					className="group relative -rotate-[10deg] rounded-[50%] border border-white bg-black px-7 py-3 text-sm font-bold uppercase shadow-sm shadow-white/30 transition-transform duration-300 ease-out hover:-rotate-[14deg] hover:scale-110 sm:text-base [&_.char]:inline-grid"
+					className="group relative -rotate-[10deg] rounded-[50%] border border-white bg-background px-7 py-3 text-sm font-bold uppercase shadow-sm shadow-white/30 transition-transform duration-300 ease-out hover:-rotate-[14deg] hover:scale-110 sm:text-base [&_.char]:inline-grid"
 				>
 					<span
 						ref={btnWord1}
@@ -112,7 +112,7 @@ const FlippedMenu = () => {
 				<div
 					ref={menu}
 					id="menu"
-					className="h-full w-full bg-black p-4 opacity-0 shadow-sm shadow-black/80"
+					className="h-full w-full bg-background p-4 opacity-0 shadow-sm shadow-black/80"
 				>
 					<div className="h-full w-full border-2 border-white p-1">
 						<div className="flex h-full w-full flex-col justify-between border border-white p-5 pt-16 sm:p-10 sm:pb-5">
@@ -121,7 +121,7 @@ const FlippedMenu = () => {
 									return (
 										<button
 											key={dish}
-											className="group flex items-center justify-between border-b border-white pl-2 text-lg text-white transition duration-300 first-of-type:border-t hover:bg-white hover:text-black"
+											className="group flex items-center justify-between border-b border-white pl-2 text-lg text-foreground transition duration-300 first-of-type:border-t hover:bg-background hover:text-foreground"
 										>
 											<span>{dish}</span>
 											<span className="inline-block border-l border-white p-3">
@@ -148,10 +148,10 @@ const FlippedMenu = () => {
 								{navigationLinks.map((link) => {
 									return (
 										<Fragment key={link}>
-											<button className="font-poppins text-sm transition duration-300 hover:text-white/70">
+											<button className="font-poppins text-sm transition duration-300 hover:text-foreground/70">
 												{link}
 											</button>
-											<span className="inline-block size-1 rounded-full bg-white last-of-type:hidden"></span>
+											<span className="inline-block size-1 rounded-full bg-background last-of-type:hidden"></span>
 										</Fragment>
 									);
 								})}

@@ -78,7 +78,7 @@ const Movie = ({ setHover, hover, movie }: MovieProps) => {
 			onMouseEnter={() => setHover(movie)}
 			onMouseLeave={() => setHover(null)}
 		>
-			<div className="absolute flex items-end justify-center top-0 left-0 size-full bg-primary/20 transition-opacity duration-300 opacity-0 group-hover:opacity-100 text-white">
+			<div className="absolute flex items-end justify-center top-0 left-0 size-full bg-primary/20 transition-opacity duration-300 opacity-0 group-hover:opacity-100 text-foreground">
 				<AnimatePresence>
 					{hover && hover.item === movie.item && (
 						<motion.div
@@ -99,7 +99,7 @@ const Movie = ({ setHover, hover, movie }: MovieProps) => {
 							>
 								nothing . {movie.item} . graound
 							</motion.p>
-							<motion.button className="bg-primary/80 dark:bg-background text-sm flex gap-2 text-white items-center rounded-full px-3 py-1.5">
+							<motion.button className="bg-primary/80 dark:bg-background text-sm flex gap-2 text-foreground items-center rounded-full px-3 py-1.5">
 								Watch{" "}
 								<span>
 									<ChevronRight className="size-4" />

@@ -10,7 +10,7 @@ const ExampleWrapper = () => {
 		<div className="px-4 py-64 bg-slate-900 grid place-content-center">
 			<button
 				onClick={() => setIsOpen(true)}
-				className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity"
+				className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity"
 			>
 				Open Modal
 			</button>
@@ -41,7 +41,7 @@ export const SpringModal = ({
 						animate={{ scale: 1, rotate: "0deg" }}
 						exit={{ scale: 0, rotate: "0deg" }}
 						onClick={(e) => e.stopPropagation()}
-						className="bg-gradient-to-br from-violet-600 to-indigo-600 text-white p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
+						className="bg-gradient-to-br from-violet-600 to-indigo-600 text-foreground p-6 rounded-lg w-full max-w-lg shadow-xl cursor-default relative overflow-hidden"
 					>
 						<div className="relative z-10">
 							<h3 className="text-3xl font-bold text-center mb-2">
@@ -54,13 +54,13 @@ export const SpringModal = ({
 							<div className="flex gap-2">
 								<button
 									onClick={() => setIsOpen(false)}
-									className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded"
+									className="bg-transparent hover:bg-background/10 transition-colors text-foreground font-semibold w-full py-2 rounded"
 								>
 									Nah, go back
 								</button>
 								<button
 									onClick={() => setIsOpen(false)}
-									className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
+									className="bg-background hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
 								>
 									Understood!
 								</button>

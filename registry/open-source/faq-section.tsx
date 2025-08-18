@@ -125,8 +125,8 @@ const FAQPage: React.FC = ({ faqs = faqData }: { faqs: FAQData }) => {
 							key={tab}
 							className={`px-2 py-1 font-bold rounded-md text-xs sm:text-sm ${
 								activeTab === tab
-									? "bg-gradient-to-r from-indigo-400 to-blue-400 text-white dark:from-indigo-600 dark:to-blue-600"
-									: "text-black/50 dark:text-white/50"
+									? "bg-gradient-to-r from-indigo-400 to-blue-400 text-foreground dark:from-indigo-600 dark:to-blue-600"
+									: "text-foreground/50 dark:text-foreground/50"
 							}`}
 							onClick={() => setActiveTab(tab)}
 							whileHover={{ scale: 1.05 }}
@@ -143,10 +143,10 @@ const FAQPage: React.FC = ({ faqs = faqData }: { faqs: FAQData }) => {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3 }}
-							className="border dark:border-white/20 border-black/20 rounded-lg overflow-hidden bg-white"
+							className="border dark:border-white/20 border-black/20 rounded-lg overflow-hidden bg-background"
 						>
 							<motion.button
-								className="w-full text-left p-4 flex justify-between items-center font-bold text-gray-800"
+								className="w-full text-left p-4 flex justify-between items-center font-bold text-foreground"
 								onClick={() =>
 									setOpenQuestion(
 										openQuestion === item.question
@@ -174,7 +174,7 @@ const FAQPage: React.FC = ({ faqs = faqData }: { faqs: FAQData }) => {
 								transition={{ duration: 0.3 }}
 								className="overflow-hidden"
 							>
-								<div className="p-4 border-t dark:border-white/20 border-black/20 text-gray-700 dark:text-white/70 bg-white">
+								<div className="p-4 border-t dark:border-white/20 border-black/20 text-foreground dark:text-foreground/70 bg-background">
 									{item.answer}
 								</div>
 							</motion.div>

@@ -99,7 +99,7 @@ const StickyScroll1 = ({ containerRef }) => {
 									<div
 										className={clsx(
 											"container flex h-full flex-col lg:flex-row lg:flex-wrap",
-											isWhiteText ? "text-white" : "text-black"
+											isWhiteText ? "text-foreground" : "text-foreground"
 										)}
 									>
 										<div className="mb-8 w-full lg:mb-12">

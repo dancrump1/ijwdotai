@@ -169,7 +169,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 					key={i + "chroma-grid"}
 					onMouseMove={handleCardMove}
 					onClick={() => handleCardClick(c.url)}
-					className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer bg-white"
+					className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer bg-background"
 					style={
 						{
 							"--card-border": c.borderColor || "transparent",
@@ -193,20 +193,20 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
 							className="w-full h-full object-cover rounded-[10px]"
 						/>
 					</div>
-					<footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 bg-white">
-						<h3 className="m-0 text-[1.05rem] font-semibold text-gray-800">
+					<footer className="relative z-10 p-3 text-foreground font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1 bg-background">
+						<h3 className="m-0 text-[1.05rem] font-semibold text-foreground">
 							{c.title}
 						</h3>
 						{c.handle && (
-							<span className="text-[0.95rem] opacity-80 text-right text-gray-600">
+							<span className="text-[0.95rem] opacity-80 text-right text-foreground">
 								{c.handle}
 							</span>
 						)}
-						<p className="m-0 text-[0.85rem] opacity-85 text-gray-600">
+						<p className="m-0 text-[0.85rem] opacity-85 text-foreground">
 							{c.subtitle}
 						</p>
 						{c.location && (
-							<span className="text-[0.85rem] opacity-85 text-right text-gray-600">
+							<span className="text-[0.85rem] opacity-85 text-right text-foreground">
 								{c.location}
 							</span>
 						)}

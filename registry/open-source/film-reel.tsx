@@ -34,7 +34,7 @@ const FilmReel = ({ videos }: { videos: string[] }) => {
 	}, [controls]);
 
 	return (
-		<div className="w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 overflow-hidden py-3">
+		<div className="w-full bg-gradient-to-r from-background via-background to-background overflow-hidden py-3">
 			<motion.div className="flex" animate={controls}>
 				{[...Array(2)].map((_, containerIndex) => (
 					<div
@@ -73,7 +73,7 @@ const ZoomableVideo = ({ videoUrl }: { videoUrl: string }) => {
 	return (
 		<div
 			ref={ref}
-			className="relative w-64 sm:w-80 overflow-hidden rounded-lg border-4 border-gray-800 bg-black"
+			className="relative w-64 sm:w-80 overflow-hidden rounded-lg border-4 border-gray-800 bg-background"
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
 			onMouseMove={handleMouseMove}
@@ -138,7 +138,7 @@ const FilmPerforations: React.FC = React.memo(function FilmPerforations() {
 			{[...Array(20)].map((_, index) => (
 				<div
 					key={index + "film-perf"}
-					className="w-8 h-4 bg-gray-300 rounded shadow-md border border-gray-700"
+					className="w-8 h-4 bg-background rounded shadow-md border border-gray-700"
 				></div>
 			))}
 		</div>

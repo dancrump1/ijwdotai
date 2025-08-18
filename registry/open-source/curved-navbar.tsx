@@ -115,7 +115,7 @@ function NavLink({ data, isActive, setSelectedIndicator }) {
 			<motion.div
 				variants={scale}
 				animate={isActive ? "open" : "closed"}
-				className={`w-2.5 h-2.5 bg-black rounded-full absolute -left-8`}
+				className={`w-2.5 h-2.5 bg-background rounded-full absolute -left-8`}
 			></motion.div>
 			<Link href={href} className="uppercase font-black">
 				{title}
@@ -133,7 +133,7 @@ export default function CurvedNavbar({ isActive, setIsActive }) {
 			initial="initial"
 			animate="enter"
 			exit="exit"
-			className={`h-screen w-screen max-w-screen-sm fixed right-0 top-0 text-black bg-[rgb(255,224,69)] z-10`}
+			className={`h-screen w-screen max-w-screen-sm fixed right-0 top-0 text-foreground bg-[rgb(255,224,69)] z-10`}
 		>
 			<div
 				className="w-full flex justify-end text-3xl p-4"
@@ -151,7 +151,7 @@ export default function CurvedNavbar({ isActive, setIsActive }) {
 					className={`flex flex-col text-5xl gap-3 mt-20`}
 				>
 					<div
-						className={`text-gray-900 border-b border-gray-800 uppercase text-sm mb-10`}
+						className={`text-foreground border-b border-gray-800 uppercase text-sm mb-10`}
 					>
 						<p>Brand Logo</p>
 					</div>

@@ -52,7 +52,7 @@ export default function MouseFollower({ container }) {
 				width: cursorSize,
 				height: cursorSize,
 			}}
-			className={`h-4 w-4 fixed rounded-full bg-black`}
+			className={`h-4 w-4 fixed rounded-full bg-background`}
 			ref={cursor}
 		/>
 	);

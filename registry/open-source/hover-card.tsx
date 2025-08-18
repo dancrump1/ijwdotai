@@ -50,9 +50,9 @@ export const EvervaultCard = ({
 					randomString={randomString}
 				/>
 				<div className="relative z-10 flex items-center justify-center">
-					<div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
-						<div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-						<span className="dark:text-white text-black z-20">
+					<div className="relative h-44 w-44  rounded-full flex items-center justify-center text-foreground font-bold text-4xl">
+						<div className="absolute w-full h-full bg-background/[0.8] dark:bg-background/[0.8] blur-sm rounded-full" />
+						<span className="dark:text-foreground text-foreground z-20">
 							{text}
 						</span>
 					</div>
@@ -77,7 +77,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 				className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay  group-hover/card:opacity-100"
 				style={style}
 			>
-				<p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
+				<p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-foreground font-mono font-bold transition duration-500">
 					{randomString}
 				</p>
 			</motion.div>

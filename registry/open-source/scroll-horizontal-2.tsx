@@ -129,13 +129,8 @@ export default function ScrollHorizontal() {
 	const { scrollYProgress, scrollY } = useScroll();
 	const x = useTransform(scrollYProgress, position, [0, carouselEndPosition]);
 
-	console.log(carouselEndPosition);
-	useMotionValueEvent(scrollY, "change", (latest) => {
-		console.log("Page scroll: ", latest);
-	});
-	useEffect(() => {
-		window.addEventListener("scroll", () => console.log(carouselEndPosition));
-	}, []);
+	useMotionValueEvent(scrollY, "change");
+
 
 	useEffect(() => {
 		if (!carouselRef || !carouselRef.current) return;
@@ -176,7 +171,7 @@ export default function ScrollHorizontal() {
 								<motion.div
 									{...slideAnimation}
 									key={item.id + "scroll-2-horizontal-item"}
-									className="group relative h-[300px] w-[300px] overflow-hidden bg-neutral-200"
+									className="group relative h-[300px] w-[300px] overflow-hidden bg-background"
 								>
 									<motion.img
 										key={item.id}
@@ -191,10 +186,10 @@ export default function ScrollHorizontal() {
 				</div>
 			</section>
 			<footer className="group ">
-				<h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
+				<h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-background to-background bg-clip-text text-transparent transition-all ease-linear">
 					ui-layout
 				</h1>
-				<section className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full">
+				<section className="bg-background h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full">
 					Thanks for Scrolling
 				</section>
 			</footer>

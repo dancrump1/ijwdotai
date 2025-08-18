@@ -90,7 +90,7 @@ export const FlippingText = ({
 			</span>
 			<motion.span
 				layout
-				className="absolute -right-4 bottom-2 inline-block rounded-full bg-black"
+				className="absolute -right-4 bottom-2 inline-block rounded-full bg-background"
 				style={{
 					width: isDeleting ? "0.45em" : "0.25em",
 					height: "0.25em",
@@ -121,7 +121,7 @@ export function TextAnimationFlippingWords() {
 				<h1 className="mb-4 text-left text-2xl font-bold md:text-5xl">
 					Built with <FlippingText words={words} />
 				</h1>
-				<p className="mt-4 text-left text-base text-neutral-600 dark:text-neutral-400">
+				<p className="mt-4 text-left text-base text-foreground dark:text-foreground">
 					Create stunning animations that bring your website to life.
 					Elevate your user experience with smooth transitions and
 					eye-catching effects that captivate visitors and keep them
@@ -165,15 +165,15 @@ export function TextAnimationFlippingWords() {
 					].map((card, index) => (
 						<div
 							key={index + "flipping-text"}
-							className="rounded-xl bg-white p-4 shadow-md transition-[box-shadow,background-color] hover:shadow-lg dark:bg-neutral-800"
+							className="rounded-xl bg-background p-4 shadow-md transition-[box-shadow,background-color] hover:shadow-lg dark:bg-background"
 						>
 							<div className="flex items-start space-x-3">
 								<div className="text-xl">{card.icon}</div>
 								<div>
-									<h3 className="font-medium text-neutral-900 dark:text-neutral-100">
+									<h3 className="font-medium text-foreground dark:text-foreground">
 										{card.title}
 									</h3>
-									<p className="text-sm text-neutral-500 dark:text-neutral-400">
+									<p className="text-sm text-foreground dark:text-foreground">
 										{card.description}
 									</p>
 								</div>
@@ -189,7 +189,7 @@ export function TextAnimationFlippingWords() {
 const LogoCloud = () => {
 	return (
 		<div className="mt-8">
-			<p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+			<p className="text-sm font-medium text-foreground dark:text-foreground">
 				Trusted by leading companies
 			</p>
 			{/* Company logos display */}
@@ -234,17 +234,17 @@ export const IphoneMockup = ({ image, children }: IphoneMockupProps) => {
 	return (
 		<div className="relative mx-auto h-[600px] w-[300px] md:h-[680px] md:w-[340px]">
 			{/* iPhone frame */}
-			<div className="absolute inset-0 rounded-[50px] border-[14px] border-black bg-black shadow-xl dark:border-neutral-800 dark:bg-neutral-900">
+			<div className="absolute inset-0 rounded-[50px] border-[14px] border-black bg-background shadow-xl dark:border-neutral-800 dark:bg-background">
 				{/* Dynamic Island */}
-				<div className="absolute top-[0.5rem] left-1/2 z-10 h-[1.8rem] w-[6rem] -translate-x-1/2 rounded-full bg-black dark:bg-neutral-800">
-					<div className="absolute top-1/2 right-3 h-[0.6rem] w-[0.6rem] -translate-y-1/2 rounded-full bg-[#1a1a1a] ring-[1.5px] ring-[#2a2a2a] dark:bg-neutral-700 dark:ring-neutral-600">
-						<div className="absolute inset-[1.5px] rounded-full bg-[#0f0f0f] dark:bg-neutral-800">
-							<div className="absolute inset-[1.5px] rounded-full bg-[#151515] ring-[0.75px] ring-[#202020] dark:bg-neutral-700 dark:ring-neutral-600" />
+				<div className="absolute top-[0.5rem] left-1/2 z-10 h-[1.8rem] w-[6rem] -translate-x-1/2 rounded-full bg-background dark:bg-background">
+					<div className="absolute top-1/2 right-3 h-[0.6rem] w-[0.6rem] -translate-y-1/2 rounded-full bg-background ring-[1.5px] ring-[#2a2a2a] dark:bg-background dark:ring-neutral-600">
+						<div className="absolute inset-[1.5px] rounded-full bg-background dark:bg-background">
+							<div className="absolute inset-[1.5px] rounded-full bg-background ring-[0.75px] ring-[#202020] dark:bg-background dark:ring-neutral-600" />
 						</div>
 					</div>
 				</div>
 				{/* Status icons */}
-				<div className="absolute inset-0 top-[0.5rem] z-20 flex h-[1.8rem] items-center justify-between px-4 text-[0.65rem] text-black dark:text-white">
+				<div className="absolute inset-0 top-[0.5rem] z-20 flex h-[1.8rem] items-center justify-between px-4 text-[0.65rem] text-foreground dark:text-foreground">
 					{/* Time */}
 					<span className="text-[0.9rem] font-medium">9:41</span>
 
@@ -313,7 +313,7 @@ export const IphoneMockup = ({ image, children }: IphoneMockupProps) => {
 				</div>
 
 				{/* Screen */}
-				<div className="relative h-full w-full overflow-hidden rounded-[35px] bg-white dark:bg-neutral-950">
+				<div className="relative h-full w-full overflow-hidden rounded-[35px] bg-background dark:bg-background">
 					<div className="absolute inset-0 top-[2.3rem]">
 						{image && (
 							<img
@@ -328,9 +328,9 @@ export const IphoneMockup = ({ image, children }: IphoneMockupProps) => {
 			</div>
 
 			{/* Side Buttons */}
-			<div className="absolute top-[170px] -right-[2px] h-12 w-[3px] rounded-l-lg bg-black dark:bg-neutral-800"></div>
-			<div className="absolute top-[120px] -left-[2px] h-12 w-[3px] rounded-r-lg bg-black dark:bg-neutral-800"></div>
-			<div className="absolute top-[170px] -left-[2px] h-14 w-[3px] rounded-r-lg bg-black dark:bg-neutral-800"></div>
+			<div className="absolute top-[170px] -right-[2px] h-12 w-[3px] rounded-l-lg bg-background dark:bg-background"></div>
+			<div className="absolute top-[120px] -left-[2px] h-12 w-[3px] rounded-r-lg bg-background dark:bg-background"></div>
+			<div className="absolute top-[170px] -left-[2px] h-14 w-[3px] rounded-r-lg bg-background dark:bg-background"></div>
 		</div>
 	);
 };

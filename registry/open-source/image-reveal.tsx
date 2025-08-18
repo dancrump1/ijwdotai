@@ -107,7 +107,7 @@ const ImageReveal: React.FC = () => {
 
 	return (
 		<div
-			className="relative w-full min-h-fit dark:bg-gradient-to-b from-black from-10% to-gray-950 to-100% bg-gray-100 rounded-md border"
+			className="relative w-full min-h-fit dark:bg-gradient-to-b from-background from-10% to-background to-100% bg-background rounded-md border"
 			onMouseLeave={handleMouseLeave}
 		>
 			{images?.map((image, i) => (
@@ -124,10 +124,10 @@ const ImageReveal: React.FC = () => {
 						/>
 					)}
 					<h2
-						className={`newFont dark:text-gray-300 uppercase md:text-5xl sm:text-2xl text-xl font-semibold sm:py-6 py-2 leading-[100%] relative ${
+						className={`newFont dark:text-foreground uppercase md:text-5xl sm:text-2xl text-xl font-semibold sm:py-6 py-2 leading-[100%] relative ${
 							activeImage?.id === image?.id
-								? "mix-blend-difference z-20 text-gray-300"
-								: "text-gray-700"
+								? "mix-blend-difference z-20 text-foreground"
+								: "text-foreground"
 						}`}
 					>
 						{image.alt}
@@ -135,14 +135,14 @@ const ImageReveal: React.FC = () => {
 					<button
 						className={`sm:block hidden p-4 rounded-full transition-[background-color,color] duration-300 ease-out ${
 							activeImage?.id === image?.id
-								? "mix-blend-difference z-20 bg-white text-black"
+								? "mix-blend-difference z-20 bg-background text-foreground"
 								: ""
 						}`}
 					>
 						<MoveUpRight className="w-8 h-8" />
 					</button>
 					<div
-						className={`h-[2px] dark:bg-white bg-black absolute bottom-0 left-0 transition-[width] duration-300 ease-linear ${
+						className={`h-[2px] dark:bg-background bg-background absolute bottom-0 left-0 transition-[width] duration-300 ease-linear ${
 							activeImage?.id === image?.id ? "w-full" : "w-0"
 						}`}
 					/>
@@ -154,7 +154,7 @@ const ImageReveal: React.FC = () => {
 					width={200}
 					src={activeImage.src}
 					alt={activeImage.alt}
-					className={`fixed dark:bg-gray-950 bg-white object-cover pointer-events-none z-10 w-[300px] h-[400px] rounded-lg`}
+					className={`fixed dark:bg-background bg-background object-cover pointer-events-none z-10 w-[300px] h-[400px] rounded-lg`}
 					style={{
 						left: `${cursorPosition.x}px`,
 						top: `${cursorPosition.y}px`,

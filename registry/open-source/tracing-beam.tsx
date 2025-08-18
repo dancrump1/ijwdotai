@@ -83,7 +83,7 @@ export const TracingBeam = ({
 							backgroundColor: "white",
 							borderColor: "white",
 						}}
-						className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
+						className="h-2 w-2  rounded-full border border-neutral-300 bg-background"
 					/>
 				</motion.div>
 				<svg

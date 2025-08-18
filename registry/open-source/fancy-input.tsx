@@ -30,7 +30,7 @@ function Subscribe() {
 
 	return (
 		<form onSubmit={onSubmit} className="grow flex justify-center">
-			<div className="relative max-w-96 w-full bg-white">
+			<div className="relative max-w-96 w-full bg-background">
 				<label
 					htmlFor="email"
 					className="absolute inset-0 flex items-center z-10 pointer-events-none"
@@ -41,7 +41,7 @@ function Subscribe() {
 								aria-hidden
 								className={cn(
 									"inline-block",
-									show ? "text-amber-500" : "text-neutral-400"
+									show ? "text-amber-500" : "text-foreground"
 								)}
 								key={index + "fancy-input"}
 								initial={false}
@@ -97,7 +97,7 @@ function Subscribe() {
 							layoutId="button"
 							type="submit"
 							style={{ borderRadius: 999 }}
-							className="px-6 h-10 bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 font-semibold flex-shrink-0 transition-colors text-white border-none"
+							className="px-6 h-10 bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 font-semibold flex-shrink-0 transition-colors text-foreground border-none"
 						>
 							Subscribe
 						</motion.button>
@@ -107,7 +107,7 @@ function Subscribe() {
 						{status === "loading" && (
 							<motion.div
 								layoutId="button"
-								className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center text-white"
+								className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center text-foreground"
 								style={{ borderRadius: 999 }}
 							>
 								<Loader size={18} className="animate-spin" />
@@ -115,7 +115,7 @@ function Subscribe() {
 						)}
 
 						{status === "success" && (
-							<div className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center font-semibold text-white">
+							<div className="absolute inset-0 z-10 bg-gradient-to-b from-amber-400 to-amber-500 flex items-center justify-center font-semibold text-foreground">
 								<motion.span
 									initial={{ y: -20, filter: "blur(4px)" }}
 									animate={{ y: 0, filter: "blur(0px)" }}

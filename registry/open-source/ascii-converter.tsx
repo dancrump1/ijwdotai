@@ -488,7 +488,7 @@ export default function AsciiConverter() {
 	};
 
 	return (
-		<div className="min-h-screen w-full bg-black text-white">
+		<div className="min-h-screen w-full bg-background text-foreground">
 			<div
 				ref={containerRef}
 				className="flex flex-col md:flex-row min-h-screen w-full overflow-hidden select-none"
@@ -499,7 +499,7 @@ export default function AsciiConverter() {
 				{/* ASCII Art Preview - Top on mobile, Right on desktop */}
 				<div
 					ref={previewRef}
-					className={`order-1 md:order-2 flex-1 bg-black overflow-auto flex items-center justify-center ${
+					className={`order-1 md:order-2 flex-1 bg-background overflow-auto flex items-center justify-center ${
 						isDraggingFile ? "bg-opacity-50" : ""
 					} relative`}
 					style={{
@@ -512,20 +512,20 @@ export default function AsciiConverter() {
 					}}
 				>
 					{isDraggingFile && (
-						<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 z-10 select-none">
-							<div className="text-white text-xl font-mono">
+						<div className="absolute inset-0 flex items-center justify-center bg-background bg-opacity-70 z-10 select-none">
+							<div className="text-foreground text-xl font-mono">
 								Drop image here
 							</div>
 						</div>
 					)}
 					{loading ? (
-						<div className="text-white font-mono select-none">
+						<div className="text-foreground font-mono select-none">
 							Loading image...
 						</div>
 					) : error ? (
 						<div className="text-red-400 font-mono p-4 text-center select-none">
 							{error}
-							<div className="mt-2 text-white text-sm">
+							<div className="mt-2 text-foreground text-sm">
 								Try uploading a different image or refreshing the page.
 							</div>
 						</div>

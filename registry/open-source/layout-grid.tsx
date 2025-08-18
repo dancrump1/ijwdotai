@@ -40,8 +40,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 							selected?.id === card.id
 								? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-40 flex justify-center items-center flex-wrap flex-col"
 								: lastSelected?.id === card.id
-									? "z-40 bg-white rounded-xl h-full w-full"
-									: "bg-white rounded-xl h-full w-full"
+									? "z-40 bg-background rounded-xl h-full w-full"
+									: "bg-background rounded-xl h-full w-full"
 						)}
 						layout
 					>
@@ -55,7 +55,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 			<motion.div
 				onClick={handleOutsideClick}
 				className={cn(
-					"absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
+					"absolute h-full w-full left-0 top-0 bg-background opacity-0 z-10",
 					selected?.id ? "pointer-events-auto" : "pointer-events-none"
 				)}
 				animate={{ opacity: selected?.id ? 0.3 : 0 }}
@@ -88,7 +88,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
 				animate={{
 					opacity: 0.6,
 				}}
-				className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+				className="absolute inset-0 h-full w-full bg-background opacity-60 z-10"
 			/>
 			<motion.div
 				initial={{

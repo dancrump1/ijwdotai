@@ -124,7 +124,7 @@ const TilesBackground = () => {
 			Array.from({ length: Math.pow(numberOfCols, 2) }).map((_, index) => {
 				return (
 					<div
-						className="relative grid grid-cols-2 text-white/70"
+						className="relative grid grid-cols-2 text-foreground/70"
 						key={index + "static-tiles"}
 					>
 						<svg
@@ -156,7 +156,7 @@ const TilesBackground = () => {
 
 	return (
 		<Fragment>
-			<article className="aspect-square overflow-hidden bg-white/5">
+			<article className="aspect-square overflow-hidden bg-background/5">
 				<div
 					// to center to grid container
 					className="relative -ml-[10%] -mt-[10%] grid w-[120%]"
@@ -173,7 +173,7 @@ const TilesBackground = () => {
 								onMouseMove={(e) => onMouseImageMove(e, image.text)}
 								onMouseLeave={onMouseImageLeave}
 								style={createSize(image)}
-								className="group absolute z-10 bg-white/5 shadow-[12px_20px_50px] shadow-white/20"
+								className="group absolute z-10 bg-background/5 shadow-[12px_20px_50px] shadow-white/20"
 							>
 								<img
 									src={image.url}
@@ -184,7 +184,7 @@ const TilesBackground = () => {
 						);
 					})}
 
-					<div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center font-poppins text-[3vw] font-semibold text-white">
+					<div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-center font-poppins text-[3vw] font-semibold text-foreground">
 						Explore
 					</div>
 				</div>
@@ -193,8 +193,8 @@ const TilesBackground = () => {
 				ref={indicator}
 				className="pointer-events-none fixed left-0 top-0 z-10 opacity-0 mix-blend-difference will-change-transform"
 			>
-				<p className="-translate-x-1/2 text-white">{imageText}</p>
-				<div className="h-20 w-px bg-white"></div>
+				<p className="-translate-x-1/2 text-foreground">{imageText}</p>
+				<div className="h-20 w-px bg-background"></div>
 			</div>
 		</Fragment>
 	);

@@ -150,14 +150,14 @@ const Introduction = () => {
 	return (
 		<section id="introduction" className="overflow-hidden" ref={sectionRef}>
 			<SectionHeader>Introduction</SectionHeader>
-			<div className="relative bg-[#6a6a6a] pb-64 pt-[calc(70vh+120px)]">
-				<div className="mask-top absolute left-0 top-0 h-[60vh] w-full bg-white will-change-transform"></div>
+			<div className="relative bg-background pb-64 pt-[calc(70vh+120px)]">
+				<div className="mask-top absolute left-0 top-0 h-[60vh] w-full bg-background will-change-transform"></div>
 				<div
 					className="absolute left-0 top-0 w-full will-change-transform"
 					id="lottie-container"
 				></div>
-				<div className="mask-right absolute right-0 top-0 z-10 h-full w-[70vw] bg-white will-change-transform"></div>
-				<div className="container space-y-52 leading-normal text-white">
+				<div className="mask-right absolute right-0 top-0 z-10 h-full w-[70vw] bg-background will-change-transform"></div>
+				<div className="container space-y-52 leading-normal text-foreground">
 					<h2 className="title fs-25-43">
 						Live the way you are
 						<br />
@@ -175,7 +175,7 @@ const Introduction = () => {
 						</p>
 
 						<div className="content-image relative aspect-square w-[23vw] overflow-hidden">
-							<div className="overlay absolute h-full w-full bg-[#1c1c1c]"></div>
+							<div className="overlay absolute h-full w-full bg-background"></div>
 							<div className="image relative h-full w-full">
 								<img
 									src="/itjustworks.jpg"
@@ -188,7 +188,7 @@ const Introduction = () => {
 
 					<div className="flex gap-x-[18vw]">
 						<div className="content-image relative aspect-square w-[46vw] overflow-hidden">
-							<div className="overlay absolute h-full w-full bg-[#1c1c1c]"></div>
+							<div className="overlay absolute h-full w-full bg-background"></div>
 							<div className="image relative h-full w-full">
 								<img
 									src="/itjustworks.jpg"
@@ -229,7 +229,7 @@ const Introduction = () => {
 						</p>
 
 						<div className="content-image relative aspect-square w-[35vw] overflow-hidden">
-							<div className="overlay absolute h-full w-full bg-[#1c1c1c]"></div>
+							<div className="overlay absolute h-full w-full bg-background"></div>
 							<div className="image relative h-full w-full">
 								<img
 									src="/itjustworks.jpg"
@@ -242,7 +242,7 @@ const Introduction = () => {
 
 					<div className="flex items-start gap-x-[12vw]">
 						<div className="content-image relative aspect-square w-[35vw] overflow-hidden">
-							<div className="overlay absolute h-full w-full bg-[#1c1c1c]"></div>
+							<div className="overlay absolute h-full w-full bg-background"></div>
 							<div className="image relative h-full w-full">
 								<img
 									src="/itjustworks.jpg"
@@ -252,7 +252,7 @@ const Introduction = () => {
 							</div>
 						</div>
 						<div className="content-image relative mt-52 aspect-square w-[26vw] overflow-hidden">
-							<div className="overlay absolute h-full w-full bg-[#1c1c1c]"></div>
+							<div className="overlay absolute h-full w-full bg-background"></div>
 							<div className="image relative h-full w-full">
 								<img
 									src="/itjustworks.jpg"

@@ -85,14 +85,14 @@ export default function RichPopover({
 				href={actionHref}
 				target="_blank"
 				rel="noopener noreferrer"
-				className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-medium text-black transition-colors hover:bg-white/90"
+				className="inline-flex items-center gap-2 rounded-full bg-background px-3 py-2 text-xs font-medium text-foreground transition-colors hover:bg-background/90"
 			>
 				<Play className="h-3.5 w-3.5" /> {actionLabel}
 			</Link>
 		) : (
 			<button
 				onClick={onActionClick}
-				className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-medium text-black transition-colors hover:bg-white/90"
+				className="inline-flex items-center gap-2 rounded-full bg-background px-3 py-2 text-xs font-medium text-foreground transition-colors hover:bg-background/90"
 				type="button"
 			>
 				<Play className="h-3.5 w-3.5" /> {actionLabel}
@@ -126,18 +126,18 @@ export default function RichPopover({
 							damping: 30,
 							duration: 0.2,
 						}}
-						className="relative rounded-2xl border border-white/10 bg-black px-4 py-3 text-white shadow-xl"
+						className="relative rounded-2xl border border-white/10 bg-background px-4 py-3 text-foreground shadow-xl"
 					>
 						{Title}
 						{description && (
-							<p className="mt-3 max-w-xs text-base leading-relaxed text-balance text-white/90">
+							<p className="mt-3 max-w-xs text-base leading-relaxed text-balance text-foreground/90">
 								{description}
 							</p>
 						)}
 						{(meta || Action) && (
 							<div className="mt-4 flex items-center justify-between gap-3">
 								{meta ? (
-									<span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-xs text-white">
+									<span className="inline-flex items-center gap-1 rounded-full bg-background/10 px-3 py-1 text-xs text-foreground">
 										<Clock className="h-3.5 w-3.5" /> {meta}
 									</span>
 								) : (

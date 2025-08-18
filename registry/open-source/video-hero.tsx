@@ -8,7 +8,7 @@ const VideoHero = () => {
 			className="aspect-square md:aspect-video relative md:rounded-lg
 			flex flex-col items-center 
 			justify-center text-center md:mt-[.5em] md:mx-[7%] mb-[3em]
-			text-white overflow-hidden"
+			text-foreground overflow-hidden"
 		>
 			<div className="video-docker absolute inset-0 -mx-[40%]">
 				<iframe

@@ -138,7 +138,7 @@ const ImageWheel = () => {
 						);
 					})}
 				</motion.div>
-				<h1 className="text-black text-4xl font-bold absolute bottom-0 left-0 right-0 top-0 m-auto size-fit z-10">
+				<h1 className="text-foreground text-4xl font-bold absolute bottom-0 left-0 right-0 top-0 m-auto size-fit z-10">
 					Spin
 				</h1>
 			</div>
@@ -171,7 +171,7 @@ const ActiveItem = ({ activeElement, setActiveElement }: ActiveItemProps) => {
 						className="w-[400px] h-[400px] rounded-3xl overflow-hidden relative bg-background p-2 shadow-lg shadow-black/10"
 					>
 						<button
-							className="absolute right-5 top-5 size-10 text-white bg-primary/50 backdrop-blur-md rounded-full flex items-center justify-center"
+							className="absolute right-5 top-5 size-10 text-foreground bg-primary/50 backdrop-blur-md rounded-full flex items-center justify-center"
 							onClick={() => setActiveElement(null)}
 						>
 							<X className="w-6 h-6" />

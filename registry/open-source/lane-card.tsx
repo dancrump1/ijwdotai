@@ -55,7 +55,7 @@ const Lane = ({ children, ...props }) => {
 						childRef?.current?.getBoundingClientRect().height || 0,
 			}}
 			className={cn(
-				"scroll-column w-fit gap-3 overflow-y-auto h-full min-w-[250px] overflow-x-hidden self-start transition-all flex-col justify-content-between mx-2 px-3 py-2 scroll-smooth relative flex bg-white",
+				"scroll-column w-fit gap-3 overflow-y-auto h-full min-w-[250px] overflow-x-hidden self-start transition-all flex-col justify-content-between mx-2 px-3 py-2 scroll-smooth relative flex bg-background",
 				isHovered ? "overflow-y-auto" : "overflow-y-hidden"
 			)}
 			{...props}
@@ -130,18 +130,18 @@ export const ListCard = ({ card, isHovered, position, childRef, ...props }) => {
 					alt="test1"
 					crossOrigin="anonymous"
 					className={cn(
-						`peer h-full w-full object-cover pb-[75px] object-center ${cardData.title} bg-white`
+						`peer h-full w-full object-cover pb-[75px] object-center ${cardData.title} bg-background`
 					)}
 				/>
 			)}
 
-			<span className="group-hover:visible invisible absolute inset-0 bg-black/30 text-white text-center content-center">
+			<span className="group-hover:visible invisible absolute inset-0 bg-background/30 text-foreground text-center content-center">
 				Click to reveal more
 			</span>
 
 			<div
 				className={cn(
-					"bg-[#E8E7DD] w-full absolute h-[75px] top-[calc(100%-75px)] bottom-0 transition-all duration-500",
+					"bg-background w-full absolute h-[75px] top-[calc(100%-75px)] bottom-0 transition-all duration-500",
 					openCard && "h-full top-0 -bottom-0"
 				)}
 			>
@@ -150,7 +150,7 @@ export const ListCard = ({ card, isHovered, position, childRef, ...props }) => {
 				</div>
 				<span
 					className={cn(
-						"block opacity-0 text-black font-spectral px-5 mt-6",
+						"block opacity-0 text-foreground font-spectral px-5 mt-6",
 						openCard && "opacity-100 duration-100"
 					)}
 				>

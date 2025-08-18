@@ -59,7 +59,7 @@ const NavBar = ({
 				>
 					{/*      <!-- Menu trigger --> */}
 					<button
-						className={`relative block h-[116px] w-[116px] lg:h-[118px] lg:w-[118px] bg-background lg:bg-white
+						className={`relative block h-[116px] w-[116px] lg:h-[118px] lg:w-[118px] bg-background lg:bg-background
                 ${
 							isToggleOpen
 								? "visible opacity-100  [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0 "
@@ -77,15 +77,15 @@ const NavBar = ({
 						<div className="absolute left-1/2 top-1/2 w-[37px] -translate-x-1/2 -translate-y-1/2 transform">
 							<span
 								aria-hidden="true"
-								className="absolute block h-0.5 w-full -translate-y-3 transform rounded-full bg-white lg:bg-background transition-all duration-300"
+								className="absolute block h-0.5 w-full -translate-y-3 transform rounded-full bg-background lg:bg-background transition-all duration-300"
 							></span>
 							<span
 								aria-hidden="true"
-								className="absolute block h-0.5 w-full transform rounded-full bg-white lg:bg-background transition duration-300"
+								className="absolute block h-0.5 w-full transform rounded-full bg-background lg:bg-background transition duration-300"
 							></span>
 							<span
 								aria-hidden="true"
-								className="absolute block h-0.5 w-full origin-top-left translate-y-3 transform rounded-full bg-white lg:bg-background transition-all duration-300"
+								className="absolute block h-0.5 w-full origin-top-left translate-y-3 transform rounded-full bg-background lg:bg-background transition-all duration-300"
 							></span>
 						</div>
 					</button>
@@ -126,7 +126,7 @@ const NavBar = ({
 											key={route.id}
 											role="none"
 											className={cn(
-												"h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline uppercase text-[48px] text-white hover:text-background",
+												"h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline uppercase text-[48px] text-foreground hover:text-background",
 												selected === route.id &&
 													"font-swiss-condensed"
 											)}
@@ -144,7 +144,7 @@ const NavBar = ({
 									);
 								})}
 						</ul>
-						<ul className="hidden lg:grid mr-auto ml-20 my-auto text-white text-[26px] gap-y-8 gap-x-16 grid-rows-5 grid-flow-col place-content-evenly">
+						<ul className="hidden lg:grid mr-auto ml-20 my-auto text-foreground text-[26px] gap-y-8 gap-x-16 grid-rows-5 grid-flow-col place-content-evenly">
 							{!!selectedSubRoutes?.length &&
 								selectedSubRoutes?.map((route, i) => (
 									<li className="font-swiss-condensed" key={route?.id}>
@@ -170,7 +170,7 @@ const NavBar = ({
 								<NavAccordion
 									type="single"
 									collapsible
-									className="m-auto text-white mt-4"
+									className="m-auto text-foreground mt-4"
 									defaultValue={routes[0]?.title.toLowerCase()}
 								>
 									{routes?.map((route) => {
@@ -188,7 +188,7 @@ const NavBar = ({
 														)
 													}
 													className={cn(
-														"w-full mx-auto h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline text-[40px] text-white uppercase",
+														"w-full mx-auto h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline text-[40px] text-foreground uppercase",
 														alreadySelected && "font-swiss"
 													)}
 												>
@@ -232,7 +232,7 @@ const NavBar = ({
 										referrerPolicy={
 											header.button[0]?.target && "no-referrer"
 										}
-										className="button red-to-white lg:hidden flex justify-center"
+										className="button red-to-background lg:hidden flex justify-center"
 									>
 										{header.button[0]?.text}
 									</Link>
@@ -268,7 +268,7 @@ const NavBar = ({
 										}
 									/>
 								)}
-								<div className="text-white font-swiss-condensed text-[16px] uppercase group-hover:text-backgroundSecondary">
+								<div className="text-foreground font-swiss-condensed text-[16px] uppercase group-hover:text-backgroundSecondary">
 									{header.iconLink[0].linkText}
 								</div>
 							</Link>

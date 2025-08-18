@@ -176,8 +176,8 @@ function InfoCard({
 							transition={{ duration: 0.3, delay: 0 }}
 							className={cn(
 								"group rounded-lg border p-3",
-								"bg-white",
-								"dark:bg-gradient-to-br dark:from-zinc-800 dark:to-zinc-900",
+								"bg-background",
+								"dark:bg-gradient-to-br dark:from-background dark:to-background",
 								"dark:border-zinc-700",
 								className
 							)}
@@ -420,7 +420,7 @@ const InfoCardMedia = ({
 				</div>
 
 				<motion.div
-					className="absolute right-0 bottom-0 left-0 h-10 bg-gradient-to-b from-transparent to-white dark:to-zinc-900"
+					className="absolute right-0 bottom-0 left-0 h-10 bg-gradient-to-b from-transparent to-background dark:to-background"
 					animate={{ opacity: isHovered ? 0 : 1 }}
 					transition={{
 						type: "spring",

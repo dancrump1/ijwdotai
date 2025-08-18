@@ -100,11 +100,11 @@ export const Content = ({
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, ease: "easeInOut" }}
 				>
-					<span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium text-white">
+					<span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium text-foreground">
 						{featureInView.callout}
 					</span>
 					<p className="my-3 text-5xl font-bold">{featureInView.title}</p>
-					<p className="text-slate-600 dark:text-white">
+					<p className="text-slate-600 dark:text-foreground">
 						{featureInView.description}
 					</p>
 					<Link

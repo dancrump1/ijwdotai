@@ -137,8 +137,8 @@ const OfferCard = ({
 	return (
 		<div
 			className={cn(
-				"hover:-translate-y-1 h-full transform-gpu overflow-hidden rounded-2xl border bg-neutral-800/95 transition-[transform,background-color] duration-300 ease-in-out hover:bg-neutral-800/100 dark:bg-neutral-800/50",
-				"text-white dark:text-neutral-400",
+				"hover:-translate-y-1 h-full transform-gpu overflow-hidden rounded-2xl border bg-background/95 transition-[transform,background-color] duration-300 ease-in-out hover:bg-background/100 dark:bg-background/50",
+				"text-foreground dark:text-foreground",
 				isBestValue ? "border-[#ed8445]" : "border-neutral-500/50 "
 			)}
 		>
@@ -153,16 +153,16 @@ const OfferCard = ({
 						: {}
 				}
 			>
-				<div className="font-semibold text-neutral-200 text-lg">
+				<div className="font-semibold text-foreground text-lg">
 					{title}
 				</div>
-				<div className="mt-2 text-neutral-400 text-sm">{description}</div>
+				<div className="mt-2 text-foreground text-sm">{description}</div>
 				<div className="mt-4">
-					<div className="font-semibold text-4xl text-neutral-200">
+					<div className="font-semibold text-4xl text-foreground">
 						{price[selectedBilledType]}
 						<EuroIcon className="inline size-5" />
 					</div>
-					<div className="text-neutral-400 text-sm">
+					<div className="text-foreground text-sm">
 						{selectedBilledType === "monthly"
 							? "billed monthly"
 							: `${getAnnualPrice()}€ billed annually`}
@@ -171,10 +171,10 @@ const OfferCard = ({
 
 				<button
 					className={cn(
-						"my-12 inline-flex w-full transform-gpu items-center justify-center rounded-full border border-neutral-400/20 px-12 py-2.5 font-semibold text-neutral-50 tracking-tight transition-[background-color,transform] hover:scale-105",
+						"my-12 inline-flex w-full transform-gpu items-center justify-center rounded-full border border-neutral-400/20 px-12 py-2.5 font-semibold text-foreground tracking-tight transition-[background-color,transform] hover:scale-105",
 						isBestValue
 							? " bg-gradient-to-br from-[#f6d4a1] to-[#ed8445]"
-							: "bg-neutral-700 "
+							: "bg-background "
 					)}
 					type="button"
 				>
@@ -193,11 +193,11 @@ const OfferCard = ({
 				</ul>
 				{infos && (
 					<>
-						<div className="my-6 h-px bg-neutral-600" />
+						<div className="my-6 h-px bg-background" />
 						<ul className="space-y-2">
 							{infos.map((feature) => (
 								<li className="flex items-center gap-2" key={feature}>
-									<div className="size-1.5 rounded-full bg-neutral-500" />
+									<div className="size-1.5 rounded-full bg-background" />
 									<div className=" text-sm">{feature}</div>
 								</li>
 							))}
@@ -224,8 +224,8 @@ export function SelectOfferTab({
 					className={cn(
 						" relative inline-flex w-fit transform-gpu whitespace-nowrap px-6 py-2.5 font-semibold text-lg capitalize tracking-tight transition-colors",
 						selectedBilledType === button
-							? "text-neutral-700 dark:text-neutral-50"
-							: "text-neutral-800 hover:text-neutral-600 dark:text-neutral-300 dark:hover:text-neutral-300 "
+							? "text-foreground dark:text-foreground"
+							: "text-foreground hover:text-foreground dark:text-foreground dark:hover:text-foreground "
 					)}
 					key={button}
 					onClick={() => handleSwitchTab(button)}
@@ -235,7 +235,7 @@ export function SelectOfferTab({
 					{selectedBilledType === button && (
 						<motion.div
 							animate={{ opacity: 1, scale: 1 }}
-							className="-z-10 absolute top-0 right-0 bottom-0 left-0 rounded-full bg-neutral-200 dark:bg-neutral-800 "
+							className="-z-10 absolute top-0 right-0 bottom-0 left-0 rounded-full bg-background dark:bg-background "
 							exit={{ opacity: 0, scale: 0.9 }}
 							initial={{ opacity: 0, scale: 0.95 }}
 							layout={true}

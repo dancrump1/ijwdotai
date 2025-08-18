@@ -25,11 +25,11 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
 	return (
 		<div className="hover:cursor-pointer">
 			<motion.div
-				className="relative w-full h-64 bg-white/90 rounded-lg shadow-md overflow-hidden group transition-all duration-300 ease-in-out hover:bg-white/70"
+				className="relative w-full h-64 bg-background/90 rounded-lg shadow-md overflow-hidden group transition-all duration-300 ease-in-out hover:bg-background/70"
 				onHoverStart={() => setIsHovered(true)}
 				onHoverEnd={() => setIsHovered(false)}
 			>
-				<div className="absolute inset-0 overflow-hidden bg-[#111111] dark:bg-[#111111]">
+				<div className="absolute inset-0 overflow-hidden bg-background dark:bg-background">
 					<Image
 						src={imageUrl}
 						alt={title}
@@ -38,7 +38,7 @@ const ZoomBlurCard: React.FC<ZoomBlurCardProps> = ({
 						className="transition-all duration-300 ease-in-out group-hover:scale-110 opacity-60 group-hover:opacity-70 group-hover:blur-sm"
 					/>
 				</div>
-				<div className="relative z-10 p-4 h-full flex flex-col justify-between text-white">
+				<div className="relative z-10 p-4 h-full flex flex-col justify-between text-foreground">
 					<div className="self-end px-4 py-2 group-hover:rotate-[-45deg] transition-all duration-500">
 						<FaArrowRightLong />
 					</div>

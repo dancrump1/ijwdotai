@@ -79,7 +79,7 @@ const ListRotator = ({}) => {
 		<div className="h-screen overflow-auto">
 			<div ref={$wrapper}>
 				<RotatorWrapper
-					className="sticky h-screen top-0 grid place-items-center bg-black"
+					className="sticky h-screen top-0 grid place-items-center bg-background"
 					style={{
 						perspective: "10000px",
 					}}

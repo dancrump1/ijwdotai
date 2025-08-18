@@ -58,7 +58,7 @@ const Card = ({
 					backgroundPosition: "center",
 				}}
 			/>
-			<div className="p-4 relative z-20 h-full text-slate-300 group-hover:text-white transition-colors duration-500 flex flex-col justify-between">
+			<div className="p-4 relative z-20 h-full text-slate-300 group-hover:text-foreground transition-colors duration-500 flex flex-col justify-between">
 				<FiArrowRight className="text-3xl group-hover:-rotate-45 transition-transform duration-500 ml-auto" />
 				<div>
 					<h4>

@@ -34,7 +34,7 @@ const CircularBarsSpinnerLoader = ({
 			>
 				{[...new Array(numberOfBars)].map((_, index) => (
 					<div
-						className="absolute rounded-[1px] bg-neutral-700 dark:invert"
+						className="absolute rounded-[1px] bg-background dark:invert"
 						// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 						key={`circular-bars-spinner-loader-bar-${index}`}
 						style={{

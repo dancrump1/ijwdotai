@@ -96,7 +96,7 @@ export default function DetailPage({ pageContent }: PageContentType) {
 						{pageContent?.title}
 					</h1>
 
-					<div className="divider my-[2vh] h-px w-20 bg-black opacity-0 lg:my-[1vw] lg:w-40"></div>
+					<div className="divider my-[2vh] h-px w-20 bg-background opacity-0 lg:my-[1vw] lg:w-40"></div>
 					<div className="grid gap-5 lg:grid-cols-2">
 						<p className="description max-w-xl opacity-0">
 							{pageContent?.description}

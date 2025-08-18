@@ -68,7 +68,7 @@ export default function VerticalTiles({
 				{tiles.map((tile) => (
 					<motion.div
 						key={tile.id}
-						className={cn("bg-gray-800", tileClassName)}
+						className={cn("bg-background", tileClassName)}
 						style={{
 							width: tile.width,
 							position: "absolute",

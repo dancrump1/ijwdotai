@@ -88,7 +88,7 @@ const Frequency: React.FC = () => {
 				{audioData.map((height, index) => (
 					<motion.div
 						key={index}
-						className="bg-gray-400 w-2 mx-0.5 rounded-2xl"
+						className="bg-background w-2 mx-0.5 rounded-2xl"
 						animate={{
 							height: `${height}px`, // Dynamic height based on the audio data
 							backgroundColor: height > 200 ? "#3B82F6" : "#6B7280", // Change color based on intensity

@@ -193,9 +193,9 @@ const Gallery = () => {
 	return (
 		<section>
 			<SectionHeader>Gallery</SectionHeader>
-			<div className="relative grid h-screen place-items-center overflow-hidden bg-[#F6F6F6]">
-				<div className="relative z-10 inline-block text-center text-gray-700">
-					<h1 className="text-gray-700 fs-38-56">Gallery</h1>
+			<div className="relative grid h-screen place-items-center overflow-hidden bg-background">
+				<div className="relative z-10 inline-block text-center text-foreground">
+					<h1 className="text-foreground fs-38-56">Gallery</h1>
 				</div>
 				<div
 					className="absolute -bottom-[20vh] -left-[20vw] -right-[20vw] -top-[20vh]"

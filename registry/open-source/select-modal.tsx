@@ -37,7 +37,7 @@ function generateLetters(value: string) {
 function SelectModel() {
 	return (
 		<Select defaultValue={exampleData[0]} alignItemToTrigger={false}>
-			<SelectTrigger className="relative flex h-10 items-center justify-between gap-3 text-sm rounded-md pr-3 pl-3.5 select-none hover:bg-neutral-100 focus-visible:outline-none focus-visible:-outline-offset-1 active:bg-neutral-100 data-[popup-open]:bg-neutral-100">
+			<SelectTrigger className="relative flex h-10 items-center justify-between gap-3 text-sm rounded-md pr-3 pl-3.5 select-none hover:bg-background focus-visible:outline-none focus-visible:-outline-offset-1 active:bg-background data-[popup-open]:bg-background">
 				<SelectValue placeholder="Select Model">
 					{/* {(value) => {
 						return (
@@ -61,7 +61,7 @@ function SelectModel() {
 				=
 			</SelectTrigger>
 			<SelectContent>
-				<SelectGroup className="group origin-[var(--transform-origin)] rounded-md bg-white py-1 shadow-lg outline outline-neutral-200 transition-[transform,scale,opacity] data-[ending-style]:scale-100 data-[ending-style]:opacity-100 data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none">
+				<SelectGroup className="group origin-[var(--transform-origin)] rounded-md bg-background py-1 shadow-lg outline outline-neutral-200 transition-[transform,scale,opacity] data-[ending-style]:scale-100 data-[ending-style]:opacity-100 data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none">
 					{exampleData.map((item) => (
 						<SelectItemTest value={item} key={item + "select-modal"}>
 							{item}
@@ -81,7 +81,7 @@ function SelectItemTest({
 	return (
 		<SelectItem
 			className={cn(
-				"grid min-w-[var(--anchor-width)] cursor-default grid-cols-[1fr_0.75rem] items-center gap-2 py-2 pr-4 pl-2.5 text-sm leading-4 outline-none select-none group-data-[side=none]:min-w-[calc(var(--anchor-width)+1rem)] group-data-[side=none]:pr-12 group-data-[side=none]:text-base group-data-[side=none]:leading-4 data-[highlighted]:relative data-[highlighted]:z-0 data-[highlighted]:text-gray-50 data-[highlighted]:before:absolute data-[highlighted]:before:inset-x-1 data-[highlighted]:before:inset-y-0 data-[highlighted]:before:z-[-1] data-[highlighted]:before:rounded-sm data-[highlighted]:before:bg-gray-900",
+				"grid min-w-[var(--anchor-width)] cursor-default grid-cols-[1fr_0.75rem] items-center gap-2 py-2 pr-4 pl-2.5 text-sm leading-4 outline-none select-none group-data-[side=none]:min-w-[calc(var(--anchor-width)+1rem)] group-data-[side=none]:pr-12 group-data-[side=none]:text-base group-data-[side=none]:leading-4 data-[highlighted]:relative data-[highlighted]:z-0 data-[highlighted]:text-foreground data-[highlighted]:before:absolute data-[highlighted]:before:inset-x-1 data-[highlighted]:before:inset-y-0 data-[highlighted]:before:z-[-1] data-[highlighted]:before:rounded-sm data-[highlighted]:before:bg-background",
 				className
 			)}
 			{...props}

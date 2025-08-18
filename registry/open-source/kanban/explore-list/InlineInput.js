@@ -77,7 +77,7 @@ class InlineInputController extends React.Component {
 				dataGramm="false"
 				rows={1}
 				autoFocus={autoFocus}
-				className="text-[#524359] text-4xl bg-inherit w-[230px]"
+				className="text-foreground text-4xl bg-inherit w-[230px]"
 			/>
 		);
 	}

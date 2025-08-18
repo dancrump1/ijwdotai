@@ -21,7 +21,7 @@ export default function ThreeDotLoaderGrowing() {
 			<div className="flex gap-2">
 				{[...new Array(3)].map((_, index) => (
 					<div
-						className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
+						className="size-5 origin-center rounded-xl bg-background dark:invert"
 						key={index.toString() + "three-dot"}
 						style={{
 							animationName: "three-dot-loader-growing",

@@ -1440,7 +1440,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           h-[60px]
           grid
           place-items-center
-          bg-[#00ffff]
+          bg-background
           border-[5px]
           border-black
           rounded-full
@@ -1454,7 +1454,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
 				}
         `}
 					>
-						<p className="select-none relative text-[#060606] top-[2px] text-[26px]">
+						<p className="select-none relative text-foreground top-[2px] text-[26px]">
 							&#x2197;
 						</p>
 					</div>

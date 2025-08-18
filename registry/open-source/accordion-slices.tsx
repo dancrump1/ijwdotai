@@ -59,7 +59,7 @@ const Panel = ({
 	return (
 		<>
 			<button
-				className="bg-white hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+				className="bg-background hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
 				onClick={() => setOpen(id)}
 			>
 				<span
@@ -71,10 +71,10 @@ const Panel = ({
 					{title}
 				</span>
 				<span className="block lg:hidden text-xl font-light">{title}</span>
-				<div className="w-6 lg:w-full aspect-square bg-indigo-600 text-white grid place-items-center">
+				<div className="w-6 lg:w-full aspect-square bg-indigo-600 text-foreground grid place-items-center">
 					<Icon />
 				</div>
-				<span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
+				<span className="w-4 h-4 bg-background group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
 			</button>
 
 			<AnimatePresence>
@@ -92,14 +92,14 @@ const Panel = ({
 							backgroundPosition: "center",
 							backgroundSize: "cover",
 						}}
-						className="w-full h-full overflow-hidden relative bg-black flex items-end"
+						className="w-full h-full overflow-hidden relative bg-background flex items-end"
 					>
 						<motion.div
 							variants={descriptionVariants}
 							initial="closed"
 							animate="open"
 							exit="closed"
-							className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
+							className="px-4 py-2 bg-background/40 backdrop-blur-sm text-foreground"
 						>
 							<p>{description}</p>
 						</motion.div>

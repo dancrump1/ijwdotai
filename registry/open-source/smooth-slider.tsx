@@ -114,7 +114,7 @@ function AnimatedSlider({
 				{showLeftArrow && (
 					<button
 						onClick={() => scrollHandler("left")}
-						className="absolute top-1/2 left-0 z-10 -translate-x-2 -translate-y-1/2 scale-0 rounded-full bg-black/50 p-2 text-white transition-transform group-hover:translate-x-2 group-hover:scale-100"
+						className="absolute top-1/2 left-0 z-10 -translate-x-2 -translate-y-1/2 scale-0 rounded-full bg-background/50 p-2 text-foreground transition-transform group-hover:translate-x-2 group-hover:scale-100"
 						aria-label="Scroll left"
 					>
 						<ChevronLeft className="h-6 w-6" />
@@ -124,7 +124,7 @@ function AnimatedSlider({
 				{showRightArrow && (
 					<button
 						onClick={() => scrollHandler("right")}
-						className="absolute top-1/2 right-0 z-10 translate-x-2 -translate-y-1/2 scale-0 rounded-full bg-black/50 p-2 text-white transition-transform group-hover:-translate-x-2 group-hover:scale-100"
+						className="absolute top-1/2 right-0 z-10 translate-x-2 -translate-y-1/2 scale-0 rounded-full bg-background/50 p-2 text-foreground transition-transform group-hover:-translate-x-2 group-hover:scale-100"
 						aria-label="Scroll right"
 					>
 						<ChevronRight className="h-6 w-6" />
@@ -235,7 +235,7 @@ function OnHover({
 	return (
 		<div
 			className={cn(
-				"absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 transition-[transform,opacity] duration-300 ease-in-out",
+				"absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background/90 via-background/60 to-transparent p-4 transition-[transform,opacity] duration-300 ease-in-out",
 				isHovered
 					? "translate-y-0 opacity-100"
 					: "translate-y-full opacity-0",
@@ -264,7 +264,7 @@ function DefaultView({ className, children, ...props }: DefaultViewProps) {
 	return (
 		<div
 			className={cn(
-				"fade-in-20 absolute right-0 bottom-0 left-0 truncate p-2 text-sm font-medium text-white transition-[transform,opacity] duration-200 ease-in-out",
+				"fade-in-20 absolute right-0 bottom-0 left-0 truncate p-2 text-sm font-medium text-foreground transition-[transform,opacity] duration-200 ease-in-out",
 				!isHovered
 					? "translate-y-0 opacity-100"
 					: "translate-y-full opacity-0",

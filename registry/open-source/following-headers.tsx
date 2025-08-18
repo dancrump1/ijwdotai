@@ -203,25 +203,25 @@ const TableOfContent = ({
 	}
 
 	return (
-		<nav className={cn("bg-white dark:bg-neutral-800", className)} {...props}>
+		<nav className={cn("bg-background dark:bg-background", className)} {...props}>
 			<ol className="relative overflow-hidden " ref={refTableOfContentList}>
 				{headings.map((heading, _index) => {
 					return (
 						<li
-							className="group relative px-1 text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100"
+							className="group relative px-1 text-foreground hover:text-foreground dark:hover:text-foreground"
 							id={`${heading.id}-table-of-content-item`}
 							key={heading.id}
 						>
 							<div
 								aria-hidden="true"
-								className="pointer-events-none absolute top-px left-0 z-20 h-full select-none bg-white dark:bg-neutral-800"
+								className="pointer-events-none absolute top-px left-0 z-20 h-full select-none bg-background dark:bg-background"
 								style={{
 									width: `${(heading.level - 1) * 8 - 1}px`,
 								}}
 							/>
 							<div
 								aria-hidden="true"
-								className="pointer-events-none absolute z-20 h-full w-full select-none bg-white dark:bg-neutral-800"
+								className="pointer-events-none absolute z-20 h-full w-full select-none bg-background dark:bg-background"
 								style={{
 									left: `${(heading.level - 1) * 8}px`,
 								}}
@@ -232,7 +232,7 @@ const TableOfContent = ({
 									// Before element : positionning
 									"before:absolute before:top-0.5 before:right-0 before:bottom-0.5 before:left-0 ",
 									// Before element : animation
-									"before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-[transform,opacity] before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100",
+									"before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-background/10 before:opacity-0 before:transition-[transform,opacity] before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100",
 									(heading.level === 1 || heading.level === 2) &&
 										"font-semibold",
 									heading.level === 3 && "font-normal"

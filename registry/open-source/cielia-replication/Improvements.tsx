@@ -122,7 +122,7 @@ const Improvements = () => {
 							{cols.map((img, colIndex) => (
 								<div
 									key={colIndex}
-									className="gallery-row grid h-[33%] w-full place-items-center overflow-hidden bg-black text-white"
+									className="gallery-row grid h-[33%] w-full place-items-center overflow-hidden bg-background text-foreground"
 								>
 									<img
 										src={img}
@@ -135,7 +135,7 @@ const Improvements = () => {
 					))}
 				</div>
 
-				<div className="title-wrap absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white fs-25-43">
+				<div className="title-wrap absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-foreground fs-25-43">
 					<h2 className="w-max text-center">
 						<span>
 							Reevaluating past housing facilities and storage features.
@@ -149,7 +149,7 @@ const Improvements = () => {
 					</h2>
 				</div>
 
-				<div className="desc-wrap absolute bottom-10 right-[3vw] w-[31vw] border-t border-white pt-2.5 text-right text-white">
+				<div className="desc-wrap absolute bottom-10 right-[3vw] w-[31vw] border-t border-white pt-2.5 text-right text-foreground">
 					これまで
 				</div>
 			</div>

@@ -20,7 +20,7 @@ const PeelableSticker: React.FC<PeelableStickerProps> = ({
 			onHoverEnd={() => setIsHovered(false)}
 		>
 			<div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-				<div className="bg-gray-100 w-[140px] h-[140px] m-[20px] rounded-full shadow-lg flex items-center justify-center font-thin">
+				<div className="bg-background w-[140px] h-[140px] m-[20px] rounded-full shadow-lg flex items-center justify-center font-thin">
 					{message}
 				</div>
 			</div>

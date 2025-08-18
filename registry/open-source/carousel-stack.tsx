@@ -39,7 +39,7 @@ export function StackCard({ cards, className, ...props }: StackCard) {
 			<div className="mt-5 flex items-center justify-center gap-5">
 				<button
 					type="button"
-					className="bg-neutral-950 text-white rounded-full p-2 disabled:bg-neutral-400 disabled:cursor-not-allowed active:scale-90 transition-transform disabled:active:scale-100"
+					className="bg-background text-foreground rounded-full p-2 disabled:bg-background disabled:cursor-not-allowed active:scale-90 transition-transform disabled:active:scale-100"
 					disabled={current === 0}
 					onClick={() => setCurrent((prev) => prev - 1)}
 				>
@@ -47,7 +47,7 @@ export function StackCard({ cards, className, ...props }: StackCard) {
 				</button>
 				<button
 					type="button"
-					className="bg-neutral-950 text-white rounded-full p-2 disabled:bg-neutral-400 disabled:cursor-not-allowed active:scale-90 transition-transform disabled:active:scale-100"
+					className="bg-background text-foreground rounded-full p-2 disabled:bg-background disabled:cursor-not-allowed active:scale-90 transition-transform disabled:active:scale-100"
 					disabled={current === cards.length - 1}
 					onClick={() => setCurrent((prev) => prev + 1)}
 				>

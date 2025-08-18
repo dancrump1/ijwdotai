@@ -139,7 +139,7 @@ const TextGradientTransition = () => {
 				})}
 			</h1>
 
-			<p className="mx-auto mb-5 max-w-3xl text-gray-400">
+			<p className="mx-auto mb-5 max-w-3xl text-foreground">
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
 				modi error aspernatur saepe eveniet non tempore, ipsam, id
 				repudiandae atque obcaecati sit ab debitis corporis vitae dolor

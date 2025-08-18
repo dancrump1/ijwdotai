@@ -102,13 +102,13 @@ const Eye: React.FC<EyeProps> = ({ mouseX, mouseY, selfRef, otherRef }) => {
 	return (
 		<div
 			ref={selfRef}
-			className="relative bg-white border-4 border-black rounded-full h-24 w-24 flex items-center justify-center"
+			className="relative bg-background border-4 border-black rounded-full h-24 w-24 flex items-center justify-center"
 		>
 			<div
 				ref={pupilRef}
-				className="absolute bg-black rounded-full h-8 w-8 transition-transform duration-[5ms]"
+				className="absolute bg-background rounded-full h-8 w-8 transition-transform duration-[5ms]"
 			>
-				<div className="w-3 h-3 bg-white rounded-full absolute bottom-1 right-1"></div>
+				<div className="w-3 h-3 bg-background rounded-full absolute bottom-1 right-1"></div>
 			</div>
 		</div>
 	);

@@ -161,7 +161,7 @@ const Avatar = ({ index }: { index: number }) => {
 					</motion.h3>
 					<motion.p
 						layoutId={`email-${index}`}
-						className="text-sm text-gray-500"
+						className="text-sm text-foreground"
 					>
 						john@doe.com
 					</motion.p>
@@ -178,7 +178,7 @@ const Options = ({ index }: { index: number }) => {
 				layoutId={`delete-${index}`}
 				className="size-8 rounded-full border-2 border-background flex items-center justify-center"
 			>
-				<Trash2 className="size-4 text-gray-500" />
+				<Trash2 className="size-4 text-foreground" />
 			</motion.button>
 		</div>
 	);

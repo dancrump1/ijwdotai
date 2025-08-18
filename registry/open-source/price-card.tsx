@@ -17,7 +17,7 @@ export default function PricingCard() {
 	return (
 		<div className="flex items-center justify-center">
 			<motion.div
-				className="w-full max-w-md rounded-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-6 text-white shadow-xl"
+				className="w-full max-w-md rounded-3xl bg-gradient-to-b from-background to-background p-6 text-foreground shadow-xl"
 				initial={{ opacity: 0, y: 50 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
@@ -27,7 +27,7 @@ export default function PricingCard() {
 					<span className="text-5xl font-extrabold">$3000</span>
 					<span className="ml-2 text-xl">/month</span>
 				</div>
-				<p className="mb-6 text-gray-400">Product Development</p>
+				<p className="mb-6 text-foreground">Product Development</p>
 				<ul className="mb-6 space-y-3">
 					{features.map((feature, index) => (
 						<motion.li
@@ -47,13 +47,13 @@ export default function PricingCard() {
 									delay: index * 0.1 + 0.2,
 								}}
 							>
-								<Check className="h-3 w-3 text-white" />
+								<Check className="h-3 w-3 text-foreground" />
 							</motion.span>
 							<span>{feature}</span>
 						</motion.li>
 					))}
 				</ul>
-				<ScalingButton className="w-full bg-white text-black hover:bg-white/90">
+				<ScalingButton className="w-full bg-background text-foreground hover:bg-background/90">
 					Order Now
 				</ScalingButton>
 			</motion.div>

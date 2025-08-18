@@ -23,7 +23,7 @@ const OppoScroll = ({ containerRef }) => {
 		return null;
 
 	return (
-		<section ref={targetRef} className="flex bg-black text-white">
+		<section ref={targetRef} className="flex bg-background text-foreground">
 			<Content content={items} />
 			<Images content={items} scrollYProgress={scrollYProgress} />
 		</section>
@@ -37,7 +37,7 @@ const Content = ({ content }: { content: typeof items }) => {
 				<div
 					key={title + id}
 					className={`p-8 h-screen flex flex-col justify-between ${
-						idx % 2 ? "bg-white text-black" : "bg-black text-white"
+						idx % 2 ? "bg-background text-foreground" : "bg-background text-foreground"
 					}`}
 				>
 					<h3 className="text-3xl font-medium">{title}</h3>

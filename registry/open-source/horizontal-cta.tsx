@@ -4,7 +4,7 @@ export default function CardCTA() {
 	return (
 		<>
 			{/*<!-- Component: Horizontal card--> */}
-			<div className="flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
+			<div className="flex flex-col overflow-hidden bg-background rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
 				{/*  <!-- Image --> */}
 				<figure className="flex-1">
 					<img
@@ -18,7 +18,7 @@ export default function CardCTA() {
 					<header className="flex gap-4 mb-4">
 						<a
 							href="#"
-							className="relative inline-flex items-center justify-center w-12 h-12 text-white rounded-full"
+							className="relative inline-flex items-center justify-center w-12 h-12 text-foreground rounded-full"
 						>
 							<img
 								src="https://i.pravatar.cc/48?img=24"

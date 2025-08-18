@@ -48,7 +48,7 @@ export const InputAnimated = ({
 	return (
 		<div className={cn("relative", className)}>
 			<motion.div
-				className="absolute top-1/2 -translate-y-1/2 pointer-events-none text-zinc-900 dark:text-zinc-50"
+				className="absolute top-1/2 -translate-y-1/2 pointer-events-none text-foreground dark:text-foreground"
 				variants={containerVariants}
 				initial="initial"
 				animate={showLabel ? "animate" : "initial"}
@@ -70,7 +70,7 @@ export const InputAnimated = ({
 				onFocus={() => setIsFocused(true)}
 				onBlur={() => setIsFocused(false)}
 				{...props}
-				className="outline-none border-b-2 border-zinc-900 dark:border-zinc-50 py-2 w-full text-base font-medium text-zinc-900 dark:text-zinc-50 bg-transparent placeholder-transparent"
+				className="outline-none border-b-2 border-zinc-900 dark:border-zinc-50 py-2 w-full text-base font-medium text-foreground dark:text-foreground bg-transparent placeholder-transparent"
 			/>
 		</div>
 	);

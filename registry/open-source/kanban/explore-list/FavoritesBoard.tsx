@@ -357,7 +357,7 @@ const FavoritesBoard = ({ data }) => {
 					in lists that you can organize however you'd like.
 				</p>
 				<Link
-					className="py-[6px] px-[10px] rounded-xl bg-backgroundSecondary text-white"
+					className="py-[6px] px-[10px] rounded-xl bg-backgroundSecondary text-foreground"
 					href={"/explore"}
 				>
 					EXPLORE

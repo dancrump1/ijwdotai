@@ -108,7 +108,7 @@ const ColorPicker = ({
 		}
 
 		setHsl([h, s, l]);
-		onChange(`hsl(${h.toFixed(1)}, ${s.toFixed(1)}%, ${l.toFixed(1)}%)`);
+		onChange(`hsl(${h.toFixed(1)}, ${s?.toFixed(1) || 0}%, ${l?.toFixed(1) || 0}%)`);
 	};
 
 	const handleHueChange = (hue: number) => {

@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import ResizeNavBar from "@/registry/open-source/resize-navbar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import ColorSelector from "@/components/ColorSelector";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -33,15 +34,17 @@ export default async function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
+				<ColorSelector>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
 					enableSystem
 					disableTransitionOnChange
-				>
+					>
 					<ResizeNavBar />
 					<NuqsAdapter>{children}</NuqsAdapter>
 				</ThemeProvider>
+					</ColorSelector>
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />
 		</html>

@@ -126,7 +126,7 @@ const NavBar = ({
 											key={route.id}
 											role="none"
 											className={cn(
-												"h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline uppercase text-[48px] text-foreground hover:text-background",
+												"h-[50px] first:my-0 last:my-0 my-6 font-swiss-outline uppercase text-[48px] text-foreground hover:text-secondary",
 												selected === route.id &&
 													"font-swiss-condensed"
 											)}
@@ -150,7 +150,7 @@ const NavBar = ({
 									<li className="font-swiss-condensed" key={route?.id}>
 										<Link
 											href={route?.url || ""}
-											className="hover:text-background"
+											className="hover:text-secondary"
 											onClick={() => setIsToggleOpen(false)}
 											target={
 												!!route?.newWindow ? "_blank" : "_self"

@@ -6,8 +6,8 @@ import { CheckIcon } from "lucide-react";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<section className="py-24 lg:pb-32  overflow-hidden text-neutral-800 dark:text-neutral-50">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<section className="py-24 lg:pb-32  overflow-hidden text-secondary dark:text-secondary">
 				<div className="container px-4 mx-auto">
 					<div className="max-w-2xl mx-auto text-center mb-20">
 						<h2 className="mb-4 text-6xl tracking-tighter">
@@ -20,7 +20,7 @@ export default function Usage() {
 					</div>
 					<div className="flex flex-wrap -m-6 *:mx-auto">
 						<div className="w-full md:w-1/2 lg:w-1/3 p-6">
-							<div className="h-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-600 rounded-2xl transform-gpu hover:-translate-y-2 transition duration-500 ">
+							<div className="h-full bg-background dark:bg-background border border-neutral-300 dark:border-neutral-600 rounded-2xl transform-gpu hover:-translate-y-2 transition duration-500 ">
 								<div className="p-12 border-b border-neutral-300 dark:border-neutral-600">
 									<div className="pr-9">
 										<h4 className="mb-6 text-6xl tracking-tighter">
@@ -59,7 +59,7 @@ export default function Usage() {
 									backgroundSize: "cover",
 								}}
 							>
-								<div className="h-full bg-white dark:bg-neutral-900 rounded-2xl">
+								<div className="h-full bg-background dark:bg-background rounded-2xl">
 									<div
 										className="p-12"
 										style={{
@@ -70,13 +70,13 @@ export default function Usage() {
 										}}
 									>
 										<div className="pr-9">
-											<h4 className="mb-6 text-6xl text-white tracking-tighter">
+											<h4 className="mb-6 text-6xl text-secondary tracking-tighter">
 												Startup
 											</h4>
-											<p className="mb-2 text-xl text-white font-semibold tracking-tighter">
+											<p className="mb-2 text-xl text-secondary font-semibold tracking-tighter">
 												From $99/mo
 											</p>
-											<p className="text-white tracking-tight">
+											<p className="text-secondary tracking-tight">
 												The ideal plan for larger businesses who
 												require heavy usage.
 											</p>
@@ -100,7 +100,7 @@ export default function Usage() {
 							</div>
 						</div>
 						<div className="w-full md:w-1/2 lg:w-1/3 p-6">
-							<div className="flex flex-col justify-between h-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-600 rounded-2xl transform-gpu hover:-translate-y-2 transition duration-500">
+							<div className="flex flex-col justify-between h-full bg-background dark:bg-background border border-neutral-300 dark:border-neutral-600 rounded-2xl transform-gpu hover:-translate-y-2 transition duration-500">
 								<div className="p-12 border-neutral-300 dark:border-neutral-600">
 									<div className="pr-9">
 										<h4 className="mb-6 text-6xl tracking-tighter">
@@ -149,13 +149,13 @@ const PricingButton = ({
 	return (
 		<>
 			<a
-				className="inline-block px-5 py-4 w-full text-center  font-semibold tracking-tight bg-transparent hover:bg-neutral-900 hover:text-white border dark:hover:bg-white dark:hover:text-neutral-800 hover:scale-105 border-neutral-700 rounded-lg transition duration-200"
+				className="inline-block px-5 py-4 w-full text-center  font-semibold tracking-tight bg-transparent hover:bg-background hover:text-secondary border dark:hover:bg-background dark:hover:text-secondary hover:scale-105 border-neutral-700 rounded-lg transition duration-200"
 				href={href ?? ""}
 			>
 				{children}
 			</a>
 			{noCardRequired && (
-				<span className="text-sm text-neutral-600 tracking-tight">
+				<span className="text-sm text-secondary tracking-tight">
 					No credit card required
 				</span>
 			)}

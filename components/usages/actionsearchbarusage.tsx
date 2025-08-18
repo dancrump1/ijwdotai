@@ -166,7 +166,7 @@ export default function Usage({
 			<div className="relative flex flex-col justify-start items-center min-h-[300px]">
 				<div className="w-full max-w-sm sticky top-0 bg-background z-10 pt-4 pb-1">
 					<label
-						className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1 block"
+						className="text-xs font-medium text-secondary dark:text-secondary mb-1 block"
 						htmlFor="search"
 					>
 						Search Commands
@@ -191,7 +191,7 @@ export default function Usage({
 										exit={{ y: 20, opacity: 0 }}
 										transition={{ duration: 0.2 }}
 									>
-										<Send className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+										<Send className="w-4 h-4 text-secondary dark:text-secondary" />
 									</motion.div>
 								) : (
 									<motion.div
@@ -201,7 +201,7 @@ export default function Usage({
 										exit={{ y: 20, opacity: 0 }}
 										transition={{ duration: 0.2 }}
 									>
-										<Search className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+										<Search className="w-4 h-4 text-secondary dark:text-secondary" />
 									</motion.div>
 								)}
 							</AnimatePresence>
@@ -213,7 +213,7 @@ export default function Usage({
 					<AnimatePresence>
 						{isFocused && result && !selectedAction && (
 							<motion.div
-								className="w-full border rounded-md shadow-xs overflow-hidden dark:border-gray-800 bg-white dark:bg-black mt-1"
+								className="w-full border rounded-md shadow-xs overflow-hidden dark:border-gray-800 bg-background dark:bg-background mt-1"
 								variants={container}
 								initial="hidden"
 								animate="show"
@@ -223,29 +223,29 @@ export default function Usage({
 									{result.actions.map((action) => (
 										<motion.li
 											key={action.id}
-											className="px-3 py-2 flex items-center justify-between hover:bg-gray-200 dark:hover:bg-zinc-900  cursor-pointer rounded-md"
+											className="px-3 py-2 flex items-center justify-between hover:bg-background dark:hover:bg-background  cursor-pointer rounded-md"
 											variants={item}
 											layout
 											onClick={() => setSelectedAction(action)}
 										>
 											<div className="flex items-center gap-2 justify-between">
 												<div className="flex items-center gap-2">
-													<span className="text-gray-500">
+													<span className="text-secondary">
 														{action.icon}
 													</span>
-													<span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+													<span className="text-sm font-medium text-secondary dark:text-secondary">
 														{action.label}
 													</span>
-													<span className="text-xs text-gray-400">
+													<span className="text-xs text-secondary">
 														{action.description}
 													</span>
 												</div>
 											</div>
 											<div className="flex items-center gap-2">
-												<span className="text-xs text-gray-400">
+												<span className="text-xs text-secondary">
 													{action.short}
 												</span>
-												<span className="text-xs text-gray-400 text-right">
+												<span className="text-xs text-secondary text-right">
 													{action.end}
 												</span>
 											</div>
@@ -253,7 +253,7 @@ export default function Usage({
 									))}
 								</motion.ul>
 								<div className="mt-2 px-3 py-2 border-t border-gray-100 dark:border-gray-800">
-									<div className="flex items-center justify-between text-xs text-gray-500">
+									<div className="flex items-center justify-between text-xs text-secondary">
 										<span>Press ⌘K to open commands</span>
 										<span>ESC to cancel</span>
 									</div>

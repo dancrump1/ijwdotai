@@ -9,8 +9,8 @@ import {
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<div className="w-dvw h-dvh rounded-lg bg-white text-3xl md:text-5xl flex flex-col items-center justify-center font-overused-grotesk">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<div className="w-dvw h-dvh rounded-lg bg-background text-3xl md:text-5xl flex flex-col items-center justify-center font-overused-grotesk">
 				<div className="h-full text-red-500 rounded-xl py-12  align-text-center gap-y-1 md:gap-y-2 flex flex-col justify-center items-center">
 					<RandomLetterSwapForward
 						label="Right here!"

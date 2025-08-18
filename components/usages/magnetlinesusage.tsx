@@ -6,7 +6,7 @@ import MagnetLines from "@/registry/open-source/magnet-lines";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<MagnetLines
 				rows={9}
 				columns={9}

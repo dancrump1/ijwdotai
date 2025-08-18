@@ -7,7 +7,7 @@ import { LinkPreview } from "@/registry/open-source/link-preview";
 export default function LinkPreviewDemo() {
 	return (
 		<div className="flex justify-center items-center h-[40rem] flex-col px-4">
-			<span className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+			<span className="text-secondary dark:text-secondary text-xl md:text-3xl max-w-3xl mx-auto mb-10">
 				<LinkPreview
 					url="https://tailwindcss.com"
 					imageSrc="/itjustworks.jpg"
@@ -25,7 +25,7 @@ export default function LinkPreviewDemo() {
 				</LinkPreview>{" "}
 				are a great way to build modern websites.
 			</span>
-			<span className="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto">
+			<span className="text-secondary dark:text-secondary text-xl md:text-3xl max-w-3xl mx-auto">
 				Visit{" "}
 				<LinkPreview
 					url="https://ui.aceternity.com"

@@ -8,11 +8,11 @@ export default function Usage() {
 				idOfParentContainer="parent-content"
 			/>
 			<div className="w-full">
-				<p className="mb-2 text-neutral-500 text-xs">
+				<p className="mb-2 text-secondary text-xs">
 					Scroll the section below
 				</p>
 				<div
-					className="h-96 w-full space-y-20 overflow-scroll rounded-xl bg-neutral-500/10 p-8"
+					className="h-96 w-full space-y-20 overflow-scroll rounded-xl bg-background/10 p-8"
 					id="parent-content"
 				>
 					<h1>Table of content preview</h1>

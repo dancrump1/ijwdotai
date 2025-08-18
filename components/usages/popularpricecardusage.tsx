@@ -48,25 +48,25 @@ export default function PopularPriceCard() {
 				animate="visible"
 				transition={{ duration: 1 }}
 			>
-				<div className="bg-priceAccent text-white px-4 py-1.5 rounded-r-xl rounded-l-3xl text-sm font-medium pb-12 pl-6">
+				<div className="bg-priceAccent text-secondary px-4 py-1.5 rounded-r-xl rounded-l-3xl text-sm font-medium pb-12 pl-6">
 					Most Popular
 				</div>
 			</motion.div>
 			<motion.div
-				className="z-10 w-full max-w-md rounded-3xl bg-[#1C1C1E] p-6 text-white shadow-xl relative"
+				className="z-10 w-full max-w-md rounded-3xl bg-background p-6 text-secondary shadow-xl relative"
 				variants={variants.card}
 				initial="hidden"
 				animate="visible"
 				transition={{ duration: 0.5 }}
 			>
 				<p className="text-xl font-medium">Startup Plan</p>
-				<p className="mb-6 text-sm text-gray-400">
+				<p className="mb-6 text-sm text-secondary">
 					For small development teams and startups
 				</p>
 
 				<div className="mb-2 flex items-baseline">
 					<span className="text-4xl font-bold">$499</span>
-					<span className="ml-2 text-lg text-gray-400">/month</span>
+					<span className="ml-2 text-lg text-secondary">/month</span>
 				</div>
 				<div className="my-4">
 					<Button className="w-full bg-priceAccent hover:bg-priceAccent/80">
@@ -94,7 +94,7 @@ export default function PopularPriceCard() {
 							>
 								<Check className="h-4 w-4 text-priceAccent" />
 							</motion.span>
-							<p className="text-sm text-gray-300">{feature}</p>
+							<p className="text-sm text-secondary">{feature}</p>
 						</motion.li>
 					))}
 				</ul>

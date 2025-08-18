@@ -6,7 +6,7 @@ import FallingText from "@/registry/open-source/falling-text";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="h-[400px]">
 				<FallingText
 					text={`React Bits is a library of animated and interactive React components designed to streamline UI development and simplify your workflow.`}

@@ -6,7 +6,7 @@ import Lanyard from "@/registry/open-source/lanyard";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />{" "}
 		</div>
 	);

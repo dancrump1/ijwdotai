@@ -67,7 +67,7 @@ export default function GitlabSidebarPage({ isDemo = false }) {
 					</a>
 				</div>
 				<button
-					className="absolute bg-white p-1 border-y-2 border-r-2 border-[rgba(0,0,0,0.08)] text-slate-600 -right-[34px]"
+					className="absolute bg-background p-1 border-y-2 border-r-2 border-[rgba(0,0,0,0.08)] text-slate-600 -right-[34px]"
 					onClick={() =>
 						setOpen((isOpen) =>
 							isOpen === Open.Closed ? Open.Open : Open.Closed

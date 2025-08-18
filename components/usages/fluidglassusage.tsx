@@ -14,7 +14,7 @@ import FluidGlass from "@/registry/open-source/fluid-glass";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div style={{ height: "600px", position: "relative" }}>
 				<FluidGlass
 					mode="lens" // or "bar", "cube"

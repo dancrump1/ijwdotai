@@ -1,117 +1,106 @@
 "use client";
 
-import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
-const FollowingEyes: React.FC = () => {
-	const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+const MouseFollowingEyes: React.FC = () => {
 	const eye1Ref = useRef<HTMLDivElement>(null);
 	const eye2Ref = useRef<HTMLDivElement>(null);
+	const mousePos = useRef({ x: 0, y: 0 });
 
-	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-		setMousePos({ x: e.clientX, y: e.clientY });
-	};
+	useEffect(() => {
+		const handleMouseMove = (e: MouseEvent) => {
+			mousePos.current = { x: e.clientX, y: e.clientY };
+		};
+
+		window.addEventListener("mousemove", handleMouseMove);
+
+		return () => window.removeEventListener("mousemove", handleMouseMove);
+	}, []);
 
 	return (
-		<div
-			className="w-screen h-screen flex justify-center items-center rounded-xl"
-			onMouseMove={handleMouseMove}
-		>
-			<div className="flex">
-				<Eye
-					mouseX={mousePos.x}
-					mouseY={mousePos.y}
-					selfRef={eye1Ref as React.RefObject<HTMLDivElement>}
-					otherRef={eye2Ref as React.RefObject<HTMLDivElement>}
-				/>
-				<Eye
-					mouseX={mousePos.x}
-					mouseY={mousePos.y}
-					selfRef={eye2Ref as React.RefObject<HTMLDivElement>}
-					otherRef={eye1Ref as React.RefObject<HTMLDivElement>}
-				/>
+		<div className="w-screen h-screen flex justify-center items-center bg-gradient-to-b from-blue-100 to-white rounded-xl">
+			<div className="flex space-x-10">
+				<Eye selfRef={eye1Ref} otherRef={eye2Ref} mousePos={mousePos} />
+				<Eye selfRef={eye2Ref} otherRef={eye1Ref} mousePos={mousePos} />
 			</div>
 		</div>
 	);
 };
 
 interface EyeProps {
-	mouseX: number;
-	mouseY: number;
 	selfRef: React.RefObject<HTMLDivElement>;
 	otherRef: React.RefObject<HTMLDivElement>;
+	mousePos: React.MutableRefObject<{ x: number; y: number }>;
 }
 
-const Eye: React.FC<EyeProps> = ({ mouseX, mouseY, selfRef, otherRef }) => {
+const Eye: React.FC<EyeProps> = ({ selfRef, otherRef, mousePos }) => {
 	const pupilRef = useRef<HTMLDivElement>(null);
-	const [center, setCenter] = useState({ x: 0, y: 0 });
+	const center = useRef({ x: 0, y: 0 });
 
-	const updateCenter = React.useCallback(() => {
+	const updateCenter = () => {
 		if (!selfRef.current) return;
 		const rect = selfRef.current.getBoundingClientRect();
-		setCenter({
+		center.current = {
 			x: rect.left + rect.width / 2,
 			y: rect.top + rect.height / 2,
-		});
-	}, [selfRef]);
+		};
+	};
 
 	useEffect(() => {
-		const updateCenter = () => {
-			if (!selfRef.current) return;
-			const rect = selfRef.current.getBoundingClientRect();
-			setCenter({
-				x: rect.left + rect.width / 2,
-				y: rect.top + rect.height / 2,
-			});
-		};
-
 		updateCenter();
 		window.addEventListener("resize", updateCenter);
-		return () => window.removeEventListener("resize", updateCenter);
-	}, [selfRef]);
 
-	useEffect(() => {
-		updateCenter();
+		let frameId: number;
 
-		const isInside = (ref: React.RefObject<HTMLDivElement>) => {
-			const rect = ref.current?.getBoundingClientRect();
-			if (!rect) return false;
-			return (
-				mouseX >= rect.left &&
-				mouseX <= rect.right &&
-				mouseY >= rect.top &&
-				mouseY <= rect.bottom
-			);
+		const animate = () => {
+			const { x, y } = mousePos.current;
+
+			const isInside = (ref: React.RefObject<HTMLDivElement>) => {
+				const rect = ref.current?.getBoundingClientRect();
+				if (!rect) return false;
+				return (
+					x >= rect.left &&
+					x <= rect.right &&
+					y >= rect.top &&
+					y <= rect.bottom
+				);
+			};
+
+			if (!(isInside(selfRef) || isInside(otherRef))) {
+				const dx = x - center.current.x;
+				const dy = y - center.current.y;
+				const angle = Math.atan2(dy, dx);
+
+				const maxMove = 20;
+				const pupilX = Math.cos(angle) * maxMove;
+				const pupilY = Math.sin(angle) * maxMove;
+
+				if (pupilRef.current) {
+					pupilRef.current.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+				}
+			}
+
+			frameId = requestAnimationFrame(animate);
 		};
 
-		if (isInside(selfRef) || isInside(otherRef)) return;
+		frameId = requestAnimationFrame(animate);
 
-		const dx = mouseX - center.x;
-		const dy = mouseY - center.y;
-		const angle = Math.atan2(dy, dx);
-
-		const maxMove = 20;
-		const pupilX = Math.cos(angle) * maxMove;
-		const pupilY = Math.sin(angle) * maxMove;
-
-		if (pupilRef.current) {
-			pupilRef.current.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-		}
-	}, [mouseX, mouseY, center.x, center.y, otherRef, selfRef, updateCenter]);
+		return () => {
+			cancelAnimationFrame(frameId);
+			window.removeEventListener("resize", updateCenter);
+		};
+	}, [selfRef, otherRef, mousePos]);
 
 	return (
 		<div
 			ref={selfRef}
-			className="relative bg-background border-4 border-black rounded-full h-24 w-24 flex items-center justify-center"
+			className="relative bg-white border-4 border-black rounded-full h-24 w-24 flex items-center justify-center"
 		>
-			<div
-				ref={pupilRef}
-				className="absolute bg-background rounded-full h-8 w-8 transition-transform duration-[5ms]"
-			>
-				<div className="w-3 h-3 bg-background rounded-full absolute bottom-1 right-1"></div>
+			<div ref={pupilRef} className="absolute bg-black rounded-full h-8 w-8">
+				<div className="w-3 h-3 bg-white rounded-full absolute bottom-1 right-1"></div>
 			</div>
 		</div>
 	);
 };
 
-export { FollowingEyes };
+export { MouseFollowingEyes };

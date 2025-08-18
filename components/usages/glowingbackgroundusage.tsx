@@ -35,7 +35,7 @@ const Icon = () => {
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
 			stroke="currentColor"
-			className="h-4 w-4 text-white stroke-2"
+			className="h-4 w-4 text-secondary stroke-2"
 		>
 			<path
 				strokeLinecap="round"

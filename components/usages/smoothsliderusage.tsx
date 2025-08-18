@@ -94,20 +94,20 @@ export default function Usage() {
 									style={{ transition: "all 0.4s ease" }}
 								/>
 								<div className="absolute top-2 right-2 z-10">
-									<button className="text-white transition-colors hover:text-gray-200">
+									<button className="text-secondary transition-colors hover:text-secondary">
 										<Bookmark className="h-5 w-5" />
 									</button>
 								</div>
 								<OnHover fadeInDuration="0.5s">
 									<div className="space-y-1">
-										<h3 className="text-xl font-bold text-white">
+										<h3 className="text-xl font-bold text-secondary">
 											{anime.title}
 										</h3>
-										<p className="text-sm text-gray-200">
+										<p className="text-sm text-secondary">
 											{anime.year} · {anime.seasons} ·{" "}
 											{anime.platform}
 										</p>
-										<button className="mt-3 flex items-center gap-1 rounded bg-white/20 px-3 py-1 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/30">
+										<button className="mt-3 flex items-center gap-1 rounded bg-background/20 px-3 py-1 text-sm text-secondary backdrop-blur-sm transition-colors hover:bg-background/30">
 											Watch options
 										</button>
 									</div>

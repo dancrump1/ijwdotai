@@ -140,7 +140,7 @@ export default function Usage() {
 	}, []);
 
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="w-full max-w-4xl mx-auto ">
 				<CardContent className="p-6 space-y-6">
 					<div className="grid md:grid-cols-1 gap-6">
@@ -171,7 +171,7 @@ export default function Usage() {
 											<Button
 												variant="ghost"
 												size="icon"
-												className="ml-2 text-black"
+												className="ml-2 text-secondary"
 												onClick={() => toggleLock(key)}
 											>
 												{lockedColor === key

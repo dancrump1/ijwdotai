@@ -12,7 +12,7 @@ const AccordionSlices = () => {
 	const [open, setOpen] = useState(items[0].id);
 
 	return (
-		<section className="p-4 bg-indigo-600">
+		<section className="p-4 bg-background">
 			<div className="flex flex-col lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden">
 				{items.map((item) => {
 					return (
@@ -59,7 +59,7 @@ const Panel = ({
 	return (
 		<>
 			<button
-				className="bg-background hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
+				className="bg-background hover:bg-foreground transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group"
 				onClick={() => setOpen(id)}
 			>
 				<span

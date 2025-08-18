@@ -6,7 +6,7 @@ import { HoverCard } from "@/registry/open-source/hover-gallery";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<HoverCard
 				cards={[
 					{

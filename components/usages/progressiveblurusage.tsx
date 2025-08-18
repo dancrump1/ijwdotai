@@ -24,13 +24,13 @@ export default function ProgressiveBlurUsage() {
 				/>
 				<div className="absolute bottom-0 left-0">
 					<div className="flex flex-col items-start gap-0 px-5 py-4">
-						<p className="text-base font-medium text-white">
+						<p className="text-base font-medium text-secondary">
 							Benjamin Spiers
 						</p>
-						<span className="mb-2 text-base text-zinc-300">
+						<span className="mb-2 text-base text-secondary">
 							Moonlight 2023
 						</span>
-						<p className="text-base text-white">
+						<p className="text-base text-secondary">
 							Oil on linen. 40cm by 30cm
 						</p>
 					</div>
@@ -68,10 +68,10 @@ export default function ProgressiveBlurUsage() {
 					transition={{ duration: 0.2, ease: "easeOut" }}
 				>
 					<div className="flex flex-col items-start gap-0 px-5 py-4">
-						<p className="text-base font-medium text-white">
+						<p className="text-base font-medium text-secondary">
 							John Martin
 						</p>
-						<span className="text-base text-zinc-300">Pandemonium</span>
+						<span className="text-base text-secondary">Pandemonium</span>
 					</div>
 				</motion.div>
 			</div>

@@ -62,7 +62,7 @@ const exampleImages = [
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<section className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
 				<Floating sensitivity={-0.5} className="h-full">
 					<FloatingElement
@@ -177,7 +177,7 @@ export default function Usage() {
 										"pop ✨",
 										"rock 🤘",
 									]}
-									mainClassName="overflow-hidden pr-3 text-[#0015ff] py-0 pb-2 md:pb-4 rounded-xl"
+									mainClassName="overflow-hidden pr-3 text-primary py-0 pb-2 md:pb-4 rounded-xl"
 									staggerDuration={0.03}
 									staggerFrom="last"
 									rotationInterval={3000}
@@ -206,7 +206,7 @@ export default function Usage() {
 
 					<div className="flex flex-row justify-center space-x-4 items-center mt-10 sm:mt-16 md:mt-20 lg:mt-20 text-xs">
 						<motion.button
-							className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-background bg-foreground px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
+							className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-secondary bg-foreground px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
 							animate={{ opacity: 1, y: 0 }}
 							initial={{ opacity: 0, y: 20 }}
 							transition={{
@@ -229,7 +229,7 @@ export default function Usage() {
 							</Link>
 						</motion.button>
 						<motion.button
-							className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-white bg-[#0015ff] px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
+							className="sm:text-base md:text-lg lg:text-xl font-semibold tracking-tight text-secondary bg-background px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-3 rounded-full z-20 shadow-2xl font-calendas"
 							animate={{ opacity: 1, y: 0 }}
 							initial={{ opacity: 0, y: 20 }}
 							transition={{

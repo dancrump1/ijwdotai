@@ -6,13 +6,13 @@ import Letter3DSwap from "@/registry/open-source/letter3d-swap";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="flex flex-col items-center max-w-2xl ">
 				<Letter3DSwap
 					text="SET YOUR MIND TO IT"
-					mainClassName="text-7xl bg-white lowercase"
-					frontFaceClassName={`bg-white  text-black`}
-					secondFaceClassName={`bg-white  text-black`}
+					mainClassName="text-7xl bg-background lowercase"
+					frontFaceClassName={`bg-background  text-secondary`}
+					secondFaceClassName={`bg-background  text-secondary`}
 					rotateDirection="top"
 					paddingX={0}
 					paddingY={0}

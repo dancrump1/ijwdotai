@@ -12,7 +12,7 @@ export default function ExampleScrollReplication({ containerRef }) {
 		<>
 			<LenisProvider>
 				<div>
-					<div className="grid min-h-[100vh] place-items-center bg-white py-20 text-black">
+					<div className="grid min-h-[100vh] place-items-center bg-background py-20 text-secondary">
 						<div className="container flex min-h-[50vh] flex-col justify-between text-center">
 							<h1 className="heading-60-150">
 								<Link
@@ -46,7 +46,7 @@ export default function ExampleScrollReplication({ containerRef }) {
 							</div>
 						</div>
 					</div>
-					<div className="h-px bg-black"></div>
+					<div className="h-px bg-background"></div>
 					<StickyScroll1 containerRef={containerRef} />
 					<StickyScroll2 containerRef={containerRef} />
 					<CTAButton />

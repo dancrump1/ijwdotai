@@ -32,14 +32,14 @@ export default function TextHighlighterDemo() {
 	}, []);
 
 	return (
-		<div className="w-dvw h-dvh bg-[#fefefe] relative p-0">
+		<div className="w-dvw h-dvh bg-background relative p-0">
 			<div className="absolute bottom-0 w-full left-0 h-64 bg-gradient-to-t from-[#fefefe] from-10% via-50% via-[#fefefe]/50 to-transparent pointer-events-none isolate" />
 
 			<div
-				className="h-full w-full z-10 bg-[#fefefe] overflow-scroll"
+				className="h-full w-full z-10 bg-background overflow-scroll"
 				ref={containerRef}
 			>
-				<div className="max-w-md mx-auto px-4 mt-40 pb-64 p-0  text-black">
+				<div className="max-w-md mx-auto px-4 mt-40 pb-64 p-0  text-secondary">
 					<h1 className="text-4xl font-medium mb-20 font-calendas tracking-tight">
 						Typeface alphabets
 					</h1>

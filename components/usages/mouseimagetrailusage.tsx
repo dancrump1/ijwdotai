@@ -27,8 +27,8 @@ const MouseImageTrailUsage = () => {
 				"/itjustworks.jpg",
 			]}
 		>
-			<section className="grid h-screen w-full place-content-center bg-white">
-				<p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
+			<section className="grid h-screen w-full place-content-center bg-background">
+				<p className="flex items-center gap-2 text-3xl font-bold uppercase text-secondary">
 					<FiMousePointer />
 					<span>Hover me</span>
 				</p>
@@ -143,7 +143,7 @@ const MouseImageTrail = ({
 
 			{images?.map((img, index) => (
 				<img
-					className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0"
+					className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-background object-cover opacity-0"
 					src={img}
 					alt={`Mouse move image ${index}`}
 					key={index + "image-trail"}

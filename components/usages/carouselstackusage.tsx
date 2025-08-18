@@ -8,7 +8,7 @@ import { StackCard } from "@/registry/open-source/carousel-stack";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<StackCard
 				cards={[
 					<div
@@ -19,12 +19,12 @@ export default function Usage() {
 						<h3 className="text-lg text-balance font-semibold">
 							Introduce a feature and its benefit.
 						</h3>
-						<div className="aspect-video grid place-items-center bg-neutral-200 rounded-md">
+						<div className="aspect-video grid place-items-center bg-background rounded-md">
 							<Image
 								width={100}
 								height={100}
 								size={64}
-								className="text-neutral-500"
+								className="text-secondary"
 								src="/itjustworks.jpg"
 							/>
 						</div>
@@ -41,12 +41,12 @@ export default function Usage() {
 						<h3 className="text-lg text-balance font-semibold">
 							Introduce a feature and its benefit.
 						</h3>
-						<div className="aspect-video grid place-items-center bg-neutral-200 rounded-md">
+						<div className="aspect-video grid place-items-center bg-background rounded-md">
 							<Image
 								width={100}
 								height={100}
 								size={64}
-								className="text-neutral-500"
+								className="text-secondary"
 								src="/itjustworks.jpg"
 							/>
 						</div>
@@ -63,13 +63,13 @@ export default function Usage() {
 						<h3 className="text-lg text-balance font-semibold">
 							Introduce a feature and its benefit.
 						</h3>
-						<div className="aspect-video grid place-items-center bg-neutral-200 rounded-md">
+						<div className="aspect-video grid place-items-center bg-background rounded-md">
 							<Image
 								src="/itjustworks.jpg"
 								width={100}
 								height={100}
 								size={64}
-								className="text-neutral-500"
+								className="text-secondary"
 							/>
 						</div>
 						<p className="text-sm">

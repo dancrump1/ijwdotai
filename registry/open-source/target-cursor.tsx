@@ -1,6 +1,15 @@
-import React, { useCallback, useEffect, useMemo, useRef } from "react";
+import React, {
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 
 import { gsap } from "gsap";
+import { AnimatePresence } from "motion/react";
+
+import { cn } from "../utilities/cn";
 
 // Credit:
 // https://www.reactbits.dev/animations/target-cursor
@@ -302,33 +311,79 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 		}
 	}, [spinDuration]);
 
+	const [isActive, setIsActive] = useState<boolean>(false);
+	const containerRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (typeof window !== "undefined" && containerRef.current) {
+			// Get the parent element directly from the ref
+			const parentElement = containerRef.current.parentElement;
+
+			if (parentElement) {
+				// Add cursor-none to parent
+				parentElement.style.cursor = "none";
+
+				// Add event listeners to parent
+
+				const handleMouseEnter = (e: MouseEvent) => {
+					setIsActive(true);
+				};
+
+				const handleMouseLeave = () => {
+					setIsActive(false);
+				};
+
+				parentElement.addEventListener("mouseenter", handleMouseEnter);
+				parentElement.addEventListener("mouseleave", handleMouseLeave);
+
+				return () => {
+					parentElement.style.cursor = "";
+					parentElement.removeEventListener(
+						"mouseenter",
+						handleMouseEnter
+					);
+					parentElement.removeEventListener(
+						"mouseleave",
+						handleMouseLeave
+					);
+				};
+			}
+		}
+	}, []);
+
 	return (
-		<div
-			ref={cursorRef}
-			className="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
-			style={{ willChange: "transform" }}
-		>
+		<>
+			<div ref={containerRef} />
 			<div
-				className="absolute left-1/2 top-1/2 w-1 h-1 bg-background rounded-full transform -translate-x-1/2 -translate-y-1/2"
+				ref={cursorRef}
+				className={cn(
+					"fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2",
+					isActive ? "opacity-100" : "opacity-0"
+				)}
 				style={{ willChange: "transform" }}
-			/>
-			<div
-				className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0"
-				style={{ willChange: "transform" }}
-			/>
-			<div
-				className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0"
-				style={{ willChange: "transform" }}
-			/>
-			<div
-				className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform translate-x-1/2 translate-y-1/2 border-l-0 border-t-0"
-				style={{ willChange: "transform" }}
-			/>
-			<div
-				className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0"
-				style={{ willChange: "transform" }}
-			/>
-		</div>
+			>
+				<div
+					className="absolute left-1/2 top-1/2 w-1 h-1 bg-background rounded-full transform -translate-x-1/2 -translate-y-1/2"
+					style={{ willChange: "transform" }}
+				/>
+				<div
+					className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform -translate-x-[150%] -translate-y-[150%] border-r-0 border-b-0"
+					style={{ willChange: "transform" }}
+				/>
+				<div
+					className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform translate-x-1/2 -translate-y-[150%] border-l-0 border-b-0"
+					style={{ willChange: "transform" }}
+				/>
+				<div
+					className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform translate-x-1/2 translate-y-1/2 border-l-0 border-t-0"
+					style={{ willChange: "transform" }}
+				/>
+				<div
+					className="target-cursor-corner absolute left-1/2 top-1/2 w-3 h-3 border-[3px] border-white transform -translate-x-[150%] translate-y-1/2 border-r-0 border-t-0"
+					style={{ willChange: "transform" }}
+				/>
+			</div>
+		</>
 	);
 };
 

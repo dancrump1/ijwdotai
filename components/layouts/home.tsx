@@ -19,6 +19,7 @@ import {
 	ScrollVelocityContainer,
 	ScrollVelocityRow,
 } from "@/registry/open-source/scroll-velocity";
+import TargetCursor from "@/registry/open-source/target-cursor";
 import TextRotate from "@/registry/open-source/text-rotate";
 import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
@@ -492,7 +493,8 @@ function Home({ data }) {
 						</ScrollVelocityContainer>{" "}
 					</section>
 
-					<section className="flex my-32">
+					<section className="flex my-32 relative">
+						<TargetCursor spinDuration={2} hideDefaultCursor={false} />
 						<ContentWithImage image={{ url: cta.url }} />
 					</section>
 

@@ -50,10 +50,10 @@ const LeftContent = ({ content }: { content: any }) => {
 					<Image
 						height={1200}
 						width={1200}
-						key={id + "oppo-link-img"}
+						key={title + "oppo-link-img"}
 						alt={title}
 						className="h-screen w-full object-cover"
-						src={image.src || "/itjustworks.jpg"}
+						src={image[0].url || "/itjustworks.jpg"}
 					/>
 				</Link>
 			))}
@@ -80,7 +80,7 @@ const RightContent = ({
 				{[...content].reverse().map(({ image, id, title, uri }) => (
 					<Link
 						href={`/work/${uri}`}
-						key={id + "oppo-link"}
+						key={title + "opposite" + id}
 						className={`p-8 h-screen relative flex flex-col justify-between group`}
 					>
 						<div className="invisible group-hover:visible group-hover:bg-background/40 absolute inset-0 text-center content-center text-4xl">

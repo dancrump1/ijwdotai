@@ -114,19 +114,19 @@ const FAQPage: React.FC = ({ faqs = faqData }: { faqs: FAQData }) => {
 	return (
 		<div className="mb-16 relative">
 			<div className="max-w-4xl mx-auto">
-				<PageHeader
+				{/* <PageHeader
 					title="FAQs"
 					heading="Comprehensive Answers to Frequently Asked Questions"
 					description="Find detailed answers to common questions about our services and tools."
-				/>
+				/> */}
 				<div className="flex justify-center space-x-1 sm:space-x-5 mb-8 w-fit mx-auto">
 					{Object.keys(faqs).map((tab) => (
 						<motion.button
 							key={tab}
 							className={`px-2 py-1 font-bold rounded-md text-xs sm:text-sm ${
 								activeTab === tab
-									? "bg-gradient-to-r from-indigo-400 to-blue-400 text-foreground dark:from-indigo-600 dark:to-blue-600"
-									: "text-foreground/50 dark:text-foreground/50"
+									? "bg-gradient-to-r from-red-400 to-orange-400 text-secondary dark:text-primary dark:from-red-600 dark:to-orange-600"
+									: "text-primary/50 dark:text-secondary/50"
 							}`}
 							onClick={() => setActiveTab(tab)}
 							whileHover={{ scale: 1.05 }}

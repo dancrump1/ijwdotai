@@ -1,19 +1,17 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useCallback, useState } from "react";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/registry/utilities/cn";
-import {
-	AnimatePresence,
-	motion,
-	useMotionValueEvent,
-	useScroll,
-} from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useTheme } from "next-themes";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
+
+import { createAnimation } from "./theme-animations";
 
 type Props = {
 	navItems: {
@@ -35,6 +33,48 @@ const DesktopNavbar = ({ navItems }: Props) => {
 			setShowFloatingNav(false);
 		}
 	});
+
+	const { theme, setTheme } = useTheme();
+
+	const styleId = "theme-transition-styles";
+
+	const updateStyles = React.useCallback((css: string, name: string) => {
+		if (typeof window === "undefined") return;
+
+		let styleElement = document.getElementById(styleId) as HTMLStyleElement;
+
+		if (!styleElement) {
+			styleElement = document.createElement("style");
+			styleElement.id = styleId;
+			document.head.appendChild(styleElement);
+		}
+
+		styleElement.textContent = css;
+	}, []);
+
+	const toggleTheme = React.useCallback(() => {
+		const animation = createAnimation(
+			"gif",
+			"top-left",
+			"https://media.giphy.com/media/KBbr4hHl9DSahKvInO/giphy.gif?cid=790b76112m5eeeydoe7et0cr3j3ekb1erunxozyshuhxx2vl&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+		);
+
+		updateStyles(animation.css, animation.name);
+
+		if (typeof window === "undefined") return;
+
+		const switchTheme = () => {
+			setTheme(theme === "light" ? "dark" : "light");
+		};
+
+		if (!document.startViewTransition) {
+			switchTheme();
+			return;
+		}
+
+		document.startViewTransition(switchTheme);
+	}, [theme, setTheme]);
+
 	return (
 		<motion.div
 			className={cn(
@@ -77,6 +117,7 @@ const DesktopNavbar = ({ navItems }: Props) => {
 						href={item.link}
 						key={item.title}
 						target={item.target}
+						toggleTheme={toggleTheme}
 					>
 						{item.title}
 					</NavBarItem>
@@ -239,12 +280,14 @@ export function NavBarItem({
 	active,
 	target,
 	className,
+	toggleTheme,
 }: NavBarItemProps) {
 	const pathname = usePathname();
 
 	return (
 		<Link
 			href={href}
+			onClick={toggleTheme}
 			className={cn(
 				"border-y-2 border-y-red-500 w-fit",
 				"flex items-center pointer-events-auto h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 text-foreground  hover:bg-background hover:text-foreground/80 dark:text-foreground hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",

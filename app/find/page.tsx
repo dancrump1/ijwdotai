@@ -95,7 +95,8 @@ export default async function Page({}: {}) {
 
 	return (
 		<>
-			<Suspense>
+			<Suspense fallback={<span>Loading</span>}>
+				{" "}
 				<HomePage files={files} />
 			</Suspense>
 		</>

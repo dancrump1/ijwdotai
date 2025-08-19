@@ -7,7 +7,8 @@ export default async function Page() {
 	const files = await getComponentFilesWithDates();
 
 	return (
-		<Suspense>
+		<Suspense fallback={<span>Loading</span>}>
+			{" "}
 			<ChatPage files={files} />
 		</Suspense>
 	);

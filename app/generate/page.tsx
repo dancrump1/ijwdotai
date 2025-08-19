@@ -8,7 +8,8 @@ export default async function Page({}: {}) {
 
 	return (
 		<>
-			<Suspense>
+			<Suspense fallback={<span>Loading</span>}>
+				{" "}
 				<V0Chat files={files} />
 			</Suspense>
 		</>

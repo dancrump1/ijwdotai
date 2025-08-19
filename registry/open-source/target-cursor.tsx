@@ -7,7 +7,6 @@ import React, {
 } from "react";
 
 import { gsap } from "gsap";
-import { AnimatePresence } from "motion/react";
 
 import { cn } from "../utilities/cn";
 

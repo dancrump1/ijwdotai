@@ -332,7 +332,8 @@ export default function V0Chat({ files }: { files: any }) {
 				{!!previewComponent?.name && (
 					<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">
 						<button onClick={() => setPreviewComponent()}>x</button>
-						<Suspense>
+						<Suspense fallback={<span>Loading</span>}>
+							{" "}
 							<Component
 								collapsed={[]}
 								setCollapsed={() => null}

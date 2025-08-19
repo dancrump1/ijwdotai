@@ -55,6 +55,41 @@ export const ComponentLoading = () => {
 	);
 };
 
+const priorityOrder = [
+	"card-swap",
+	"carousel-circle",
+	"animated-checkbox",
+	"circle-text",
+	"cursor-carousel",
+	"falling-text",
+	"gravity",
+	"following-eyes",
+	"cursor-follow",
+	"ghost-label",
+	"horizontal-scroll-gallery",
+	"horizontal-scroll",
+	"horizontal-scroll-2",
+	"gif-text",
+	"hover-gallery-",
+	"hover-squares",
+	"letter-hover",
+	"lens",
+	"media-between-text",
+	"mouse-image-trail",
+	"pixel-image",
+	"scroll-horizontal",
+	"text-along-path",
+	"opposite-scroll",
+	"parallax-floating",
+	"stacking-cards",
+	"target-cursor",
+	"text-curve",
+	"type-text",
+	"3d-card",
+];
+
+const priorityMap = new Map(priorityOrder.map((name, i) => [name, i]));
+
 export const ClientWrapper = ({
 	files,
 	params,
@@ -69,18 +104,41 @@ export const ClientWrapper = ({
 		[searchParams]
 	);
 
-	const matchingComponents = useMemo(() => {
-		return files.filter(({ name }) => {
-			return !!params?.slug
-				? name.includes(params.slug) ||
-						!!searchFilters
-							.map((filter) => name.includes(filter))
-							.filter((item) => !!item).length
-				: true;
-		});
+	const [filteredFiles, setFilteredFiles] = useState([]);
+
+	useEffect(() => {
+		setFilteredFiles(
+			files
+				.filter(({ name }) => {
+					return !!params?.slug
+						? name.includes(params.slug) ||
+								!!searchFilters
+									.map((filter) => name.includes(filter))
+									.filter((item) => !!item).length
+						: true;
+				})
+				.sort((a, b) => {
+					const aPriority = priorityMap.get(a.name.replace(".json", ""));
+					const bPriority = priorityMap.get(b.name.replace(".json", ""));
+
+					// Both in priority list → sort by order in array
+					if (aPriority !== undefined && bPriority !== undefined) {
+						return aPriority - bPriority;
+					}
+
+					// Only A is priority → A comes first
+					if (aPriority !== undefined) return -1;
+
+					// Only B is priority → B comes first
+					if (bPriority !== undefined) return 1;
+
+					// Neither is priority → alphabetical
+					return a.name.localeCompare(b.name);
+				})
+		);
 	}, [files, params?.slug, searchFilters]);
 
-	const componentImports = matchingComponents.map(({ name }) =>
+	const componentImports = filteredFiles.map(({ name }) =>
 		dynamic(
 			() =>
 				import(
@@ -111,18 +169,21 @@ export const ClientWrapper = ({
 	const [titleEls, setTitleEls] = useState<HTMLElement[] | null>([]);
 	const [percent, setPercent] = useState(0);
 	const [currentTitle, setCurrentTitle] = useState("stack");
-	const setupTitles = useCallback((node: HTMLDivElement) => {
-		if (node) {
-			const titleEls = Array.from(
-				node.querySelectorAll(".component-container")
-			) as HTMLElement[] | null;
-			setTitleEls(
-				!!titleEls
-					? titleEls?.map((el) => el.children[0].children[0])
-					: null
-			);
-		}
-	}, []);
+	const setupTitles = useCallback(
+		(node: HTMLDivElement) => {
+			if (node) {
+				const titleEls = Array.from(
+					node.querySelectorAll(".component-container")
+				) as HTMLElement[] | null;
+				setTitleEls(
+					!!titleEls
+						? titleEls?.map((el) => el.children[0].children[0])
+						: null
+				);
+			}
+		},
+		[filteredFiles]
+	);
 
 	useMotionValueEvent(scrollYProgress, "change", (latest) => {
 		setPercent(Math.floor(latest * 100));
@@ -144,7 +205,7 @@ export const ClientWrapper = ({
 		) as HTMLElement[] | null;
 
 		setAllElements(!!titleEls ? titleEls.map((el) => el.id) : null);
-	}, []);
+	}, [filteredFiles]);
 
 	useEffect(() => {
 		const el = document.getElementById("collapse-all") as HTMLInputElement;
@@ -163,7 +224,7 @@ export const ClientWrapper = ({
 		) {
 			el.indeterminate = false;
 		}
-	}, [allElements, collapsed]);
+	}, [allElements, collapsed, filteredFiles]);
 
 	// Main FAB state
 	const [hoveredButton, setHoveredButton] = useState<string | null>(null);
@@ -329,6 +390,7 @@ export const ClientWrapper = ({
 						ref={setupTitles}
 						containerRef={containerRef}
 					> */}
+					{!filteredFiles.length && <span>loading</span>}
 					<div
 						className={cn("relative w-full grid grid-cols-1 gap-8", {
 							"grid-cols-1": gridView === "1",
@@ -492,7 +554,14 @@ export const ClientWrapper = ({
 							<>
 								{componentImports.map((ComponentImported, i) => {
 									return (
-										<Suspense>
+										<Suspense
+											key={"dynamic" + i}
+											fallback={
+												<span className="text-black dark:text-white">
+													loading
+												</span>
+											}
+										>
 											<Component
 												key={"custom-oop-component" + i}
 												collapsed={collapsed}
@@ -500,18 +569,18 @@ export const ClientWrapper = ({
 												gridView={gridView}
 												setComponentCount={setComponentCount}
 												selectedFilters={selectedFilters}
-												title={matchingComponents[i].name.replace(
+												title={filteredFiles[i].name.replace(
 													".json",
 													""
 												)}
-												content={matchingComponents[i].content}
+												content={filteredFiles[i].content}
 											>
 												{!!ComponentImported ? (
 													<ComponentImported />
 												) : (
 													<div>
 														failed to load{" "}
-														{matchingComponents[i].name.replace(
+														{filteredFiles[i].name.replace(
 															".json",
 															""
 														)}

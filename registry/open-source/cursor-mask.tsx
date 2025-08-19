@@ -70,7 +70,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 				<motion.p
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
-					className="text-white-a12"
+					className="text-foreground-a12"
 				>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 					Maiores, minima! Officiis ratione quidem, odit voluptatum sit non

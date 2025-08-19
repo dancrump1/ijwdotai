@@ -21,9 +21,9 @@ function Clock() {
 	return (
 		<div className="flex items-center gap-0.5 font-mono">
 			<SlidingNumber value={hours} padStart={true} />
-			<span className="text-zinc-500">:</span>
+			<span className="text-secondary">:</span>
 			<SlidingNumber value={minutes} padStart={true} />
-			<span className="text-zinc-500">:</span>
+			<span className="text-secondary">:</span>
 			<SlidingNumber value={seconds} padStart={true} />
 		</div>
 	);

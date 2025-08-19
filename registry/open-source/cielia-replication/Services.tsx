@@ -64,7 +64,7 @@ const Services = () => {
 					return (
 						<div
 							key={index + "services-items"}
-							className="service relative h-screen w-full text-white will-change-[contain] contain-paint"
+							className="service relative h-screen w-full text-foreground will-change-[contain] contain-paint"
 						>
 							<div
 								className="absolute w-full"
@@ -98,7 +98,7 @@ const Services = () => {
 
 											<p className="text-2xl">{description}</p>
 										</div>
-										<div className="flex-[768] bg-black">
+										<div className="flex-[768] bg-background">
 											<img
 												src={img}
 												alt={title}

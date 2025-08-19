@@ -6,7 +6,7 @@ import { MaskContainer } from "@/registry/open-source/mask-effect";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<MaskContainer revealText="it just works">
 				<div>Some content</div>
 			</MaskContainer>

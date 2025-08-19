@@ -207,13 +207,13 @@ const ExploreCard = ({
 					/>
 				)}
 
-				<span className="group-hover:visible invisible absolute inset-0 bg-black/30 text-white text-center content-center">
+				<span className="group-hover:visible invisible absolute inset-0 bg-background/30 text-foreground text-center content-center">
 					Click to reveal more
 				</span>
 
 				<div
 					className={cn(
-						"bg-[#E8E7DD] w-full absolute bottom-0 transition-[height,_top] duration-500",
+						"bg-background w-full absolute bottom-0 transition-[height,_top] duration-500",
 						{
 							"!h-full !top-0 !-bottom-0": openCard,
 							"h-[110px] md:h-[170px] top-[calc(100%-110px)] md:top-[calc(100%-170px)]":
@@ -231,17 +231,17 @@ const ExploreCard = ({
 					</h3>
 					<span
 						className={cn(
-							"block opacity-0 text-black  px-5 mt-6 pb-11 text-xs",
+							"block opacity-0 text-foreground  px-5 mt-6 pb-11 text-xs",
 							openCard && "opacity-100 duration-500"
 						)}
 					>
 						{parse(cardData?.copy || "")}
 					</span>
 				</div>
-				<span className="absolute bottom-0 py-2 left-2 flex justify-between items-center w-[90%] bg-[#E8E7DD]">
+				<span className="absolute bottom-0 py-2 left-2 flex justify-between items-center w-[90%] bg-background">
 					<CardTags tags={cardFilters} setOpen={setOpen} open={open} />
 					<button
-						className="text-black shrink-0 h-8 w-8 overflow-hidden mt-auto"
+						className="text-foreground shrink-0 h-8 w-8 overflow-hidden mt-auto"
 						onClick={(e) => {
 							e.stopPropagation();
 							JSON.parse(componentStorageData).find(

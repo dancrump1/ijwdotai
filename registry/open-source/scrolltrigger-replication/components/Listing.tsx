@@ -95,13 +95,13 @@ const Listing = () => {
 								)}
 							></div>
 							<div className="container grid grid-cols-[1fr_4fr_6fr]">
-								<div className="heading-32-54 transition duration-300 ease-in-out group-hover:text-white">
+								<div className="heading-32-54 transition duration-300 ease-in-out group-hover:text-foreground">
 									0{index + 1}
 								</div>
-								<h3 className="heading-32-54 transition duration-300 ease-in-out group-hover:text-white">
+								<h3 className="heading-32-54 transition duration-300 ease-in-out group-hover:text-foreground">
 									{title}
 								</h3>
-								<p className="max-w-xl text-sm text-white">
+								<p className="max-w-xl text-sm text-foreground">
 									{description}
 								</p>
 							</div>

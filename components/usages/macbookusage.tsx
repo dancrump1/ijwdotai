@@ -4,7 +4,7 @@ import MacbookScroll from "@/registry/open-source/macbook";
 
 export default function MacbookScrollDemo() {
 	return (
-		<div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+		<div className="overflow-hidden dark:bg-background bg-background w-full">
 			<MacbookScroll
 				title={
 					<span>

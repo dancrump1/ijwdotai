@@ -233,7 +233,7 @@ export default function ImageRipple() {
 
 	return (
 		<div
-			className="h-screen w-full relative bg-gray-950 text-white"
+			className="h-screen w-full relative bg-background text-foreground"
 			ref={ref}
 		>
 			<Canvas>

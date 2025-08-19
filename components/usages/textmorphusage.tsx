@@ -10,7 +10,7 @@ export default function TextMorphButton() {
 	return (
 		<button
 			onClick={() => setText(text === "Continue" ? "Confirm" : "Continue")}
-			className="flex h-10 w-[120px] shrink-0 items-center justify-center rounded-full bg-black px-4 text-base font-medium text-zinc-50 shadow-xs transition-colors hover:bg-zinc-800 dark:bg-zinc-50 dark:text-black dark:hover:bg-zinc-200"
+			className="flex h-10 w-[120px] shrink-0 items-center justify-center rounded-full bg-background px-4 text-base font-medium text-secondary shadow-xs transition-colors hover:bg-background dark:bg-background dark:text-secondary dark:hover:bg-background"
 		>
 			<TextMorph>{text}</TextMorph>
 		</button>

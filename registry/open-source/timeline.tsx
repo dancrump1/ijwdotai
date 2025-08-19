@@ -140,7 +140,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 							<div className="pt-28 min-w-16 max-w-xs md:w-full bg-backgroundSecondary">
 								<div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start">
 									<div className="h-10 absolute left-3 md:left-6 w-10 rounded-full bg-background border-4 ring-2 ring-white flex items-center justify-center"></div>
-									<h2 className="hidden md:block text-xl md:pl-20 md:text-5xl font-swiss-black text-white lowercase">
+									<h2 className="hidden md:block text-xl md:pl-20 md:text-5xl font-swiss-black text-foreground lowercase">
 										{item}
 									</h2>
 								</div>
@@ -198,7 +198,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 					style={{
 						height: height + "px",
 					}}
-					className="absolute left-8 md:left-11 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+					className="absolute left-8 md:left-11 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-background dark:via-background to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
 				>
 					<motion.div
 						style={{

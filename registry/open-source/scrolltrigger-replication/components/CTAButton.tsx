@@ -44,7 +44,7 @@ const CTAButton = () => {
 							background: `linear-gradient(to bottom, #fff var(--cta-target), #000 var(--cta-target))`,
 						}}
 					>
-						<span className="heading-60-150 inline-block bg-[linear-gradient(to_bottom,#000_var(--cta-target),#fff_var(--cta-target))] pt-1 text-white [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] lg:pt-2 lg:text-[200px]">
+						<span className="heading-60-150 inline-block bg-[linear-gradient(to_bottom,#000_var(--cta-target),#fff_var(--cta-target))] pt-1 text-foreground [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] lg:pt-2 lg:text-[200px]">
 							Contact Us
 						</span>
 					</button>

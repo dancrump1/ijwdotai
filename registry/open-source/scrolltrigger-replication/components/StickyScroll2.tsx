@@ -68,9 +68,9 @@ const StickyScroll2 = ({ containerRef }) => {
 	return (
 		<section id="sticky-scroll-2">
 			<SectionHeading title="Sticky Scroll Variant 2" />
-			<div className="h-px bg-black"></div>
+			<div className="h-px bg-background"></div>
 			<div ref={containerRef}>
-				<div className="container sticky top-0 grid h-screen place-items-center bg-white">
+				<div className="container sticky top-0 grid h-screen place-items-center bg-background">
 					<div className="w-full space-y-5 lg:flex">
 						<h3 className="heading-70-170 flex flex-col lg:text-[200px]">
 							<span>Values</span>

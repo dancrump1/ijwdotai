@@ -70,7 +70,7 @@ const MacbookScroll = ({
 					translateY: textTransform,
 					opacity: textOpacity,
 				}}
-				className="dark:text-white -mt-[50vh] text-neutral-800 text-3xl font-bold mb-20 text-center"
+				className="dark:text-foreground -mt-[50vh] text-foreground text-3xl font-bold mb-20 text-center"
 			>
 				{title || (
 					<span>
@@ -90,10 +90,10 @@ const MacbookScroll = ({
 				{children}
 			</Lid>
 			{/* Base area */}
-			<div className="h-[22rem] w-[32rem] bg-gray-200 dark:bg-[#272729] rounded-2xl overflow-hidden relative -z-10">
+			<div className="h-[22rem] w-[32rem] bg-background dark:bg-background rounded-2xl overflow-hidden relative -z-10">
 				{/* above keyboard bar */}
 				<div className="h-10 w-full relative">
-					<div className="absolute inset-x-0 mx-auto w-[80%] h-4 bg-[#050505]" />
+					<div className="absolute inset-x-0 mx-auto w-[80%] h-4 bg-background" />
 				</div>
 				<div className="flex relative">
 					<div className="mx-auto w-[10%] overflow-hidden  h-full">
@@ -109,7 +109,7 @@ const MacbookScroll = ({
 				<Trackpad />
 				<div className="h-2 w-20 mx-auto inset-x-0 absolute bottom-0 bg-gradient-to-t from-[#272729] to-[#050505] rounded-tr-3xl rounded-tl-3xl" />
 				{showGradient && (
-					<div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t dark:from-black from-white via-white dark:via-black to-transparent z-40"></div>
+					<div className="h-40 w-full absolute bottom-0 inset-x-0 bg-gradient-to-t dark:from-background from-background via-background dark:via-background to-transparent z-40"></div>
 				)}
 				{badge && <div className="absolute bottom-4 left-4">{badge}</div>}
 			</div>
@@ -141,13 +141,13 @@ export const Lid = ({
 					transformOrigin: "bottom",
 					transformStyle: "preserve-3d",
 				}}
-				className="h-[12rem] w-[32rem] bg-[#010101] rounded-2xl p-2 relative"
+				className="h-[12rem] w-[32rem] bg-background rounded-2xl p-2 relative"
 			>
 				{/* <div
 					style={{
 						boxShadow: "0px 2px 0px 2px var(--neutral-900) inset",
 					}}
-					className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center z-20 flex-wrap gap-3"
+					className="absolute inset-0 bg-background rounded-lg flex items-center justify-center z-20 flex-wrap gap-3"
 				>
 					<AnimatedTooltip items={response.data.peopleEntries} />
 				</div> */}
@@ -161,9 +161,9 @@ export const Lid = ({
 					transformStyle: "preserve-3d",
 					transformOrigin: "top",
 				}}
-				className="w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
+				className="w-[32rem] absolute inset-0 bg-background rounded-2xl p-2"
 			>
-				<div className="inset-0 bg-[#272729] rounded-lg" />
+				<div className="inset-0 bg-background rounded-lg" />
 				{/* What moves on scroll */}
 				{/* <img
           src={src as string}
@@ -190,7 +190,7 @@ export const Trackpad = () => {
 
 export const Keypad = () => {
 	return (
-		<div className="h-full rounded-md bg-[#050505] mx-1 p-1">
+		<div className="h-full rounded-md bg-background mx-1 p-1">
 			{/* First Row */}
 			<Row>
 				<KBtn
@@ -237,8 +237,8 @@ export const Keypad = () => {
 					<span className="inline-block mt-1">F12</span>
 				</KBtn>
 				<KBtn>
-					<div className="h-4 w-4 rounded-full  bg-gradient-to-b from-20% from-neutral-900 via-black via-50% to-neutral-900 to-95% p-px">
-						<div className="bg-black h-full w-full rounded-full" />
+					<div className="h-4 w-4 rounded-full  bg-gradient-to-b from-20% from-background via-background via-50% to-background to-95% p-px">
+						<div className="bg-background h-full w-full rounded-full" />
 					</div>
 				</KBtn>
 			</Row>
@@ -536,12 +536,12 @@ export const KBtn = ({
 		<div
 			className={cn(
 				"p-[0.5px] rounded-[4px]",
-				backlit && "bg-white/[0.2] shadow-xl shadow-white"
+				backlit && "bg-background/[0.2] shadow-xl shadow-white"
 			)}
 		>
 			<div
 				className={cn(
-					"h-6 w-6 bg-[#0A090D] rounded-[3.5px] flex items-center justify-center",
+					"h-6 w-6 bg-background rounded-[3.5px] flex items-center justify-center",
 					className
 				)}
 				style={{
@@ -551,9 +551,9 @@ export const KBtn = ({
 			>
 				<div
 					className={cn(
-						"text-neutral-200 text-[5px] w-full flex justify-center items-center flex-col",
+						"text-foreground text-[5px] w-full flex justify-center items-center flex-col",
 						childrenClassName,
-						backlit && "text-white"
+						backlit && "text-foreground"
 					)}
 				>
 					{children}

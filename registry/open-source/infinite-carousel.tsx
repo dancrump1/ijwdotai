@@ -45,7 +45,7 @@ export default function InfiniteCarousel() {
 	}, [activeIndex]);
 
 	return (
-		<article className="relative grid min-h-80 place-items-center rounded-xl border border-white/10 bg-white/5 p-3 md:aspect-[2] md:min-h-0">
+		<article className="relative grid min-h-80 place-items-center rounded-xl border border-white/10 bg-background/5 p-3 md:aspect-[2] md:min-h-0">
 			<div className="relative h-40 w-full">
 				{items.map((logos, index) => (
 					<LogoRow

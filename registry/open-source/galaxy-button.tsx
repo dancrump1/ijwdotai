@@ -117,7 +117,7 @@ export default function GalaxyButton({
 		stars.map((star) => (
 			<motion.div
 				key={star.id}
-				className="absolute rounded-full bg-white"
+				className="absolute rounded-full bg-background"
 				style={{
 					left: star.x,
 					top: star.y,
@@ -169,7 +169,7 @@ export default function GalaxyButton({
 			onMouseLeave={handleMouseLeave}
 			onClick={onClick}
 		>
-			<div className="absolute inset-0.5 rounded-full bg-black" />
+			<div className="absolute inset-0.5 rounded-full bg-background" />
 
 			<div className="absolute inset-0 -z-30 overflow-visible blur-[0px] [container-type:size]">
 				<div className="absolute inset-0 h-[100cqh] animate-slide [aspect-ratio:1] [border-radius:0] [mask:none]">

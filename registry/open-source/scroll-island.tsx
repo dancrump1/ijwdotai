@@ -57,7 +57,7 @@ export function ScrollIsland({ children, containerRef, gridView }) {
 				</AnimatePresence>
 				{children}
 				<motion.div
-					className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-neutral-50 z-10 overflow-hidden"
+					className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-background text-foreground z-10 overflow-hidden"
 					initial={false}
 					style={{ borderRadius: 22 }}
 					animate={{ width: open ? 320 : 260, height: open ? "auto" : 44 }}
@@ -73,7 +73,7 @@ export function ScrollIsland({ children, containerRef, gridView }) {
 										?.replaceAll(" ", "")
 										?.toLowerCase()}
 									className={cn(
-										"list-inside list-decimal transition-[filter] text-neutral-300",
+										"list-inside list-decimal transition-[filter] text-foreground",
 										open ? "blur-none" : "blur-sm"
 									)}
 								>
@@ -147,7 +147,7 @@ function Overlay(props: HTMLMotionProps<"div">) {
 			exit={{
 				opacity: 0,
 			}}
-			className="fixed inset-0 z-10 bg-white/50 backdrop-blur"
+			className="fixed inset-0 z-10 bg-background/50 backdrop-blur"
 			{...props}
 		/>
 	);

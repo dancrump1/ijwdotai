@@ -46,7 +46,7 @@ export const MenuItem = ({
 		>
 			<motion.p
 				transition={{ duration: 0.3 }}
-				className="cursor-default text-black hover:opacity-[0.9] dark:text-white"
+				className="cursor-default text-foreground hover:opacity-[0.9] dark:text-foreground"
 			>
 				{item}
 			</motion.p>
@@ -62,7 +62,7 @@ export const MenuItem = ({
 							<motion.div
 								transition={transition}
 								layoutId="active" // layoutId ensures smooth animation
-								className="bg-white dark:bg-gray-800 backdrop-blur-sm rounded-md overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+								className="bg-background dark:bg-background backdrop-blur-sm rounded-md overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
 							>
 								<motion.div
 									layout // layout ensures smooth animation
@@ -87,7 +87,7 @@ export const Menu = ({
 	children: React.ReactNode;
 }) => {
 	return (
-		<div className="relative w-full border border-transparent dark:bg-gray-800 dark:border-white/[0.2] bg-white shadow-input flex justify-center">
+		<div className="relative w-full border border-transparent dark:bg-background dark:border-white/[0.2] bg-background shadow-input flex justify-center">
 			<div
 				onMouseLeave={() => setActive(null)} // resets the state
 				className="flex justify-center items-center px-1 lg:w-full my-4"
@@ -123,10 +123,10 @@ export const ThreeDProductItem = ({
 					/>
 				</CardItem>
 				<CardItem>
-					<h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+					<h4 className="text-xl font-bold mb-1 text-foreground dark:text-foreground">
 						{title}
 					</h4>
-					<p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+					<p className="text-foreground text-sm max-w-[10rem] dark:text-foreground">
 						{description}
 					</p>
 				</CardItem>
@@ -157,10 +157,10 @@ export const ProductItem = ({
 				className="flex-shrink-0 rounded-md shadow-2xl object-cover"
 			/>
 			<div>
-				<h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+				<h4 className="text-xl font-bold mb-1 text-foreground dark:text-foreground">
 					{title}
 				</h4>
-				<p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+				<p className="text-foreground text-sm max-w-[10rem] dark:text-foreground">
 					{description}
 				</p>
 			</div>
@@ -173,7 +173,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
 		<Link
 			{...rest}
 			prefetch={false}
-			className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+			className="text-foreground dark:text-foreground hover:text-foreground "
 		>
 			{children}
 		</Link>
@@ -215,7 +215,7 @@ const NavBar = ({ routes }: { routes: any[] }) => {
 	};
 
 	return (
-		<div className="dark:text-white relative z-50">
+		<div className="dark:text-foreground relative z-50">
 			<MobileNav />
 			<header className="hidden md:block">
 				<Menu setActive={setSelected}>
@@ -241,9 +241,9 @@ const NavBar = ({ routes }: { routes: any[] }) => {
 												role="status"
 												className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center"
 											>
-												<div className="flex items-center justify-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700">
+												<div className="flex items-center justify-center w-full h-48 bg-background rounded sm:w-96 dark:bg-background">
 													<svg
-														className="w-10 h-10 text-gray-200 dark:text-gray-600"
+														className="w-10 h-10 text-foreground dark:text-foreground"
 														aria-hidden="true"
 														xmlns="http://www.w3.org/2000/svg"
 														fill="currentColor"

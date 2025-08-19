@@ -17,7 +17,7 @@ export default function NavbarActionButton({ header }) {
 	const router = useRouter();
 
 	return (
-		<header className="fixed top-0 z-20 w-full border-b shadow-lg border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+		<header className="fixed top-0 z-20 w-full border-b shadow-lg border-slate-200 bg-background/90 shadow-slate-700/5 after:absolute after:left-0 after:top-full after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
 			<div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
 				<nav
 					aria-label="main navigation"
@@ -73,7 +73,7 @@ export default function NavbarActionButton({ header }) {
 					<ul
 						role="menubar"
 						aria-label="Select page"
-						className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+						className={`absolute left-0 top-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-background/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-background/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
 							isToggleOpen
 								? "visible opacity-100 backdrop-blur-sm"
 								: "invisible opacity-0"
@@ -84,9 +84,9 @@ export default function NavbarActionButton({ header }) {
 								role="menuitem"
 								aria-haspopup="false"
 								className={cn(
-									`flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#647991] focus:text-[#647991] focus:outline-none focus-visible:outline-none lg:px-8`,
+									`flex items-center gap-2 py-4 transition-colors duration-300 hover:text-foreground focus:text-foreground focus:outline-none focus-visible:outline-none lg:px-8`,
 									router.asPath.includes("services") &&
-										`text-[#859cb7]`
+										`text-foreground`
 								)}
 								href="/about"
 							>
@@ -97,7 +97,7 @@ export default function NavbarActionButton({ header }) {
 					{!!header.globalSet.button?.length && (
 						<div className="flex items-center px-6 ml-auto lg:ml-0 lg:p-0">
 							<Link
-								className={`inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-white transition duration-300 rounded shadow-md whitespace-nowrap bg-[#859cb7] shadow-[#b0cef0] hover:bg-[#647991] hover:shadow-sm hover:shadow-[#a3c2e7] focus:bg-[#647991] focus:shadow-sm focus:shadow-[#647991] focus-visible:outline-none`}
+								className={`inline-flex items-center justify-center h-10 gap-2 px-5 text-sm font-medium tracking-wide text-foreground transition duration-300 rounded shadow-md whitespace-nowrap bg-background shadow-[#b0cef0] hover:bg-background hover:shadow-sm hover:shadow-[#a3c2e7] focus:bg-background focus:shadow-sm focus:shadow-[#647991] focus-visible:outline-none`}
 								href={header.globalSet.button?.[0].linkUrl}
 							>
 								{header.globalSet.button?.[0].linkText}

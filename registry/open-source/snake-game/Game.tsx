@@ -122,7 +122,7 @@ const Game: React.FC = () => {
 	return (
 		<div
 			className={`flex flex-col items-center justify-center min-h-screen ${
-				isDarkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
+				isDarkMode ? "bg-background text-foreground" : "bg-background text-foreground"
 			}`}
 		>
 			<h1 className="text-4xl font-bold mb-4">Snake Game</h1>

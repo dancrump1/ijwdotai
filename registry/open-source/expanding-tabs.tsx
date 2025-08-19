@@ -47,7 +47,7 @@ export default function ExpandableTabs() {
 
 	const Separator = () => (
 		<div
-			className="mx-1 h-[24px] w-[1.2px] bg-[#555555]"
+			className="mx-1 h-[24px] w-[1.2px] bg-background"
 			aria-hidden="true"
 		/>
 	);
@@ -56,7 +56,7 @@ export default function ExpandableTabs() {
 		<div className="mx-auto flex items-center justify-center">
 			<div
 				ref={outsideClickRef}
-				className="mb-8 flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-800 bg-neutral-900 p-1 shadow-[0_6px_24px_rgba(34,42,53,0.12),0_0_0_1px_rgba(34,42,53,0.05),0_4px_8px_rgba(34,42,53,0.08),0_1px_1px_rgba(34,42,53,0.10)]"
+				className="mb-8 flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-800 bg-background p-1 shadow-[0_6px_24px_rgba(34,42,53,0.12),0_0_0_1px_rgba(34,42,53,0.05),0_4px_8px_rgba(34,42,53,0.08),0_1px_1px_rgba(34,42,53,0.10)]"
 			>
 				{tabs.map((tab, index) => {
 					if (tab.type === "separator") {
@@ -73,9 +73,9 @@ export default function ExpandableTabs() {
 							transition={transition}
 							className={`${
 								selected === index
-									? "bg-neutral-800 text-opacity-100 [&]:text-[#C4EB02]"
-									: "hover:bg-neutral-800"
-							} relative flex items-center rounded-xl px-4 py-2 text-sm font-medium text-white transition-colors duration-300`}
+									? "bg-background text-opacity-100 [&]:text-foreground"
+									: "hover:bg-background"
+							} relative flex items-center rounded-xl px-4 py-2 text-sm font-medium text-foreground transition-colors duration-300`}
 						>
 							{tab.icon}
 							<AnimatePresence initial={false}>

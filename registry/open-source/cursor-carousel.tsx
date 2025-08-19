@@ -76,7 +76,7 @@ const One = () => {
 			/>
 			<div
 				ref={containerRef}
-				className="w-[90%] h-[600px] border-4 rounded-3xl flex items-center text-white/90 justify-center borderwhie mx-auto mt-10 overflow-hidden relative"
+				className="w-[90%] h-[600px] border-4 rounded-3xl flex items-center text-foreground/90 justify-center borderwhie mx-auto mt-10 overflow-hidden relative"
 			>
 				<AnimatePresence initial={false} custom={direction}>
 					<motion.div
@@ -89,7 +89,7 @@ const One = () => {
 						transition={{
 							opacity: { duration: 0.2 },
 						}}
-						className={`w-full h-full flex items-center justify-center text-white text-4xl absolute`}
+						className={`w-full h-full flex items-center justify-center text-foreground text-4xl absolute`}
 					>
 						<Image
 							fill
@@ -106,7 +106,7 @@ const One = () => {
 								animate={{
 									width: index === currentIndex ? 40 : 2,
 								}}
-								className="w-2 h-2 min-w-2 bg-white rounded-full"
+								className="w-2 h-2 min-w-2 bg-background rounded-full"
 							/>
 						))}
 					</div>

@@ -32,31 +32,31 @@ const DEFAULT_ITEMS: CarouselItem[] = [
 		title: "Text Animations",
 		description: "Cool text animations for your projects.",
 		id: 1,
-		icon: <FiFileText className="h-[16px] w-[16px] text-white" />,
+		icon: <FiFileText className="h-[16px] w-[16px] text-foreground" />,
 	},
 	{
 		title: "Animations",
 		description: "Smooth animations for your projects.",
 		id: 2,
-		icon: <FiCircle className="h-[16px] w-[16px] text-white" />,
+		icon: <FiCircle className="h-[16px] w-[16px] text-foreground" />,
 	},
 	{
 		title: "Components",
 		description: "Reusable components for your projects.",
 		id: 3,
-		icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
+		icon: <FiLayers className="h-[16px] w-[16px] text-foreground" />,
 	},
 	{
 		title: "Backgrounds",
 		description: "Beautiful backgrounds and patterns for your projects.",
 		id: 4,
-		icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
+		icon: <FiLayout className="h-[16px] w-[16px] text-foreground" />,
 	},
 	{
 		title: "Common UI",
 		description: "Common UI components are coming soon!",
 		id: 5,
-		icon: <FiCode className="h-[16px] w-[16px] text-white" />,
+		icon: <FiCode className="h-[16px] w-[16px] text-foreground" />,
 	},
 ];
 
@@ -213,8 +213,8 @@ export default function ParallaxCarousel({
 							key={index + "parallax-carousel"}
 							className={`relative shrink-0 flex flex-col ${
 								round
-									? "items-center justify-center text-center bg-[#060606] border-0"
-									: "items-start justify-between bg-[#222] border border-[#222] rounded-[12px]"
+									? "items-center justify-center text-center bg-background border-0"
+									: "items-start justify-between bg-background border border-[#222] rounded-[12px]"
 							} overflow-hidden cursor-grab active:cursor-grabbing`}
 							style={{
 								width: itemWidth,
@@ -225,15 +225,15 @@ export default function ParallaxCarousel({
 							transition={effectiveTransition}
 						>
 							<div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
-								<span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060606]">
+								<span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-background">
 									{item.icon}
 								</span>
 							</div>
 							<div className="p-5">
-								<div className="mb-1 font-black text-lg text-white">
+								<div className="mb-1 font-black text-lg text-foreground">
 									{item.title}
 								</div>
-								<p className="text-sm text-white">{item.description}</p>
+								<p className="text-sm text-foreground">{item.description}</p>
 							</div>
 						</motion.div>
 					);
@@ -251,10 +251,10 @@ export default function ParallaxCarousel({
 							className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${
 								currentIndex % items.length === index
 									? round
-										? "bg-white"
-										: "bg-[#333333]"
+										? "bg-background"
+										: "bg-background"
 									: round
-										? "bg-[#555]"
+										? "bg-background"
 										: "bg-[rgba(51,51,51,0.4)]"
 							}`}
 							animate={{

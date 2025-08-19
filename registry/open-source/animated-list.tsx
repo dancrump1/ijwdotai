@@ -165,7 +165,7 @@ const AnimatedList: React.FC<AnimatedListProps> = ({
 				ref={listRef}
 				className={`max-h-[400px] overflow-y-auto p-4 ${
 					displayScrollbar
-						? "[&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-[#060606] [&::-webkit-scrollbar-thumb]:bg-[#222] [&::-webkit-scrollbar-thumb]:rounded-[4px]"
+						? "[&::-webkit-scrollbar]:w-[8px] [&::-webkit-scrollbar-track]:bg-background [&::-webkit-scrollbar-thumb]:bg-background [&::-webkit-scrollbar-thumb]:rounded-[4px]"
 						: "scrollbar-hide"
 				}`}
 				onScroll={handleScroll}
@@ -188,11 +188,11 @@ const AnimatedList: React.FC<AnimatedListProps> = ({
 						}}
 					>
 						<div
-							className={`p-4 bg-[#111] rounded-lg ${
-								selectedIndex === index ? "bg-[#222]" : ""
+							className={`p-4 bg-background rounded-lg ${
+								selectedIndex === index ? "bg-background" : ""
 							} ${itemClassName}`}
 						>
-							<p className="text-white m-0">{item}</p>
+							<p className="text-foreground m-0">{item}</p>
 						</div>
 					</AnimatedItem>
 				))}

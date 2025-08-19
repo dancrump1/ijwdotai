@@ -12,20 +12,20 @@ import { AnimatePresence, motion } from "motion/react";
 const data = [
 	{
 		id: "one",
-		icon: <Sparkles className="size-5 text-neutral-400" />,
+		icon: <Sparkles className="size-5 text-foreground" />,
 		title: "What is Star UI?",
 		content:
 			"Star UI is a powerful React animation component library that allows you to create smooth, interactive animations with minimal code. It provides a simple API for creating complex animations and transitions.",
 	},
 	{
 		id: "two",
-		icon: <Code className="size-5 text-neutral-500" />,
+		icon: <Code className="size-5 text-foreground" />,
 		title: "How do I get started?",
 		content: `Head to the “Quick start” guide in the docs. If you’ve used unstyled libraries before, you’ll feel at home.`,
 	},
 	{
 		id: "three",
-		icon: <Heart className="size-5 text-neutral-500" />,
+		icon: <Heart className="size-5 text-foreground" />,
 		title: "Can I use it for my project?",
 		content: "Of course! Star UI is free and open source.",
 	},
@@ -83,7 +83,7 @@ function FAQSpring() {
 					initial={false}
 					key={item.id}
 					className={cn(
-						"bg-white border-x border-neutral-200 overflow-hidden transition",
+						"bg-background border-x border-neutral-200 overflow-hidden transition",
 						{
 							"border-t":
 								index === 0 ||

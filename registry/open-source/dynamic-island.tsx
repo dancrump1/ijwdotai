@@ -58,7 +58,7 @@ const Idle = () => {
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}
 					exit={{ opacity: 0, scale: 0.8 }}
-					className="text-white"
+					className="text-foreground"
 				>
 					<CloudLightning className="h-5 w-5" />
 				</motion.div>
@@ -70,7 +70,7 @@ const Idle = () => {
 						initial={{ opacity: 0, width: 0 }}
 						animate={{ opacity: 1, width: "auto" }}
 						exit={{ opacity: 0, width: 0 }}
-						className="flex items-center gap-1 overflow-hidden text-white"
+						className="flex items-center gap-1 overflow-hidden text-foreground"
 					>
 						<Thermometer className="h-3 w-3" />
 						<span className="pointer-events-none text-xs whitespace-nowrap">
@@ -86,7 +86,7 @@ const Idle = () => {
 // Ring Component
 const Ring = () => {
 	return (
-		<div className="flex w-64 items-center gap-3 overflow-hidden px-4 py-2 text-white">
+		<div className="flex w-64 items-center gap-3 overflow-hidden px-4 py-2 text-foreground">
 			<Phone className="h-5 w-5" />
 			<div className="flex-1">
 				<p className="pointer-events-none text-sm font-medium">
@@ -113,16 +113,16 @@ const Timer = () => {
 	}, []);
 
 	return (
-		<div className="flex w-64 items-center gap-3 overflow-hidden px-4 py-2 text-white">
+		<div className="flex w-64 items-center gap-3 overflow-hidden px-4 py-2 text-foreground">
 			<TimerIcon className="h-5 w-5" />
 			<div className="flex-1">
 				<p className="pointer-events-none text-sm font-medium">
 					{time}s remaining
 				</p>
 			</div>
-			<div className="h-1 w-24 overflow-hidden rounded-full bg-white/20">
+			<div className="h-1 w-24 overflow-hidden rounded-full bg-background/20">
 				<motion.div
-					className="h-full bg-white"
+					className="h-full bg-background"
 					initial={{ width: "100%" }}
 					animate={{ width: "0%" }}
 					transition={{ duration: time, ease: "linear" }}
@@ -166,7 +166,7 @@ export default function DynamicIsland() {
 						bounce: BOUNCE_VARIANTS[variantKey],
 					}}
 					style={{ borderRadius: 32 }}
-					className="mx-auto w-fit min-w-[100px] overflow-hidden rounded-full bg-black"
+					className="mx-auto w-fit min-w-[100px] overflow-hidden rounded-full bg-background"
 				>
 					<motion.div
 						transition={{
@@ -220,7 +220,7 @@ export default function DynamicIsland() {
 							type="button"
 							key={v}
 							onClick={() => handleViewChange(v as View)}
-							className={`h-10 w-fit cursor-pointer rounded-full bg-white px-10 py-1.5 text-sm font-medium text-gray-900 capitalize ring-1 shadow-xs ring-gray-300/50 ring-inset hover:bg-gray-50 md:w-32 md:px-2.5 ${
+							className={`h-10 w-fit cursor-pointer rounded-full bg-background px-10 py-1.5 text-sm font-medium text-foreground capitalize ring-1 shadow-xs ring-gray-300/50 ring-inset hover:bg-background md:w-32 md:px-2.5 ${
 								view === v ? "ring-2 ring-blue-500" : ""
 							} `}
 							whileHover={{ scale: 1.05 }}

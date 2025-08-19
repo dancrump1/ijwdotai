@@ -7,8 +7,8 @@ import { ASCII } from "@/registry/utilities/example_data";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<div className="relative h-full w-full cursor-pointer overflow-hidden  justify-start items-start shadow-lg flex bg-[#0015ff] text-white">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<div className="relative h-full w-full cursor-pointer overflow-hidden  justify-start items-start shadow-lg flex bg-background text-secondary">
 				<div className="flex flex-col justify-center uppercase leading-none pt-4 pl-6">
 					<TextCursorProximity
 						label="DIGITAL"

@@ -6,7 +6,7 @@ import VideoButton from "@/registry/open-source/video-button";
 
 export default function VideoButtonUsage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<VideoButton videoSrc="/placeholder.mp4">
 				<span className="text-xl font-semibold">Join the club!</span>
 			</VideoButton>

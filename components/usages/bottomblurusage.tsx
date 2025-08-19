@@ -6,8 +6,8 @@ import { BottomBlurOut } from "@/registry/open-source/bottom-blur";
 
 export default function BottomBlurOutUsage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<div className="relative w-52 dark:text-white">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<div className="relative w-52 dark:text-secondary">
 				{Array.from({ length: 20 }).map((_, index) => (
 					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 					<div key={index + "bottom-blur"}>

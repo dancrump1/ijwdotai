@@ -71,7 +71,7 @@ export default function Skeleton({
 		<motion.div
 			className={cn(
 				"bg-gradient-to-r from-muted via-muted/70 to-muted",
-				"dark:from-gray-700 dark:via-gray-600 dark:to-gray-700",
+				"dark:from-background dark:via-background dark:to-background",
 				radiusClasses[radius],
 				animation === "pulse" && "animate-pulse",
 				animation === "wave" && "animate-shimmer",

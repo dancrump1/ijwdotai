@@ -16,22 +16,22 @@ const defaultSocialLinks = [
 	{
 		href: "https://facebook.com",
 		icon: <Facebook size={24} />,
-		hoverColor: "text-gray-600",
+		hoverColor: "text-foreground",
 	},
 	{
 		href: "https://x.com/ayushmxxn",
 		icon: <Twitter size={24} />,
-		hoverColor: "text-gray-600",
+		hoverColor: "text-foreground",
 	},
 	{
 		href: "https://linkedin.com",
 		icon: <Linkedin size={24} />,
-		hoverColor: "text-gray-600",
+		hoverColor: "text-foreground",
 	},
 	{
 		href: "https://github.com/ayushmxxn",
 		icon: <Github size={24} />,
-		hoverColor: "text-gray-600",
+		hoverColor: "text-foreground",
 	},
 ];
 
@@ -41,12 +41,12 @@ const FooterThird = ({
 	socialLinks = defaultSocialLinks,
 }) => {
 	return (
-		<footer className="bg-white text-gray-800">
+		<footer className="bg-background text-foreground">
 			<div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
 				<div className="flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
 					{/* Logo */}
 					<div className="text-xl font-bold">
-						<Link href="/" className="text-gray-900 hover:text-gray-600">
+						<Link href="/" className="text-foreground hover:text-foreground">
 							{brandName}
 						</Link>
 					</div>
@@ -56,14 +56,14 @@ const FooterThird = ({
 							<Link
 								key={link.href}
 								href={link.href}
-								className="hover:text-gray-600"
+								className="hover:text-foreground"
 							>
 								{link.label}
 							</Link>
 						))}
 					</div>
 					{/* Social Icons */}
-					<div className="flex flex-wrap justify-center space-x-4 text-gray-700">
+					<div className="flex flex-wrap justify-center space-x-4 text-foreground">
 						{socialLinks.map((social) => (
 							<a
 								key={social.href}
@@ -71,7 +71,7 @@ const FooterThird = ({
 								target="_blank"
 								rel="noopener noreferrer"
 								className={`hover:${
-									social.hoverColor || "text-gray-600"
+									social.hoverColor || "text-foreground"
 								}`}
 							>
 								{social.icon}
@@ -80,7 +80,7 @@ const FooterThird = ({
 					</div>
 				</div>
 				<div className="border-t border-gray-200 mt-5">
-					<div className="mt-5 text-center text-sm text-gray-600">
+					<div className="mt-5 text-center text-sm text-foreground">
 						<p>
 							&copy; {new Date().getFullYear()} {brandName}. All rights
 							reserved.

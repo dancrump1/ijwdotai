@@ -22,7 +22,7 @@ export default function NineDotGridRandom() {
 			<div className="grid grid-cols-3 gap-3">
 				{[...new Array(9)].map((_, index) => (
 					<div
-						className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
+						className="size-5 origin-center rounded-xl bg-background dark:invert"
 						key={index.toString() + "nine-dot"}
 						style={{
 							animationName: "three-dot-loader-growing",

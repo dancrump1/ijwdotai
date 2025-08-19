@@ -11,7 +11,7 @@ const HoverCards = () => {
 			<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 				<a
 					href="#"
-					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
+					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-background"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300"></div>
 
@@ -49,7 +49,7 @@ const HoverCards = () => {
 						<path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
 					</svg>
 
-					<h3 className="font-medium text-lg text-slate-950 group-hover:text-white relative z-10 duration-300">
+					<h3 className="font-medium text-lg text-slate-950 group-hover:text-foreground relative z-10 duration-300">
 						Account
 					</h3>
 					<p className="text-slate-400 group-hover:text-violet-200 relative z-10 duration-300">
@@ -58,7 +58,7 @@ const HoverCards = () => {
 				</a>
 				<a
 					href="#"
-					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
+					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-background"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300"></div>
 
@@ -92,7 +92,7 @@ const HoverCards = () => {
 						<path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
 					</svg>
 
-					<h3 className="font-medium text-lg text-slate-950 group-hover:text-white relative z-10 duration-300">
+					<h3 className="font-medium text-lg text-slate-950 group-hover:text-foreground relative z-10 duration-300">
 						Public Relations
 					</h3>
 					<p className="text-slate-400 group-hover:text-violet-200 relative z-10 duration-300">
@@ -101,7 +101,7 @@ const HoverCards = () => {
 				</a>
 				<a
 					href="#"
-					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
+					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-background"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300"></div>
 
@@ -138,7 +138,7 @@ const HoverCards = () => {
 						<path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
 					</svg>
 
-					<h3 className="font-medium text-lg text-slate-950 group-hover:text-white relative z-10 duration-300">
+					<h3 className="font-medium text-lg text-slate-950 group-hover:text-foreground relative z-10 duration-300">
 						Design
 					</h3>
 					<p className="text-slate-400 group-hover:text-violet-200 relative z-10 duration-300">
@@ -147,7 +147,7 @@ const HoverCards = () => {
 				</a>
 				<a
 					href="#"
-					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
+					className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-background"
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300"></div>
 
@@ -179,7 +179,7 @@ const HoverCards = () => {
 						<path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" />
 					</svg>
 
-					<h3 className="font-medium text-lg text-slate-950 group-hover:text-white relative z-10 duration-300">
+					<h3 className="font-medium text-lg text-slate-950 group-hover:text-foreground relative z-10 duration-300">
 						Website Design & Development
 					</h3>
 					<p className="text-slate-400 group-hover:text-violet-200 relative z-10 duration-300">

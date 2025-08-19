@@ -19,7 +19,7 @@ function Terminal() {
 	}, []);
 
 	return (
-		<div className="dark:text-white dark:bg-zinc-800">
+		<div className="dark:text-foreground dark:bg-background">
 			<section className="mx-40">
 				<div
 					id="myTextFieldContainer"

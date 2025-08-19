@@ -20,9 +20,9 @@ export default function UnderlineToBackgroundDemo() {
 	const words = "Weekly goodies delivered straight to your inbox —".split(" ");
 
 	return (
-		<div className="w-dvw h-dvh flex flex-col items-center justify-center bg-[#f5f5f5]">
+		<div className="w-dvw h-dvh flex flex-col items-center justify-center bg-background">
 			<motion.h2
-				className="text-[#0015ff] text-xl p-12 md:p-24"
+				className="text-secondary text-xl p-12 md:p-24"
 				initial="hidden"
 				animate="visible"
 				variants={fadeInVariants}

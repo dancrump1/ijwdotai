@@ -75,7 +75,7 @@ export const FlipCard = ({
 			>
 				<div
 					className={cn(
-						"absolute w-full h-full top-0 left-0 rounded-xl overflow-hidden shadow-md bg-white backface-hidden",
+						"absolute w-full h-full top-0 left-0 rounded-xl overflow-hidden shadow-md bg-background backface-hidden",
 						panelClassName
 					)}
 				>
@@ -85,7 +85,7 @@ export const FlipCard = ({
 				<div
 					style={{ transform: backfaceTransform }}
 					className={cn(
-						"absolute w-full h-full top-0 left-0  rounded-xl overflow-hidden shadow-md bg-white backface-hidden",
+						"absolute w-full h-full top-0 left-0  rounded-xl overflow-hidden shadow-md bg-background backface-hidden",
 						panelClassName
 					)}
 				>

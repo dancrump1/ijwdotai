@@ -24,7 +24,7 @@ const GameControls: React.FC<GameControlsProps> = ({
 				onClick={onStartGame}
 				variant="default"
 				className={
-					isDarkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : ""
+					isDarkMode ? "bg-background hover:bg-background text-foreground" : ""
 				}
 			>
 				Start Game
@@ -34,7 +34,7 @@ const GameControls: React.FC<GameControlsProps> = ({
 				variant="outline"
 				className={
 					isDarkMode
-						? "bg-gray-700 hover:bg-gray-600 text-white border-gray-600"
+						? "bg-background hover:bg-background text-foreground border-gray-600"
 						: ""
 				}
 			>
@@ -50,7 +50,7 @@ const GameControls: React.FC<GameControlsProps> = ({
 				className={`
           ${
 					isDarkMode && !isRainbowMode
-						? "bg-gray-700 hover:bg-gray-600 text-white border-gray-600"
+						? "bg-background hover:bg-background text-foreground border-gray-600"
 						: ""
 				}
           ${

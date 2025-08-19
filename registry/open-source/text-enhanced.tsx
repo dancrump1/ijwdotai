@@ -47,7 +47,7 @@ export default function TextEnhanced({
 				className={cn(
 					"w-full text-center cursor-pointer text-3xl font-bold",
 					"transition-all duration-200 ease-in-out tracking-widest",
-					"text-black dark:text-white italic",
+					"text-foreground dark:text-foreground italic",
 					"stroke-[#d6f4f4]",
 					className
 				)}

@@ -18,47 +18,112 @@ async function getData() {
 
 	const data = await client.request(
 		gql`
-			query ($uid: [String]) {
-				entry(uid: $uid) {
-					... on home_Entry {
-						displayEvents(orderBy: "startDate") {
-							... on events_Event {
-								eventCategory
-								startDate
-								endDate
-								startDateLocalized
-								endDateLocalized
-								allDay
-								multiDay
-								freq
-								interval
+			{
+				assets(folderId: 24) {
+					url
+					uid
+					alt
+					height
+					width
+					title
+					focalPoint
+					mimeType
+				}
+				homeEntries {
+					... on home_home_Entry {
+						id
+						callToAction {
+							customText
+							title
+						}
+						image {
+							url
+							uid
+							alt
+							height
+							width
+							title
+							focalPoint
+							mimeType
+							embeddedAsset {
+								height
+								html
+								iframeCode
+								iframeSrc(params: "")
+								image
+								images
 								title
-								subhead
-								copy
-								venue
-								url
 							}
 						}
-
 						headline
-						salesCards {
-							... on priceCard_Entry {
+						workSpotlight {
+							title
+							image {
+								url
+								uid
+								alt
+								height
+								width
 								title
-								enabled
-
-								price
-								comment
-								copy
-								disclaimer
-
-								priceTable {
+								focalPoint
+								mimeType
+								embeddedAsset {
+									height
+									html
+									iframeCode
+									iframeSrc(params: "")
+									image
+									images
 									title
-									online
-									window
 								}
 							}
 						}
+						contentBlocks {
+							... on contentBlock_cta_BlockType {
+								images {
+									url
+									uid
+									alt
+									height
+									width
+									title
+									focalPoint
+									mimeType
+									embeddedAsset {
+										height
+										html
+										iframeCode
+										iframeSrc(params: "")
+										image
+										images
+										title
+									}
+								}
+								headline
+								copy
+							}
+						}
 					}
+				}
+				asset(id: 729) {
+					url
+					uid
+					alt
+					height
+					width
+					title
+					focalPoint
+					mimeType
+				}
+				cta: asset(id: 221) {
+					url
+					uid
+					alt
+					height
+					width
+					title
+					focalPoint
+					mimeType
 				}
 			}
 		`,

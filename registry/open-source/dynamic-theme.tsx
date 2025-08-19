@@ -79,8 +79,8 @@ const DynamicTheme = ({ containerRef }) => {
 	//   useLenis()
 
 	return (
-		<section className="w-full relative bg-white" ref={mainRef}>
-			<span className="absolute top-0 left-0 text-black w-full h-12 flex items-center mx-auto text-center z-[10100]">
+		<section className="w-full relative bg-background" ref={mainRef}>
+			<span className="absolute top-0 left-0 text-foreground w-full h-12 flex items-center mx-auto text-center z-[10100]">
 				<p className="w-[70%] mx-auto text-balance text-sm font-medium tracking-wide opacity-60">
 					This is demo area , please remove the additional styles from NAV
 					element.
@@ -90,7 +90,7 @@ const DynamicTheme = ({ containerRef }) => {
 				ref={navRef}
 				className="flex h-16  items-center text-sm lg:text-lg top-0 w-full z-[1000] shadow-sm sticky"
 			>
-				<ul className="flex flex-1 justify-end items-center h-full text-black space-x-4 px-6">
+				<ul className="flex flex-1 justify-end items-center h-full text-foreground space-x-4 px-6">
 					{NAV_LINKS.map(({ id }) => (
 						<li
 							className="nav_link capitalize cursor-pointer transition inline-block"
@@ -108,7 +108,7 @@ const DynamicTheme = ({ containerRef }) => {
 
 			<section
 				id="homelink-for-changing-theme"
-				className="w-full h-[480px] flex flex-col items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-black"
+				className="w-full h-[480px] flex flex-col items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-foreground"
 			>
 				home section <br />
 				<span className="text-xs font-bold tracking-wider opacity-40 mt-2 lowercase">
@@ -125,7 +125,7 @@ const DynamicTheme = ({ containerRef }) => {
 
 			<section
 				id="workslink-for-changing-theme"
-				className="w-full h-[480px] flex items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-black"
+				className="w-full h-[480px] flex items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-foreground"
 			>
 				works section
 			</section>
@@ -139,7 +139,7 @@ const DynamicTheme = ({ containerRef }) => {
 
 			<section
 				id="contactlink-for-changing-theme"
-				className="w-full h-[480px] flex items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-black"
+				className="w-full h-[480px] flex items-center justify-center text-4xl uppercase text-opacity-80 bg-slate-100 text-foreground"
 			>
 				contact section
 			</section>

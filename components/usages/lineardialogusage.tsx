@@ -16,7 +16,7 @@ import { Plus } from "lucide-react";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="flex gap-4">
 				{[
 					{
@@ -68,7 +68,7 @@ export default function Usage() {
 									style={{
 										borderRadius: "12px",
 									}}
-									className="flex w-full flex-col overflow-hidden  border    dark:bg-black bg-gray-300 hover:bg-gray-200 dark:hover:bg-gray-950"
+									className="flex w-full flex-col overflow-hidden  border    dark:bg-background bg-background hover:bg-background dark:hover:bg-background"
 								>
 									<DialogImage
 										src={"/itjustworks.jpg"}
@@ -77,11 +77,11 @@ export default function Usage() {
 									/>
 									<div className="flex flex-grow flex-row items-end justify-between p-3">
 										<div>
-											<DialogTitle className="text-zinc-950 text-xl dark:text-zinc-50">
+											<DialogTitle className="text-secondary text-xl dark:text-secondary">
 												{item.title}
 											</DialogTitle>
 										</div>
-										<button className="absolute bottom-2 right-2 p-2 dark:bg-gray-900 bg-gray-400 hover:bg-gray-500 rounded-full dark:hover:bg-gray-800">
+										<button className="absolute bottom-2 right-2 p-2 dark:bg-background bg-background hover:bg-background rounded-full dark:hover:bg-background">
 											<Plus className="w-6 h-6" />
 										</button>
 									</div>
@@ -91,7 +91,7 @@ export default function Usage() {
 										style={{
 											borderRadius: "24px",
 										}}
-										className=" relative flex h-full mx-auto flex-col overflow-y-auto border dark:bg-black bg-gray-300 hover:bg-gray-200 dark:hover:bg-gray-950 lg:w-[900px] w-[80%] "
+										className=" relative flex h-full mx-auto flex-col overflow-y-auto border dark:bg-background bg-background hover:bg-background dark:hover:bg-background lg:w-[900px] w-[80%] "
 									>
 										<DialogImage
 											src={"/itjustworks.jpg"}
@@ -99,7 +99,7 @@ export default function Usage() {
 											className="h-full  object-contain w-[60%] mx-auto"
 										/>
 										<div className="p-6">
-											<DialogTitle className="text-5xl text-zinc-950 dark:text-zinc-50">
+											<DialogTitle className="text-5xl text-secondary dark:text-secondary">
 												{item.title}
 											</DialogTitle>
 
@@ -123,12 +123,12 @@ export default function Usage() {
 													},
 												}}
 											>
-												<p className="mt-2 text-zinc-500 dark:text-zinc-500">
+												<p className="mt-2 text-secondary dark:text-secondary">
 													{item.description}
 												</p>
 											</DialogDescription>
 										</div>
-										<DialogClose className="text-zinc-50  dark:bg-gray-900 bg-gray-400 p-4 hover:bg-gray-500 rounded-full dark:hover:bg-gray-800" />
+										<DialogClose className="text-secondary  dark:bg-background bg-background p-4 hover:bg-background rounded-full dark:hover:bg-background" />
 									</DialogContent>
 								</DialogContainer>
 							</Dialog>

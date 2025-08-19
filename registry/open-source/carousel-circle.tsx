@@ -40,7 +40,7 @@ const CarouselCircle: React.FC<CarouselCircleProps> = ({ images }) => {
 	};
 
 	return (
-		<div className="relative h-screen w-full bg-black text-white overflow-hidden">
+		<div className="relative h-screen w-full bg-background text-foreground overflow-hidden">
 			{/* Carousel Container */}
 			<div className="absolute inset-0 flex items-center justify-center">
 				<motion.div
@@ -107,20 +107,20 @@ const CarouselCircle: React.FC<CarouselCircleProps> = ({ images }) => {
 			{/* Buttons */}
 			<div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-4">
 				<button
-					className="bg-white/20 text-white px-8 py-3 rounded-full shadow-lg backdrop-blur-md border border-white/30 hover:bg-white/30 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none"
+					className="bg-background/20 text-foreground px-8 py-3 rounded-full shadow-lg backdrop-blur-md border border-white/30 hover:bg-background/30 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none"
 					onClick={() => rotateCarousel("left")}
 				>
-					<FaArrowLeft className="text-white" />
+					<FaArrowLeft className="text-foreground" />
 				</button>
 				<button
-					className="bg-white/20 text-white px-8 py-3 rounded-full shadow-lg backdrop-blur-md border border-white/30 hover:bg-white/30 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none"
+					className="bg-background/20 text-foreground px-8 py-3 rounded-full shadow-lg backdrop-blur-md border border-white/30 hover:bg-background/30 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none"
 					onClick={() => rotateCarousel("right")}
 				>
-					<FaArrowRight className="text-white " />
+					<FaArrowRight className="text-foreground " />
 				</button>
 			</div>
 			{/* Overlay */}
-			<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black pointer-events-none" />
+			<div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background pointer-events-none" />
 		</div>
 	);
 };

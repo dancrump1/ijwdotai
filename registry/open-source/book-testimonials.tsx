@@ -33,7 +33,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 	};
 
 	return (
-		<div className="w-full text-black h-500px flex justify-center items-center py-10">
+		<div className="w-full text-foreground h-500px flex justify-center items-center py-10">
 			<HTMLFlipBook
 				ref={book}
 				width={300}
@@ -69,7 +69,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 				disableFlipByClick={false}
 			>
 				{/* Cover Page */}
-				<div className="relative bg-black border rounded-lg p-8 text-white flex flex-col items-center justify-center shadow-lg shadow-gray-600 cursor-grab">
+				<div className="relative bg-background border rounded-lg p-8 text-foreground flex flex-col items-center justify-center shadow-lg shadow-gray-600 cursor-grab">
 					{/* Company Logo */}
 					<div className="flex justify-center items-center ">
 						<Image
@@ -83,17 +83,17 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 					<h1 className="text-4xl mb-36 text-center relative z-10">
 						Serenity UI
 					</h1>
-					<div className="w-full h-1 bg-white mb-6 relative z-10"></div>
+					<div className="w-full h-1 bg-background mb-6 relative z-10"></div>
 					<div className="text-center">
-						<span className="text-lg text-white text-center hover:text-gray-300 transition-colors duration-300 relative z-10">
+						<span className="text-lg text-foreground text-center hover:text-foreground transition-colors duration-300 relative z-10">
 							Read what virtual people are saying about us
 						</span>
 					</div>
 				</div>
 
 				{/* Index Page */}
-				<div className="w-full h-full flex justify-center items-center bg-zinc-200 border border-gray-300 box-border">
-					<div className="page-front text-start text-white p-3 bg-gray-400">
+				<div className="w-full h-full flex justify-center items-center bg-background border border-gray-300 box-border">
+					<div className="page-front text-start text-foreground p-3 bg-background">
 						Index
 					</div>
 					<div className="flex flex-col justify-start items-start p-8 space-y-3">
@@ -128,9 +128,9 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 				{testimonials.map((testimonial, index) => (
 					<div
 						key={index + "testimonial-page"}
-						className="w-full h-full flex justify-center items-center bg-gray-200 border border-gray-300 box-border cursor-grab"
+						className="w-full h-full flex justify-center items-center bg-background border border-gray-300 box-border cursor-grab"
 					>
-						<div className="page-front text-end text-white p-3 bg-gray-400">
+						<div className="page-front text-end text-foreground p-3 bg-background">
 							{index + 2}
 						</div>
 						<div className="flex justify-center items-center mt-7 ">
@@ -144,7 +144,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 						</div>
 						<div className="flex flex-col justify-center items-center mt-3">
 							<span>{testimonial.name}</span>
-							<span className="text-gray-500 text-sm">
+							<span className="text-foreground text-sm">
 								{testimonial.jobtitle}
 							</span>
 						</div>
@@ -187,7 +187,7 @@ function BookTestimonial3D({ testimonials }: BookTestimonial3DProps) {
 				))}
 
 				{/* Back Cover */}
-				<div className="bg-black border p-8  text-white flex flex-col items-center justify-center">
+				<div className="bg-background border p-8  text-foreground flex flex-col items-center justify-center">
 					<h1 className="text-4xl font-bold mb-4 text-center font-serif">
 						Thank You!
 					</h1>

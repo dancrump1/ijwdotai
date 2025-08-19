@@ -151,21 +151,21 @@ const MobileNavbar = ({ navItems }: any) => {
 			className={cn(
 				"flex justify-between bg-transparent items-center w-full rounded-md px-2.5 py-1.5 transition duration-200",
 				showBackground &&
-					" bg-neutral-900  shadow-[0px_-2px_0px_0px_var(--neutral-800),0px_2px_0px_0px_var(--neutral-800)]"
+					" bg-background  shadow-[0px_-2px_0px_0px_var(--neutral-800),0px_2px_0px_0px_var(--neutral-800)]"
 			)}
 		>
 			{/* <Logo /> */}
 			<IoIosMenu
-				className="text-white h-6 w-6"
+				className="text-foreground h-6 w-6"
 				onClick={() => setOpen(!open)}
 			/>
 			{open && (
-				<div className="fixed inset-0 bg-black z-50 flex flex-col items-start justify-start space-y-10  pt-5  text-xl text-zinc-600  transition duration-200 hover:text-zinc-800">
+				<div className="fixed inset-0 bg-background z-50 flex flex-col items-start justify-start space-y-10  pt-5  text-xl text-foreground  transition duration-200 hover:text-foreground">
 					<div className="flex items-center justify-between w-full px-5">
 						{/* <Logo /> */}
 						<div className="flex items-center space-x-2">
 							<IoIosClose
-								className="h-8 w-8 text-white"
+								className="h-8 w-8 text-foreground"
 								onClick={() => setOpen(!open)}
 							/>
 						</div>
@@ -183,7 +183,7 @@ const MobileNavbar = ({ navItems }: any) => {
 													onClick={() => setOpen(false)}
 													className="relative max-w-[15rem] text-left text-2xl"
 												>
-													<span className="block text-white">
+													<span className="block text-foreground">
 														{childNavItem.title}
 													</span>
 												</Link>
@@ -197,7 +197,7 @@ const MobileNavbar = ({ navItems }: any) => {
 										onClick={() => setOpen(false)}
 										className="relative"
 									>
-										<span className="block text-[26px] text-white">
+										<span className="block text-[26px] text-foreground">
 											{navItem.title}
 										</span>
 									</Link>
@@ -247,9 +247,9 @@ export function NavBarItem({
 			href={href}
 			className={cn(
 				"border-y-2 border-y-red-500 w-fit",
-				"flex items-center pointer-events-auto h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 text-white  hover:bg-neutral-800 hover:text-white/80 dark:text-white hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
+				"flex items-center pointer-events-auto h-fit w-fit justify-center  text-sm leading-[110%] px-4 py-2 text-foreground  hover:bg-background hover:text-foreground/80 dark:text-foreground hover:shadow-[0px_1px_0px_0px_#FFFFFF20_inset] transition duration-200",
 				(active || pathname?.includes(href)) &&
-					"bg-transparent dark:text-white",
+					"bg-transparent dark:text-foreground",
 				className
 			)}
 			target={target}

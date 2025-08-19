@@ -93,7 +93,7 @@ export const DesktopSidebar = ({
 		<>
 			<motion.div
 				className={cn(
-					"h-full fixed top-0 left-0 px-4 z-50 cursor-pointer py-4 hidden  md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[300px] flex-shrink-0",
+					"h-full fixed top-0 left-0 px-4 z-50 cursor-pointer py-4 hidden  md:flex md:flex-col bg-background dark:bg-background w-[300px] flex-shrink-0",
 					className
 				)}
 				animate={{
@@ -120,14 +120,14 @@ export const MobileSidebar = ({
 		<>
 			<div
 				className={cn(
-					"h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800",
+					"h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-background dark:bg-background",
 					!open && "absolute top-0"
 				)}
 				{...props}
 			>
 				<div className="flex justify-end z-20 w-full">
 					<IconMenu2
-						className="text-neutral-800 dark:text-neutral-200"
+						className="text-foreground dark:text-foreground"
 						onClick={() => setOpen(!open)}
 					/>
 				</div>
@@ -142,12 +142,12 @@ export const MobileSidebar = ({
 								ease: "easeInOut",
 							}}
 							className={cn(
-								"fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+								"fixed h-full w-full inset-0 bg-background dark:bg-background p-10 z-[100] flex flex-col justify-between",
 								className
 							)}
 						>
 							<div
-								className="absolute left-5 top-2 z-50 text-neutral-800 dark:text-neutral-200"
+								className="absolute left-5 top-2 z-50 text-foreground dark:text-foreground"
 								onClick={() => setOpen(!open)}
 							>
 								<IconX />
@@ -195,7 +195,7 @@ export const SidebarLink = ({
 							: "inline-block",
 						opacity: animate ? (open ? 1 : 0) : 1,
 					}}
-					className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+					className="text-foreground dark:text-foreground text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
 				>
 					{label}{" "}
 				</motion.span>
@@ -218,7 +218,7 @@ export const SidebarLink = ({
 							: "inline-block",
 						opacity: animate ? (open ? 1 : 0) : 1,
 					}}
-					className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+					className="text-foreground dark:text-foreground text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
 				>
 					{label}{" "}
 				</motion.span>
@@ -244,7 +244,7 @@ export const SidebarLink = ({
 						: "inline-block",
 					opacity: animate ? (open ? 1 : 0) : 1,
 				}}
-				className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+				className="text-foreground dark:text-foreground text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
 			>
 				{all && !toggle ? "#" + label : label}
 			</motion.span>

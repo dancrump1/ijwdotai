@@ -74,7 +74,7 @@ export function PerfSlayer(props: ComponentPropsWithoutRef<"div">) {
 				<Truck key={i + "truck"} />
 			))}
 
-			<div className="relative flex w-min mx-auto border-black border-4 p-2 translate-y-1/4 justify-center items-center bg-white">
+			<div className="relative flex w-min mx-auto border-black border-4 p-2 translate-y-1/4 justify-center items-center bg-background">
 				<button
 					onClick={() => setNumber((prev) => clamp(prev + 5, 0, 5000))}
 				>

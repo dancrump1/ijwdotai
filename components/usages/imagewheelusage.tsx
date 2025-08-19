@@ -6,7 +6,7 @@ import ImageWheel from "@/registry/open-source/image-wheel";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<ImageWheel />{" "}
 		</div>
 	);

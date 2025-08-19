@@ -206,7 +206,7 @@ export default function TunnelShowcase() {
 
 	return (
 		<>
-			<div className="bg-black text-white min-h-screen overflow-hidden relative">
+			<div className="bg-background text-foreground min-h-screen overflow-hidden relative">
 				<canvas
 					ref={canvasRef}
 					className="fixed top-0 left-0 w-full h-full"
@@ -218,21 +218,21 @@ export default function TunnelShowcase() {
 					>
 						<div className="inline-block">
 							<h1
-								className={`${isMobile ? "text-3xl" : "text-6xl md:text-8xl"} font-black tracking-tighter bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-pulse`}
+								className={`${isMobile ? "text-3xl" : "text-6xl md:text-8xl"} font-black tracking-tighter bg-gradient-to-r from-background via-background to-background bg-clip-text text-transparent animate-pulse`}
 							>
 								TUNNEL
 							</h1>
 							<div
-								className={`h-1 w-full bg-gradient-to-r from-transparent via-white to-transparent ${isMobile ? "mt-2" : "mt-4"} animate-pulse`}
+								className={`h-1 w-full bg-gradient-to-r from-transparent via-background to-transparent ${isMobile ? "mt-2" : "mt-4"} animate-pulse`}
 							/>
 						</div>
 
 						<p
-							className={`${isMobile ? "text-sm px-4 leading-relaxed" : "text-lg md:text-xl px-0 leading-relaxed"} text-gray-300 max-w-2xl font-light`}
+							className={`${isMobile ? "text-sm px-4 leading-relaxed" : "text-lg md:text-xl px-0 leading-relaxed"} text-foreground max-w-2xl font-light`}
 						>
 							Experience an infinite journey through space and time with
 							this mesmerizing
-							<span className="text-white font-medium"> Three.js </span>
+							<span className="text-foreground font-medium"> Three.js </span>
 							powered tunnel effect that responds to your{" "}
 							{isMobile ? "touch" : "movement"}
 						</p>
@@ -423,13 +423,13 @@ export function TunnelTheme() {
 	}, []);
 
 	return (
-		<div className="relative w-full h-96 bg-black overflow-hidden rounded-lg">
+		<div className="relative w-full h-96 bg-background overflow-hidden rounded-lg">
 			{/* Canvas container */}
 			<canvas ref={canvasRef} className="w-full h-full" />
 
 			{/* Overlay content */}
 			<div className="absolute inset-0 flex items-center justify-center z-10">
-				<div className="text-center text-white">
+				<div className="text-center text-foreground">
 					<h2
 						className={`${
 							isMobile ? "text-2xl" : "text-4xl"

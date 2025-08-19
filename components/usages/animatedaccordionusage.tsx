@@ -113,7 +113,7 @@ export default function Usage() {
 								transition={{ duration: 0.6 }}
 							/>
 
-							<div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+							<div className="absolute inset-0 flex flex-col justify-end p-6 text-secondary">
 								<motion.div
 									initial="hidden"
 									animate={controls}
@@ -181,12 +181,12 @@ export default function Usage() {
 													}}
 													className="flex space-x-2"
 												>
-													<motion.button className="px-4 py-2 bg-white text-black rounded-md font-medium">
+													<motion.button className="px-4 py-2 bg-background text-secondary rounded-md font-medium">
 														Learn More
 													</motion.button>
 
 													<motion.button
-														className="px-4 py-2 border border-white text-white rounded-md font-medium"
+														className="px-4 py-2 border border-white text-secondary rounded-md font-medium"
 														whileHover={{
 															backgroundColor:
 																"rgba(255,255,255,0.1)",

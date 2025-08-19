@@ -15,7 +15,7 @@ import {
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:grid-rows-2">
 				<Card className="col-span-1 row-span-1 overflow-hidden border-none bg-gradient-to-br from-slate-50 to-slate-100 shadow-lg transition-[box-shadow] hover:shadow-xl dark:from-slate-900 dark:to-slate-800">
 					<CardHeader className="relative pb-2">

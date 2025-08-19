@@ -127,7 +127,7 @@ const CircleExpenable = () => {
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
 									transition={{ duration: 0.3, delay: 0.2 }}
-									className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white text-center"
+									className="absolute inset-0 flex flex-col justify-center items-center p-6 text-foreground text-center"
 								>
 									<motion.div
 										initial="hidden"
@@ -172,7 +172,7 @@ const CircleExpenable = () => {
 												backgroundColor: "rgba(255,255,255,0.95)",
 											}}
 											whileTap={{ scale: 0.95 }}
-											className="px-4 py-2 bg-white text-black rounded-full font-medium mt-2"
+											className="px-4 py-2 bg-background text-foreground rounded-full font-medium mt-2"
 										>
 											View Details
 										</motion.button>
@@ -186,7 +186,7 @@ const CircleExpenable = () => {
 									className="absolute inset-0 flex items-center justify-center"
 								>
 									<motion.span
-										className="text-white font-bold"
+										className="text-foreground font-bold"
 										animate={{
 											scale: [0.9, 1, 0.9],
 											opacity: [0.7, 1, 0.7],

@@ -20,7 +20,7 @@ const VideoButton = ({ children, videoSrc, className }: VideoButtonProps) => {
 	return (
 		<button
 			className={cn(
-				"relative inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 h-10 px-8 py-8 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-white/20 dark:hover:shadow-white/30",
+				"relative inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background dark:bg-background dark:text-foreground dark:hover:bg-background h-10 px-8 py-8 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-white/20 dark:hover:shadow-white/30",
 				isPressed && "scale-95",
 				className
 			)}

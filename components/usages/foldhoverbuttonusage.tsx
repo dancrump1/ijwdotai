@@ -6,7 +6,7 @@ import FolderHoverButton from "@/registry/open-source/fold-hover-button";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="flex justify-center items-center flex-col gap-6 w-full h-full">
 				<FolderHoverButton
 					folderName="🗽 New York, USA"

@@ -16,7 +16,7 @@ export const AnimatedTextUnderline = () => {
 	};
 	return (
 		<div>
-			<h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+			<h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-7xl">
 				<span className="relative whitespace-nowrap text-teal-800 font-alliance">
 					<motion.svg
 						aria-hidden="true"

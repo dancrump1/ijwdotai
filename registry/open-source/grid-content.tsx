@@ -2,14 +2,14 @@ import React from "react";
 
 const GridContent = () => {
 	return (
-		<section className="dark:text-white text-gray-900">
+		<section className="dark:text-foreground text-foreground">
 			<div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
 				<div className="mx-auto max-w-lg text-center">
 					<h2 className="text-3xl font-bold sm:text-4xl">
 						EXAMPLE CONTENT AREA
 					</h2>
 
-					<p className="mt-4 text-gray-500 dark:text-gray-300">
+					<p className="mt-4 text-foreground dark:text-foreground">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 						Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae
 						aperiam fugit consequuntur saepe laborum.
@@ -38,11 +38,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -70,11 +70,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -102,11 +102,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -134,11 +134,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -166,11 +166,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -198,11 +198,11 @@ const GridContent = () => {
 							/>
 						</svg>
 
-						<h2 className="mt-4 text-xl font-bold text-black dark:text-white">
+						<h2 className="mt-4 text-xl font-bold text-foreground dark:text-foreground">
 							Digital campaigns
 						</h2>
 
-						<p className="mt-1 text-sm text-gray-500 dark:text-gray-300 dark:text-gray-500">
+						<p className="mt-1 text-sm text-foreground dark:text-foreground dark:text-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
 							ut quo possimus adipisci distinctio alias voluptatum
 							blanditiis laudantium.
@@ -213,7 +213,7 @@ const GridContent = () => {
 				<div className="mt-12 text-center">
 					<a
 						href="#"
-						className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
+						className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-foreground transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
 					>
 						Get Started Today
 					</a>

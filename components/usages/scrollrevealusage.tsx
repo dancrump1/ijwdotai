@@ -6,7 +6,7 @@ import ScrollReveal from "@/registry/open-source/scroll-reveal";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<ScrollReveal
 				baseOpacity={0}
 				enableBlur={true}

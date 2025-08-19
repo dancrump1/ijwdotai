@@ -16,7 +16,7 @@ export default function Usage() {
 		}
 	}, []);
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<ScrollIsland ref={setupTitles}>
 				<h1>test test 123</h1>
 				<section className="component-container">

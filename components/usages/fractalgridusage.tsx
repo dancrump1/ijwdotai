@@ -104,7 +104,7 @@ export function FractalDotGridUsage() {
 						)}
 						{isCopied ? "Copied!" : "Copy Config"}
 					</Button>
-					<div className="overflow-hidden bg-white rounded-lg">
+					<div className="overflow-hidden bg-background rounded-lg">
 						<div className="h-[500px] w-full relative">
 							<FractalDotGrid {...config} />
 						</div>

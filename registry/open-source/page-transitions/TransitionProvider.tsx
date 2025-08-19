@@ -78,7 +78,7 @@ export function TransitionProvider({
 				</svg>
 
 				<div className="absolute inset-0 grid place-items-center">
-					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-white">
+					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-foreground">
 						Layer Effect
 					</h1>
 				</div>
@@ -102,7 +102,7 @@ export function TransitionProvider({
 				</div>
 
 				<div className="absolute inset-0 grid place-items-center">
-					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-white">
+					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-foreground">
 						Slide Effect
 					</h1>
 				</div>
@@ -123,7 +123,7 @@ export function TransitionProvider({
 				</div>
 
 				<div className="absolute inset-0 grid place-items-center">
-					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-white">
+					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-foreground">
 						Pixel Effect
 					</h1>
 				</div>
@@ -135,7 +135,7 @@ export function TransitionProvider({
 				className="bg-charleston-green fixed inset-0 z-50 translate-y-full"
 			>
 				<div className="absolute inset-0 grid place-items-center">
-					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-white">
+					<h1 className="page-title overflow-hidden font-roboto text-[5vw] uppercase text-foreground">
 						Zoom Effect
 					</h1>
 				</div>

@@ -94,7 +94,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 					</motion.div>
 				))}
 				<motion.div
-					className="absolute inset-0 bg-[#1f1f1f] border-[2px] border-white/5 rounded-lg origin-bottom"
+					className="absolute inset-0 bg-background border-[2px] border-white/5 rounded-lg origin-bottom"
 					initial="closed"
 					animate={controls}
 					variants={folderVariants}
@@ -105,7 +105,7 @@ function FolderHoverButton({ folderName, images }: FolderHoverButtonProps) {
 					}}
 				>
 					<div className="absolute inset-0 flex items-center justify-center">
-						<span className="text-2xl font-caveat text-white">
+						<span className="text-2xl font-caveat text-foreground">
 							{folderName}
 						</span>
 					</div>

@@ -38,13 +38,13 @@ export default function TextAlongPathUsage() {
 	}, [buttonState]);
 
 	return (
-		<div className="w-dvw h-dvh flex justify-center items-center text-[#0015ff] relative bg-white">
+		<div className="w-dvw h-dvh flex justify-center items-center text-secondary relative bg-background">
 			<AnimatedPathText
 				path={rectPath}
 				svgClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-2 sm:py-8"
 				viewBox="-20 10 240 180"
 				text="JOIN THE WAITLIST ✉ JOIN THE WAITLIST ✉ JOIN THE WAITLIST ✉ JOIN THE WAITLIST ✉ JOIN THE WAITLIST ✉ "
-				textClassName="text-[10.6px] lowercase font-azeret-mono text-[#0015ff]"
+				textClassName="text-[10.6px] lowercase font-azeret-mono text-secondary"
 				duration={20}
 				preserveAspectRatio="none"
 				textAnchor="start"
@@ -58,13 +58,13 @@ export default function TextAlongPathUsage() {
 						placeholder="Enter your email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						className="w-full px-3 py-2 sm:px-4 sm:py-2 border border-[#0015ff] focus:outline-hidden focus:ring-primary-blue/50 font-azeret-mono text-xs sm:text-base placeholder:text-[#0015ff] rounded-lg bg-white"
+						className="w-full px-3 py-2 sm:px-4 sm:py-2 border border-[#0015ff] focus:outline-hidden focus:ring-primary-blue/50 font-azeret-mono text-xs sm:text-base placeholder:text-secondary rounded-lg bg-background"
 					/>
 					<Button
 						type="submit"
 						onClick={handleSubmit}
 						disabled={buttonState === "loading"}
-						className="w-full px-3 py-2 h-9 sm:h-11 sm:px-8 sm:py-2 bg-[#0015ff] text-white hover:bg-[#0015ff]/90 transition-colors font-azeret-mono text-xs sm:text-base rounded-lg"
+						className="w-full px-3 py-2 h-9 sm:h-11 sm:px-8 sm:py-2 bg-background text-secondary hover:bg-background/90 transition-colors font-azeret-mono text-xs sm:text-base rounded-lg"
 					>
 						<AnimatePresence mode="popLayout" initial={false}>
 							<motion.span

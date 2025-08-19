@@ -166,8 +166,8 @@ export function PlaceholdersAndVanishInput({
 	return (
 		<form
 			className={cn(
-				"relative mx-auto w-full max-w-xl bg-white dark:bg-zinc-800 h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
-				value && "bg-gray-50"
+				"relative mx-auto w-full max-w-xl bg-background dark:bg-background h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
+				value && "bg-background"
 			)}
 			onSubmit={handleSubmit}
 		>
@@ -191,7 +191,7 @@ export function PlaceholdersAndVanishInput({
 				name="search"
 				type="text"
 				className={cn(
-					"w-full relative text-sm sm:text-base z-10 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 pr-20",
+					"w-full relative text-sm sm:text-base z-10 border-none dark:text-foreground bg-transparent text-foreground h-full rounded-full focus:outline-none focus:ring-0 pl-4 pr-20",
 					animating && "text-transparent dark:text-transparent"
 				)}
 			/>
@@ -199,7 +199,7 @@ export function PlaceholdersAndVanishInput({
 			<button
 				disabled={!value || animating || !loading}
 				type="submit"
-				className="absolute right-2 top-1/2 z-10 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
+				className="absolute right-2 top-1/2 z-10 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-background bg-background dark:bg-background dark:disabled:bg-background transition duration-200 flex items-center justify-center"
 			>
 				<AnimatePresence>
 					{loading ? (
@@ -215,7 +215,7 @@ export function PlaceholdersAndVanishInput({
 							strokeWidth="2"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className="text-gray-300 h-4 w-4 cursor-pointer"
+							className="text-foreground h-4 w-4 cursor-pointer"
 						>
 							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 							<motion.path
@@ -260,7 +260,7 @@ export function PlaceholdersAndVanishInput({
 								duration: 0.3,
 								ease: "linear",
 							}}
-							className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 text-left w-[calc(100%-2rem)] truncate"
+							className="dark:text-foreground text-sm sm:text-base font-normal text-foreground pl-4 text-left w-[calc(100%-2rem)] truncate"
 						>
 							{placeholders[currentPlaceholder]}
 						</motion.span>

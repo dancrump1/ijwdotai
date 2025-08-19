@@ -52,7 +52,7 @@ export function GooeyDemo() {
 	const [isGooeyEnabled, setIsGooeyEnabled] = useState(true);
 
 	return (
-		<div className="relative w-full h-full flex justify-center p-8 font-calendas md:text-base text-xs sm:text-sm bg-white dark:bg-black">
+		<div className="relative w-full h-full flex justify-center p-8 font-calendas md:text-base text-xs sm:text-sm bg-background dark:bg-background">
 			<GooeyFilter id="gooey-filter" strength={15} />
 
 			<Button
@@ -79,7 +79,7 @@ export function GooeyDemo() {
 								{activeTab === index && (
 									<motion.div
 										layoutId="active-tab"
-										className="absolute inset-0 bg-[#efefef]"
+										className="absolute inset-0 bg-background"
 										transition={{
 											type: "spring",
 											bounce: 0.0,
@@ -91,7 +91,7 @@ export function GooeyDemo() {
 						))}
 					</div>
 					{/* Content panel */}
-					<div className="w-full h-[200px] sm:h-[250px] md:h-[300px] bg-[#efefef] overflow-hidden text-muted-foreground">
+					<div className="w-full h-[200px] sm:h-[250px] md:h-[300px] bg-background overflow-hidden text-muted-foreground">
 						<AnimatePresence mode="popLayout">
 							<motion.div
 								key={activeTab}
@@ -122,7 +122,7 @@ export function GooeyDemo() {
 											(file, index) => (
 												<li
 													key={file}
-													className="border-b border-muted-foreground/50 pt-2 pb-1 text-black"
+													className="border-b border-muted-foreground/50 pt-2 pb-1 text-foreground"
 												>
 													{file}
 												</li>
@@ -146,7 +146,7 @@ export function GooeyDemo() {
 							<span
 								className={`
                 w-full h-full flex items-center justify-center
-                ${activeTab === index ? "text-black" : "text-muted-foreground"}
+                ${activeTab === index ? "text-foreground" : "text-muted-foreground"}
               `}
 							>
 								{tab.title}

@@ -6,8 +6,8 @@ import Gravity, { MatterBody } from "@/registry/open-source/gravity";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<div className="w-full h-full flex flex-col relative font-azeretMono bg-white">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<div className="w-full h-full flex flex-col relative font-azeretMono bg-background">
 				<div className="pt-20 text-6xl sm:text-7xl md:text-8xl text-foreground dark:text-muted w-full text-center font-calendas italic">
 					fancy
 				</div>
@@ -23,7 +23,7 @@ export default function Usage() {
 						x="30%"
 						y="10%"
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-blue-500 text-white rounded-full hover:cursor-pointer px-8 py-4">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-blue-500 text-secondary rounded-full hover:cursor-pointer px-8 py-4">
 							react
 						</div>
 					</MatterBody>
@@ -35,7 +35,7 @@ export default function Usage() {
 						x="30%"
 						y="30%"
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-pink-500 text-white rounded-full hover:cursor-grab px-8 py-4 ">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-pink-500 text-secondary rounded-full hover:cursor-grab px-8 py-4 ">
 							typescript
 						</div>
 					</MatterBody>
@@ -48,7 +48,7 @@ export default function Usage() {
 						y="20%"
 						angle={10}
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-teal-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-teal-400 text-secondary rounded-full hover:cursor-grab px-8 py-4 ">
 							motion
 						</div>
 					</MatterBody>
@@ -60,7 +60,7 @@ export default function Usage() {
 						x="75%"
 						y="10%"
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-red-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-red-400 text-secondary rounded-full hover:cursor-grab px-8 py-4 ">
 							tailwind
 						</div>
 					</MatterBody>
@@ -72,7 +72,7 @@ export default function Usage() {
 						x="80%"
 						y="20%"
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-orange-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-orange-400 text-secondary rounded-full hover:cursor-grab px-8 py-4 ">
 							drei
 						</div>
 					</MatterBody>
@@ -84,7 +84,7 @@ export default function Usage() {
 						x="50%"
 						y="10%"
 					>
-						<div className="text-xl sm:text-2xl md:text-3xl bg-yellow-400 text-white rounded-full hover:cursor-grab px-8 py-4 ">
+						<div className="text-xl sm:text-2xl md:text-3xl bg-yellow-400 text-secondary rounded-full hover:cursor-grab px-8 py-4 ">
 							matter-js
 						</div>
 					</MatterBody>

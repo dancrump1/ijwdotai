@@ -134,7 +134,7 @@ const AwardsCarousel = ({ Award }) => {
 							key={index + "award-image"}
 							className={cn(
 								"w-2 h-2 mx-1 rounded-full transition-[background-color]",
-								currents === index ? "bg-white w-4" : "bg-stone-500"
+								currents === index ? "bg-background w-4" : "bg-stone-500"
 							)}
 						></motion.div>
 					))}

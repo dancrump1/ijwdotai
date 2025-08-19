@@ -58,7 +58,7 @@ export default function Usage() {
 	const ctx = tour.useContext();
 	return (
 		<tour.TourProvider>
-			<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+			<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 				<div className="absolute bottom-2 left-2 flex gap-2">
 					<tour.TourFocus
 						name="example1"

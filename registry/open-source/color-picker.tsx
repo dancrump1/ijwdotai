@@ -228,7 +228,7 @@ const ColorPicker = ({
 							type="text"
 							value={colorInput}
 							onChange={handleColorInputChange}
-							className="flex-grow bg-white border border-gray-300 rounded-md text-sm h-8 px-2"
+							className="flex-grow bg-background border border-gray-300 rounded-md text-sm h-8 px-2"
 							placeholder="#RRGGBB or hsl(h, s%, l%)"
 						/>
 						<motion.div
@@ -256,7 +256,7 @@ const ColorPicker = ({
 											exit={{ scale: 0 }}
 											transition={{ duration: 0.2 }}
 										>
-											<Check className="w-4 h-4 text-black absolute inset-0 m-auto" />
+											<Check className="w-4 h-4 text-foreground absolute inset-0 m-auto" />
 										</motion.div>
 									)}
 								</motion.button>

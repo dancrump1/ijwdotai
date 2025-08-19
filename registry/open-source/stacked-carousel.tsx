@@ -148,17 +148,17 @@ const StackedCarousel: React.FC<StackedCarouselProps> = ({
 			<div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 mt-4">
 				<button
 					onClick={() => moveCard("left")}
-					className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+					className="bg-background bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
 					aria-label="Previous image"
 				>
-					<ChevronLeft className="w-6 h-6 text-gray-800" />
+					<ChevronLeft className="w-6 h-6 text-foreground" />
 				</button>
 				<button
 					onClick={() => moveCard("right")}
-					className="bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+					className="bg-background bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
 					aria-label="Next image"
 				>
-					<ChevronRight className="w-6 h-6 text-gray-800" />
+					<ChevronRight className="w-6 h-6 text-foreground" />
 				</button>
 			</div>
 		</div>

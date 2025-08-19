@@ -10,9 +10,9 @@ export default function Usage() {
 	const screensaverRef = useRef<HTMLDivElement>(null);
 
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div
-				className="w-dvw h-dvh bg-[#efefef] overflow-hidden flex items-center justify-center relative text-foreground dark:text-muted"
+				className="w-dvw h-dvh bg-background overflow-hidden flex items-center justify-center relative text-foreground dark:text-muted"
 				ref={screensaverRef}
 			>
 				<h1 className="z-30 text-3xl md:text-6xl font-overused-grotesk">

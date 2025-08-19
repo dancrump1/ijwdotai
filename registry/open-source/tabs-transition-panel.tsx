@@ -34,8 +34,8 @@ export function TabsTransitionPanel({
 						onMouseEnter={() => setActiveIndex(index)}
 						className={`rounded-md px-3 py-1 text-sm font-medium ${
 							activeIndex === index
-								? "bg-zinc-200 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
-								: "bg-zinc-100 text-zinc-600 dark:bg-zinc-700 dark:text-zinc-400"
+								? "bg-background text-foreground dark:bg-background dark:text-foreground"
+								: "bg-background text-foreground dark:bg-background dark:text-foreground"
 						}`}
 					>
 						{firstName}
@@ -96,10 +96,10 @@ export function TransitionPanel({
 									exit: { opacity: 0, y: 50, filter: "blur(4px)" },
 								}}
 							>
-								<h3 className="mb-2 font-medium text-zinc-100">
+								<h3 className="mb-2 font-medium text-foreground">
 									{title}
 								</h3>
-								<span className="text-zinc-300">
+								<span className="text-foreground">
 									{parse(description || "")}
 								</span>
 								<Image

@@ -40,7 +40,7 @@ export default function Usage() {
 		},
 	];
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<ProgressCarousel vertical={false} activeSlider="bridge">
 				<SliderContent>
 					{items.map((item, index) => (
@@ -56,14 +56,14 @@ export default function Usage() {
 					))}
 				</SliderContent>
 
-				<SliderBtnGroup className="absolute bottom-0 h-fit dark:text-white text-black dark:bg-black/40 bg-white/40  backdrop-blur-md overflow-hidden grid grid-cols-2 md:grid-cols-4  rounded-md">
+				<SliderBtnGroup className="absolute bottom-0 h-fit dark:text-secondary text-secondary dark:bg-background/40 bg-background/40  backdrop-blur-md overflow-hidden grid grid-cols-2 md:grid-cols-4  rounded-md">
 					{items.map((item, index) => (
 						<SliderBtn
 							value={item?.sliderName}
 							className="text-left  p-3 border-r"
-							progressBarClass="dark:bg-black bg-white h-full"
+							progressBarClass="dark:bg-background bg-background h-full"
 						>
-							<span className="relative px-4 rounded-full w-fit dark:bg-white dark:text-black text-white bg-gray-900 mb-2">
+							<span className="relative px-4 rounded-full w-fit dark:bg-background dark:text-secondary text-secondary bg-background mb-2">
 								{item.title}
 							</span>
 							<span className="text-sm font-medium  line-clamp-2">

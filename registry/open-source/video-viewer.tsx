@@ -38,7 +38,7 @@ export function VideoContainer() {
 
 	return (
 		<div className="grid grid-cols-1 gap-6 h-[600px] md:grid-cols-[1fr_300px] mx-6">
-			<div className="bg-gray-900 rounded-lg w-full overflow-hidden relative  min-h-[25vh]">
+			<div className="bg-background rounded-lg w-full overflow-hidden relative  min-h-[25vh]">
 				<span className="w-full h-full object-cover aspect-video rounded-md bg-muted" />
 
 				<iframe
@@ -57,7 +57,7 @@ export function VideoContainer() {
 					className="h-full w-full"
 				/>
 			</div>
-			<div className="bg-gray-100 dark:bg-gray-800 rounded-lg md:block">
+			<div className="bg-background dark:bg-background rounded-lg md:block">
 				<div className="p-4 border-b border-gray-200 dark:border-gray-700">
 					<h2 className="text-lg font-heading font-semibold">
 						Related Videos
@@ -87,7 +87,7 @@ export function VideoContainer() {
 											<h3 className="font-medium line-clamp-2 font-copy text-lg">
 												{embed.videoTitle}
 											</h3>
-											<p className="text-gray-500 dark:text-gray-400 line-clamp-2">
+											<p className="text-foreground dark:text-foreground line-clamp-2">
 												{embed.description}
 											</p>
 										</div>

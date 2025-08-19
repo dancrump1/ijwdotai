@@ -36,9 +36,9 @@ const ShareButton = ({
 			<Button
 				className={cn(
 					"relative min-w-40  rounded-3xl ",
-					"bg-white dark:bg-black",
-					"hover:bg-gray-50 dark:hover:bg-gray-950",
-					"text-black dark:text-white",
+					"bg-background dark:bg-background",
+					"hover:bg-background dark:hover:bg-background",
+					"text-foreground dark:text-foreground",
 					"border border-black/10 dark:border-white/10",
 					"transition-[opacity,background-color,color,border-color] duration-300",
 					isHovered ? "opacity-0" : "opacity-100",
@@ -61,13 +61,13 @@ const ShareButton = ({
 								"h-10",
 								"w-10",
 								"flex items-center justify-center",
-								"bg-black dark:bg-white",
-								"text-white dark:text-black",
+								"bg-background dark:bg-background",
+								"text-foreground dark:text-foreground",
 								"transition-all duration-300",
 								index === 0 && "rounded-l-3xl",
 								index === links.length - 1 && "rounded-r-3xl",
 								"border-r border-white/10 last:border-r-0 dark:border-black/10",
-								"hover:bg-gray-900 dark:hover:bg-gray-100",
+								"hover:bg-background dark:hover:bg-background",
 								"",
 								isHovered
 									? "translate-x-0 opacity-100"

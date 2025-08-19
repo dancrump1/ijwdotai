@@ -7,7 +7,7 @@ export default function MeteorsDemo() {
 		<div className="">
 			<div className="relative w-full max-w-xl">
 				<div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl" />
-				<div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 px-4 py-8 shadow-xl">
+				<div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-background px-4 py-8 shadow-xl">
 					<div className="mb-4 flex h-5 w-5 items-center justify-center rounded-full border border-gray-500">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export default function MeteorsDemo() {
 							viewBox="0 0 24 24"
 							strokeWidth="1.5"
 							stroke="currentColor"
-							className="h-2 w-2 text-gray-300"
+							className="h-2 w-2 text-secondary"
 						>
 							<path
 								strokeLinecap="round"
@@ -25,7 +25,7 @@ export default function MeteorsDemo() {
 						</svg>
 					</div>
 
-					<h1 className="relative z-50 mb-4 text-xl font-bold text-white">
+					<h1 className="relative z-50 mb-4 text-xl font-bold text-secondary">
 						Meteors because they&apos;re cool
 					</h1>
 
@@ -35,7 +35,7 @@ export default function MeteorsDemo() {
 						just unacceptable. Won&apos;t ChatGPT the shit out of this.
 					</p>
 
-					<button className="rounded-lg border border-gray-500 px-4 py-1 text-gray-300">
+					<button className="rounded-lg border border-gray-500 px-4 py-1 text-secondary">
 						Explore
 					</button>
 

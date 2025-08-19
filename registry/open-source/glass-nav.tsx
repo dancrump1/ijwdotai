@@ -46,7 +46,7 @@ const GlassNavigation = ({ demo = false }) => {
 				cursor: hovered ? "none" : "auto",
 			}}
 			className={cn(
-				"glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl",
+				"glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-background/20 to-background/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl",
 				{ absolute: demo }
 			)}
 		>
@@ -85,13 +85,13 @@ const Cursor = ({
 			ref={scope}
 			className="pointer-events-none absolute z-0 grid h-[50px] w-[50px] origin-[0px_0px] place-content-center rounded-full bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 text-2xl"
 		>
-			<FiArrowUpRight className="text-white" />
+			<FiArrowUpRight className="text-foreground" />
 		</motion.span>
 	);
 };
 
 const Logo = () => (
-	<span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-white mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
+	<span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-foreground mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
 		logo.
 	</span>
 );
@@ -110,17 +110,17 @@ const GlassLink = ({ text }: { text: string }) => {
 			href="#"
 			className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
 		>
-			<span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+			<span className="relative z-10 text-foreground/90 transition-colors group-hover:text-foreground">
 				{text}
 			</span>
-			<span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
+			<span className="absolute inset-0 z-0 bg-gradient-to-br from-background/20 to-background/5 opacity-0 transition-opacity group-hover:opacity-100" />
 		</a>
 	);
 };
 
 const TextLink = ({ text }: { text: string }) => {
 	return (
-		<a href="#" className="text-white/90 transition-colors hover:text-white">
+		<a href="#" className="text-foreground/90 transition-colors hover:text-foreground">
 			{text}
 		</a>
 	);
@@ -136,13 +136,13 @@ const Buttons = ({
 			<SignInButton />
 		</div>
 
-		<button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
+		<button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-foreground transition-transform hover:scale-105 active:scale-95">
 			Try free
 		</button>
 
 		<button
 			onClick={() => setMenuOpen((pv) => !pv)}
-			className="ml-2 block scale-100 text-3xl text-white/90 transition-[transform,color] hover:scale-105 hover:text-white active:scale-95 md:hidden"
+			className="ml-2 block scale-100 text-3xl text-foreground/90 transition-[transform,color] hover:scale-105 hover:text-foreground active:scale-95 md:hidden"
 		>
 			<FiMenu />
 		</button>
@@ -152,10 +152,10 @@ const Buttons = ({
 const SignInButton = () => {
 	return (
 		<button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-			<span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+			<span className="relative z-10 text-foreground/90 transition-colors group-hover:text-foreground">
 				Sign in
 			</span>
-			<span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
+			<span className="absolute inset-0 z-0 bg-gradient-to-br from-background/20 to-background/5 opacity-0 transition-opacity group-hover:opacity-100" />
 		</button>
 	);
 };

@@ -28,7 +28,7 @@ const CardContainer = ({ children, className }) => {
 
 const CardHeader = ({ children }) => {
 	return (
-		<div className="bg-backgroundSecondary text-white justify-center flex items-center">
+		<div className="bg-backgroundSecondary text-foreground justify-center flex items-center">
 			<span className="sm:min-w-[290px] mx-auto py-4 lg:px-6 lg:py-8 text-center text-balance">
 				{children}
 			</span>
@@ -51,7 +51,7 @@ const CardContent = forwardRef(({ children, key }, ref) => {
 			exit={{ rotateY: -180 }}
 			transition={{ duration: 0.5 }}
 			className={cn(
-				"flex flex-col w-full [backface-visibility:hidden] rounded-xl min-h-[400px] lg:min-h-[500px] overflow-hidden shadow-lg bg-white"
+				"flex flex-col w-full [backface-visibility:hidden] rounded-xl min-h-[400px] lg:min-h-[500px] overflow-hidden shadow-lg bg-background"
 			)}
 		>
 			{children}
@@ -83,7 +83,7 @@ const FlipCardBackContent = forwardRef(({ children, key }, ref) => {
 const FlipCardButton = ({ children, onClick }) => {
 	return (
 		<button
-			className="button red-to-black my-6 mx-auto"
+			className="button red-to-background my-6 mx-auto"
 			onClick={() => onClick()}
 		>
 			{children}
@@ -94,7 +94,7 @@ const FlipCardButton = ({ children, onClick }) => {
 const LinkCardButton = ({ children, url, target }) => {
 	return (
 		<Link
-			className="button red-to-black my-6 mx-auto"
+			className="button red-to-background my-6 mx-auto"
 			href={url || ""}
 			target={target}
 			referrerPolicy={target && "no-referrer"}

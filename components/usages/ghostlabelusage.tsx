@@ -6,7 +6,7 @@ import GhostLabel from "@/registry/open-source/ghost-label";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<div className="w-full max-w-2xl mx-auto py-12 px-4">
 				<div className="relative ml-[30px] mt-20">
 					<GhostLabel text="1920" />

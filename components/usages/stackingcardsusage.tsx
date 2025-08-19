@@ -11,35 +11,35 @@ import { cn } from "@/registry/utilities/cn";
 
 const cards = [
 	{
-		bgColor: "bg-[#f97316]",
+		bgColor: "bg-background",
 		title: "The Guiding Light",
 		description:
 			"Lighthouses have stood as beacons of hope for centuries, guiding sailors safely through treacherous waters. Their glowing light and towering presence serve as a reminder of humanity’s connection to the sea.",
 		image: "/itjustworks.jpg",
 	},
 	{
-		bgColor: "bg-[#0015ff]",
+		bgColor: "bg-background",
 		title: "Life Beneath the Waves",
 		description:
 			"From shimmering schools of fish to solitary hunters, the ocean is home to an incredible variety of marine life. Each species plays a vital role in maintaining the balance of underwater ecosystems.",
 		image: "/itjustworks.jpg",
 	},
 	{
-		bgColor: "bg-[#ff5941]",
+		bgColor: "bg-background",
 		title: "Alone on the Open Sea",
 		description:
 			"Drifting across the endless horizon, traveling alone on the sea is a test of courage and resilience. With nothing but the waves and the sky, solitude becomes both a challenge and a source of deep reflection.",
 		image: "/itjustworks.jpg",
 	},
 	{
-		bgColor: "bg-[#1f464d]",
+		bgColor: "bg-background",
 		title: "The Art of Sailing",
 		description:
 			"Harnessing the power of the wind, sailing is both a skill and an adventure. Whether racing across the waves or leisurely cruising, it’s a timeless way to explore the vast blue expanse.",
 		image: "/itjustworks.jpg",
 	},
 	{
-		bgColor: "bg-[#0015ff]",
+		bgColor: "bg-background",
 		title: "The Era of Whaling",
 		description:
 			"Once a thriving industry, whale hunting shaped economies and cultures across the world. Today, efforts to protect these majestic creatures highlight the shift toward conservation and respect for marine life.",
@@ -52,14 +52,14 @@ export default function StackingCardsDemo() {
 
 	return (
 		<div
-			className="h-[620px] bg-white overflow-auto text-white"
+			className="h-[620px] bg-background overflow-auto text-secondary"
 			ref={(node) => setContainer(node)}
 		>
 			<StackingCards
 				totalCards={cards.length}
 				scrollOptons={{ container: { current: container } }}
 			>
-				<div className="relative font-calendas h-[620px] w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-[#ff5941] whitespace-pre">
+				<div className="relative font-calendas h-[620px] w-full z-10 text-2xl md:text-7xl font-bold uppercase flex justify-center items-center text-secondary whitespace-pre">
 					Scroll down ↓
 				</div>
 				{cards.map(({ bgColor, description, image, title }, index) => {
@@ -95,7 +95,7 @@ export default function StackingCardsDemo() {
 				})}
 
 				<div className="w-full h-80 relative overflow-hidden">
-					<h2 className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[192px] text-[80px] text-[#ff5941] font-calendas">
+					<h2 className="absolute bottom-0 left-0 translate-y-1/3 sm:text-[192px] text-[80px] text-secondary font-calendas">
 						fancy
 					</h2>
 				</div>

@@ -124,15 +124,15 @@ const Feature = ({
 			<div className="py-14 h-full flex">
 				<div className="container flex w-full flex-col items-center justify-center p-4 mx-auto h-full">
 					<div className="mx-auto max-w-5xl text-center">
-						<h4 className="text-xl font-bold tracking-tight text-black dark:text-white">
+						<h4 className="text-xl font-bold tracking-tight text-foreground dark:text-foreground">
 							My Ideas
 						</h4>
-						<h2 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
+						<h2 className="text-4xl font-bold tracking-tight text-foreground dark:text-foreground sm:text-6xl">
 							Ideas that are mine
 						</h2>
 						<Link
 							href="/thoughts"
-							className="group relative inline-flex h-12 items-center justify-center rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 mt-6"
+							className="group relative inline-flex h-12 items-center justify-center rounded-md bg-background px-6 font-medium text-foreground mt-6"
 						>
 							<span>Check out the whole catelog</span>
 							<div className="relative ml-1 h-5 w-5 overflow-hidden">
@@ -194,7 +194,7 @@ const Feature = ({
 										value={`item-${index}`}
 									>
 										<div
-											className={`absolute bottom-0 top-0 h-full w-0.5 overflow-hidden rounded-lg bg-neutral-300/50 dark:bg-neutral-300/30 ${
+											className={`absolute bottom-0 top-0 h-full w-0.5 overflow-hidden rounded-lg bg-background/50 dark:bg-background/30 ${
 												linePosition === "right"
 													? "left-auto right-0"
 													: "left-0 right-auto"
@@ -203,7 +203,7 @@ const Feature = ({
 											<div
 												className={`absolute left-0 top-0 w-full ${
 													currentIndex === index ? "h-full" : "h-0"
-												} origin-top bg-neutral-500 transition-all ease-linear dark:bg-white`}
+												} origin-top bg-background transition-all ease-linear dark:bg-background`}
 												style={{
 													transitionDuration:
 														currentIndex === index
@@ -220,7 +220,7 @@ const Feature = ({
 
 											<Link
 												href={`/${item?.uri}`}
-												className="group relative inline-flex h-6 overflow-hidden rounded-md pr-6 font-medium text-neutral-200 mt-2"
+												className="group relative inline-flex h-6 overflow-hidden rounded-md pr-6 font-medium text-foreground mt-2"
 											>
 												Read This
 												<div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
@@ -275,7 +275,7 @@ const Feature = ({
 									muted
 								/>
 							) : (
-								<div className="aspect-auto w-full aspect-square rounded-xl border border-neutral-300/50 bg-gray-200 p-1"></div>
+								<div className="aspect-auto w-full aspect-square rounded-xl border border-neutral-300/50 bg-background p-1"></div>
 							)}
 						</div>
 						{/* Images end */}
@@ -297,11 +297,11 @@ const Feature = ({
 										scrollSnapAlign: "center",
 									}}
 								>
-									<div className="absolute bottom-0 left-0 right-auto top-0 h-0.5 w-full overflow-hidden rounded-lg bg-neutral-300/50 dark:bg-neutral-300/30">
+									<div className="absolute bottom-0 left-0 right-auto top-0 h-0.5 w-full overflow-hidden rounded-lg bg-background/50 dark:bg-background/30">
 										<div
 											className={`absolute left-0 top-0 h-full ${
 												currentIndex === index ? "w-full" : "w-0"
-											} origin-top bg-neutral-500 transition-all ease-linear dark:bg-white`}
+											} origin-top bg-background transition-all ease-linear dark:bg-background`}
 											style={{
 												transitionDuration:
 													currentIndex === index
@@ -316,7 +316,7 @@ const Feature = ({
 									</p>
 									<Link
 										href={`/${item?.uri}`}
-										className="group relative inline-flex h-6 overflow-hidden rounded-md pr-6 font-medium text-neutral-200 mt-2"
+										className="group relative inline-flex h-6 overflow-hidden rounded-md pr-6 font-medium text-foreground mt-2"
 									>
 										Read This
 										<div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">

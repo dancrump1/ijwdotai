@@ -72,13 +72,13 @@ export const Tabs = ({
 									duration: 0.6,
 								}}
 								className={cn(
-									"absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
+									"absolute inset-0 bg-background dark:bg-background rounded-full ",
 									activeTabClassName
 								)}
 							/>
 						)}
 
-						<span className="relative block text-black dark:text-white">
+						<span className="relative block text-foreground dark:text-foreground">
 							{tab.title}
 						</span>
 					</button>

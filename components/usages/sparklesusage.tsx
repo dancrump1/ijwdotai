@@ -6,9 +6,9 @@ import { SparklesCore } from "@/registry/open-source/sparkles";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
-			<div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-				<h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
+			<div className="h-[40rem] w-full bg-background flex flex-col items-center justify-center overflow-hidden rounded-md">
+				<h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-secondary relative z-20">
 					Components
 				</h1>
 				<div className="w-[40rem] h-40 relative">
@@ -29,7 +29,7 @@ export default function Usage() {
 					/>
 
 					{/* Radial Gradient to prevent sharp edges */}
-					<div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+					<div className="absolute inset-0 w-full h-full bg-background [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
 				</div>
 			</div>{" "}
 		</div>

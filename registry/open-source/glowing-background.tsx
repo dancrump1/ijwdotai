@@ -45,7 +45,7 @@ export const GlowingStarsDescription = ({
 	children?: React.ReactNode;
 }) => {
 	return (
-		<p className={cn("text-base text-white max-w-[16rem]", className)}>
+		<p className={cn("text-base text-foreground max-w-[16rem]", className)}>
 			{children}
 		</p>
 	);
@@ -59,7 +59,7 @@ export const GlowingStarsTitle = ({
 	children?: React.ReactNode;
 }) => {
 	return (
-		<h2 className={cn("font-bold text-2xl text-[#eaeaea]", className)}>
+		<h2 className={cn("font-bold text-2xl text-foreground", className)}>
 			{children}
 		</h2>
 	);
@@ -133,7 +133,7 @@ const Star = ({ isGlowing, delay }: { isGlowing: boolean; delay: number }) => {
 				ease: "easeInOut",
 				delay: delay,
 			}}
-			className={cn("bg-[#666] h-[1px] w-[1px] rounded-full relative z-20")}
+			className={cn("bg-background h-[1px] w-[1px] rounded-full relative z-20")}
 		></motion.div>
 	);
 };

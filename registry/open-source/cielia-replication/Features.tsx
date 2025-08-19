@@ -76,7 +76,7 @@ const Features = () => {
 					key={index + "features-item"}
 					className="feature relative isolate overflow-hidden"
 				>
-					<div className="container grid min-h-[60vh] place-items-center py-28 text-white lg:min-h-[80vh]">
+					<div className="container grid min-h-[60vh] place-items-center py-28 text-foreground lg:min-h-[80vh]">
 						<div className="flex h-full w-full flex-col items-center justify-between">
 							<div className="flex w-full items-start justify-between gap-x-[20vw] border-t border-white pt-5 lg:mr-auto lg:max-w-[40vw] xl:max-w-[30vw]">
 								<div>

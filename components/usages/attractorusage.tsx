@@ -24,7 +24,7 @@ export default function AttractorPreview() {
 	};
 
 	return (
-		<div className="w-full h-full flex flex-col relative justify-center items-center md:items-end bg-white">
+		<div className="w-full h-full flex flex-col relative justify-center items-center md:items-end bg-background">
 			<div>
 				<p className="z-20 text-2xl sm:text-3xl md:text-3xl text-foreground dark:text-muted md:pr-24">
 					join the <span className="font-calendas  italic">community</span>

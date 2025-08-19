@@ -12,7 +12,7 @@ const Scene = dynamic(() => import("@/registry/open-source/image-ripple"), {
 		>
 			<svg
 				aria-hidden="true"
-				className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+				className="w-8 h-8 text-secondary animate-spin dark:text-secondary fill-blue-600"
 				viewBox="0 0 100 101"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const Scene = dynamic(() => import("@/registry/open-source/image-ripple"), {
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<Scene />{" "}
 		</div>
 	);

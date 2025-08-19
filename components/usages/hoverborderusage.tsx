@@ -10,7 +10,7 @@ export default function HoverBorderGradientDemo() {
 			<HoverBorderGradient
 				containerClassName="rounded-full"
 				as="button"
-				className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+				className="dark:bg-background bg-background text-secondary dark:text-secondary flex items-center space-x-2"
 			>
 				<span>Aceternity UI</span>
 			</HoverBorderGradient>

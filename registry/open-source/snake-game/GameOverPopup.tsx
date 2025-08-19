@@ -14,10 +14,10 @@ const GameOverPopup: React.FC<GameOverPopupProps> = ({
 	isDarkMode,
 }) => {
 	return (
-		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+		<div className="fixed inset-0 bg-background bg-opacity-50 flex items-center justify-center z-50">
 			<div
 				className={`${
-					isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+					isDarkMode ? "bg-background text-foreground" : "bg-background text-foreground"
 				} p-8 rounded-lg shadow-lg text-center`}
 			>
 				<h2 className="text-3xl font-bold mb-4">Game Over</h2>
@@ -26,7 +26,7 @@ const GameOverPopup: React.FC<GameOverPopupProps> = ({
 					onClick={onRestart}
 					variant="default"
 					className={`px-6 py-2 ${
-						isDarkMode ? "bg-gray-700 hover:bg-gray-600 text-white" : ""
+						isDarkMode ? "bg-background hover:bg-background text-foreground" : ""
 					}`}
 				>
 					Play Again

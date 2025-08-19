@@ -106,7 +106,7 @@ const TypewriterTestimonial: React.FC<TestimonialsProps> = ({
 								animate={{ opacity: 1, scale: 1, y: -20 }}
 								exit={{ opacity: 0, scale: 0.8, y: -10 }}
 								transition={{ duration: 0.4 }}
-								className="absolute bottom-20 bg-white text-black text-sm px-4 py-3 rounded-lg shadow-2xl max-w-xs w-56"
+								className="absolute bottom-20 bg-background text-foreground text-sm px-4 py-3 rounded-lg shadow-2xl max-w-xs w-56"
 							>
 								<div className="h-24 overflow-hidden whitespace-pre-wrap">
 									{typedText}
@@ -115,13 +115,13 @@ const TypewriterTestimonial: React.FC<TestimonialsProps> = ({
 								<p className="mt-2 text-right font-semibold">
 									{testimonial.name}
 								</p>
-								<p className="text-right text-gray-500 text-sm">
+								<p className="text-right text-foreground text-sm">
 									{testimonial.jobtitle}
 								</p>
 								<div className="absolute left-1/2 transform -translate-x-1/2 -bottom-4">
-									<div className="w-3 h-3 bg-white rounded-full shadow-lg"></div>
-									<div className="w-2 h-2 bg-white rounded-full shadow-lg mt-1"></div>
-									<div className="w-1 h-1 bg-white rounded-full shadow-lg mt-1"></div>
+									<div className="w-3 h-3 bg-background rounded-full shadow-lg"></div>
+									<div className="w-2 h-2 bg-background rounded-full shadow-lg mt-1"></div>
+									<div className="w-1 h-1 bg-background rounded-full shadow-lg mt-1"></div>
 								</div>
 							</motion.div>
 						)}

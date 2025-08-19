@@ -6,7 +6,7 @@ import { Timeline } from "@/registry/open-source/timeline";
 
 export default function TimelineUsage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<Timeline
 				data={[
 					{

@@ -7,7 +7,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 
 const FooterSecond = () => {
 	const brandDetails = {
-		brandIcon: <FaHome className="w-6 h-6 text-gray-600" />,
+		brandIcon: <FaHome className="w-6 h-6 text-foreground" />,
 		brandName: "BrandName",
 		address: "2261 Market Street #5039 San <br /> Francisco, CA 94114",
 	};
@@ -75,18 +75,18 @@ const FooterSecond = () => {
 	];
 
 	return (
-		<footer className="bg-white text-gray-800 py-8 px-6 shadow-lg">
+		<footer className="bg-background text-foreground py-8 px-6 shadow-lg">
 			<div className="max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
 					<div className="col-span-1 sm:col-span-2 lg:col-span-1">
 						<div className="flex items-center mb-4">
 							{brandDetails.brandIcon}
-							<span className="text-xl font-bold ml-2 text-gray-800">
+							<span className="text-xl font-bold ml-2 text-foreground">
 								{brandDetails.brandName}
 							</span>
 						</div>
 						<p
-							className="text-sm mb-4 text-gray-600"
+							className="text-sm mb-4 text-foreground"
 							dangerouslySetInnerHTML={{ __html: brandDetails.address }}
 						/>
 						<div className="flex space-x-4">
@@ -94,7 +94,7 @@ const FooterSecond = () => {
 								<a
 									key={index + "business-footer"}
 									href={icon.link}
-									className="text-gray-600 hover:text-gray-900 transition-colors"
+									className="text-foreground hover:text-foreground transition-colors"
 									target="_blank"
 									rel="noopener noreferrer"
 									aria-label={icon.name}
@@ -110,7 +110,7 @@ const FooterSecond = () => {
 								key={index + "business-footer-section"}
 								className="space-y-4"
 							>
-								<h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-gray-800">
+								<h3 className="font-semibold mb-2 text-sm uppercase tracking-wider text-foreground">
 									{section.title}
 								</h3>
 								<ul className="space-y-2">
@@ -118,7 +118,7 @@ const FooterSecond = () => {
 										<li key={linkIndex}>
 											<Link
 												href={link.url}
-												className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+												className="text-sm text-foreground hover:text-foreground transition-colors"
 											>
 												{link.text}
 											</Link>

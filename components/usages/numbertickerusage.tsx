@@ -6,10 +6,10 @@ import NumberTicker from "@/registry/open-source/number-ticker";
 
 export default function Usage() {
 	return (
-		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-background">
 			<NumberTicker
 				value={100}
-				className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white"
+				className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-secondary dark:text-secondary"
 			/>
 		</div>
 	);

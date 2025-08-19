@@ -442,8 +442,8 @@ const ScrollableCardStack: React.FC<ScrollableCardStackProps> = ({
 								i === currentIndex
 									? "scale-125 bg-blue-500"
 									: isVisible
-										? "bg-gray-300 hover:bg-gray-400"
-										: "bg-gray-200 opacity-50"
+										? "bg-background hover:bg-background"
+										: "bg-background opacity-50"
 							)}
 							whileHover={{ scale: 1.2 }}
 							whileTap={{ scale: 0.9 }}

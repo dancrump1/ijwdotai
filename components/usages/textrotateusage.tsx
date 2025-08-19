@@ -55,7 +55,7 @@ export default function TextRotateUsage() {
 	};
 
 	return (
-		<div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
+		<div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-background dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
 			<LayoutGroup>
 				<motion.div className="flex whitespace-pre" layout>
 					<motion.span
@@ -75,7 +75,7 @@ export default function TextRotateUsage() {
 							"rock",
 							"🕶️🕶️🕶️",
 						]}
-						mainClassName="text-white px-2 sm:px-2 md:px-3 bg-[#ff5941] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+						mainClassName="text-secondary px-2 sm:px-2 md:px-3 bg-background overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
 						staggerFrom={"last"}
 						initial={{ y: "100%" }}
 						animate={{ y: 0 }}
@@ -110,7 +110,7 @@ export default function TextRotateUsage() {
 				</motion.div>
 			</LayoutGroup>
 			{/* <div className="w-dvw h-dvh overflow-auto absolute snap-y snap-mandatory">
-				<div className="sticky inset-0 h-full w-full flex items-center justify-end bg-white dark:text-muted text-foreground">
+				<div className="sticky inset-0 h-full w-full flex items-center justify-end bg-background dark:text-muted text-foreground">
 					<div className="w-2/3">
 						<TextRotate
 							ref={textRotateRef}

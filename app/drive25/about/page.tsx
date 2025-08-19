@@ -85,7 +85,7 @@ function About() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<main className="dark:text-white dark:bg-zinc-800">
+		<main className="">
 			<section className="h-[90vh] w-full relative overflow-hidden">
 				<Gravity gravity={{ x: 0, y: 1 }}>
 					{[

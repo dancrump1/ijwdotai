@@ -140,12 +140,13 @@ const images = [
 
 function Work() {
 	return (
-		<main className="dark:text-white dark:bg-zinc-800">
+		<main className="">
 			<HeroParallax products={products} />
 			<CursorFollow>
 				<div className="flex flex-row items-center justify-center gap-8 py-8 flex-wrap overflow-hidden">
 					{images.map((img, i) => (
 						<Slide
+							key={"slideimg" + i}
 							direction="up"
 							delay={i % 2 === 0 ? 500 : 0}
 							triggerOnce

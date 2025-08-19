@@ -105,6 +105,26 @@ async function getData() {
 						}
 					}
 				}
+				asset(id: 729) {
+					url
+					uid
+					alt
+					height
+					width
+					title
+					focalPoint
+					mimeType
+				}
+				cta: asset(id: 221) {
+					url
+					uid
+					alt
+					height
+					width
+					title
+					focalPoint
+					mimeType
+				}
 			}
 		`,
 		{ uid: entryUid }

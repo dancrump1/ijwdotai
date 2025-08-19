@@ -172,7 +172,7 @@ function Home({ data }) {
 	}, [loader]);
 
 	const { image, headline, workSpotlight, callToAction } = data.homeEntries[0];
-	const { assets } = data;
+	const { assets, asset, cta } = data;
 	const hero = image;
 
 	const video = hero?.find((asset) => !!asset.embeddedAsset)?.embeddedAsset;
@@ -476,11 +476,11 @@ function Home({ data }) {
 								{callToAction?.title}
 							</ScrollVelocityRow>
 							<Image
-								src={"/itjustworks.jpg"}
-								alt={""}
-								height={60}
-								width={60}
-								className="absolute left-[calc(50vw-155px)] top-0 z-20 h-full w-fit"
+								src={asset.url}
+								alt={asset.title}
+								height={300}
+								width={300}
+								className="absolute left-[calc(50vw-155px)] -top-[70px] z-20 h-[250px] w-fit"
 							/>
 							<ScrollVelocityRow
 								baseVelocity={5}
@@ -493,10 +493,10 @@ function Home({ data }) {
 					</section>
 
 					<section className="flex my-32">
-						<ContentWithImage image={{ url: "/itjustworks.jpg" }} />
+						<ContentWithImage image={{ url: cta.url }} />
 					</section>
 
-					<section className="my-32">
+					<section className="my-[25vh]">
 						<FAQPage
 							faqs={{
 								Capabilities: [

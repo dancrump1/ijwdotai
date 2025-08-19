@@ -43,6 +43,18 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+			{
+				protocol: "https",
+				hostname: "admin.playground.drivedev.net",
+				port: "",
+				pathname: "/**",
+			},
+			{
+				protocol: "https",
+				hostname: "drivebrandstudio.com",
+				port: "",
+				pathname: "/**",
+			},
     ],
   },
 };

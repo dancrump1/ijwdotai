@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/hoversquaresusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { ClipPathLinks } from \"@/registry/open-source/hover-squares\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"bg-neutral-50 px-4 py-12\">\n\t\t\t\t<div className=\"mx-auto max-w-7xl\">\n\t\t\t\t\t<ClipPathLinks />\n\t\t\t\t</div>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { ClipPathLinks } from \"@/registry/open-source/hover-squares\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<div className=\"bg-background px-4 py-12\">\n\t\t\t\t<div className=\"mx-auto max-w-7xl\">\n\t\t\t\t\t<ClipPathLinks />\n\t\t\t\t</div>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

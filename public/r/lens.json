@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/lensusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Image from \"next/image\";\n\nimport { Lens } from \"@/registry/open-source/lens\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<Lens>\n\t\t\t\t<Image\n\t\t\t\t\tsrc={\"/itjustworks.jpg\"}\n\t\t\t\t\talt={\"it just woks\"}\n\t\t\t\t\twidth={100}\n\t\t\t\t\theight={100}\n\t\t\t\t\tclassName=\"object-cover max-h-[80vh] w-auto mx-auto border-8 border-background\"\n\t\t\t\t/>\n\t\t\t</Lens>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport Image from \"next/image\";\n\nimport { Lens } from \"@/registry/open-source/lens\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<Lens>\n\t\t\t\t<Image\n\t\t\t\t\tsrc={\"/itjustworks.jpg\"}\n\t\t\t\t\talt={\"it just woks\"}\n\t\t\t\t\twidth={100}\n\t\t\t\t\theight={100}\n\t\t\t\t\tclassName=\"object-cover max-h-[80vh] w-auto mx-auto border-8 border-background\"\n\t\t\t\t/>\n\t\t\t</Lens>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

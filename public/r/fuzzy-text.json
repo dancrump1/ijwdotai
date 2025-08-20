@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/fuzzytextusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport FuzzyText from \"@/registry/open-source/fuzzy-text\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<FuzzyText baseIntensity={0.2} hoverIntensity={0.2} enableHover={true}>\n\t\t\t\t404\n\t\t\t</FuzzyText>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport FuzzyText from \"@/registry/open-source/fuzzy-text\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<FuzzyText baseIntensity={0.2} hoverIntensity={0.2} enableHover={true}>\n\t\t\t\t404\n\t\t\t</FuzzyText>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

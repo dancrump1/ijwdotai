@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/textsplitusage.tsx",
-      "content": "\"use client\";\n\nimport TextSplit from \"@/registry/open-source/text-split\";\n\nexport default function TextRotateUsage() {\n\treturn (\n\t\t<div className=\"w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24\">\n\t\t\t<TextSplit\n\t\t\t\tclassName=\"text-9xl font-semibold uppercase\"\n\t\t\t\ttopClassName=\"text-red-500\"\n\t\t\t\tbottomClassName=\"text-zinc-950 dark:text-zinc-50\"\n\t\t\t>\n\t\t\t\tBerlix UI\n\t\t\t</TextSplit>\n\t\t\t;{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport TextSplit from \"@/registry/open-source/text-split\";\n\nexport default function TextRotateUsage() {\n\treturn (\n\t\t<div className=\"w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-background dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24\">\n\t\t\t<TextSplit\n\t\t\t\tclassName=\"text-9xl font-semibold uppercase\"\n\t\t\t\ttopClassName=\"text-red-500\"\n\t\t\t\tbottomClassName=\"text-secondary dark:text-secondary\"\n\t\t\t>\n\t\t\t\tBerlix UI\n\t\t\t</TextSplit>\n\t\t\t;{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

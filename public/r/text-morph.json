@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/textmorphusage.tsx",
-      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { TextMorph } from \"@/registry/open-source/text-morph\";\n\nexport default function TextMorphButton() {\n\tconst [text, setText] = useState(\"Continue\");\n\n\treturn (\n\t\t<button\n\t\t\tonClick={() => setText(text === \"Continue\" ? \"Confirm\" : \"Continue\")}\n\t\t\tclassName=\"flex h-10 w-[120px] shrink-0 items-center justify-center rounded-full bg-black px-4 text-base font-medium text-zinc-50 shadow-xs transition-colors hover:bg-zinc-800 dark:bg-zinc-50 dark:text-black dark:hover:bg-zinc-200\"\n\t\t>\n\t\t\t<TextMorph>{text}</TextMorph>\n\t\t</button>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { TextMorph } from \"@/registry/open-source/text-morph\";\n\nexport default function TextMorphButton() {\n\tconst [text, setText] = useState(\"Continue\");\n\n\treturn (\n\t\t<button\n\t\t\tonClick={() => setText(text === \"Continue\" ? \"Confirm\" : \"Continue\")}\n\t\t\tclassName=\"flex h-10 w-[120px] shrink-0 items-center justify-center rounded-full bg-background px-4 text-base font-medium text-secondary shadow-xs transition-colors hover:bg-background dark:bg-background dark:text-secondary dark:hover:bg-background\"\n\t\t>\n\t\t\t<TextMorph>{text}</TextMorph>\n\t\t</button>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

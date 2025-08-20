@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/wordtornadousage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport WordTornadoDemo from \"@/registry/open-source/word-tornado\";\n\nexport default function WordTornadoUsage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<WordTornadoDemo />\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport WordTornadoDemo from \"@/registry/open-source/word-tornado\";\n\nexport default function WordTornadoUsage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<WordTornadoDemo />\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

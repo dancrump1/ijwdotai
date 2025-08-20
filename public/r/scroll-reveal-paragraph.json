@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/scrollrevealparagraphusage.tsx",
-      "content": "\"use client\";\n\nimport React, { useCallback, useState } from \"react\";\n\nimport { ScrollIsland } from \"@/registry/open-source/scroll-island\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\"></div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React, { useCallback, useState } from \"react\";\n\nimport { ScrollIsland } from \"@/registry/open-source/scroll-island\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\"></div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

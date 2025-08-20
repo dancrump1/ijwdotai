@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/textanimateusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TextAnimate from \"@/registry/open-source/text-animate\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<TextAnimate\n\t\t\t\tonce={true}\n\t\t\t\tanimation=\"fadeIn\"\n\t\t\t\tby=\"character\"\n\t\t\t\tduration={1}\n\t\t\t>\n\t\t\t\tComponents\n\t\t\t</TextAnimate>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TextAnimate from \"@/registry/open-source/text-animate\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<TextAnimate\n\t\t\t\tonce={true}\n\t\t\t\tanimation=\"fadeIn\"\n\t\t\t\tby=\"character\"\n\t\t\t\tduration={1}\n\t\t\t>\n\t\t\t\tComponents\n\t\t\t</TextAnimate>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/textfocususage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TextFocus from \"@/registry/open-source/text-focus\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<TextFocus\n\t\t\t\tsentence=\"True Focus\"\n\t\t\t\tmanualMode={false}\n\t\t\t\tblurAmount={5}\n\t\t\t\tborderColor=\"red\"\n\t\t\t\tanimationDuration={2}\n\t\t\t\tpauseBetweenAnimations={1}\n\t\t\t/>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport TextFocus from \"@/registry/open-source/text-focus\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<TextFocus\n\t\t\t\tsentence=\"True Focus\"\n\t\t\t\tmanualMode={false}\n\t\t\t\tblurAmount={5}\n\t\t\t\tborderColor=\"red\"\n\t\t\t\tanimationDuration={2}\n\t\t\t\tpauseBetweenAnimations={1}\n\t\t\t/>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

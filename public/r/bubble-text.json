@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/bubbletextusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport BubbleText from \"@/registry/open-source/bubble-text\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"grid h-screen place-content-center bg-black\">\n\t\t\t\t<BubbleText text=\"bubble text\" />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport BubbleText from \"@/registry/open-source/bubble-text\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<div className=\"grid h-screen place-content-center bg-background\">\n\t\t\t\t<BubbleText text=\"bubble text\" />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/shapeblurusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ShapeBlur from \"@/registry/open-source/shape-blur\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: \"relative\",\n\t\t\t\t\theight: \"500px\",\n\t\t\t\t\toverflow: \"hidden\",\n\t\t\t\t}}\n\t\t\t>\n\t\t\t\t<ShapeBlur\n\t\t\t\t\tvariation={0}\n\t\t\t\t\tpixelRatioProp={window.devicePixelRatio || 1}\n\t\t\t\t\tshapeSize={0.5}\n\t\t\t\t\troundness={0.5}\n\t\t\t\t\tborderSize={0.05}\n\t\t\t\t\tcircleSize={0.5}\n\t\t\t\t\tcircleEdge={1}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport ShapeBlur from \"@/registry/open-source/shape-blur\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<div\n\t\t\t\tstyle={{\n\t\t\t\t\tposition: \"relative\",\n\t\t\t\t\theight: \"500px\",\n\t\t\t\t\toverflow: \"hidden\",\n\t\t\t\t}}\n\t\t\t>\n\t\t\t\t<ShapeBlur\n\t\t\t\t\tvariation={0}\n\t\t\t\t\tpixelRatioProp={window.devicePixelRatio || 1}\n\t\t\t\t\tshapeSize={0.5}\n\t\t\t\t\troundness={0.5}\n\t\t\t\t\tborderSize={0.05}\n\t\t\t\t\tcircleSize={0.5}\n\t\t\t\t\tcircleEdge={1}\n\t\t\t\t/>\n\t\t\t</div>{\" \"}\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

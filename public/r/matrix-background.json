@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/matrixbackgroundusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport MatrixBackground from \"@/registry/open-source/matrix-background\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<div className=\"h-[50vh] w-full relative\">\n\t\t\t\t<MatrixBackground />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport MatrixBackground from \"@/registry/open-source/matrix-background\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<div className=\"h-[50vh] w-full relative\">\n\t\t\t\t<MatrixBackground />\n\t\t\t</div>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

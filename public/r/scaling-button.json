@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/scalingbuttonusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { ScalingButton } from \"@/registry/open-source/scaling-button\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<ScalingButton>test test 123</ScalingButton>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { ScalingButton } from \"@/registry/open-source/scaling-button\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<ScalingButton>test test 123</ScalingButton>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

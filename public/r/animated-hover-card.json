@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "components/usages/animatedhovercardusage.tsx",
-      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport AnimatedCard from \"@/registry/open-source/animated-hover-card\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-black\">\n\t\t\t<AnimatedCard\n\t\t\t\ttitle=\"Hover to see the wizardry\"\n\t\t\t\tsubtitle=\"You hovered\"\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport AnimatedCard from \"@/registry/open-source/animated-hover-card\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<AnimatedCard\n\t\t\t\ttitle=\"Hover to see the wizardry\"\n\t\t\t\tsubtitle=\"You hovered\"\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:block",
       "target": "~/example.tsx"
     },

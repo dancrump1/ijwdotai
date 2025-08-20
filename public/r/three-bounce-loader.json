@@ -13,7 +13,7 @@
     },
     {
       "path": "registry/open-source/three-bounce-loader.tsx",
-      "content": "const ThreeDotSimpleLoader = () => {\n\treturn (\n\t\t<div className=\"flex items-center justify-center space-x-2 dark:invert\">\n\t\t\t<span className=\"sr-only\">Loading...</span>\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900 [animation-delay:-0.3s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900 [animation-delay:-0.15s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-neutral-900\" />\n\t\t</div>\n\t);\n};\n\nexport default ThreeDotSimpleLoader;\n",
+      "content": "const ThreeDotSimpleLoader = () => {\n\treturn (\n\t\t<div className=\"flex items-center justify-center space-x-2 dark:invert\">\n\t\t\t<span className=\"sr-only\">Loading...</span>\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-background [animation-delay:-0.3s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-background [animation-delay:-0.15s]\" />\n\t\t\t<div className=\"size-7 animate-bounce rounded-full bg-background\" />\n\t\t</div>\n\t);\n};\n\nexport default ThreeDotSimpleLoader;\n",
       "type": "registry:ui"
     }
   ]

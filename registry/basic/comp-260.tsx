@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 
 export default function Component() {
 	const min_price = 5;

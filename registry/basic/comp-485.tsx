@@ -2,9 +2,6 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -15,10 +12,10 @@ import {
 	AlertDialogHeader,
 	AlertDialogTitle,
 	AlertDialogTrigger,
-} from "@/registry/default/ui/alert-dialog";
-import { Badge } from "@/registry/default/ui/badge";
-import { Button } from "@/registry/default/ui/button";
-import { Checkbox } from "@/registry/default/ui/checkbox";
+} from "@/components/ui/alert-dialog";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
 	DropdownMenu,
 	DropdownMenuCheckboxItem,
@@ -33,24 +30,26 @@ import {
 	DropdownMenuSubContent,
 	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
 	Pagination,
 	PaginationContent,
 	PaginationItem,
-} from "@/registry/default/ui/pagination";
+} from "@/components/ui/pagination";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
+} from "@/components/ui/popover";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 import {
 	Table,
 	TableBody,
@@ -58,7 +57,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/registry/default/ui/table";
+} from "@/components/ui/table";
 import {
 	ColumnDef,
 	ColumnFiltersState,
@@ -91,6 +90,8 @@ import {
 	PlusIcon,
 	TrashIcon,
 } from "lucide-react";
+
+import { cn } from "../utilities/cn";
 
 type Item = {
 	id: string;

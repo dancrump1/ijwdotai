@@ -2,11 +2,7 @@
 
 import { useId, useState } from "react";
 
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useCharacterLimit } from "@/registry/default/hooks/use-character-limit";
-import { useFileUpload } from "@/registry/default/hooks/use-file-upload";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogClose,
@@ -16,9 +12,14 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/registry/default/ui/dialog";
-import { Textarea } from "@/registry/default/ui/textarea";
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { CheckIcon, ImagePlusIcon, XIcon } from "lucide-react";
+
+import { useCharacterLimit } from "../utilities/useCharacterLimit";
+import { useFileUpload } from "../utilities/usefileUpload";
 
 // Pretend we have initial image files
 const initialBgImage = [

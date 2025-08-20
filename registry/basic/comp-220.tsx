@@ -7,7 +7,7 @@ import {
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 
 function StatusDot({ className }: { className?: string }) {
 	return (

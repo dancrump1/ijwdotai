@@ -1,7 +1,7 @@
 "use client";
 
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 
 export default function Component() {
 	return (

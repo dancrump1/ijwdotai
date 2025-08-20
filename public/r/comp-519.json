@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-519",
+  "type": "registry:block",
+  "title": "Comp 519",
+  "description": "Comp 519",
+  "files": [
+    {
+      "path": "registry/basic/comp-519.tsx",
+      "content": "import {\n\tStepper,\n\tStepperIndicator,\n\tStepperItem,\n\tStepperTitle,\n\tStepperTrigger,\n} from \"@/components/ui/stepper\";\n\nconst steps = [\n\t{\n\t\tstep: 1,\n\t\ttitle: \"Step One\",\n\t},\n\t{\n\t\tstep: 2,\n\t\ttitle: \"Step Two\",\n\t},\n\t{\n\t\tstep: 3,\n\t\ttitle: \"Step Three\",\n\t},\n\t{\n\t\tstep: 4,\n\t\ttitle: \"Step Four\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"mx-auto max-w-xl space-y-8 text-center\">\n\t\t\t<Stepper defaultValue={2} className=\"items-start gap-4\">\n\t\t\t\t{steps.map(({ step, title }) => (\n\t\t\t\t\t<StepperItem key={step} step={step} className=\"flex-1\">\n\t\t\t\t\t\t<StepperTrigger className=\"w-full flex-col items-start gap-2 rounded\">\n\t\t\t\t\t\t\t<StepperIndicator asChild className=\"bg-border h-1 w-full\">\n\t\t\t\t\t\t\t\t<span className=\"sr-only\">{step}</span>\n\t\t\t\t\t\t\t</StepperIndicator>\n\t\t\t\t\t\t\t<div className=\"space-y-0.5\">\n\t\t\t\t\t\t\t\t<StepperTitle>{title}</StepperTitle>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</StepperTrigger>\n\t\t\t\t\t</StepperItem>\n\t\t\t\t))}\n\t\t\t</Stepper>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tStepper with labels\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

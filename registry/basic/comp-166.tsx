@@ -1,8 +1,8 @@
 import { useId } from "react";
 
+import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/registry/default/ui/badge";
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function Component() {
 	const id = useId();

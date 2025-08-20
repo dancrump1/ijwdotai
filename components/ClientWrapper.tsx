@@ -138,8 +138,14 @@ export const ClientWrapper = ({
 		);
 	}, [files, params?.slug, searchFilters]);
 
-	const componentImports = filteredFiles.map(({ name }) =>
-		dynamic(
+	const componentImports = filteredFiles.map(({ name }) => {
+		if (name.includes("comp-")) {
+			return dynamic(() => import("@/registry/basic/" + name), {
+				loading: ComponentLoading,
+			});
+		}
+
+		return dynamic(
 			() =>
 				import(
 					"@/components/usages/" +
@@ -156,8 +162,8 @@ export const ClientWrapper = ({
 						? false
 						: true,
 			}
-		)
-	);
+		);
+	});
 	const containerRef = useRef(null);
 
 	const [basic, setBasic] = useState(false);

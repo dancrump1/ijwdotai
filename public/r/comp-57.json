@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-57",
+  "type": "registry:block",
+  "title": "Comp 57",
+  "description": "Comp 57",
+  "files": [
+    {
+      "path": "registry/basic/comp-57.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Tag, TagInput } from \"emblor\";\n\nconst tags = [\n\t{\n\t\tid: \"1\",\n\t\ttext: \"Red\",\n\t},\n];\n\nexport default function Component() {\n\tconst id = useId();\n\tconst [exampleTags, setExampleTags] = useState<Tag[]>(tags);\n\tconst [activeTagIndex, setActiveTagIndex] = useState<number | null>(null);\n\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Input with inner tags</Label>\n\t\t\t<TagInput\n\t\t\t\tid={id}\n\t\t\t\ttags={exampleTags}\n\t\t\t\tsetTags={(newTags) => {\n\t\t\t\t\tsetExampleTags(newTags);\n\t\t\t\t}}\n\t\t\t\tplaceholder=\"Add a tag\"\n\t\t\t\tstyleClasses={{\n\t\t\t\t\tinlineTagsContainer:\n\t\t\t\t\t\t\"border-input rounded-md bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring outline-none focus-within:ring-[3px] focus-within:ring-ring/50 p-1 gap-1\",\n\t\t\t\t\tinput: \"w-full min-w-[80px] shadow-none px-2 h-7\",\n\t\t\t\t\ttag: {\n\t\t\t\t\t\tbody: \"h-7 relative bg-background border border-input hover:bg-background rounded-md font-medium text-xs ps-2 pe-7\",\n\t\t\t\t\t\tcloseButton:\n\t\t\t\t\t\t\t\"absolute -inset-y-px -end-px p-0 rounded-e-md flex size-7 transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] text-muted-foreground/80 hover:text-foreground\",\n\t\t\t\t\t},\n\t\t\t\t}}\n\t\t\t\tactiveTagIndex={activeTagIndex}\n\t\t\t\tsetActiveTagIndex={setActiveTagIndex}\n\t\t\t/>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tBuilt with{\" \"}\n\t\t\t\t<a\n\t\t\t\t\tclassName=\"hover:text-foreground underline\"\n\t\t\t\t\thref=\"https://github.com/JaleelB/emblor\"\n\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\trel=\"noopener nofollow\"\n\t\t\t\t>\n\t\t\t\t\temblor\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst labelVariants = cva(\n\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n);\n\nconst Label = React.forwardRef<\n\tReact.ElementRef<typeof LabelPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n\t\tVariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n\t<LabelPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(labelVariants(), className)}\n\t\t{...props}\n\t/>\n));\nLabel.displayName = LabelPrimitive.Root.displayName;\n\nexport { Label };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

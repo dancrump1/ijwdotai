@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/registry/default/ui/switch";
+import { Switch } from "@/components/ui/switch";
 import { MoonIcon, SunIcon } from "lucide-react";
 
 export default function Component() {

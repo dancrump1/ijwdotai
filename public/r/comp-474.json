@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-474",
+  "type": "registry:block",
+  "title": "Comp 474",
+  "description": "Comp 474",
+  "files": [
+    {
+      "path": "registry/basic/comp-474.tsx",
+      "content": "import { Table, TableBody, TableCell, TableRow } from \"@/components/ui/table\";\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"mx-auto max-w-lg\">\n\t\t\t<div className=\"bg-background overflow-hidden rounded-md border\">\n\t\t\t\t<Table>\n\t\t\t\t\t<TableBody>\n\t\t\t\t\t\t<TableRow className=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\">\n\t\t\t\t\t\t\t<TableCell className=\"bg-muted/50 py-2 font-medium\">\n\t\t\t\t\t\t\t\tName\n\t\t\t\t\t\t\t</TableCell>\n\t\t\t\t\t\t\t<TableCell className=\"py-2\">David Kim</TableCell>\n\t\t\t\t\t\t</TableRow>\n\t\t\t\t\t\t<TableRow className=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\">\n\t\t\t\t\t\t\t<TableCell className=\"bg-muted/50 py-2 font-medium\">\n\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t</TableCell>\n\t\t\t\t\t\t\t<TableCell className=\"py-2\">d.kim@company.com</TableCell>\n\t\t\t\t\t\t</TableRow>\n\t\t\t\t\t\t<TableRow className=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\">\n\t\t\t\t\t\t\t<TableCell className=\"bg-muted/50 py-2 font-medium\">\n\t\t\t\t\t\t\t\tLocation\n\t\t\t\t\t\t\t</TableCell>\n\t\t\t\t\t\t\t<TableCell className=\"py-2\">Seoul, KR</TableCell>\n\t\t\t\t\t\t</TableRow>\n\t\t\t\t\t\t<TableRow className=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\">\n\t\t\t\t\t\t\t<TableCell className=\"bg-muted/50 py-2 font-medium\">\n\t\t\t\t\t\t\t\tStatus\n\t\t\t\t\t\t\t</TableCell>\n\t\t\t\t\t\t\t<TableCell className=\"py-2\">Active</TableCell>\n\t\t\t\t\t\t</TableRow>\n\t\t\t\t\t\t<TableRow className=\"*:border-border hover:bg-transparent [&>:not(:last-child)]:border-r\">\n\t\t\t\t\t\t\t<TableCell className=\"bg-muted/50 py-2 font-medium\">\n\t\t\t\t\t\t\t\tBalance\n\t\t\t\t\t\t\t</TableCell>\n\t\t\t\t\t\t\t<TableCell className=\"py-2\">$1,000.00</TableCell>\n\t\t\t\t\t\t</TableRow>\n\t\t\t\t\t</TableBody>\n\t\t\t\t</Table>\n\t\t\t</div>\n\t\t\t<p className=\"text-muted-foreground mt-4 text-center text-sm\">\n\t\t\t\tVertical table\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

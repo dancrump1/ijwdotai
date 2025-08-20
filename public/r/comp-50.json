@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-50",
+  "type": "registry:block",
+  "title": "Comp 50",
+  "description": "Comp 50",
+  "files": [
+    {
+      "path": "registry/basic/comp-50.tsx",
+      "content": "\"use client\";\n\nimport { useId } from \"react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { CreditCardIcon } from \"lucide-react\";\nimport { usePaymentInputs } from \"react-payment-inputs\";\nimport images, { type CardImages } from \"react-payment-inputs/images\";\n\nexport default function Component() {\n\tconst id = useId();\n\tconst {\n\t\tmeta,\n\t\tgetCardNumberProps,\n\t\tgetExpiryDateProps,\n\t\tgetCVCProps,\n\t\tgetCardImageProps,\n\t} = usePaymentInputs();\n\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<legend className=\"text-foreground text-sm font-medium\">\n\t\t\t\tCard Details\n\t\t\t</legend>\n\t\t\t<div className=\"rounded-md shadow-xs\">\n\t\t\t\t<div className=\"relative focus-within:z-10\">\n\t\t\t\t\t<Input\n\t\t\t\t\t\tclassName=\"peer rounded-b-none pe-9 shadow-none [direction:inherit]\"\n\t\t\t\t\t\t{...getCardNumberProps()}\n\t\t\t\t\t\tid={`number-${id}`}\n\t\t\t\t\t/>\n\t\t\t\t\t<div className=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 peer-disabled:opacity-50\">\n\t\t\t\t\t\t{meta.cardType ? (\n\t\t\t\t\t\t\t<svg\n\t\t\t\t\t\t\t\tclassName=\"overflow-hidden rounded-sm\"\n\t\t\t\t\t\t\t\t{...getCardImageProps({\n\t\t\t\t\t\t\t\t\timages: images as unknown as CardImages,\n\t\t\t\t\t\t\t\t})}\n\t\t\t\t\t\t\t\twidth={20}\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t) : (\n\t\t\t\t\t\t\t<CreditCardIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t\t)}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div className=\"-mt-px flex\">\n\t\t\t\t\t<div className=\"min-w-0 flex-1 focus-within:z-10\">\n\t\t\t\t\t\t<Input\n\t\t\t\t\t\t\tclassName=\"rounded-e-none rounded-t-none shadow-none [direction:inherit]\"\n\t\t\t\t\t\t\t{...getExpiryDateProps()}\n\t\t\t\t\t\t\tid={`expiry-${id}`}\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div className=\"-ms-px min-w-0 flex-1 focus-within:z-10\">\n\t\t\t\t\t\t<Input\n\t\t\t\t\t\t\tclassName=\"rounded-s-none rounded-t-none shadow-none [direction:inherit]\"\n\t\t\t\t\t\t\t{...getCVCProps()}\n\t\t\t\t\t\t\tid={`cvc-${id}`}\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tBuilt with{\" \"}\n\t\t\t\t<a\n\t\t\t\t\tclassName=\"hover:text-foreground underline\"\n\t\t\t\t\thref=\"https://github.com/medipass/react-payment-inputs\"\n\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\trel=\"noopener nofollow\"\n\t\t\t\t>\n\t\t\t\t\tReact Payment Inputs\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/input.tsx",
+      "content": "// SHADCN UI GENERATED CODE\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\n\nexport interface InputProps\n\textends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n\t({ className, type, ...props }, ref) => {\n\t\treturn (\n\t\t\t<input\n\t\t\t\ttype={type}\n\t\t\t\tclassName={cn(\n\t\t\t\t\t\"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n\t\t\t\t\tclassName\n\t\t\t\t)}\n\t\t\t\tref={ref}\n\t\t\t\t{...props}\n\t\t\t/>\n\t\t);\n\t}\n);\nInput.displayName = \"Input\";\n\nexport { Input };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

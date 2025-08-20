@@ -9,7 +9,7 @@ import {
 	SelectLabel,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 
 const countries = [
 	{

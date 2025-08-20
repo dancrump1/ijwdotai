@@ -1,21 +1,21 @@
 import { useId } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
-import { Button } from "@/registry/default/ui/button";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-} from "@/registry/default/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
+} from "@/components/ui/popover";
+import Logo from "@/registry/default/components/navbar-components/logo";
+import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
+import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { SearchIcon } from "lucide-react";
 
 // Navigation links array to be used in both desktop and mobile menus

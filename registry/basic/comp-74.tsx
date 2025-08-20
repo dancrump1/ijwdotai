@@ -3,8 +3,9 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import { useCharacterLimit } from "@/registry/default/hooks/use-character-limit";
-import { Textarea } from "@/registry/default/ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
+
+import { useCharacterLimit } from "../utilities/useCharacterLimit";
 
 export default function Component() {
 	const id = useId();

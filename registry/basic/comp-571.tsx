@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import { Input } from "@/components/ui/input";
-import { Tree, TreeItem, TreeItemLabel } from "@/registry/default/ui/tree";
+import { Tree, TreeItem, TreeItemLabel } from "@/components/ui/tree";
 import {
 	expandAllFeature,
 	hotkeysCoreFeature,

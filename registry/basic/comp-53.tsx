@@ -4,14 +4,15 @@ import { useId, useRef, useState } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
-} from "@/registry/default/ui/tooltip";
+} from "@/components/ui/tooltip";
 import { CheckIcon, CopyIcon } from "lucide-react";
+
+import { cn } from "../utilities/cn";
 
 export default function Component() {
 	const id = useId();

@@ -4,7 +4,8 @@ import { useId } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useCharacterLimit } from "@/registry/default/hooks/use-character-limit";
+
+import { useCharacterLimit } from "../utilities/useCharacterLimit";
 
 export default function Component() {
 	const id = useId();

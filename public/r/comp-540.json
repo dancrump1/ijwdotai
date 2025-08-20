@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-540",
+  "type": "registry:block",
+  "title": "Comp 540",
+  "description": "Comp 540",
+  "files": [
+    {
+      "path": "registry/basic/comp-540.tsx",
+      "content": "import {\n\tTimeline,\n\tTimelineContent,\n\tTimelineDate,\n\tTimelineHeader,\n\tTimelineIndicator,\n\tTimelineItem,\n\tTimelineSeparator,\n\tTimelineTitle,\n} from \"@/components/ui/timeline\";\n\nconst items = [\n\t{\n\t\tid: 1,\n\t\tdate: \"Mar 15, 2024\",\n\t\ttitle: \"Project Kickoff\",\n\t\tdescription: \"Initial team meeting.\",\n\t},\n\t{\n\t\tid: 2,\n\t\tdate: \"Mar 22, 2024\",\n\t\ttitle: \"Design Phase\",\n\t\tdescription: \"Completed wireframes.\",\n\t},\n\t{\n\t\tid: 3,\n\t\tdate: \"Apr 5, 2024\",\n\t\ttitle: \"Development Sprint\",\n\t\tdescription: \"Backend development.\",\n\t},\n\t{\n\t\tid: 4,\n\t\tdate: \"Apr 19, 2024\",\n\t\ttitle: \"Testing & Deployment\",\n\t\tdescription: \"Performance optimization.\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<Timeline defaultValue={3} orientation=\"horizontal\">\n\t\t\t{items.map((item) => (\n\t\t\t\t<TimelineItem key={item.id} step={item.id}>\n\t\t\t\t\t<TimelineHeader>\n\t\t\t\t\t\t<TimelineSeparator />\n\t\t\t\t\t\t<TimelineDate>{item.date}</TimelineDate>\n\t\t\t\t\t\t<TimelineTitle>{item.title}</TimelineTitle>\n\t\t\t\t\t\t<TimelineIndicator />\n\t\t\t\t\t</TimelineHeader>\n\t\t\t\t\t<TimelineContent>{item.description}</TimelineContent>\n\t\t\t\t</TimelineItem>\n\t\t\t))}\n\t\t</Timeline>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

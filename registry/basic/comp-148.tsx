@@ -2,9 +2,9 @@
 
 import { Fragment, useId } from "react";
 
+import { Checkbox } from "@/components/ui/checkbox";
+import { CheckboxTree } from "@/components/ui/checkbox-tree";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/registry/default/ui/checkbox";
-import { CheckboxTree } from "@/registry/default/ui/checkbox-tree";
 
 interface TreeNode {
 	id: string;

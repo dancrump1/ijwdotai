@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-439",
+  "type": "registry:block",
+  "title": "Comp 439",
+  "description": "Comp 439",
+  "files": [
+    {
+      "path": "registry/basic/comp-439.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function Component() {\n\treturn (\n\t\t<Tabs defaultValue=\"tab-1\">\n\t\t\t<TabsList className=\"mx-auto flex w-full max-w-xs bg-transparent\">\n\t\t\t\t<TabsTrigger\n\t\t\t\t\tvalue=\"tab-1\"\n\t\t\t\t\tclassName=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n\t\t\t\t>\n\t\t\t\t\t<Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n\t\t\t\t\t\t3\n\t\t\t\t\t</Badge>\n\t\t\t\t\tOverview\n\t\t\t\t</TabsTrigger>\n\t\t\t\t<TabsTrigger\n\t\t\t\t\tvalue=\"tab-2\"\n\t\t\t\t\tclassName=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n\t\t\t\t>\n\t\t\t\t\t<Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n\t\t\t\t\t\t0\n\t\t\t\t\t</Badge>\n\t\t\t\t\tProjects\n\t\t\t\t</TabsTrigger>\n\t\t\t\t<TabsTrigger\n\t\t\t\t\tvalue=\"tab-3\"\n\t\t\t\t\tclassName=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none\"\n\t\t\t\t>\n\t\t\t\t\t<Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n\t\t\t\t\t\t7\n\t\t\t\t\t</Badge>\n\t\t\t\t\tPackages\n\t\t\t\t</TabsTrigger>\n\t\t\t</TabsList>\n\t\t\t<TabsContent value=\"tab-1\">\n\t\t\t\t<p className=\"text-muted-foreground p-4 text-center text-xs\">\n\t\t\t\t\tContent for Tab 1\n\t\t\t\t</p>\n\t\t\t</TabsContent>\n\t\t\t<TabsContent value=\"tab-2\">\n\t\t\t\t<p className=\"text-muted-foreground p-4 text-center text-xs\">\n\t\t\t\t\tContent for Tab 2\n\t\t\t\t</p>\n\t\t\t</TabsContent>\n\t\t\t<TabsContent value=\"tab-3\">\n\t\t\t\t<p className=\"text-muted-foreground p-4 text-center text-xs\">\n\t\t\t\t\tContent for Tab 3\n\t\t\t\t</p>\n\t\t\t</TabsContent>\n\t\t</Tabs>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "content": "import React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst badgeVariants = cva(\n\t\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault:\n\t\t\t\t\t\"border-transparent bg-primary text-primary-foreground hover:bg-primary/80\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80\",\n\t\t\t\toutline: \"text-foreground\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t}\n);\n\nexport interface BadgeProps\n\textends React.HTMLAttributes<HTMLDivElement>,\n\t\tVariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n\treturn (\n\t\t<div className={cn(badgeVariants({ variant }), className)} {...props} />\n\t);\n}\n\nexport { Badge, badgeVariants };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/tabs.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\";\n\nconst Tabs = TabsPrimitive.Root;\n\nconst TabsList = React.forwardRef<\n\tReact.ElementRef<typeof TabsPrimitive.List>,\n\tReact.ComponentPropsWithoutRef<typeof TabsPrimitive.List>\n>(({ className, ...props }, ref) => (\n\t<TabsPrimitive.List\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t/>\n));\nTabsList.displayName = TabsPrimitive.List.displayName;\n\nconst TabsTrigger = React.forwardRef<\n\tReact.ElementRef<typeof TabsPrimitive.Trigger>,\n\tReact.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>\n>(({ className, ...props }, ref) => (\n\t<TabsPrimitive.Trigger\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t/>\n));\nTabsTrigger.displayName = TabsPrimitive.Trigger.displayName;\n\nconst TabsContent = React.forwardRef<\n\tReact.ElementRef<typeof TabsPrimitive.Content>,\n\tReact.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>\n>(({ className, ...props }, ref) => (\n\t<TabsPrimitive.Content\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t/>\n));\nTabsContent.displayName = TabsPrimitive.Content.displayName;\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

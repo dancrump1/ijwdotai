@@ -68,7 +68,8 @@ const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
 	// Prefix registry subfolders
 	if (
 		relativePath.startsWith("open-source/") ||
-		relativePath.startsWith("utilities/")
+		relativePath.startsWith("utilities/") ||
+		relativePath.startsWith("basic/")
 	) {
 		relativePath = `registry/${relativePath}`;
 	}
@@ -76,6 +77,8 @@ const scanFileRecursively = (absolutePath, visitedFiles = new Set()) => {
 	// Target path rules
 	let targetPath;
 	if (relativePath.startsWith("registry/open-source/")) {
+		targetPath = `components/${path.basename(absolutePath)}`;
+	} else if (relativePath.startsWith("registry/basic")) {
 		targetPath = `components/${path.basename(absolutePath)}`;
 	} else if (relativePath.startsWith("registry/")) {
 		targetPath = relativePath.replace(/^registry\//, "");
@@ -176,36 +179,77 @@ const buildRegistryItem = (usageFile, allComponentFiles) => {
 	};
 };
 
+const buildBasicRegistryItem = (usageFile, allComponentFiles) => {
+	const absoluteComponentPath = path.join(openSourceBasicPath, usageFile);
+	const componentName = usageFile.replace(".tsx", "");
+
+	const allFiles = scanFileRecursively(absoluteComponentPath);
+	const uniqueFiles = Array.from(
+		new Map(allFiles.map((f) => [f.path, f])).values()
+	);
+
+	const exampleFileName = `${componentName.toLowerCase().replaceAll("-", "")}usage.tsx`;
+	const exampleFilePath = path.join(
+		process.cwd(),
+		"components/usages",
+		exampleFileName
+	);
+
+	if (fs.existsSync(exampleFilePath)) {
+		uniqueFiles.unshift({
+			path: `components/usages/${exampleFileName}`,
+			type: "registry:block",
+			target: "~/example.tsx",
+		});
+	}
+
+	return {
+		name: componentName.toLowerCase(),
+		type: "registry:block",
+		title: toTitleCase(componentName),
+		description: toTitleCase(componentName),
+		files: uniqueFiles,
+	};
+};
+
 // generate .json file containing contents of ShadCN Registry
 const buildRegistry = () => {
+	// Example files for open-source components
 	const allUsageFiles = fs
 		.readdirSync(usagesPath)
 		.filter((f) => f.endsWith(".tsx"));
 
+	// All open-source files
 	const componentFiles = fs
 		.readdirSync(openSourcePath)
 		.filter((f) => f.endsWith(".tsx"));
 
+	// All basic files
 	const basicFiles = fs
 		.readdirSync(openSourceBasicPath)
 		.filter((f) => f.endsWith(".tsx") && f.includes("-"));
 
+	// Open-source registry items
 	const registryItems = allUsageFiles
 		.map((item) => buildRegistryItem(item, componentFiles))
 		.filter(Boolean);
 
-	const basicRegistryItems = basicFiles.map((file) => {
-		return {
-			name: file,
-			type: "registry:component",
-			files: [
-				{
-					type: "registry:component",
-					path: "registry/basic/" + file,
-				},
-			],
-		};
-	});
+	// Basic registry items
+	const basicRegistryItems = basicFiles.map((item) =>
+		buildBasicRegistryItem(item, basicFiles)
+	);
+	// .map((file) => {
+	// 	return {
+	// 		name: file,
+	// 		type: "registry:component",
+	// 		files: [
+	// 			{
+	// 				type: "registry:component",
+	// 				path: "registry/basic/" + file,
+	// 			},
+	// 		],
+	// 	};
+	// });
 
 	const registryData = {
 		$schema: registrySchemaUrl,

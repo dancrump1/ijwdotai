@@ -28,11 +28,13 @@ export async function getComponentFilesWithDates(): Promise<
 					);
 					content = await fs.readFileSync(fullCompPath, "utf-8");
 				} else {
+					console.log(updatedFileName)
+
 					fullCompPath = path.join(
 						basicCompPath,
-						updatedFileName.replace(".json", ".tsx")
+						updatedFileName
 					);
-					content = await fs.readFileSync(path.join(basicCompPath, updatedFileName.replace('.json', '')), 'utf-8')
+					content = await fs.readFileSync(path.join(basicCompPath, updatedFileName.replace('.json', '.tsx')), 'utf-8')
 
 				}
 				if (stat.isFile()) {
@@ -40,7 +42,7 @@ export async function getComponentFilesWithDates(): Promise<
 						name: file,
 						content,
 					};
-				} else if (path.join(basicCompPath, updatedFileName.replace('.json', '.tsx'))) {
+				} else if (path.join(basicCompPath, updatedFileName)) {
 					return {
 						name: file,
 						content

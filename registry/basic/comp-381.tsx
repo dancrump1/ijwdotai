@@ -1,13 +1,13 @@
 import { useId } from "react";
 
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
-import { Checkbox } from "@/registry/default/ui/checkbox";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
+} from "@/components/ui/popover";
 import { ListFilterIcon } from "lucide-react";
 
 export default function Component() {

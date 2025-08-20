@@ -1,5 +1,4 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -7,7 +6,8 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/registry/default/ui/dialog";
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import { MailIcon } from "lucide-react";
 
 export default function Component() {

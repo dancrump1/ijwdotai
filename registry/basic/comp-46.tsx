@@ -4,10 +4,11 @@ import React, { useId, useState } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
 import { ChevronDownIcon, PhoneIcon } from "lucide-react";
 import * as RPNInput from "react-phone-number-input";
 import flags from "react-phone-number-input/flags";
+
+import { cn } from "../utilities/cn";
 
 export default function Component() {
 	const id = useId();

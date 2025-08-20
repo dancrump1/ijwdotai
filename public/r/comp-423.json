@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-423",
+  "type": "registry:block",
+  "title": "Comp 423",
+  "description": "Comp 423",
+  "files": [
+    {
+      "path": "registry/basic/comp-423.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { CheckIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<Badge className=\"has-data-[state=unchecked]:bg-muted has-data-[state=unchecked]:text-muted-foreground has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative outline-none has-focus-visible:ring-[3px]\">\n\t\t\t<Checkbox\n\t\t\t\tid={id}\n\t\t\t\tclassName=\"peer sr-only after:absolute after:inset-0\"\n\t\t\t\tdefaultChecked\n\t\t\t/>\n\t\t\t<CheckIcon\n\t\t\t\tsize={12}\n\t\t\t\tclassName=\"hidden peer-data-[state=checked]:block\"\n\t\t\t\taria-hidden=\"true\"\n\t\t\t/>\n\t\t\t<label\n\t\t\t\thtmlFor={id}\n\t\t\t\tclassName=\"cursor-pointer select-none after:absolute after:inset-0\"\n\t\t\t>\n\t\t\t\tSelectable\n\t\t\t</label>\n\t\t</Badge>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "content": "import React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst badgeVariants = cva(\n\t\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault:\n\t\t\t\t\t\"border-transparent bg-primary text-primary-foreground hover:bg-primary/80\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80\",\n\t\t\t\toutline: \"text-foreground\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t}\n);\n\nexport interface BadgeProps\n\textends React.HTMLAttributes<HTMLDivElement>,\n\t\tVariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n\treturn (\n\t\t<div className={cn(badgeVariants({ variant }), className)} {...props} />\n\t);\n}\n\nexport { Badge, badgeVariants };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/checkbox.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\";\nimport { Check } from \"lucide-react\";\n\nconst Checkbox = React.forwardRef<\n\tReact.ElementRef<typeof CheckboxPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>\n>(({ className, ...props }, ref) => (\n\t<CheckboxPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t>\n\t\t<CheckboxPrimitive.Indicator\n\t\t\tclassName={cn(\"flex items-center justify-center text-current\")}\n\t\t>\n\t\t\t<Check className=\"h-4 w-4\" />\n\t\t</CheckboxPrimitive.Indicator>\n\t</CheckboxPrimitive.Root>\n));\nCheckbox.displayName = CheckboxPrimitive.Root.displayName;\n\nexport { Checkbox };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

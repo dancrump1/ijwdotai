@@ -7,7 +7,7 @@ import {
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();

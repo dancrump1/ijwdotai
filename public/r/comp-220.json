@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-220",
+  "type": "registry:block",
+  "title": "Comp 220",
+  "description": "Comp 220",
+  "files": [
+    {
+      "path": "registry/basic/comp-220.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n\tSelect,\n\tSelectContent,\n\tSelectItem,\n\tSelectTrigger,\n\tSelectValue,\n} from \"@/components/ui/select\";\n\nfunction StatusDot({ className }: { className?: string }) {\n\treturn (\n\t\t<svg\n\t\t\twidth=\"8\"\n\t\t\theight=\"8\"\n\t\t\tfill=\"currentColor\"\n\t\t\tviewBox=\"0 0 8 8\"\n\t\t\txmlns=\"http://www.w3.org/2000/svg\"\n\t\t\tclassName={className}\n\t\t\taria-hidden=\"true\"\n\t\t>\n\t\t\t<circle cx=\"4\" cy=\"4\" r=\"4\" />\n\t\t</svg>\n\t);\n}\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Status select</Label>\n\t\t\t<Select defaultValue=\"1\">\n\t\t\t\t<SelectTrigger\n\t\t\t\t\tid={id}\n\t\t\t\t\tclassName=\"[&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0\"\n\t\t\t\t>\n\t\t\t\t\t<SelectValue placeholder=\"Select status\" />\n\t\t\t\t</SelectTrigger>\n\t\t\t\t<SelectContent className=\"[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0\">\n\t\t\t\t\t<SelectItem value=\"1\">\n\t\t\t\t\t\t<span className=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<StatusDot className=\"text-emerald-600\" />\n\t\t\t\t\t\t\t<span className=\"truncate\">Completed</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</SelectItem>\n\t\t\t\t\t<SelectItem value=\"2\">\n\t\t\t\t\t\t<span className=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<StatusDot className=\"text-blue-500\" />\n\t\t\t\t\t\t\t<span className=\"truncate\">In Progress</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</SelectItem>\n\t\t\t\t\t<SelectItem value=\"3\">\n\t\t\t\t\t\t<span className=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<StatusDot className=\"text-amber-500\" />\n\t\t\t\t\t\t\t<span className=\"truncate\">Pending</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</SelectItem>\n\t\t\t\t\t<SelectItem value=\"4\">\n\t\t\t\t\t\t<span className=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<StatusDot className=\"text-gray-500\" />\n\t\t\t\t\t\t\t<span className=\"truncate\">Cancelled</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</SelectItem>\n\t\t\t\t\t<SelectItem value=\"5\">\n\t\t\t\t\t\t<span className=\"flex items-center gap-2\">\n\t\t\t\t\t\t\t<StatusDot className=\"text-red-500\" />\n\t\t\t\t\t\t\t<span className=\"truncate\">Failed</span>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</SelectItem>\n\t\t\t\t</SelectContent>\n\t\t\t</Select>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst labelVariants = cva(\n\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n);\n\nconst Label = React.forwardRef<\n\tReact.ElementRef<typeof LabelPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n\t\tVariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n\t<LabelPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(labelVariants(), className)}\n\t\t{...props}\n\t/>\n));\nLabel.displayName = LabelPrimitive.Root.displayName;\n\nexport { Label };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -2,15 +2,16 @@ import { useId } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { usePagination } from "@/registry/default/hooks/use-pagination";
 import {
 	Pagination,
 	PaginationContent,
 	PaginationEllipsis,
 	PaginationItem,
 	PaginationLink,
-} from "@/registry/default/ui/pagination";
+} from "@/components/ui/pagination";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+
+import { usePagination } from "../utilities/usePagination";
 
 type PaginationProps = {
 	currentPage: number;

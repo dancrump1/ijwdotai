@@ -3,8 +3,9 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
 import { OTPInput, SlotProps } from "input-otp";
+
+import { cn } from "../utilities/cn";
 
 export default function Component() {
 	const id = useId();

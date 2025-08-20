@@ -1,7 +1,7 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import MultipleSelector, { Option } from "@/registry/default/ui/multiselect";
+import MultipleSelector, { Option } from "@/components/ui/multiselect";
 
 const frameworks: Option[] = [
 	{

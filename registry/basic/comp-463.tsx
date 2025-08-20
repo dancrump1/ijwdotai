@@ -6,14 +6,14 @@ import {
 	PaginationContent,
 	PaginationItem,
 	PaginationLink,
-} from "@/registry/default/ui/pagination";
+} from "@/components/ui/pagination";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 import {
 	ChevronFirstIcon,
 	ChevronLastIcon,

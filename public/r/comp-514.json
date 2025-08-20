@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-514",
+  "type": "registry:block",
+  "title": "Comp 514",
+  "description": "Comp 514",
+  "files": [
+    {
+      "path": "registry/basic/comp-514.tsx",
+      "content": "import {\n\tStepper,\n\tStepperIndicator,\n\tStepperItem,\n\tStepperSeparator,\n\tStepperTrigger,\n} from \"@/components/ui/stepper\";\n\nconst steps = [1, 2, 3, 4];\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"mx-auto max-w-xl space-y-8 text-center\">\n\t\t\t<Stepper defaultValue={2}>\n\t\t\t\t{steps.map((step) => (\n\t\t\t\t\t<StepperItem key={step} step={step} className=\"not-last:flex-1\">\n\t\t\t\t\t\t<StepperTrigger>\n\t\t\t\t\t\t\t<StepperIndicator />\n\t\t\t\t\t\t</StepperTrigger>\n\t\t\t\t\t\t{step < steps.length && <StepperSeparator />}\n\t\t\t\t\t</StepperItem>\n\t\t\t\t))}\n\t\t\t</Stepper>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tStepper with numbers and checkmarks\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

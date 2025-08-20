@@ -2,12 +2,13 @@
 
 import React, { useRef } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useSliderWithInput } from "@/registry/default/hooks/use-slider-with-input";
-import { Button } from "@/registry/default/ui/button";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 import { RotateCcwIcon } from "lucide-react";
+
+import { useSliderWithInput } from "../utilities/useSliderWithInput";
 
 export default function Component() {
 	// Create refs to store reset functions

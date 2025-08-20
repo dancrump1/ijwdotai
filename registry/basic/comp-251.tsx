@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { Label } from "@/components/ui/label";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 
 export default function Component() {
 	const [value, setValue] = useState([25, 75]);

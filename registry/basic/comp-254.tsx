@@ -1,18 +1,19 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useSliderWithInput } from "@/registry/default/hooks/use-slider-with-input";
-import { cn } from "@/registry/default/lib/utils";
-import { Button } from "@/registry/default/ui/button";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
-} from "@/registry/default/ui/tooltip";
+} from "@/components/ui/tooltip";
 import { RotateCcwIcon } from "lucide-react";
+
+import { cn } from "../utilities/cn";
+import { useSliderWithInput } from "../utilities/useSliderWithInput";
 
 export default function Component() {
 	const minValue = 0;

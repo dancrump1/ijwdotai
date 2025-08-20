@@ -1,7 +1,7 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import { SelectNative } from "@/registry/default/ui/select-native";
+import { SelectNative } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();

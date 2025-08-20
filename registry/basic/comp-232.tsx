@@ -2,8 +2,7 @@
 
 import { Fragment, useId, useState } from "react";
 
-import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Command,
 	CommandEmpty,
@@ -11,12 +10,13 @@ import {
 	CommandInput,
 	CommandItem,
 	CommandList,
-} from "@/registry/default/ui/command";
+} from "@/components/ui/command";
+import { Label } from "@/components/ui/label";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
+} from "@/components/ui/popover";
 import { CheckIcon, ChevronDownIcon } from "lucide-react";
 
 const countries = [

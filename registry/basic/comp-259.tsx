@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
 import { MinusIcon, PlusIcon } from "lucide-react";
 
 export default function Component() {

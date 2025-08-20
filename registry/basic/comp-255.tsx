@@ -2,8 +2,9 @@
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useSliderWithInput } from "@/registry/default/hooks/use-slider-with-input";
-import { Slider } from "@/registry/default/ui/slider";
+import { Slider } from "@/components/ui/slider";
+
+import { useSliderWithInput } from "../utilities/useSliderWithInput";
 
 export default function Component() {
 	const minValue = 0;

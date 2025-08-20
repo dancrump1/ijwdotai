@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-538",
+  "type": "registry:block",
+  "title": "Comp 538",
+  "description": "Comp 538",
+  "files": [
+    {
+      "path": "registry/basic/comp-538.tsx",
+      "content": "import {\n\tTimeline,\n\tTimelineContent,\n\tTimelineDate,\n\tTimelineItem,\n} from \"@/components/ui/timeline\";\n\nconst items = [\n\t{\n\t\tid: 1,\n\t\tdate: new Date(\"2024-01-09T10:55:00\"),\n\t\tdescription: \"System backup completed successfully.\",\n\t},\n\t{\n\t\tid: 2,\n\t\tdate: new Date(\"2024-01-09T10:50:00\"),\n\t\tdescription:\n\t\t\t\"User authentication service restarted due to configuration update.\",\n\t},\n\t{\n\t\tid: 3,\n\t\tdate: new Date(\"2024-01-09T10:45:00\"),\n\t\tdescription: \"Warning: High CPU usage detected on worker node-03.\",\n\t},\n\t{\n\t\tid: 4,\n\t\tdate: new Date(\"2024-01-09T10:40:00\"),\n\t\tdescription: \"New deployment initiated for api-service v2.1.0.\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<Timeline className=\"divide-y rounded-lg border\">\n\t\t\t{items.map((item) => (\n\t\t\t\t<TimelineItem\n\t\t\t\t\tkey={item.id}\n\t\t\t\t\tstep={item.id}\n\t\t\t\t\tclassName=\"m-0! px-4! py-3!\"\n\t\t\t\t>\n\t\t\t\t\t<TimelineContent className=\"text-foreground\">\n\t\t\t\t\t\t{item.description}\n\t\t\t\t\t\t<TimelineDate className=\"mt-1\">\n\t\t\t\t\t\t\t{item.date.toLocaleDateString(\"en-US\", {\n\t\t\t\t\t\t\t\tyear: \"numeric\",\n\t\t\t\t\t\t\t\tmonth: \"long\",\n\t\t\t\t\t\t\t\tday: \"numeric\",\n\t\t\t\t\t\t\t})}{\" \"}\n\t\t\t\t\t\t\tat{\" \"}\n\t\t\t\t\t\t\t{item.date.toLocaleTimeString(\"en-US\", {\n\t\t\t\t\t\t\t\thour: \"numeric\",\n\t\t\t\t\t\t\t\tminute: \"2-digit\",\n\t\t\t\t\t\t\t\thour12: true,\n\t\t\t\t\t\t\t})}\n\t\t\t\t\t\t</TimelineDate>\n\t\t\t\t\t</TimelineContent>\n\t\t\t\t</TimelineItem>\n\t\t\t))}\n\t\t</Timeline>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

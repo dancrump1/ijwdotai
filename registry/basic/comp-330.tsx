@@ -1,7 +1,6 @@
 import { useId } from "react";
 
-import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogClose,
@@ -10,8 +9,9 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/registry/default/ui/dialog";
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { CheckIcon, RefreshCcwIcon } from "lucide-react";
 
 export default function Component() {

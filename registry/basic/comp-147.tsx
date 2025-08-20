@@ -1,7 +1,7 @@
 import { useId } from "react";
 
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/registry/default/ui/checkbox";
 import { Brush, Eraser, Scissors, SwatchBook } from "lucide-react";
 
 export default function Component() {

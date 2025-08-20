@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-218",
+  "type": "registry:block",
+  "title": "Comp 218",
+  "description": "Comp 218",
+  "files": [
+    {
+      "path": "registry/basic/comp-218.tsx",
+      "content": "import { useId, useMemo } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n\tSelect,\n\tSelectContent,\n\tSelectItem,\n\tSelectTrigger,\n\tSelectValue,\n} from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\n\tconst timezones = Intl.supportedValuesOf(\"timeZone\");\n\n\tconst formattedTimezones = useMemo(() => {\n\t\treturn timezones\n\t\t\t.map((timezone) => {\n\t\t\t\tconst formatter = new Intl.DateTimeFormat(\"en\", {\n\t\t\t\t\ttimeZone: timezone,\n\t\t\t\t\ttimeZoneName: \"shortOffset\",\n\t\t\t\t});\n\t\t\t\tconst parts = formatter.formatToParts(new Date());\n\t\t\t\tconst offset =\n\t\t\t\t\tparts.find((part) => part.type === \"timeZoneName\")?.value || \"\";\n\t\t\t\tconst modifiedOffset = offset === \"GMT\" ? \"GMT+0\" : offset;\n\n\t\t\t\treturn {\n\t\t\t\t\tvalue: timezone,\n\t\t\t\t\tlabel: `(${modifiedOffset}) ${timezone.replace(/_/g, \" \")}`,\n\t\t\t\t\tnumericOffset: parseInt(\n\t\t\t\t\t\toffset.replace(\"GMT\", \"\").replace(\"+\", \"\") || \"0\"\n\t\t\t\t\t),\n\t\t\t\t};\n\t\t\t})\n\t\t\t.sort((a, b) => a.numericOffset - b.numericOffset);\n\t}, [timezones]);\n\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Timezone select</Label>\n\t\t\t<Select defaultValue=\"Europe/London\">\n\t\t\t\t<SelectTrigger id={id}>\n\t\t\t\t\t<SelectValue placeholder=\"Select timezone\" />\n\t\t\t\t</SelectTrigger>\n\t\t\t\t<SelectContent>\n\t\t\t\t\t{formattedTimezones.map(({ value, label }) => (\n\t\t\t\t\t\t<SelectItem key={value} value={value}>\n\t\t\t\t\t\t\t{label}\n\t\t\t\t\t\t</SelectItem>\n\t\t\t\t\t))}\n\t\t\t\t</SelectContent>\n\t\t\t</Select>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst labelVariants = cva(\n\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n);\n\nconst Label = React.forwardRef<\n\tReact.ElementRef<typeof LabelPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n\t\tVariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n\t<LabelPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(labelVariants(), className)}\n\t\t{...props}\n\t/>\n));\nLabel.displayName = LabelPrimitive.Root.displayName;\n\nexport { Label };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

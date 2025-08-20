@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-561",
+  "type": "registry:block",
+  "title": "Comp 561",
+  "description": "Comp 561",
+  "files": [
+    {
+      "path": "registry/basic/comp-561.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport {\n\tCropper,\n\tCropperCropArea,\n\tCropperDescription,\n\tCropperImage,\n} from \"@/components/ui/cropper\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function Component() {\n\tconst [zoom, setZoom] = useState(1);\n\n\treturn (\n\t\t<div className=\"flex flex-col items-center gap-2\">\n\t\t\t<div className=\"flex w-full flex-col gap-4\">\n\t\t\t\t<Cropper\n\t\t\t\t\tclassName=\"h-80\"\n\t\t\t\t\timage=\"https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/cropper-07_scsejv.jpg\"\n\t\t\t\t\tzoom={zoom}\n\t\t\t\t\tonZoomChange={setZoom}\n\t\t\t\t>\n\t\t\t\t\t<CropperDescription />\n\t\t\t\t\t<CropperImage />\n\t\t\t\t\t<CropperCropArea />\n\t\t\t\t</Cropper>\n\t\t\t\t<div className=\"mx-auto flex w-full max-w-80 items-center gap-1\">\n\t\t\t\t\t<Slider\n\t\t\t\t\t\tdefaultValue={[1]}\n\t\t\t\t\t\tvalue={[zoom]}\n\t\t\t\t\t\tmin={1}\n\t\t\t\t\t\tmax={3}\n\t\t\t\t\t\tstep={0.1}\n\t\t\t\t\t\tonValueChange={(value) => setZoom(value[0])}\n\t\t\t\t\t\taria-label=\"Zoom slider\"\n\t\t\t\t\t/>\n\t\t\t\t\t<output className=\"block w-10 shrink-0 text-right text-sm font-medium tabular-nums\">\n\t\t\t\t\t\t{parseFloat(zoom.toFixed(1))}x\n\t\t\t\t\t</output>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<p\n\t\t\t\taria-live=\"polite\"\n\t\t\t\trole=\"region\"\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t>\n\t\t\t\tCropper with zoom slider ∙{\" \"}\n\t\t\t\t<a\n\t\t\t\t\thref=\"https://github.com/origin-space/image-cropper\"\n\t\t\t\t\tclassName=\"hover:text-foreground underline\"\n\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t>\n\t\t\t\t\tAPI\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/slider.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as SliderPrimitive from \"@radix-ui/react-slider\";\n\nconst Slider = React.forwardRef<\n\tReact.ElementRef<typeof SliderPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>\n>(({ className, ...props }, ref) => (\n\t<SliderPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"relative flex w-full touch-none select-none items-center\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t>\n\t\t<SliderPrimitive.Track className=\"relative h-2 w-full grow overflow-hidden rounded-full bg-secondary\">\n\t\t\t<SliderPrimitive.Range className=\"absolute h-full bg-primary\" />\n\t\t</SliderPrimitive.Track>\n\t\t<SliderPrimitive.Thumb className=\"block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\" />\n\t\t<SliderPrimitive.Thumb className=\"block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\" />\n\t</SliderPrimitive.Root>\n));\nSlider.displayName = SliderPrimitive.Root.displayName;\n\nexport { Slider };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

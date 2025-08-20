@@ -1,7 +1,6 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
 import {
 	Select,
 	SelectContent,
@@ -10,7 +9,9 @@ import {
 	SelectLabel,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
+
+import { cn } from "../utilities/cn";
 
 const Square = ({
 	className,

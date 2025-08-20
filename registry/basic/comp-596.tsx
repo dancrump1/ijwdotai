@@ -2,21 +2,21 @@
 
 import { useId, useState } from "react";
 
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/registry/default/ui/badge";
-import { Button } from "@/registry/default/ui/button";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-} from "@/registry/default/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
-import { Switch } from "@/registry/default/ui/switch";
+} from "@/components/ui/popover";
+import { Switch } from "@/components/ui/switch";
 import { ClockIcon, PowerIcon, PowerOffIcon, ZapIcon } from "lucide-react";
 
 // Navigation links array to be used in both desktop and mobile menus

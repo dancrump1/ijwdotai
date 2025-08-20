@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/registry/default/ui/switch";
+import { Switch } from "@/components/ui/switch";
 
 export default function Component() {
 	const id = useId();

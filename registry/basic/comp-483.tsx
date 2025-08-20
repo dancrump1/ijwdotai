@@ -2,23 +2,22 @@
 
 import { useEffect, useId, useState } from "react";
 
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
-import { Badge } from "@/registry/default/ui/badge";
-import { Button } from "@/registry/default/ui/button";
-import { Checkbox } from "@/registry/default/ui/checkbox";
 import {
 	Pagination,
 	PaginationContent,
 	PaginationItem,
-} from "@/registry/default/ui/pagination";
+} from "@/components/ui/pagination";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 import {
 	Table,
 	TableBody,
@@ -26,7 +25,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/registry/default/ui/table";
+} from "@/components/ui/table";
 import {
 	ColumnDef,
 	flexRender,
@@ -45,6 +44,8 @@ import {
 	ChevronRightIcon,
 	ChevronUpIcon,
 } from "lucide-react";
+
+import { cn } from "../utilities/cn";
 
 type Item = {
 	id: string;

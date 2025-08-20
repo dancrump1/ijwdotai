@@ -1,8 +1,8 @@
 import { useId } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
 
 export default function Component() {
 	const id = useId();

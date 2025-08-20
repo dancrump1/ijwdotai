@@ -7,7 +7,7 @@ import {
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 import { RiGatsbyLine, RiNextjsLine, RiReactjsLine } from "@remixicon/react";
 
 export default function Component() {

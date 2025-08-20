@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-170",
+  "type": "registry:block",
+  "title": "Comp 170",
+  "description": "Comp 170",
+  "files": [
+    {
+      "path": "registry/basic/comp-170.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState } from \"react\";\n\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n\tconst id = useId();\n\tconst [selectedValue, setSelectedValue] = useState(\"on\");\n\n\treturn (\n\t\t<div className=\"bg-input/50 inline-flex h-9 rounded-md p-0.5\">\n\t\t\t<RadioGroup\n\t\t\t\tvalue={selectedValue}\n\t\t\t\tonValueChange={setSelectedValue}\n\t\t\t\tclassName=\"group after:bg-background has-focus-visible:after:border-ring has-focus-visible:after:ring-ring/50 relative inline-grid grid-cols-[1fr_1fr] items-center gap-0 text-sm font-medium after:absolute after:inset-y-0 after:w-1/2 after:rounded-sm after:shadow-xs after:transition-[translate,box-shadow] after:duration-300 after:ease-[cubic-bezier(0.16,1,0.3,1)] has-focus-visible:after:ring-[3px] data-[state=off]:after:translate-x-0 data-[state=on]:after:translate-x-full\"\n\t\t\t\tdata-state={selectedValue}\n\t\t\t>\n\t\t\t\t<label className=\"group-data-[state=on]:text-muted-foreground/70 relative z-10 inline-flex h-full min-w-8 cursor-pointer items-center justify-center px-4 whitespace-nowrap transition-colors select-none\">\n\t\t\t\t\tBill Monthly\n\t\t\t\t\t<RadioGroupItem id={`${id}-1`} value=\"off\" className=\"sr-only\" />\n\t\t\t\t</label>\n\t\t\t\t<label className=\"group-data-[state=off]:text-muted-foreground/70 relative z-10 inline-flex h-full min-w-8 cursor-pointer items-center justify-center px-4 whitespace-nowrap transition-colors select-none\">\n\t\t\t\t\t<span>\n\t\t\t\t\t\tBill Yearly{\" \"}\n\t\t\t\t\t\t<span className=\"group-data-[state=off]:text-muted-foreground/70 transition-colors group-data-[state=on]:text-emerald-500\">\n\t\t\t\t\t\t\t-20%\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</span>\n\t\t\t\t\t<RadioGroupItem id={`${id}-2`} value=\"on\" className=\"sr-only\" />\n\t\t\t\t</label>\n\t\t\t</RadioGroup>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as RadioGroupPrimitive from \"@radix-ui/react-radio-group\";\nimport { Circle } from \"lucide-react\";\n\nconst RadioGroup = React.forwardRef<\n\tReact.ElementRef<typeof RadioGroupPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>\n>(({ className, ...props }, ref) => {\n\treturn (\n\t\t<RadioGroupPrimitive.Root\n\t\t\tclassName={cn(\"grid gap-2\", className)}\n\t\t\t{...props}\n\t\t\tref={ref}\n\t\t/>\n\t);\n});\nRadioGroup.displayName = RadioGroupPrimitive.Root.displayName;\n\nconst RadioGroupItem = React.forwardRef<\n\tReact.ElementRef<typeof RadioGroupPrimitive.Item>,\n\tReact.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>\n>(({ className, ...props }, ref) => {\n\treturn (\n\t\t<RadioGroupPrimitive.Item\n\t\t\tref={ref}\n\t\t\tclassName={cn(\n\t\t\t\t\"aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t<RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\">\n\t\t\t\t<Circle className=\"h-2.5 w-2.5 fill-current text-current\" />\n\t\t\t</RadioGroupPrimitive.Indicator>\n\t\t</RadioGroupPrimitive.Item>\n\t);\n});\nRadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;\n\nexport { RadioGroup, RadioGroupItem };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

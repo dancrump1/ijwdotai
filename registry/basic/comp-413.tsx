@@ -1,5 +1,5 @@
-import { Badge } from "@/registry/default/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 export default function Component() {
-  return <Badge>Badge</Badge>
+	return <Badge>Badge</Badge>;
 }

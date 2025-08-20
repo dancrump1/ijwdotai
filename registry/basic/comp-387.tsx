@@ -2,20 +2,19 @@
 
 import { useId, useRef, useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { cn } from "@/registry/default/lib/utils";
-import { Button } from "@/registry/default/ui/button";
 import {
 	Popover,
 	PopoverContent,
 	PopoverTrigger,
-} from "@/registry/default/ui/popover";
+} from "@/components/ui/popover";
 import {
 	Tooltip,
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
-} from "@/registry/default/ui/tooltip";
+} from "@/components/ui/tooltip";
 import {
 	RiCodeFill,
 	RiFacebookFill,
@@ -23,6 +22,8 @@ import {
 	RiTwitterXFill,
 } from "@remixicon/react";
 import { CheckIcon, CopyIcon } from "lucide-react";
+
+import { cn } from "../utilities/cn";
 
 export default function Component() {
 	const id = useId();

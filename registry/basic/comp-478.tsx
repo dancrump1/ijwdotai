@@ -2,17 +2,16 @@
 
 import { useId, useMemo, useState } from "react";
 
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/registry/default/lib/utils";
-import { Checkbox } from "@/registry/default/ui/checkbox";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
 	SelectValue,
-} from "@/registry/default/ui/select";
+} from "@/components/ui/select";
 import {
 	Table,
 	TableBody,
@@ -20,7 +19,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@/registry/default/ui/table";
+} from "@/components/ui/table";
 import {
 	Column,
 	ColumnDef,
@@ -42,6 +41,8 @@ import {
 	ExternalLinkIcon,
 	SearchIcon,
 } from "lucide-react";
+
+import { cn } from "../utilities/cn";
 
 declare module "@tanstack/react-table" {
 	//allows us to define custom properties for our columns

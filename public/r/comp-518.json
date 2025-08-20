@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-518",
+  "type": "registry:block",
+  "title": "Comp 518",
+  "description": "Comp 518",
+  "files": [
+    {
+      "path": "registry/basic/comp-518.tsx",
+      "content": "import {\n\tStepper,\n\tStepperIndicator,\n\tStepperItem,\n\tStepperSeparator,\n\tStepperTrigger,\n} from \"@/components/ui/stepper\";\nimport { Shuffle } from \"lucide-react\";\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"mx-auto max-w-xl space-y-8 text-center\">\n\t\t\t<Stepper defaultValue={2}>\n\t\t\t\t<StepperItem step={1} className=\"not-last:flex-1\">\n\t\t\t\t\t<StepperTrigger>\n\t\t\t\t\t\t<StepperIndicator asChild>\n\t\t\t\t\t\t\t<img\n\t\t\t\t\t\t\t\tclassName=\"rounded-full\"\n\t\t\t\t\t\t\t\tsrc=\"/avatar-40-05.jpg\"\n\t\t\t\t\t\t\t\twidth={32}\n\t\t\t\t\t\t\t\theight={32}\n\t\t\t\t\t\t\t\talt=\"Mike Palmer\"\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</StepperIndicator>\n\t\t\t\t\t</StepperTrigger>\n\t\t\t\t\t<StepperSeparator />\n\t\t\t\t</StepperItem>\n\t\t\t\t<StepperItem step={2} className=\"not-last:flex-1\" loading>\n\t\t\t\t\t<StepperTrigger>\n\t\t\t\t\t\t<StepperIndicator />\n\t\t\t\t\t</StepperTrigger>\n\t\t\t\t\t<StepperSeparator />\n\t\t\t\t</StepperItem>\n\t\t\t\t<StepperItem step={3} className=\"not-last:flex-1\">\n\t\t\t\t\t<StepperTrigger>\n\t\t\t\t\t\t<StepperIndicator asChild>\n\t\t\t\t\t\t\t<Shuffle size={14} aria-hidden=\"true\" />\n\t\t\t\t\t\t\t<span className=\"sr-only\">Shuffle</span>\n\t\t\t\t\t\t</StepperIndicator>\n\t\t\t\t\t</StepperTrigger>\n\t\t\t\t</StepperItem>\n\t\t\t</Stepper>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tStepper with mixed elements\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

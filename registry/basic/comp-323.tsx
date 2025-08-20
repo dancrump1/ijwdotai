@@ -1,14 +1,14 @@
-import { Label } from "@/components/ui/label";
-import { Button } from "@/registry/default/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@/registry/default/ui/dialog";
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group";
-import { Textarea } from "@/registry/default/ui/textarea";
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Component() {
 	return (

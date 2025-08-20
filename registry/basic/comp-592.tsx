@@ -2,13 +2,13 @@
 
 import { useId, useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import InfoMenu from "@/registry/default/components/navbar-components/info-menu";
 import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
 import SettingsMenu from "@/registry/default/components/navbar-components/settings-menu";
-import { Button } from "@/registry/default/ui/button";
-import { Switch } from "@/registry/default/ui/switch";
 import { LayoutGridIcon, PlusIcon, SearchIcon } from "lucide-react";
 
 export default function Component() {

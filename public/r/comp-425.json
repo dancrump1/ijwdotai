@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-425",
+  "type": "registry:block",
+  "title": "Comp 425",
+  "description": "Comp 425",
+  "files": [
+    {
+      "path": "registry/basic/comp-425.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\nimport { XIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst [isActive, setIsActive] = useState(true);\n\n\tif (!isActive) return null;\n\n\treturn (\n\t\t<Badge variant=\"outline\" className=\"gap-0 rounded-md px-2 py-1\">\n\t\t\tTag\n\t\t\t<button\n\t\t\t\tclassName=\"focus-visible:border-ring focus-visible:ring-ring/50 text-foreground/60 hover:text-foreground -my-[5px] -ms-0.5 -me-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-[inherit] p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]\"\n\t\t\t\tonClick={() => setIsActive(false)}\n\t\t\t\taria-label=\"Delete\"\n\t\t\t>\n\t\t\t\t<XIcon size={14} aria-hidden=\"true\" />\n\t\t\t</button>\n\t\t</Badge>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "content": "import React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst badgeVariants = cva(\n\t\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault:\n\t\t\t\t\t\"border-transparent bg-primary text-primary-foreground hover:bg-primary/80\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80\",\n\t\t\t\toutline: \"text-foreground\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t}\n);\n\nexport interface BadgeProps\n\textends React.HTMLAttributes<HTMLDivElement>,\n\t\tVariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n\treturn (\n\t\t<div className={cn(badgeVariants({ variant }), className)} {...props} />\n\t);\n}\n\nexport { Badge, badgeVariants };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

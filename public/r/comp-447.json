@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-447",
+  "type": "registry:block",
+  "title": "Comp 447",
+  "description": "Comp 447",
+  "files": [
+    {
+      "path": "registry/basic/comp-447.tsx",
+      "content": "import {\n\tBreadcrumb,\n\tBreadcrumbItem,\n\tBreadcrumbLink,\n\tBreadcrumbList,\n\tBreadcrumbPage,\n\tBreadcrumbSeparator,\n} from \"@/components/ui/breadcrumb\";\nimport {\n\tDropdownMenu,\n\tDropdownMenuContent,\n\tDropdownMenuItem,\n\tDropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport { FoldersIcon } from \"lucide-react\";\n\nexport default function Component() {\n\treturn (\n\t\t<Breadcrumb>\n\t\t\t<BreadcrumbList>\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbLink href=\"#\">Home</BreadcrumbLink>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t\t<BreadcrumbSeparator />\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<DropdownMenu>\n\t\t\t\t\t\t<DropdownMenuTrigger className=\"hover:text-foreground\">\n\t\t\t\t\t\t\t<span\n\t\t\t\t\t\t\t\trole=\"presentation\"\n\t\t\t\t\t\t\t\taria-hidden=\"true\"\n\t\t\t\t\t\t\t\tclassName=\"flex size-5 items-center justify-center\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<FoldersIcon size={16} />\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t<span className=\"sr-only\">Toggle menu</span>\n\t\t\t\t\t\t</DropdownMenuTrigger>\n\t\t\t\t\t\t<DropdownMenuContent align=\"start\">\n\t\t\t\t\t\t\t<DropdownMenuItem asChild>\n\t\t\t\t\t\t\t\t<a href=\"#\">Documentation</a>\n\t\t\t\t\t\t\t</DropdownMenuItem>\n\t\t\t\t\t\t\t<DropdownMenuItem asChild>\n\t\t\t\t\t\t\t\t<a href=\"#\">Themes</a>\n\t\t\t\t\t\t\t</DropdownMenuItem>\n\t\t\t\t\t\t\t<DropdownMenuItem asChild>\n\t\t\t\t\t\t\t\t<a href=\"#\">GitHub</a>\n\t\t\t\t\t\t\t</DropdownMenuItem>\n\t\t\t\t\t\t</DropdownMenuContent>\n\t\t\t\t\t</DropdownMenu>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t\t<BreadcrumbSeparator />\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t</BreadcrumbList>\n\t\t</Breadcrumb>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

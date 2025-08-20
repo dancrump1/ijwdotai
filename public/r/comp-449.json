@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-449",
+  "type": "registry:block",
+  "title": "Comp 449",
+  "description": "Comp 449",
+  "files": [
+    {
+      "path": "registry/basic/comp-449.tsx",
+      "content": "import {\n\tBreadcrumb,\n\tBreadcrumbItem,\n\tBreadcrumbLink,\n\tBreadcrumbList,\n\tBreadcrumbPage,\n\tBreadcrumbSeparator,\n} from \"@/components/ui/breadcrumb\";\nimport { ComponentIcon, HomeIcon } from \"lucide-react\";\n\nexport default function Component() {\n\treturn (\n\t\t<Breadcrumb>\n\t\t\t<BreadcrumbList>\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbLink\n\t\t\t\t\t\thref=\"#\"\n\t\t\t\t\t\tclassName=\"inline-flex items-center gap-1.5\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<HomeIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t\tHome\n\t\t\t\t\t</BreadcrumbLink>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t\t<BreadcrumbSeparator />\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbLink\n\t\t\t\t\t\thref=\"#\"\n\t\t\t\t\t\tclassName=\"inline-flex items-center gap-1.5\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<ComponentIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t\tComponents\n\t\t\t\t\t</BreadcrumbLink>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t\t<BreadcrumbSeparator />\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t</BreadcrumbList>\n\t\t</Breadcrumb>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

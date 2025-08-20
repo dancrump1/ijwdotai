@@ -4,6 +4,7 @@ const path = require("path");
 // Core paths
 const registryPath = path.join(process.cwd(), "registry");
 const openSourcePath = path.join(registryPath, "open-source");
+const openSourceBasicPath = path.join(registryPath, "basic");
 const registryUtilsPath = path.join(registryPath, "utilities");
 const usagesPath = path.join(process.cwd(), "components", "usages");
 
@@ -175,22 +176,42 @@ const buildRegistryItem = (usageFile, allComponentFiles) => {
 	};
 };
 
+// generate .json file containing contents of ShadCN Registry
 const buildRegistry = () => {
 	const allUsageFiles = fs
 		.readdirSync(usagesPath)
 		.filter((f) => f.endsWith(".tsx"));
+
 	const componentFiles = fs
 		.readdirSync(openSourcePath)
 		.filter((f) => f.endsWith(".tsx"));
+
+	const basicFiles = fs
+		.readdirSync(openSourceBasicPath)
+		.filter((f) => f.endsWith(".tsx") && f.includes("-"));
+
 	const registryItems = allUsageFiles
 		.map((item) => buildRegistryItem(item, componentFiles))
 		.filter(Boolean);
+
+	const basicRegistryItems = basicFiles.map((file) => {
+		return {
+			name: file,
+			type: "registry:component",
+			files: [
+				{
+					type: "registry:component",
+					path: "registry/basic/" + file,
+				},
+			],
+		};
+	});
 
 	const registryData = {
 		$schema: registrySchemaUrl,
 		name: registryName,
 		homepage: registryHomepage,
-		items: registryItems,
+		items: [...registryItems, ...basicRegistryItems],
 	};
 
 	fs.writeFileSync(
@@ -199,4 +220,5 @@ const buildRegistry = () => {
 	);
 };
 
+// Starting point
 buildRegistry();

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-392.tsx",
+  "type": "registry:component",
+  "files": [
+    {
+      "path": "registry/basic/comp-392.tsx",
+      "content": "import { UserRoundIcon } from \"lucide-react\"\n\nimport { Avatar, AvatarFallback } from \"@/registry/default/ui/avatar\"\n\nexport default function Component() {\n  return (\n    <Avatar>\n      <AvatarFallback>\n        <UserRoundIcon size={16} className=\"opacity-60\" aria-hidden=\"true\" />\n      </AvatarFallback>\n    </Avatar>\n  )\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

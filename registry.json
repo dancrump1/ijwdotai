@@ -6437,6 +6437,5996 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "comp-01.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-01.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-02.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-02.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-03.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-03.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-04.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-04.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-05.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-05.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-06.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-06.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-07.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-07.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-08.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-08.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-09.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-09.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-10.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-100.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-100.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-101.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-101.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-102.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-102.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-103.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-103.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-104.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-104.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-105.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-105.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-106.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-106.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-107.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-107.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-108.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-108.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-109.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-109.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-11.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-110.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-110.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-111.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-111.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-112.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-112.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-113.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-113.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-114.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-114.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-115.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-115.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-116.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-116.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-117.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-117.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-118.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-118.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-119.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-119.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-12.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-120.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-120.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-121.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-121.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-122.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-122.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-123.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-123.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-124.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-124.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-125.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-125.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-126.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-126.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-127.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-127.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-128.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-128.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-129.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-129.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-13.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-130.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-130.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-131.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-131.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-132.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-132.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-133.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-133.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-134.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-134.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-135.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-135.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-136.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-136.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-137.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-137.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-138.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-138.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-139.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-139.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-14.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-14.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-140.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-140.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-141.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-141.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-142.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-142.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-143.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-143.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-144.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-144.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-145.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-145.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-146.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-146.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-147.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-147.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-148.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-148.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-149.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-149.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-15.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-15.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-150.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-150.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-151.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-151.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-152.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-152.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-153.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-153.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-154.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-154.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-155.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-155.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-156.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-156.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-157.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-157.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-158.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-158.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-159.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-159.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-16.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-16.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-160.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-160.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-161.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-161.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-162.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-162.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-163.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-163.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-164.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-164.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-165.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-165.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-166.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-166.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-167.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-167.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-168.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-168.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-169.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-169.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-17.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-17.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-170.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-170.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-171.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-171.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-172.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-172.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-173.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-173.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-174.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-174.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-175.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-175.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-176.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-176.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-177.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-177.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-178.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-178.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-179.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-179.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-18.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-18.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-180.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-180.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-181.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-181.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-182.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-182.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-183.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-183.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-184.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-184.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-185.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-185.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-186.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-186.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-187.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-187.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-188.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-188.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-189.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-189.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-19.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-19.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-190.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-190.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-191.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-191.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-192.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-192.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-193.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-193.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-194.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-194.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-195.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-195.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-196.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-196.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-197.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-197.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-198.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-198.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-199.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-199.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-20.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-20.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-200.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-200.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-201.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-201.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-202.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-202.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-203.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-203.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-204.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-204.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-205.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-205.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-206.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-206.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-207.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-207.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-208.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-208.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-209.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-209.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-21.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-21.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-210.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-210.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-211.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-211.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-212.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-212.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-213.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-213.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-214.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-214.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-215.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-215.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-216.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-216.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-217.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-217.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-218.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-218.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-219.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-219.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-22.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-22.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-220.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-220.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-221.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-221.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-222.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-222.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-223.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-223.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-224.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-224.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-225.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-225.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-226.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-226.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-227.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-227.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-228.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-228.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-229.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-229.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-23.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-23.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-230.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-230.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-231.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-231.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-232.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-232.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-233.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-233.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-234.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-234.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-235.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-235.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-236.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-236.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-237.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-237.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-238.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-238.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-239.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-239.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-24.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-24.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-240.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-240.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-241.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-241.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-242.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-242.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-243.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-243.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-244.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-244.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-245.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-245.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-246.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-246.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-247.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-247.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-248.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-248.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-249.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-249.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-25.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-25.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-250.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-250.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-251.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-251.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-252.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-252.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-253.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-253.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-254.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-254.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-255.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-255.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-256.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-256.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-257.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-257.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-258.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-258.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-259.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-259.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-26.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-26.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-260.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-260.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-261.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-261.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-262.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-262.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-263.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-263.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-264.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-264.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-265.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-265.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-266.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-266.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-267.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-267.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-268.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-268.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-269.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-269.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-27.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-27.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-270.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-270.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-271.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-271.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-272.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-272.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-273.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-273.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-274.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-274.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-275.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-275.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-276.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-276.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-277.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-277.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-278.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-278.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-279.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-279.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-28.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-28.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-280.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-280.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-281.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-281.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-282.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-282.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-283.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-283.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-284.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-284.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-285.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-285.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-286.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-286.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-287.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-287.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-288.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-288.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-289.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-289.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-29.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-29.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-290.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-290.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-291.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-291.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-292.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-292.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-293.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-293.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-294.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-294.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-295.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-295.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-296.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-296.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-297.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-297.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-298.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-298.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-299.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-299.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-30.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-30.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-300.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-300.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-301.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-301.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-302.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-302.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-303.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-303.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-304.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-304.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-305.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-305.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-306.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-306.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-307.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-307.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-308.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-308.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-309.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-309.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-31.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-31.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-310.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-310.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-311.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-311.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-312.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-312.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-313.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-313.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-314.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-314.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-315.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-315.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-316.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-316.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-317.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-317.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-318.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-318.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-319.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-319.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-32.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-32.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-320.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-320.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-321.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-321.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-322.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-322.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-323.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-323.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-324.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-324.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-325.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-325.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-326.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-326.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-327.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-327.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-328.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-328.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-329.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-329.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-33.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-33.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-330.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-330.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-331.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-331.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-332.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-332.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-333.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-333.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-334.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-334.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-335.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-335.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-336.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-336.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-337.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-337.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-338.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-338.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-339.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-339.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-34.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-34.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-340.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-340.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-341.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-341.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-342.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-342.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-343.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-343.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-344.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-344.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-345.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-345.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-346.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-346.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-347.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-347.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-348.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-348.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-349.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-349.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-35.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-35.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-350.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-350.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-351.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-351.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-352.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-352.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-353.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-353.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-354.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-354.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-355.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-355.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-356.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-356.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-357.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-357.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-358.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-358.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-359.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-359.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-36.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-36.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-360.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-360.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-361.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-361.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-362.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-362.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-363.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-363.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-364.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-364.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-365.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-365.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-366.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-366.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-367.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-367.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-368.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-368.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-369.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-369.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-37.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-37.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-370.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-370.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-371.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-371.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-372.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-372.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-373.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-373.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-374.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-374.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-375.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-375.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-376.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-376.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-377.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-377.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-378.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-378.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-379.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-379.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-38.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-38.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-380.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-380.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-381.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-381.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-382.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-382.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-383.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-383.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-384.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-384.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-385.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-385.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-386.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-386.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-387.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-387.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-388.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-388.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-389.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-389.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-39.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-39.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-390.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-390.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-391.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-391.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-392.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-392.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-393.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-393.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-394.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-394.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-395.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-395.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-396.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-396.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-397.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-397.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-398.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-398.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-399.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-399.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-40.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-40.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-400.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-400.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-401.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-401.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-402.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-402.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-403.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-403.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-404.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-404.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-405.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-405.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-406.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-406.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-407.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-407.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-408.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-408.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-409.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-409.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-41.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-41.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-410.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-410.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-411.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-411.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-412.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-412.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-413.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-413.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-414.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-414.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-415.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-415.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-416.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-416.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-417.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-417.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-418.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-418.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-419.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-419.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-42.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-42.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-420.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-420.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-421.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-421.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-422.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-422.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-423.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-423.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-424.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-424.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-425.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-425.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-426.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-426.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-427.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-427.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-428.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-428.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-429.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-429.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-43.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-43.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-430.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-430.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-431.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-431.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-432.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-432.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-433.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-433.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-434.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-434.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-435.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-435.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-436.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-436.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-437.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-437.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-438.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-438.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-439.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-439.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-44.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-44.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-440.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-440.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-441.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-441.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-442.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-442.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-443.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-443.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-444.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-444.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-445.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-445.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-446.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-446.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-447.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-447.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-448.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-448.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-449.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-449.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-45.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-45.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-450.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-450.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-451.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-451.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-452.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-452.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-453.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-453.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-454.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-454.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-455.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-455.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-456.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-456.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-457.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-457.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-458.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-458.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-459.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-459.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-46.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-46.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-460.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-460.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-461.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-461.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-462.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-462.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-463.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-463.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-464.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-464.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-465.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-465.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-466.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-466.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-467.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-467.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-468.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-468.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-469.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-469.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-47.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-47.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-470.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-470.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-471.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-471.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-472.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-472.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-473.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-473.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-474.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-474.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-475.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-475.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-476.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-476.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-477.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-477.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-478.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-478.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-479.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-479.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-48.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-48.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-480.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-480.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-481.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-481.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-482.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-482.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-483.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-483.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-484.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-484.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-485.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-485.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-486.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-486.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-487.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-487.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-488.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-488.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-489.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-489.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-49.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-49.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-490.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-490.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-491.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-491.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-492.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-492.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-493.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-493.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-494.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-494.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-495.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-495.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-496.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-496.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-497.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-497.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-498.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-498.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-499.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-499.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-50.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-50.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-500.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-500.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-501.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-501.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-502.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-502.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-503.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-503.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-504.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-504.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-505.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-505.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-506.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-506.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-507.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-507.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-508.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-508.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-509.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-509.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-51.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-51.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-510.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-510.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-511.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-511.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-512.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-512.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-513.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-513.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-514.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-514.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-515.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-515.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-516.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-516.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-517.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-517.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-518.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-518.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-519.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-519.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-52.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-52.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-520.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-520.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-521.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-521.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-522.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-522.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-523.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-523.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-524.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-524.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-525.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-525.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-526.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-526.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-527.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-527.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-528.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-528.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-529.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-529.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-53.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-53.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-530.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-530.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-531.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-531.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-532.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-532.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-533.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-533.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-534.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-534.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-535.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-535.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-536.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-536.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-537.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-537.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-538.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-538.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-539.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-539.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-54.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-54.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-540.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-540.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-541.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-541.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-542.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-542.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-543.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-543.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-544.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-544.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-545.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-545.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-546.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-546.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-547.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-547.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-548.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-548.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-549.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-549.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-55.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-55.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-550.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-550.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-551.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-551.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-552.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-552.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-553.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-553.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-554.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-554.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-555.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-555.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-556.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-556.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-557.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-557.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-558.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-558.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-559.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-559.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-56.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-56.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-560.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-560.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-561.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-561.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-562.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-562.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-563.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-563.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-564.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-564.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-565.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-565.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-566.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-566.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-567.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-567.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-568.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-568.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-569.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-569.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-57.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-57.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-570.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-570.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-571.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-571.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-572.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-572.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-573.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-573.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-574.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-574.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-575.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-575.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-576.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-576.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-577.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-577.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-578.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-578.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-579.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-579.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-58.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-58.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-580.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-580.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-581.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-581.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-582.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-582.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-583.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-583.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-584.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-584.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-585.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-585.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-586.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-586.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-587.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-587.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-588.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-588.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-589.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-589.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-59.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-59.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-590.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-590.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-591.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-591.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-592.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-592.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-593.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-593.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-594.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-594.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-595.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-595.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-596.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-596.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-597.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-597.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-598.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-598.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-599.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-599.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-60.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-60.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-61.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-61.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-62.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-62.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-63.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-63.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-64.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-64.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-65.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-65.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-66.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-66.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-67.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-67.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-68.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-68.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-69.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-69.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-70.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-70.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-71.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-71.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-72.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-72.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-73.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-73.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-74.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-74.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-75.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-75.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-76.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-76.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-77.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-77.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-78.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-78.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-79.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-79.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-80.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-80.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-81.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-81.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-82.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-82.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-83.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-83.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-84.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-84.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-85.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-85.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-86.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-86.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-87.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-87.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-88.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-88.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-89.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-89.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-90.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-90.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-91.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-91.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-92.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-92.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-93.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-93.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-94.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-94.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-95.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-95.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-96.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-96.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-97.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-97.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-98.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-98.tsx"
+        }
+      ]
+    },
+    {
+      "name": "comp-99.tsx",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/basic/comp-99.tsx"
+        }
+      ]
     }
   ]
 }

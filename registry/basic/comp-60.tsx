@@ -1,16 +1,16 @@
-import { useId } from "react"
+import { useId } from "react";
 
-import { Label } from "@/registry/default/ui/label"
-import { Textarea } from "@/registry/default/ui/textarea"
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
 
 export default function Component() {
-  const id = useId()
-  return (
-    <div className="*:not-first:mt-2">
-      <Label htmlFor={id}>
-        Required textarea <span className="text-destructive">*</span>
-      </Label>
-      <Textarea id={id} placeholder="Leave a message" required />
-    </div>
-  )
+	const id = useId();
+	return (
+		<div className="*:not-first:mt-2">
+			<Label htmlFor={id}>
+				Required textarea <span className="text-destructive">*</span>
+			</Label>
+			<Textarea id={id} placeholder="Leave a message" required />
+		</div>
+	);
 }

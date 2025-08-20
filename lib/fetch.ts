@@ -8,6 +8,7 @@ export async function getComponentFilesWithDates(): Promise<
 > {
 	const dirPath = path.join(process.cwd(), "public", "r");
 	const compPath = path.resolve(process.cwd(), "registry", "open-source");
+	const basicCompPath = path.resolve(process.cwd(), "registry", "basic");
 
 	try {
 		const files = await fs.readdirSync(dirPath);
@@ -16,17 +17,34 @@ export async function getComponentFilesWithDates(): Promise<
 			files.map(async (file, i) => {
 				const updatedFileName = file;
 				const fullPath = path.join(dirPath, updatedFileName);
-				const fullCompPath = path.join(
-					compPath,
-					updatedFileName.replace(".json", ".tsx")
-				);
+				let fullCompPath, content;
 				const stat = await fs.statSync(fullPath);
-				const content = await fs.readFileSync(fullCompPath, "utf-8");
+
+				if (!file.includes('comp-')) {
+
+					fullCompPath = path.join(
+						compPath,
+						updatedFileName.replace(".json", ".tsx")
+					);
+					content = await fs.readFileSync(fullCompPath, "utf-8");
+				} else {
+					fullCompPath = path.join(
+						basicCompPath,
+						updatedFileName.replace(".json", ".tsx")
+					);
+					content = await fs.readFileSync(path.join(basicCompPath, updatedFileName.replace('.json', '')), 'utf-8')
+
+				}
 				if (stat.isFile()) {
 					return {
 						name: file,
 						content,
 					};
+				} else if (path.join(basicCompPath, updatedFileName.replace('.json', '.tsx'))) {
+					return {
+						name: file,
+						content
+					}
 				}
 				return null;
 			})

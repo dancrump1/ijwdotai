@@ -813,6 +813,23 @@
       ]
     },
     {
+      "name": "circuit-board",
+      "type": "registry:block",
+      "title": "Circuit board",
+      "description": "Circuit board",
+      "files": [
+        {
+          "path": "components/usages/circuitboardusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/circuit-board.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "circular-bars-loader",
       "type": "registry:block",
       "title": "Circular bars loader",
@@ -3787,6 +3804,23 @@
       ]
     },
     {
+      "name": "logo-particles",
+      "type": "registry:block",
+      "title": "Logo particles",
+      "description": "Logo particles",
+      "files": [
+        {
+          "path": "components/usages/logoparticlesusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/logo-particles.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "macbook",
       "type": "registry:block",
       "title": "Macbook",
@@ -4649,6 +4683,10 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/theme-animations.tsx",
           "type": "registry:ui"
         }
       ]
@@ -5610,6 +5648,10 @@
         },
         {
           "path": "registry/open-source/target-cursor.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]

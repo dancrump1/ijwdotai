@@ -78,54 +78,78 @@ const DesktopNavbar = ({ navItems }: Props) => {
 	}, [theme, setTheme]);
 
 	return (
-		<motion.div
-			className={cn(
-				"flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto",
-				!showFloatingNav ? "w-screen h-screen" : "w-fit h-fit"
-			)}
-			animate={{
-				width: showFloatingNav ? "80%" : "100vw",
-				height: showFloatingNav ? "0%" : "100vh",
-				background: showFloatingNav ? "var(--neutral-900)" : "transparent",
-			}}
-			transition={{
-				duration: 0.4,
-			}}
-			layout
-		>
-			{navItems.map((item, i) => (
-				<motion.div
-					className={cn(
-						"",
-						!showFloatingNav &&
-							i === 0 &&
-							"top-6 inset-x-0 place-items-center",
-						!showFloatingNav &&
-							i === 1 &&
-							"right-6 inset-y-0 content-center",
-						!showFloatingNav &&
-							i === 2 &&
-							"bottom-6 inset-x-0 place-items-center",
-						!showFloatingNav &&
-							i === 3 &&
-							"left-6 inset-y-0 content-center"
-					)}
-					animate={{
-						position: showFloatingNav ? "relative" : "absolute",
-					}}
-					transition={{ duration: 0.5 }}
-				>
-					<NavBarItem
-						href={item.link}
-						key={item.title}
-						target={item.target}
-						toggleTheme={toggleTheme}
+		<div className="w-screen">
+			<motion.div
+				className={cn(
+					"flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto",
+					!showFloatingNav ? "w-screen h-screen" : "w-fit h-fit"
+				)}
+				animate={{
+					width: showFloatingNav ? "80%" : "100vw",
+					height: showFloatingNav ? "0%" : "100vh",
+					background: showFloatingNav
+						? "var(--neutral-900)"
+						: "transparent",
+				}}
+				transition={{
+					duration: 0.4,
+				}}
+				layout
+			>
+				{navItems.map((item, i) => (
+					<motion.div
+						className={cn(
+							"",
+							!showFloatingNav &&
+								i === 0 &&
+								"top-6 inset-x-0 place-items-center",
+							!showFloatingNav &&
+								i === 1 &&
+								"right-6 inset-y-0 content-center",
+							!showFloatingNav &&
+								i === 2 &&
+								"bottom-6 inset-x-0 place-items-center",
+							!showFloatingNav &&
+								i === 3 &&
+								"left-6 inset-y-0 content-center"
+						)}
+						animate={{
+							position: showFloatingNav ? "relative" : "absolute",
+						}}
+						transition={{ duration: 0.5 }}
 					>
-						{item.title}
-					</NavBarItem>
-				</motion.div>
-			))}
-		</motion.div>
+						<NavBarItem
+							href={item.link}
+							key={item.title}
+							target={item.target}
+							toggleTheme={toggleTheme}
+						>
+							{item.title}
+						</NavBarItem>
+					</motion.div>
+				))}
+			</motion.div>
+			<Link
+				href={"/"}
+				className="group absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto"
+			>
+				<div className="group-hover:hidden block">
+					<MouseFollowingEyes />
+				</div>
+				<div className="group-hover:block hidden">
+					<SVG
+						src={"/dbsbottom.svg"}
+						title={"half of our logo"}
+						height={80}
+						width={233}
+						className="stroke-white"
+						role="img"
+						aria-label={"half of our logo"}
+						loader={<span>Loading...</span>}
+					/>
+				</div>
+			</Link>
+		</div>
 	);
 };
 
@@ -164,26 +188,6 @@ function ResizeNavBar() {
 			}}
 			className="fixed lg:inset-0 z-[500] pointer-events-none"
 		>
-			<Link
-				href={"/"}
-				className="group absolute w-fit h-fit block z-[500] pointer-events-auto"
-			>
-				<div className="group-hover:hidden block">
-					<MouseFollowingEyes />
-				</div>
-				<div className="group-hover:block hidden">
-					<SVG
-						src={"/dbsbottom.svg"}
-						title={"half of our logo"}
-						height={80}
-						width={233}
-						className="stroke-white"
-						role="img"
-						aria-label={"half of our logo"}
-						loader={<span>Loading...</span>}
-					/>
-				</div>
-			</Link>
 			<div className="hidden lg:block">
 				<DesktopNavbar navItems={navItems} />
 			</div>

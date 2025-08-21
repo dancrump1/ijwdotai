@@ -10,7 +10,9 @@ import { cn } from "@/registry/utilities/cn";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useTheme } from "next-themes";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
+import SVG from "react-inlinesvg";
 
+import { MouseFollowingEyes } from "./following-eyes";
 import { createAnimation } from "./theme-animations";
 
 type Props = {
@@ -160,8 +162,25 @@ function ResizeNavBar() {
 				ease: [0.6, 0.05, 0.1, 0.9],
 				duration: 0.8,
 			}}
-			className="fixed lg:inset-0 lg:h-screen w-screen z-[500] lg:pointer-events-none"
+			className="fixed lg:inset-0 lg:h-screen w-screen z-[500]"
 		>
+			<Link href={"/"} className="group absolute w-fit h-fit block z-[500]">
+				<div className="group-hover:hidden block">
+					<MouseFollowingEyes />
+				</div>
+				<div className="group-hover:block hidden">
+					<SVG
+						src={"/dbsbottom.svg"}
+						title={"half of our logo"}
+						height={80}
+						width={233}
+						className="stroke-white"
+						role="img"
+						aria-label={"half of our logo"}
+						loader={<span>Loading...</span>}
+					/>
+				</div>
+			</Link>
 			<div className="hidden lg:block h-full w-full">
 				<DesktopNavbar navItems={navItems} />
 			</div>

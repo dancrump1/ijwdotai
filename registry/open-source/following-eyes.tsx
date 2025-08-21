@@ -18,8 +18,8 @@ const MouseFollowingEyes: React.FC = () => {
 	}, []);
 
 	return (
-		<div className="w-screen h-screen flex justify-center items-center bg-gradient-to-b from-blue-100 to-white rounded-xl">
-			<div className="flex space-x-10">
+		<div className="flex justify-center items-center">
+			<div className="flex space-x-2">
 				<Eye selfRef={eye1Ref} otherRef={eye2Ref} mousePos={mousePos} />
 				<Eye selfRef={eye2Ref} otherRef={eye1Ref} mousePos={mousePos} />
 			</div>
@@ -71,7 +71,7 @@ const Eye: React.FC<EyeProps> = ({ selfRef, otherRef, mousePos }) => {
 				const dy = y - center.current.y;
 				const angle = Math.atan2(dy, dx);
 
-				const maxMove = 20;
+				const maxMove = 10;
 				const pupilX = Math.cos(angle) * maxMove;
 				const pupilY = Math.sin(angle) * maxMove;
 
@@ -94,10 +94,10 @@ const Eye: React.FC<EyeProps> = ({ selfRef, otherRef, mousePos }) => {
 	return (
 		<div
 			ref={selfRef}
-			className="relative bg-white border-4 border-black rounded-full h-24 w-24 flex items-center justify-center"
+			className="relative bg-white border-4 border-black rounded-full h-12 w-12 flex items-center justify-center"
 		>
-			<div ref={pupilRef} className="absolute bg-black rounded-full h-8 w-8">
-				<div className="w-3 h-3 bg-white rounded-full absolute bottom-1 right-1"></div>
+			<div ref={pupilRef} className="absolute bg-black rounded-full h-4 w-4">
+				<div className="w-1 h-1 bg-white rounded-full absolute bottom-1 right-1"></div>
 			</div>
 		</div>
 	);

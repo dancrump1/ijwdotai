@@ -1277,6 +1277,23 @@
       ]
     },
     {
+      "name": "electric-border",
+      "type": "registry:block",
+      "title": "Electric border",
+      "description": "Electric border",
+      "files": [
+        {
+          "path": "components/usages/electricborderusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/electric-border.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "expanding-tabs",
       "type": "registry:block",
       "title": "Expanding tabs",

@@ -7,6 +7,7 @@ import "./transition.css";
 
 import ColorSelector from "@/components/ColorSelector";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { HoverProvider } from "@/lib/hover-context";
 import ResizeNavBar from "@/registry/open-source/resize-navbar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
@@ -43,8 +44,12 @@ export default async function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<ResizeNavBar />
-					<NuqsAdapter>{children}</NuqsAdapter>
+					<NuqsAdapter>
+						<HoverProvider>
+							<ResizeNavBar />
+							{children}
+						</HoverProvider>
+					</NuqsAdapter>
 				</ThemeProvider>
 				{/* </ColorSelector> */}
 			</body>

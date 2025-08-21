@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
+import { useHover } from "@/lib/hover-context";
 import { cn } from "@/registry/utilities/cn";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useTheme } from "next-themes";
@@ -76,6 +77,8 @@ const DesktopNavbar = ({ navItems }: Props) => {
 		document.startViewTransition(switchTheme);
 	}, [theme, setTheme]);
 
+	const { setHovered } = useHover();
+
 	return (
 		<div className="w-screen">
 			<motion.div
@@ -116,6 +119,7 @@ const DesktopNavbar = ({ navItems }: Props) => {
 							position: showFloatingNav ? "relative" : "absolute",
 						}}
 						transition={{ duration: 0.5 }}
+						onMouseEnter={() => setHovered(item.title)}
 					>
 						<NavBarItem
 							href={item.link}
@@ -155,7 +159,7 @@ const navItems = [
 	},
 ];
 
-function ResizeNavBar() {
+function ResizeNavBar({ setSelectedRoute }) {
 	return (
 		<motion.nav
 			initial={{
@@ -171,7 +175,10 @@ function ResizeNavBar() {
 			className="fixed lg:inset-0 z-[500] pointer-events-none"
 		>
 			<div className="hidden lg:block">
-				<DesktopNavbar navItems={navItems} />
+				<DesktopNavbar
+					navItems={navItems}
+					setSelectedRoute={setSelectedRoute}
+				/>
 			</div>
 			<div className="flex w-full lg:hidden ">
 				<MobileNavbar navItems={navItems} />

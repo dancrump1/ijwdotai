@@ -133,10 +133,10 @@ async function getData() {
 	return data;
 }
 
-async function Page() {
+async function Page({ selectedRoute }) {
 	const data = await getData();
 
-	return <Home data={data} />;
+	return <Home data={data} selectedRoute={selectedRoute} />;
 }
 
 export default Page;

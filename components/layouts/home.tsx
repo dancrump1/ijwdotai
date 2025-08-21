@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import MarqueeAlongSvgPathDemo from "@/components/usages/marqueealongsvgusage";
+import { useHover } from "@/lib/hover-context";
 import AccordionSlices from "@/registry/open-source/accordion-slices";
 import ContentWithImage from "@/registry/open-source/content-with-image";
 import FAQPage from "@/registry/open-source/faq-section";
@@ -179,6 +180,8 @@ function Home({ data }) {
 	const video = hero?.find((asset) => !!asset.embeddedAsset)?.embeddedAsset;
 	const videoId = video ? extractString(video.iframeSrc) : null;
 
+	const { hovered } = useHover();
+
 	return (
 		<>
 			<AnimatePresence mode="wait">
@@ -189,7 +192,7 @@ function Home({ data }) {
 				<main className="">
 					<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
 						<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
-							<Floating sensitivity={-0.5} className="h-full">
+							{/* <Floating sensitivity={-0.5} className="h-full">
 								<FloatingElement
 									depth={0.5}
 									className="top-[15%] left-[2%] md:top-[25%] md:left-[5%]"
@@ -404,7 +407,9 @@ function Home({ data }) {
 										/>
 									)}
 								</FloatingElement>
-							</Floating>
+							</Floating> */}
+
+							<span>{hovered}</span>
 
 							<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
 								<motion.h1

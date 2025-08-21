@@ -1688,6 +1688,26 @@
         {
           "path": "registry/open-source/following-eyes.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/theme-toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -4550,6 +4570,10 @@
         {
           "path": "registry/open-source/preloader.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/mouse-image-trail.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -4704,6 +4728,18 @@
         },
         {
           "path": "registry/open-source/following-eyes.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/theme-toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/theme_changer/ThemeToggleButton.tsx",
           "type": "registry:ui"
         },
         {
@@ -5184,6 +5220,23 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slice-accordion",
+      "type": "registry:block",
+      "title": "Slice accordion",
+      "description": "Slice accordion",
+      "files": [
+        {
+          "path": "components/usages/sliceaccordionusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/slice-accordion.tsx",
           "type": "registry:ui"
         }
       ]

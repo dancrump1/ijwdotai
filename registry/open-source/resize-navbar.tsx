@@ -81,11 +81,11 @@ const DesktopNavbar = ({ navItems }: Props) => {
 		<motion.div
 			className={cn(
 				"flex relative justify-between px-4 py-3 rounded-md  transition duration-200 bg-transparent mx-auto",
-				!showFloatingNav ? "w-full h-screen" : "w-fit h-fit"
+				!showFloatingNav ? "w-screen h-screen" : "w-fit h-fit"
 			)}
 			animate={{
-				width: showFloatingNav ? "80%" : "100%",
-				height: showFloatingNav ? "0%" : "100%",
+				width: showFloatingNav ? "80%" : "100vw",
+				height: showFloatingNav ? "0%" : "100vh",
 				background: showFloatingNav ? "var(--neutral-900)" : "transparent",
 			}}
 			transition={{
@@ -162,9 +162,12 @@ function ResizeNavBar() {
 				ease: [0.6, 0.05, 0.1, 0.9],
 				duration: 0.8,
 			}}
-			className="fixed lg:inset-0 lg:h-screen w-screen z-[500]"
+			className="fixed lg:inset-0 z-[500] pointer-events-none"
 		>
-			<Link href={"/"} className="group absolute w-fit h-fit block z-[500]">
+			<Link
+				href={"/"}
+				className="group absolute w-fit h-fit block z-[500] pointer-events-auto"
+			>
 				<div className="group-hover:hidden block">
 					<MouseFollowingEyes />
 				</div>
@@ -181,7 +184,7 @@ function ResizeNavBar() {
 					/>
 				</div>
 			</Link>
-			<div className="hidden lg:block h-full w-full">
+			<div className="hidden lg:block">
 				<DesktopNavbar navItems={navItems} />
 			</div>
 			<div className="flex w-full lg:hidden ">

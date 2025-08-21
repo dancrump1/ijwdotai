@@ -127,13 +127,13 @@ function getFileWithFolderName(baseDir, folderName) {
 			const fileContent = fs.readFileSync(fullFilePath, "utf8");
 			return { filePath: fullFilePath, content: fileContent };
 		} else {
-			console.log(
-				`No file named "${folderName}" found inside "${folderPath}".`
-			);
+			// console.log(
+			// 	`No file named "${folderName}" found inside "${folderPath}".`
+			// );
 			return null;
 		}
 	} else {
-		console.log(`Folder "${folderPath}" does not exist.`);
+		// console.log(`Folder "${folderPath}" does not exist.`);
 		return null;
 	}
 }

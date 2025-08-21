@@ -4703,6 +4703,10 @@
           "type": "registry:ui"
         },
         {
+          "path": "registry/open-source/following-eyes.tsx",
+          "type": "registry:ui"
+        },
+        {
           "path": "registry/open-source/theme-animations.tsx",
           "type": "registry:ui"
         }

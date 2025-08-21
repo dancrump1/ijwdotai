@@ -28,8 +28,6 @@ export async function getComponentFilesWithDates(): Promise<
 					);
 					content = await fs.readFileSync(fullCompPath, "utf-8");
 				} else {
-					console.log(updatedFileName)
-
 					fullCompPath = path.join(
 						basicCompPath,
 						updatedFileName

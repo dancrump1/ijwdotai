@@ -128,12 +128,9 @@ const DesktopNavbar = ({ navItems }: Props) => {
 					</motion.div>
 				))}
 			</motion.div>
-			<Link
-				href={"/drive25"}
-				className="absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto"
-			>
+			<div className="absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto">
 				<MouseFollowingEyes />
-			</Link>
+			</div>
 		</div>
 	);
 };

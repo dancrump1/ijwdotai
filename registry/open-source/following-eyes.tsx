@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 
+import Link from "next/link";
+
 import ThemeToggle from "@/components/ui/navbar-components/theme-toggle";
 import SVG from "react-inlinesvg";
 
@@ -42,16 +44,18 @@ const MouseFollowingEyes: React.FC = () => {
 					</div>
 				</div>
 				<div className="group">
-					<SVG
-						src={"/dbsbottom.svg"}
-						title={"half of our logo"}
-						height={80}
-						width={233}
-						className="stroke-white group-hover:block hidden"
-						role="img"
-						aria-label={"half of our logo"}
-						loader={<span>Loading...</span>}
-					/>
+					<Link href="/drive25">
+						<SVG
+							src={"/dbsbottom.svg"}
+							title={"half of our logo"}
+							height={80}
+							width={233}
+							className="stroke-white group-hover:block hidden"
+							role="img"
+							aria-label={"half of our logo"}
+							loader={<span>Loading...</span>}
+						/>
+					</Link>
 					<div className="group-hover:hidden block">
 						<Eye
 							selfRef={eye2Ref}

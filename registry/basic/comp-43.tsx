@@ -8,6 +8,7 @@ import {
 	Button,
 	DateInput,
 	DateRangePicker,
+	DateSegment,
 	Dialog,
 	Group,
 	Label,
@@ -41,7 +42,8 @@ export default function Component() {
 		)
 			? "Selected date range may not include unavailable dates."
 			: null;
-
+	const dateInputStyle =
+		"relative inline-flex h-9 w-full items-center overflow-hidden whitespace-nowrap rounded-md border border-input bg-background px-3 py-2 text-sm shadow-xs transition-[color,box-shadow] outline-none data-focus-within:border-ring data-focus-within:ring-ring/50 data-focus-within:ring-[3px] data-focus-within:has-aria-invalid:ring-destructive/20 dark:data-focus-within:has-aria-invalid:ring-destructive/40 data-focus-within:has-aria-invalid:border-destructive";
 	return (
 		<DateRangePicker
 			className="*:not-first:mt-2"
@@ -53,14 +55,18 @@ export default function Component() {
 			</Label>
 			<div className="flex">
 				<Group className={cn(dateInputStyle, "pe-9")}>
-					<DateInput slot="start" unstyled />
+					<DateInput slot="start" unstyled="true">
+						{(segment) => <DateSegment segment={segment} />}
+					</DateInput>{" "}
 					<span
 						aria-hidden="true"
 						className="text-muted-foreground/70 px-2"
 					>
 						-
 					</span>
-					<DateInput slot="end" unstyled />
+					<DateInput slot="end" unstyled="true">
+						{(segment) => <DateSegment segment={segment} />}
+					</DateInput>{" "}
 				</Group>
 				<Button className="text-muted-foreground/80 hover:text-foreground data-focus-visible:border-ring data-focus-visible:ring-ring/50 z-10 -ms-9 -me-px flex w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none data-focus-visible:ring-[3px]">
 					<CalendarIcon size={16} />

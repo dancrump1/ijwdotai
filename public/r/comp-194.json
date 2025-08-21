@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/basic/comp-194.tsx",
-      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Select with error (native)</Label>\n\t\t\t<SelectNative id={id} aria-invalid>\n\t\t\t\t<option value=\"1\">React</option>\n\t\t\t\t<option value=\"2\">Next.js</option>\n\t\t\t\t<option value=\"3\">Astro</option>\n\t\t\t\t<option value=\"4\">Gatsby</option>\n\t\t\t</SelectNative>\n\t\t\t<p\n\t\t\t\tclassName=\"text-destructive mt-2 text-xs\"\n\t\t\t\trole=\"alert\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tSelected option is invalid\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Select } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Select with error (native)</Label>\n\t\t\t<Select id={id} aria-invalid>\n\t\t\t\t<option value=\"1\">React</option>\n\t\t\t\t<option value=\"2\">Next.js</option>\n\t\t\t\t<option value=\"3\">Astro</option>\n\t\t\t\t<option value=\"4\">Gatsby</option>\n\t\t\t</Select>\n\t\t\t<p\n\t\t\t\tclassName=\"text-destructive mt-2 text-xs\"\n\t\t\t\trole=\"alert\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tSelected option is invalid\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:ui"
     },
     {

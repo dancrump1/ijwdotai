@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/basic/comp-189.tsx",
-      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Simple select (native)</Label>\n\t\t\t<SelectNative id={id}>\n\t\t\t\t<option value=\"1\">React</option>\n\t\t\t\t<option value=\"2\">Next.js</option>\n\t\t\t\t<option value=\"3\">Astro</option>\n\t\t\t\t<option value=\"4\">Gatsby</option>\n\t\t\t</SelectNative>\n\t\t</div>\n\t);\n}\n",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Select } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Simple select (native)</Label>\n\t\t\t<Select id={id}>\n\t\t\t\t<option value=\"1\">React</option>\n\t\t\t\t<option value=\"2\">Next.js</option>\n\t\t\t\t<option value=\"3\">Astro</option>\n\t\t\t\t<option value=\"4\">Gatsby</option>\n\t\t\t</Select>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:ui"
     },
     {

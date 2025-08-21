@@ -4,14 +4,10 @@ import * as React from "react";
 import { useEffect } from "react";
 
 import { cn } from "@/registry/utilities/cn";
-import {
-	CommandGroup,
-	CommandItem,
-	CommandList,
-	Command as CommandPrimitive,
-	useCommandState,
-} from "cmdk";
-import { Command, XIcon } from "lucide-react";
+import { Command as CommandPrimitive, useCommandState } from "cmdk";
+import { XIcon } from "lucide-react";
+
+import { Command, CommandGroup, CommandItem, CommandList } from "./command";
 
 export interface Option {
 	value: string;

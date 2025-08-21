@@ -1,7 +1,7 @@
 import { useId } from "react";
 
 import { Label } from "@/components/ui/label";
-import { SelectNative } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();
@@ -9,14 +9,14 @@ export default function Component() {
 		<div className="*:not-first:mt-2">
 			<Label htmlFor={id}>Multiple select (native)</Label>
 			<div className="border-input overflow-hidden rounded-md border">
-				<SelectNative id={id} multiple className="rounded-none border-none">
+				<Select id={id} multiple className="rounded-none border-none">
 					<option value="1">React</option>
 					<option value="2">Next.js</option>
 					<option value="3">Astro</option>
 					<option value="4">Gatsby</option>
 					<option value="5">Vue</option>
 					<option value="6">Angular</option>
-				</SelectNative>
+				</Select>
 			</div>
 		</div>
 	);

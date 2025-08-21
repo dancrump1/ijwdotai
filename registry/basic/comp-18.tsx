@@ -2,7 +2,7 @@ import { useId } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { SelectNative } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();
@@ -16,11 +16,11 @@ export default function Component() {
 					placeholder="google"
 					type="text"
 				/>
-				<SelectNative className="text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none">
+				<Select className="text-muted-foreground hover:text-foreground w-fit rounded-s-none shadow-none">
 					<option>.com</option>
 					<option>.org</option>
 					<option>.net</option>
-				</SelectNative>
+				</Select>
 			</div>
 		</div>
 	);

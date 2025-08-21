@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/basic/comp-190.tsx",
-      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { SelectNative } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Select with placeholder (native)</Label>\n\t\t\t<SelectNative id={id} defaultValue=\"\">\n\t\t\t\t<option value=\"\" disabled>\n\t\t\t\t\tPlease select a value\n\t\t\t\t</option>\n\t\t\t\t<option value=\"1\">1 to 5</option>\n\t\t\t\t<option value=\"2\">5 to 10</option>\n\t\t\t\t<option value=\"3\">More than 10</option>\n\t\t\t</SelectNative>\n\t\t</div>\n\t);\n}\n",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Select } from \"@/components/ui/select\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"*:not-first:mt-2\">\n\t\t\t<Label htmlFor={id}>Select with placeholder (native)</Label>\n\t\t\t<Select id={id} defaultValue=\"\">\n\t\t\t\t<option value=\"\" disabled>\n\t\t\t\t\tPlease select a value\n\t\t\t\t</option>\n\t\t\t\t<option value=\"1\">1 to 5</option>\n\t\t\t\t<option value=\"2\">5 to 10</option>\n\t\t\t\t<option value=\"3\">More than 10</option>\n\t\t\t</Select>\n\t\t</div>\n\t);\n}\n",
       "type": "registry:ui"
     },
     {

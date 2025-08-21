@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-import { SelectNative } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();
@@ -12,7 +12,7 @@ export default function Component() {
 			>
 				Select with inset label (native)
 			</label>
-			<SelectNative
+			<Select
 				id={id}
 				defaultValue=""
 				className="border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0"
@@ -24,7 +24,7 @@ export default function Component() {
 				<option value="2">Next.js</option>
 				<option value="3">Astro</option>
 				<option value="4">Gatsby</option>
-			</SelectNative>
+			</Select>
 		</div>
 	);
 }

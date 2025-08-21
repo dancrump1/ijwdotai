@@ -1,6 +1,11 @@
 "use client";
 
-import { DateField, DateInput, Label } from "react-aria-components";
+import {
+	DateField,
+	DateInput,
+	DateSegment,
+	Label,
+} from "react-aria-components";
 
 export default function Component() {
 	return (
@@ -8,7 +13,7 @@ export default function Component() {
 			<Label className="text-foreground text-sm font-medium">
 				Date input
 			</Label>
-			<DateInput />
+			<DateInput>{(segment) => <DateSegment segment={segment} />}</DateInput>{" "}
 			<p
 				className="text-muted-foreground mt-2 text-xs"
 				role="region"

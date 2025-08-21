@@ -1,7 +1,12 @@
 "use client";
 
 import { ClockIcon } from "lucide-react";
-import { DateInput, Label, TimeField } from "react-aria-components";
+import {
+	DateInput,
+	DateSegment,
+	Label,
+	TimeField,
+} from "react-aria-components";
 
 export default function Component() {
 	return (
@@ -13,7 +18,9 @@ export default function Component() {
 				<div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 z-10 flex items-center justify-center ps-3">
 					<ClockIcon size={16} aria-hidden="true" />
 				</div>
-				<DateInput className="ps-9" />
+				<DateInput>
+					{(segment) => <DateSegment segment={segment} />}
+				</DateInput>{" "}
 			</div>
 			<p
 				className="text-muted-foreground mt-2 text-xs"

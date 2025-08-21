@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-import { SelectNative } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();
@@ -12,7 +12,7 @@ export default function Component() {
 			>
 				Select with overlapping label (native)
 			</label>
-			<SelectNative id={id} defaultValue="">
+			<Select id={id} defaultValue="">
 				<option value="" disabled>
 					Select framework
 				</option>
@@ -20,7 +20,7 @@ export default function Component() {
 				<option value="2">Next.js</option>
 				<option value="3">Astro</option>
 				<option value="4">Gatsby</option>
-			</SelectNative>
+			</Select>
 		</div>
 	);
 }

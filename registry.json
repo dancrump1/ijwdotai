@@ -9967,6 +9967,10 @@
         {
           "path": "components/ui/multiselect.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/command.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -9990,6 +9994,10 @@
         },
         {
           "path": "components/ui/multiselect.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/command.tsx",
           "type": "registry:ui"
         }
       ]

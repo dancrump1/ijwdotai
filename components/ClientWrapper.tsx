@@ -103,12 +103,17 @@ export const ClientWrapper = ({
 		() => searchParams.getAll("subcategory"),
 		[searchParams]
 	);
-
+	const containerRef = useRef(null);
 	const [filteredFiles, setFilteredFiles] = useState([]);
+
+	const [basic, setBasic] = useState(false);
 
 	useEffect(() => {
 		setFilteredFiles(
 			files
+				.filter(({ name }) =>
+					basic ? name.includes("comp-") : !name.includes("comp-")
+				)
 				.filter(({ name }) => {
 					return !!params?.slug
 						? name.includes(params.slug) ||
@@ -136,37 +141,47 @@ export const ClientWrapper = ({
 					return a.name.localeCompare(b.name);
 				})
 		);
-	}, [files, params?.slug, searchFilters]);
+	}, [files, params?.slug, searchFilters, basic]);
 
-	const componentImports = filteredFiles.map(({ name }) => {
-		if (name.includes("comp-")) {
-			return dynamic(() => import("@/registry/basic/" + name), {
-				loading: ComponentLoading,
-			});
+	const componentImports = filteredFiles
+		.map(({ name }) => {
+			if (name.includes("comp-")) {
+				return null;
+			}
+
+			return dynamic(
+				() =>
+					import(
+						"@/components/usages/" +
+							name.replace(".json", "").replaceAll("-", "") +
+							"usage.tsx"
+					),
+				{
+					loading: ComponentLoading,
+					ssr:
+						name.toLowerCase().includes("select-modal") ||
+						name.toLowerCase().includes("dither") ||
+						name.toLowerCase().includes("text-rotate") ||
+						name.toLowerCase().includes("flipped-menu")
+							? false
+							: true,
+				}
+			);
+		})
+		.filter(Boolean);
+
+	const basicImports = filteredFiles.map(({ name }) => {
+		if (!name.includes("comp-")) {
+			return null;
 		}
 
 		return dynamic(
-			() =>
-				import(
-					"@/components/usages/" +
-						name.replace(".json", "").replaceAll("-", "") +
-						"usage.tsx"
-				),
+			() => import("@/registry/basic/" + name.replace(".json", ".tsx")),
 			{
 				loading: ComponentLoading,
-				ssr:
-					name.toLowerCase().includes("select-modal") ||
-					name.toLowerCase().includes("dither") ||
-					name.toLowerCase().includes("text-rotate") ||
-					name.toLowerCase().includes("flipped-menu")
-						? false
-						: true,
 			}
 		);
 	});
-	const containerRef = useRef(null);
-
-	const [basic, setBasic] = useState(false);
 
 	const { scrollYProgress } = useScroll({ container: containerRef });
 
@@ -408,153 +423,44 @@ export const ClientWrapper = ({
 					>
 						{basic ? (
 							<>
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.CARD
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="Basic Card"
-								>
-									<BasicCard />
-								</Component>
-								<Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.CARD
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="Basic Card"
-								>
-									<CardWithImages />
-								</Component> */}
-
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.TRANSITIONS
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="dual ring loader"
-								>
-									<DualRingSpinnerLoader />
-								</Component> */}
-
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.TRANSITIONS
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="circular bars loader"
-								>
-									<CircularBarsSpinnerLoader />
-								</Component> */}
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.TRANSITIONS
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="three bounce loader"
-								>
-									<ThreeDotSimpleLoader />
-								</Component> */}
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.TRANSITIONS
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="three dot loader"
-								>
-									<ThreeDotLoaderGrowing />
-								</Component> */}
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() === "preloaders"
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="Stripes Preloader"
-								>
-									<VerticalTiles rerun>
-										<span>Some content</span>
-									</VerticalTiles>
-								</Component> */}
-								{/* <Component
-									allFilters={filterOptions}
-									collapsed={collapsed}
-									setCollapsed={setCollapsed}
-									gridView={gridView}
-									setComponentCount={setComponentCount}
-									tags={[
-										filterOptions.find(
-											(filter) =>
-												filter.label.toLowerCase() ===
-												filter_constants.ACCORDION
-										),
-									]}
-									selectedFilters={selectedFilters}
-									title="Basic Accordion"
-								>
-									<AccordionBasic />
-								</Component> */}
+								{basicImports.map((ComponentImported, i) => {
+									return (
+										<Suspense
+											key={"basic" + i}
+											fallback={
+												<span className="text-black dark:text-white">
+													loading
+												</span>
+											}
+										>
+											<Component
+												key={"custom-basic-component" + i}
+												collapsed={collapsed}
+												setCollapsed={setCollapsed}
+												gridView={gridView}
+												setComponentCount={setComponentCount}
+												selectedFilters={selectedFilters}
+												title={filteredFiles[i].name.replace(
+													".json",
+													""
+												)}
+												content={filteredFiles[i].content}
+											>
+												{!!ComponentImported ? (
+													<ComponentImported />
+												) : (
+													<div>
+														failed to load{" "}
+														{filteredFiles[i].name.replace(
+															".json",
+															""
+														)}
+													</div>
+												)}
+											</Component>
+										</Suspense>
+									);
+								})}
 							</>
 						) : (
 							<>

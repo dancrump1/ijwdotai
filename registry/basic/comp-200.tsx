@@ -1,7 +1,7 @@
 import { useId, useMemo } from "react";
 
 import { Label } from "@/components/ui/label";
-import { SelectNative } from "@/components/ui/select";
+import { Select } from "@/components/ui/select";
 
 export default function Component() {
 	const id = useId();
@@ -34,13 +34,13 @@ export default function Component() {
 	return (
 		<div className="*:not-first:mt-2">
 			<Label htmlFor={id}>Timezone select (native)</Label>
-			<SelectNative id={id} defaultValue="Europe/London">
+			<Select id={id} defaultValue="Europe/London">
 				{formattedTimezones.map(({ value, label }) => (
 					<option key={value} value={value}>
 						{label}
 					</option>
 				))}
-			</SelectNative>
+			</Select>
 		</div>
 	);
 }

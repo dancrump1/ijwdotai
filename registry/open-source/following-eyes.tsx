@@ -2,6 +2,11 @@
 
 import React, { useEffect, useRef } from "react";
 
+import ThemeToggle from "@/components/ui/navbar-components/theme-toggle";
+import SVG from "react-inlinesvg";
+
+import { ThemeToggleButton } from "./theme_changer/ThemeToggleButton";
+
 const MouseFollowingEyes: React.FC = () => {
 	const eye1Ref = useRef<HTMLDivElement>(null);
 	const eye2Ref = useRef<HTMLDivElement>(null);
@@ -20,8 +25,41 @@ const MouseFollowingEyes: React.FC = () => {
 	return (
 		<div className="flex justify-center items-center">
 			<div className="flex space-x-2">
-				<Eye selfRef={eye1Ref} otherRef={eye2Ref} mousePos={mousePos} />
-				<Eye selfRef={eye2Ref} otherRef={eye1Ref} mousePos={mousePos} />
+				<div className="group">
+					<div className="group-hover:block hidden">
+						<ThemeToggleButton
+							showLabel
+							variant="gif"
+							url="https://media.giphy.com/media/KBbr4hHl9DSahKvInO/giphy.gif?cid=790b76112m5eeeydoe7et0cr3j3ekb1erunxozyshuhxx2vl&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+						/>
+					</div>
+					<div className="group-hover:hidden block">
+						<Eye
+							selfRef={eye1Ref}
+							otherRef={eye2Ref}
+							mousePos={mousePos}
+						/>
+					</div>
+				</div>
+				<div className="group">
+					<SVG
+						src={"/dbsbottom.svg"}
+						title={"half of our logo"}
+						height={80}
+						width={233}
+						className="stroke-white group-hover:block hidden"
+						role="img"
+						aria-label={"half of our logo"}
+						loader={<span>Loading...</span>}
+					/>
+					<div className="group-hover:hidden block">
+						<Eye
+							selfRef={eye2Ref}
+							otherRef={eye1Ref}
+							mousePos={mousePos}
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
@@ -33,7 +71,13 @@ interface EyeProps {
 	mousePos: React.MutableRefObject<{ x: number; y: number }>;
 }
 
-const Eye: React.FC<EyeProps> = ({ selfRef, otherRef, mousePos }) => {
+const Eye: React.FC<EyeProps> = ({
+	selfRef,
+	otherRef,
+	mousePos,
+	showWhat,
+	setShowWhat,
+}) => {
 	const pupilRef = useRef<HTMLDivElement>(null);
 	const center = useRef({ x: 0, y: 0 });
 

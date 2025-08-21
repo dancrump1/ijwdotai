@@ -10,7 +10,6 @@ import { cn } from "@/registry/utilities/cn";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useTheme } from "next-themes";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-import SVG from "react-inlinesvg";
 
 import { MouseFollowingEyes } from "./following-eyes";
 import { createAnimation } from "./theme-animations";
@@ -131,23 +130,9 @@ const DesktopNavbar = ({ navItems }: Props) => {
 			</motion.div>
 			<Link
 				href={"/drive25"}
-				className="group absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto"
+				className="absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto"
 			>
-				<div className="group-hover:hidden block">
-					<MouseFollowingEyes />
-				</div>
-				<div className="group-hover:block hidden">
-					<SVG
-						src={"/dbsbottom.svg"}
-						title={"half of our logo"}
-						height={80}
-						width={233}
-						className="stroke-white"
-						role="img"
-						aria-label={"half of our logo"}
-						loader={<span>Loading...</span>}
-					/>
-				</div>
+				<MouseFollowingEyes />
 			</Link>
 		</div>
 	);

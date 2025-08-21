@@ -15071,6 +15071,14 @@
         {
           "path": "registry/basic/comp-474.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/table.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -15390,6 +15398,18 @@
       "files": [
         {
           "path": "registry/basic/comp-487.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/calendar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -16575,6 +16595,10 @@
         {
           "path": "registry/basic/comp-544.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/usefileUpload.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17007,6 +17031,14 @@
         {
           "path": "registry/basic/comp-565.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17018,6 +17050,14 @@
       "files": [
         {
           "path": "registry/basic/comp-566.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]
@@ -17031,6 +17071,14 @@
         {
           "path": "registry/basic/comp-567.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17042,6 +17090,14 @@
       "files": [
         {
           "path": "registry/basic/comp-568.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]
@@ -17095,6 +17151,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17114,6 +17174,10 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17135,6 +17199,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17146,6 +17214,14 @@
       "files": [
         {
           "path": "registry/basic/comp-573.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]
@@ -17167,6 +17243,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17179,6 +17259,14 @@
         {
           "path": "registry/basic/comp-575.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17190,6 +17278,14 @@
       "files": [
         {
           "path": "registry/basic/comp-576.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
         }
       ]
@@ -17211,6 +17307,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17231,6 +17331,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17250,6 +17354,10 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17295,6 +17403,10 @@
         {
           "path": "components/ui/input.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17314,6 +17426,26 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/info-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17335,6 +17467,26 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/theme-toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17354,6 +17506,22 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17379,6 +17547,22 @@
         {
           "path": "components/ui/input.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17402,6 +17586,22 @@
         },
         {
           "path": "components/ui/input.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17427,6 +17627,18 @@
         {
           "path": "components/ui/input.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/theme-toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17451,6 +17663,10 @@
         {
           "path": "components/ui/input.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17471,6 +17687,18 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17490,6 +17718,18 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/settings-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17535,6 +17775,22 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/team-switcher.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17554,6 +17810,14 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/user-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17585,6 +17849,18 @@
           "type": "registry:ui"
         },
         {
+          "path": "components/ui/navbar-components/info-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/notification-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/settings-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
           "path": "components/ui/switch.tsx",
           "type": "registry:ui"
         }
@@ -17607,6 +17883,26 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/date-picker.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/calendar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/filters.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/label.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17626,6 +17922,18 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/app-toggle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/radio-group.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/navbar-components/team-switcher.tsx",
           "type": "registry:ui"
         }
       ]
@@ -17703,6 +18011,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17723,6 +18035,10 @@
         {
           "path": "registry/utilities/cn.ts",
           "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -17742,6 +18058,10 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/tree.tsx",
           "type": "registry:ui"
         }
       ]

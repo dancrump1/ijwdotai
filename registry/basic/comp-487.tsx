@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Calendar } from "@/components/ui/calendar-rac";
+import { Calendar } from "@/components/ui/calendar";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import type { DateValue } from "react-aria-components";
 

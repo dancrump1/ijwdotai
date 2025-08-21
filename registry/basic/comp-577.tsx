@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/navbar-components/logo";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -10,7 +11,6 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import Logo from "@/registry/default/components/navbar-components/logo";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [

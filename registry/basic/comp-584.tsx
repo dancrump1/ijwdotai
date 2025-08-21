@@ -2,6 +2,9 @@ import { useId } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Logo from "@/components/ui/navbar-components/logo";
+import NotificationMenu from "@/components/ui/navbar-components/notification-menu";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -13,9 +16,6 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { SearchIcon } from "lucide-react";
 
 // Navigation links array to be used in both desktop and mobile menus

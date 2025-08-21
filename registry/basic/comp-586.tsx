@@ -2,8 +2,8 @@ import { useId } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import ThemeToggle from "@/registry/default/components/navbar-components/theme-toggle";
+import Logo from "@/components/ui/navbar-components/logo";
+import ThemeToggle from "@/components/ui/navbar-components/theme-toggle";
 import { MicIcon, SearchIcon } from "lucide-react";
 
 export default function Component() {

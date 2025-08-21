@@ -1,6 +1,9 @@
 import { useId } from "react";
 
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/navbar-components/logo";
+import ThemeToggle from "@/components/ui/navbar-components/theme-toggle";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -25,9 +28,6 @@ import {
 	TooltipProvider,
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import ThemeToggle from "@/registry/default/components/navbar-components/theme-toggle";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import {
 	FileTextIcon,
 	GlobeIcon,

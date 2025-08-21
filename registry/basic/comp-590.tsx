@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import NotificationMenu from "@/components/ui/navbar-components/notification-menu";
+import TeamSwitcher from "@/components/ui/navbar-components/team-switcher";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -10,9 +13,6 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
-import TeamSwitcher from "@/registry/default/components/navbar-components/team-switcher";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import {
 	CompassIcon,
 	FeatherIcon,

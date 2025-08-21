@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/navbar-components/logo";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -12,7 +13,6 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import Logo from "@/registry/default/components/navbar-components/logo";
 import { BookOpenIcon, InfoIcon, LifeBuoyIcon } from "lucide-react";
 
 import { cn } from "../utilities/cn";

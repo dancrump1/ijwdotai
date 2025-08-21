@@ -13,15 +13,15 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Logo from "@/components/ui/navbar-components/logo";
+import NotificationMenu from "@/components/ui/navbar-components/notification-menu";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectValue,
 } from "@/components/ui/select";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { ChevronsUpDown } from "lucide-react";
 import { Select as SelectPrimitive } from "radix-ui";
 

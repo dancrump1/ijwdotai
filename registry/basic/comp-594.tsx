@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import AppToggle from "@/registry/default/components/navbar-components/app-toggle";
-import TeamSwitcher from "@/registry/default/components/navbar-components/team-switcher";
+import AppToggle from "@/components/ui/navbar-components/app-toggle";
+import TeamSwitcher from "@/components/ui/navbar-components/team-switcher";
 import { SparklesIcon, UploadIcon } from "lucide-react";
 
 const teams = ["Acme Inc.", "Origin UI", "Junon"];

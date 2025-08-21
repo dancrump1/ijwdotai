@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/navbar-components/logo";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -10,8 +12,6 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
-import Logo from "@/registry/default/components/navbar-components/logo";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { HouseIcon, InboxIcon, SparklesIcon, ZapIcon } from "lucide-react";
 
 // Navigation links array

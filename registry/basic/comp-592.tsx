@@ -5,10 +5,10 @@ import { useId, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import InfoMenu from "@/components/ui/navbar-components/info-menu";
+import NotificationMenu from "@/components/ui/navbar-components/notification-menu";
+import SettingsMenu from "@/components/ui/navbar-components/settings-menu";
 import { Switch } from "@/components/ui/switch";
-import InfoMenu from "@/registry/default/components/navbar-components/info-menu";
-import NotificationMenu from "@/registry/default/components/navbar-components/notification-menu";
-import SettingsMenu from "@/registry/default/components/navbar-components/settings-menu";
 import { LayoutGridIcon, PlusIcon, SearchIcon } from "lucide-react";
 
 export default function Component() {

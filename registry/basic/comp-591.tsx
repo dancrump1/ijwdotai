@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	Select,
 	SelectContent,
@@ -8,7 +9,6 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { BotMessageSquareIcon, MessageCircleDashedIcon } from "lucide-react";
 
 export default function Component() {

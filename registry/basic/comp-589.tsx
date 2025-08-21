@@ -5,6 +5,8 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
+import SettingsMenu from "@/components/ui/navbar-components/settings-menu";
+import UserMenu from "@/components/ui/navbar-components/user-menu";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -22,8 +24,6 @@ import {
 	SelectItem,
 	SelectValue,
 } from "@/components/ui/select";
-import SettingsMenu from "@/registry/default/components/navbar-components/settings-menu";
-import UserMenu from "@/registry/default/components/navbar-components/user-menu";
 import { ChevronsUpDown } from "lucide-react";
 import { Select as SelectPrimitive } from "radix-ui";
 

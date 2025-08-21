@@ -7,8 +7,8 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
-import DatePicker from "@/registry/default/components/navbar-components/date-picker";
-import Filters from "@/registry/default/components/navbar-components/filters";
+import DatePicker from "@/components/ui/navbar-components/date-picker";
+import Filters from "@/components/ui/navbar-components/filters";
 import { BookmarkIcon, HomeIcon } from "lucide-react";
 
 export default function Component() {

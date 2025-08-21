@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 import { motion } from "motion/react";
 
+import { MouseImageTrail } from "./mouse-image-trail";
+
 // Credit:
 // https://www.sparkui.me/components/apple-preloader
 
@@ -27,17 +29,7 @@ const slideUp = {
 	},
 };
 
-const words = [
-	"Be",
-	"Ready...",
-	"It's",
-	"About",
-	"To",
-	"Get",
-	"Bumpy",
-	"In",
-	"Here",
-];
+const words = ["Move", "yo", "mouse", "...", "see", "what", "we", "got"];
 
 export default function Preloader() {
 	const [index, setIndex] = useState(0);
@@ -82,29 +74,46 @@ export default function Preloader() {
 			variants={slideUp}
 			initial="initial"
 			exit="exit"
-			className="h-[100vh] w-[100vw] flex items-center justify-center fixed top-0 left-0 z-[501] bg-[#000]"
+			className="h-[100vh] w-[100vw] z-[501] fixed top-0 left-0 bg-[#000]"
 		>
-			{dimension.width > 0 && (
-				<>
-					<motion.p
-						variants={opacity}
-						initial="initial"
-						animate="enter"
-						className="flex bg-clip-text bg-gradient-to-br to-[rgb(255,255,255,0.5)] from-[rgb(255,255,255,0.58)] font-medium text-[42px] items-center absolute z-[1]"
-						style={{ color: "transparent" }}
-					>
-						{words[index]}
-					</motion.p>
-					<svg className="absolute top-0 w-[100%] h-[calc(100% + 200px)]">
-						<motion.path
-							variants={curve}
-							initial="initial"
-							exit="exit"
-							fill="#000"
-						></motion.path>
-					</svg>
-				</>
-			)}
+			<MouseImageTrail
+				images={[
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+					"/itjustworks.jpg",
+				]}
+				renderImageBuffer={150}
+				rotationRange={25}
+			>
+				<div className="h-[100vh] w-[100vw] flex items-center justify-center ">
+					{dimension.width > 0 && (
+						<>
+							<motion.p
+								variants={opacity}
+								initial="initial"
+								animate="enter"
+								className="flex bg-clip-text bg-gradient-to-br to-[rgb(255,255,255,0.5)] from-[rgb(255,255,255,0.58)] font-medium text-[42px] items-center absolute z-[1]"
+								style={{ color: "transparent" }}
+							>
+								{words[index]}
+							</motion.p>
+							<svg className="absolute top-0 w-[100%] h-[calc(100% + 200px)]">
+								<motion.path
+									variants={curve}
+									initial="initial"
+									exit="exit"
+									fill="#000"
+								></motion.path>
+							</svg>
+						</>
+					)}
+				</div>
+			</MouseImageTrail>
 		</motion.div>
 	);
 }

@@ -130,7 +130,7 @@ const DesktopNavbar = ({ navItems }: Props) => {
 				))}
 			</motion.div>
 			<Link
-				href={"/"}
+				href={"/drive25"}
 				className="group absolute top-1 left-4 w-fit h-fit block z-[500] pointer-events-auto"
 			>
 				<div className="group-hover:hidden block">

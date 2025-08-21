@@ -103,7 +103,7 @@ export const MouseImageTrail = ({
 	return (
 		<div
 			ref={scope}
-			className="relative overflow-hidden"
+			className="relative overflow-hidden h-screen z-[502]"
 			onMouseMove={handleMouseMove}
 		>
 			{children}

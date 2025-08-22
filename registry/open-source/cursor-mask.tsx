@@ -2,7 +2,7 @@
 
 import type React from "react";
 import type { ReactNode } from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useHover } from "@/lib/hover-context";
 import { useMousePosition } from "@/registry/utilities/elasticLinePosition";
@@ -50,6 +50,13 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 	const smoothMaskX = useTransform(maskX, (value) => `${value}px`);
 	const smoothMaskY = useTransform(maskY, (value) => `${value}px`);
 
+	const [recentHover, setRecentHover] = useState(false);
+
+	useEffect(() => {
+		setRecentHover(true);
+		setTimeout(() => setRecentHover(false), 300);
+	}, [hovering]);
+
 	return (
 		<div
 			className={twMerge("relative p-10 h-full w-full", className)}
@@ -64,25 +71,64 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 					WebkitMaskSize: `${size}px`,
 					WebkitMaskPosition: `${smoothMaskX.get()} ${smoothMaskY.get()}`,
 				}}
-				transition={
-					!hovering
-						? {
-								duration: 0,
-							}
-						: {
-								type: "tween",
-								ease: "easeOut",
-								duration: 0.3,
-							}
-				}
+				transition={{
+					WebkitMaskSize: {
+						type: "tween",
+						ease: "easeOut",
+						duration: 0.3,
+					}, // smooth size animation
+
+					WebkitMaskPosition:
+						!hovering && !recentHover
+							? {
+									duration: 0,
+								}
+							: {
+									type: "tween",
+									ease: "easeOut",
+									duration: 0.3,
+								},
+				}}
 				style={{
 					WebkitMaskImage: "url('/black-circle.svg')",
 					WebkitMaskRepeat: "no-repeat",
 					color: hoverColor ? hoverColor : "green",
 				}}
 			>
-				{children}
+				{hovered === "About Us" && (
+					<video
+						src="placeholder.mp4"
+						height={1920}
+						width={1080}
+						className="h-screen w-screen object-cover"
+					/>
+				)}
+				{hovered === "WATCH REEL" && (
+					<video
+						src="placeholder.mp4"
+						height={1920}
+						width={1080}
+						className="h-screen w-screen object-cover"
+					/>
+				)}
+				{hovered === "OUR TEAM" && (
+					<video
+						src="placeholder.mp4"
+						height={1920}
+						width={1080}
+						className="h-screen w-screen object-cover"
+					/>
+				)}
+				{hovered === "CONTACT" && (
+					<video
+						src="placeholder.mp4"
+						height={1920}
+						width={1080}
+						className="h-screen w-screen object-cover opacity-25"
+					/>
+				)}
 			</motion.div>
+			{children}
 		</div>
 	);
 };

@@ -481,6 +481,23 @@
       ]
     },
     {
+      "name": "bubble-menu",
+      "type": "registry:block",
+      "title": "Bubble menu",
+      "description": "Bubble menu",
+      "files": [
+        {
+          "path": "components/usages/bubblemenuusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/bubble-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "bubble-text",
       "type": "registry:block",
       "title": "Bubble text",

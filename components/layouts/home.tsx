@@ -9,6 +9,7 @@ import MarqueeAlongSvgPathDemo from "@/components/usages/marqueealongsvgusage";
 import { useHover } from "@/lib/hover-context";
 import AccordionSlices from "@/registry/open-source/accordion-slices";
 import ContentWithImage from "@/registry/open-source/content-with-image";
+import MaskCursor from "@/registry/open-source/cursor-mask";
 import FAQPage from "@/registry/open-source/faq-section";
 import InfiniteScrollingLogosAnimation from "@/registry/open-source/infinite-scrolling-logos-animation";
 import OppositeScroll from "@/registry/open-source/opposite-scroll-links";
@@ -191,8 +192,9 @@ function Home({ data }) {
 			{!loader && (
 				<main className="">
 					<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
-						<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
-							{/* <Floating sensitivity={-0.5} className="h-full">
+						<MaskCursor hovered={hovered}>
+							<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
+								{/* <Floating sensitivity={-0.5} className="h-full">
 								<FloatingElement
 									depth={0.5}
 									className="top-[15%] left-[2%] md:top-[25%] md:left-[5%]"
@@ -409,72 +411,73 @@ function Home({ data }) {
 								</FloatingElement>
 							</Floating> */}
 
-							<span>{hovered}</span>
+								<span>{hovered}</span>
 
-							<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
-								<motion.h1
-									className="text-3xl text-white mix-blend-soft-light dark:text-black sm:text-5xl md:text-7xl lg:text-8xl text-center w-full justify-center items-center flex-col flex whitespace-pre leading-tight tracking-tight space-y-1 md:space-y-4"
-									animate={{ opacity: 1, y: 0 }}
-									initial={{ opacity: 0, y: 20 }}
-									transition={{
-										duration: 0.2,
-										ease: "easeOut",
-										delay: 0.3,
-									}}
-								>
-									<LayoutGroup>
-										<motion.span
-											layout
-											className="flex whitespace-pre"
-										>
+								<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
+									<motion.h1
+										className="text-3xl text-white mix-blend-soft-light dark:text-black sm:text-5xl md:text-7xl lg:text-8xl text-center w-full justify-center items-center flex-col flex whitespace-pre leading-tight tracking-tight space-y-1 md:space-y-4"
+										animate={{ opacity: 1, y: 0 }}
+										initial={{ opacity: 0, y: 20 }}
+										transition={{
+											duration: 0.2,
+											ease: "easeOut",
+											delay: 0.3,
+										}}
+									>
+										<LayoutGroup>
 											<motion.span
 												layout
 												className="flex whitespace-pre"
-												transition={{
-													type: "spring",
-													damping: 30,
-													stiffness: 400,
-												}}
-											></motion.span>
-											<TextRotate
-												texts={[
-													"DRIVE",
-													"pop ✨",
-													"DRIVE",
-													"perfect",
-													"DRIVE",
-													"quirkasauruses",
-													"DRIVE",
-													"🪩 funky",
-													"DRIVE",
-													"rock 🤘",
-													"DRIVE",
-												]}
-												mainClassName="overflow-hidden pr-3 text-primary py-0 pb-2 md:pb-4 rounded-xl"
-												staggerDuration={0.03}
-												staggerFrom="last"
-												rotationInterval={3000}
-												transition={{
-													type: "spring",
-													damping: 30,
-													stiffness: 400,
-												}}
-											/>
-										</motion.span>
-									</LayoutGroup>
-								</motion.h1>
-								<SVG
-									src={"/dbsbottom.svg"}
-									title={"half of our logo"}
-									height={100}
-									width={800}
-									className="stroke-white"
-									role="img"
-									aria-label={"half of our logo"}
-									loader={<span>Loading...</span>}
-								/>
+											>
+												<motion.span
+													layout
+													className="flex whitespace-pre"
+													transition={{
+														type: "spring",
+														damping: 30,
+														stiffness: 400,
+													}}
+												></motion.span>
+												<TextRotate
+													texts={[
+														"DRIVE",
+														"pop ✨",
+														"DRIVE",
+														"perfect",
+														"DRIVE",
+														"quirkasauruses",
+														"DRIVE",
+														"🪩 funky",
+														"DRIVE",
+														"rock 🤘",
+														"DRIVE",
+													]}
+													mainClassName="overflow-hidden pr-3 text-primary py-0 pb-2 md:pb-4 rounded-xl"
+													staggerDuration={0.03}
+													staggerFrom="last"
+													rotationInterval={3000}
+													transition={{
+														type: "spring",
+														damping: 30,
+														stiffness: 400,
+													}}
+												/>
+											</motion.span>
+										</LayoutGroup>
+									</motion.h1>
+									<SVG
+										src={"/dbsbottom.svg"}
+										title={"half of our logo"}
+										height={100}
+										width={800}
+										className="stroke-white"
+										role="img"
+										aria-label={"half of our logo"}
+										loader={<span>Loading...</span>}
+									/>
+								</div>
 							</div>
-						</div>
+						</MaskCursor>
 					</section>
 
 					<section className="bg-secondary my-32 py-32">

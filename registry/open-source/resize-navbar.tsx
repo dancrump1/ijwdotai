@@ -77,7 +77,7 @@ const DesktopNavbar = ({ navItems }: Props) => {
 		document.startViewTransition(switchTheme);
 	}, [theme, setTheme]);
 
-	const { setHovered } = useHover();
+	const { setHovered, setHovering } = useHover();
 
 	return (
 		<div className="w-screen">
@@ -119,7 +119,11 @@ const DesktopNavbar = ({ navItems }: Props) => {
 							position: showFloatingNav ? "relative" : "absolute",
 						}}
 						transition={{ duration: 0.5 }}
-						onMouseEnter={() => setHovered(item.title)}
+						onMouseEnter={() => {
+							setHovered(item.title);
+							setHovering(true);
+						}}
+						onMouseLeave={() => setHovering(false)}
 					>
 						<NavBarItem
 							href={item.link}
@@ -159,7 +163,7 @@ const navItems = [
 	},
 ];
 
-function ResizeNavBar({ setSelectedRoute }) {
+function ResizeNavBar() {
 	return (
 		<motion.nav
 			initial={{
@@ -175,10 +179,7 @@ function ResizeNavBar({ setSelectedRoute }) {
 			className="fixed lg:inset-0 z-[500] pointer-events-none"
 		>
 			<div className="hidden lg:block">
-				<DesktopNavbar
-					navItems={navItems}
-					setSelectedRoute={setSelectedRoute}
-				/>
+				<DesktopNavbar navItems={navItems} />
 			</div>
 			<div className="flex w-full lg:hidden ">
 				<MobileNavbar navItems={navItems} />

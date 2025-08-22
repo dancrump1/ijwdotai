@@ -4,6 +4,7 @@ import type React from "react";
 import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 
+import { useHover } from "@/lib/hover-context";
 import { useMousePosition } from "@/registry/utilities/elasticLinePosition";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { twMerge } from "tailwind-merge";
@@ -12,23 +13,27 @@ import { twMerge } from "tailwind-merge";
 // https://auraui.vercel.app/component/mask-cursor
 
 interface MaskCursorProps {
-	// children: ReactNode;
+	children: ReactNode;
 	hoverColor?: string;
 	maskColor?: string;
 	clasName?: string;
+	hovered?: string;
 }
 const MaskCursor: React.FC<MaskCursorProps> = ({
-	// children,
+	children,
 	clasName,
 	hoverColor,
 	maskColor = "#A5FECB",
+	hovered,
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const { x, y } = useMousePosition();
 
+	const { hovering } = useHover();
+
 	const maskX = useMotionValue(0);
 	const maskY = useMotionValue(0);
-	const size = isHovered ? 100 : 40;
+	const size = hovering ? 5000 : 500;
 
 	// Reference to the container to calculate offsets
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -54,7 +59,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 			<motion.div
 				className={twMerge(
 					"absolute inset-0 text-4xl",
-					`bg-[${maskColor}]`
+					`dark:bg-[${maskColor}] bg-gray-200`
 				)}
 				animate={{
 					WebkitMaskSize: `${size}px`,
@@ -67,16 +72,13 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 					color: hoverColor ? hoverColor : "green",
 				}}
 			>
-				<motion.p
+				<motion.div
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 					className="text-foreground-a12"
 				>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Maiores, minima! Officiis ratione quidem, odit voluptatum sit non
-					est aliquam impedit, nobis earum eius animi cum ab nemo aliquid
-					dignissimos quo.
-				</motion.p>
+					{children}
+				</motion.div>
 			</motion.div>
 		</div>
 	);

@@ -566,9 +566,9 @@ function Home({ data }) {
 						<OppositeScroll works={workSpotlight} />
 					</section>
 
-					{/* <section className="relative h-[50vh] w-full">
-                        <MarqueeAlongSvgPathDemo />
-                    </section> */}
+					<section className="relative h-[50vh] w-full">
+						<MarqueeAlongSvgPathDemo />
+					</section>
 
 					<section className="my-64">
 						<InfiniteScrollingLogosAnimation assets={assets} />

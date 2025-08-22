@@ -237,7 +237,7 @@ const MarqueeItem = ({
 				offsetDistance: itemOffset,
 				offsetRotate: "auto",
 				zIndex: zIndex,
-				opacity: opacity,
+				// opacity: opacity,
 			}}
 			aria-hidden={repeatIndex > 0}
 			onMouseEnter={() => (isHovered.current = true)}
@@ -400,7 +400,7 @@ const MarqueeAlongPath = ({
 	const wrapperRef = useRef<HTMLDivElement>(null);
 
 	// Toggle between scaling methods: 1 or 2
-	const [useScaleMethod] = useState<1 | 2>(1);
+	const [useScaleMethod] = useState<1 | 2>(2);
 
 	// Scale method #1
 	const marqueeContainerRef = useRef<HTMLDivElement>(null);
@@ -464,7 +464,7 @@ const MarqueeAlongPath = ({
 
 	return (
 		<div
-			className="container w-full relative aspect-[588/187] overflow-x-hidden overflow-y-visible"
+			className="container w-full relative overflow-x-hidden overflow-y-visible"
 			ref={wrapperRef}
 		>
 			<svg
@@ -474,7 +474,7 @@ const MarqueeAlongPath = ({
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<path d={scaledPath} stroke="white" fill="none" />
+				<path d={scaledPath} stroke="black" fill="none" />
 			</svg>
 			<div
 				className="marquee-container absolute top-0 left-0 w-full h-full"

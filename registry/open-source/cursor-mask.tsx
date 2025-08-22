@@ -101,13 +101,19 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						height={1920}
 						width={1080}
 						className="h-screen w-screen object-cover"
+						muted
+						autoPlay
+						loop
 					/>
 				)}
 				{hovered === "WATCH REEL" && (
 					<video
-						src="placeholder.mp4"
+						src="IMG_4377 2.MOV"
+						autoPlay
+						muted
 						height={1920}
 						width={1080}
+						loop
 						className="h-screen w-screen object-cover"
 					/>
 				)}
@@ -117,6 +123,9 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						height={1920}
 						width={1080}
 						className="h-screen w-screen object-cover"
+						muted
+						autoPlay
+						loop
 					/>
 				)}
 				{hovered === "CONTACT" && (
@@ -125,6 +134,9 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						height={1920}
 						width={1080}
 						className="h-screen w-screen object-cover opacity-25"
+						autoPlay
+						muted
+						loop
 					/>
 				)}
 			</motion.div>

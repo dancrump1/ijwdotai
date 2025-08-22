@@ -440,10 +440,15 @@ function Home({ data }) {
 												texts={[
 													"DRIVE",
 													"pop ✨",
+													"DRIVE",
 													"perfect",
+													"DRIVE",
 													"quirkasauruses",
+													"DRIVE",
 													"🪩 funky",
+													"DRIVE",
 													"rock 🤘",
+													"DRIVE",
 												]}
 												mainClassName="overflow-hidden pr-3 text-primary py-0 pb-2 md:pb-4 rounded-xl"
 												staggerDuration={0.03}

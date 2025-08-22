@@ -32,7 +32,8 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 
 	const maskX = useMotionValue(0);
 	const maskY = useMotionValue(0);
-	const size = hovering ? 5000 : 500;
+	const [svgSize, setSvgSize] = useState(500);
+	let size = hovering ? 5000 : 500;
 
 	// Reference to the container to calculate offsets
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -41,10 +42,10 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 	useEffect(() => {
 		if (containerRef.current) {
 			const containerRect = containerRef.current.getBoundingClientRect();
-			maskX.set(x - containerRect.left - size / 2);
-			maskY.set(y - containerRect.top - size / 2);
+			maskX.set(x - containerRect.left - svgSize / 2);
+			maskY.set(y - containerRect.top - svgSize / 2);
 		}
-	}, [x, y, size, maskX, maskY]);
+	}, [x, y, svgSize, maskX, maskY]);
 
 	// Smoothen the transformation for mask position using `framer-motion`
 	const smoothMaskX = useTransform(maskX, (value) => `${value}px`);
@@ -54,7 +55,10 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 
 	useEffect(() => {
 		setRecentHover(true);
-		setTimeout(() => setRecentHover(false), 300);
+		setSvgSize((prev) => (prev === 500 ? 5000 : 500));
+		setTimeout(() => {
+			setRecentHover(false);
+		}, 300);
 	}, [hovering]);
 
 	return (
@@ -68,7 +72,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 					`dark:bg-[${maskColor}] bg-gray-200`
 				)}
 				animate={{
-					WebkitMaskSize: `${size}px`,
+					WebkitMaskSize: `${svgSize}px`,
 					WebkitMaskPosition: `${smoothMaskX.get()} ${smoothMaskY.get()}`,
 				}}
 				transition={{

@@ -1881,6 +1881,23 @@
       ]
     },
     {
+      "name": "game-237",
+      "type": "registry:block",
+      "title": "Game 237",
+      "description": "Game 237",
+      "files": [
+        {
+          "path": "components/usages/game237usage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/game-237.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "ghost-label",
       "type": "registry:block",
       "title": "Ghost label",

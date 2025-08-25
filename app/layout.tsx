@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { HoverProvider } from "@/lib/hover-context";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
@@ -40,7 +41,9 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<NuqsAdapter>{children}</NuqsAdapter>
+					<HoverProvider>
+						<NuqsAdapter>{children}</NuqsAdapter>
+					</HoverProvider>
 				</ThemeProvider>
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />

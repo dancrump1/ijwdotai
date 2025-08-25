@@ -33,17 +33,19 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 	const maskX = useMotionValue(0);
 	const maskY = useMotionValue(0);
 	const [svgSize, setSvgSize] = useState(500);
-	let size = hovering ? 5000 : 500;
 
 	// Reference to the container to calculate offsets
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	// Update mask position when the mouse moves
 	useEffect(() => {
-		if (containerRef.current) {
+		if (containerRef.current && x + y !== 0) {
 			const containerRect = containerRef.current.getBoundingClientRect();
 			maskX.set(x - containerRect.left - svgSize / 2);
 			maskY.set(y - containerRect.top - svgSize / 2);
+		} else {
+			maskX.set(window.innerWidth / 2 - svgSize / 2);
+			maskY.set(window.innerHeight / 2 - svgSize / 2);
 		}
 	}, [x, y, svgSize, maskX, maskY]);
 
@@ -55,7 +57,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 
 	useEffect(() => {
 		setRecentHover(true);
-		setSvgSize((prev) => (prev === 500 ? 5000 : 500));
+		setSvgSize(hovering ? 5000 : 500);
 		setTimeout(() => {
 			setRecentHover(false);
 		}, 300);

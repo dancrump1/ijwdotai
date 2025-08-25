@@ -2328,6 +2328,27 @@
       ]
     },
     {
+      "name": "hover-footer",
+      "type": "registry:block",
+      "title": "Hover footer",
+      "description": "Hover footer",
+      "files": [
+        {
+          "path": "components/usages/hoverfooterusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/hover-footer.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/open-source/text-hover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "hover-gallery",
       "type": "registry:block",
       "title": "Hover gallery",

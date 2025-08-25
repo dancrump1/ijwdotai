@@ -30,28 +30,10 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 
 	const { hovering } = useHover();
 
-	const maskX = useMotionValue(0);
-	const maskY = useMotionValue(0);
 	const [svgSize, setSvgSize] = useState(500);
 
 	// Reference to the container to calculate offsets
 	const containerRef = useRef<HTMLDivElement>(null);
-
-	// Update mask position when the mouse moves
-	useEffect(() => {
-		if (containerRef.current && x + y !== 0) {
-			const containerRect = containerRef.current.getBoundingClientRect();
-			maskX.set(x - containerRect.left - svgSize / 2);
-			maskY.set(y - containerRect.top - svgSize / 2);
-		} else {
-			maskX.set(window.innerWidth / 2 - svgSize / 2);
-			maskY.set(window.innerHeight / 2 - svgSize / 2);
-		}
-	}, [x, y, svgSize, maskX, maskY]);
-
-	// Smoothen the transformation for mask position using `framer-motion`
-	const smoothMaskX = useTransform(maskX, (value) => `${value}px`);
-	const smoothMaskY = useTransform(maskY, (value) => `${value}px`);
 
 	const [recentHover, setRecentHover] = useState(false);
 
@@ -62,6 +44,50 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 			setRecentHover(false);
 		}, 300);
 	}, [hovering]);
+
+	// keep track of the cursor center
+	const [maskCenter, setMaskCenter] = useState({
+		x: window.innerWidth / 2,
+		y: window.innerHeight / 2,
+	});
+
+	useEffect(() => {
+		if (x + y !== 0) {
+			setMaskCenter({ x, y }); // always track mouse center, independent of size
+		}
+	}, [x, y]);
+
+	// useMotionValues for smooth animation
+	const maskX = useMotionValue(maskCenter.x);
+	const maskY = useMotionValue(maskCenter.y);
+
+	// animate the motion values when maskCenter updates
+	useEffect(() => {
+		maskX.set(maskCenter.x);
+		maskY.set(maskCenter.y);
+	}, [maskCenter, maskX, maskY]);
+
+	// If user scrolls, keep centered on mouse
+	useEffect(() => {
+		if (containerRef.current && x + y !== 0) {
+			const rect = containerRef.current.getBoundingClientRect();
+			// adjust mouse position relative to the container
+			const localX = x - rect.left;
+			const localY = y - rect.top;
+
+			setMaskCenter({ x: localX, y: localY });
+		}
+	}, [x, y]);
+
+	// Keep mask position just the raw mouse coords
+	const smoothMaskX = useTransform(
+		maskX,
+		(value) => `${value - svgSize / 2}px`
+	);
+	const smoothMaskY = useTransform(
+		maskY,
+		(value) => `${value - svgSize / 2}px`
+	);
 
 	return (
 		<div
@@ -82,7 +108,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						type: "tween",
 						ease: "easeOut",
 						duration: 0.3,
-					}, // smooth size animation
+					},
 
 					WebkitMaskPosition:
 						!hovering && !recentHover

@@ -8,6 +8,7 @@ import "./transition.css";
 import ColorSelector from "@/components/ColorSelector";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { HoverProvider } from "@/lib/hover-context";
+import HoverFooter from "@/registry/open-source/hover-footer";
 import ResizeNavBar from "@/registry/open-source/resize-navbar";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
@@ -52,6 +53,7 @@ export default async function RootLayout({
 					</NuqsAdapter>
 				</ThemeProvider>
 				{/* </ColorSelector> */}
+				<HoverFooter />
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />
 		</html>

@@ -99,7 +99,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 					color: hoverColor ? hoverColor : "green",
 				}}
 			>
-				{hovered === "About Us" && (
+				{(hovered === "About Us" || hovered === "about") && (
 					<video
 						src="placeholder.mp4"
 						height={1920}

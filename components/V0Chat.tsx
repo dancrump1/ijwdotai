@@ -5,7 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
-import { categories } from "@/app/find/page";
+import { categories } from "@/app/(library)/find/page";
 import { useApiValidation } from "@/lib/useApiValidation";
 
 import ApiKeyError from "./ApiKeyError";

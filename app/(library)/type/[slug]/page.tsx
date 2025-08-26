@@ -2,7 +2,7 @@
 
 import { getComponentFilesWithDates } from "@/lib/fetch";
 
-import FlexWrapper from "../../../components/FlexWrapper";
+import FlexWrapper from "../../../../components/FlexWrapper";
 
 export default async function Page({
 	params,

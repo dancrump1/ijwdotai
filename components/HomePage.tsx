@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import Link from "next/link";
 
-import { credits } from "@/app/credits/page";
-import { categories } from "@/app/find/page";
+import { credits } from "@/app/(library)/credits/page";
+import { categories } from "@/app/(library)/find/page";
 
 import { simpleCategories } from "@/config/components";
 

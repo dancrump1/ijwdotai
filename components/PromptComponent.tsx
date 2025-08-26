@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import {
 	ChatDropdown,
 	ProjectDropdown,
-} from "@/app/projects/[projectId]/chats/[chatId]/components";
+} from "@/app/(library)/projects/[projectId]/chats/[chatId]/components";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -36,10 +36,8 @@ import {
 	XIcon,
 } from "lucide-react";
 
-import { MultiSelect } from "./MultiSelect";
 import RenameChatDialog from "./RenameChatDialog";
 import SettingsDialog from "./SettingsDialog";
-import { Select } from "./ui/select";
 
 interface Attachment {
 	url: string;

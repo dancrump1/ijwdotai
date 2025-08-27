@@ -419,3 +419,100 @@
     font-size: 14px;
   }
 }
+
+
+
+
+@layer components {
+
+
+
+  .center-component {
+    @apply h-[96vh] w-full flex justify-center items-center bg-black;
+  }
+
+  .note {
+    @apply underline underline-offset-2;
+  }
+
+  .pattern-boxes {
+    background-color: #fdfdfd;
+    background-image: linear-gradient(#f6f6f6 1px, transparent 1px),
+      linear-gradient(to right, #f6f6f6 1px, #fdfdfd 1px);
+    background-size: 20px 20px;
+    position: relative;
+  }
+
+  .pattern-boxes::after {
+    content: '';
+    @apply bg-gradient-to-b from-white/50 to-white block w-full h-[50%] absolute bottom-0 z-[1] rounded-bl-md rounded-br-md;
+  }
+
+  /* sidebar */
+  .mail-sidebar nav a {
+    @apply text-gray-400 hover:text-white py-[10px] px-3 rounded-md hover:bg-gray-800 inline-block relative;
+  }
+
+  .mail-sidebar nav a.active {
+    @apply text-white bg-gray-800;
+  }
+
+  .mail-sidebar nav a.active::after {
+    @apply content-[""] absolute top-0 -right-[27px] block w-[4px] h-full bg-blue-600 rounded-md;
+  }
+
+  .mail-sidebar .nav-bottom a.logout {
+    @apply text-rose-500;
+  }
+
+  /* /// */
+
+  .tutup::after {
+    content: "";
+    @apply block h-1.5 w-3 bg-white absolute left-0 bottom-0 right-0;
+  }
+
+  .receipt {
+    overflow: hidden;
+  }
+
+  .receipt-content {
+    animation: thermalPrint 6s ease-out forwards;
+  }
+
+  .receipt-content-s {
+    animation: thermalPrints 2s ease-out forwards;
+  }
+}
+
+@keyframes thermalPrint {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes thermalPrints {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

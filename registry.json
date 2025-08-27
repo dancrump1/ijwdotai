@@ -3660,6 +3660,27 @@
       ]
     },
     {
+      "name": "ksier",
+      "type": "registry:block",
+      "title": "Ksier",
+      "description": "Ksier",
+      "files": [
+        {
+          "path": "components/usages/ksierusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/ksier.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "lamp",
       "type": "registry:block",
       "title": "Lamp",

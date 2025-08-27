@@ -38,21 +38,13 @@ export default async function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				{/* <ColorSelector> */}
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					<NuqsAdapter>
-						<HoverProvider>
-							<ResizeNavBar />
-							{children}
-						</HoverProvider>
-					</NuqsAdapter>
-				</ThemeProvider>
-				{/* </ColorSelector> */}
+				<NuqsAdapter>
+					<HoverProvider>
+						<ResizeNavBar />
+						{children}
+					</HoverProvider>
+				</NuqsAdapter>
+
 				<HoverFooter />
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />

@@ -130,13 +130,16 @@ async function getData() {
 		{ uid: entryUid }
 	);
 
-	return data;
+	const java_response = await fetch("http://localhost:8080/components/name");
+	const java_data = await java_response.text();
+
+	return { data, java_data };
 }
 
 async function Page() {
-	const data = await getData();
+	const { data, java_data } = await getData();
 
-	return <Home data={data} />;
+	return <Home data={data} javaData={java_data} />;
 }
 
 export default Page;

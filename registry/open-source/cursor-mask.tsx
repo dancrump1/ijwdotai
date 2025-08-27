@@ -135,6 +135,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						className="h-screen w-screen object-cover"
 						muted
 						autoPlay
+						preload="auto"
 						loop
 					/>
 				)}
@@ -146,6 +147,7 @@ const MaskCursor: React.FC<MaskCursorProps> = ({
 						height={1920}
 						width={1080}
 						loop
+						preload="auto"
 						className="h-screen w-screen object-cover"
 					/>
 				)}

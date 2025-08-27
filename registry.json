@@ -2062,6 +2062,23 @@
       ]
     },
     {
+      "name": "gradient-blinds",
+      "type": "registry:block",
+      "title": "Gradient blinds",
+      "description": "Gradient blinds",
+      "files": [
+        {
+          "path": "components/usages/gradientblindsusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/gradient-blinds.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "gradient-checkbox",
       "type": "registry:block",
       "title": "Gradient checkbox",
@@ -4678,6 +4695,23 @@
         },
         {
           "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "prismatic-burst",
+      "type": "registry:block",
+      "title": "Prismatic burst",
+      "description": "Prismatic burst",
+      "files": [
+        {
+          "path": "components/usages/prismaticburstusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/prismatic-burst.tsx",
           "type": "registry:ui"
         }
       ]

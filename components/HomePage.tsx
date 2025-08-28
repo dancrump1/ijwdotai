@@ -5,11 +5,16 @@ import { useState } from "react";
 import Link from "next/link";
 
 import { credits } from "@/app/(library)/credits/page";
-import { categories } from "@/app/(library)/find/page";
 
 import { simpleCategories } from "@/config/components";
 
-export default function HomePage({ files }: { files: { name: string }[] }) {
+export default function HomePage({
+	files,
+	categories,
+}: {
+	files: { name: string }[];
+	categories: any;
+}) {
 	const [hovered, setHovered] = useState<string | null>(null);
 
 	const [items, setItems] = useState([""]);
@@ -75,9 +80,8 @@ export default function HomePage({ files }: { files: { name: string }[] }) {
 											? "will cause lag"
 											: category}
 										<br />
-										{category === "All"
-											? files.length
-											: categoryTotal.length}
+
+										{categoryTotal.length}
 										<br />
 									</Link>
 								);

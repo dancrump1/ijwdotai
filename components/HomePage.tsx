@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import { credits } from "@/app/(library)/credits/page";
+import { SpringModal } from "@/registry/open-source/spring-modal";
 
 import { simpleCategories } from "@/config/components";
 
@@ -16,6 +17,39 @@ export default function HomePage({
 	categories: any;
 }) {
 	const [hovered, setHovered] = useState<string | null>(null);
+
+	const [isOpen, setIsOpen] = useState(false);
+
+	const [categoryId, setCategoryId] = useState(1);
+	const [description, setDescription] = useState("test ste 123");
+	const [response, setResponse] = useState(null);
+	const [error, setError] = useState(null);
+
+	const handleUpdate = async () => {
+		try {
+			const res = await fetch(
+				`http://localhost:8080/category/${categoryId}/description`,
+				{
+					method: "PATCH",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ description }),
+				}
+			);
+
+			if (!res.ok) {
+				throw new Error(`HTTP error! status: ${res.status}`);
+			}
+
+			const data = await res.json();
+			setResponse(data);
+			setError(null);
+		} catch (err) {
+			console.error(err);
+			setError(err.message);
+		}
+	};
 
 	const [items, setItems] = useState([""]);
 	const [subcategories, setSubcategories] = useState([""]);
@@ -55,35 +89,114 @@ export default function HomePage({
 								);
 
 								return (
-									<Link
-										key={category}
-										onMouseEnter={() => {
-											setHovered(category);
-											setItems(
-												categoryTotal.map((item) => item.name)
-											);
-											setSubcategories(subcategories);
-										}}
-										onMouseLeave={() => {
-											setHovered(null);
-											setItems([]);
-											setSubcategories([]);
-										}}
-										href={href}
-										className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-											category === "All"
-												? "text-red-400"
-												: "text-white"
-										}`}
-									>
-										{category === "All" && hovered === "All"
-											? "will cause lag"
-											: category}
-										<br />
+									<>
+										<Link
+											key={category}
+											onMouseEnter={() => {
+												setHovered(category);
+												setItems(
+													categoryTotal.map((item) => item.name)
+												);
+												setSubcategories(subcategories);
+											}}
+											onMouseLeave={() => {
+												setHovered(null);
+												setItems([]);
+												setSubcategories([]);
+											}}
+											href={href}
+											className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+												category === "All"
+													? "text-red-400"
+													: "text-white"
+											}`}
+										>
+											{category === "All" && hovered === "All"
+												? "will cause lag"
+												: category}
+											<br />
 
-										{categoryTotal.length}
-										<br />
-									</Link>
+											{categoryTotal.length}
+											<br />
+										</Link>
+										<button
+											onClick={() => setIsOpen(true)}
+											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity"
+										>
+											Open Modal
+										</button>
+										<SpringModal
+											isOpen={isOpen}
+											setIsOpen={setIsOpen}
+										>
+											<div
+												style={{
+													padding: "1rem",
+													maxWidth: "500px",
+												}}
+											>
+												<h2>Update Category Description</h2>
+												<input
+													type="text"
+													placeholder="New description"
+													value={description}
+													onChange={(e) =>
+														setDescription(e.target.value)
+													}
+													style={{
+														width: "100%",
+														padding: "0.5rem",
+														marginBottom: "0.5rem",
+													}}
+												/>
+												<input
+													type="number"
+													placeholder="category to change"
+													value={categoryId}
+													onChange={(e) =>
+														setCategoryId(e.target.value)
+													}
+													style={{
+														width: "100%",
+														padding: "0.5rem",
+														marginBottom: "0.5rem",
+													}}
+												/>
+												<button
+													onClick={handleUpdate}
+													style={{
+														padding: "0.5rem 1rem",
+														cursor: "pointer",
+													}}
+												>
+													Update
+												</button>
+
+												{response && (
+													<div
+														style={{
+															marginTop: "1rem",
+															color: "green",
+														}}
+													>
+														<strong>Updated category:</strong>{" "}
+														{JSON.stringify(response)}
+													</div>
+												)}
+
+												{error && (
+													<div
+														style={{
+															marginTop: "1rem",
+															color: "red",
+														}}
+													>
+														<strong>Error:</strong> {error}
+													</div>
+												)}
+											</div>
+										</SpringModal>
+									</>
 								);
 							}
 						)}

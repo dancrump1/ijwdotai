@@ -10,6 +10,8 @@ export default async function Page({
 	params: Promise<{ slug: string }>;
 }) {
 	const files = await getComponentFilesWithDates();
+	const java_response = await fetch("http://localhost:8080/category/name");
+	const java_data = await java_response.text();
 
-	return <FlexWrapper files={files} />;
+	return <FlexWrapper files={files} java_data={java_data} />;
 }

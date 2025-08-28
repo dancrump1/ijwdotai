@@ -22,7 +22,9 @@ const ExampleWrapper = () => {
 export const SpringModal = ({
 	isOpen,
 	setIsOpen,
+	children,
 }: {
+	children: any;
 	isOpen: boolean;
 	setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
@@ -65,6 +67,7 @@ export const SpringModal = ({
 									Understood!
 								</button>
 							</div>
+							{children}
 						</div>
 					</motion.div>
 				</motion.div>

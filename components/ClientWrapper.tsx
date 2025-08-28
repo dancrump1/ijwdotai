@@ -93,9 +93,11 @@ const priorityMap = new Map(priorityOrder.map((name, i) => [name, i]));
 export const ClientWrapper = ({
 	files,
 	params,
+	java_data,
 }: {
 	files: { name: string; content: string }[];
 	params?: any;
+	java_data?: any;
 }) => {
 	const searchParams = useSearchParams();
 
@@ -486,6 +488,7 @@ export const ClientWrapper = ({
 													""
 												)}
 												content={filteredFiles[i].content}
+												java_data={java_data}
 											>
 												{!!ComponentImported ? (
 													<ComponentImported />

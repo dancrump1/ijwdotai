@@ -196,7 +196,10 @@ const Component = ({
 			key={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 		>
 			<span className="flex items-center mb-3 flex-wrap">
-				<Link href={"/" + title.toLowerCase()} className="text-xl sm:pl-3">
+				<Link
+					href={"/type/" + title.toLowerCase()}
+					className="text-xl sm:pl-3"
+				>
 					{title}
 				</Link>
 				<button onClick={() => setShowCode(!showCode)} className="ml-auto">

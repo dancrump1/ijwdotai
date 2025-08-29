@@ -5,7 +5,6 @@ import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useParams, useRouter } from "next/navigation";
 
-import { categories } from "@/app/(library)/find/page";
 import ApiKeyError from "@/components/ApiKeyError";
 import ErrorDialog from "@/components/ErrorDialog";
 import PromptComponent from "@/components/PromptComponent";
@@ -15,7 +14,13 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { ComponentLoading } from "./ClientWrapper";
 import Component from "./Component";
 
-export default function ChatPage({ files }: { files: any }) {
+export default function ChatPage({
+	files,
+	categories,
+}: {
+	files: any;
+	categories: any;
+}) {
 	const params = useParams();
 	const router = useRouter();
 	const projectId = params.projectId as string;

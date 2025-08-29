@@ -5,7 +5,6 @@ import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
-import { categories } from "@/app/(library)/find/page";
 import { useApiValidation } from "@/lib/useApiValidation";
 
 import ApiKeyError from "./ApiKeyError";
@@ -15,7 +14,13 @@ import ErrorDialog from "./ErrorDialog";
 import PromptComponent from "./PromptComponent";
 import RateLimitDialog from "./RateLimitDialog";
 
-export default function V0Chat({ files }: { files: any }) {
+export default function V0Chat({
+	files,
+	categories,
+}: {
+	files: any;
+	categories: any;
+}) {
 	const router = useRouter();
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);

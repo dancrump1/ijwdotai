@@ -538,7 +538,7 @@ const FAB = ({
 
 	return (
 		<div
-			className="fixed bottom-6 right-6 z-50"
+			className="fixed bottom-6 right-6 z-50 group"
 			onMouseEnter={() => setIsExpanded(true)}
 			onMouseLeave={() => setIsExpanded(false)}
 		>
@@ -546,7 +546,10 @@ const FAB = ({
 			{actionButtons.map((button, index) => {
 				const Icon = button.icon;
 				return (
-					<div key={button.id} className="relative">
+					<div
+						key={button.id}
+						className="relative hidden group-hover:block"
+					>
 						<div className="" onMouseLeave={() => setHoveredButton(null)}>
 							{/* Form Card */}
 							<div

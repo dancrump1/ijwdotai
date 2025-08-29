@@ -8,6 +8,8 @@ export default async function Page() {
 	const api_res = await fetch("http://localhost:8080/category/name");
 	const api_data = await api_res.json();
 
+	console.log(api_data);
+
 	return (
 		<>
 			{/* <div>{api_data}</div> */}

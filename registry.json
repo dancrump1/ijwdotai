@@ -1189,6 +1189,23 @@
       ]
     },
     {
+      "name": "dome-gallery",
+      "type": "registry:block",
+      "title": "Dome gallery",
+      "description": "Dome gallery",
+      "files": [
+        {
+          "path": "components/usages/domegalleryusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/dome-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dual-ring-loader",
       "type": "registry:block",
       "title": "Dual ring loader",

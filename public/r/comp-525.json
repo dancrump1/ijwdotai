@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-525",
+  "type": "registry:block",
+  "title": "Comp 525",
+  "description": "Comp 525",
+  "files": [
+    {
+      "path": "registry/basic/comp-525.tsx",
+      "content": "import {\n\tStepper,\n\tStepperDescription,\n\tStepperIndicator,\n\tStepperItem,\n\tStepperSeparator,\n\tStepperTitle,\n\tStepperTrigger,\n} from \"@/components/ui/stepper\";\n\nconst steps = [\n\t{\n\t\tstep: 1,\n\t\ttitle: \"Step One\",\n\t\tdescription: \"Desc for step one\",\n\t},\n\t{\n\t\tstep: 2,\n\t\ttitle: \"Step Two\",\n\t\tdescription: \"Desc for step two\",\n\t},\n\t{\n\t\tstep: 3,\n\t\ttitle: \"Step Three\",\n\t\tdescription: \"Desc for step three\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"space-y-8 text-center\">\n\t\t\t<Stepper defaultValue={2}>\n\t\t\t\t{steps.map(({ step, title, description }) => (\n\t\t\t\t\t<StepperItem\n\t\t\t\t\t\tkey={step}\n\t\t\t\t\t\tstep={step}\n\t\t\t\t\t\tclassName=\"not-last:flex-1 max-md:items-start\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<StepperTrigger className=\"gap-4 rounded max-md:flex-col\">\n\t\t\t\t\t\t\t<StepperIndicator />\n\t\t\t\t\t\t\t<div className=\"text-center md:-order-1 md:text-left\">\n\t\t\t\t\t\t\t\t<StepperTitle>{title}</StepperTitle>\n\t\t\t\t\t\t\t\t<StepperDescription className=\"max-sm:hidden\">\n\t\t\t\t\t\t\t\t\t{description}\n\t\t\t\t\t\t\t\t</StepperDescription>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</StepperTrigger>\n\t\t\t\t\t\t{step < steps.length && (\n\t\t\t\t\t\t\t<StepperSeparator className=\"max-md:mt-3.5 md:mx-4\" />\n\t\t\t\t\t\t)}\n\t\t\t\t\t</StepperItem>\n\t\t\t\t))}\n\t\t\t</Stepper>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tStepper with inline titles and descriptions\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

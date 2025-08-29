@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-183",
+  "type": "registry:block",
+  "title": "Comp 183",
+  "description": "Comp 183",
+  "files": [
+    {
+      "path": "registry/basic/comp-183.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\nimport { MoonIcon, SunIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst id = useId();\n\tconst [checked, setChecked] = useState<boolean>(true);\n\n\treturn (\n\t\t<div>\n\t\t\t<div className=\"relative inline-grid h-9 grid-cols-[1fr_1fr] items-center text-sm font-medium\">\n\t\t\t\t<Switch\n\t\t\t\t\tid={id}\n\t\t\t\t\tchecked={checked}\n\t\t\t\t\tonCheckedChange={setChecked}\n\t\t\t\t\tclassName=\"peer data-[state=checked]:bg-input/50 data-[state=unchecked]:bg-input/50 absolute inset-0 h-[inherit] w-auto [&_span]:h-full [&_span]:w-1/2 [&_span]:transition-transform [&_span]:duration-300 [&_span]:ease-[cubic-bezier(0.16,1,0.3,1)] [&_span]:data-[state=checked]:translate-x-full [&_span]:data-[state=checked]:rtl:-translate-x-full\"\n\t\t\t\t/>\n\t\t\t\t<span className=\"peer-data-[state=checked]:text-muted-foreground/70 pointer-events-none relative ms-0.5 flex min-w-8 items-center justify-center text-center\">\n\t\t\t\t\t<MoonIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t</span>\n\t\t\t\t<span className=\"peer-data-[state=unchecked]:text-muted-foreground/70 pointer-events-none relative me-0.5 flex min-w-8 items-center justify-center text-center\">\n\t\t\t\t\t<SunIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t\t<Label htmlFor={id} className=\"sr-only\">\n\t\t\t\tLabeled switch\n\t\t\t</Label>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst labelVariants = cva(\n\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n);\n\nconst Label = React.forwardRef<\n\tReact.ElementRef<typeof LabelPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n\t\tVariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n\t<LabelPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(labelVariants(), className)}\n\t\t{...props}\n\t/>\n));\nLabel.displayName = LabelPrimitive.Root.displayName;\n\nexport { Label };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as SwitchPrimitives from \"@radix-ui/react-switch\";\n\nconst Switch = React.forwardRef<\n\tReact.ElementRef<typeof SwitchPrimitives.Root>,\n\tReact.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>\n>(({ className, ...props }, ref) => (\n\t<SwitchPrimitives.Root\n\t\tclassName={cn(\n\t\t\t\"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t\tref={ref}\n\t>\n\t\t<SwitchPrimitives.Thumb\n\t\t\tclassName={cn(\n\t\t\t\t\"pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0\"\n\t\t\t)}\n\t\t/>\n\t</SwitchPrimitives.Root>\n));\nSwitch.displayName = SwitchPrimitives.Root.displayName;\n\nexport { Switch };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

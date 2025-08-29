@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Background",
+    "examplePath": "registry/examples/backgroundexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "GlowingEffect",
+    "examplePath": "registry/examples/glowingeffectexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "LaneCard",
+    "examplePath": "registry/examples/lanecardexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MobileNav",
+    "examplePath": "registry/examples/mobilenavexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "MobileNavBasic",
+    "examplePath": "registry/examples/mobilenavbasicexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "NavBar",
+    "examplePath": "registry/examples/navbarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navbar2",
+    "examplePath": "registry/examples/navbar2example.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navbar3",
+    "examplePath": "registry/examples/navbar3example.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Navigation",
+    "examplePath": "registry/examples/navigationexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "OppositeScrollLinks",
+    "examplePath": "registry/examples/oppositescrolllinksexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "PingPong",
+    "examplePath": "registry/examples/pingpongexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "ResizeNavbar",
+    "examplePath": "registry/examples/resizenavbarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Sidebar",
+    "examplePath": "registry/examples/sidebarexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Terminal",
+    "examplePath": "registry/examples/terminalexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "TextEnhanced",
+    "examplePath": "registry/examples/textenhancedexample.tsx",
+    "reason": "Placeholder content"
+  },
+  {
+    "name": "Threads",
+    "examplePath": "registry/examples/threadsexample.tsx",
+    "reason": "Placeholder content"
+  }
+]

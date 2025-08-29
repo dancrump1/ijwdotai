@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "background",
+  "type": "registry:block",
+  "title": "Background",
+  "description": "Background",
+  "files": [
+    {
+      "path": "components/usages/backgroundusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\tcoming soon\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/background.tsx",
+      "content": "import React from \"react\";\n\nconst Background = ({ image, position = \"center\" }) => {\n\treturn (\n\t\t<>\n\t\t\t<picture className=\"bkg\">\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 450px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={450}\n\t\t\t\t\theight={750}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 750px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={750}\n\t\t\t\t\theight={750}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 1050px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={1300}\n\t\t\t\t\theight={1300}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 1400px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={1400}\n\t\t\t\t\theight={1200}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 2000px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={2000}\n\t\t\t\t\theight={1250}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<source\n\t\t\t\t\tmedia=\"(max-width: 2500px)\"\n\t\t\t\t\tsrcSet={image.url}\n\t\t\t\t\twidth={2500}\n\t\t\t\t\theight={1400}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t/>\n\t\t\t\t<img\n\t\t\t\t\tsrc={image.url}\n\t\t\t\t\twidth={5000}\n\t\t\t\t\theight={2800}\n\t\t\t\t\tstyle={{ objectFit: \"cover\" }}\n\t\t\t\t\talt={image.title}\n\t\t\t\t\tclassName={`h-screen w-screen object-cover object-${position}`}\n\t\t\t\t/>\n\t\t\t</picture>\n\t\t\t<div className=\"overlay\"></div>\n\t\t</>\n\t);\n};\n\nexport default Background;\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "diamond-gallery",
+  "type": "registry:block",
+  "title": "Diamond gallery",
+  "description": "Diamond gallery",
+  "files": [
+    {
+      "path": "components/usages/diamondgalleryusage.tsx",
+      "content": "import DiamondGallery from \"@/registry/open-source/diamond-gallery\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"w-96 h-96 mx-auto aspect-square\">\n\t\t\t<DiamondGallery\n\t\t\t\timages={[\n\t\t\t\t\t{\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t\tisLink: true,\n\t\t\t\t\t\thref: \"https://drivebrandstudio.com\",\n\t\t\t\t\t\ttarget: \"_blank\",\n\t\t\t\t\t\trel: \"noopener noreferrer\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t\tisLink: true,\n\t\t\t\t\t\thref: \"https://drivebrandstudio.com\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t\tisLink: true,\n\t\t\t\t\t\thref: \"https://drivebrandstudio.com\",\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\timage: \"/itjustworks.jpg\",\n\t\t\t\t\t\tisLink: true,\n\t\t\t\t\t\thref: \"https://drivebrandstudio.com\",\n\t\t\t\t\t},\n\t\t\t\t]}\n\t\t\t/>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/diamond-gallery.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport Image from \"next/image\";\n\ninterface ImageItem {\n\timage: string;\n\tisLink?: boolean;\n\thref?: string;\n\ttarget?: string;\n\trel?: string;\n}\n\ninterface DiamondGalleryProps {\n\timages: ImageItem[];\n}\n\nconst DiamondGallery = ({ images }: DiamondGalleryProps) => {\n\tconst [hoveredIndex, setHoveredIndex] = useState<number | null>(null);\n\n\tconst positions = [\n\t\t\"top-0 left-1/2 transform -translate-x-1/2 -translate-y-[5%]\",\n\t\t\"left-0 top-1/2 transform -translate-y-1/2 -translate-x-[5%]\",\n\t\t\"right-0 top-1/2 transform -translate-y-1/2 translate-x-[5%]\",\n\t\t\"bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[5%]\",\n\t];\n\n\treturn (\n\t\t<div className=\"relative aspect-square h-full\">\n\t\t\t{images.slice(0, 4).map((img: ImageItem, idx: number) => {\n\t\t\t\tconst imageElement = (\n\t\t\t\t\t<Image\n\t\t\t\t\t\tsrc={img.image}\n\t\t\t\t\t\theight={100}\n\t\t\t\t\t\twidth={100}\n\t\t\t\t\t\talt={`Diamond Image ${idx + 1}`}\n\t\t\t\t\t\tclassName=\"size-full object-cover -rotate-45 scale-150\"\n\t\t\t\t\t\tonMouseEnter={() => setHoveredIndex(idx)}\n\t\t\t\t\t\tonMouseLeave={() => setHoveredIndex(null)}\n\t\t\t\t\t/>\n\t\t\t\t);\n\n\t\t\t\treturn (\n\t\t\t\t\t<div\n\t\t\t\t\t\tclassName={`absolute w-1/2 h-1/2 rotate-45 rounded-lg transition-[transform,z-index] duration-500 overflow-hidden \n              ${positions[idx]}\n              ${hoveredIndex === idx ? \"scale-100 z-1\" : \"scale-75 z-0\"}\n              ${\n\t\t\t\t\t\thoveredIndex !== null && hoveredIndex !== idx\n\t\t\t\t\t\t\t? \"filter blur-sm grayscale\"\n\t\t\t\t\t\t\t: \"\"\n\t\t\t\t\t}`}\n\t\t\t\t\t\tkey={idx}\n\t\t\t\t\t>\n\t\t\t\t\t\t{img.isLink ? (\n\t\t\t\t\t\t\t<a\n\t\t\t\t\t\t\t\thref={img.href}\n\t\t\t\t\t\t\t\ttarget={img.target}\n\t\t\t\t\t\t\t\trel={img.rel}\n\t\t\t\t\t\t\t\tclassName=\"block size-full\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{imageElement}\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t) : (\n\t\t\t\t\t\t\timageElement\n\t\t\t\t\t\t)}\n\t\t\t\t\t</div>\n\t\t\t\t);\n\t\t\t})}\n\t\t</div>\n\t);\n};\n\nexport default DiamondGallery;\n",
+      "type": "registry:ui"
+    }
+  ]
+}

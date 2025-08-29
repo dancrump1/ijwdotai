@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-reveal-paragraph",
+  "type": "registry:block",
+  "title": "Scroll reveal paragraph",
+  "description": "Scroll reveal paragraph",
+  "files": [
+    {
+      "path": "components/usages/scrollrevealparagraphusage.tsx",
+      "content": "\"use client\";\n\nimport React, { useCallback, useState } from \"react\";\n\nimport { ScrollIsland } from \"@/registry/open-source/scroll-island\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\"></div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/scroll-reveal-paragraph.tsx",
+      "content": "\"use client\";\n\nimport { useRef } from \"react\";\n\nimport { motion, useScroll, useTransform } from \"motion/react\";\n\n// Credit:\n// https://smoothui.dev/doc/text/scroll-reveal-paragraph\n\ninterface ScrollRevealParagraphProps {\n\tparagraph: string;\n\tclassName?: string;\n}\n\nexport default function ScrollRevealParagraph({\n\tparagraph,\n\tclassName = \"\",\n}: ScrollRevealParagraphProps) {\n\tconst container = useRef<HTMLParagraphElement>(null);\n\tconst { scrollYProgress } = useScroll({\n\t\ttarget: container,\n\t\toffset: [\"start 0.9\", \"start 0.25\"],\n\t});\n\n\tconst words = paragraph.split(\" \");\n\n\treturn (\n\t\t<p ref={container} className={`text-lg leading-relaxed ${className}`}>\n\t\t\t{words.map((word, i) => {\n\t\t\t\tconst start = i / words.length;\n\t\t\t\tconst end = start + 1 / words.length;\n\t\t\t\treturn (\n\t\t\t\t\t<Word\n\t\t\t\t\t\tkey={`word-${i}-${word.slice(0, 3)}`}\n\t\t\t\t\t\tprogress={scrollYProgress}\n\t\t\t\t\t\trange={[start, end]}\n\t\t\t\t\t>\n\t\t\t\t\t\t{word}\n\t\t\t\t\t</Word>\n\t\t\t\t);\n\t\t\t})}\n\t\t</p>\n\t);\n}\n\ninterface WordProps {\n\tchildren: string;\n\tprogress: any;\n\trange: [number, number];\n}\n\nconst Word = ({ children, progress, range }: WordProps) => {\n\tconst opacity = useTransform(progress, range, [0, 1]);\n\n\treturn (\n\t\t<span className=\"relative mr-2 inline-block\">\n\t\t\t<span className=\"text-foreground/10\">{children}</span>\n\t\t\t<motion.span\n\t\t\t\tclassName=\"text-foreground absolute inset-0\"\n\t\t\t\tstyle={{ opacity }}\n\t\t\t>\n\t\t\t\t{children}\n\t\t\t</motion.span>\n\t\t</span>\n\t);\n};\n",
+      "type": "registry:ui"
+    }
+  ]
+}

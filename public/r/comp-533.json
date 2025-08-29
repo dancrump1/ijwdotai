@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-533",
+  "type": "registry:block",
+  "title": "Comp 533",
+  "description": "Comp 533",
+  "files": [
+    {
+      "path": "registry/basic/comp-533.tsx",
+      "content": "import {\n\tTimeline,\n\tTimelineContent,\n\tTimelineDate,\n\tTimelineHeader,\n\tTimelineIndicator,\n\tTimelineItem,\n\tTimelineSeparator,\n\tTimelineTitle,\n} from \"@/components/ui/timeline\";\n\nconst items = [\n\t{\n\t\tid: 1,\n\t\tdate: \"15 minutes ago\",\n\t\ttitle: \"Pull Request Submitted\",\n\t\tdescription:\n\t\t\t\"Submitted PR #342 with new feature implementation. Waiting for code review from team leads.\",\n\t},\n\t{\n\t\tid: 2,\n\t\tdate: \"10 minutes ago\",\n\t\ttitle: \"CI Pipeline Started\",\n\t\tdescription:\n\t\t\t\"Automated tests and build process initiated. Running unit tests and code quality checks.\",\n\t},\n\t{\n\t\tid: 3,\n\t\tdate: \"5 minutes ago\",\n\t\ttitle: \"Code Review Feedback\",\n\t\tdescription:\n\t\t\t\"Received comments on PR. Minor adjustments needed in error handling and documentation.\",\n\t},\n\t{\n\t\tid: 4,\n\t\ttitle: \"Changes Pushed\",\n\t\tdescription:\n\t\t\t\"Implemented requested changes and pushed updates to feature branch. Awaiting final approval.\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<Timeline defaultValue={3}>\n\t\t\t{items.map((item) => (\n\t\t\t\t<TimelineItem key={item.id} step={item.id}>\n\t\t\t\t\t<TimelineHeader>\n\t\t\t\t\t\t<TimelineSeparator />\n\t\t\t\t\t\t<TimelineTitle className=\"-mt-0.5\">\n\t\t\t\t\t\t\t{item.title}\n\t\t\t\t\t\t</TimelineTitle>\n\t\t\t\t\t\t<TimelineIndicator />\n\t\t\t\t\t</TimelineHeader>\n\t\t\t\t\t<TimelineContent>\n\t\t\t\t\t\t{item.description}\n\t\t\t\t\t\t<TimelineDate className=\"mt-2 mb-0\">{item.date}</TimelineDate>\n\t\t\t\t\t</TimelineContent>\n\t\t\t\t</TimelineItem>\n\t\t\t))}\n\t\t</Timeline>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

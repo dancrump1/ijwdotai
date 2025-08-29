@@ -1,0 +1,15 @@
+"use client";
+
+import React from "react";
+
+import MatrixBackground from "@/components/MatrixBackground";
+
+export default function Example() {
+	return (
+		<div className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black">
+			<div className="h-[50vh] w-full relative">
+				<MatrixBackground />
+			</div>
+		</div>
+	);
+}

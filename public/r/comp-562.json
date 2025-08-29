@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-562",
+  "type": "registry:block",
+  "title": "Comp 562",
+  "description": "Comp 562",
+  "files": [
+    {
+      "path": "registry/basic/comp-562.tsx",
+      "content": "import {\n\tCropper,\n\tCropperCropArea,\n\tCropperDescription,\n\tCropperImage,\n} from \"@/components/ui/cropper\";\n\nexport default function Component() {\n\treturn (\n\t\t<div className=\"flex flex-col items-center gap-2\">\n\t\t\t<Cropper\n\t\t\t\tclassName=\"h-80\"\n\t\t\t\tminZoom={2}\n\t\t\t\tmaxZoom={10}\n\t\t\t\timage=\"https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/cropper-08_wneftq.jpg\"\n\t\t\t>\n\t\t\t\t<CropperDescription />\n\t\t\t\t<CropperImage />\n\t\t\t\t<CropperCropArea />\n\t\t\t</Cropper>\n\n\t\t\t<p\n\t\t\t\taria-live=\"polite\"\n\t\t\t\trole=\"region\"\n\t\t\t\tclassName=\"text-muted-foreground mt-2 text-xs\"\n\t\t\t>\n\t\t\t\tCropper with custom zoom limits ∙{\" \"}\n\t\t\t\t<a\n\t\t\t\t\thref=\"https://github.com/origin-space/image-cropper\"\n\t\t\t\t\tclassName=\"hover:text-foreground underline\"\n\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t>\n\t\t\t\t\tAPI\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

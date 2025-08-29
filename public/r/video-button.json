@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "video-button",
+  "type": "registry:block",
+  "title": "Video button",
+  "description": "Video button",
+  "files": [
+    {
+      "path": "components/usages/videobuttonusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport VideoButton from \"@/registry/open-source/video-button\";\n\nexport default function VideoButtonUsage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<VideoButton videoSrc=\"/placeholder.mp4\">\n\t\t\t\t<span className=\"text-xl font-semibold\">Join the club!</span>\n\t\t\t</VideoButton>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/video-button.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\n\n// Credit\n// https://eclairui.gopx.dev/components/buttons/video-button\n\ninterface VideoButtonProps {\n\tchildren: React.ReactNode;\n\tvideoSrc: string;\n\tclassName?: string;\n}\n\nconst VideoButton = ({ children, videoSrc, className }: VideoButtonProps) => {\n\tconst [isHovered, setIsHovered] = useState(false);\n\tconst [isPressed, setIsPressed] = useState(false);\n\n\treturn (\n\t\t<button\n\t\t\tclassName={cn(\n\t\t\t\t\"relative inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-background text-foreground hover:bg-background dark:bg-background dark:text-foreground dark:hover:bg-background h-10 px-8 py-8 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-white/20 dark:hover:shadow-white/30\",\n\t\t\t\tisPressed && \"scale-95\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\tonMouseEnter={() => {\n\t\t\t\tsetIsHovered(true);\n\t\t\t}}\n\t\t\tonMouseLeave={() => setIsHovered(false)}\n\t\t\tonMouseDown={() => setIsPressed(true)}\n\t\t\tonMouseUp={() => setIsPressed(false)}\n\t\t\tonTouchStart={() => setIsPressed(true)}\n\t\t\tonTouchEnd={() => setIsPressed(false)}\n\t\t>\n\t\t\t<span className=\"relative z-10\">{children}</span>\n\t\t\t<div\n\t\t\t\tclassName={`absolute inset-0 transition-opacity duration-300 ${\n\t\t\t\t\tisHovered ? \"opacity-50\" : \"opacity-0\"\n\t\t\t\t}`}\n\t\t\t>\n\t\t\t\t<video\n\t\t\t\t\tclassName=\"object-cover w-full h-full\"\n\t\t\t\t\tsrc={videoSrc}\n\t\t\t\t\tloop\n\t\t\t\t\tmuted\n\t\t\t\t\t// playsInline\n\t\t\t\t\t// autoPlay\n\t\t\t\t\tonMouseEnter={(e) => e.target.play()}\n\t\t\t\t\tonMouseLeave={(e) => e.target.pause()}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t</button>\n\t);\n};\n\nexport default VideoButton;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

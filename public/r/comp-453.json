@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-453",
+  "type": "registry:block",
+  "title": "Comp 453",
+  "description": "Comp 453",
+  "files": [
+    {
+      "path": "registry/basic/comp-453.tsx",
+      "content": "import {\n\tBreadcrumb,\n\tBreadcrumbItem,\n\tBreadcrumbLink,\n\tBreadcrumbList,\n\tBreadcrumbSeparator,\n} from \"@/components/ui/breadcrumb\";\nimport {\n\tSelect,\n\tSelectContent,\n\tSelectItem,\n\tSelectTrigger,\n\tSelectValue,\n} from \"@/components/ui/select\";\nimport { DatabaseIcon } from \"lucide-react\";\n\nexport default function Component() {\n\treturn (\n\t\t<Breadcrumb>\n\t\t\t<BreadcrumbList>\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<BreadcrumbLink href=\"#\">Databases</BreadcrumbLink>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t\t<BreadcrumbSeparator />\n\t\t\t\t<BreadcrumbItem>\n\t\t\t\t\t<Select defaultValue=\"1\">\n\t\t\t\t\t\t<SelectTrigger\n\t\t\t\t\t\t\tid=\"select-database\"\n\t\t\t\t\t\t\tclassName=\"relative gap-2 ps-9\"\n\t\t\t\t\t\t\taria-label=\"Select database\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<div className=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50\">\n\t\t\t\t\t\t\t\t<DatabaseIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<SelectValue placeholder=\"Select database\" />\n\t\t\t\t\t\t</SelectTrigger>\n\t\t\t\t\t\t<SelectContent>\n\t\t\t\t\t\t\t<SelectItem value=\"1\">Orion</SelectItem>\n\t\t\t\t\t\t\t<SelectItem value=\"2\">Sigma</SelectItem>\n\t\t\t\t\t\t\t<SelectItem value=\"3\">Dorado</SelectItem>\n\t\t\t\t\t\t</SelectContent>\n\t\t\t\t\t</Select>\n\t\t\t\t</BreadcrumbItem>\n\t\t\t</BreadcrumbList>\n\t\t</Breadcrumb>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

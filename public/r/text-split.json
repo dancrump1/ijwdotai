@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-split",
+  "type": "registry:block",
+  "title": "Text split",
+  "description": "Text split",
+  "files": [
+    {
+      "path": "components/usages/textsplitusage.tsx",
+      "content": "\"use client\";\n\nimport TextSplit from \"@/registry/open-source/text-split\";\n\nexport default function TextRotateUsage() {\n\treturn (\n\t\t<div className=\"w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-background dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24\">\n\t\t\t<TextSplit\n\t\t\t\tclassName=\"text-9xl font-semibold uppercase\"\n\t\t\t\ttopClassName=\"text-red-500\"\n\t\t\t\tbottomClassName=\"text-secondary dark:text-secondary\"\n\t\t\t>\n\t\t\t\tBerlix UI\n\t\t\t</TextSplit>\n\t\t\t;{\" \"}\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/text-split.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { motion } from \"framer-motion\";\n\n// Credit:\n// https://berlix.vercel.app/docs/text-split\n\ninterface TextSplitProps {\n\tchildren: string;\n\tclassName?: string;\n\ttopClassName?: string;\n\tbottomClassName?: string;\n\tmaxMove?: number;\n\tfalloff?: number;\n}\n\nconst TextSplit = ({\n\tchildren,\n\tclassName,\n\ttopClassName,\n\tbottomClassName,\n\tmaxMove = 50,\n\tfalloff = 0.3,\n}: TextSplitProps) => {\n\tconst [hoverIndex, setHoverIndex] = useState<number | null>(null);\n\n\tconst getOffset = (index: number) => {\n\t\tif (hoverIndex === null) return 0;\n\t\tconst distance = Math.abs(index - hoverIndex);\n\t\treturn Math.max(0, maxMove * (1 - distance * falloff));\n\t};\n\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\"relative flex items-center justify-center \", className)}\n\t\t>\n\t\t\t{children.split(\"\").map((char, index) => {\n\t\t\t\tconst offset = getOffset(index);\n\t\t\t\tconst displayChar = char === \" \" ? \"\\u00A0\" : char;\n\n\t\t\t\treturn (\n\t\t\t\t\t<div\n\t\t\t\t\t\tkey={`${char}-${index}`}\n\t\t\t\t\t\tclassName=\"relative flex flex-col h-[1em] w-auto leading-none\"\n\t\t\t\t\t\tonMouseEnter={() => setHoverIndex(index)}\n\t\t\t\t\t\tonMouseLeave={() => setHoverIndex(null)}\n\t\t\t\t\t>\n\t\t\t\t\t\t<motion.span\n\t\t\t\t\t\t\tinitial={false}\n\t\t\t\t\t\t\tanimate={{\n\t\t\t\t\t\t\t\ty: `-${offset}%`,\n\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\ttransition={{ duration: 0.3, ease: \"easeInOut\" }}\n\t\t\t\t\t\t\tclassName={cn(\"overflow-hidden\", topClassName)}\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t{displayChar}\n\t\t\t\t\t\t</motion.span>\n\n\t\t\t\t\t\t<motion.span\n\t\t\t\t\t\t\tinitial={false}\n\t\t\t\t\t\t\tanimate={{\n\t\t\t\t\t\t\t\ty: `${offset}%`,\n\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\ttransition={{ duration: 0.3, ease: \"easeInOut\" }}\n\t\t\t\t\t\t\tclassName={cn(\"overflow-hidden\", bottomClassName)}\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<span className=\"block -translate-y-1/2\">\n\t\t\t\t\t\t\t\t{displayChar}\n\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t</motion.span>\n\t\t\t\t\t</div>\n\t\t\t\t);\n\t\t\t})}\n\t\t</div>\n\t);\n};\n\nexport default TextSplit;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

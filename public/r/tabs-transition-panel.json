@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs-transition-panel",
+  "type": "registry:block",
+  "title": "Tabs transition panel",
+  "description": "Tabs transition panel",
+  "files": [
+    {
+      "path": "components/usages/tabstransitionpanelusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { TabsTransitionPanel } from \"@/registry/open-source/tabs-transition-panel\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<TabsTransitionPanel />\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/tabs-transition-panel.tsx",
+      "content": "\"use client\";\n\nimport React, { useState } from \"react\";\n\nimport Image from \"next/image\";\n\nimport { fake_workspotlight } from \"@/components/layouts/home\";\nimport {\n\tAnimatePresence,\n\tmotion,\n\tMotionProps,\n\tTransition,\n\tVariant,\n} from \"framer-motion\";\nimport parse from \"html-react-parser\";\n\nimport { cn } from \"../utilities/cn\";\n\nexport function TabsTransitionPanel({\n\tdata = { workSpotlight: fake_workspotlight },\n}) {\n\tconst [activeIndex, setActiveIndex] = useState(0);\n\n\treturn (\n\t\t<section className=\"pb-24 bg-background mt-[50vh]\">\n\t\t\t<span className=\"my-12 block text-center\">\n\t\t\t\t<h2>Like your brand's personal chauffeur</h2>\n\t\t\t\t<h3>Leave the driving to us</h3>\n\t\t\t</span>\n\t\t\t<div className=\"mb-4 flex space-x-2 overflow-x-auto\">\n\t\t\t\t{data.workSpotlight.map(({ title, firstName }, index) => (\n\t\t\t\t\t<button\n\t\t\t\t\t\tkey={index}\n\t\t\t\t\t\tonMouseEnter={() => setActiveIndex(index)}\n\t\t\t\t\t\tclassName={`rounded-md px-3 py-1 text-sm font-medium ${\n\t\t\t\t\t\t\tactiveIndex === index\n\t\t\t\t\t\t\t\t? \"bg-background text-foreground dark:bg-background dark:text-foreground\"\n\t\t\t\t\t\t\t\t: \"bg-background text-foreground dark:bg-background dark:text-foreground\"\n\t\t\t\t\t\t}`}\n\t\t\t\t\t>\n\t\t\t\t\t\t{firstName}\n\t\t\t\t\t</button>\n\t\t\t\t))}\n\t\t\t</div>\n\t\t\t<div className=\"overflow-hidden border-t border-zinc-200 dark:border-zinc-700\">\n\t\t\t\t<TransitionPanel\n\t\t\t\t\tactiveIndex={activeIndex}\n\t\t\t\t\tdata={data.workSpotlight}\n\t\t\t\t/>\n\t\t\t</div>\n\t\t</section>\n\t);\n}\n\ntype TransitionPanelProps = {\n\tchildren: React.ReactNode[];\n\tclassName?: string;\n\ttransition?: Transition;\n\tactiveIndex: number;\n\tvariants?: { enter: Variant; center: Variant; exit: Variant };\n} & MotionProps;\n\nexport function TransitionPanel({\n\tchildren,\n\tclassName,\n\ttransition,\n\tvariants,\n\tactiveIndex,\n\tdata,\n\t...motionProps\n}: TransitionPanelProps) {\n\treturn (\n\t\t<div className={cn(\"relative\", className)}>\n\t\t\t<AnimatePresence\n\t\t\t\tinitial={false}\n\t\t\t\tmode=\"popLayout\"\n\t\t\t\tcustom={motionProps.custom}\n\t\t\t>\n\t\t\t\t{data.map(\n\t\t\t\t\t({ title, firstName, description, image }, index) =>\n\t\t\t\t\t\tindex == activeIndex && (\n\t\t\t\t\t\t\t<motion.div\n\t\t\t\t\t\t\t\tkey={title}\n\t\t\t\t\t\t\t\tclassName=\"cont-page\"\n\t\t\t\t\t\t\t\tinitial=\"enter\"\n\t\t\t\t\t\t\t\tanimate=\"center\"\n\t\t\t\t\t\t\t\texit=\"exit\"\n\t\t\t\t\t\t\t\ttransition={{ duration: 0.2, ease: \"easeInOut\" }}\n\t\t\t\t\t\t\t\tvariants={{\n\t\t\t\t\t\t\t\t\tenter: {\n\t\t\t\t\t\t\t\t\t\topacity: 0,\n\t\t\t\t\t\t\t\t\t\ty: -50,\n\t\t\t\t\t\t\t\t\t\tfilter: \"blur(4px)\",\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\tcenter: { opacity: 1, y: 0, filter: \"blur(0px)\" },\n\t\t\t\t\t\t\t\t\texit: { opacity: 0, y: 50, filter: \"blur(4px)\" },\n\t\t\t\t\t\t\t\t}}\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<h3 className=\"mb-2 font-medium text-foreground\">\n\t\t\t\t\t\t\t\t\t{title}\n\t\t\t\t\t\t\t\t</h3>\n\t\t\t\t\t\t\t\t<span className=\"text-foreground\">\n\t\t\t\t\t\t\t\t\t{parse(description || \"\")}\n\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t<Image\n\t\t\t\t\t\t\t\t\tsrc={image[0]?.url}\n\t\t\t\t\t\t\t\t\theight={200}\n\t\t\t\t\t\t\t\t\twidth={400}\n\t\t\t\t\t\t\t\t\talt={image[0]?.title || \"Work by Drive Brand Studio\"}\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t</motion.div>\n\t\t\t\t\t\t)\n\t\t\t\t)}{\" \"}\n\t\t\t</AnimatePresence>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

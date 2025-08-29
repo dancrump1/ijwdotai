@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-182",
+  "type": "registry:block",
+  "title": "Comp 182",
+  "description": "Comp 182",
+  "files": [
+    {
+      "path": "registry/basic/comp-182.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState } from \"react\";\n\nimport { Switch } from \"@/components/ui/switch\";\nimport { MoonIcon, SunIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst id = useId();\n\tconst [checked, setChecked] = useState(false);\n\n\tconst toggleSwitch = () => setChecked((prev) => !prev);\n\n\treturn (\n\t\t<div\n\t\t\tclassName=\"group inline-flex items-center gap-2\"\n\t\t\tdata-state={checked ? \"checked\" : \"unchecked\"}\n\t\t>\n\t\t\t<span\n\t\t\t\tid={`${id}-off`}\n\t\t\t\tclassName=\"group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium\"\n\t\t\t\taria-controls={id}\n\t\t\t\tonClick={() => setChecked(false)}\n\t\t\t>\n\t\t\t\t<MoonIcon size={16} aria-hidden=\"true\" />\n\t\t\t</span>\n\t\t\t<Switch\n\t\t\t\tid={id}\n\t\t\t\tchecked={checked}\n\t\t\t\tonCheckedChange={toggleSwitch}\n\t\t\t\taria-labelledby={`${id}-off ${id}-on`}\n\t\t\t\taria-label=\"Toggle between dark and light mode\"\n\t\t\t/>\n\t\t\t<span\n\t\t\t\tid={`${id}-on`}\n\t\t\t\tclassName=\"group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium\"\n\t\t\t\taria-controls={id}\n\t\t\t\tonClick={() => setChecked(true)}\n\t\t\t>\n\t\t\t\t<SunIcon size={16} aria-hidden=\"true\" />\n\t\t\t</span>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/switch.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as SwitchPrimitives from \"@radix-ui/react-switch\";\n\nconst Switch = React.forwardRef<\n\tReact.ElementRef<typeof SwitchPrimitives.Root>,\n\tReact.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>\n>(({ className, ...props }, ref) => (\n\t<SwitchPrimitives.Root\n\t\tclassName={cn(\n\t\t\t\"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t\tref={ref}\n\t>\n\t\t<SwitchPrimitives.Thumb\n\t\t\tclassName={cn(\n\t\t\t\t\"pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0\"\n\t\t\t)}\n\t\t/>\n\t</SwitchPrimitives.Root>\n));\nSwitch.displayName = SwitchPrimitives.Root.displayName;\n\nexport { Switch };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

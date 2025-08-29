@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "simple-footer",
+  "type": "registry:block",
+  "title": "Simple footer",
+  "description": "Simple footer",
+  "files": [
+    {
+      "path": "components/usages/simplefooterusage.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport FooterThird from \"@/registry/open-source/simple-footer\";\n\nexport default function Usage() {\n\treturn (\n\t\t<div className=\"h-screen w-full flex items-center justify-center relative overflow-hidden bg-background\">\n\t\t\t<FooterThird />\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/simple-footer.tsx",
+      "content": "import React from \"react\";\n\nimport Link from \"next/link\";\n\nimport { Facebook, Github, Linkedin, Twitter } from \"lucide-react\";\n\n// Chnage this with your own data\nconst defaultNavigationLinks = [\n\t{ href: \"/about\", label: \"About Us\" },\n\t{ href: \"/services\", label: \"Services\" },\n\t{ href: \"/blog\", label: \"Blog\" },\n\t{ href: \"/contact\", label: \"Contact\" },\n];\n\nconst defaultSocialLinks = [\n\t{\n\t\thref: \"https://facebook.com\",\n\t\ticon: <Facebook size={24} />,\n\t\thoverColor: \"text-foreground\",\n\t},\n\t{\n\t\thref: \"https://x.com/ayushmxxn\",\n\t\ticon: <Twitter size={24} />,\n\t\thoverColor: \"text-foreground\",\n\t},\n\t{\n\t\thref: \"https://linkedin.com\",\n\t\ticon: <Linkedin size={24} />,\n\t\thoverColor: \"text-foreground\",\n\t},\n\t{\n\t\thref: \"https://github.com/ayushmxxn\",\n\t\ticon: <Github size={24} />,\n\t\thoverColor: \"text-foreground\",\n\t},\n];\n\nconst FooterThird = ({\n\tbrandName = \"BrandName\",\n\tnavigationLinks = defaultNavigationLinks,\n\tsocialLinks = defaultSocialLinks,\n}) => {\n\treturn (\n\t\t<footer className=\"bg-background text-foreground\">\n\t\t\t<div className=\"max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8\">\n\t\t\t\t<div className=\"flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0\">\n\t\t\t\t\t{/* Logo */}\n\t\t\t\t\t<div className=\"text-xl font-bold\">\n\t\t\t\t\t\t<Link href=\"/\" className=\"text-foreground hover:text-foreground\">\n\t\t\t\t\t\t\t{brandName}\n\t\t\t\t\t\t</Link>\n\t\t\t\t\t</div>\n\t\t\t\t\t{/* Navigation Links */}\n\t\t\t\t\t<div className=\"flex flex-wrap justify-center space-x-6 text-sm\">\n\t\t\t\t\t\t{navigationLinks.map((link) => (\n\t\t\t\t\t\t\t<Link\n\t\t\t\t\t\t\t\tkey={link.href}\n\t\t\t\t\t\t\t\thref={link.href}\n\t\t\t\t\t\t\t\tclassName=\"hover:text-foreground\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{link.label}\n\t\t\t\t\t\t\t</Link>\n\t\t\t\t\t\t))}\n\t\t\t\t\t</div>\n\t\t\t\t\t{/* Social Icons */}\n\t\t\t\t\t<div className=\"flex flex-wrap justify-center space-x-4 text-foreground\">\n\t\t\t\t\t\t{socialLinks.map((social) => (\n\t\t\t\t\t\t\t<a\n\t\t\t\t\t\t\t\tkey={social.href}\n\t\t\t\t\t\t\t\thref={social.href}\n\t\t\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\t\t\trel=\"noopener noreferrer\"\n\t\t\t\t\t\t\t\tclassName={`hover:${\n\t\t\t\t\t\t\t\t\tsocial.hoverColor || \"text-foreground\"\n\t\t\t\t\t\t\t\t}`}\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{social.icon}\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t))}\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div className=\"border-t border-gray-200 mt-5\">\n\t\t\t\t\t<div className=\"mt-5 text-center text-sm text-foreground\">\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t&copy; {new Date().getFullYear()} {brandName}. All rights\n\t\t\t\t\t\t\treserved.\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</footer>\n\t);\n};\n\nexport default FooterThird;\n",
+      "type": "registry:ui"
+    }
+  ]
+}

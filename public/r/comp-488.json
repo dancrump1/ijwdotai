@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-488",
+  "type": "registry:block",
+  "title": "Comp 488",
+  "description": "Comp 488",
+  "files": [
+    {
+      "path": "registry/basic/comp-488.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { getLocalTimeZone, today } from \"@internationalized/date\";\nimport { RangeCalendar, type DateRange } from \"react-aria-components\";\n\nexport default function Component() {\n\tconst now = today(getLocalTimeZone());\n\tconst [date, setDate] = useState<DateRange | null>({\n\t\tstart: now,\n\t\tend: now.add({ days: 3 }),\n\t});\n\n\treturn (\n\t\t<div>\n\t\t\t<RangeCalendar\n\t\t\t\tclassName=\"rounded-md border p-2\"\n\t\t\t\tvalue={date}\n\t\t\t\tonChange={setDate}\n\t\t\t/>\n\t\t\t<p\n\t\t\t\tclassName=\"text-muted-foreground mt-4 text-center text-xs\"\n\t\t\t\trole=\"region\"\n\t\t\t\taria-live=\"polite\"\n\t\t\t>\n\t\t\t\tRange calendar -{\" \"}\n\t\t\t\t<a\n\t\t\t\t\tclassName=\"hover:text-foreground underline\"\n\t\t\t\t\thref=\"https://react-spectrum.adobe.com/react-aria/DateRangePicker.html\"\n\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\trel=\"noopener nofollow\"\n\t\t\t\t>\n\t\t\t\t\tReact Aria\n\t\t\t\t</a>\n\t\t\t</p>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

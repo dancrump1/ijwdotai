@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-171",
+  "type": "registry:block",
+  "title": "Comp 171",
+  "description": "Comp 171",
+  "files": [
+    {
+      "path": "registry/basic/comp-171.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState } from \"react\";\n\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\nimport { RiStarFill } from \"@remixicon/react\";\n\nexport default function Component() {\n\tconst id = useId();\n\tconst [hoverRating, setHoverRating] = useState(\"\");\n\tconst [currentRating, setCurrentRating] = useState(\"\");\n\n\treturn (\n\t\t<fieldset className=\"space-y-4\">\n\t\t\t<legend className=\"text-foreground text-sm leading-none font-medium\">\n\t\t\t\tRate your experience\n\t\t\t</legend>\n\t\t\t<RadioGroup\n\t\t\t\tclassName=\"inline-flex gap-0\"\n\t\t\t\tonValueChange={setCurrentRating}\n\t\t\t>\n\t\t\t\t{[\"1\", \"2\", \"3\", \"4\", \"5\"].map((value) => (\n\t\t\t\t\t<label\n\t\t\t\t\t\tkey={value}\n\t\t\t\t\t\tclassName=\"group has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative cursor-pointer rounded p-0.5 outline-none has-focus-visible:ring-[3px]\"\n\t\t\t\t\t\tonMouseEnter={() => setHoverRating(value)}\n\t\t\t\t\t\tonMouseLeave={() => setHoverRating(\"\")}\n\t\t\t\t\t>\n\t\t\t\t\t\t<RadioGroupItem\n\t\t\t\t\t\t\tid={`${id}-${value}`}\n\t\t\t\t\t\t\tvalue={value}\n\t\t\t\t\t\t\tclassName=\"sr-only\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<RiStarFill\n\t\t\t\t\t\t\tsize={24}\n\t\t\t\t\t\t\tclassName={`transition-all ${\n\t\t\t\t\t\t\t\t(hoverRating || currentRating) >= value\n\t\t\t\t\t\t\t\t\t? \"text-amber-500\"\n\t\t\t\t\t\t\t\t\t: \"text-input\"\n\t\t\t\t\t\t\t} group-hover:scale-110`}\n\t\t\t\t\t\t/>\n\t\t\t\t\t\t<span className=\"sr-only\">\n\t\t\t\t\t\t\t{value} star{value === \"1\" ? \"\" : \"s\"}\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</label>\n\t\t\t\t))}\n\t\t\t</RadioGroup>\n\t\t</fieldset>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/radio-group.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as RadioGroupPrimitive from \"@radix-ui/react-radio-group\";\nimport { Circle } from \"lucide-react\";\n\nconst RadioGroup = React.forwardRef<\n\tReact.ElementRef<typeof RadioGroupPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>\n>(({ className, ...props }, ref) => {\n\treturn (\n\t\t<RadioGroupPrimitive.Root\n\t\t\tclassName={cn(\"grid gap-2\", className)}\n\t\t\t{...props}\n\t\t\tref={ref}\n\t\t/>\n\t);\n});\nRadioGroup.displayName = RadioGroupPrimitive.Root.displayName;\n\nconst RadioGroupItem = React.forwardRef<\n\tReact.ElementRef<typeof RadioGroupPrimitive.Item>,\n\tReact.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>\n>(({ className, ...props }, ref) => {\n\treturn (\n\t\t<RadioGroupPrimitive.Item\n\t\t\tref={ref}\n\t\t\tclassName={cn(\n\t\t\t\t\"aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t\t{...props}\n\t\t>\n\t\t\t<RadioGroupPrimitive.Indicator className=\"flex items-center justify-center\">\n\t\t\t\t<Circle className=\"h-2.5 w-2.5 fill-current text-current\" />\n\t\t\t</RadioGroupPrimitive.Indicator>\n\t\t</RadioGroupPrimitive.Item>\n\t);\n});\nRadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName;\n\nexport { RadioGroup, RadioGroupItem };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

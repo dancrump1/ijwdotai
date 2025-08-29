@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-130",
+  "type": "registry:block",
+  "title": "Comp 130",
+  "description": "Comp 130",
+  "files": [
+    {
+      "path": "registry/basic/comp-130.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Toggle } from \"@/components/ui/toggle\";\nimport { MoonIcon, SunIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst [theme, setTheme] = useState<string>(\"light\");\n\n\treturn (\n\t\t<div>\n\t\t\t<Toggle\n\t\t\t\tvariant=\"outline\"\n\t\t\t\tclassName=\"group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent\"\n\t\t\t\tpressed={theme === \"dark\"}\n\t\t\t\tonPressedChange={() =>\n\t\t\t\t\tsetTheme((prev) => (prev === \"dark\" ? \"light\" : \"dark\"))\n\t\t\t\t}\n\t\t\t\taria-label={`Switch to ${theme === \"dark\" ? \"light\" : \"dark\"} mode`}\n\t\t\t>\n\t\t\t\t{/* Note: After dark mode implementation, rely on dark: prefix rather than group-data-[state=on]: */}\n\t\t\t\t<MoonIcon\n\t\t\t\t\tsize={16}\n\t\t\t\t\tclassName=\"shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100\"\n\t\t\t\t\taria-hidden=\"true\"\n\t\t\t\t/>\n\t\t\t\t<SunIcon\n\t\t\t\t\tsize={16}\n\t\t\t\t\tclassName=\"absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0\"\n\t\t\t\t\taria-hidden=\"true\"\n\t\t\t\t/>\n\t\t\t</Toggle>\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/toggle.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as TogglePrimitive from \"@radix-ui/react-toggle\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst toggleVariants = cva(\n\t\"inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault: \"bg-transparent\",\n\t\t\t\toutline:\n\t\t\t\t\t\"border border-input bg-transparent hover:bg-accent hover:text-accent-foreground\",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tdefault: \"h-10 px-3\",\n\t\t\t\tsm: \"h-9 px-2.5\",\n\t\t\t\tlg: \"h-11 px-5\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"default\",\n\t\t},\n\t}\n);\n\nconst Toggle = React.forwardRef<\n\tReact.ElementRef<typeof TogglePrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &\n\t\tVariantProps<typeof toggleVariants>\n>(({ className, variant, size, ...props }, ref) => (\n\t<TogglePrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(toggleVariants({ variant, size, className }))}\n\t\t{...props}\n\t/>\n));\n\nToggle.displayName = TogglePrimitive.Root.displayName;\n\nexport { Toggle, toggleVariants };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

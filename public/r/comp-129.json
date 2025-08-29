@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-129",
+  "type": "registry:block",
+  "title": "Comp 129",
+  "description": "Comp 129",
+  "files": [
+    {
+      "path": "registry/basic/comp-129.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { BellIcon } from \"lucide-react\";\n\nexport default function Component() {\n\tconst [count, setCount] = useState(3);\n\n\tconst handleClick = () => {\n\t\tsetCount(0);\n\t};\n\n\treturn (\n\t\t<Button\n\t\t\tvariant=\"outline\"\n\t\t\tsize=\"icon\"\n\t\t\tclassName=\"relative\"\n\t\t\tonClick={handleClick}\n\t\t\taria-label=\"Notifications\"\n\t\t>\n\t\t\t<BellIcon size={16} aria-hidden=\"true\" />\n\t\t\t{count > 0 && (\n\t\t\t\t<Badge className=\"absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1\">\n\t\t\t\t\t{count > 99 ? \"99+\" : count}\n\t\t\t\t</Badge>\n\t\t\t)}\n\t\t</Button>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/badge.tsx",
+      "content": "import React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst badgeVariants = cva(\n\t\"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault:\n\t\t\t\t\t\"border-transparent bg-primary text-primary-foreground hover:bg-primary/80\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80\",\n\t\t\t\toutline: \"text-foreground\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t}\n);\n\nexport interface BadgeProps\n\textends React.HTMLAttributes<HTMLDivElement>,\n\t\tVariantProps<typeof badgeVariants> {}\n\nfunction Badge({ className, variant, ...props }: BadgeProps) {\n\treturn (\n\t\t<div className={cn(badgeVariants({ variant }), className)} {...props} />\n\t);\n}\n\nexport { Badge, badgeVariants };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/button.tsx",
+      "content": "import * as React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst buttonVariants = cva(\n\t\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-white hover:text-gray-400 font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\",\n\t{\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tsimple:\n\t\t\t\t\t\"bg-secondary relative z-10 bg-transparent hover:border-secondary hover:bg-secondary/50  border border-transparent dark:text-white text-sm md:text-sm transition font-medium duration-200  rounded-md px-4 py-2  flex items-center justify-center\",\n\t\t\t\tdefault: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n\t\t\t\tdestructive:\n\t\t\t\t\t\"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n\t\t\t\toutline:\n\t\t\t\t\t\"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n\t\t\t\tsecondary:\n\t\t\t\t\t\"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n\t\t\t\tghost: \"hover:bg-accent hover:text-black hover:stroke-black dark:text-white text-black\",\n\t\t\t\tlink: \"text-primary underline-offset-4 hover:underline\",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tdefault: \"h-10 px-4 py-2\",\n\t\t\t\tsm: \"h-9 rounded-md px-3\",\n\t\t\t\tlg: \"h-11 rounded-md px-8\",\n\t\t\t\ticon: \"h-10 w-10\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"default\",\n\t\t},\n\t}\n);\n\nexport interface ButtonProps\n\textends React.ButtonHTMLAttributes<HTMLButtonElement>,\n\t\tVariantProps<typeof buttonVariants> {\n\tasChild?: boolean;\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n\t({ className, variant, size, asChild = false, ...props }, ref) => {\n\t\tconst Comp = asChild ? Slot : \"button\";\n\t\treturn (\n\t\t\t<Comp\n\t\t\t\tclassName={cn(buttonVariants({ variant, size, className }))}\n\t\t\t\tref={ref}\n\t\t\t\t{...props}\n\t\t\t/>\n\t\t);\n\t}\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

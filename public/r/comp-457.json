@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-457",
+  "type": "registry:block",
+  "title": "Comp 457",
+  "description": "Comp 457",
+  "files": [
+    {
+      "path": "registry/basic/comp-457.tsx",
+      "content": "import {\n\tPagination,\n\tPaginationContent,\n\tPaginationItem,\n\tPaginationLink,\n} from \"@/components/ui/pagination\";\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\";\n\ntype PaginationProps = {\n\tcurrentPage: number;\n\ttotalPages: number;\n};\n\nexport default function Component({\n\tcurrentPage,\n\ttotalPages,\n}: PaginationProps) {\n\treturn (\n\t\t<Pagination>\n\t\t\t<PaginationContent className=\"gap-3\">\n\t\t\t\t<PaginationItem>\n\t\t\t\t\t<PaginationLink\n\t\t\t\t\t\tclassName=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n\t\t\t\t\t\thref={\n\t\t\t\t\t\t\tcurrentPage === 1 ? undefined : `#/page/${currentPage - 1}`\n\t\t\t\t\t\t}\n\t\t\t\t\t\taria-label=\"Go to previous page\"\n\t\t\t\t\t\taria-disabled={currentPage === 1 ? true : undefined}\n\t\t\t\t\t\trole={currentPage === 1 ? \"link\" : undefined}\n\t\t\t\t\t>\n\t\t\t\t\t\t<ChevronLeftIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t</PaginationLink>\n\t\t\t\t</PaginationItem>\n\t\t\t\t<PaginationItem>\n\t\t\t\t\t<p className=\"text-muted-foreground text-sm\" aria-live=\"polite\">\n\t\t\t\t\t\tPage <span className=\"text-foreground\">{currentPage}</span> of{\" \"}\n\t\t\t\t\t\t<span className=\"text-foreground\">{totalPages}</span>\n\t\t\t\t\t</p>\n\t\t\t\t</PaginationItem>\n\t\t\t\t<PaginationItem>\n\t\t\t\t\t<PaginationLink\n\t\t\t\t\t\tclassName=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n\t\t\t\t\t\thref={\n\t\t\t\t\t\t\tcurrentPage === totalPages\n\t\t\t\t\t\t\t\t? undefined\n\t\t\t\t\t\t\t\t: `#/page/${currentPage + 1}`\n\t\t\t\t\t\t}\n\t\t\t\t\t\taria-label=\"Go to next page\"\n\t\t\t\t\t\taria-disabled={currentPage === totalPages ? true : undefined}\n\t\t\t\t\t\trole={currentPage === totalPages ? \"link\" : undefined}\n\t\t\t\t\t>\n\t\t\t\t\t\t<ChevronRightIcon size={16} aria-hidden=\"true\" />\n\t\t\t\t\t</PaginationLink>\n\t\t\t\t</PaginationItem>\n\t\t\t</PaginationContent>\n\t\t</Pagination>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

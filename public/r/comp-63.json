@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-63",
+  "type": "registry:block",
+  "title": "Comp 63",
+  "description": "Comp 63",
+  "files": [
+    {
+      "path": "registry/basic/comp-63.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function Component() {\n\tconst id = useId();\n\treturn (\n\t\t<div className=\"[--ring:var(--color-indigo-300)] *:not-first:mt-2 in-[.dark]:[--ring:var(--color-indigo-900)]\">\n\t\t\t<Label htmlFor={id}>Textarea with colored border and ring</Label>\n\t\t\t<Textarea id={id} placeholder=\"Leave a comment\" />\n\t\t</div>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/label.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as LabelPrimitive from \"@radix-ui/react-label\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\n\nconst labelVariants = cva(\n\t\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\"\n);\n\nconst Label = React.forwardRef<\n\tReact.ElementRef<typeof LabelPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &\n\t\tVariantProps<typeof labelVariants>\n>(({ className, ...props }, ref) => (\n\t<LabelPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(labelVariants(), className)}\n\t\t{...props}\n\t/>\n));\nLabel.displayName = LabelPrimitive.Root.displayName;\n\nexport { Label };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/textarea.tsx",
+      "content": "// SHADCN UI GENERATED CODE\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\n\nexport interface TextareaProps\n\textends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}\n\nconst Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(\n\t({ className, ...props }, ref) => {\n\t\treturn (\n\t\t\t<textarea\n\t\t\t\tclassName={cn(\n\t\t\t\t\t\"flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n\t\t\t\t\tclassName\n\t\t\t\t)}\n\t\t\t\tref={ref}\n\t\t\t\t{...props}\n\t\t\t/>\n\t\t);\n\t}\n);\nTextarea.displayName = \"Textarea\";\n\nexport { Textarea };\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fuzzy-overlay",
+  "type": "registry:block",
+  "title": "Fuzzy overlay",
+  "description": "Fuzzy overlay",
+  "files": [
+    {
+      "path": "components/usages/fuzzyoverlayusage.tsx",
+      "content": "import React from \"react\";\n\nimport { motion } from \"motion/react\";\n\nexport default function FuzzyOverlayUsage() {\n\treturn (\n\t\t// NOTE: An overflow of hidden will be required on a wrapping\n\t\t// element to see expected results\n\t\t<div className=\"relative overflow-hidden\">\n\t\t\t<ExampleContent />\n\t\t\t<FuzzyOverlay />\n\t\t</div>\n\t);\n}\n\nconst FuzzyOverlay = () => {\n\treturn (\n\t\t<motion.div\n\t\t\tinitial={{ transform: \"translateX(-10%) translateY(-10%)\" }}\n\t\t\tanimate={{\n\t\t\t\ttransform: \"translateX(10%) translateY(10%)\",\n\t\t\t}}\n\t\t\ttransition={{\n\t\t\t\trepeat: Infinity,\n\t\t\t\tduration: 0.2,\n\t\t\t\tease: \"linear\",\n\t\t\t\trepeatType: \"mirror\",\n\t\t\t}}\n\t\t\t// You can download these PNGs here:\n\t\t\t// https://www.hover.dev/black-noise.png\n\t\t\t// https://www.hover.dev/noise.png\n\t\t\tstyle={{\n\t\t\t\tbackgroundImage: 'url(\"/black-noise.png\")',\n\t\t\t\t// backgroundImage: 'url(\"/noise.png\")',\n\t\t\t}}\n\t\t\tclassName=\"pointer-events-none absolute -inset-[100%] opacity-[15%]\"\n\t\t/>\n\t);\n};\n\nconst ExampleContent = () => {\n\treturn (\n\t\t<div className=\"relative grid h-screen place-content-center space-y-6 bg-background p-8\">\n\t\t\t<p className=\"text-center text-6xl font-black text-secondary\">\n\t\t\t\tFuzzy Overlay Usage\n\t\t\t</p>\n\t\t\t<p className=\"text-center text-secondary\">\n\t\t\t\tThis is a basic example of using a lo-fi fuzzy overlay 📺\n\t\t\t</p>\n\t\t\t<div className=\"flex items-center justify-center gap-3\">\n\t\t\t\t<button className=\"text-secondary w-fit px-4 py-2 font-semibold text-secondary transition-colors hover:bg-background\">\n\t\t\t\t\tPricing\n\t\t\t\t</button>\n\t\t\t\t<button className=\"w-fit bg-background px-4 py-2 font-semibold text-secondary transition-colors hover:bg-background\">\n\t\t\t\t\tTry it free\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</div>\n\t);\n};\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/fuzzy-overlay.tsx",
+      "content": "import React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { motion } from \"motion/react\";\n\nconst FuzzyOverlay = ({ className }: { className?: string }) => {\n\treturn (\n\t\t<motion.div\n\t\t\tinitial={{ transform: \"translateX(-10%) translateY(-10%)\" }}\n\t\t\tanimate={{\n\t\t\t\ttransform: \"translateX(10%) translateY(10%)\",\n\t\t\t}}\n\t\t\ttransition={{\n\t\t\t\trepeat: Infinity,\n\t\t\t\tduration: 0.2,\n\t\t\t\tease: \"linear\",\n\t\t\t\trepeatType: \"mirror\",\n\t\t\t}}\n\t\t\t// You can download these PNGs here:\n\t\t\t// https://www.hover.dev/black-noise.png\n\t\t\t// https://www.hover.dev/noise.png\n\t\t\tstyle={{\n\t\t\t\tbackgroundImage: 'url(\"/dist/local/black-noise.png\")',\n\t\t\t\t// backgroundImage: 'url(\"local/noise.png\")',\n\t\t\t}}\n\t\t\tclassName={cn(\n\t\t\t\t\"pointer-events-none absolute -inset-[100%] opacity-0\",\n\t\t\t\tclassName\n\t\t\t)}\n\t\t/>\n\t);\n};\n\nexport default FuzzyOverlay;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

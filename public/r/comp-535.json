@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-535",
+  "type": "registry:block",
+  "title": "Comp 535",
+  "description": "Comp 535",
+  "files": [
+    {
+      "path": "registry/basic/comp-535.tsx",
+      "content": "import {\n\tTimeline,\n\tTimelineContent,\n\tTimelineDate,\n\tTimelineHeader,\n\tTimelineIndicator,\n\tTimelineItem,\n\tTimelineSeparator,\n\tTimelineTitle,\n} from \"@/components/ui/timeline\";\nimport { GitCompare, GitFork, GitMerge, GitPullRequest } from \"lucide-react\";\n\nconst items = [\n\t{\n\t\tid: 1,\n\t\tdate: \"15 minutes ago\",\n\t\ttitle: \"Forked Repository\",\n\t\tdescription:\n\t\t\t\"Forked the repository to create a new branch for development.\",\n\t\ticon: GitFork,\n\t},\n\t{\n\t\tid: 2,\n\t\tdate: \"10 minutes ago\",\n\t\ttitle: \"Pull Request Submitted\",\n\t\tdescription:\n\t\t\t\"Submitted PR #342 with new feature implementation. Waiting for code review from team leads.\",\n\t\ticon: GitPullRequest,\n\t},\n\t{\n\t\tid: 3,\n\t\tdate: \"5 minutes ago\",\n\t\ttitle: \"Comparing Branches\",\n\t\tdescription:\n\t\t\t\"Received comments on PR. Minor adjustments needed in error handling and documentation.\",\n\t\ticon: GitCompare,\n\t},\n\t{\n\t\tid: 4,\n\t\ttitle: \"Merged Branch\",\n\t\tdescription:\n\t\t\t\"Merged the feature branch into the main branch. Ready for deployment.\",\n\t\ticon: GitMerge,\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<Timeline defaultValue={3}>\n\t\t\t{items.map((item) => (\n\t\t\t\t<TimelineItem\n\t\t\t\t\tkey={item.id}\n\t\t\t\t\tstep={item.id}\n\t\t\t\t\tclassName=\"group-data-[orientation=vertical]/timeline:ms-10\"\n\t\t\t\t>\n\t\t\t\t\t<TimelineHeader>\n\t\t\t\t\t\t<TimelineSeparator className=\"group-data-[orientation=vertical]/timeline:-left-7 group-data-[orientation=vertical]/timeline:h-[calc(100%-1.5rem-0.25rem)] group-data-[orientation=vertical]/timeline:translate-y-6.5\" />\n\t\t\t\t\t\t<TimelineTitle className=\"mt-0.5\">{item.title}</TimelineTitle>\n\t\t\t\t\t\t<TimelineIndicator className=\"bg-primary/10 group-data-completed/timeline-item:bg-primary group-data-completed/timeline-item:text-primary-foreground flex size-6 items-center justify-center border-none group-data-[orientation=vertical]/timeline:-left-7\">\n\t\t\t\t\t\t\t<item.icon size={14} />\n\t\t\t\t\t\t</TimelineIndicator>\n\t\t\t\t\t</TimelineHeader>\n\t\t\t\t\t<TimelineContent>\n\t\t\t\t\t\t{item.description}\n\t\t\t\t\t\t<TimelineDate className=\"mt-2 mb-0\">{item.date}</TimelineDate>\n\t\t\t\t\t</TimelineContent>\n\t\t\t\t</TimelineItem>\n\t\t\t))}\n\t\t</Timeline>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

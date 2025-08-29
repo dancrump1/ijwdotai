@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-530",
+  "type": "registry:block",
+  "title": "Comp 530",
+  "description": "Comp 530",
+  "files": [
+    {
+      "path": "registry/basic/comp-530.tsx",
+      "content": "import {\n\tTimeline,\n\tTimelineHeader,\n\tTimelineIndicator,\n\tTimelineItem,\n\tTimelineSeparator,\n\tTimelineTitle,\n} from \"@/components/ui/timeline\";\n\nconst items = [\n\t{\n\t\tid: 1,\n\t\tdate: \"Mar 15, 2024\",\n\t\ttitle: \"Project Kickoff\",\n\t\tdescription:\n\t\t\t\"Initial team meeting and project scope definition. Established key milestones and resource allocation.\",\n\t},\n\t{\n\t\tid: 2,\n\t\tdate: \"Mar 22, 2024\",\n\t\ttitle: \"Design Phase\",\n\t\tdescription:\n\t\t\t\"Completed wireframes and user interface mockups. Stakeholder review and feedback incorporated.\",\n\t},\n\t{\n\t\tid: 3,\n\t\tdate: \"Apr 5, 2024\",\n\t\ttitle: \"Development Sprint\",\n\t\tdescription:\n\t\t\t\"Backend API implementation and frontend component development in progress.\",\n\t},\n\t{\n\t\tid: 4,\n\t\tdate: \"Apr 19, 2024\",\n\t\ttitle: \"Testing & Deployment\",\n\t\tdescription:\n\t\t\t\"Quality assurance testing, performance optimization, and production deployment preparation.\",\n\t},\n];\n\nexport default function Component() {\n\treturn (\n\t\t<Timeline defaultValue={3}>\n\t\t\t{items.map((item) => (\n\t\t\t\t<TimelineItem key={item.id} step={item.id}>\n\t\t\t\t\t<TimelineHeader>\n\t\t\t\t\t\t<TimelineSeparator />\n\t\t\t\t\t\t<TimelineTitle className=\"-mt-0.5\">\n\t\t\t\t\t\t\t{item.title}\n\t\t\t\t\t\t</TimelineTitle>\n\t\t\t\t\t\t<TimelineIndicator />\n\t\t\t\t\t</TimelineHeader>\n\t\t\t\t</TimelineItem>\n\t\t\t))}\n\t\t</Timeline>\n\t);\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-highlight",
+  "type": "registry:block",
+  "title": "Hero highlight",
+  "description": "Hero highlight",
+  "files": [
+    {
+      "path": "components/usages/herohighlightusage.tsx",
+      "content": "\"use client\";\n\nimport {\n\tHeroHighlight,\n\tHighlight,\n} from \"@/registry/open-source/hero-highlight\";\nimport { motion } from \"motion/react\";\n\nexport default function HeroHighlightDemo() {\n\treturn (\n\t\t<HeroHighlight>\n\t\t\t<motion.h1\n\t\t\t\tinitial={{\n\t\t\t\t\topacity: 0,\n\t\t\t\t\ty: 20,\n\t\t\t\t}}\n\t\t\t\tanimate={{\n\t\t\t\t\topacity: 1,\n\t\t\t\t\ty: [20, -5, 0],\n\t\t\t\t}}\n\t\t\t\ttransition={{\n\t\t\t\t\tduration: 0.5,\n\t\t\t\t\tease: [0.4, 0.0, 0.2, 1],\n\t\t\t\t}}\n\t\t\t\tclassName=\"text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-secondary dark:text-secondary max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto \"\n\t\t\t>\n\t\t\t\tWith insomnia, nothing&apos;s real. Everything is far away.\n\t\t\t\tEverything is a{\" \"}\n\t\t\t\t<Highlight className=\"text-secondary dark:text-secondary\">\n\t\t\t\t\tcopy, of a copy, of a copy.\n\t\t\t\t</Highlight>\n\t\t\t</motion.h1>\n\t\t</HeroHighlight>\n\t);\n}\n",
+      "type": "registry:block",
+      "target": "~/example.tsx"
+    },
+    {
+      "path": "registry/open-source/hero-highlight.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport { motion, useMotionTemplate, useMotionValue } from \"motion/react\";\n\n// https://ui.aceternity.com/components/hero-highlight\n\nexport const HeroHighlight = ({\n\tchildren,\n\tclassName,\n\tcontainerClassName,\n}: {\n\tchildren: React.ReactNode;\n\tclassName?: string;\n\tcontainerClassName?: string;\n}) => {\n\tlet mouseX = useMotionValue(0);\n\tlet mouseY = useMotionValue(0);\n\n\tfunction handleMouseMove({\n\t\tcurrentTarget,\n\t\tclientX,\n\t\tclientY,\n\t}: React.MouseEvent<HTMLDivElement>) {\n\t\tif (!currentTarget) return;\n\t\tlet { left, top } = currentTarget.getBoundingClientRect();\n\n\t\tmouseX.set(clientX - left);\n\t\tmouseY.set(clientY - top);\n\t}\n\treturn (\n\t\t<div\n\t\t\tclassName={cn(\n\t\t\t\t\"relative h-[40rem] flex items-center bg-background dark:bg-background justify-center w-full group\",\n\t\t\t\tcontainerClassName\n\t\t\t)}\n\t\t\tonMouseMove={handleMouseMove}\n\t\t>\n\t\t\t<div className=\"absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800  pointer-events-none\" />\n\t\t\t<motion.div\n\t\t\t\tclassName=\"pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-indigo-500   absolute inset-0 opacity-0 transition delay-[1500ms] duration-300 group-hover:opacity-100\"\n\t\t\t\tstyle={{\n\t\t\t\t\tWebkitMaskImage: useMotionTemplate`\n            radial-gradient(\n              200px circle at ${mouseX}px ${mouseY}px,\n              black 0%,\n              transparent 100%\n            )\n          `,\n\t\t\t\t\tmaskImage: useMotionTemplate`\n            radial-gradient(\n              200px circle at ${mouseX}px ${mouseY}px,\n              black 0%,\n              transparent 100%\n            )\n          `,\n\t\t\t\t}}\n\t\t\t/>\n\n\t\t\t<div className={cn(\"relative z-1\", className)}>{children}</div>\n\t\t</div>\n\t);\n};\n\nexport const Highlight = ({\n\tchildren,\n\tclassName,\n}: {\n\tchildren: React.ReactNode;\n\tclassName?: string;\n}) => {\n\treturn (\n\t\t<motion.span\n\t\t\tinitial={{\n\t\t\t\tbackgroundSize: \"0% 100%\",\n\t\t\t}}\n\t\t\tanimate={{\n\t\t\t\tbackgroundSize: \"100% 100%\",\n\t\t\t}}\n\t\t\ttransition={{\n\t\t\t\tduration: 2,\n\t\t\t\tease: \"linear\",\n\t\t\t\tdelay: 2.5,\n\t\t\t}}\n\t\t\tstyle={{\n\t\t\t\tbackgroundRepeat: \"no-repeat\",\n\t\t\t\tbackgroundPosition: \"left center\",\n\t\t\t\tdisplay: \"inline\",\n\t\t\t}}\n\t\t\tclassName={cn(\n\t\t\t\t`relative inline-block pb-1   px-1 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,\n\t\t\t\tclassName\n\t\t\t)}\n\t\t>\n\t\t\t{children}\n\t\t</motion.span>\n\t);\n};\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

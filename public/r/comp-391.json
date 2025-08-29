@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-391",
+  "type": "registry:block",
+  "title": "Comp 391",
+  "description": "Comp 391",
+  "files": [
+    {
+      "path": "registry/basic/comp-391.tsx",
+      "content": "import { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\nexport default function Component() {\n\treturn (\n\t\t<Avatar>\n\t\t\t<AvatarFallback>KK</AvatarFallback>\n\t\t</Avatar>\n\t);\n}\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "components/ui/avatar.tsx",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nimport { cn } from \"@/registry/utilities/cn\";\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\";\n\nconst Avatar = React.forwardRef<\n\tReact.ElementRef<typeof AvatarPrimitive.Root>,\n\tReact.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>\n>(({ className, ...props }, ref) => (\n\t<AvatarPrimitive.Root\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t/>\n));\nAvatar.displayName = AvatarPrimitive.Root.displayName;\n\nconst AvatarImage = React.forwardRef<\n\tReact.ElementRef<typeof AvatarPrimitive.Image>,\n\tReact.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>\n>(({ className, ...props }, ref) => (\n\t<AvatarPrimitive.Image\n\t\tref={ref}\n\t\tclassName={cn(\"aspect-square h-full w-full\", className)}\n\t\t{...props}\n\t/>\n));\nAvatarImage.displayName = AvatarPrimitive.Image.displayName;\n\nconst AvatarFallback = React.forwardRef<\n\tReact.ElementRef<typeof AvatarPrimitive.Fallback>,\n\tReact.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>\n>(({ className, ...props }, ref) => (\n\t<AvatarPrimitive.Fallback\n\t\tref={ref}\n\t\tclassName={cn(\n\t\t\t\"flex h-full w-full items-center justify-center rounded-full bg-muted\",\n\t\t\tclassName\n\t\t)}\n\t\t{...props}\n\t/>\n));\nAvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;\n\nexport { Avatar, AvatarImage, AvatarFallback };\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/utilities/cn.ts",
+      "content": "import { ClassValue, clsx } from \"clsx\";\nimport { twMerge } from \"tailwind-merge\";\n\nexport function cn(...inputs: ClassValue[]) {\n\treturn twMerge(clsx(inputs));\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ export default async function Page() {
 	const java_response = await fetch(
 		"http://java-backend.rbxjcxt2ry-pxr4k55zr4gn.p.temp-site.link/category/name"
 	);
-	const java_data = await java_response.text();
+	const java_data = await java_response.json();
 
 	return (
 		<>

@@ -28,7 +28,7 @@ export default function HomePage({
 	const handleUpdate = async () => {
 		try {
 			const res = await fetch(
-				`http://localhost:8080/category/${categoryId}/description`,
+				`http://java-backend.rbxjcxt2ry-pxr4k55zr4gn.p.temp-site.link/category/${categoryId}/description`,
 				{
 					method: "PATCH",
 					headers: {

@@ -127,7 +127,7 @@ export default function HomePage({
 										<button
 											onClick={() => {
 												setIsOpen(true);
-												setCategoryId(i);
+												setCategoryId(i + 1);
 												setDescription(description);
 											}}
 											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"

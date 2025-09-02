@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import { credits } from "@/app/(library)/credits/page";
+import getData from "@/lib/fetchJavaData";
 import { SpringModal } from "@/registry/open-source/spring-modal";
 
 import { simpleCategories } from "@/config/components";
@@ -24,6 +25,7 @@ export default function HomePage({
 	const [description, setDescription] = useState("test ste 123");
 	const [response, setResponse] = useState(null);
 	const [error, setError] = useState(null);
+	const [newData, setNewData] = useState(null);
 
 	const handleUpdate = async () => {
 		try {
@@ -49,6 +51,8 @@ export default function HomePage({
 			console.error(err);
 			setError(err.message);
 		}
+
+		setNewData(await getData());
 	};
 
 	const [items, setItems] = useState([""]);
@@ -60,7 +64,7 @@ export default function HomePage({
 				<h2>Heavy animations</h2>
 				<div className="grid grid-cols-7 h-full min-h-screen">
 					<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
-						{Object.entries(categories).map(
+						{Object.entries(newData ?? categories).map(
 							([category, { description, components }], i) => {
 								// Build query string from subcategories
 								const queryString =

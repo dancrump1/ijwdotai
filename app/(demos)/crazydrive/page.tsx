@@ -130,9 +130,7 @@ async function getData() {
 		{ uid: entryUid }
 	);
 
-	const java_response = await fetch(
-		"http://java-backend.rbxjcxt2ry-pxr4k55zr4gn.p.temp-site.link/category/name"
-	);
+	const java_response = await fetch("http://localhost:8080/category/name");
 	const java_data = await java_response.text();
 
 	return { data, java_data };

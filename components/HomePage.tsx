@@ -28,7 +28,7 @@ export default function HomePage({
 	const handleUpdate = async () => {
 		try {
 			const res = await fetch(
-				`http://java-backend.rbxjcxt2ry-pxr4k55zr4gn.p.temp-site.link/category/${categoryId}/description`,
+				`http://localhost:8080/category/${categoryId}/description`,
 				{
 					method: "PATCH",
 					headers: {
@@ -52,7 +52,7 @@ export default function HomePage({
 	};
 
 	const [items, setItems] = useState([""]);
-	const [subcategories, setSubcategories] = useState([""]);
+	const [test, setSubcategories] = useState([""]);
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
@@ -61,13 +61,13 @@ export default function HomePage({
 				<div className="grid grid-cols-7 h-full min-h-screen">
 					<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 						{Object.entries(categories).map(
-							([category, subcategories], i) => {
+							([category, { description, components }], i) => {
 								// Build query string from subcategories
 								const queryString =
 									category === "All"
 										? ""
 										: "?" +
-											subcategories
+											components
 												.map(
 													(sub) =>
 														`subcategory=${encodeURIComponent(sub)}`
@@ -83,13 +83,13 @@ export default function HomePage({
 								const categoryTotal = files.filter(
 									({ name }) =>
 										name.includes(category) ||
-										!!subcategories
+										!!components
 											.map((filter) => name.includes(filter))
 											.filter((item) => !!item).length
 								);
 
 								return (
-									<>
+									<div className="flex flex-col">
 										<Link
 											key={category}
 											onMouseEnter={() => {
@@ -97,7 +97,7 @@ export default function HomePage({
 												setItems(
 													categoryTotal.map((item) => item.name)
 												);
-												setSubcategories(subcategories);
+												setSubcategories(components);
 											}}
 											onMouseLeave={() => {
 												setHovered(null);
@@ -118,88 +118,86 @@ export default function HomePage({
 
 											{categoryTotal.length}
 											<br />
+											{description}
 										</Link>
 										<button
-											onClick={() => setIsOpen(true)}
-											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity"
+											onClick={() => {
+												setIsOpen(true);
+												setCategoryId(i);
+												setDescription(description);
+											}}
+											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 										>
 											Open Modal
 										</button>
-										<SpringModal
-											isOpen={isOpen}
-											setIsOpen={setIsOpen}
-										>
-											<div
-												style={{
-													padding: "1rem",
-													maxWidth: "500px",
-												}}
-											>
-												<h2>Update Category Description</h2>
-												<input
-													type="text"
-													placeholder="New description"
-													value={description}
-													onChange={(e) =>
-														setDescription(e.target.value)
-													}
-													style={{
-														width: "100%",
-														padding: "0.5rem",
-														marginBottom: "0.5rem",
-													}}
-												/>
-												<input
-													type="number"
-													placeholder="category to change"
-													value={categoryId}
-													onChange={(e) =>
-														setCategoryId(e.target.value)
-													}
-													style={{
-														width: "100%",
-														padding: "0.5rem",
-														marginBottom: "0.5rem",
-													}}
-												/>
-												<button
-													onClick={handleUpdate}
-													style={{
-														padding: "0.5rem 1rem",
-														cursor: "pointer",
-													}}
-												>
-													Update
-												</button>
-
-												{response && (
-													<div
-														style={{
-															marginTop: "1rem",
-															color: "green",
-														}}
-													>
-														<strong>Updated category:</strong>{" "}
-														{JSON.stringify(response)}
-													</div>
-												)}
-
-												{error && (
-													<div
-														style={{
-															marginTop: "1rem",
-															color: "red",
-														}}
-													>
-														<strong>Error:</strong> {error}
-													</div>
-												)}
-											</div>
-										</SpringModal>
-									</>
+									</div>
 								);
 							}
 						)}
+						<SpringModal isOpen={isOpen} setIsOpen={setIsOpen}>
+							<div
+								style={{
+									padding: "1rem",
+									maxWidth: "500px",
+								}}
+							>
+								<h2>Update Category Description</h2>
+								<input
+									type="text"
+									placeholder="New description"
+									value={description}
+									onChange={(e) => setDescription(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="number"
+									placeholder="category to change"
+									value={categoryId}
+									onChange={(e) => setCategoryId(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<button
+									onClick={handleUpdate}
+									style={{
+										padding: "0.5rem 1rem",
+										cursor: "pointer",
+									}}
+								>
+									Update
+								</button>
+
+								{response && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "green",
+										}}
+									>
+										<strong>Updated category:</strong>{" "}
+										{JSON.stringify(response)}
+									</div>
+								)}
+
+								{error && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "red",
+										}}
+									>
+										<strong>Error:</strong> {error}
+									</div>
+								)}
+							</div>
+						</SpringModal>
 						<span
 							className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
 						>
@@ -223,7 +221,7 @@ export default function HomePage({
 							Filter Match:
 						</span>
 						<ul className="flex flex-col flex-wrap h-full overflow-hidden">
-							{subcategories.map((item) => (
+							{test.map((item) => (
 								<li>{item.replace(".json", "")}</li>
 							))}
 						</ul>

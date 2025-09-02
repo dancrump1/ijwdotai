@@ -11,7 +11,7 @@ export default async function Page({
 }) {
 	const files = await getComponentFilesWithDates();
 	const java_response = await fetch("http://localhost:8080/category/name");
-	const java_data = await java_response.text();
+	const java_data = await java_response.json();
 
 	return <FlexWrapper files={files} java_data={java_data} />;
 }

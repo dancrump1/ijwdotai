@@ -72,7 +72,7 @@ export default function HomePage({
 										? ""
 										: "?" +
 											components
-												.map(
+												?.map(
 													(sub) =>
 														`subcategory=${encodeURIComponent(sub)}`
 												)

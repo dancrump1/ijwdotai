@@ -5,7 +5,10 @@ import { getComponentFilesWithDates } from "@/lib/fetch";
 
 export default async function Page() {
 	const files = await getComponentFilesWithDates();
-	const api_res = await fetch("http://localhost:8080/category/name");
+	const api_res = await fetch("http://localhost:8080/category/name", {
+		method: "GET",
+		headers: {"Authorization": "Basic " + btoa('john:test123')}
+	});
 	const api_data = await api_res.json();
 
 	console.log(api_data);

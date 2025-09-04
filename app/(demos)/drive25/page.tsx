@@ -128,11 +128,24 @@ async function getData() {
 		{ uid: entryUid }
 	);
 
-	return data;
+const res = await fetch("http://localhost:8080/components/name/3dcard");
+  
+  if (!res.ok) {
+    const text = await res.text(); // log HTML error
+    console.error("Error from backend:", text);
+    return;
+  }
+
+  const response = await res.text(); // ✅ only if res is valid JSON
+  console.log(data);
+
+
+
+	return {data, response};
 }
 
 export default async function Page() {
-	const data = await getData();
+	const {data, response} = await getData();
 
-	return <Home data={data} />;
+	return <Home data={data} result={response} />;
 }

@@ -6,9 +6,9 @@ import { getComponentFilesWithDates } from "@/lib/fetch";
 export default async function Page() {
 	const files = await getComponentFilesWithDates();
 
-	const java_response = await fetch("http://localhost:8080/category/name", {
+	const java_response = await fetch("https://java.techdiff.io/category/name", {
 		method: "GET",
-		headers: {"Authorization": "Basic " + btoa('john:test123')}
+		headers: { Authorization: "Basic " + btoa("john:test123") },
 	});
 	const java_data = await java_response.json();
 

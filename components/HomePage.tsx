@@ -30,7 +30,7 @@ export default function HomePage({
 	const handleUpdate = async () => {
 		try {
 			const res = await fetch(
-				`http://localhost:8080/category/${categoryId}/description`,
+				`https://java.techdiff.io/category/${categoryId}/description`,
 				{
 					method: "PATCH",
 					headers: {

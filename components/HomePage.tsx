@@ -35,6 +35,7 @@ export default function HomePage({
 					method: "PATCH",
 					headers: {
 						"Content-Type": "application/json",
+						Authorization: "Basic " + btoa("john:test123"),
 					},
 					body: JSON.stringify({ description }),
 				}

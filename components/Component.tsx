@@ -9,8 +9,16 @@ import CodeBlock from "@/registry/open-source/code-block";
 import { ICON_LIST } from "@/registry/open-source/icons/index";
 import { cn } from "@/registry/utilities/cn";
 import { filterOptions } from "@/registry/utilities/example_data";
+import { Monitor, Smartphone, Tablet } from "lucide-react";
+import { ImperativePanelHandle } from "react-resizable-panels";
 
 import { OpenInV0Button } from "./open-in-v0-button";
+import {
+	ResizableHandle,
+	ResizablePanel,
+	ResizablePanelGroup,
+} from "./ui/resizable";
+import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 
 function useOnScreen(threshold = 0.001, rootMargin = "100px") {
 	const ref = useRef(null);
@@ -111,6 +119,11 @@ function LazyComponentWrapper({
 	);
 }
 
+interface BlockViewState {
+	view: "preview" | "code";
+	size: "desktop" | "tablet" | "mobile";
+}
+
 const Component = ({
 	children,
 	title,
@@ -130,6 +143,12 @@ const Component = ({
 	...props
 }) => {
 	const [showCode, setShowCode] = useState(false);
+
+	const [state, setState] = useState<BlockViewState>({
+		view: "preview",
+		size: "desktop",
+	});
+	const resizablePanelRef = useRef<ImperativePanelHandle>(null);
 
 	const [textContent, setTextContent] = useState("");
 	const [textFilename, setTextFilename] = useState("");
@@ -179,6 +198,29 @@ const Component = ({
 		return null;
 	}
 
+	const handleSizeChange = (value: string) => {
+		if (value) {
+			setState((prev) => ({
+				...prev,
+				size: value as "desktop" | "tablet" | "mobile",
+			}));
+
+			if (resizablePanelRef?.current) {
+				switch (value) {
+					case "desktop":
+						resizablePanelRef.current.resize(100);
+						break;
+					case "tablet":
+						resizablePanelRef.current.resize(60);
+						break;
+					case "mobile":
+						resizablePanelRef.current.resize(30);
+						break;
+				}
+			}
+		}
+	};
+
 	return (
 		<section
 			{...props}
@@ -193,6 +235,7 @@ const Component = ({
 					"col-span-4": gridView == 4 && fullScreen,
 				}
 			)}
+			data-view={state.view}
 			id={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 			key={mungedTitle.replaceAll(" ", "").replaceAll("-", "").toLowerCase()}
 		>
@@ -206,6 +249,41 @@ const Component = ({
 				<button onClick={() => setShowCode(!showCode)} className="ml-auto">
 					{showCode ? "preview" : "code"}
 				</button>
+				<div className="ml-auto hidden h-8 items-center gap-1.5 rounded-md border p-0.5 shadow-none lg:flex">
+					<ToggleGroup
+						type="single"
+						value={state.size}
+						className="gap-0.5"
+						onValueChange={(value) => {
+							handleSizeChange(value);
+						}}
+					>
+						<ToggleGroupItem
+							value="desktop"
+							className="h-[25px] w-[25px] min-w-0 rounded-sm p-0"
+							title="Desktop"
+							data-umami-event="Set Preview Desktop"
+						>
+							<Monitor className="h-4 w-4" />
+						</ToggleGroupItem>
+						<ToggleGroupItem
+							value="tablet"
+							className="h-[25px] w-[25px] min-w-0 rounded-sm p-0"
+							title="Tablet"
+							data-umami-event="Set Preview Tablet"
+						>
+							<Tablet className="h-4 w-4" />
+						</ToggleGroupItem>
+						<ToggleGroupItem
+							value="mobile"
+							className="h-[25px] w-[25px] min-w-0 rounded-sm p-0"
+							title="Mobile"
+							data-umami-event="Set Preview Mobile"
+						>
+							<Smartphone className="h-4 w-4" />
+						</ToggleGroupItem>
+					</ToggleGroup>
+				</div>
 				<OpenInV0Button
 					name={title.replaceAll(" ", "").toLowerCase()}
 					className="w-fit mx-4"
@@ -246,26 +324,43 @@ const Component = ({
 			</span>
 			<hr className="w-full mb-3" />
 			{showCode ? (
-				<CodeBlock
-					code={content}
-					filename={textFilename}
-					// tabs={blockConfig.tabs?.map((config, i) => ({
-					// 	...config,
-					// 	code: textContent[i],
-					// 	name: textFilename[i],
-					// }))}
-					tabs={[]}
-				/>
+				<div className="grid w-full gap-4">
+					<CodeBlock
+						code={content}
+						filename={textFilename}
+						// tabs={blockConfig.tabs?.map((config, i) => ({
+						// 	...config,
+						// 	code: textContent[i],
+						// 	name: textFilename[i],
+						// }))}
+						tabs={[]}
+					/>
+				</div>
 			) : (
-				<LazyComponentWrapper
-					setComponentCount={setComponentCount}
-					title={mungedTitle}
-					containerRef={containerRef}
-					collapsed={collapsed}
-					fullScreen={fullScreen}
+				<ResizablePanelGroup
+					direction="horizontal"
+					className="relative z-10"
 				>
-					{children}
-				</LazyComponentWrapper>
+					<ResizablePanel
+						ref={resizablePanelRef}
+						className="relative rounded-lg border border-accent bg-background"
+						defaultSize={100}
+						minSize={30}
+					>
+						<LazyComponentWrapper
+							setComponentCount={setComponentCount}
+							title={mungedTitle}
+							containerRef={containerRef}
+							collapsed={collapsed}
+							fullScreen={fullScreen}
+						>
+							{children}
+						</LazyComponentWrapper>
+					</ResizablePanel>
+					<ResizableHandle className="relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-y-1/2 after:-translate-x-px after:rounded-full after:bg-border after:transition-all after:hover:h-10 md:block" />
+
+					<ResizablePanel defaultSize={0} minSize={0} />
+				</ResizablePanelGroup>
 			)}
 		</section>
 	);

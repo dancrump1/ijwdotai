@@ -477,11 +477,11 @@ export default function ChatPage({
 				<section className="flex pb-[200px]">
 					<div>
 						{Object.entries(otherCats).map(
-							([category, subcategories], i) => {
+							([category, { description, components }], i) => {
 								const categoryTotal = files.filter(
 									({ name }) =>
 										name.includes(category) ||
-										!!subcategories
+										!!components
 											.map((filter) => name.includes(filter))
 											.filter((item) => !!item).length
 								);

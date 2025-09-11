@@ -154,7 +154,7 @@ function extractString(str: string) {
 	}
 }
 
-function Home({ data }) {
+function Home({ data, result }) {
 	const [loader, setLoader] = useState(true);
 
 	useEffect(() => {
@@ -182,7 +182,7 @@ function Home({ data }) {
 				<main className="">
 					<section className="h-screen w-full flex items-center justify-center relative overflow-x-clip">
 						<div className="w-full h-screen overflow-hidden md:overflow-visible flex flex-col items-center justify-center relative">
-							<span>{hovered}</span>
+							<span>{result}</span>
 
 							<div className="flex py-32 flex-col justify-center items-center w-[250px] sm:w-[300px] md:w-[500px] lg:w-[700px] z-50 pointer-events-auto">
 								<SVG

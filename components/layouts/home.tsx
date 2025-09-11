@@ -3,14 +3,11 @@
 import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import MarqueeAlongSvgPathDemo from "@/components/usages/marqueealongsvgusage";
 import { useHover } from "@/lib/hover-context";
-import AccordionSlices from "@/registry/open-source/accordion-slices";
 import ContentWithImage from "@/registry/open-source/content-with-image";
 import MaskCursor from "@/registry/open-source/cursor-mask";
-import FAQPage from "@/registry/open-source/faq-section";
 import InfiniteScrollingLogosAnimation from "@/registry/open-source/infinite-scrolling-logos-animation";
 import OppositeScroll from "@/registry/open-source/opposite-scroll-links";
 import Floating, {
@@ -23,7 +20,6 @@ import {
 } from "@/registry/open-source/scroll-velocity";
 import TargetCursor from "@/registry/open-source/target-cursor";
 import TextRotate from "@/registry/open-source/text-rotate";
-import { cn } from "@/registry/utilities/cn";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import SVG from "react-inlinesvg";
 
@@ -190,9 +186,9 @@ function Home({ data, javaData }) {
 
 	return (
 		<>
-			{/* <AnimatePresence mode="wait">
+			<AnimatePresence mode="wait">
 				{loader && <Preloader />}
-			</AnimatePresence> */}
+			</AnimatePresence>
 
 			{!loader && (
 				<main className="">

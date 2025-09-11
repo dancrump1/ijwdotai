@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import "./transition.css";
 
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import { HoverProvider } from "@/lib/hover-context";
 import HoverFooter from "@/registry/open-source/hover-footer";
 import ResizeNavBar from "@/registry/open-source/resize-navbar";
@@ -25,12 +26,19 @@ export default async function RootLayout({
 			<body>
 				<NuqsAdapter>
 					<HoverProvider>
-						<ResizeNavBar />
-						{children}
+						<ThemeProvider
+							attribute="class"
+							defaultTheme="system"
+							disableTransitionOnChange
+							enableSystem
+						>
+							<ResizeNavBar />
+							{children}
+
+							<HoverFooter />
+						</ThemeProvider>
 					</HoverProvider>
 				</NuqsAdapter>
-
-				<HoverFooter />
 			</body>
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_KEY} />
 		</html>

@@ -1932,6 +1932,23 @@
       ]
     },
     {
+      "name": "ghost-svg",
+      "type": "registry:block",
+      "title": "Ghost svg",
+      "description": "Ghost svg",
+      "files": [
+        {
+          "path": "components/usages/ghostsvgusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/ghost-svg.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "gif-text",
       "type": "registry:block",
       "title": "Gif text",

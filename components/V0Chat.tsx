@@ -276,11 +276,11 @@ export default function V0Chat({
 			<section className="flex pb-[200px]">
 				<div>
 					{Object.entries(otherCats).map(
-						([category, subcategories], i) => {
+						([category, { components, description }], i) => {
 							const categoryTotal = files.filter(
 								({ name }) =>
 									name.includes(category) ||
-									!!subcategories
+									!!components
 										.map((filter) => name.includes(filter))
 										.filter((item) => !!item).length
 							);

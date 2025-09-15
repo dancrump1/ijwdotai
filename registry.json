@@ -3778,6 +3778,23 @@
       ]
     },
     {
+      "name": "laser-flow",
+      "type": "registry:block",
+      "title": "Laser flow",
+      "description": "Laser flow",
+      "files": [
+        {
+          "path": "components/usages/laserflowusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/laser-flow.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "layout-grid",
       "type": "registry:block",
       "title": "Layout grid",

@@ -5909,6 +5909,31 @@
       ]
     },
     {
+      "name": "testimonial-grid",
+      "type": "registry:block",
+      "title": "Testimonial grid",
+      "description": "Testimonial grid",
+      "files": [
+        {
+          "path": "components/usages/testimonialgridusage.tsx",
+          "type": "registry:block",
+          "target": "~/example.tsx"
+        },
+        {
+          "path": "registry/open-source/testimonial-grid.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/utilities/cn.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "text-along-path",
       "type": "registry:block",
       "title": "Text along path",

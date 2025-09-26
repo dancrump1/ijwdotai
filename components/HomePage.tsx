@@ -20,6 +20,7 @@ export default function HomePage({
 	const [hovered, setHovered] = useState<string | null>(null);
 
 	const [isOpen, setIsOpen] = useState(false);
+	const [isNewOpen, setIsNewOpen] = useState(false);
 
 	const [categoryId, setCategoryId] = useState(1);
 	const [description, setDescription] = useState("test ste 123");
@@ -210,6 +211,86 @@ export default function HomePage({
 							<br />
 							All: May cause lag
 						</span>
+
+						<SpringModal isOpen={isNewOpen} setIsOpen={setIsNewOpen}>
+							<div
+								style={{
+									padding: "1rem",
+									maxWidth: "500px",
+								}}
+							>
+								<h2>new Category Description</h2>
+								<input
+									type="text"
+									placeholder="New description"
+									value={description}
+									onChange={(e) => setDescription(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="number"
+									placeholder="category to change"
+									value={categoryId}
+									onChange={(e) => setCategoryId(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<button
+									onClick={handleUpdate}
+									style={{
+										padding: "0.5rem 1rem",
+										cursor: "pointer",
+									}}
+								>
+									Add new Category
+								</button>
+
+								{response && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "green",
+										}}
+									>
+										<strong>added category:</strong>{" "}
+										{JSON.stringify(response)}
+									</div>
+								)}
+
+								{error && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "red",
+										}}
+									>
+										<strong>Error:</strong> {error}
+									</div>
+								)}
+							</div>
+						</SpringModal>
+						<span
+							className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+						>
+							New Category
+						</span>
+						<button
+							onClick={() => {
+								setIsNewOpen(true);
+								setCategoryId(i + 1);
+								setDescription(description);
+							}}
+							className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+						>
+							Open Modal
+						</button>
 					</div>
 					<div className="hidden md:block col-span-2">
 						<span className="text-lg border-b-2 border-white">

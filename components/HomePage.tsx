@@ -18,16 +18,19 @@ export default function HomePage({
 	categories: any;
 }) {
 	const [hovered, setHovered] = useState<string | null>(null);
-
 	const [isOpen, setIsOpen] = useState(false);
 	const [isNewOpen, setIsNewOpen] = useState(false);
-
 	const [categoryId, setCategoryId] = useState(1);
 	const [description, setDescription] = useState("test ste 123");
 	const [title, setTitle] = useState("test title");
 	const [response, setResponse] = useState(null);
 	const [error, setError] = useState(null);
 	const [newData, setNewData] = useState(null);
+	const [items, setItems] = useState([""]);
+	const [test, setSubcategories] = useState([""]);
+	const [largestId, setLargestId] = useState(1);
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
 
 	const handleUpdate = async () => {
 		try {
@@ -37,7 +40,7 @@ export default function HomePage({
 					method: "PATCH",
 					headers: {
 						"Content-Type": "application/json",
-						Authorization: "Basic " + btoa("john:test123"),
+						Authorization: "Basic " + btoa(`${username}:${password}`),
 					},
 					body: JSON.stringify({ description }),
 				}
@@ -67,7 +70,7 @@ export default function HomePage({
 					method: "PUT",
 					headers: {
 						"Content-Type": "application/json",
-						Authorization: "Basic " + btoa("john:test123"),
+						Authorization: "Basic " + btoa(`${username}:${password}`),
 					},
 					body: JSON.stringify({ description, title }),
 				}
@@ -83,6 +86,7 @@ export default function HomePage({
 		} catch (err) {
 			setError(err.message);
 		}
+
 		setNewData(await getData());
 	};
 
@@ -94,7 +98,7 @@ export default function HomePage({
 					method: "DELETE",
 					headers: {
 						"Content-Type": "application/json",
-						Authorization: "Basic " + btoa("john:test123"),
+						Authorization: "Basic " + btoa(`${username}:${password}`),
 					},
 					body: JSON.stringify({ description, title }),
 				}
@@ -113,11 +117,6 @@ export default function HomePage({
 
 		setNewData(await getData());
 	};
-	1;
-
-	const [items, setItems] = useState([""]);
-	const [test, setSubcategories] = useState([""]);
-	const [largestId, setLargestId] = useState(1);
 
 	useEffect(() => {
 		setLargestId(
@@ -128,6 +127,18 @@ export default function HomePage({
 	useEffect(() => {
 		setCategoryId(largestId + 1);
 	}, [largestId]);
+
+	const closeModal = (shouldClose: boolean) => {
+		setIsOpen(shouldClose);
+		setUsername("");
+		setPassword("");
+	};
+
+	const closeNeweModal = (shouldClose: boolean) => {
+		setIsNewOpen(shouldClose);
+		setUsername("");
+		setPassword("");
+	};
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
@@ -209,7 +220,7 @@ export default function HomePage({
 								);
 							}
 						)}
-						<SpringModal isOpen={isOpen} setIsOpen={setIsOpen}>
+						<SpringModal isOpen={isOpen} setIsOpen={closeModal}>
 							<div
 								style={{
 									padding: "1rem",
@@ -217,6 +228,28 @@ export default function HomePage({
 								}}
 							>
 								<h2>Update Category Description</h2>
+								<input
+									type="text"
+									placeholder="Username"
+									value={username}
+									onChange={(e) => setUsername(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="password"
+									placeholder="Password"
+									value={password}
+									onChange={(e) => setPassword(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
 								<input
 									type="text"
 									placeholder="New description"
@@ -282,7 +315,7 @@ export default function HomePage({
 							All: May cause lag
 						</span>
 
-						<SpringModal isOpen={isNewOpen} setIsOpen={setIsNewOpen}>
+						<SpringModal isOpen={isNewOpen} setIsOpen={closeNeweModal}>
 							<div
 								style={{
 									padding: "1rem",
@@ -290,6 +323,28 @@ export default function HomePage({
 								}}
 							>
 								<h2>new Category</h2>
+								<input
+									type="text"
+									placeholder="Username"
+									value={username}
+									onChange={(e) => setUsername(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="password"
+									placeholder="Password"
+									value={password}
+									onChange={(e) => setPassword(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
 								<input
 									type="text"
 									placeholder="New Title"

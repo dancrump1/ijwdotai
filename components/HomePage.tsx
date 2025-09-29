@@ -24,6 +24,7 @@ export default function HomePage({
 
 	const [categoryId, setCategoryId] = useState(1);
 	const [description, setDescription] = useState("test ste 123");
+	const [title, setTitle] = useState("test title");
 	const [response, setResponse] = useState(null);
 	const [error, setError] = useState(null);
 	const [newData, setNewData] = useState(null);
@@ -39,6 +40,35 @@ export default function HomePage({
 						Authorization: "Basic " + btoa("john:test123"),
 					},
 					body: JSON.stringify({ description }),
+				}
+			);
+
+			if (!res.ok) {
+				throw new Error(`HTTP error! status: ${res.status}`);
+			}
+
+			const data = await res.json();
+			setResponse(data);
+			setError(null);
+		} catch (err) {
+			console.error(err);
+			setError(err.message);
+		}
+
+		setNewData(await getData());
+	};
+
+	const handleSave = async () => {
+		try {
+			const res = await fetch(
+				`https://java.techdiff.io/category/new/category`,
+				{
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Basic " + btoa("john:test123"),
+					},
+					body: JSON.stringify({ description, title }),
 				}
 			);
 
@@ -219,7 +249,18 @@ export default function HomePage({
 									maxWidth: "500px",
 								}}
 							>
-								<h2>new Category Description</h2>
+								<h2>new Category</h2>
+								<input
+									type="text"
+									placeholder="New Title"
+									value={title}
+									onChange={(e) => setTitle(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
 								<input
 									type="text"
 									placeholder="New description"
@@ -243,7 +284,7 @@ export default function HomePage({
 									}}
 								/>
 								<button
-									onClick={handleUpdate}
+									onClick={handleSave}
 									style={{
 										padding: "0.5rem 1rem",
 										cursor: "pointer",

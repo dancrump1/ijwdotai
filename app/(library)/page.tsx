@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getComponentFilesWithDates } from "@/lib/fetch";
 import { FlippingText } from "@/registry/open-source/flipping-text";
 
-export default async function Page({}: {}) {
+export default async function Page() {
 	const files = await getComponentFilesWithDates();
 	const words = ["Designers", "Developers", "Content"];
 	return (
@@ -21,25 +21,19 @@ export default async function Page({}: {}) {
 					className="rounded-2xl w-fit border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-[transform,border-radius,box-shadow] duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_pink] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
 					href={"/generate"}
 				>
-					CREATE
-				</Link>
-				<Link
-					className="w-fit rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-[transform,border-radius,box-shadow] duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_pink] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
-					href={"/find"}
-				>
-					SEE and LEARN
+					Create
 				</Link>
 				<Link
 					className="w-fit rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-[transform,border-radius,box-shadow] duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_pink] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
 					href={"/credits"}
 				>
-					The MAD lads
+					OSS Component Credits
 				</Link>
 				<Link
 					className="w-fit rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-[transform,border-radius,box-shadow] duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_pink] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
 					href={"/experiments"}
 				>
-					EXPERIMENTS
+					Experiments
 				</Link>
 			</section>
 		</div>

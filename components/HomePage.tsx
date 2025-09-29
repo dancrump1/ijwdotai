@@ -33,8 +33,8 @@ export default function HomePage({
 	const [items, setItems] = useState([""]);
 	const [test, setSubcategories] = useState([""]);
 	const [largestId, setLargestId] = useState(1);
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
+	const [username, setUsername] = useState(null);
+	const [password, setPassword] = useState(null);
 	const [matchingComponents, setMatchingComponents] = useState([]);
 
 	const handleUpdate = async () => {
@@ -135,16 +135,20 @@ export default function HomePage({
 
 	const closeModal = (shouldClose: boolean) => {
 		setIsOpen(shouldClose);
-		setUsername("");
-		setPassword("");
+		setUsername(null);
+		setPassword(null);
 		setMatchingComponents([]);
+		setError(null);
+		setResponse(null);
 	};
 
 	const closeNeweModal = (shouldClose: boolean) => {
 		setIsNewOpen(shouldClose);
-		setUsername("");
-		setPassword("");
+		setUsername(null);
+		setPassword(null);
 		setMatchingComponents([]);
+		setError(null);
+		setResponse(null);
 	};
 
 	return (
@@ -229,7 +233,17 @@ export default function HomePage({
 							}
 						)}
 						<SpringModal isOpen={isOpen} setIsOpen={closeModal}>
-							<div
+							<form
+								onSubmit={(e) => {
+									e.preventDefault();
+									const action = e.nativeEvent.submitter.value; // which button was clicked
+
+									if (action === "Submit") {
+										handleUpdate();
+									} else if (action === "Delete") {
+										handleDelete();
+									}
+								}}
 								style={{
 									padding: "1rem",
 									maxWidth: "500px",
@@ -294,16 +308,24 @@ export default function HomePage({
 									popoverClassname="bg-black z-[55]"
 									className="z-[55]"
 								/>
-								<button
-									onClick={handleUpdate}
+								<input
+									type="submit"
+									value="Submit"
 									style={{
 										padding: "0.5rem 1rem",
 										cursor: "pointer",
 									}}
-								>
-									Update
-								</button>
-								<button onClick={handleDelete}>Delete</button>
+								/>
+
+								<input
+									type="submit"
+									value="Delete"
+									name="delete"
+									style={{
+										padding: "0.5rem 1rem",
+										cursor: "pointer",
+									}}
+								/>
 
 								{response && (
 									<div
@@ -327,7 +349,7 @@ export default function HomePage({
 										<strong>Error:</strong> {error}
 									</div>
 								)}
-							</div>
+							</form>
 						</SpringModal>
 						<span
 							className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
@@ -338,7 +360,8 @@ export default function HomePage({
 						</span>
 
 						<SpringModal isOpen={isNewOpen} setIsOpen={closeNeweModal}>
-							<div
+							<form
+								onSubmit={handleSave}
 								style={{
 									padding: "1rem",
 									maxWidth: "500px",
@@ -402,15 +425,13 @@ export default function HomePage({
 										marginBottom: "0.5rem",
 									}}
 								/>
-								<button
-									onClick={handleSave}
+								<input
+									type="submit"
 									style={{
 										padding: "0.5rem 1rem",
 										cursor: "pointer",
 									}}
-								>
-									Add new Category
-								</button>
+								/>
 
 								{response && (
 									<div
@@ -434,7 +455,7 @@ export default function HomePage({
 										<strong>Error:</strong> {error}
 									</div>
 								)}
-							</div>
+							</form>
 						</SpringModal>
 						<div className="flex flex-col">
 							<span

@@ -10,12 +10,16 @@ import { SpringModal } from "@/registry/open-source/spring-modal";
 
 import { simpleCategories } from "@/config/components";
 
+import { MultiSelect } from "./MultiSelect";
+
 export default function HomePage({
 	files,
 	categories,
+	api_comps,
 }: {
 	files: { name: string }[];
 	categories: any;
+	api_comps: any;
 }) {
 	const [hovered, setHovered] = useState<string | null>(null);
 	const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +35,7 @@ export default function HomePage({
 	const [largestId, setLargestId] = useState(1);
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const [matchingComponents, setMatchingComponents] = useState([]);
 
 	const handleUpdate = async () => {
 		try {
@@ -132,12 +137,14 @@ export default function HomePage({
 		setIsOpen(shouldClose);
 		setUsername("");
 		setPassword("");
+		setMatchingComponents([]);
 	};
 
 	const closeNeweModal = (shouldClose: boolean) => {
 		setIsNewOpen(shouldClose);
 		setUsername("");
 		setPassword("");
+		setMatchingComponents([]);
 	};
 
 	return (
@@ -211,6 +218,7 @@ export default function HomePage({
 												setIsOpen(true);
 												setCategoryId(id);
 												setDescription(description);
+												setMatchingComponents(components);
 											}}
 											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 										>
@@ -227,7 +235,7 @@ export default function HomePage({
 									maxWidth: "500px",
 								}}
 							>
-								<h2>Update Category Description</h2>
+								<h2>Update Category</h2>
 								<input
 									type="text"
 									placeholder="Username"
@@ -271,6 +279,18 @@ export default function HomePage({
 										padding: "0.5rem",
 										marginBottom: "0.5rem",
 									}}
+								/>
+								<MultiSelect
+									options={api_comps
+										?.sort((a, b) => a.name.localeCompare(b.name))
+										.map((item) => ({
+											value: item.name,
+											label: item.name,
+										}))}
+									onValueChange={setMatchingComponents}
+									defaultValue={matchingComponents}
+									popoverClassname="bg-black z-[55]"
+									className="z-[55]"
 								/>
 								<button
 									onClick={handleUpdate}
@@ -412,21 +432,24 @@ export default function HomePage({
 								)}
 							</div>
 						</SpringModal>
-						<span
-							className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
-						>
-							New Category
-						</span>
-						<button
-							onClick={() => {
-								setIsNewOpen(true);
-								setCategoryId(largestId + 1);
-								setDescription(description);
-							}}
-							className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
-						>
-							Open Modal
-						</button>
+						<div className="flex flex-col">
+							<span
+								className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+							>
+								New Category
+							</span>
+							<button
+								onClick={() => {
+									setIsNewOpen(true);
+									setCategoryId(largestId + 1);
+									setDescription(description);
+									setMatchingComponents([]);
+								}}
+								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+							>
+								Open Modal
+							</button>
+						</div>
 					</div>
 					<div className="hidden md:block col-span-2">
 						<span className="text-lg border-b-2 border-white">

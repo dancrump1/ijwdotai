@@ -9,13 +9,20 @@ export default async function Page() {
 		method: "GET",
 		headers: { Authorization: "Basic " + btoa("john:test123") },
 	});
-	const api_data = await api_res.json();
+	const api_comps = await fetch("https://java.techdiff.io/components/name", {
+		method: "GET",
+		headers: { Authorization: "Basic " + btoa("john:test123") },
+	});
 
 	return (
 		<>
 			{/* <div>{api_data}</div> */}
 			<Suspense fallback={<span>Loading</span>}>
-				<HomePage files={files} categories={api_data} />
+				<HomePage
+					files={files}
+					categories={await api_res.json()}
+					api_comps={await api_comps.json()}
+				/>
 			</Suspense>
 		</>
 	);

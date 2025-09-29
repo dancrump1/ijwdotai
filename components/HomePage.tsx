@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
@@ -50,6 +50,7 @@ export default function HomePage({
 			const data = await res.json();
 			setResponse(data);
 			setError(null);
+			setIsOpen(false);
 		} catch (err) {
 			console.error(err);
 			setError(err.message);
@@ -76,19 +77,57 @@ export default function HomePage({
 				throw new Error(`HTTP error! status: ${res.status}`);
 			}
 
-			const data = await res.json();
-			setResponse(data);
+			setResponse(null);
 			setError(null);
+			setIsOpen(false);
 		} catch (err) {
-			console.error(err);
+			setError(err.message);
+		}
+		setNewData(await getData());
+	};
+
+	const handleDelete = async () => {
+		try {
+			const res = await fetch(
+				`https://java.techdiff.io/category/remove/${categoryId}`,
+				{
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Basic " + btoa("john:test123"),
+					},
+					body: JSON.stringify({ description, title }),
+				}
+			);
+
+			if (!res.ok) {
+				throw new Error(`HTTP error! status: ${res.status}`);
+			}
+
+			setResponse(null);
+			setError(null);
+			setIsOpen(false);
+		} catch (err) {
 			setError(err.message);
 		}
 
 		setNewData(await getData());
 	};
+	1;
 
 	const [items, setItems] = useState([""]);
 	const [test, setSubcategories] = useState([""]);
+	const [largestId, setLargestId] = useState(1);
+
+	useEffect(() => {
+		setLargestId(
+			Math.max(Object.entries(categories)?.map(([category, { id }]) => id))
+		);
+	}, [categories]);
+
+	useEffect(() => {
+		setCategoryId(largestId + 1);
+	}, [largestId]);
 
 	return (
 		<main className="min-h-screen bg-zinc-950 text-white p-8">
@@ -97,7 +136,7 @@ export default function HomePage({
 				<div className="grid grid-cols-7 h-full min-h-screen">
 					<div className="grid grid-cols-2 col-span-7 md:col-span-3 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-4xl mx-auto h-fit">
 						{Object.entries(newData ?? categories).map(
-							([category, { description, components }], i) => {
+							([category, { description, components, id }], i) => {
 								// Build query string from subcategories
 								const queryString =
 									category === "All"
@@ -159,7 +198,7 @@ export default function HomePage({
 										<button
 											onClick={() => {
 												setIsOpen(true);
-												setCategoryId(i + 1);
+												setCategoryId(id);
 												setDescription(description);
 											}}
 											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
@@ -209,6 +248,7 @@ export default function HomePage({
 								>
 									Update
 								</button>
+								<button onClick={handleDelete}>Delete</button>
 
 								{response && (
 									<div
@@ -325,7 +365,7 @@ export default function HomePage({
 						<button
 							onClick={() => {
 								setIsNewOpen(true);
-								setCategoryId(i + 1);
+								setCategoryId(largestId + 1);
 								setDescription(description);
 							}}
 							className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"

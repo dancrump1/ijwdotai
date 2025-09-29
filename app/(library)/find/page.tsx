@@ -11,8 +11,6 @@ export default async function Page() {
 	});
 	const api_data = await api_res.json();
 
-	console.log(api_data);
-
 	return (
 		<>
 			{/* <div>{api_data}</div> */}

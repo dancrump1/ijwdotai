@@ -240,6 +240,7 @@ export default function HomePage({
 									type="text"
 									placeholder="Username"
 									value={username}
+									required
 									onChange={(e) => setUsername(e.target.value)}
 									style={{
 										width: "100%",
@@ -250,6 +251,7 @@ export default function HomePage({
 								<input
 									type="password"
 									placeholder="Password"
+									required
 									value={password}
 									onChange={(e) => setPassword(e.target.value)}
 									style={{
@@ -347,6 +349,7 @@ export default function HomePage({
 									type="text"
 									placeholder="Username"
 									value={username}
+									required
 									onChange={(e) => setUsername(e.target.value)}
 									style={{
 										width: "100%",
@@ -358,6 +361,7 @@ export default function HomePage({
 									type="password"
 									placeholder="Password"
 									value={password}
+									required
 									onChange={(e) => setPassword(e.target.value)}
 									style={{
 										width: "100%",

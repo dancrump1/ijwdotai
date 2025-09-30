@@ -261,13 +261,7 @@ export default function HomePage({
 										? "/all"
 										: `/type/${encodeURIComponent(category.toLowerCase().replace(/\s&\s|\s/g, "-"))}${queryString}`;
 
-								const categoryTotal = files.filter(
-									({ name }) =>
-										name.includes(category) ||
-										!!components
-											.map((filter) => name.includes(filter))
-											.filter((item) => !!item).length
-								);
+								const categoryTotal = components;
 
 								return (
 									<div className="flex flex-col group relative">
@@ -764,13 +758,39 @@ export default function HomePage({
 							</div>
 						</div>
 					</div>
-					<div className="hidden md:block col-span-2">
+					<section className="flex ml-6">
+						<div>
+							<span>
+								<strong>Existing components</strong>
+							</span>
+							<ul>
+								{files.map((item) => (
+									<li className="whitespace-nowrap">
+										{item.name.replace(".json", "")}
+									</li>
+								))}
+							</ul>
+						</div>
+						<div>
+							<span>
+								<strong className="whitespace-nowrap">
+									Components in db
+								</strong>
+							</span>
+							<ul>
+								{api_comps.map((item) => (
+									<li className="whitespace-nowrap">{item.title}</li>
+								))}
+							</ul>
+						</div>
+					</section>
+					{/* <div className="hidden md:block col-span-2">
 						<span className="text-lg border-b-2 border-white">
 							Matching Items:
 						</span>
 						<ul className="flex flex-col flex-wrap h-full max-h-[50vh] overflow-hidden">
 							{items.map((item) => (
-								<li>{item.replace(".json", "")}</li>
+								<li>{item}</li>
 							))}
 						</ul>
 					</div>
@@ -790,7 +810,7 @@ export default function HomePage({
 								New Items:
 							</span>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 			<section className="h-[50vh]">

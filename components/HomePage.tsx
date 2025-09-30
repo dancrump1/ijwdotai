@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 
 import Link from "next/link";
 
@@ -24,6 +24,7 @@ export default function HomePage({
 	const [hovered, setHovered] = useState<string | null>(null);
 	const [isOpen, setIsOpen] = useState(false);
 	const [isNewOpen, setIsNewOpen] = useState(false);
+	const [isNewComponentOpen, setIsNewComponentOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(1);
 	const [description, setDescription] = useState("test ste 123");
 	const [title, setTitle] = useState("test title");
@@ -71,10 +72,41 @@ export default function HomePage({
 		setNewData(await getData());
 	};
 
-	const handleSave = async () => {
+	const handleSave = async (e: SyntheticEvent) => {
+		e.preventDefault();
+
 		try {
 			const res = await fetch(
 				process.env.NEXT_PUBLIC_API_URL + `/category/new/category`,
+				{
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Basic " + btoa(`${username}:${password}`),
+					},
+					body: JSON.stringify({ description, title }),
+				}
+			);
+
+			if (!res.ok) {
+				throw new Error(`HTTP error! status: ${res.status}`);
+			}
+
+			setResponse(null);
+			setError(null);
+			setIsOpen(false);
+		} catch (err) {
+			setError(err.message);
+		}
+
+		setNewData(await getData());
+	};
+
+	const handleSaveNewComponent = async (e: SyntheticEvent) => {
+		e.preventDefault();
+		try {
+			const res = await fetch(
+				process.env.NEXT_PUBLIC_API_URL + `/components/new/component`,
 				{
 					method: "PUT",
 					headers: {
@@ -151,6 +183,14 @@ export default function HomePage({
 		setUsername(null);
 		setPassword(null);
 		setMatchingComponents([]);
+		setError(null);
+		setResponse(null);
+	};
+
+	const closeNewComponentModal = (shouldClose: boolean) => {
+		setIsNewComponentOpen(shouldClose);
+		setUsername(null);
+		setPassword(null);
 		setError(null);
 		setResponse(null);
 	};
@@ -475,6 +515,113 @@ export default function HomePage({
 									setCategoryId(largestId + 1);
 									setDescription(description);
 									setMatchingComponents([]);
+								}}
+								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+							>
+								Create
+							</button>
+						</div>
+						<SpringModal
+							isOpen={isNewComponentOpen}
+							setIsOpen={closeNewComponentModal}
+						>
+							<form
+								onSubmit={handleSaveNewComponent}
+								style={{
+									padding: "1rem",
+									maxWidth: "500px",
+								}}
+							>
+								<h2>new Category</h2>
+								<input
+									type="text"
+									placeholder="Username"
+									value={username}
+									required
+									onChange={(e) => setUsername(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="password"
+									placeholder="Password"
+									value={password}
+									required
+									onChange={(e) => setPassword(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="text"
+									placeholder="New Title"
+									value={title}
+									onChange={(e) => setTitle(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="text"
+									placeholder="New description"
+									value={description}
+									onChange={(e) => setDescription(e.target.value)}
+									style={{
+										width: "100%",
+										padding: "0.5rem",
+										marginBottom: "0.5rem",
+									}}
+								/>
+								<input
+									type="submit"
+									style={{
+										padding: "0.5rem 1rem",
+										cursor: "pointer",
+									}}
+								/>
+
+								{response && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "green",
+										}}
+									>
+										<strong>added category:</strong>{" "}
+										{JSON.stringify(response)}
+									</div>
+								)}
+
+								{error && (
+									<div
+										style={{
+											marginTop: "1rem",
+											color: "red",
+										}}
+									>
+										<strong>Error:</strong> {error}
+									</div>
+								)}
+							</form>
+						</SpringModal>
+						<div className="flex flex-col">
+							<span
+								className={`rounded-2xl h-fit relative px-6 py-4 bg-zinc-800 transition-colors text-center font-medium shadow-md ${"text-white"}`}
+							>
+								New Component
+							</span>
+							<button
+								onClick={() => {
+									setIsNewComponentOpen(true);
+									setDescription(description);
+									setTitle(title);
 								}}
 								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 							>

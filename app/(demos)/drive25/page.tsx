@@ -128,10 +128,13 @@ async function getData() {
 		{ uid: entryUid }
 	);
 
-	const res = await fetch("https://java.techdiff.io/components/name/12", {
-		method: "GET",
-		headers: { Authorization: "Basic " + btoa("john:test123") },
-	});
+	const res = await fetch(
+		process.env.NEXT_PUBLIC_API_URL + "/components/name/12",
+		{
+			method: "GET",
+			headers: { Authorization: "Basic " + btoa("john:test123") },
+		}
+	);
 
 	if (!res.ok) {
 		const text = await res.text(); // log HTML error

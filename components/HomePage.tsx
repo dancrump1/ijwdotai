@@ -40,14 +40,18 @@ export default function HomePage({
 	const handleUpdate = async () => {
 		try {
 			const res = await fetch(
-				`https://java.techdiff.io/category/${categoryId}/description`,
+				process.env.NEXT_PUBLIC_API_URL +
+					`/category/${categoryId}/description`,
 				{
 					method: "PATCH",
 					headers: {
 						"Content-Type": "application/json",
 						Authorization: "Basic " + btoa(`${username}:${password}`),
 					},
-					body: JSON.stringify({ description }),
+					body: JSON.stringify({
+						description,
+						components: matchingComponents,
+					}),
 				}
 			);
 
@@ -70,7 +74,7 @@ export default function HomePage({
 	const handleSave = async () => {
 		try {
 			const res = await fetch(
-				`https://java.techdiff.io/category/new/category`,
+				process.env.NEXT_PUBLIC_API_URL + `/category/new/category`,
 				{
 					method: "PUT",
 					headers: {
@@ -98,7 +102,7 @@ export default function HomePage({
 	const handleDelete = async () => {
 		try {
 			const res = await fetch(
-				`https://java.techdiff.io/category/remove/${categoryId}`,
+				process.env.NEXT_PUBLIC_API_URL + `/category/remove/${categoryId}`,
 				{
 					method: "DELETE",
 					headers: {
@@ -186,7 +190,7 @@ export default function HomePage({
 								);
 
 								return (
-									<div className="flex flex-col">
+									<div className="flex flex-col group relative">
 										<Link
 											key={category}
 											onMouseEnter={() => {
@@ -224,9 +228,9 @@ export default function HomePage({
 												setDescription(description);
 												setMatchingComponents(components);
 											}}
-											className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+											className="hidden group-hover:block absolute bottom-0 z-10 bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 										>
-											Open Modal
+											Edit {category}
 										</button>
 									</div>
 								);
@@ -298,10 +302,12 @@ export default function HomePage({
 								/>
 								<MultiSelect
 									options={api_comps
-										?.sort((a, b) => a.name.localeCompare(b.name))
+										?.sort((a, b) =>
+											a?.title?.localeCompare(b?.title)
+										)
 										.map((item) => ({
-											value: item.name,
-											label: item.name,
+											value: item.title,
+											label: item.title,
 										}))}
 									onValueChange={setMatchingComponents}
 									defaultValue={matchingComponents}
@@ -472,7 +478,7 @@ export default function HomePage({
 								}}
 								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 							>
-								Open Modal
+								Create
 							</button>
 						</div>
 					</div>

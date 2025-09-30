@@ -1,7 +1,6 @@
 export default async function getData() {
 
-
-    const java_response = await fetch("https://java.techdiff.io/category/name", {
+    const java_response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/category/name", {
         method: "GET",
         headers: { "Authorization": "Basic " + btoa('john:test123') }
     });

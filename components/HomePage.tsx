@@ -25,7 +25,9 @@ export default function HomePage({
 	const [isOpen, setIsOpen] = useState(false);
 	const [isNewOpen, setIsNewOpen] = useState(false);
 	const [isNewComponentOpen, setIsNewComponentOpen] = useState(false);
+	const [isDeleteComponentOpen, setIsDeleteComponentOpen] = useState(false);
 	const [categoryId, setCategoryId] = useState(1);
+	const [componentName, setComponentName] = useState(null);
 	const [description, setDescription] = useState("test ste 123");
 	const [title, setTitle] = useState("test title");
 	const [response, setResponse] = useState(null);
@@ -159,6 +161,36 @@ export default function HomePage({
 		setNewData(await getData());
 	};
 
+	const handleDeleteComponent = async (e: any) => {
+		e.preventDefault();
+		try {
+			const res = await fetch(
+				process.env.NEXT_PUBLIC_API_URL +
+					`/components/remove/${componentName}`,
+				{
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Basic " + btoa(`${username}:${password}`),
+					},
+					body: JSON.stringify({ description, title }),
+				}
+			);
+
+			if (!res.ok) {
+				throw new Error(`HTTP error! status: ${res.status}`);
+			}
+
+			setResponse(null);
+			setError(null);
+			setIsOpen(false);
+		} catch (err) {
+			setError(err.message);
+		}
+
+		setNewData(await getData());
+	};
+
 	useEffect(() => {
 		setLargestId(
 			Math.max(Object.entries(categories)?.map(([category, { id }]) => id))
@@ -189,6 +221,14 @@ export default function HomePage({
 
 	const closeNewComponentModal = (shouldClose: boolean) => {
 		setIsNewComponentOpen(shouldClose);
+		setUsername(null);
+		setPassword(null);
+		setError(null);
+		setResponse(null);
+	};
+
+	const closeDeleteComponentModal = (shouldClose: boolean) => {
+		setIsDeleteComponentOpen(shouldClose);
 		setUsername(null);
 		setPassword(null);
 		setError(null);
@@ -518,7 +558,7 @@ export default function HomePage({
 								}}
 								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
 							>
-								Create
+								Create Category
 							</button>
 						</div>
 						<SpringModal
@@ -617,16 +657,111 @@ export default function HomePage({
 							>
 								New Component
 							</span>
-							<button
-								onClick={() => {
-									setIsNewComponentOpen(true);
-									setDescription(description);
-									setTitle(title);
-								}}
-								className="bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
-							>
-								Create
-							</button>
+							<div className={"flex flex-col w-full"}>
+								<button
+									onClick={() => {
+										setIsNewComponentOpen(true);
+										setDescription(description);
+										setTitle(title);
+									}}
+									className="flex-1 bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+								>
+									Create Component
+								</button>
+								<button
+									onClick={() => {
+										setIsDeleteComponentOpen(true);
+									}}
+									className="flex-1 bg-gradient-to-r from-violet-600 to-indigo-600 text-foreground font-medium px-4 py-2 rounded hover:opacity-90 transition-opacity h-fit"
+								>
+									Delete Component
+								</button>
+								<SpringModal
+									isOpen={isDeleteComponentOpen}
+									setIsOpen={closeDeleteComponentModal}
+								>
+									<form
+										onSubmit={handleDeleteComponent}
+										style={{
+											padding: "1rem",
+											maxWidth: "500px",
+										}}
+									>
+										<h2>Delete Component</h2>
+										<input
+											type="text"
+											placeholder="Username"
+											value={username}
+											required
+											onChange={(e) => setUsername(e.target.value)}
+											style={{
+												width: "100%",
+												padding: "0.5rem",
+												marginBottom: "0.5rem",
+											}}
+										/>
+										<input
+											type="password"
+											placeholder="Password"
+											value={password}
+											required
+											onChange={(e) => setPassword(e.target.value)}
+											style={{
+												width: "100%",
+												padding: "0.5rem",
+												marginBottom: "0.5rem",
+											}}
+										/>
+
+										<MultiSelect
+											options={api_comps
+												?.sort((a, b) =>
+													a?.title?.localeCompare(b?.title)
+												)
+												.map((item) => ({
+													value: item.title,
+													label: item.title,
+												}))}
+											maxCount={1}
+											onValueChange={setComponentName}
+											defaultValue={matchingComponents}
+											popoverClassname="bg-black z-[55]"
+											className="z-[55]"
+										/>
+
+										<input
+											type="submit"
+											style={{
+												padding: "0.5rem 1rem",
+												cursor: "pointer",
+											}}
+										/>
+
+										{response && (
+											<div
+												style={{
+													marginTop: "1rem",
+													color: "green",
+												}}
+											>
+												<strong>added category:</strong>{" "}
+												{JSON.stringify(response)}
+											</div>
+										)}
+
+										{error && (
+											<div
+												style={{
+													marginTop: "1rem",
+													color: "red",
+												}}
+											>
+												<strong>Error:</strong> {error}
+											</div>
+										)}
+									</form>
+								</SpringModal>
+							</div>
 						</div>
 					</div>
 					<div className="hidden md:block col-span-2">

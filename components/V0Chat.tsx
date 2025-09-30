@@ -236,6 +236,7 @@ export default function V0Chat({
 	if (showApiKeyError) {
 		return <ApiKeyError />;
 	}
+
 	const { All, New, ...otherCats } = categories;
 
 	const PreviewComponentImport = dynamic(
@@ -276,32 +277,39 @@ export default function V0Chat({
 			<section className="flex pb-[200px]">
 				<div>
 					{Object.entries(otherCats).map(
-						([category, { components, description }], i) => {
-							const categoryTotal = files.filter(
-								({ name }) =>
-									name.includes(category) ||
-									!!components
-										.map((filter) => name.includes(filter))
-										.filter((item) => !!item).length
-							);
+						([category, { description, components, id }], i) => {
+							const categoryTotal = components;
 
 							return (
-								<div className="mx-auto w-[50vw] py-6">
+								<div
+									className="mx-auto w-[50vw] py-6"
+									key={description}
+								>
 									{category}
 									<ul
 										key={category}
 										className="grid grid-cols-6 gap-3"
 									>
 										{categoryTotal.map((item) => {
-											const itemName = item.name.replace(
-												".json",
-												""
-											);
+											const itemName = files.find((file) => {
+												return (
+													file.name.replace(".json", "") === item
+												);
+											});
+
+											if (!itemName?.name) {
+												return (
+													<li key={"no code" + i}>
+														NO CODE AVAILABLE
+													</li>
+												);
+											}
 
 											return (
 												<li
+													key={itemName.name}
 													onMouseEnter={() =>
-														setPreviewComponent(item)
+														setPreviewComponent(itemName)
 													}
 													onClick={() => {
 														selectedComponents.includes(itemName)
@@ -322,9 +330,7 @@ export default function V0Chat({
 															: "text-white"
 													}`}
 												>
-													{item.name
-														.replace(".json", "")
-														.replaceAll("-", " ")}
+													{itemName?.name.replace(".json", "")}
 												</li>
 											);
 										})}

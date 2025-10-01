@@ -10,6 +10,7 @@ export default async function Page() {
 		{
 			method: "GET",
 			headers: { Authorization: "Basic " + btoa("john:test123") },
+			next: { revalidate: 1 },
 		}
 	);
 	const api_comps = await fetch(
@@ -17,6 +18,7 @@ export default async function Page() {
 		{
 			method: "GET",
 			headers: { Authorization: "Basic " + btoa("john:test123") },
+			next: { revalidate: 1 },
 		}
 	);
 

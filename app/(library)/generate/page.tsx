@@ -11,6 +11,7 @@ export default async function Page() {
 		{
 			method: "GET",
 			headers: { Authorization: "Basic " + btoa("john:test123") },
+			next: { revalidate: 1 },
 		}
 	);
 	const java_data = await java_response.json();

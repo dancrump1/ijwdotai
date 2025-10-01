@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
@@ -37,6 +37,8 @@ export default function V0Chat({
 	const [showErrorDialog, setShowErrorDialog] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
 	const [projectChatsLoaded, setProjectChatsLoaded] = useState(false);
+
+	const { All, New, ...otherCats } = useMemo(() => categories, [categories]);
 
 	// API validation on page load
 	const { isValidating, showApiKeyError } = useApiValidation();
@@ -237,8 +239,6 @@ export default function V0Chat({
 		return <ApiKeyError />;
 	}
 
-	const { All, New, ...otherCats } = categories;
-
 	const PreviewComponentImport = dynamic(
 		() =>
 			import(
@@ -283,7 +283,7 @@ export default function V0Chat({
 							return (
 								<div
 									className="mx-auto w-[50vw] py-6"
-									key={description}
+									key={`${description} + ${i}`}
 								>
 									{category}
 									<ul
@@ -316,11 +316,12 @@ export default function V0Chat({
 															? setSelectedComponents((prev) =>
 																	prev.filter(
 																		(prevItem) =>
-																			itemName !== prevItem
+																			itemName.name !==
+																			prevItem
 																	)
 																)
 															: setSelectedComponents([
-																	itemName,
+																	itemName.name,
 																	...selectedComponents,
 																]);
 													}}
@@ -339,6 +340,74 @@ export default function V0Chat({
 							);
 						}
 					)}
+					<div>
+						{Object.entries({ All }).map(
+							([category, { description, components, id }], i) => {
+								return (
+									<div
+										className="mx-auto w-[50vw] py-6"
+										key={`${description} + ${i}`}
+									>
+										{category}
+										<ul
+											key={category}
+											className="grid grid-cols-6 gap-3"
+										>
+											{components?.map((item) => {
+												const itemName = files.find((file) => {
+													return (
+														file.name.replace(".json", "") ===
+														item
+													);
+												});
+
+												if (!itemName?.name) {
+													return (
+														<li key={"no code all"}>
+															NO CODE AVAILABLE
+														</li>
+													);
+												}
+
+												return (
+													<li
+														key={itemName.name}
+														onMouseEnter={() =>
+															setPreviewComponent(itemName)
+														}
+														onClick={() => {
+															selectedComponents.includes(
+																itemName.name
+															)
+																? setSelectedComponents(
+																		(prev) =>
+																			prev.filter(
+																				(prevItem) =>
+																					itemName.name !==
+																					prevItem
+																			)
+																	)
+																: setSelectedComponents([
+																		itemName.name,
+																		...selectedComponents,
+																	]);
+														}}
+														className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+															category === "All"
+																? "text-red-400"
+																: "text-white"
+														}`}
+													>
+														{itemName?.name.replace(".json", "")}
+													</li>
+												);
+											})}
+										</ul>
+									</div>
+								);
+							}
+						)}
+					</div>
 				</div>
 				{!!previewComponent?.name && (
 					<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">

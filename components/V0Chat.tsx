@@ -489,10 +489,17 @@ export default function V0Chat({
 						</Accordion>
 					</div>
 
-					<Sidebar side="right">
+					<Sidebar side="right" className="bg-white">
 						<SidebarHeader>
-							<button onClick={() => setPreviewComponent()}>x</button>
-							Component Preview
+							<span className="flex bg-white">
+								<button
+									className="mr-3"
+									onClick={() => setPreviewComponent()}
+								>
+									x
+								</button>
+								Component Preview
+							</span>
 						</SidebarHeader>
 						<SidebarContent>
 							<SidebarGroup>

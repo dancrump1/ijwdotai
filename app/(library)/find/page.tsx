@@ -23,10 +23,6 @@ export default async function Page() {
 	const response = await api_res.json();
 	const comps = await api_comps.json();
 
-	console.log("await api_res");
-	console.log(response);
-	console.log(comps);
-
 	return (
 		<>
 			{/* <div>{api_data}</div> */}

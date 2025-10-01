@@ -566,7 +566,7 @@ export default function HomePage({
 									maxWidth: "500px",
 								}}
 							>
-								<h2>new Category</h2>
+								<h2>new Component</h2>
 								<input
 									type="text"
 									placeholder="Username"

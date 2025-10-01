@@ -13,6 +13,12 @@ import Component from "./Component";
 import ErrorDialog from "./ErrorDialog";
 import PromptComponent from "./PromptComponent";
 import RateLimitDialog from "./RateLimitDialog";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "./ui/accordion";
 
 export default function V0Chat({
 	files,
@@ -276,138 +282,158 @@ export default function V0Chat({
 
 			<section className="flex pb-[200px]">
 				<div>
-					{Object.entries(otherCats).map(
-						([category, { description, components, id }], i) => {
-							const categoryTotal = components;
-
-							return (
-								<div
-									className="mx-auto w-[50vw] py-6"
-									key={`${description} + ${i}`}
-								>
-									{category}
-									<ul
-										key={category}
-										className="grid grid-cols-6 gap-3"
-									>
-										{categoryTotal.map((item) => {
-											const itemName = files.find((file) => {
-												return (
-													file.name.replace(".json", "") === item
-												);
-											});
-
-											if (!itemName?.name) {
-												return (
-													<li key={"no code" + i}>
-														NO CODE AVAILABLE
-													</li>
-												);
-											}
-
-											return (
-												<li
-													key={itemName.name}
-													onMouseEnter={() =>
-														setPreviewComponent(itemName)
-													}
-													onClick={() => {
-														selectedComponents.includes(itemName)
-															? setSelectedComponents((prev) =>
-																	prev.filter(
-																		(prevItem) =>
-																			itemName.name !==
-																			prevItem
-																	)
-																)
-															: setSelectedComponents([
-																	itemName.name,
-																	...selectedComponents,
-																]);
-													}}
-													className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-														category === "All"
-															? "text-red-400"
-															: "text-white"
-													}`}
-												>
-													{itemName?.name.replace(".json", "")}
-												</li>
-											);
-										})}
-									</ul>
-								</div>
-							);
-						}
-					)}
-					<div>
+					<Accordion collapsible type="multiple">
 						{Object.entries({ All }).map(
 							([category, { description, components, id }], i) => {
 								return (
-									<div
-										className="mx-auto w-[50vw] py-6"
-										key={`${description} + ${i}`}
-									>
-										{category}
-										<ul
-											key={category}
-											className="grid grid-cols-6 gap-3"
-										>
-											{components?.map((item) => {
-												const itemName = files.find((file) => {
-													return (
-														file.name.replace(".json", "") ===
-														item
-													);
-												});
+									<div className="" key={`${description} + ${i}`}>
+										<AccordionItem value={category}>
+											<AccordionTrigger>{category}</AccordionTrigger>
+											<AccordionContent>
+												<ul
+													key={category}
+													className="grid grid-cols-6 gap-3"
+												>
+													{components?.map((item) => {
+														const itemName = files.find(
+															(file) => {
+																return (
+																	file.name.replace(
+																		".json",
+																		""
+																	) === item
+																);
+															}
+														);
 
-												if (!itemName?.name) {
-													return (
-														<li key={"no code all"}>
-															NO CODE AVAILABLE
-														</li>
-													);
-												}
-
-												return (
-													<li
-														key={itemName.name}
-														onMouseEnter={() =>
-															setPreviewComponent(itemName)
+														if (!itemName?.name) {
+															return (
+																<li key={"no code all"}>
+																	NO CODE AVAILABLE
+																</li>
+															);
 														}
-														onClick={() => {
-															selectedComponents.includes(
-																itemName.name
-															)
-																? setSelectedComponents(
-																		(prev) =>
-																			prev.filter(
-																				(prevItem) =>
-																					itemName.name !==
-																					prevItem
-																			)
+
+														return (
+															<li
+																key={itemName.name}
+																onMouseEnter={() =>
+																	setPreviewComponent(itemName)
+																}
+																onClick={() => {
+																	selectedComponents.includes(
+																		itemName.name
 																	)
-																: setSelectedComponents([
-																		itemName.name,
-																		...selectedComponents,
-																	]);
-														}}
-														className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-															category === "All"
-																? "text-red-400"
-																: "text-white"
-														}`}
-													>
-														{itemName?.name.replace(".json", "")}
-													</li>
-												);
-											})}
-										</ul>
+																		? setSelectedComponents(
+																				(prev) =>
+																					prev.filter(
+																						(prevItem) =>
+																							itemName.name !==
+																							prevItem
+																					)
+																			)
+																		: setSelectedComponents([
+																				itemName.name,
+																				...selectedComponents,
+																			]);
+																}}
+																className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+																	category === "All"
+																		? "text-red-400"
+																		: "text-white"
+																}`}
+															>
+																{itemName?.name.replace(
+																	".json",
+																	""
+																)}
+															</li>
+														);
+													})}
+												</ul>
+											</AccordionContent>
+										</AccordionItem>
 									</div>
 								);
 							}
 						)}
-					</div>
+						{Object.entries(otherCats).map(
+							([category, { description, components, id }], i) => {
+								const categoryTotal = components;
+
+								return (
+									<div className="" key={`${description} + ${i}`}>
+										<AccordionItem value={category}>
+											<AccordionTrigger>{category}</AccordionTrigger>
+											<AccordionContent>
+												<ul
+													key={category}
+													className="grid grid-cols-6 gap-3"
+												>
+													{categoryTotal.map((item) => {
+														const itemName = files.find(
+															(file) => {
+																return (
+																	file.name.replace(
+																		".json",
+																		""
+																	) === item
+																);
+															}
+														);
+
+														if (!itemName?.name) {
+															return (
+																<li key={"no code" + i}>
+																	NO CODE AVAILABLE
+																</li>
+															);
+														}
+
+														return (
+															<li
+																key={itemName.name}
+																onMouseEnter={() =>
+																	setPreviewComponent(itemName)
+																}
+																onClick={() => {
+																	selectedComponents.includes(
+																		itemName
+																	)
+																		? setSelectedComponents(
+																				(prev) =>
+																					prev.filter(
+																						(prevItem) =>
+																							itemName.name !==
+																							prevItem
+																					)
+																			)
+																		: setSelectedComponents([
+																				itemName.name,
+																				...selectedComponents,
+																			]);
+																}}
+																className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+																	category === "All"
+																		? "text-red-400"
+																		: "text-white"
+																}`}
+															>
+																{itemName?.name.replace(
+																	".json",
+																	""
+																)}
+															</li>
+														);
+													})}
+												</ul>
+											</AccordionContent>
+										</AccordionItem>
+									</div>
+								);
+							}
+						)}
+					</Accordion>
 				</div>
 				{!!previewComponent?.name && (
 					<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">

@@ -6,6 +6,14 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 
 import { useApiValidation } from "@/lib/useApiValidation";
+import {
+	Sidebar,
+	SidebarContent,
+	SidebarGroup,
+	SidebarHeader,
+	SidebarProvider,
+} from "@/registry/basic/sidebar";
+import ShareButton from "@/registry/open-source/share-button";
 
 import ApiKeyError from "./ApiKeyError";
 import { ComponentLoading } from "./ClientWrapper";
@@ -265,231 +273,290 @@ export default function V0Chat({
 	);
 
 	return (
-		<div className="relative min-h-dvh bg-background">
-			{/* Homepage Welcome Message */}
-			<div className="flex items-center justify-center">
-				<div className="text-center px-4 sm:px-6">
-					<h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 text-pretty">
-						Drive Brand Studio GEN
-					</h1>
-					<p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-						This is a collection of {files.length} animated components.
-						<br />
-						And 500+ generic components
-					</p>
-				</div>
-			</div>
-
-			<section className="flex pb-[200px]">
-				<div>
-					<Accordion collapsible type="multiple">
-						{Object.entries({ All }).map(
-							([category, { description, components, id }], i) => {
-								return (
-									<div className="" key={`${description} + ${i}`}>
-										<AccordionItem value={category}>
-											<AccordionTrigger>{category}</AccordionTrigger>
-											<AccordionContent>
-												<ul
-													key={category}
-													className="grid grid-cols-6 gap-3"
-												>
-													{components?.map((item) => {
-														const itemName = files.find(
-															(file) => {
-																return (
-																	file.name.replace(
-																		".json",
-																		""
-																	) === item
-																);
-															}
-														);
-
-														if (!itemName?.name) {
-															return (
-																<li key={"no code all"}>
-																	NO CODE AVAILABLE
-																</li>
-															);
-														}
-
-														return (
-															<li
-																key={itemName.name}
-																onMouseEnter={() =>
-																	setPreviewComponent(itemName)
-																}
-																onClick={() => {
-																	selectedComponents.includes(
-																		itemName.name
-																	)
-																		? setSelectedComponents(
-																				(prev) =>
-																					prev.filter(
-																						(prevItem) =>
-																							itemName.name !==
-																							prevItem
-																					)
-																			)
-																		: setSelectedComponents([
-																				itemName.name,
-																				...selectedComponents,
-																			]);
-																}}
-																className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-																	category === "All"
-																		? "text-red-400"
-																		: "text-white"
-																}`}
-															>
-																{itemName?.name.replace(
-																	".json",
-																	""
-																)}
-															</li>
-														);
-													})}
-												</ul>
-											</AccordionContent>
-										</AccordionItem>
-									</div>
-								);
-							}
-						)}
-						{Object.entries(otherCats).map(
-							([category, { description, components, id }], i) => {
-								const categoryTotal = components;
-
-								return (
-									<div className="" key={`${description} + ${i}`}>
-										<AccordionItem value={category}>
-											<AccordionTrigger>{category}</AccordionTrigger>
-											<AccordionContent>
-												<ul
-													key={category}
-													className="grid grid-cols-6 gap-3"
-												>
-													{categoryTotal.map((item) => {
-														const itemName = files.find(
-															(file) => {
-																return (
-																	file.name.replace(
-																		".json",
-																		""
-																	) === item
-																);
-															}
-														);
-
-														if (!itemName?.name) {
-															return (
-																<li key={"no code" + i}>
-																	NO CODE AVAILABLE
-																</li>
-															);
-														}
-
-														return (
-															<li
-																key={itemName.name}
-																onMouseEnter={() =>
-																	setPreviewComponent(itemName)
-																}
-																onClick={() => {
-																	selectedComponents.includes(
-																		itemName
-																	)
-																		? setSelectedComponents(
-																				(prev) =>
-																					prev.filter(
-																						(prevItem) =>
-																							itemName.name !==
-																							prevItem
-																					)
-																			)
-																		: setSelectedComponents([
-																				itemName.name,
-																				...selectedComponents,
-																			]);
-																}}
-																className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
-																	category === "All"
-																		? "text-red-400"
-																		: "text-white"
-																}`}
-															>
-																{itemName?.name.replace(
-																	".json",
-																	""
-																)}
-															</li>
-														);
-													})}
-												</ul>
-											</AccordionContent>
-										</AccordionItem>
-									</div>
-								);
-							}
-						)}
-					</Accordion>
-				</div>
-				{!!previewComponent?.name && (
-					<div className="fixed right-0 top-0 bottom-0 overflow-hidden max-w-[25vw]">
-						<button onClick={() => setPreviewComponent()}>x</button>
-						<Suspense fallback={<span>Loading</span>}>
-							{" "}
-							<Component
-								collapsed={[]}
-								setCollapsed={() => null}
-								gridView={"1"}
-								setComponentCount={() => null}
-								selectedFilters={[]}
-								title={previewComponent?.name.replace(".json", "")}
-								content={previewComponent?.content}
-							>
-								{!!PreviewComponentImport ? (
-									<PreviewComponentImport />
-								) : (
-									<div>
-										failed to load{" "}
-										{previewComponent.name.replace(".json", "")}
-									</div>
-								)}
-							</Component>
-						</Suspense>
+		<SidebarProvider open={!!previewComponent?.name}>
+			<div className="relative min-h-dvh bg-background">
+				{/* Homepage Welcome Message */}
+				<div className="flex items-center justify-center">
+					<div className="text-center px-4 sm:px-6">
+						<h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 text-pretty">
+							Drive Brand Studio GEN
+						</h1>
+						<p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+							This is a collection of {files.length} animated components.
+							<br />
+							And 500+ generic components
+						</p>
 					</div>
-				)}
-			</section>
+				</div>
 
-			<PromptComponent
-				onSubmit={handleSubmit}
-				isLoading={isLoading}
-				placeholder="Describe your app..."
-				showDropdowns={projectsLoaded}
-				projects={projects}
-				projectChats={projectChats}
-				currentProjectId={selectedProjectId}
-				currentChatId={selectedChatId}
-				onProjectChange={handleProjectChange}
-				onChatChange={handleChatChange}
-				selectedComponents={selectedComponents}
-				setSelectedComponents={setSelectedComponents}
-			/>
+				<section className="flex pb-[200px]">
+					<div>
+						<Accordion collapsible type="multiple">
+							{Object.entries({ All }).map(
+								([category, { description, components, id }], i) => {
+									return (
+										<div className="" key={`${description} + ${i}`}>
+											<AccordionItem value={category}>
+												<AccordionTrigger>
+													{category}
+												</AccordionTrigger>
+												<AccordionContent>
+													<ul
+														key={category}
+														className="grid grid-cols-6 gap-3"
+													>
+														{components?.map((item) => {
+															const itemName = files.find(
+																(file) => {
+																	return (
+																		file.name.replace(
+																			".json",
+																			""
+																		) === item
+																	);
+																}
+															);
 
-			<RateLimitDialog
-				isOpen={showRateLimitDialog}
-				onClose={() => setShowRateLimitDialog(false)}
-				resetTime={rateLimitInfo.resetTime}
-				remaining={rateLimitInfo.remaining}
-			/>
+															if (!itemName?.name) {
+																return (
+																	<li key={"no code all"}>
+																		NO CODE AVAILABLE
+																	</li>
+																);
+															}
 
-			<ErrorDialog
-				isOpen={showErrorDialog}
-				onClose={() => setShowErrorDialog(false)}
-				message={errorMessage}
-			/>
-		</div>
+															return (
+																<li
+																	key={itemName.name}
+																	className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+																		category === "All"
+																			? "text-red-400"
+																			: "text-white"
+																	}`}
+																>
+																	<ShareButton
+																		links={[
+																			{
+																				onClick: () => {
+																					selectedComponents.includes(
+																						itemName.name
+																					)
+																						? setSelectedComponents(
+																								(
+																									prev
+																								) =>
+																									prev.filter(
+																										(
+																											prevItem
+																										) =>
+																											itemName.name !==
+																											prevItem
+																									)
+																							)
+																						: setSelectedComponents(
+																								[
+																									itemName.name,
+																									...selectedComponents,
+																								]
+																							);
+																				},
+																				icon: null,
+																				label: "Add to AI",
+																			},
+																			{
+																				onClick: () =>
+																					setPreviewComponent(
+																						itemName
+																					),
+																				icon: null,
+																				label: "Preview",
+																			},
+																		]}
+																	>
+																		{itemName?.name.replace(
+																			".json",
+																			""
+																		)}
+																	</ShareButton>
+																</li>
+															);
+														})}
+													</ul>
+												</AccordionContent>
+											</AccordionItem>
+										</div>
+									);
+								}
+							)}
+							{Object.entries(otherCats).map(
+								([category, { description, components, id }], i) => {
+									const categoryTotal = components;
+
+									return (
+										<div className="" key={`${description} + ${i}`}>
+											<AccordionItem value={category}>
+												<AccordionTrigger>
+													{category}
+												</AccordionTrigger>
+												<AccordionContent>
+													<ul
+														key={category}
+														className="grid grid-cols-6 gap-3"
+													>
+														{categoryTotal.map((item) => {
+															const itemName = files.find(
+																(file) => {
+																	return (
+																		file.name.replace(
+																			".json",
+																			""
+																		) === item
+																	);
+																}
+															);
+
+															if (!itemName?.name) {
+																return (
+																	<li key={"no code" + i}>
+																		NO CODE AVAILABLE
+																	</li>
+																);
+															}
+
+															return (
+																<li
+																	key={itemName.name}
+																	className={`rounded-2xl h-full content-center relative px-6 py-4 bg-zinc-800 hover:bg-zinc-700 transition-colors text-center font-medium shadow-md ${
+																		category === "All"
+																			? "text-red-400"
+																			: "text-white"
+																	}`}
+																>
+																	<ShareButton
+																		links={[
+																			{
+																				onClick: () => {
+																					selectedComponents.includes(
+																						itemName.name
+																					)
+																						? setSelectedComponents(
+																								(
+																									prev
+																								) =>
+																									prev.filter(
+																										(
+																											prevItem
+																										) =>
+																											itemName.name !==
+																											prevItem
+																									)
+																							)
+																						: setSelectedComponents(
+																								[
+																									itemName.name,
+																									...selectedComponents,
+																								]
+																							);
+																				},
+																				icon: null,
+																				label: "Add to AI",
+																			},
+																			{
+																				onClick: () =>
+																					setPreviewComponent(
+																						itemName
+																					),
+																				icon: null,
+																				label: "Preview",
+																			},
+																		]}
+																	>
+																		{itemName?.name.replace(
+																			".json",
+																			""
+																		)}
+																	</ShareButton>
+																</li>
+															);
+														})}
+													</ul>
+												</AccordionContent>
+											</AccordionItem>
+										</div>
+									);
+								}
+							)}
+						</Accordion>
+					</div>
+
+					<Sidebar side="right">
+						<SidebarHeader>
+							<button onClick={() => setPreviewComponent()}>x</button>
+							Component Preview
+						</SidebarHeader>
+						<SidebarContent>
+							<SidebarGroup>
+								{!!previewComponent?.name && (
+									<Suspense fallback={<span>Loading</span>}>
+										<Component
+											collapsed={[]}
+											setCollapsed={() => null}
+											gridView={"1"}
+											setComponentCount={() => null}
+											selectedFilters={[]}
+											title={previewComponent?.name.replace(
+												".json",
+												""
+											)}
+											content={previewComponent?.content}
+										>
+											{!!PreviewComponentImport ? (
+												<PreviewComponentImport />
+											) : (
+												<div>
+													failed to load{" "}
+													{previewComponent.name.replace(
+														".json",
+														""
+													)}
+												</div>
+											)}
+										</Component>
+									</Suspense>
+								)}
+							</SidebarGroup>
+						</SidebarContent>
+					</Sidebar>
+				</section>
+
+				<PromptComponent
+					onSubmit={handleSubmit}
+					isLoading={isLoading}
+					placeholder="Describe your app..."
+					showDropdowns={projectsLoaded}
+					projects={projects}
+					projectChats={projectChats}
+					currentProjectId={selectedProjectId}
+					currentChatId={selectedChatId}
+					onProjectChange={handleProjectChange}
+					onChatChange={handleChatChange}
+					selectedComponents={selectedComponents}
+					setSelectedComponents={setSelectedComponents}
+				/>
+
+				<RateLimitDialog
+					isOpen={showRateLimitDialog}
+					onClose={() => setShowRateLimitDialog(false)}
+					resetTime={rateLimitInfo.resetTime}
+					remaining={rateLimitInfo.remaining}
+				/>
+
+				<ErrorDialog
+					isOpen={showErrorDialog}
+					onClose={() => setShowErrorDialog(false)}
+					message={errorMessage}
+				/>
+			</div>
+		</SidebarProvider>
 	);
 }

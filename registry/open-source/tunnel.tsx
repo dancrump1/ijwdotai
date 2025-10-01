@@ -4,28 +4,10 @@ import React, { useEffect, useRef } from "react";
 
 import * as THREE from "three";
 
+import { useIsMobile } from "../utilities/useIsMobile";
+
 // Credit:
 // https://www.vyomaui.design/backgrounds/tunnel
-
-const MOBILE_BREAKPOINT = 768;
-
-export function useIsMobile() {
-	const [isMobile, setIsMobile] = React.useState<boolean | undefined>(
-		undefined
-	);
-
-	React.useEffect(() => {
-		const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-		const onChange = () => {
-			setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-		};
-		mql.addEventListener("change", onChange);
-		setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-		return () => mql.removeEventListener("change", onChange);
-	}, []);
-
-	return !!isMobile;
-}
 
 export default function TunnelShowcase() {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -232,7 +214,10 @@ export default function TunnelShowcase() {
 						>
 							Experience an infinite journey through space and time with
 							this mesmerizing
-							<span className="text-foreground font-medium"> Three.js </span>
+							<span className="text-foreground font-medium">
+								{" "}
+								Three.js{" "}
+							</span>
 							powered tunnel effect that responds to your{" "}
 							{isMobile ? "touch" : "movement"}
 						</p>

@@ -209,7 +209,7 @@ export default function PromptComponent({
 		console.log(selectedComponents);
 		setAttachments(
 			selectedComponents?.map((item) => ({
-				url: `https://ijwdotai.com/r/${item}`,
+				url: process.env.NEXT_PUBLIC_BASE_URL + `/r/${item}`,
 			})) || []
 		);
 	}, [selectedComponents]);
@@ -407,6 +407,7 @@ export default function PromptComponent({
 
 		try {
 			await onSubmit(
+				e,
 				prompt.trim(),
 				{
 					modelId: settings.model,
@@ -716,7 +717,10 @@ export default function PromptComponent({
 															onMouseLeave={() => {}}
 														>
 															<span className="truncate max-w-32">
-																{attachment || "Attachment"}
+																{attachment.replace(
+																	".json",
+																	""
+																) || "Attachment"}
 															</span>
 															<button
 																type="button"

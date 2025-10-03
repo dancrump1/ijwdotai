@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { v0 } from "v0-sdk";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function POST(request: NextRequest) {
 	try {
 		const {
@@ -21,49 +24,72 @@ export async function POST(request: NextRequest) {
 			);
 		}
 
-		// Check rate limit for ALL generations (both new and existing chats)
+		// Create an SSE stream immediately so headers are flushed before SDK call
+		const encoder = new TextEncoder();
+		const body = new ReadableStream<Uint8Array>({
+			async start(controller) {
+				let heartbeat: NodeJS.Timeout | undefined;
+				const send = (chunk: string) => controller.enqueue(encoder.encode(chunk));
+				const end = () => {
+					if (heartbeat) clearInterval(heartbeat);
+					controller.enqueue(encoder.encode(`event:end\ndata: end\n\n`));
+					controller.close();
+				};
 
-		let response;
+				// Establish SSE and keep connection alive
+				send(`: connected\n\n`);
+				heartbeat = setInterval(() => send(`: ping\n\n`), 15000);
 
-		if (chatId) {
-			// Continue existing chat using sendMessage
-			response = await v0.chats.sendMessage({
-				chatId: chatId,
-				message: message.trim(),
-				modelConfiguration: {
-					modelId: modelId,
-					imageGenerations: imageGenerations,
-					thinking: thinking,
-				},
-				...(attachments.length > 0 && { attachments }),
-			});
-		} else {
-			// Create new chat
-			response = await v0.chats.create({
-				system:
-					'v0 MUST always generate code even if the user just says "hi" or asks a question. v0 MUST NOT ask the user to clarify their request.',
-				message: message.trim(),
-				modelConfiguration: {
-					modelId: modelId,
-					imageGenerations: imageGenerations,
-					thinking: thinking,
-				},
-				...(projectId && { projectId }),
-				...(attachments.length > 0 && { attachments }),
-			});
+				if (thinking) {
+					send(`event:thinking\ndata: Generating...\n\n`);
+				}
 
-			// Rename the new chat to "Main" for new projects
-			try {
-				await v0.chats.update({
-					chatId: response.id,
-					name: "Main",
-				});
-			} catch (updateError) {
-				// Don't fail the entire request if renaming fails
-			}
-		}
+				try {
+					const sdkResponse = chatId
+						? await v0.chats.sendMessage({
+							chatId,
+							message: message.trim(),
+							modelConfiguration: {
+								modelId: modelId,
+								imageGenerations: imageGenerations,
+								thinking: thinking,
+							}, responseMode: thinking ? 'async' : "sync",
 
-		return NextResponse.json(response);
+							...(attachments.length > 0 && { attachments }),
+						})
+						: await v0.chats.create({
+							system:
+								'v0 MUST always generate code even if the user just says "hi" or asks a question. v0 MUST NOT ask the user to clarify their request.',
+							message: message.trim(),
+							modelConfiguration: {
+								modelId: modelId,
+								imageGenerations: imageGenerations,
+								thinking: thinking,
+							},
+							responseMode: thinking ? 'async' : "sync",
+							...(attachments.length > 0 && { attachments }),
+						});
+
+					const text = (sdkResponse as any)?.text || (sdkResponse as any)?.messages?.[(sdkResponse as any)?.messages?.length - 1]?.content || "";
+					if (text) {
+						send(`event:message\ndata: ${text}\n\n`);
+					}
+					end();
+				} catch (err: any) {
+					send(`event:error\ndata: ${JSON.stringify({ error: err?.message || "Unknown error" })}\n\n`);
+					end();
+				}
+			},
+		});
+
+		return new Response(body, {
+			headers: {
+				"Content-Type": "text/event-stream",
+				"Cache-Control": "no-cache, no-transform",
+				Connection: "keep-alive",
+				"X-Accel-Buffering": "no",
+			},
+		});
 	} catch (error) {
 		// Check if it's an API key error
 		if (error instanceof Error) {

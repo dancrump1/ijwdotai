@@ -44,10 +44,12 @@ export default function V0Chat({
 	const [selectedChatId, setSelectedChatId] = useState("new");
 	const [projectChats, setProjectChats] = useState<any[]>([]);
 	const [showRateLimitDialog, setShowRateLimitDialog] = useState(false);
+	const [answer, setAnswer] = useState("");
 	const [rateLimitInfo, setRateLimitInfo] = useState<{
 		resetTime?: string;
 		remaining?: number;
 	}>({});
+	const [thinking, setThinking] = useState("");
 	const [showErrorDialog, setShowErrorDialog] = useState(false);
 	const [errorMessage, setErrorMessage] = useState("");
 	const [projectChatsLoaded, setProjectChatsLoaded] = useState(false);
@@ -167,6 +169,7 @@ export default function V0Chat({
 	};
 
 	const handleSubmit = async (
+		e: any,
 		prompt: string,
 		settings: {
 			modelId: string;
@@ -175,73 +178,59 @@ export default function V0Chat({
 		},
 		attachments?: { url: string; name?: string; type?: string }[]
 	) => {
+		e.preventDefault();
+		setThinking("");
+		setAnswer("");
 		setIsLoading(true);
 		setError(null);
 
-		try {
-			const response = await fetch("/api/generate", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					message: prompt,
-					modelId: settings.modelId,
-					imageGenerations: settings.imageGenerations,
-					thinking: settings.thinking,
-					...(attachments && attachments.length > 0 && { attachments }),
-				}),
-			});
+		const response = await fetch("/api/generate", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				message: prompt,
+				modelId: settings.modelId,
+				imageGenerations: settings.imageGenerations,
+				thinking: settings.thinking,
+				...(attachments && attachments.length > 0 && { attachments }),
+			}),
+		});
 
-			if (!response.ok) {
-				const errorData = await response.json();
+		const reader = response.body.getReader();
+		const decoder = new TextDecoder();
 
-				// Check for API key error
-				if (
-					response.status === 401 &&
-					errorData.error === "API_KEY_MISSING"
-				) {
-					// API key error is now handled by useApiValidation hook
-					return;
+		let buffer = "";
+
+		while (true) {
+			const { done, value } = await reader.read();
+			if (done) break;
+
+			buffer += decoder.decode(value, { stream: true });
+
+			// Your backend can stream JSONL or SSE events like:
+			// event:thinking\n data: "..."\n\n
+			// event:message\n data: "..."\n\n
+			// Here we parse simple "lines"
+			const lines = buffer.split("\n\n");
+			buffer = lines.pop() || "";
+
+			for (const line of lines) {
+				if (line.startsWith("event:thinking")) {
+					const payload = line
+						.replace("event:thinking\n", "")
+						.replace("data:", "")
+						.trim();
+					setThinking((prev) => prev + payload);
+				} else if (line.startsWith("event:message")) {
+					const payload = line
+						.replace("event:message\n", "")
+						.replace("data:", "")
+						.trim();
+					setAnswer((prev) => prev + payload);
 				}
-
-				// Check for rate limit error
-				if (
-					response.status === 429 &&
-					errorData.error === "RATE_LIMIT_EXCEEDED"
-				) {
-					setRateLimitInfo({
-						resetTime: errorData.resetTime,
-						remaining: errorData.remaining,
-					});
-					setShowRateLimitDialog(true);
-					return;
-				}
-
-				setErrorMessage(errorData.error || "Failed to generate app");
-				setShowErrorDialog(true);
-				return;
 			}
-
-			const data = await response.json();
-
-			// Redirect to the new chat
-			if (data.id || data.chatId) {
-				const newChatId = data.id || data.chatId;
-				const projectId = data.projectId || "default"; // Fallback project
-				router.push(`/projects/${projectId}/chats/${newChatId}`);
-				return;
-			}
-		} catch (err) {
-			setErrorMessage(
-				err instanceof Error
-					? err.message
-					: "Failed to generate app. Please try again."
-			);
-			setShowErrorDialog(true);
-		} finally {
-			setIsLoading(false);
-			setProjectChatsLoaded(true);
 		}
 	};
 
@@ -272,6 +261,24 @@ export default function V0Chat({
 		}
 	);
 
+	useEffect(() => {
+		const es = new EventSource("/api/generate");
+
+		es.addEventListener("thinking", (e) => {
+			const data = JSON.parse(e.data);
+			setThinking((prev) => prev + data.content);
+		});
+
+		es.addEventListener("message", (e) => {
+			const data = JSON.parse(e.data);
+			setAnswer((prev) => prev + data.content);
+		});
+
+		es.addEventListener("end", () => {
+			es.close();
+		});
+	}, []);
+
 	return (
 		<SidebarProvider open={!!previewComponent?.name}>
 			<div className="relative min-h-dvh bg-background">
@@ -286,6 +293,16 @@ export default function V0Chat({
 							<br />
 							And 500+ generic components
 						</p>
+					</div>
+				</div>
+				<div className="grid grid-cols-2 gap-4">
+					<div className="p-3 border rounded-lg bg-gray-50">
+						<h2 className="font-bold mb-2">🤔 Thinking Process</h2>
+						<pre className="whitespace-pre-wrap">{thinking || "…"}</pre>
+					</div>
+					<div className="p-3 border rounded-lg bg-white">
+						<h2 className="font-bold mb-2">💡 Final Answer</h2>
+						<pre className="whitespace-pre-wrap">{answer || "…"}</pre>
 					</div>
 				</div>
 

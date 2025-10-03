@@ -11,7 +11,7 @@ const usagesPath = path.join(process.cwd(), "components", "usages");
 // Metadata
 const registrySchemaUrl = "https://ui.shadcn.com/schema/registry.json";
 const registryName = "DriveBrandStudio";
-const registryHomepage = "https://components.drivedev.net/";
+const registryHomepage = "https://ijwdotai.com/";
 
 // Path aliases for resolving imports
 const aliasPaths = {

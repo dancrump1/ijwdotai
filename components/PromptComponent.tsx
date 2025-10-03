@@ -206,9 +206,10 @@ export default function PromptComponent({
 	}, [initialPrompt]);
 
 	useEffect(() => {
+		console.log(selectedComponents);
 		setAttachments(
 			selectedComponents?.map((item) => ({
-				url: `https://components.drivedev.net/r/${item}.json`,
+				url: `https://ijwdotai.com/r/${item}`,
 			})) || []
 		);
 	}, [selectedComponents]);
